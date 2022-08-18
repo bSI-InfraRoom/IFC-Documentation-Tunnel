@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../details-shim.css">
+    <script type="text/javascript" src="../../details-shim.js"></script>
+    <title>Sequential Connectivity</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 0 index2 0 index3 0 index4 -1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../toc-4.htm#4.6.8");
+//-->
+</script>
+
+<h3 class="std">4.6.8 Sequential Connectivity</h3>
+<p>Processes that occur in time use this relationship to indicate the order of occurrence, such as for tasks, procedures, and events.</p>
+<p class="fig-ref">Figure 167 illustrates an instance diagram.</p>
+<table><tr><td><img alt="Sequential Connectivity" src="./diagrams/sequential-connectivity.png" usemap="#f167"><map name="f167"><area shape="rect" coords="8,8,176,272" href="../ifckernel/lexical/ifcprocess.htm" alt="IfcProcess" /><area shape="rect" coords="208,8,376,128" href="../ifcprocessextension/lexical/ifcrelsequence.htm" alt="IfcRelSequence" /><area shape="rect" coords="408,8,576,272" href="../ifckernel/lexical/ifcprocess.htm" alt="IfcProcess" /><area shape="rect" coords="208,148,376,268" href="../ifcprocessextension/lexical/ifcrelsequence.htm" alt="IfcRelSequence" /><area shape="rect" coords="408,292,576,556" href="../ifckernel/lexical/ifcprocess.htm" alt="IfcProcess" /></map></td></tr><tr><td><p class="figure">Figure 167 &mdash; Sequential Connectivity</p></td></tr></table>
+
+<details><summary>mvdXML Specification</summary><div class="xsd"><code class="xsd">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;ConceptTemplate xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; uuid=&quot;c9f11880-8cf6-47fe-abac-05c73b4041b1&quot; name=&quot;Sequential Connectivity&quot; applicableSchema=&quot;IFC4&quot; applicableEntity=&quot;<a href="../ifckernel/lexical/ifcprocess.htm">IfcProcess</a>&quot;&gt;&lt;Rules&gt;&lt;AttributeRule AttributeName=&quot;IsPredecessorTo&quot;&gt;&lt;EntityRules&gt;&lt;EntityRule EntityName=&quot;<a href="../ifcprocessextension/lexical/ifcrelsequence.htm">IfcRelSequence</a>&quot;&gt;&lt;AttributeRules&gt;&lt;AttributeRule AttributeName=&quot;RelatedProcess&quot;&gt;&lt;EntityRules&gt;&lt;EntityRule EntityName=&quot;<a href="../ifckernel/lexical/ifcprocess.htm">IfcProcess</a>&quot; /&gt;&lt;/EntityRules&gt;&lt;/AttributeRule&gt;&lt;/AttributeRules&gt;&lt;/EntityRule&gt;&lt;/EntityRules&gt;&lt;/AttributeRule&gt;&lt;AttributeRule AttributeName=&quot;IsSuccessorFrom&quot;&gt;&lt;EntityRules&gt;&lt;EntityRule EntityName=&quot;<a href="../ifcprocessextension/lexical/ifcrelsequence.htm">IfcRelSequence</a>&quot;&gt;&lt;AttributeRules&gt;&lt;AttributeRule AttributeName=&quot;RelatingProcess&quot;&gt;&lt;EntityRules&gt;&lt;EntityRule EntityName=&quot;<a href="../ifckernel/lexical/ifcprocess.htm">IfcProcess</a>&quot; /&gt;&lt;/EntityRules&gt;&lt;/AttributeRule&gt;&lt;/AttributeRules&gt;&lt;/EntityRule&gt;&lt;/EntityRules&gt;&lt;/AttributeRule&gt;&lt;/Rules&gt;&lt;/ConceptTemplate&gt;<br/>
+</code></div>
+</details>
+</p>
+<p><a href="../../link/sequential-connectivity.htm" target="_top" ><img src="../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

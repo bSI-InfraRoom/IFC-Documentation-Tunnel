@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../details-shim.css">
+    <script type="text/javascript" src="../../details-shim.js"></script>
+    <title>Spatial Interference With Zones</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 0 index2 0 index3 0 index4 -1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../toc-4.htm#4.6.11.3.1");
+//-->
+</script>
+
+<h5 class="std">4.6.11.3.1 Spatial Interference With Zones</h5>
+<p>The <i>Spatial Interference with Zone</i> concept is an extension of the <i>Spatial Interference</i> concept which defines the relationship of spatial elements, such as facilities (<a href="../ifcproductextension/lexical/ifcfacility.htm">IfcFacility</a> &amp; specialised subtypes) or facility parts (<a href="../ifcproductextension/lexical/ifcfacilitypart.htm">IfcFacilityPart</a> with domain specific predefined types) that interfere or interface with other spatial elements across discipline spatial hierarchy branches, and extends the dataset with a related interference <a href="../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> via the <i>IfcRelInterferesElements.InterferenceSpace</i> attribute. The realizing <a href="../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> should always have the <i>PredefinedType</i> value set to INTERFERENCE.</p>
+<p>The addition of a realizing <a href="../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> extends the functionality of this relationship with the following:</p>
+<ul>
+<li>The ability to attach property sets to the co-engineering (or interference) zone.</li>
+<li>Allows explicit definition of the shared footprint or body geometry representing the zone where the _IfcSpatialElement_s interfere, without impacting the footprint or body geometry of the interfering _IfcSpatialElement_s</li>
+<li>Products are still positioned within the domain spatial structure and can use relative positioning.</li>
+</ul>
+<p>The <i>Spatial Interference with Zone</i> concept is defined to cover complex use cases where the interference results in co-engineering zones where multiple teams have to collaborate within the same spatial area while maintaining ownership and rights over there domain elements. A common example of this is a level crossing between a railway and a road. The road and railway hierarchies each have a segment that relates to the level crossing and an <a href="../ifcproductextension/lexical/ifcrelinterfereselements.htm">IfcRelInterferesElements</a> relationship is defined to encode this connection. The relatiohsip is then extended with an <a href="../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> that defines the co-engineering zone and specific overlapping footprint or body geometry. Property sets can then be attached to the <a href="../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> and the explicit footprint or body geometry can be utilised for automated clash and cross domain approval/notification of model updates.</p>
+<p class="fig-ref">Figure 174 illustrates an instance diagram.</p>
+<table><tr><td><img alt="Spatial Interference With Zones" src="./diagrams/spatial-interference-with-zones.png" usemap="#f174"><map name="f174"><area shape="rect" coords="8,8,176,344" href="../ifcproductextension/lexical/ifcspatialelement.htm" alt="IfcSpatialElement" /><area shape="rect" coords="208,8,376,20" href="../ifcmeasureresource/lexical/ifclabel.htm" alt="IfcLabel" /><area shape="rect" coords="208,40,376,172" href="../ifcproductextension/lexical/ifcrelinterfereselements.htm" alt="IfcRelInterferesElements" /><area shape="rect" coords="408,8,576,344" href="../ifcproductextension/lexical/ifcspatialelement.htm" alt="IfcSpatialElement" /><area shape="rect" coords="608,8,776,20" href="../ifcmeasureresource/lexical/ifclabel.htm" alt="IfcLabel" /><area shape="rect" coords="408,364,576,376" href="../ifcmeasureresource/lexical/ifcidentifier.htm" alt="IfcIdentifier" /><area shape="rect" coords="408,396,576,744" href="../ifcproductextension/lexical/ifcspatialzone.htm" alt="IfcSpatialZone" /><area shape="rect" coords="608,40,776,52" href="../ifcproductextension/lexical/ifcspatialzonetypeenum.htm" alt="IfcSpatialZoneTypeEnum" /></map></td></tr><tr><td><p class="figure">Figure 174 &mdash; Spatial Interference With Zones</p></td></tr></table>
+
+<details><summary>mvdXML Specification</summary><div class="xsd"><code class="xsd">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;ConceptTemplate xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; uuid=&quot;a4b43422-04a3-45c0-aa4b-725e391ec67b&quot; name=&quot;Spatial Interference With Zones&quot; applicableSchema=&quot;IFC4&quot; applicableEntity=&quot;<a href="../ifcproductextension/lexical/ifcspatialelement.htm">IfcSpatialElement</a>&quot;&gt;&lt;Rules&gt;&lt;AttributeRule RuleID=&quot;InterferesSpatialElements&quot; AttributeName=&quot;InterferesElements&quot;&gt;&lt;EntityRules&gt;&lt;EntityRule EntityName=&quot;<a href="../ifcproductextension/lexical/ifcrelinterfereselements.htm">IfcRelInterferesElements</a>&quot;&gt;&lt;AttributeRules&gt;&lt;AttributeRule RuleID=&quot;RelatedSpatialElement&quot; AttributeName=&quot;RelatedElement&quot;&gt;&lt;EntityRules&gt;&lt;EntityRule EntityName=&quot;<a href="../ifcproductextension/lexical/ifcspatialelement.htm">IfcSpatialElement</a>&quot;&gt;&lt;AttributeRules&gt;&lt;AttributeRule RuleID=&quot;RelatedSpatialElementName&quot; AttributeName=&quot;Name&quot;&gt;&lt;EntityRules&gt;&lt;EntityRule EntityName=&quot;<a href="../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>&quot; /&gt;&lt;/EntityRules&gt;&lt;/AttributeRule&gt;&lt;/AttributeRules&gt;&lt;/EntityRule&gt;&lt;/EntityRules&gt;&lt;/AttributeRule&gt;&lt;AttributeRule RuleID=&quot;InterferenceType&quot; AttributeName=&quot;InterferenceType&quot;&gt;&lt;EntityRules&gt;&lt;EntityRule EntityName=&quot;<a href="../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>&quot; /&gt;&lt;/EntityRules&gt;&lt;/AttributeRule&gt;&lt;AttributeRule RuleID=&quot;InteferenceZone&quot; AttributeName=&quot;InterferenceSpace&quot;&gt;&lt;EntityRules&gt;&lt;EntityRule EntityName=&quot;<a href="../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a>&quot;&gt;&lt;AttributeRules&gt;&lt;AttributeRule RuleID=&quot;SpatialZoneType&quot; AttributeName=&quot;PredefinedType&quot;&gt;&lt;EntityRules&gt;&lt;EntityRule Description=&quot;*&quot; EntityName=&quot;<a href="../ifcproductextension/lexical/ifcspatialzonetypeenum.htm">IfcSpatialZoneTypeEnum</a>&quot;&gt;&lt;Constraints&gt;&lt;Constraint Expression=&quot;SpatialZoneType[Value] = &#39;<span class="self-ref">INTERFERENCE</span>&#39;&quot; /&gt;&lt;/Constraints&gt;&lt;/EntityRule&gt;&lt;/EntityRules&gt;&lt;/AttributeRule&gt;&lt;/AttributeRules&gt;&lt;/EntityRule&gt;&lt;/EntityRules&gt;&lt;/AttributeRule&gt;&lt;/AttributeRules&gt;&lt;/EntityRule&gt;&lt;/EntityRules&gt;&lt;/AttributeRule&gt;&lt;AttributeRule RuleID=&quot;SpatialElementName&quot; AttributeName=&quot;Name&quot;&gt;&lt;EntityRules&gt;&lt;EntityRule EntityName=&quot;<a href="../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>&quot; /&gt;&lt;/EntityRules&gt;&lt;/AttributeRule&gt;&lt;/Rules&gt;&lt;/ConceptTemplate&gt;<br/>
+</code></div>
+</details>
+</p>
+<p><a href="../../link/spatial-interference-with-zones.htm" target="_top" ><img src="../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>
