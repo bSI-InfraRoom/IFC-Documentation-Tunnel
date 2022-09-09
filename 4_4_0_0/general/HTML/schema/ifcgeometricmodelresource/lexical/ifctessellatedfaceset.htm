@@ -50,19 +50,15 @@
 <p>NOTE  Not all different constraints on face sets are included as specific subtypes in this release of the specification.</p>
 </blockquote>
 <p>The following attributes apply to all subtypes:</p>
-<ul>
-<li>The <i>Coordinates</i> are the ordered list of Cartesian points representing the vertices of the tessellated item. An index list, defined at the level of subtypes, uses the points, identified by index position, to construct the polylines that represent the faces.</li>
-<li>The <i>HasColours</i> inverse relation provides an indexed colour map with an corresponding list of indices providing a colour for each face of the tessellated face set.</li>
-<li>The <i>HasTextures</i> inverse relation provides an indexed texture map with an corresponding list of indices providing texture coordinates that map to the geometric coordinates of the polylines representing the faces.</li>
-</ul>
+<p>* The <i>Coordinates</i> are the ordered list of Cartesian points representing the vertices of the tessellated item. An index list, defined at the level of subtypes, uses the points, identified by index position, to construct the polylines that represent the faces.
+* The <i>HasColours</i> inverse relation provides an indexed colour map with an corresponding list of indices providing a colour for each face of the tessellated face set.
+* The <i>HasTextures</i> inverse relation provides an indexed texture map with an corresponding list of indices providing texture coordinates that map to the geometric coordinates of the polylines representing the faces.</p>
 <p>Each face of the tessellated face set shall have:</p>
-<ul>
-<li>at least three non-coincident vertices;</li>
-<li>vertices that define a planar polygon;</li>
-<li>vertices that define a non-self-intersecting polygon.</li>
-</ul>
+<p>* at least three non-coincident vertices;
+* vertices that define a planar polygon;
+* vertices that define a non-self-intersecting polygon.</p>
 <blockquote class="note">
-<p>NOTE  The definition of <span class="self-ref">IfcTessellatedFaceSet</span> is based on the <strong>indexedFaceSet</strong> defined in ISO/IEC 19775-1</p>
+<p>NOTE  The definition of <span class="self-ref">IfcTessellatedFaceSet</span> is based on the **indexedFaceSet** defined in ISO/IEC 19775-1</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC4.</p>

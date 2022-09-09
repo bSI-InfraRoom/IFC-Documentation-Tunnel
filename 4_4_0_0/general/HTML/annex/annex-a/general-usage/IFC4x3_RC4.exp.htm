@@ -915,6 +915,10 @@ OR
 <span class="keyword">TYPE</span> IfcGeometricProjectionEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
 &nbsp;GRAPH_VIEW, <br/>&nbsp;SKETCH_VIEW, <br/>&nbsp;MODEL_VIEW, <br/>&nbsp;PLAN_VIEW, <br/>&nbsp;REFLECTED_PLAN_VIEW, <br/>&nbsp;SECTION_VIEW, <br/>&nbsp;ELEVATION_VIEW, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 <br/>
+<a name="ifcgeotechtypicalsectiontypeenum" />
+<span class="keyword">TYPE</span> IfcGeotechTypicalSectionTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
+&nbsp;NOTDEFINED, <br/>&nbsp;USERDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+<br/>
 <a name="ifcglobalorlocalenum" />
 <span class="keyword">TYPE</span> IfcGlobalOrLocalEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
 &nbsp;GLOBAL_COORDS, <br/>&nbsp;LOCAL_COORDS);<br/><span class="keyword">END_TYPE;</span><br/>
@@ -1374,10 +1378,6 @@ OR
 <a name="ifctubebundletypeenum" />
 <span class="keyword">TYPE</span> IfcTubeBundleTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
 &nbsp;FINNED, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
-<br/>
-<a name="ifctunnelparttypeenum" />
-<span class="keyword">TYPE</span> IfcTunnelPartTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;TUNNELSECTION, <br/>&nbsp;CROSSWAY, <br/>&nbsp;RINGSECTION, <br/>&nbsp;PORTAL, <br/>&nbsp;NOTDEFINED, <br/>&nbsp;USERDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 <br/>
 <a name="ifctunneltypeenum" />
 <span class="keyword">TYPE</span> IfcTunnelTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
@@ -4413,7 +4413,7 @@ AND <br/>
 <br/>
 <a name="ifcfacilitypart" />
 <span class="keyword">ENTITY</span> IfcFacilityPart<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcbridgepart">IfcBridgePart</a>, <a href="#ifcfacilitypartcommon">IfcFacilityPartCommon</a>, <a href="#ifcmarinepart">IfcMarinePart</a>, <a href="#ifcrailwaypart">IfcRailwayPart</a>, <a href="#ifcroadpart">IfcRoadPart</a>, <a href="#ifctunnelpart">IfcTunnelPart</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcbridgepart">IfcBridgePart</a>, <a href="#ifcfacilitypartcommon">IfcFacilityPartCommon</a>, <a href="#ifcmarinepart">IfcMarinePart</a>, <a href="#ifcrailwaypart">IfcRailwayPart</a>, <a href="#ifcroadpart">IfcRoadPart</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcspatialstructureelement">IfcSpatialStructureElement</a>)<b>;</b><br/>
 &nbsp;&nbsp;UsageType : <a href="#ifcfacilityusageenum">IfcFacilityUsageEnum</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
@@ -4873,6 +4873,13 @@ EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="key
 <span class="keyword">ENTITY</span> IfcGeoslice<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcgeotechnicalassembly">IfcGeotechnicalAssembly</a>)<b>;</b><br/>
 <span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifcgeotechtypicalsection" />
+<span class="keyword">ENTITY</span> IfcGeotechTypicalSection<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifclinearzone">IfcLinearZone</a>)<b>;</b><br/>
+&nbsp;&nbsp;PredefinedType : <a href="#ifcgeotechtypicalsectiontypeenum">IfcGeotechTypicalSectionTypeEnum</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="#ifcgeotechtypicalsectiontypeenum">IfcGeotechTypicalSectionTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcgeotechnicalassembly" />
 <span class="keyword">ENTITY</span> IfcGeotechnicalAssembly<br/>
@@ -5351,7 +5358,7 @@ EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="key
 <br/>
 <a name="ifclinearelement" />
 <span class="keyword">ENTITY</span> IfcLinearElement<br/>
-&nbsp;<span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcalignmentcant">IfcAlignmentCant</a>, <a href="#ifcalignmenthorizontal">IfcAlignmentHorizontal</a>, <a href="#ifcalignmentsegment">IfcAlignmentSegment</a>, <a href="#ifcalignmentvertical">IfcAlignmentVertical</a>))<br/>
+&nbsp;<span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcalignmentcant">IfcAlignmentCant</a>, <a href="#ifcalignmenthorizontal">IfcAlignmentHorizontal</a>, <a href="#ifcalignmentsegment">IfcAlignmentSegment</a>, <a href="#ifcalignmentvertical">IfcAlignmentVertical</a>, <a href="#ifclinearzone">IfcLinearZone</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcproduct">IfcProduct</a>)<b>;</b><br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
@@ -5366,6 +5373,12 @@ EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="key
 <span class="keyword">ENTITY</span> IfcLinearPositioningElement<br/>
 &nbsp;<span class="keyword">SUPERTYPE OF</span>(<a href="#ifcalignment">IfcAlignment</a>)<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcpositioningelement">IfcPositioningElement</a>)<b>;</b><br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifclinearzone" />
+<span class="keyword">ENTITY</span> IfcLinearZone<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="#ifcgeotechtypicalsection">IfcGeotechTypicalSection</a>)<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifclinearelement">IfcLinearElement</a>)<b>;</b><br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcliquidterminal" />
@@ -9294,13 +9307,6 @@ OR<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
 &nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="#ifctunneltypeenum">IfcTunnelTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
-<a name="ifctunnelpart" />
-<span class="keyword">ENTITY</span> IfcTunnelPart<br/>
-&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcfacilitypart">IfcFacilityPart</a>)<b>;</b><br/>
-&nbsp;&nbsp;PredefinedType : <a href="#ifctunnelparttypeenum">IfcTunnelPartTypeEnum</a>;<br/>
-&nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="#ifctunnelparttypeenum">IfcTunnelPartTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
-<br/>
 <a name="ifctypeobject" />
 <span class="keyword">ENTITY</span> IfcTypeObject<br/>
 &nbsp;<span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifctypeprocess">IfcTypeProcess</a>, <a href="#ifctypeproduct">IfcTypeProduct</a>, <a href="#ifctyperesource">IfcTypeResource</a>))<br/>
@@ -9838,7 +9844,7 @@ AND <br/>
 <p>
 <span class="keyword">FUNCTION</span> IfcConstraintsParamBSpline<br/>
 
-( Degree, UpKnots, UpCp : INTEGER;<br/>&nbsp;&nbsp;KnotMult : LIST OF INTEGER;<br/>&nbsp;&nbsp;Knots : LIST OF <a href="#ifcparametervalue">IfcParameterValue</a> ) <br/>: BOOLEAN;<br/><br/><br/>&nbsp;&nbsp;LOCAL<br/>&nbsp;&nbsp;&nbsp;&nbsp;Result : BOOLEAN := TRUE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;K, Sum : INTEGER;<br/>&nbsp;&nbsp;END_LOCAL;<br/><br/>&nbsp;&nbsp;(* Find sum of knot multiplicities. *)<br/>&nbsp;&nbsp;Sum := KnotMult[1];<br/>&nbsp;&nbsp;REPEAT i := 2 TO UpKnots;<br/>&nbsp;&nbsp;&nbsp;&nbsp;Sum := Sum + KnotMult[i];<br/>&nbsp;&nbsp;END_REPEAT;<br/><br/>&nbsp;&nbsp;(* Check limits holding for all B-spline parametrisations *)<br/>&nbsp;&nbsp;IF (Degree &lt; 1) OR (UpKnots &lt; 2) OR (UpCp &lt; Degree) OR<br/>&nbsp;&nbsp;&nbsp;&nbsp;(Sum &lt;&gt; (Degree + UpCp + 2)) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;Result := FALSE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Result);<br/>&nbsp;&nbsp;END_IF;<br/><br/>&nbsp;&nbsp;K := KnotMult[1];<br/>&nbsp;&nbsp;IF (K &lt; 1) OR (K &gt; Degree + 1) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;Result := FALSE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Result);<br/>&nbsp;&nbsp;END_IF;<br/><br/>&nbsp;&nbsp;REPEAT i := 2 TO UpKnots;<br/>&nbsp;&nbsp;&nbsp;&nbsp;IF (KnotMult[i] &lt; 1) OR (Knots[i] &lt;= Knots[i-1]) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := FALSE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Result);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;&nbsp;&nbsp;K := KnotMult[i];<br/>&nbsp;&nbsp;&nbsp;&nbsp;IF (i &lt; UpKnots) AND (K &gt; Degree) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := FALSE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Result);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;&nbsp;&nbsp;IF (i = UpKnots) AND (K &gt; Degree + 1) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := FALSE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Result);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;END_REPEAT;<br/><br/>&nbsp;&nbsp;RETURN(result);<br/>
+( Degree, UpKnots, UpCp : INTEGER;<br/>&nbsp;&nbsp;KnotMult : LIST OF INTEGER;<br/>&nbsp;&nbsp;Knots : LIST OF <a href="#ifcparametervalue">IfcParameterValue</a> ) <br/>: BOOLEAN;<br/><br/><br/>&nbsp;&nbsp;LOCAL<br/>&nbsp;&nbsp;&nbsp;&nbsp;Result : BOOLEAN := TRUE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;K, Sum : INTEGER;<br/>&nbsp;&nbsp;END_LOCAL;<br/><br/>&nbsp;&nbsp;(* Find sum of knot multiplicities. *)<br/>&nbsp;&nbsp;Sum := KnotMult[1];<br/>&nbsp;&nbsp;REPEAT i := 2 TO UpKnots;<br/>&nbsp;&nbsp;&nbsp;&nbsp;Sum := Sum + KnotMult[i];<br/>&nbsp;&nbsp;END_REPEAT;<br/><br/>&nbsp;&nbsp;(* Check limits holding for all B-spline parametrisations *)<br/>&nbsp;&nbsp;IF (Degree &lt; 1) OR (UpKnots &lt; 2) OR (UpCp &lt; Degree) OR<br/>&nbsp;&nbsp;&nbsp;&nbsp;(Sum &lt;&gt; (Degree + UpCp + 2)) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;Result := FALSE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Result);<br/>&nbsp;&nbsp;END_IF;<br/><br/>&nbsp;&nbsp;K := KnotMult[1];<br/>&nbsp;&nbsp;IF (K &lt; 1) OR (K &gt; Degree + 1) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;Result := FALSE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Result);<br/>&nbsp;&nbsp;END_IF;<br/><br/>&nbsp;&nbsp;REPEAT i := 2 TO UpKnots;<br/>&nbsp;&nbsp;&nbsp;&nbsp;IF (KnotMult[i] &lt; 1) OR (Knots[i] &lt;= Knots[i-1]) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := FALSE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Result);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;&nbsp;&nbsp;K := KnotMult[i];<br/>&nbsp;&nbsp;&nbsp;&nbsp;IF (i &lt; UpKnots) AND (K &gt; Degree) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := FALSE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Result);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;&nbsp;&nbsp;IF (i = UpKnots) AND (K &gt; Degree + 1) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := FALSE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Result);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;END_REPEAT;<br/><br/>&nbsp;&nbsp;RETURN(Result);<br/>
 <br/>
 
 <span class="keyword">END_FUNCTION</span>;
@@ -10078,7 +10084,7 @@ AND <br/>
 <p>
 <span class="keyword">FUNCTION</span> IfcNormalise<br/>
 
-&nbsp;&nbsp;(Arg : <a href="#ifcvectorordirection">IfcVectorOrDirection</a>) <br/>&nbsp;&nbsp;&nbsp;&nbsp;: <a href="#ifcvectorordirection">IfcVectorOrDirection</a>;<br/>LOCAL<br/>&nbsp;&nbsp;Ndim : INTEGER;<br/>&nbsp;&nbsp;V&nbsp;&nbsp;&nbsp;&nbsp;: <a href="#ifcdirection">IfcDirection</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; := <a href="#ifcrepresentationitem">IfcRepresentationItem</a>() || <a href="#ifcgeometricrepresentationitem">IfcGeometricRepresentationItem</a> () || <a href="#ifcdirection">IfcDirection</a>([1.,0.]); <br/>&nbsp;&nbsp;Vec&nbsp;&nbsp;: <a href="#ifcvector">IfcVector</a> <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; := <a href="#ifcrepresentationitem">IfcRepresentationItem</a>() || <a href="#ifcgeometricrepresentationitem">IfcGeometricRepresentationItem</a> () || <a href="#ifcvector">IfcVector</a> (<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#ifcrepresentationitem">IfcRepresentationItem</a>() || <a href="#ifcgeometricrepresentationitem">IfcGeometricRepresentationItem</a> () || <a href="#ifcdirection">IfcDirection</a>([1.,0.]), 1.);<br/>&nbsp;&nbsp;Mag&nbsp;&nbsp;: REAL;<br/>&nbsp;&nbsp;Result : <a href="#ifcvectorordirection">IfcVectorOrDirection</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; := V;<br/>END_LOCAL;<br/><br/>&nbsp;&nbsp;IF NOT EXISTS (Arg) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;RETURN (?);<br/>&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;IF 'IFCGEOMETRYRESOURCE.<a href="#ifcvector">IfcVector</a>' IN TYPEOF(Arg) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ndim := Arg\<a href="#ifcvector">IfcVector</a>.Dim;<br/>	V.DirectionRatios := Arg\<a href="#ifcvector">IfcVector</a>.Orientation.DirectionRatios;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vec.Magnitude := Arg\<a href="#ifcvector">IfcVector</a>.Magnitude;<br/>	Vec.Orientation := V;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IF Arg\<a href="#ifcvector">IfcVector</a>.Magnitude = 0.0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(?);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vec.Magnitude := 1.0;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ndim := Arg\<a href="#ifcdirection">IfcDirection</a>.Dim;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V.DirectionRatios := Arg\<a href="#ifcdirection">IfcDirection</a>.DirectionRatios;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Mag := 0.0;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REPEAT i := 1 TO Ndim;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mag := Mag + V.DirectionRatios[i]*V.DirectionRatios[i];<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END_REPEAT;<br/>&nbsp;&nbsp;&nbsp;&nbsp;IF Mag &gt; 0.0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mag := SQRT(Mag);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REPEAT i := 1 TO Ndim;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V.DirectionRatios[i] := V.DirectionRatios[i]/Mag;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END_REPEAT;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IF 'IFCGEOMETRYRESOURCE.<a href="#ifcvector">IfcVector</a>' IN TYPEOF(arg) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vec.Orientation := V;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := Vec;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := V;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(?);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;RETURN (Result);<br/>
+&nbsp;&nbsp;(Arg : <a href="#ifcvectorordirection">IfcVectorOrDirection</a>) <br/>&nbsp;&nbsp;&nbsp;&nbsp;: <a href="#ifcvectorordirection">IfcVectorOrDirection</a>;<br/>LOCAL<br/>&nbsp;&nbsp;Ndim : INTEGER;<br/>&nbsp;&nbsp;V&nbsp;&nbsp;&nbsp;&nbsp;: <a href="#ifcdirection">IfcDirection</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; := <a href="#ifcrepresentationitem">IfcRepresentationItem</a>() || <a href="#ifcgeometricrepresentationitem">IfcGeometricRepresentationItem</a> () || <a href="#ifcdirection">IfcDirection</a>([1.,0.]); <br/>&nbsp;&nbsp;Vec&nbsp;&nbsp;: <a href="#ifcvector">IfcVector</a> <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; := <a href="#ifcrepresentationitem">IfcRepresentationItem</a>() || <a href="#ifcgeometricrepresentationitem">IfcGeometricRepresentationItem</a> () || <a href="#ifcvector">IfcVector</a> (<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#ifcrepresentationitem">IfcRepresentationItem</a>() || <a href="#ifcgeometricrepresentationitem">IfcGeometricRepresentationItem</a> () || <a href="#ifcdirection">IfcDirection</a>([1.,0.]), 1.);<br/>&nbsp;&nbsp;Mag&nbsp;&nbsp;: REAL;<br/>&nbsp;&nbsp;Result : <a href="#ifcvectorordirection">IfcVectorOrDirection</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; := V;<br/>END_LOCAL;<br/><br/>&nbsp;&nbsp;IF NOT EXISTS (Arg) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;RETURN (?);<br/>&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;IF 'IFCGEOMETRYRESOURCE.<a href="#ifcvector">IfcVector</a>' IN TYPEOF(Arg) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ndim := Arg\<a href="#ifcvector">IfcVector</a>.Dim;<br/>	V.DirectionRatios := Arg\<a href="#ifcvector">IfcVector</a>.Orientation.DirectionRatios;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vec.Magnitude := Arg\<a href="#ifcvector">IfcVector</a>.Magnitude;<br/>	Vec.Orientation := V;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IF Arg\<a href="#ifcvector">IfcVector</a>.Magnitude = 0.0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(?);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vec.Magnitude := 1.0;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ndim := Arg\<a href="#ifcdirection">IfcDirection</a>.Dim;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V.DirectionRatios := Arg\<a href="#ifcdirection">IfcDirection</a>.DirectionRatios;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Mag := 0.0;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REPEAT i := 1 TO Ndim;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mag := Mag + V.DirectionRatios[i]*V.DirectionRatios[i];<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END_REPEAT;<br/>&nbsp;&nbsp;&nbsp;&nbsp;IF Mag &gt; 0.0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mag := SQRT(Mag);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REPEAT i := 1 TO Ndim;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V.DirectionRatios[i] := V.DirectionRatios[i]/Mag;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END_REPEAT;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IF 'IFCGEOMETRYRESOURCE.<a href="#ifcvector">IfcVector</a>' IN TYPEOF(Arg) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vec.Orientation := V;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := Vec;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := V;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(?);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;RETURN (Result);<br/>
 <br/>
 
 <span class="keyword">END_FUNCTION</span>;
@@ -10126,7 +10132,7 @@ AND <br/>
 <p>
 <span class="keyword">FUNCTION</span> IfcSameAxis2Placement<br/>
 
-&nbsp;&nbsp;(ap1, ap2 : <a href="#ifcaxis2placement">IfcAxis2Placement</a>; Epsilon : REAL)<br/>&nbsp;&nbsp;: LOGICAL ;<br/><br/>&nbsp;&nbsp;RETURN (<a href="#ifcsamedirection">IfcSameDirection</a>(ap1.P[1],ap2.P[1],Epsilon) AND<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#ifcsamedirection">IfcSameDirection</a>(ap1.P[2],ap2.P[2],Epsilon) AND<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#ifcsamecartesianpoint">IfcSameCartesianPoint</a>(ap1.Location,ap1.Location,Epsilon));<br/>
+&nbsp;&nbsp;(ap1, ap2 : <a href="#ifcaxis2placement">IfcAxis2Placement</a>; Epsilon : REAL)<br/>&nbsp;&nbsp;: LOGICAL ;<br/><br/>&nbsp;&nbsp;RETURN (<a href="#ifcsamedirection">IfcSameDirection</a>(ap1.P[1],ap2.P[1],Epsilon) AND<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#ifcsamedirection">IfcSameDirection</a>(ap1.P[2],ap2.P[2],Epsilon) AND<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#ifcsamecartesianpoint">IfcSameCartesianPoint</a>(ap1.Location,ap2.Location,Epsilon));<br/>
 <br/>
 
 <span class="keyword">END_FUNCTION</span>;

@@ -44,7 +44,7 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PositionedRelativeTo</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcstructuralelementsdomain/lexical/ifcvoidingfeature.htm">IfcVoidingFeature</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasSurfaceFeatures</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasSurfaceFeatures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -57,9 +57,7 @@
 <p class="use-head">
 Containment Use Definition</p>
 <p>Voiding features shall have no spatial containment relationship to the spatial structure since they are dependent on element types without spatial containment relationships or on an element occurrence with own spatial containment relationship.</p>
-<ul>
-<li>The <i>SELF\IfcElement.ContainedInStructure</i> relationship shall be NIL.</li>
-</ul>
+<p>* The <i>SELF\IfcElement.ContainedInStructure</i> relationship shall be NIL.</p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -257,10 +255,8 @@ Qualifies the feature regarding its shape and configuration relative to the void
 <tr><td><p class="table">Table 719 &mdash; IfcVoidingFeature Product Local Placement</td></tr></table>
 
 <p>The local placement for <i>IfcVoidingFeatureElement</i> is defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines the local coordinate system that is referenced by all geometric representations.</p>
-<ul>
-<li>In case of features which are part of an element type, absolute placement into the type object's implied coordinate system shall be used.</li>
-<li>In case of features which are voiding an element occurrence, the <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> shall point to the local placement of the respective element.</li>
-</ul>
+<p>* In case of features which are part of an element type, absolute placement into the type object's implied coordinate system shall be used.
+* In case of features which are voiding an element occurrence, the <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> shall point to the local placement of the respective element.</p>
 
 <br/><br/>
 

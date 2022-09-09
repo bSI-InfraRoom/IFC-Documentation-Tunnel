@@ -44,23 +44,19 @@
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcAlignmentCantSegment</span> is an individual segment along <a href="../../ifcproductextension/lexical/ifcalignmentcant.htm">IfcAlignmentCant</a>.
 The cant alignment is defined by ordered segments that connect end-to-start. The points defined in a cant alignment segment are defined in a plane with x = distance along horizontal alignment and y = height relative to projected points in vertical alignment.
 The following cant segment types are defined:</p>
-<ul>
-<li>Bloss transition - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> .BLOSSCURVE.</li>
-<li>Constant cant - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> .CONSTANTCANT.</li>
-<li>Cosine transition - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> .COSINECURVE.</li>
-<li>Helmert transition - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> .HELMERTCURVE.</li>
-<li>Linear transition - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> .LINEARTRANSITION.</li>
-<li>Sine transition - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> SINECURVE</li>
-<li>Viennese Bend (R) transition - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> .VIENNESEBEND.</li>
-</ul>
-<p>For each cant segment, the following information is provided:</p>
-<ul>
-<li>the start point, defined by distance along the horizontal alignment</li>
-<li>the length (as horizontal length along the distance along (not the curve segment length))</li>
-<li>the start cant, given by the values of left cant and right cant, measured relatively to vertical alignment</li>
-<li>the end cant, given by the values of left cant and right cant, measured from vertical alignment</li>
-<li>the information of tangential continuity that can be used to check continuity of segments (e.g. invalid sudden change of cant or missing cant information if end point and starting point differ over a threshold).</li>
-</ul>
+<p>* Bloss transition - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> .BLOSSCURVE.
+* Constant cant - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> .CONSTANTCANT.
+* Cosine transition - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> .COSINECURVE.
+* Helmert transition - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> .HELMERTCURVE.
+* Linear transition - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> .LINEARTRANSITION.
+* Sine transition - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> SINECURVE
+* Viennese Bend (R) transition - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentcantsegmenttypeenum.htm">IfcAlignmentCantSegmentTypeEnum</a> .VIENNESEBEND.</p>
+<p>For each cant segment, the following information is provided:
+* the start point, defined by distance along the horizontal alignment
+* the length (as horizontal length along the distance along (not the curve segment length))
+* the start cant, given by the values of left cant and right cant, measured relatively to vertical alignment
+* the end cant, given by the values of left cant and right cant, measured from vertical alignment
+* the information of tangential continuity that can be used to check continuity of segments (e.g. invalid sudden change of cant or missing cant information if end point and starting point differ over a threshold).</p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>

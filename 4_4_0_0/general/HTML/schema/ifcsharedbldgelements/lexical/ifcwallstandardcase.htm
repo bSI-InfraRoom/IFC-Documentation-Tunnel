@@ -47,37 +47,27 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PositionedRelativeTo</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcwallstandardcase.htm">IfcWallStandardCase</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasSurfaceFeatures</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasSurfaceFeatures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcWallStandardCase</span> defines a wall with certain constraints for the provision of parameters and with certain constraints for the geometric representation. The <span class="self-ref">IfcWallStandardCase</span> handles all cases of walls, that are extruded vertically:</p>
-<ul>
-<li>along the positive z axis of the wall object coordinate system, and</li>
-<li>along the positve z axis of the global (world) coordinate system</li>
-</ul>
+<p>* along the positive z axis of the wall object coordinate system, and
+* along the positve z axis of the global (world) coordinate system</p>
 <p>and have a single thickness along the path for each wall layer, i.e.:</p>
-<ul>
-<li>parallel sides for straight walls</li>
-<li>co-centric sides for curved walls.</li>
-</ul>
+<p>* parallel sides for straight walls
+* co-centric sides for curved walls.</p>
 <p>and have either:</p>
-<ul>
-<li>a straight line axis (straight wall), or</li>
-<li>a circular arc axis (round wall).</li>
-</ul>
+<p>* a straight line axis (straight wall), or
+* a circular arc axis (round wall).</p>
 <p>and shall not have</p>
-<ul>
-<li>aggregated components, that is, parts aggregated to a wall by <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a></li>
-<li>shape representation for 'Body' not being an extrusion, or clipped extrusion</li>
-</ul>
+<p>* aggregated components, that is, parts aggregated to a wall by <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>
+* shape representation for 'Body' not being an extrusion, or clipped extrusion</p>
 <p>The following parameter have to be provided:</p>
-<ul>
-<li>Wall height, taken from the depth of extrusion, provided by the geometric representation.</li>
-<li>Wall thickness, taken from the material layer set usage, attached to the wall</li>
-<li>Wall offset from axis, taken from the material layer set usage, attached to the wall</li>
-</ul>
+<p>* Wall height, taken from the depth of extrusion, provided by the geometric representation.
+* Wall thickness, taken from the material layer set usage, attached to the wall
+* Wall offset from axis, taken from the material layer set usage, attached to the wall</p>
 <p>The <span class="self-ref">IfcWallStandardCase</span> requires the provision of the wall axis either a straight line that is parallel to the x-axis of the object coordinate system, or a circular arc where the tangent at start is parallel to the x-axis of the object coordinate system. The direction of the wall axis shall be the positive direction of that x-axis.</p>
 <p>The material of the wall is defined by the <a href="../../ifcmaterialresource/lexical/ifcmateriallayersetusage.htm">IfcMaterialLayerSetUsage</a> and is attached by the <a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.htm">IfcRelAssociatesMaterial</a> objectified relationship. It is accessible by the inverse <i>HasAssociations</i> relationship. The material layer set usage has to be given (enforced by where rule).</p>
 <p>An 'Axis' and a 'Body' shape representation has to be provided, and it is invalid to exchange a 'Tessellation', 'SurfaceModel', 'Brep' or 'MappedRepresentation' representation for the 'Body' shape representation of the <span class="self-ref">IfcWallStandardCase</span>.</p>
@@ -270,15 +260,13 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
  </tr>
 </table>
 <p>Figure 360 illustrates material layer usage, where the following conventions shall be met:</p>
-<ul>
-<li>The reference coordinate system is the local coordinate system established by the <i>ObjectPlacement</i> of the <span class="self-ref">IfcWallStandardCase</span>.</li>
-<li>The reference axis is the axis defined by the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> with <i>RepresentationType</i>='Axis' as one of the <i>Representation.Representations</i> of the <span class="self-ref">IfcWallStandardCase</span>.</li>
-<li>The <i>IfcMaterialLayerSetUsage.OffsetFromReferenceLine</i> is given as a distance from this axis.</li>
-<li>The <i>IfcMaterialLayerSetUsage.OffsetFromReferenceLine</i> is the distance parallel to the reference axis and always within the base (XY) plane of the reference coordinate system. A positve value of <i>IfcMaterialLayerSetUsage.OffsetFromReferenceLine</i> would then point into the positive y-axis of the reference coordinate system.</li>
-<li>The <i>IfcMaterialLayerSetUsage.DirectionSense</i> defines how the <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.htm">IfcMaterialLayer</a>'s are assigned to the reference axis. POSITIVE means in direction to the positive y-axis of the reference coordinate system.</li>
-<li>The <i>Thickness</i> of each <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.htm">IfcMaterialLayer</a> is provided starting from the <i>OffsetFromReferenceLine</i> and in the direction given by <i>DirectionSense</i>. It is applied without any gap or overlap between two consecutive layers. The <i>TotalThickness</i> of the <a href="../../ifcmaterialresource/lexical/ifcmateriallayerset.htm">IfcMaterialLayerSet</a> is the sum of all layer thicknesses.</li>
-<li>The <i>IfcMaterialLayerSetUsage.LayerSetDirection</i> is always AXIS2.</li>
-</ul>
+<p>* The reference coordinate system is the local coordinate system established by the <i>ObjectPlacement</i> of the <span class="self-ref">IfcWallStandardCase</span>.
+* The reference axis is the axis defined by the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> with <i>RepresentationType</i>='Axis' as one of the <i>Representation.Representations</i> of the <span class="self-ref">IfcWallStandardCase</span>.
+* The <i>IfcMaterialLayerSetUsage.OffsetFromReferenceLine</i> is given as a distance from this axis.
+* The <i>IfcMaterialLayerSetUsage.OffsetFromReferenceLine</i> is the distance parallel to the reference axis and always within the base (XY) plane of the reference coordinate system. A positve value of <i>IfcMaterialLayerSetUsage.OffsetFromReferenceLine</i> would then point into the positive y-axis of the reference coordinate system.
+* The <i>IfcMaterialLayerSetUsage.DirectionSense</i> defines how the <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.htm">IfcMaterialLayer</a>'s are assigned to the reference axis. POSITIVE means in direction to the positive y-axis of the reference coordinate system.
+* The <i>Thickness</i> of each <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.htm">IfcMaterialLayer</a> is provided starting from the <i>OffsetFromReferenceLine</i> and in the direction given by <i>DirectionSense</i>. It is applied without any gap or overlap between two consecutive layers. The <i>TotalThickness</i> of the <a href="../../ifcmaterialresource/lexical/ifcmateriallayerset.htm">IfcMaterialLayerSet</a> is the sum of all layer thicknesses.
+* The <i>IfcMaterialLayerSetUsage.LayerSetDirection</i> is always AXIS2.</p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcmateriallayersetusage_wall-01.png" alt="&quot;roof slab material layer set&quot;" title="Figure 360 &mdash; Wall material layers"></td></tr><tr><td><p class="figure">Figure 360 &mdash; Wall material layers</p></td></tr></table></p>
 
 <br/><br/>
@@ -291,9 +279,7 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <tr><td><p class="table">Table 224 &mdash; IfcWallStandardCase Product Local Placement</td></tr></table>
 
 <p>The following restriction is imposed:</p>
-<ul>
-<li>The local placement shall provide the location and directions for the standard wall, the x/y plane is the plane for the profile, and the z-axis is the extrusion axis for the wall body.</li>
-</ul>
+<p>* The local placement shall provide the location and directions for the standard wall, the x/y plane is the plane for the profile, and the z-axis is the extrusion axis for the wall body.</p>
 
 <br/><br/>
 
@@ -305,14 +291,9 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <tr><td><p class="table">Table 225 &mdash; IfcWallStandardCase Axis 2D Geometry</td></tr></table>
 
 <p>The wall axis is represented by a two-dimensional open curve within a particular shape representation. The wall axis is used to apply the material layer set usage parameter to the wall geometry.</p>
-<ul>
-<li><i>Axis</i>
-<ul>
-<li><a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a> having two <i>Points</i>, or <a href="../../ifcgeometryresource/lexical/ifctrimmedcurve.htm">IfcTrimmedCurve</a> with <i>BasisCurve</i> of Type <a href="../../ifcgeometryresource/lexical/ifcline.htm">IfcLine</a> for the 'SweptSolid' provided as <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>. The axis curve lies on the x/y plane and is parallel to the x-axis of the object coordinate system.</li>
-<li><a href="../../ifcgeometryresource/lexical/ifctrimmedcurve.htm">IfcTrimmedCurve</a> with <i>BasisCurve</i> of Type <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a> for 'SweptSolid' provided as <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>. The axis curve lies on the x/y plane of the object coordinate system, the tangent at the start is along the positive x-axis.</li>
-</ul>
-</li>
-</ul>
+<p>* <i>Axis</i>
+* <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a> having two <i>Points</i>, or <a href="../../ifcgeometryresource/lexical/ifctrimmedcurve.htm">IfcTrimmedCurve</a> with <i>BasisCurve</i> of Type <a href="../../ifcgeometryresource/lexical/ifcline.htm">IfcLine</a> for the 'SweptSolid' provided as <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>. The axis curve lies on the x/y plane and is parallel to the x-axis of the object coordinate system.
+* <a href="../../ifcgeometryresource/lexical/ifctrimmedcurve.htm">IfcTrimmedCurve</a> with <i>BasisCurve</i> of Type <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a> for 'SweptSolid' provided as <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>. The axis curve lies on the x/y plane of the object coordinate system, the tangent at the start is along the positive x-axis.</p>
 <p> </p>
 <table cellpadding="2" cellspacing="2">
  <tr>
@@ -346,11 +327,9 @@ a single geometric representation item of type <a href="../../ifcgeometryresourc
 <a id="body-sweptsolid-geometry" />
 <p class="use-head">Body SweptSolid Geometry</p>
 <p>The <a href="../../templates/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a> concept applies to this entity.</p><p>The following additional constraints apply to the 'SweptSolid' representation:</p>
-<ul>
-<li><strong>Solid</strong>: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required,</li>
-<li><strong>Profile</strong>: <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> and <a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a> shall be supported.</li>
-<li><strong>Extrusion</strong>: The profile shall be extruded vertically, i.e., in the direction of the z-axis of the co-ordinate system of the referred spatial structure element. It might be further constraint to be in the direction of the global z-axis in implementers agreements. The extrusion axis shall be perpendicular to the swept profile, i.e. pointing into the direction of the z-axis of the Position of the <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>.</li>
-</ul>
+<p>* **Solid**: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required,
+* **Profile**: <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> and <a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a> shall be supported.
+* **Extrusion**: The profile shall be extruded vertically, i.e., in the direction of the z-axis of the co-ordinate system of the referred spatial structure element. It might be further constraint to be in the direction of the global z-axis in implementers agreements. The extrusion axis shall be perpendicular to the swept profile, i.e. pointing into the direction of the z-axis of the Position of the <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>.</p>
 <p>The profile of a wall is described in the ground view and extruded vertically. The profile (also identical with the foot print of the wall) is defined by the <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> (excluding its subtypes). The profile is given with all wall connections already resolved.</p>
 <p>Figure 363 illustrates a body representation for a straight wall. In case of a straight wall, the two sides of the profile shall be parallel to the wall axis, that is, the wall has a single unchanged thickness.</p>
 <p>Figure 364 illustrates a body representation for a curved wall. In case of a curved wall, the two sides of the profile shall be parallel (with defined offset) to the wall axis, that is, the wall has a single unchanged thickness.</p>
@@ -370,12 +349,10 @@ a single geometric representation item of type <a href="../../ifcgeometryresourc
 <a id="body-clipping-geometry" />
 <p class="use-head">Body Clipping Geometry</p>
 <p>The <a href="../../templates/body-clipping-geometry.htm">Body Clipping Geometry</a> concept applies to this entity.</p><p>The following constraints apply to the 'Clipping' representation:</p>
-<ul>
-<li><strong>Solid</strong>: see standard geometric representation</li>
-<li><strong>Profile</strong>: see standard geometric representation</li>
-<li><strong>Extrusion</strong>: see standard geometric representation</li>
-<li><strong>Boolean result</strong>: The <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> shall be supported, allowing for Boolean differences between the swept solid (here <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>) and one or several <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a> (or subtypes).</li>
-</ul>
+<p>* **Solid**: see standard geometric representation
+* **Profile**: see standard geometric representation
+* **Extrusion**: see standard geometric representation
+* **Boolean result**: The <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> shall be supported, allowing for Boolean differences between the swept solid (here <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>) and one or several <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a> (or subtypes).</p>
 <p>Figure 365 illustrates a clipping for a straight wall using an <a href="../../ifcgeometricmodelresource/lexical/ifcpolygonalboundedhalfspace.htm">IfcPolygonalBoundedHalfSpace</a> as <i>SecondOperand</i> in the <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a>.</p>
 <p>Figure 366 illustrates a clipping for a curved wall using an <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a> as <i>SecondOperand</i> in the <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a>.</p>
 <table cellpadding="2" cellspacing="2">

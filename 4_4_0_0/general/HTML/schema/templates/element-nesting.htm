@@ -27,17 +27,13 @@
 <h4 class="std">4.5.4.2 Element Nesting</h4>
 <p>Provision of a nesting structure where the element, representing the host, has connectable components represented by other elements.</p>
 <p>The nesting structure then provides the following:</p>
-<ul>
-<li><i>Placement</i> — the common object coordinate system to which the components are placed relative</li>
-<li><i>Body Geometry</i> — geometry of the nesting element is independent from the <i>Body Geometry</i> of nested parts;</li>
-</ul>
+<p>* <i>Placement</i> — the common object coordinate system to which the components are placed relative
+* <i>Body Geometry</i> — geometry of the nesting element is independent from the <i>Body Geometry</i> of nested parts;</p>
 <p>The hosted component should not be contained in the spatial hierarchy, i.e. the concept <i>Spatial Containment</i> shall not be used at the level of hosted components. The hosted component is contained in the spatial structure by the spatial containment of its host.</p>
 <p>Examples of element nesting include:</p>
-<ul>
-<li>Doors having holes pre-drilled to attach knobs</li>
-<li>Sinks having holes pre-drilled to attach faucets</li>
-<li>Junction boxes having one or more gangs where switches, outlets, or fixtures may be attached</li>
-</ul>
+<p>* Doors having holes pre-drilled to attach knobs
+* Sinks having holes pre-drilled to attach faucets
+* Junction boxes having one or more gangs where switches, outlets, or fixtures may be attached</p>
 <p>Element nesting should be used for cases where the hosting element has a specific position for attaching other elements of a particular type or form factor where there is no port connection. Ports should be used for scenarios where there is any distribution flow between objects (e.g. electricity, liquid, air/gas). For all other physical connections, the <a href="../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a> relationship and its subtypes should be used.</p>
 <blockquote class="example">
 <p>EXAMPLE  Electric distribution boards would use ports to connect to contained circuit breakers rather than nesting, because there is an electrical connection between the board and each breaker.</p>

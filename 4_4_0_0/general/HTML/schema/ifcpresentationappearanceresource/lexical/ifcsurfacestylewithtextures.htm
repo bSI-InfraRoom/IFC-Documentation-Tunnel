@@ -38,10 +38,8 @@
 <details open="open"><summary>Entity definition</summary><p>The entity <span class="self-ref">IfcSurfaceStyleWithTextures</span> allows to include image textures in surface styles. These image textures can be applied repeating across the surface or mapped with a particular scale upon the surface.</p>
 <p>The entity <span class="self-ref">IfcSurfaceStyleWithTextures</span> is part of the surface style table for presentation information assigned to surfaces for shading, rendering and lighting with textures. The mapping of the texture onto the surface or the solid is determined by the texture coordinates, in absense of an <a href="../../ifcpresentationappearanceresource/lexical/ifctexturecoordinate.htm">IfcTextureCoordinate</a> assigned to each surface texture, a default mapping of the texture to the geometric face or surface applies.</p>
 <p>Surface textures included in the <span class="self-ref">IfcSurfaceStyleWithTextures</span> are two dimensional map formats. They define 2D images that contain an array of colour values describing the texture. Depending on the number of <i>IfcSurfaceTextures</i> being included in the list of <i>Textures</i> the <span class="self-ref">IfcSurfaceStyleWithTextures</span> either describes a single texture, or a multi texture.</p>
-<ul>
-<li>single texture: a single surface texture is applied to the styled geometric item (entirely or partly) with optional repetition and texture transformation</li>
-<li>multi texture: two or more surface textures are applied to the styled geometric item (entirely or partly) with optional repetition, texture transformation or texture coordinate mapping being specific for each texture.</li>
-</ul>
+<p>* single texture: a single surface texture is applied to the styled geometric item (entirely or partly) with optional repetition and texture transformation
+* multi texture: two or more surface textures are applied to the styled geometric item (entirely or partly) with optional repetition, texture transformation or texture coordinate mapping being specific for each texture.</p>
 <p class="spec-head">
 Informal Propositions:</p>
 <ol>

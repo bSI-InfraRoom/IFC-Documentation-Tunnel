@@ -45,16 +45,14 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcStyledItem</span> holds presentation style information for products, either explicitly for an <a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a> being part of an <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> assigned to a product, or by assigning presentation information to <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a> being assigned as other representation for a product.</p>
-<ul>
-<li>If the <span class="self-ref">IfcStyledItem</span> is used within a reference from an <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a> then one <i>Item</i> shall be provided.</li>
-<li>If the <span class="self-ref">IfcStyledItem</span> is used within a reference from an <a href="../../ifcrepresentationresource/lexical/ifcmaterialdefinitionrepresentation.htm">IfcMaterialDefinitionRepresentation</a> then no <i>Item</i> shall be provided.</li>
-</ul>
+<p>* If the <span class="self-ref">IfcStyledItem</span> is used within a reference from an <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a> then one <i>Item</i> shall be provided.
+* If the <span class="self-ref">IfcStyledItem</span> is used within a reference from an <a href="../../ifcrepresentationresource/lexical/ifcmaterialdefinitionrepresentation.htm">IfcMaterialDefinitionRepresentation</a> then no <i>Item</i> shall be provided.</p>
 <blockquote class="extDef">
 <p>NOTE  Definition according to ISO/CD 10303-46:1992<br>
 The styled item is an assignment of style for presentation to a geometric representation item as it is used in a representation.</p>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  Entity adapted from <strong>styled_item</strong> defined in ISO10303-46.</p>
+<p>NOTE  Entity adapted from **styled_item** defined in ISO10303-46.</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x2.</p>
@@ -71,10 +69,8 @@ The styled item is an assignment of style for presentation to a geometric repres
 <p class="use-head">
 Use Definition</p>
 <p>Figure 520 illustrates use of <span class="self-ref">IfcStyledItem</span> for the two usage examples:</p>
-<ul>
-<li><small>As a presentation for a geometric representation item</small></li>
-<li><small>As a presentation for a material definition</small></li>
-</ul>
+<p>* <small>As a presentation for a geometric representation item</small>
+* <small>As a presentation for a material definition</small></p>
 <blockquote class="note">
 <p>NOTE  The new <i>IfcStyleAssignmentSelect</i> allows the direct assignment styles, such as <a href="../../ifcpresentationappearanceresource/lexical/ifccurvestyle.htm">IfcCurveStyle</a>, <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestyle.htm">IfcSurfaceStyle</a> without using the intermediate <i>IfcPresentationStyleAssignment</i></p>
 </blockquote>

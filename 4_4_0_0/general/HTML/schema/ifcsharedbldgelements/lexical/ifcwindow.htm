@@ -46,7 +46,7 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PositionedRelativeTo</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcwindow.htm">IfcWindow</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasSurfaceFeatures</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasSurfaceFeatures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -57,40 +57,28 @@
 Construction for closing a vertical or near vertical opening in a wall or pitched roof that will admit light and may admit fresh air.</p>
 </blockquote>
 <p>The <span class="self-ref">IfcWindow</span> defines a particular occurrence of a window inserted in the spatial context of a project. A window can:</p>
-<ul>
-<li>be inserted into an <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> using the <a href="../../ifcproductextension/lexical/ifcrelfillselement.htm">IfcRelFillsElement</a> relationship, then the <span class="self-ref">IfcWindow</span> has an inverse attribute <i>FillsVoids</i> provided,</li>
-<li>be part of an element assembly, often an <a href="../../ifcsharedbldgelements/lexical/ifccurtainwall.htm">IfcCurtainWall</a>, using the <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship, then the inverse attribute <i>Decomposes</i> is provided.</li>
-<li>or be a &quot;free standing&quot; window, then the <span class="self-ref">IfcWindow</span> has no inverse attributes <i>FillsVoids</i> or <i>Decomposes</i> provided.</li>
-</ul>
+<p>* be inserted into an <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> using the <a href="../../ifcproductextension/lexical/ifcrelfillselement.htm">IfcRelFillsElement</a> relationship, then the <span class="self-ref">IfcWindow</span> has an inverse attribute <i>FillsVoids</i> provided,
+* be part of an element assembly, often an <a href="../../ifcsharedbldgelements/lexical/ifccurtainwall.htm">IfcCurtainWall</a>, using the <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship, then the inverse attribute <i>Decomposes</i> is provided.
+* or be a &quot;free standing&quot; window, then the <span class="self-ref">IfcWindow</span> has no inverse attributes <i>FillsVoids</i> or <i>Decomposes</i> provided.</p>
 <blockquote class="note">
 <p>NOTE  View definitions or implementer agreements may restrict the relationship to only include one window (or door) into one opening.</p>
 </blockquote>
 <p>There are two entities for window occurrences:</p>
-<ul>
-<li><i>IfcWindowStandardCase</i> used for all occurrences of windows, that have a 'Profile' shape representation defined to which a set of shape parameters for lining and framing properties apply. Additionally it requires the provision of an <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> that references one <a href="../../ifcarchitecturedomain/lexical/ifcwindowliningproperties.htm">IfcWindowLiningProperties</a> and on to many <a href="../../ifcarchitecturedomain/lexical/ifcwindowpanelproperties.htm">IfcWindowPanelProperties</a>.</li>
-<li><span class="self-ref">IfcWindow</span> used for all other occurrences of windows, particularly for windows having only 'Brep', or 'SurfaceModel' geometry without applying shape parameters.</li>
-</ul>
+<p>* <i>IfcWindowStandardCase</i> used for all occurrences of windows, that have a 'Profile' shape representation defined to which a set of shape parameters for lining and framing properties apply. Additionally it requires the provision of an <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> that references one <a href="../../ifcarchitecturedomain/lexical/ifcwindowliningproperties.htm">IfcWindowLiningProperties</a> and on to many <a href="../../ifcarchitecturedomain/lexical/ifcwindowpanelproperties.htm">IfcWindowPanelProperties</a>.
+* <span class="self-ref">IfcWindow</span> used for all other occurrences of windows, particularly for windows having only 'Brep', or 'SurfaceModel' geometry without applying shape parameters.</p>
 <p>The actual parameter of the window and/or its shape is defined at the <span class="self-ref">IfcWindow</span> as the occurrence definition (or project instance), or by the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> as the specific definition (or project type). The following parameters are given:</p>
-<ul>
-<li>at the <span class="self-ref">IfcWindow</span> or <i>IfcWindowStandardCase</i> for occurrence specific parameters. The <span class="self-ref">IfcWindow</span> specifies:</li>
-<li>
-<ul>
-<li>the window width and height</li>
-<li>the window opening direction (by the y-axis of the <i>ObjectPlacement</i>)</li>
-</ul>
-</li>
-<li>at the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> to which the <span class="self-ref">IfcWindow</span> is related by the inverse relationship <i>IsDefinedBy</i> pointing to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a>, for type parameters common to all occurrences of the same type.</li>
-<li>
-<ul>
-<li>the partitioning type (single panel, double panel, tripel panel, more panels)</li>
-<li>the operation type (swing, tilt and turn, pivot revolve, fixed case ment, etc.)</li>
-<li>the window panel hinge side (by using two different styles for right and left opening windows)</li>
-<li>the construction material type</li>
-<li>the particular attributes for the lining by the <a href="../../ifcarchitecturedomain/lexical/ifcwindowliningproperties.htm">IfcWindowLiningProperties</a></li>
-<li>the particular attributes for the panels by the  <a href="../../ifcarchitecturedomain/lexical/ifcwindowpanelproperties.htm">IfcWindowPanelProperties</a></li>
-</ul>
-</li>
-</ul>
+<p>* at the <span class="self-ref">IfcWindow</span> or <i>IfcWindowStandardCase</i> for occurrence specific parameters. The <span class="self-ref">IfcWindow</span> specifies:
+*<br>
+* the window width and height
+* the window opening direction (by the y-axis of the <i>ObjectPlacement</i>)
+* at the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> to which the <span class="self-ref">IfcWindow</span> is related by the inverse relationship <i>IsDefinedBy</i> pointing to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a>, for type parameters common to all occurrences of the same type.
+*<br>
+* the partitioning type (single panel, double panel, tripel panel, more panels)
+* the operation type (swing, tilt and turn, pivot revolve, fixed case ment, etc.)
+* the window panel hinge side (by using two different styles for right and left opening windows)
+* the construction material type
+* the particular attributes for the lining by the <a href="../../ifcarchitecturedomain/lexical/ifcwindowliningproperties.htm">IfcWindowLiningProperties</a>
+* the particular attributes for the panels by the  <a href="../../ifcarchitecturedomain/lexical/ifcwindowpanelproperties.htm">IfcWindowPanelProperties</a></p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC1.0.</p>
 </blockquote>
@@ -100,8 +88,8 @@ Construction for closing a vertical or near vertical opening in a wall or pitche
 <p class="use-head">
 Parameteric Representation using parameters at <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a></p>
 <p>The parameters, which define the shape of the <span class="self-ref">IfcWindow</span>, are given at the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> and the property sets, which are included in the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a>. The <span class="self-ref">IfcWindow</span> only defines the local placement. The overall size of the <span class="self-ref">IfcWindow</span> to be used to apply the lining or panel parameter provided by the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> is determined by the IfcShapeRepresentation with the RepresentationIdentifier = 'Profile'. Only in case of an <span class="self-ref">IfcWindow</span> inserted into an <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> using the <a href="../../ifcproductextension/lexical/ifcrelfillselement.htm">IfcRelFillsElement</a> relatioship, having a horizontal extrusion (along the y-axis of the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a>), the overall size is determined by the extrusion profile of the <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a>.</p>
-<p>Figure 367 illustrates the insertion of a window into the <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> by creating an instance of <span class="self-ref">IfcWindow</span> with <i>PartitioningType = DoublePanelHorizontal</i>. The parameters <i>OverallHeight</i> and <i>OverallWidth</i> show the extent of the window in the positive Z and X axis of the local placement of the window. The lining and the transom are created by the given parameters.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcwindow-layout1.gif" alt="&quot;window 1&quot;" title="Figure 367 &mdash; Window placement"></td></tr><tr><td><p class="figure">Figure 367 &mdash; Window placement</p></td></tr></table></p>
+<p>Figure 369 illustrates the insertion of a window into the <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> by creating an instance of <span class="self-ref">IfcWindow</span> with <i>PartitioningType = DoublePanelHorizontal</i>. The parameters <i>OverallHeight</i> and <i>OverallWidth</i> show the extent of the window in the positive Z and X axis of the local placement of the window. The lining and the transom are created by the given parameters.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcwindow-layout1.gif" alt="&quot;window 1&quot;" title="Figure 369 &mdash; Window placement"></td></tr><tr><td><p class="figure">Figure 369 &mdash; Window placement</p></td></tr></table></p>
 <p>Figure 368 illustrates the final window (DoublePanelHorizontal) with first panel having <i>PanelPosition = TOP</i>, <i>OperationType = BOTTOMHUNG</i> and second panel having <i>PanelPosition = BOTTOM</i> and <i>OperationType = TILTANDTURNLEFTHAND</i>.</p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcwindow-layout2.gif" alt="&quot;window 2&quot;" title="Figure 368 &mdash; Window planes"></td></tr><tr><td><p class="figure">Figure 368 &mdash; Window planes</p></td></tr></table></p>
 <p class="use-head">
@@ -483,10 +471,8 @@ Designator for the user defined partitioning type, shall only be provided, if th
 <tr><td><p class="table">Table 230 &mdash; IfcWindow Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcWindow</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
-<ul>
-<li>the <i>Spatial Containment</i> (defined here), or</li>
-<li>the <i>Element Composition</i>.</li>
-</ul>
+<p>* the <i>Spatial Containment</i> (defined here), or
+* the <i>Element Composition</i>.</p>
 <p>The <span class="self-ref">IfcWindow</span> may also be connected to the <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> in which it is placed as a filler. In this case, the spatial containment relationship shall be provided, see Figure 370.</p>
 <table>
  
@@ -529,20 +515,13 @@ Designator for the user defined partitioning type, shall only be provided, if th
 <a id="profile-3d-geometry" />
 <p class="use-head">Profile 3D Geometry</p>
 <p>The <a href="../../templates/profile-3d-geometry.htm">Profile 3D Geometry</a> concept applies to this entity.</p><p>The window profile is represented by a three-dimensional closed curve within a particular shape representation. The profile is used to apply the parameter of the parametric window representation. The following attribute values for the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> holding this geometric representation shall be used:</p>
-<ul>
-<li><i>RepresentationIdentifier</i> : 'Profile'</li>
-<li><i>RepresentationType</i> : 'Curve3D', only a single closed curve shall be contained in the set of <i>IfcShapeRepresentation.Items</i>.</li>
-</ul>
+<p>* <i>RepresentationIdentifier</i> : 'Profile'
+* <i>RepresentationType</i> : 'Curve3D', only a single closed curve shall be contained in the set of <i>IfcShapeRepresentation.Items</i>.</p>
 <p>A 'Profile' representation has to be provided if:</p>
-<ul>
-<li>a parametric representation shall be applied to the window AND</li>
-<li>
-<ul>
-<li>the window is 'free standing', or</li>
-<li>the opening into which the window is inserted is not extruded horizontally (i.e. where the opening profile does not match the window profile)</li>
-</ul>
-</li>
-</ul>
+<p>* a parametric representation shall be applied to the window AND
+*<br>
+* the window is 'free standing', or
+* the opening into which the window is inserted is not extruded horizontally (i.e. where the opening profile does not match the window profile)</p>
 
 <br/><br/>
 

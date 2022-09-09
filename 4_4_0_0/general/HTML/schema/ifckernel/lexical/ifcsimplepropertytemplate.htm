@@ -42,12 +42,10 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcSimplePropertyTemplate</span> defines the template for all dynamically extensible properties, either the subtypes of <a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.htm">IfcSimpleProperty</a>, or the subtypes of <a href="../../ifcquantityresource/lexical/ifcphysicalsimplequantity.htm">IfcPhysicalSimpleQuantity</a>. The individual property templates are interpreted according to their <i>Name</i> attribute and may have a predefined template type, property units, and property measure types. The correct interpretation of the attributes:</p>
-<ul>
-<li><i>PrimaryUnit</i></li>
-<li><i>SecondaryUnit</i></li>
-<li><i>PrimaryMeasureType</i></li>
-<li><i>SecondaryMeasureType</i></li>
-</ul>
+<p>* <i>PrimaryUnit</i>
+* <i>SecondaryUnit</i>
+* <i>PrimaryMeasureType</i>
+* <i>SecondaryMeasureType</i></p>
 <p>is determined by the <i>TemplateType</i>. The attributes Enumerators and Expression only apply to instances of <span class="self-ref">IfcSimplePropertyTemplate</span> having a particular <i>TemplateType</i>. The <i>TemplateType</i> also controls, which subtype of either <a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.htm">IfcSimpleProperty</a> or <a href="../../ifcquantityresource/lexical/ifcphysicalsimplequantity.htm">IfcPhysicalSimpleQuantity</a> shall be used for property occurrences corresponding to this template.</p>
 <p>The <span class="self-ref">IfcSimplePropertyTemplate</span> is part of the set of templates included in the <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a>. The template can be accessed throught the inverse attribute <i>PartOfPsetTemplate</i> The <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> may define one or several instances of <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> (or <a href="../../ifcproductextension/lexical/ifcelementquantity.htm">IfcElementQuantity</a>). The definition assignment is established by the objectified relationship <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a> as shown in Figure 270. There is no direct link between an <span class="self-ref">IfcSimplePropertyTemplate</span> and a subtype of either <a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.htm">IfcSimpleProperty</a> or <a href="../../ifcquantityresource/lexical/ifcphysicalsimplequantity.htm">IfcPhysicalSimpleQuantity</a>. The definition relationship between the template and the individual properties (or quantities) is established by the <i>Name</i> attributes.</p>
 <blockquote class="note">
@@ -69,24 +67,20 @@ NOTE  the value of this property determines the correct use of the <i>PrimaryUn
 </td><td>X</td></tr>
 <tr><td>6</td><td>PrimaryMeasureType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Primary measure type assigned to the definition of the property. It should be provided, if the <i>PropertyType</i> is set to:
-<ul>
-<li><small>P_SINGLEVALUE</small>: determining the measure type of <i>IfcPropertySingleValue.NominalValue</i></li>
-<li><small>P_ENUMERATEDVALUE</small>: determining the measure type of <i>IfcPropertyEnumeratedValue.EnumerationValues</i></li>
-<li><small>P_BOUNDEDVALUE</small>: determining the measure type of <i>IfcPropertyBoundedValue.LowerBoundValue</i></li>
-<li><small>P_LISTVALUE</small>: determining the measure type of <i>IfcPropertyListValue.ListValues</i></li>
-<li><small>P_TABLEVALUE</small>: determining the measure type of <i>IfcPropertyTableValue.DefiningValues</i></li>
-<li><small>P_REFERENCEVALUE</small>: determining the measure type of <i>IfcPropertyTableValue.PropertyReference</i></li>
-</ul>
+* <small>P_SINGLEVALUE</small>: determining the measure type of <i>IfcPropertySingleValue.NominalValue</i>
+* <small>P_ENUMERATEDVALUE</small>: determining the measure type of <i>IfcPropertyEnumeratedValue.EnumerationValues</i>
+* <small>P_BOUNDEDVALUE</small>: determining the measure type of <i>IfcPropertyBoundedValue.LowerBoundValue</i>
+* <small>P_LISTVALUE</small>: determining the measure type of <i>IfcPropertyListValue.ListValues</i>
+* <small>P_TABLEVALUE</small>: determining the measure type of <i>IfcPropertyTableValue.DefiningValues</i>
+* <small>P_REFERENCEVALUE</small>: determining the measure type of <i>IfcPropertyTableValue.PropertyReference</i>
 <blockquote class="note">
 NOTE  The value range of the measure type is within the select type <a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a> for all <i>PropertyType</i>'s with the exeption of <small>P_REFERENCEVALUE</small>. Here it is within the select type <a href="../../ifcpropertyresource/lexical/ifcobjectreferenceselect.htm">IfcObjectReferenceSelect</a>.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>7</td><td>SecondaryMeasureType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Secondary measure type assigned to the definition of the property. It should be provided, if the <i>PropertyType</i> is set to:
-<ul>
-<li><small>P_BOUNDEDVALUE</small>: determining the measure type of <i>IfcPropertyBoundedValue.UpperBoundValue</i></li>
-<li><small>P_TABLEVALUE</small>: determining the measure type of <i>IfcPropertyTableValue.DefinedValues</i></li>
-</ul>
+* <small>P_BOUNDEDVALUE</small>: determining the measure type of <i>IfcPropertyBoundedValue.UpperBoundValue</i>
+* <small>P_TABLEVALUE</small>: determining the measure type of <i>IfcPropertyTableValue.DefinedValues</i>
 The value range of the measure type is within the select type <a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a>  for all <i>PropertyType</i>'s with the exeption of <small>P_ENUMERATEDVALUE</small>. Here it is the comma delimited list of enumerators.
 <blockquote class="note">
 NOTE  The measure type of <i>IfcPropertyEnumeration.EnumerationValues</i> is provided as <i>PrimaryDataType</i>.
@@ -95,45 +89,35 @@ NOTE  The measure type of <i>IfcPropertyEnumeration.EnumerationValues</i> is pr
 <tr><td>8</td><td>Enumerators</td><td><a href="../../ifcpropertyresource/lexical/ifcpropertyenumeration.htm">IfcPropertyEnumeration</a></td><td>? </td><td>
 Name of the property enumeration, and list of all valid enumerators being selectable values, assigned to the definition of the property.
 This attribute shall only be provided, if the <i>PropertyType</i> is set to:
-<ul>
-<li><small>P_ENUMERATEDVALUE</small></li>
-</ul>
+* <small>P_ENUMERATEDVALUE</small>
 </td><td>X</td></tr>
 <tr><td>9</td><td>PrimaryUnit</td><td><a href="../../ifcmeasureresource/lexical/ifcunit.htm">IfcUnit</a></td><td>? </td><td>
 Primary unit assigned to the definition of the property. It should be provided, if the <i>PropertyType</i> is set to:
-<ul>
-<li><small>P_SINGLEVALUE</small>: determining the <i>IfcPropertySingleValue.Unit</i></li>
-<li><small>P_ENUMERATEDVALUE</small>: determining the <i>IfcPropertyEnumeration.Unit</i></li>
-<li><small>P_BOUNDEDVALUE</small>: determining the <i>IfcPropertyBoundedValue.Unit</i></li>
-<li><small>P_LISTVALUE</small>: determining the <i>IfcPropertyListValue.Unit</i></li>
-<li><small>P_TABLEVALUE</small>: determining the <i>IfcPropertyTableValue.DefiningUnit</i></li>
-</ul>
+* <small>P_SINGLEVALUE</small>: determining the <i>IfcPropertySingleValue.Unit</i>
+* <small>P_ENUMERATEDVALUE</small>: determining the <i>IfcPropertyEnumeration.Unit</i>
+* <small>P_BOUNDEDVALUE</small>: determining the <i>IfcPropertyBoundedValue.Unit</i>
+* <small>P_LISTVALUE</small>: determining the <i>IfcPropertyListValue.Unit</i>
+* <small>P_TABLEVALUE</small>: determining the <i>IfcPropertyTableValue.DefiningUnit</i>
 </td><td>X</td></tr>
 <tr><td>10</td><td>SecondaryUnit</td><td><a href="../../ifcmeasureresource/lexical/ifcunit.htm">IfcUnit</a></td><td>? </td><td>
 Secondary unit assigned to the definition of the property. It should be provided, if the <i>PropertyType</i> is set to:
-<ul>
-<li><small>P_TABLEVALUE</small>: determining the <i>IfcPropertyTableValue.DefinedUnit</i></li>
-</ul>
+* <small>P_TABLEVALUE</small>: determining the <i>IfcPropertyTableValue.DefinedUnit</i>
 </td><td>X</td></tr>
 <tr><td>11</td><td>Expression</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 The expression used to store additional information for the property template depending on the <i>PropertyType</i>. It should the following definitions, if the <i>PropertyType</i> is set to:
-<ul>
-<li><small>P_TABLEVALUE</small>: the expression that could be evaluated to define the correlation between the defining values and the defined values.</li>
-<li><small>Q_LENGTH, Q_AREA, Q_VOLUME, Q_COUNT, Q_WEIGTH, Q_TIME</small>: the formula to be used to calculate the quantity</li>
-</ul>
+* <small>P_TABLEVALUE</small>: the expression that could be evaluated to define the correlation between the defining values and the defined values.
+* <small>Q_LENGTH, Q_AREA, Q_VOLUME, Q_COUNT, Q_WEIGTH, Q_TIME</small>: the formula to be used to calculate the quantity
 <blockquote class="note">
 NOTE  No value shall be asserted if the <i>PropertyType</i> is not listed above.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>12</td><td>AccessState</td><td><a href="../../ifcutilityresource/lexical/ifcstateenum.htm">IfcStateEnum</a></td><td>? </td><td>
 Information about the access state of the property. It determines whether a property be viewed and/or modified by any receiving application without specific knowledge of it.
-<strong>Attribute use definition for <a href="../../ifcutilityresource/lexical/ifcstateenum.htm">IfcStateEnum</a></strong>* READWRITE: Properties of this template are readable and writable. They may be viewed and modified by users of any application. These are typical informational properties set by a user.
-<ul>
-<li>READONLY: Properties of this template are read-only. They may be viewed but not modified by users of any application. (Applications may generate such values). These are typical automatically generated properties that should be displayed only, but not written back.</li>
-<li>LOCKED: Properties of this template are locked. They may only be accessed by the owning application (the publisher of the property set template). These are typically application depended, internal properties that should not be published.</li>
-<li>READWRITELOCKED: Properties of this template are locked, readable, and writable. They may only be accessed by the owning application.</li>
-<li>READONLYLOCKED: Properties of this template are locked and read-only. They may only be accessed by the owning application.</li>
-</ul>
+**Attribute use definition for <a href="../../ifcutilityresource/lexical/ifcstateenum.htm">IfcStateEnum</a>*** READWRITE: Properties of this template are readable and writable. They may be viewed and modified by users of any application. These are typical informational properties set by a user.
+* READONLY: Properties of this template are read-only. They may be viewed but not modified by users of any application. (Applications may generate such values). These are typical automatically generated properties that should be displayed only, but not written back.
+* LOCKED: Properties of this template are locked. They may only be accessed by the owning application (the publisher of the property set template). These are typically application depended, internal properties that should not be published.
+* READWRITELOCKED: Properties of this template are locked, readable, and writable. They may only be accessed by the owning application.
+* READONLYLOCKED: Properties of this template are locked and read-only. They may only be accessed by the owning application.
 </td><td>X</td></tr>
 </table>
 </details>
@@ -188,24 +172,20 @@ NOTE  the value of this property determines the correct use of the <i>PrimaryUn
 </td><td>X</td></tr>
 <tr><td>6</td><td>PrimaryMeasureType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Primary measure type assigned to the definition of the property. It should be provided, if the <i>PropertyType</i> is set to:
-<ul>
-<li><small>P_SINGLEVALUE</small>: determining the measure type of <i>IfcPropertySingleValue.NominalValue</i></li>
-<li><small>P_ENUMERATEDVALUE</small>: determining the measure type of <i>IfcPropertyEnumeratedValue.EnumerationValues</i></li>
-<li><small>P_BOUNDEDVALUE</small>: determining the measure type of <i>IfcPropertyBoundedValue.LowerBoundValue</i></li>
-<li><small>P_LISTVALUE</small>: determining the measure type of <i>IfcPropertyListValue.ListValues</i></li>
-<li><small>P_TABLEVALUE</small>: determining the measure type of <i>IfcPropertyTableValue.DefiningValues</i></li>
-<li><small>P_REFERENCEVALUE</small>: determining the measure type of <i>IfcPropertyTableValue.PropertyReference</i></li>
-</ul>
+* <small>P_SINGLEVALUE</small>: determining the measure type of <i>IfcPropertySingleValue.NominalValue</i>
+* <small>P_ENUMERATEDVALUE</small>: determining the measure type of <i>IfcPropertyEnumeratedValue.EnumerationValues</i>
+* <small>P_BOUNDEDVALUE</small>: determining the measure type of <i>IfcPropertyBoundedValue.LowerBoundValue</i>
+* <small>P_LISTVALUE</small>: determining the measure type of <i>IfcPropertyListValue.ListValues</i>
+* <small>P_TABLEVALUE</small>: determining the measure type of <i>IfcPropertyTableValue.DefiningValues</i>
+* <small>P_REFERENCEVALUE</small>: determining the measure type of <i>IfcPropertyTableValue.PropertyReference</i>
 <blockquote class="note">
 NOTE  The value range of the measure type is within the select type <a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a> for all <i>PropertyType</i>'s with the exeption of <small>P_REFERENCEVALUE</small>. Here it is within the select type <a href="../../ifcpropertyresource/lexical/ifcobjectreferenceselect.htm">IfcObjectReferenceSelect</a>.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>7</td><td>SecondaryMeasureType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Secondary measure type assigned to the definition of the property. It should be provided, if the <i>PropertyType</i> is set to:
-<ul>
-<li><small>P_BOUNDEDVALUE</small>: determining the measure type of <i>IfcPropertyBoundedValue.UpperBoundValue</i></li>
-<li><small>P_TABLEVALUE</small>: determining the measure type of <i>IfcPropertyTableValue.DefinedValues</i></li>
-</ul>
+* <small>P_BOUNDEDVALUE</small>: determining the measure type of <i>IfcPropertyBoundedValue.UpperBoundValue</i>
+* <small>P_TABLEVALUE</small>: determining the measure type of <i>IfcPropertyTableValue.DefinedValues</i>
 The value range of the measure type is within the select type <a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a>  for all <i>PropertyType</i>'s with the exeption of <small>P_ENUMERATEDVALUE</small>. Here it is the comma delimited list of enumerators.
 <blockquote class="note">
 NOTE  The measure type of <i>IfcPropertyEnumeration.EnumerationValues</i> is provided as <i>PrimaryDataType</i>.
@@ -214,45 +194,35 @@ NOTE  The measure type of <i>IfcPropertyEnumeration.EnumerationValues</i> is pr
 <tr><td>8</td><td>Enumerators</td><td><a href="../../ifcpropertyresource/lexical/ifcpropertyenumeration.htm">IfcPropertyEnumeration</a></td><td>? </td><td>
 Name of the property enumeration, and list of all valid enumerators being selectable values, assigned to the definition of the property.
 This attribute shall only be provided, if the <i>PropertyType</i> is set to:
-<ul>
-<li><small>P_ENUMERATEDVALUE</small></li>
-</ul>
+* <small>P_ENUMERATEDVALUE</small>
 </td><td>X</td></tr>
 <tr><td>9</td><td>PrimaryUnit</td><td><a href="../../ifcmeasureresource/lexical/ifcunit.htm">IfcUnit</a></td><td>? </td><td>
 Primary unit assigned to the definition of the property. It should be provided, if the <i>PropertyType</i> is set to:
-<ul>
-<li><small>P_SINGLEVALUE</small>: determining the <i>IfcPropertySingleValue.Unit</i></li>
-<li><small>P_ENUMERATEDVALUE</small>: determining the <i>IfcPropertyEnumeration.Unit</i></li>
-<li><small>P_BOUNDEDVALUE</small>: determining the <i>IfcPropertyBoundedValue.Unit</i></li>
-<li><small>P_LISTVALUE</small>: determining the <i>IfcPropertyListValue.Unit</i></li>
-<li><small>P_TABLEVALUE</small>: determining the <i>IfcPropertyTableValue.DefiningUnit</i></li>
-</ul>
+* <small>P_SINGLEVALUE</small>: determining the <i>IfcPropertySingleValue.Unit</i>
+* <small>P_ENUMERATEDVALUE</small>: determining the <i>IfcPropertyEnumeration.Unit</i>
+* <small>P_BOUNDEDVALUE</small>: determining the <i>IfcPropertyBoundedValue.Unit</i>
+* <small>P_LISTVALUE</small>: determining the <i>IfcPropertyListValue.Unit</i>
+* <small>P_TABLEVALUE</small>: determining the <i>IfcPropertyTableValue.DefiningUnit</i>
 </td><td>X</td></tr>
 <tr><td>10</td><td>SecondaryUnit</td><td><a href="../../ifcmeasureresource/lexical/ifcunit.htm">IfcUnit</a></td><td>? </td><td>
 Secondary unit assigned to the definition of the property. It should be provided, if the <i>PropertyType</i> is set to:
-<ul>
-<li><small>P_TABLEVALUE</small>: determining the <i>IfcPropertyTableValue.DefinedUnit</i></li>
-</ul>
+* <small>P_TABLEVALUE</small>: determining the <i>IfcPropertyTableValue.DefinedUnit</i>
 </td><td>X</td></tr>
 <tr><td>11</td><td>Expression</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 The expression used to store additional information for the property template depending on the <i>PropertyType</i>. It should the following definitions, if the <i>PropertyType</i> is set to:
-<ul>
-<li><small>P_TABLEVALUE</small>: the expression that could be evaluated to define the correlation between the defining values and the defined values.</li>
-<li><small>Q_LENGTH, Q_AREA, Q_VOLUME, Q_COUNT, Q_WEIGTH, Q_TIME</small>: the formula to be used to calculate the quantity</li>
-</ul>
+* <small>P_TABLEVALUE</small>: the expression that could be evaluated to define the correlation between the defining values and the defined values.
+* <small>Q_LENGTH, Q_AREA, Q_VOLUME, Q_COUNT, Q_WEIGTH, Q_TIME</small>: the formula to be used to calculate the quantity
 <blockquote class="note">
 NOTE  No value shall be asserted if the <i>PropertyType</i> is not listed above.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>12</td><td>AccessState</td><td><a href="../../ifcutilityresource/lexical/ifcstateenum.htm">IfcStateEnum</a></td><td>? </td><td>
 Information about the access state of the property. It determines whether a property be viewed and/or modified by any receiving application without specific knowledge of it.
-<strong>Attribute use definition for <a href="../../ifcutilityresource/lexical/ifcstateenum.htm">IfcStateEnum</a></strong>* READWRITE: Properties of this template are readable and writable. They may be viewed and modified by users of any application. These are typical informational properties set by a user.
-<ul>
-<li>READONLY: Properties of this template are read-only. They may be viewed but not modified by users of any application. (Applications may generate such values). These are typical automatically generated properties that should be displayed only, but not written back.</li>
-<li>LOCKED: Properties of this template are locked. They may only be accessed by the owning application (the publisher of the property set template). These are typically application depended, internal properties that should not be published.</li>
-<li>READWRITELOCKED: Properties of this template are locked, readable, and writable. They may only be accessed by the owning application.</li>
-<li>READONLYLOCKED: Properties of this template are locked and read-only. They may only be accessed by the owning application.</li>
-</ul>
+**Attribute use definition for <a href="../../ifcutilityresource/lexical/ifcstateenum.htm">IfcStateEnum</a>*** READWRITE: Properties of this template are readable and writable. They may be viewed and modified by users of any application. These are typical informational properties set by a user.
+* READONLY: Properties of this template are read-only. They may be viewed but not modified by users of any application. (Applications may generate such values). These are typical automatically generated properties that should be displayed only, but not written back.
+* LOCKED: Properties of this template are locked. They may only be accessed by the owning application (the publisher of the property set template). These are typically application depended, internal properties that should not be published.
+* READWRITELOCKED: Properties of this template are locked, readable, and writable. They may only be accessed by the owning application.
+* READONLYLOCKED: Properties of this template are locked and read-only. They may only be accessed by the owning application.
 </td><td>X</td></tr>
 </table>
 </details>

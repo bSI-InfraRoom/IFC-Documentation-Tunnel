@@ -11,7 +11,7 @@
     <title>IfcRelSpaceBoundary1stLevel</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 4 index3 3 index4 63 index5 0; }
+      body { counter-reset: index1 5 index2 4 index3 3 index4 64 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.htm#5.4.3.64");
+    parent.index.location.replace("../../toc-5.htm#5.4.3.65");
 //-->
 </script>
 
@@ -42,12 +42,10 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The 1st level space boundary defines the physical or virtual delimiter of a space by the relationship <span class="self-ref">IfcRelSpaceBoundary1stLevel</span> to the surrounding elements. 1st level space boundaries are characterizeda by:</p>
-<ul>
-<li>1st level space boundaries are the boundaries of a space defined by the surfaces of building elements bounding this space (physical space boundaries) or by virtual surfaces provided by an adjacent space with no dividing wall.</li>
-<li>1st level space boundaries do not consider any change of material in the bounding building elements, or different spaces/zones behind a wall or slab (floor or ceiling).</li>
-<li>1st level space boundaries are differentiated in two ways: virtual or physical and internal,external, or undefined (internal and external) e.g. for a wall that is partially inside and outside.</li>
-<li>1st level space boundaries form a closed shell around the space (so long as the space is completely enclosed) and include overlapping boundaries representing openings (filled or not) in the building elements (see implementers agreement below).</li>
-</ul>
+<p>* 1st level space boundaries are the boundaries of a space defined by the surfaces of building elements bounding this space (physical space boundaries) or by virtual surfaces provided by an adjacent space with no dividing wall.
+* 1st level space boundaries do not consider any change of material in the bounding building elements, or different spaces/zones behind a wall or slab (floor or ceiling).
+* 1st level space boundaries are differentiated in two ways: virtual or physical and internal,external, or undefined (internal and external) e.g. for a wall that is partially inside and outside.
+* 1st level space boundaries form a closed shell around the space (so long as the space is completely enclosed) and include overlapping boundaries representing openings (filled or not) in the building elements (see implementers agreement below).</p>
 <p>1st level space boundaries define a space by its boundary surfaces without taking anything on the other side of the bounding elements into account.</p>
 <blockquote class="note">
 <p>NOTE  1st level space boundaries are used e.g. in quantity take-off and facility management as they describe the surfaces for finishes. They cannot be directly used for thermal analysis. However 1st level space boundaries can provide the input to preprocessors to thermal analysis software that take 1st level space boundaries and perform the necessary transformation into 2nd level space boundaries that are required for energy analysis.</p>
@@ -116,7 +114,7 @@ Optional description, provided for exchanging informative comments.
 Reference to one spaces that is delimited by this boundary.
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatedBuildingElement</td><td><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></td><td></td><td>
-Reference to <del>Building</del> Element, that defines the Space Boundaries.
+Reference to ~~Building~~ Element, that defines the Space Boundaries.
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <i>IfcBuildingElement</i> to <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -125,7 +123,7 @@ IFC4 CHANGE  The attribute has been changed to be mandatory.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>7</td><td>ConnectionGeometry</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a></td><td>? </td><td>
-Physical representation of the space boundary. Provided as a <strong>curve or</strong> surface given within the LCS of the space.
+Physical representation of the space boundary. Provided as a **curve or** surface given within the LCS of the space.
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectionsurfacegeometry.htm">IfcConnectionSurfaceGeometry</a> to <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a> with upward compatibility for file based exchange.
 </blockquote>

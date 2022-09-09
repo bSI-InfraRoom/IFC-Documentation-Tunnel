@@ -3942,6 +3942,14 @@ of the material. The information contained in this document is subject to change
 			<xs:extension base="ifc:IfcGeotechnicalAssembly"/>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:element name="IfcGeotechTypicalSection" type="ifc:IfcGeotechTypicalSection" substitutionGroup="ifc:IfcLinearZone" nillable="true"/>
+	<xs:complexType name="IfcGeotechTypicalSection">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcLinearZone">
+				<xs:attribute name="PredefinedType" type="ifc:IfcGeotechTypicalSectionTypeEnum" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="IfcGeotechnicalAssembly" type="ifc:IfcGeotechnicalAssembly" abstract="true" substitutionGroup="ifc:IfcGeotechnicalElement" nillable="true"/>
 	<xs:complexType name="IfcGeotechnicalAssembly" abstract="true">
 		<xs:complexContent>
@@ -4660,6 +4668,12 @@ of the material. The information contained in this document is subject to change
 	<xs:complexType name="IfcLinearPositioningElement">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcPositioningElement"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcLinearZone" type="ifc:IfcLinearZone" abstract="true" substitutionGroup="ifc:IfcLinearElement" nillable="true"/>
+	<xs:complexType name="IfcLinearZone" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcLinearElement"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="IfcLiquidTerminal" type="ifc:IfcLiquidTerminal" substitutionGroup="ifc:IfcFlowTerminal" nillable="true"/>
@@ -10217,14 +10231,6 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="IfcTunnelPart" type="ifc:IfcTunnelPart" substitutionGroup="ifc:IfcFacilityPart" nillable="true"/>
-	<xs:complexType name="IfcTunnelPart">
-		<xs:complexContent>
-			<xs:extension base="ifc:IfcFacilityPart">
-				<xs:attribute name="PredefinedType" type="ifc:IfcTunnelPartTypeEnum" use="optional"/>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:element name="IfcTypeObject" type="ifc:IfcTypeObject" substitutionGroup="ifc:IfcObjectDefinition" nillable="true"/>
 	<xs:complexType name="IfcTypeObject">
 		<xs:complexContent>
@@ -13176,6 +13182,12 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="IfcGeotechTypicalSectionTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="notdefined"/>
+			<xs:enumeration value="userdefined"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="IfcGlobalOrLocalEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="global_coords"/>
@@ -14601,16 +14613,6 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="finned"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="IfcTunnelPartTypeEnum">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="tunnelsection"/>
-			<xs:enumeration value="crossway"/>
-			<xs:enumeration value="ringsection"/>
-			<xs:enumeration value="portal"/>
-			<xs:enumeration value="notdefined"/>
-			<xs:enumeration value="userdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcTunnelTypeEnum">

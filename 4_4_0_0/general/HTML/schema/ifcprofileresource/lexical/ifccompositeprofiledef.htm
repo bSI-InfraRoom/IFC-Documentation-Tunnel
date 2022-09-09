@@ -40,15 +40,11 @@
 <p>HISTORY  New entity in IFC2x.</p>
 </blockquote>
 <p>Figure 314 illustrates the composite profile definition. The <span class="self-ref">IfcCompositeProfileDef</span> does not define an own position coordinate system, it is directly defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either:</p>
-<ul>
-<li><i>IfcSweptSurface.Position</i></li>
-<li><i>IfcSweptAreaSolid.Position</i></li>
-</ul>
+<p>* <i>IfcSweptSurface.Position</i>
+* <i>IfcSweptAreaSolid.Position</i></p>
 <p>Or in case of sectioned spines it is the xy plane of each list member of <i>IfcSectionedSpine.CrossSectionPositions</i>. The <span class="self-ref">IfcCompositeProfileDef</span> is defined using other profile definitions. Those other profile definitions are directly inserted into the underlying coordinate system.</p>
-<ul>
-<li>In case of parameterized profile definitions, the <i>Position</i> attribute of those standard profiles is used to place the profiles relatively to each other.</li>
-<li>In case of arbitrary profile definitions, each Cartesian coordinate is given directly within the underlying coordinate system.</li>
-</ul>
+<p>* In case of parameterized profile definitions, the <i>Position</i> attribute of those standard profiles is used to place the profiles relatively to each other.
+* In case of arbitrary profile definitions, each Cartesian coordinate is given directly within the underlying coordinate system.</p>
 <blockquote class="note">
 <p>NOTE  The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid.</p>
 </blockquote>

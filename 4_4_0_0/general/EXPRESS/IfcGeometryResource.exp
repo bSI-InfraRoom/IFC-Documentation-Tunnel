@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 18 August 2022
+Friday, 9 September 2022
 
 *)
 
@@ -1114,7 +1114,7 @@ FUNCTION IfcConstraintsParamBSpline
     END_IF;
   END_REPEAT;
 
-  RETURN(result);
+  RETURN(Result);
 
 END_FUNCTION;
 
@@ -1430,7 +1430,7 @@ END_LOCAL;
       REPEAT i := 1 TO Ndim;
         V.DirectionRatios[i] := V.DirectionRatios[i]/Mag;
       END_REPEAT;
-      IF 'IFCGEOMETRYRESOURCE.IFCVECTOR' IN TYPEOF(arg) THEN
+      IF 'IFCGEOMETRYRESOURCE.IFCVECTOR' IN TYPEOF(Arg) THEN
         Vec.Orientation := V;
         Result := Vec;
       ELSE
@@ -1465,7 +1465,7 @@ FUNCTION IfcSameAxis2Placement
 
   RETURN (IfcSameDirection(ap1.P[1],ap2.P[1],Epsilon) AND
           IfcSameDirection(ap1.P[2],ap2.P[2],Epsilon) AND
-          IfcSameCartesianPoint(ap1.Location,ap1.Location,Epsilon));
+          IfcSameCartesianPoint(ap1.Location,ap2.Location,Epsilon));
 
 END_FUNCTION;
 

@@ -44,7 +44,7 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PositionedRelativeTo</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcplate.htm">IfcPlate</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasSurfaceFeatures</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasSurfaceFeatures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -63,10 +63,8 @@
 <p>An instance <span class="self-ref">IfcPlate</span> should preferably get its geometric representation and material assignment through the type definition by <a href="../../ifcsharedbldgelements/lexical/ifcplatetype.htm">IfcPlateType</a> assigned using the <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> relationship. This allows identical plates in a construction to be represented by the same instance of <a href="../../ifcsharedbldgelements/lexical/ifcplatetype.htm">IfcPlateType</a>.</p>
 <p>A plate may have openings, such as voids or recesses. They are defined by an <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> attached to the plate using the inverse relationship <i>HasOpenings</i> pointing to <a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a>. The position number of a plate as often used in steel construction is assigned through the attribute <i>IfcElement.Tag</i></p>
 <p>The IFC specification provides two entities for plate occurrences:</p>
-<ul>
-<li><i>IfcPlateStandardCase</i> used for all occurrences of plates, that are prismatic and where the thickness parameter can be fully described by the <a href="../../ifcmaterialresource/lexical/ifcmateriallayersetusage.htm">IfcMaterialLayerSetUsage</a>. These plates are always represented geometrically by a 'SweptSolid' geometry (or by a 'Clipping' geometry based on 'SweptSolid'), if a 3D geometric representation is assigned. In addition they have to have a corresponding <a href="../../ifcmaterialresource/lexical/ifcmateriallayersetusage.htm">IfcMaterialLayerSetUsage</a> assigned.</li>
-<li><span class="self-ref">IfcPlate</span> used for all other occurrences of plates, particularly for plates with changing thickness, or plates with non planar surfaces, and plates having only 'SurfaceModel' or 'Brep' geometry.</li>
-</ul>
+<p>* <i>IfcPlateStandardCase</i> used for all occurrences of plates, that are prismatic and where the thickness parameter can be fully described by the <a href="../../ifcmaterialresource/lexical/ifcmateriallayersetusage.htm">IfcMaterialLayerSetUsage</a>. These plates are always represented geometrically by a 'SweptSolid' geometry (or by a 'Clipping' geometry based on 'SweptSolid'), if a 3D geometric representation is assigned. In addition they have to have a corresponding <a href="../../ifcmaterialresource/lexical/ifcmateriallayersetusage.htm">IfcMaterialLayerSetUsage</a> assigned.
+* <span class="self-ref">IfcPlate</span> used for all other occurrences of plates, particularly for plates with changing thickness, or plates with non planar surfaces, and plates having only 'SurfaceModel' or 'Brep' geometry.</p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x2</p>
 </blockquote>
@@ -369,10 +367,8 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <tr><td><p class="table">Table 177 &mdash; IfcPlate Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcPlate</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
-<ul>
-<li>the <i>Spatial Containment</i> (defined here), or</li>
-<li>the <i>Element Composition</i>.</li>
-</ul>
+<p>* the <i>Spatial Containment</i> (defined here), or
+* the <i>Element Composition</i>.</p>
 
 <br/><br/>
 
@@ -387,11 +383,9 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <a id="body-sweptsolid-geometry" />
 <p class="use-head">Body SweptSolid Geometry</p>
 <p>The <a href="../../templates/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a> concept applies to this entity.</p><p>The following additional constraints apply to the 'SweptSolid' representation:</p>
-<ul>
-<li><strong>Solid</strong>: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required,</li>
-<li><strong>Profile</strong>: <i>IfcArbitraryClosedProfileDef, IfcArbitraryProfileDefWithVoids, IfcRectangleProfileDef, IfcCircleProfileDef, IfcEllipseProfileDef</i> shall be supported.</li>
-<li><strong>Extrusion</strong>: The profile can be extruded perpendicularly or non-perpendicularly to the plane of the swept profile.</li>
-</ul>
+<p>* **Solid**: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required,
+* **Profile**: <i>IfcArbitraryClosedProfileDef, IfcArbitraryProfileDefWithVoids, IfcRectangleProfileDef, IfcCircleProfileDef, IfcEllipseProfileDef</i> shall be supported.
+* **Extrusion**: The profile can be extruded perpendicularly or non-perpendicularly to the plane of the swept profile.</p>
 
 <br/><br/>
 

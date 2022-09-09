@@ -43,7 +43,7 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PositionedRelativeTo</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcslab.htm">IfcSlab</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasSurfaceFeatures</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasSurfaceFeatures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -62,11 +62,9 @@ thick, flat or shaped component, usually larger than 300 mm square, used to form
 </blockquote>
 <p>A slab may have openings, such as floor openings, or recesses. They are defined by an <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> attached to the slab using the inverse relationship <i>HasOpenings</i> pointing to <a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a>.</p>
 <p>There are three entities for slab occurrences:</p>
-<ul>
-<li><i>IfcSlabStandardCase</i> used for all occurrences of slabs, that are prismatic and where the thickness parameter can be fully described by the <a href="../../ifcmaterialresource/lexical/ifcmateriallayersetusage.htm">IfcMaterialLayerSetUsage</a>. These slabs are always represented geometrically by a 'SweptSolid' geometry (or by a 'Clipping' geometry based on 'SweptSolid'), if a 3D geometric representation is assigned. In addition they have to have a corresponding <a href="../../ifcmaterialresource/lexical/ifcmateriallayersetusage.htm">IfcMaterialLayerSetUsage</a> assigned.</li>
-<li><i>IfcSlabElementedCase</i> used for occurrences of slabs which are aggregated from subordinate elements, following specific decomposition rules expressed by the mandatory use of <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship.</li>
-<li><span class="self-ref">IfcSlab</span> used for all other occurrences of slabs, particularly for slabs with changing thickness, or slabs with non planar surfaces, and slabs having only 'SweptSolid' or 'Brep' geometry.</li>
-</ul>
+<p>* <i>IfcSlabStandardCase</i> used for all occurrences of slabs, that are prismatic and where the thickness parameter can be fully described by the <a href="../../ifcmaterialresource/lexical/ifcmateriallayersetusage.htm">IfcMaterialLayerSetUsage</a>. These slabs are always represented geometrically by a 'SweptSolid' geometry (or by a 'Clipping' geometry based on 'SweptSolid'), if a 3D geometric representation is assigned. In addition they have to have a corresponding <a href="../../ifcmaterialresource/lexical/ifcmateriallayersetusage.htm">IfcMaterialLayerSetUsage</a> assigned.
+* <i>IfcSlabElementedCase</i> used for occurrences of slabs which are aggregated from subordinate elements, following specific decomposition rules expressed by the mandatory use of <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship.
+* <span class="self-ref">IfcSlab</span> used for all other occurrences of slabs, particularly for slabs with changing thickness, or slabs with non planar surfaces, and slabs having only 'SweptSolid' or 'Brep' geometry.</p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2.0; it is a merger of the two previous entities IfcFloor, IfcRoofSlab, introduced in IFC1.0</p>
 </blockquote>
@@ -399,10 +397,8 @@ IFC2x CHANGE The attribute has been changed into an OPTIONAL attribute.
 <tr><td><p class="table">Table 205 &mdash; IfcSlab Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcSlab</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
-<ul>
-<li>the <i>Spatial Containment</i> (defined here), or</li>
-<li>the <i>Element Composition</i>.</li>
-</ul>
+<p>* the <i>Spatial Containment</i> (defined here), or
+* the <i>Element Composition</i>.</p>
 
 <br/><br/>
 
@@ -417,11 +413,9 @@ IFC2x CHANGE The attribute has been changed into an OPTIONAL attribute.
 <a id="body-sweptsolid-geometry" />
 <p class="use-head">Body SweptSolid Geometry</p>
 <p>The <a href="../../templates/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a> concept applies to this entity.</p><p>The following additional constraints apply to the swept solid representation:</p>
-<ul>
-<li><strong>Solid</strong>: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required,</li>
-<li><strong>Profile</strong>: <i>IfcArbitraryClosedProfileDef, IfcRectangleProfileDef, IfcCircleProfileDef, IfcEllipseProfileDef</i> shall be supported.</li>
-<li><strong>Extrusion</strong>: The profile can be extruded perpendicularly or non-perpendicularly to the plane of the swept profile.</li>
-</ul>
+<p>* **Solid**: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required,
+* **Profile**: <i>IfcArbitraryClosedProfileDef, IfcRectangleProfileDef, IfcCircleProfileDef, IfcEllipseProfileDef</i> shall be supported.
+* **Extrusion**: The profile can be extruded perpendicularly or non-perpendicularly to the plane of the swept profile.</p>
 <p>Figure 353 illustrates a 'SweptSolid' geometric representation.</p>
 <blockquote class="note">
 <p>NOTE  The following interpretation of dimension parameter applies for polygonal slabs (in ground floor view): &gt; * <i>IfcArbitraryClosedProfileDef.OuterCurve</i>: closed bounded curve interpreted as area (or foot print) of the slab.</p>
@@ -433,12 +427,10 @@ IFC2x CHANGE The attribute has been changed into an OPTIONAL attribute.
 <a id="body-clipping-geometry" />
 <p class="use-head">Body Clipping Geometry</p>
 <p>The <a href="../../templates/body-clipping-geometry.htm">Body Clipping Geometry</a> concept applies to this entity.</p><p>The following constraints apply to the 'Clipping' representation:</p>
-<ul>
-<li><strong>Solid</strong>: see 'SweptSolid' shape representation,</li>
-<li><strong>Profile</strong>: see 'SweptSolid' shape representation,</li>
-<li><strong>Extrusion</strong>: see 'SweptSolid' shape representation,</li>
-<li><strong>Boolean result</strong>: The <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> shall be supported, allowing for Boolean differences between the swept solid (here <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>) and one or several <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a>.</li>
-</ul>
+<p>* **Solid**: see 'SweptSolid' shape representation,
+* **Profile**: see 'SweptSolid' shape representation,
+* **Extrusion**: see 'SweptSolid' shape representation,
+* **Boolean result**: The <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> shall be supported, allowing for Boolean differences between the swept solid (here <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>) and one or several <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a>.</p>
 <p>Figure 354 illustrates a 'Clipping' geometric representation with definition of a roof slab using advanced geometric representation. The profile is extruded non-perpendicular and the slab body is clipped at the eave.</p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcslab_advanced-layout1.gif" alt="&quot;advanced slab&quot;" title="Figure 354 &mdash; Slab body clipping"></td></tr><tr><td><p class="figure">Figure 354 &mdash; Slab body clipping</p></td></tr></table></p>
 

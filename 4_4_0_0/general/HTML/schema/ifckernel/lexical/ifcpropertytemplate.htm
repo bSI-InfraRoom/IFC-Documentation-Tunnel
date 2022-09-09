@@ -42,20 +42,12 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcPropertyTemplate</span> is an abstract supertype comprising the templates for all dynamically extensible properties, either as an <a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a>, or an <a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a>. These templates determine the structure of:</p>
-<ul>
-<li>in case of <a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a>
-<ul>
-<li>an <a href="../../ifcpropertyresource/lexical/ifccomplexproperty.htm">IfcComplexProperty</a></li>
-<li>an <a href="../../ifcquantityresource/lexical/ifcphysicalcomplexquantity.htm">IfcPhysicalComplexQuantity</a></li>
-</ul>
-</li>
-<li>in case of <a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a>
-<ul>
-<li>a subtype of <a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.htm">IfcSimpleProperty</a></li>
-<li>a subtype of <a href="../../ifcquantityresource/lexical/ifcphysicalsimplequantity.htm">IfcPhysicalSimpleQuantity</a></li>
-</ul>
-</li>
-</ul>
+<p>* in case of <a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a>
+* an <a href="../../ifcpropertyresource/lexical/ifccomplexproperty.htm">IfcComplexProperty</a>
+* an <a href="../../ifcquantityresource/lexical/ifcphysicalcomplexquantity.htm">IfcPhysicalComplexQuantity</a>
+* in case of <a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a>
+* a subtype of <a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.htm">IfcSimpleProperty</a>
+* a subtype of <a href="../../ifcquantityresource/lexical/ifcphysicalsimplequantity.htm">IfcPhysicalSimpleQuantity</a></p>
 <p>The individual property templates are interpreted according to their <i>Name</i> attribute and may have a predefined property type, property unit, and property data type. A template however shall not have measure values, or quantity values assigned.</p>
 <blockquote class="note">
 <p>NOTE  Property templates can form part of a property library used and attached as part of a project library. In general the <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a>, containing the subtypes of <span class="self-ref">IfcPropertyTemplate</span> would be directly linked to the <a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a>.</p>

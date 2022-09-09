@@ -44,14 +44,12 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>The element component type <strong>IfcDiscreteAccessoryType</strong> defines commonly shared information for occurrences of discrete accessorys. The set of shared information may include:</p>
-<ul>
-<li>common properties with shared property sets</li>
-<li>common representations</li>
-<li>common materials</li>
-<li>common composition of elements</li>
-</ul>
-<p>It is used to define a discrete accessory type specification indicating the specific product information that is common to all occurrences of that product type. The <strong>IfcDiscreteAccessoryType</strong> may be declared within <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a> or <a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a> using <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a> and may be exchanged with or without occurrences of the type. Occurrences of <strong>IfcDiscreteAccessoryType</strong> are represented by instances of <a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm">IfcDiscreteAccessory</a>.</p>
+<details open="open"><summary>Entity definition</summary><p>The element component type **IfcDiscreteAccessoryType** defines commonly shared information for occurrences of discrete accessorys. The set of shared information may include:</p>
+<p>* common properties with shared property sets
+* common representations
+* common materials
+* common composition of elements</p>
+<p>It is used to define a discrete accessory type specification indicating the specific product information that is common to all occurrences of that product type. The **IfcDiscreteAccessoryType** may be declared within <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a> or <a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a> using <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a> and may be exchanged with or without occurrences of the type. Occurrences of **IfcDiscreteAccessoryType** are represented by instances of <a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm">IfcDiscreteAccessory</a>.</p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC4.</p>
 </blockquote>
@@ -59,70 +57,56 @@
 Type Use Definition</p>
 <p>The exact type information of the <span class="self-ref">IfcDiscreteAccessoryType</span> is given in the <i>PredefinedType</i> attribute, possibly in combination with the <i>ElementType</i> attribute inherited from <a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a>. Standard <i>ElementType</i> designations are provided for guideline below. The list is not exhaustive and the list of definitions may be extended based on local agreements.</p>
 <p>Corbels as separate components:</p>
-<ul>
-<li><strong>'Hidden steel corbel'</strong>: Corbel system made from steel components embedded into the master element.</li>
-<li><strong>'Visible steel corbel'</strong>: Corbel system made from steel components protruding from the master element.</li>
-<li><strong>'Visible concrete corbel'</strong>: Corbel system made as a separate precast concrete component added to the master element.</li>
-</ul>
+<p>*  **'Hidden steel corbel'**: Corbel system made from steel components embedded into the master element.
+*  **'Visible steel corbel'**: Corbel system made from steel components protruding from the master element.
+*  **'Visible concrete corbel'**: Corbel system made as a separate precast concrete component added to the master element.</p>
 <p>Connecting accessories, for example for sandwich wall panels:</p>
-<ul>
-<li><strong>'Diagonal truss connector'</strong>: A fixing device in truss form with diagonal cross bars holding two precast conrete panels together in a sandwich wall panel.</li>
-<li><strong>'Ladder truss connector'</strong>: A fixing device in truss form with straight cross bars in ladder form holding two precast conrete panels together in a sandwich wall panel.</li>
-<li><strong>'Panel suspender'</strong>: A straight fixing device holding two precast conrete panels together in a sandwich wall panel.</li>
-</ul>
+<p>*  **'Diagonal truss connector'**: A fixing device in truss form with diagonal cross bars holding two precast conrete panels together in a sandwich wall panel.
+*  **'Ladder truss connector'**: A fixing device in truss form with straight cross bars in ladder form holding two precast conrete panels together in a sandwich wall panel.
+*  **'Panel suspender'**: A straight fixing device holding two precast conrete panels together in a sandwich wall panel.</p>
 <p>Electrical accessories for precast concrete elements:</p>
-<ul>
-<li><strong>'Protective plug'</strong>: Protective plug used in element for protecting electrical accessories during manufacturing, transportation and assembly.</li>
-</ul>
+<p>*  **'Protective plug'**: Protective plug used in element for protecting electrical accessories during manufacturing, transportation and assembly.</p>
 <p>Fixing parts:</p>
-<ul>
-<li><strong>'Standard fixing plate'</strong>: Standard fixing plate.</li>
-<li><strong>'Edge fixing plate'</strong>: Fixing plate attached to the edge of an element.</li>
-<li><strong>'Corner fixing plate'</strong>: Fixing plate attached to the corner of an element.</li>
-<li><strong>'Slab fixing plate'</strong>: Fixing plate for slabs.</li>
-<li><strong>'Channel fixing'</strong>: Fixing channels, often realized as cast-in channels.</li>
-<li><strong>'Balcony hinge'</strong>: Accessory supporting and fixing balconies.</li>
-<li><strong>'Frame shoe'</strong>: Fixing shoe for frames.</li>
-<li><strong>'Thermo frame'</strong>: Thermo frame.</li>
-<li><strong>'Column shoe'</strong>: Fixing shoe for columns.</li>
-<li><strong>'Wall shoe'</strong>: Fixing shoe for walls.</li>
-<li><strong>'Fixing socket'</strong>: Fixing socket.</li>
-</ul>
+<p>*  **'Standard fixing plate'**: Standard fixing plate.
+*  **'Edge fixing plate'**: Fixing plate attached to the edge of an element.
+*  **'Corner fixing plate'**: Fixing plate attached to the corner of an element.
+*  **'Slab fixing plate'**: Fixing plate for slabs.
+*  **'Channel fixing'**: Fixing channels, often realized as cast-in channels.
+*  **'Balcony hinge'**: Accessory supporting and fixing balconies.
+*  **'Frame shoe'**: Fixing shoe for frames.
+*  **'Thermo frame'**: Thermo frame.
+*  **'Column shoe'**: Fixing shoe for columns.
+*  **'Wall shoe'**: Fixing shoe for walls.
+*  **'Fixing socket'**: Fixing socket.</p>
 <p>Joint accessories:</p>
-<ul>
-<li><strong>'Neoprene bearing plate'</strong>: Rubber plate used as a bearing in, for example, joints between column corbels and beams.</li>
-<li><strong>'Working joint reinforcement'</strong>: Reinforcement accessory used in working joints.</li>
-<li><strong>'Expansion joint reinforcement'</strong>: Reinforcement accessory used in expansion joints.</li>
-<li><strong>'Ribbed steel bar extension'</strong>: Extension accessory made of a ribbed (reinforcement) bar used in joints.</li>
-<li><strong>'Steel pin bolt'</strong>: Pin bolt used to join together, for example, columns and beams.</li>
-<li><strong>'Concrete dowel'</strong>: Dowel pin used in joints.</li>
-<li><strong>'Concrete groove'</strong>: A groove made in a joint.</li>
-<li><strong>'Steel plate'</strong>: A steel plate used as an accessory in a joint.</li>
-<li><strong>'Wire loop'</strong>: A joint connector accessory made from a wire loop.</li>
-<li><strong>'Steel loop'</strong>: A joint connector accessory made from a steel bar loop.</li>
-<li><strong>'Sealing strip'</strong>: A strip sealing the joint.</li>
-<li><strong>'Sealing compound'</strong>: Sealing compound protecting and sealing the joint.</li>
-</ul>
+<p>*  **'Neoprene bearing plate'**: Rubber plate used as a bearing in, for example, joints between column corbels and beams.
+*  **'Working joint reinforcement'**: Reinforcement accessory used in working joints.
+*  **'Expansion joint reinforcement'**: Reinforcement accessory used in expansion joints.
+*  **'Ribbed steel bar extension'**: Extension accessory made of a ribbed (reinforcement) bar used in joints.
+*  **'Steel pin bolt'**: Pin bolt used to join together, for example, columns and beams.
+*  **'Concrete dowel'**: Dowel pin used in joints.
+*  **'Concrete groove'**: A groove made in a joint.
+*  **'Steel plate'**: A steel plate used as an accessory in a joint.
+*  **'Wire loop'**: A joint connector accessory made from a wire loop.
+*  **'Steel loop'**: A joint connector accessory made from a steel bar loop.
+*  **'Sealing strip'**: A strip sealing the joint.
+*  **'Sealing compound'**: Sealing compound protecting and sealing the joint.</p>
 <p>Lifting accessories:</p>
-<ul>
-<li><strong>'Wire lifting hook'</strong>: A lifting aid in the form of a wire loop.</li>
-<li><strong>'Steel lifting hook'</strong>: A lifting aid in the form of a steel bar loop.</li>
-<li><strong>'Lifting socket'</strong>: A lifting aid in the form of a socket.</li>
-<li><strong>'Steel lifting anchor'</strong>: A lifting aid in the form of a steel lifting anchor.</li>
-<li><strong>'Lifting hole'</strong>: A lifting aid in the form of a hole.</li>
-</ul>
+<p>*  **'Wire lifting hook'**: A lifting aid in the form of a wire loop.
+*  **'Steel lifting hook'**: A lifting aid in the form of a steel bar loop.
+*  **'Lifting socket'**: A lifting aid in the form of a socket.
+*  **'Steel lifting anchor'**: A lifting aid in the form of a steel lifting anchor.
+*  **'Lifting hole'**: A lifting aid in the form of a hole.</p>
 <p>Accessories mainly used in the building services domain:</p>
-<ul>
-<li><strong>'Antivibration'</strong> : An isolating device to prevent other elements to be effected by vibrations.</li>
-<li><strong>'Drop rod'</strong> : A length of material providing a hanging support to a bracket. Note that a drop rod is considered to include nuts and washers required for securing.</li>
-<li><strong>'Duct foot'</strong> : A base support used to receive a vertical pipe .</li>
-<li><strong>'Framing'</strong> : A frame placed around a penetration to prevent scraping against the building surface or structure.</li>
-<li><strong>'Grommet'</strong> : An element placed within a penetration that seals the penetration for a particular reason.</li>
-<li><strong>'Rack'</strong> : A set of shelving for the purposes of storage that may be freestanding or bolted to a structure.</li>
-<li><strong>'Safety part'</strong> : A part, typically installed in vertical shafts at each level, to ensure safety from falling when entering the shaft.</li>
-<li><strong>'Sleeve'</strong> : A thin barrier placed between a penetration and a penetrating element.</li>
-<li><strong>'Support section'</strong> : A section of material that is used as an intermediate support upon which multiple brackets can be mounted.</li>
-</ul>
+<p>*  **'Antivibration'** : An isolating device to prevent other elements to be effected by vibrations.
+*  **'Drop rod'** : A length of material providing a hanging support to a bracket. Note that a drop rod is considered to include nuts and washers required for securing.
+*  **'Duct foot'** : A base support used to receive a vertical pipe .
+*  **'Framing'** : A frame placed around a penetration to prevent scraping against the building surface or structure.
+*  **'Grommet'** : An element placed within a penetration that seals the penetration for a particular reason.
+*  **'Rack'** : A set of shelving for the purposes of storage that may be freestanding or bolted to a structure.
+*  **'Safety part'** : A part, typically installed in vertical shafts at each level, to ensure safety from falling when entering the shaft.
+*  **'Sleeve'** : A thin barrier placed between a penetration and a penetrating element.
+*  **'Support section'** : A section of material that is used as an intermediate support upon which multiple brackets can be mounted.</p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -206,17 +190,15 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a></td></tr>
 <tr><td>5</td><td>ApplicableOccurrence</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 The attribute optionally defines the data type of the occurrence object, to which the assigned type object can relate. If not present, no instruction is given to which occurrence object the type object is applicable. The following conventions are used:
-<ul>
-<li>The IFC entity name of the applicable occurrence using the IFC naming convention, CamelCase with IFC prefix</li>
-<li>It can be optionally followed by the predefined type after the separator &quot;/&quot; (forward slash), using uppercase</li>
-<li>If one type object is applicable to many occurrence objects, then those occurrence object names should be separate by comma &quot;,&quot; forming a comma separated string.</li>
-</ul>
+* The IFC entity name of the applicable occurrence using the IFC naming convention, CamelCase with IFC prefix
+* It can be optionally followed by the predefined type after the separator &quot;/&quot; (forward slash), using uppercase
+* If one type object is applicable to many occurrence objects, then those occurrence object names should be separate by comma &quot;,&quot; forming a comma separated string.
 <blockquote class="example">
 EXAMPLE Refering to a furniture as applicable occurrence entity would be expressed as 'IfcFurnishingElement', refering to a brace as applicable entity would be expressed as 'IfcMember/BRACE', refering to a wall and wall standard case would be expressed as 'IfcWall, IfcWallStandardCase'.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>6</td><td>HasPropertySets</td><td><a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a></td><td>? S[1:?]</td><td>
-Set <del>list</del> of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
+Set ~~list~~ of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
 <blockquote>
 IFC2x3 CHANGE  The attribute aggregate type has been changed from LIST to SET.
 </blockquote>

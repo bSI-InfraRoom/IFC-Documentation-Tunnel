@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 18 August 2022
+Friday, 9 September 2022
 
 *)
 
@@ -1901,6 +1901,11 @@ TYPE IfcGeometricProjectionEnum = ENUMERATION OF
 	,NOTDEFINED);
 END_TYPE;
 
+TYPE IfcGeotechTypicalSectionTypeEnum = ENUMERATION OF
+	(NOTDEFINED
+	,USERDEFINED);
+END_TYPE;
+
 TYPE IfcGlobalOrLocalEnum = ENUMERATION OF
 	(GLOBAL_COORDS
 	,LOCAL_COORDS);
@@ -3211,15 +3216,6 @@ TYPE IfcTubeBundleTypeEnum = ENUMERATION OF
 	(FINNED
 	,USERDEFINED
 	,NOTDEFINED);
-END_TYPE;
-
-TYPE IfcTunnelPartTypeEnum = ENUMERATION OF
-	(TUNNELSECTION
-	,CROSSWAY
-	,RINGSECTION
-	,PORTAL
-	,NOTDEFINED
-	,USERDEFINED);
 END_TYPE;
 
 TYPE IfcTunnelTypeEnum = ENUMERATION OF
@@ -6955,8 +6951,7 @@ ENTITY IfcFacilityPart
     ,IfcFacilityPartCommon
     ,IfcMarinePart
     ,IfcRailwayPart
-    ,IfcRoadPart
-    ,IfcTunnelPart))
+    ,IfcRoadPart))
  SUBTYPE OF (IfcSpatialStructureElement);
 	UsageType : IfcFacilityUsageEnum;
 END_ENTITY;
@@ -7538,6 +7533,13 @@ ENTITY IfcGeoslice
  SUBTYPE OF (IfcGeotechnicalAssembly);
 END_ENTITY;
 
+ENTITY IfcGeotechTypicalSection
+ SUBTYPE OF (IfcLinearZone);
+	PredefinedType : IfcGeotechTypicalSectionTypeEnum;
+ WHERE
+	HasObjectType : (PredefinedType <> IfcGeotechTypicalSectionTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+END_ENTITY;
+
 ENTITY IfcGeotechnicalAssembly
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcGeomodel
@@ -8021,7 +8023,8 @@ ENTITY IfcLinearElement
     (IfcAlignmentCant
     ,IfcAlignmentHorizontal
     ,IfcAlignmentSegment
-    ,IfcAlignmentVertical))
+    ,IfcAlignmentVertical
+    ,IfcLinearZone))
  SUBTYPE OF (IfcProduct);
 END_ENTITY;
 
@@ -8035,6 +8038,12 @@ ENTITY IfcLinearPositioningElement
  SUPERTYPE OF (ONEOF
     (IfcAlignment))
  SUBTYPE OF (IfcPositioningElement);
+END_ENTITY;
+
+ENTITY IfcLinearZone
+ ABSTRACT SUPERTYPE OF (ONEOF
+    (IfcGeotechTypicalSection))
+ SUBTYPE OF (IfcLinearElement);
 END_ENTITY;
 
 ENTITY IfcLiquidTerminal
@@ -12214,13 +12223,6 @@ ENTITY IfcTunnel
 	HasObjectType : (PredefinedType <> IfcTunnelTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
 
-ENTITY IfcTunnelPart
- SUBTYPE OF (IfcFacilityPart);
-	PredefinedType : IfcTunnelPartTypeEnum;
- WHERE
-	HasObjectType : (PredefinedType <> IfcTunnelPartTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
-END_ENTITY;
-
 ENTITY IfcTypeObject
  SUPERTYPE OF (ONEOF
     (IfcTypeProcess
@@ -12852,7 +12854,7 @@ FUNCTION IfcConstraintsParamBSpline
     END_IF;
   END_REPEAT;
 
-  RETURN(result);
+  RETURN(Result);
 END_FUNCTION;
 
 FUNCTION IfcConvertDirectionInto2D
@@ -13614,7 +13616,7 @@ END_LOCAL;
       REPEAT i := 1 TO Ndim;
         V.DirectionRatios[i] := V.DirectionRatios[i]/Mag;
       END_REPEAT;
-      IF 'IFC4X4.IFCVECTOR' IN TYPEOF(arg) THEN
+      IF 'IFC4X4.IFCVECTOR' IN TYPEOF(Arg) THEN
         Vec.Orientation := V;
         Result := Vec;
       ELSE
@@ -13674,7 +13676,7 @@ FUNCTION IfcSameAxis2Placement
 
   RETURN (IfcSameDirection(ap1.P[1],ap2.P[1],Epsilon) AND
           IfcSameDirection(ap1.P[2],ap2.P[2],Epsilon) AND
-          IfcSameCartesianPoint(ap1.Location,ap1.Location,Epsilon));
+          IfcSameCartesianPoint(ap1.Location,ap2.Location,Epsilon));
 END_FUNCTION;
 
 FUNCTION IfcSameCartesianPoint

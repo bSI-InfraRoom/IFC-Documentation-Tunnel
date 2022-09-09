@@ -44,7 +44,7 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PositionedRelativeTo</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcwall.htm">IfcWall</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasSurfaceFeatures</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasSurfaceFeatures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -64,11 +64,9 @@
 <p>NOTE  Walls with openings that have already been modeled within the enclosing geometry may use the relationship <a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a> to associate the wall with embedded elements such as doors and windows.</p>
 </blockquote>
 <p>There are three entities for wall occurrences:</p>
-<ul>
-<li><a href="../../ifcsharedbldgelements/lexical/ifcwallstandardcase.htm">IfcWallStandardCase</a>  used for all occurrences of walls, that have a non-changing thickness along the wall path and where the thickness parameter can be fully described by a material layer set. These walls are always represented geometrically by an 'Axis' and a 'SweptSolid' shape representation (or by a 'Clipping' geometry based on 'SweptSolid'), if a 3D geometric representation is assigned. In addition they have to have a corresponding <a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSetUsage</a> assigned.</li>
-<li><i>IfcWallElementedCase</i> used for occurrences of walls which are aggregated from subordinate elements, following specific decomposition rules expressed by the mandatory use of <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship.</li>
-<li><span class="self-ref">IfcWall</span>  used for all other occurrences of wall, particularly for walls with changing thickness along the wall path (e.g. polygonal walls), or walls with a non-rectangular cross sections (e.g. L-shaped retaining walls), and walls having an extrusion axis that is unequal to the global Z axis of the project (i.e. non-vertical walls), or walls having only 'Brep', or 'SurfaceModel' geometry.</li>
-</ul>
+<p>* <a href="../../ifcsharedbldgelements/lexical/ifcwallstandardcase.htm">IfcWallStandardCase</a>  used for all occurrences of walls, that have a non-changing thickness along the wall path and where the thickness parameter can be fully described by a material layer set. These walls are always represented geometrically by an 'Axis' and a 'SweptSolid' shape representation (or by a 'Clipping' geometry based on 'SweptSolid'), if a 3D geometric representation is assigned. In addition they have to have a corresponding <a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSetUsage</a> assigned.
+* <i>IfcWallElementedCase</i> used for occurrences of walls which are aggregated from subordinate elements, following specific decomposition rules expressed by the mandatory use of <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship.
+* <span class="self-ref">IfcWall</span>  used for all other occurrences of wall, particularly for walls with changing thickness along the wall path (e.g. polygonal walls), or walls with a non-rectangular cross sections (e.g. L-shaped retaining walls), and walls having an extrusion axis that is unequal to the global Z axis of the project (i.e. non-vertical walls), or walls having only 'Brep', or 'SurfaceModel' geometry.</p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC1.0</p>
 </blockquote>
@@ -398,10 +396,8 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <tr><td><p class="table">Table 221 &mdash; IfcWall Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcWall</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
-<ul>
-<li>the <i>Spatial Containment</i> (defined here), or</li>
-<li>the <i>Element Composition</i>.</li>
-</ul>
+<p>* the <i>Spatial Containment</i> (defined here), or
+* the <i>Element Composition</i>.</p>
 
 <br/><br/>
 
@@ -434,11 +430,9 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <a id="body-sweptsolid-geometry" />
 <p class="use-head">Body SweptSolid Geometry</p>
 <p>The <a href="../../templates/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a> concept applies to this entity.</p><p>The following additional constraints apply to the 'SweptSolid' representation:</p>
-<ul>
-<li><strong>Solid</strong>: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required,</li>
-<li><strong>Profile</strong>: <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> is required.</li>
-<li><strong>Extrusion</strong>: All extrusion directions shall be supported.</li>
-</ul>
+<p>* **Solid**: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required,
+* **Profile**: <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> is required.
+* **Extrusion**: All extrusion directions shall be supported.</p>
 <blockquote class="note">
 <p>NOTE  If the wall body can be described by a vertical extrusion of a polygonal footprint with constant thickness along the axis (where vertical = into the direction of the global Z axis), the subtype <a href="../../ifcsharedbldgelements/lexical/ifcwallstandardcase.htm">IfcWallStandardCase</a> should be used. If the extrusion is not equal to global Z, then the <span class="self-ref">IfcWall</span> should be used.</p>
 </blockquote>

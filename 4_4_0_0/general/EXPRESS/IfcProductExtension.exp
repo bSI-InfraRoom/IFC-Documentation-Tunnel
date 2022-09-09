@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 18 August 2022
+Friday, 9 September 2022
 
 *)
 
@@ -756,8 +756,7 @@ ENTITY IfcFacilityPart
     ,IfcFacilityPartCommon
     ,IfcMarinePart
     ,IfcRailwayPart
-    ,IfcRoadPart
-    ,IfcTunnelPart))
+    ,IfcRoadPart))
  SUBTYPE OF (IfcSpatialStructureElement);
 	UsageType : IfcFacilityUsageEnum;
 END_ENTITY;
@@ -859,7 +858,8 @@ ENTITY IfcLinearElement
     (IfcAlignmentCant
     ,IfcAlignmentHorizontal
     ,IfcAlignmentSegment
-    ,IfcAlignmentVertical))
+    ,IfcAlignmentVertical
+    ,IfcLinearZone))
  SUBTYPE OF (IfcProduct);
 END_ENTITY;
 
@@ -867,6 +867,12 @@ ENTITY IfcLinearPositioningElement
  SUPERTYPE OF (ONEOF
     (IfcAlignment))
  SUBTYPE OF (IfcPositioningElement);
+END_ENTITY;
+
+ENTITY IfcLinearZone
+ ABSTRACT SUPERTYPE OF (ONEOF
+    (IfcGeotechTypicalSection))
+ SUBTYPE OF (IfcLinearElement);
 END_ENTITY;
 
 ENTITY IfcLogicalVoxelData

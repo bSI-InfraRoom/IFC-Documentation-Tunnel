@@ -46,7 +46,7 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PositionedRelativeTo</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgserviceelements/lexical/ifcflowsegment.htm">IfcFlowSegment</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasSurfaceFeatures</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasSurfaceFeatures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -225,13 +225,11 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 <summary>Concept usage</summary>
 <a id="material-profile-set-usage" />
 <p class="use-head">Material Profile Set Usage</p>
-<p>The <a href="../../templates/material-profile-set-usage.htm">Material Profile Set Usage</a> concept applies to this entity.</p><p>The material of the <strong>IfcFlowSegment</strong> is defined using one of the following entities:</p>
-<ul>
-<li><a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSetUsage</a> : for parametric segments, this defines the cross section and alignment to the 'Axis' representation, from which the 'Body' representation may be generated.</li>
-<li><a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSet</a> : for non-parametric segments (having fixed length or path), this may define the cross section for analysis purposes, however the 'Body' representation is independently generated.</li>
-<li><a href="../../ifcmaterialresource/lexical/ifcmaterialconstituentset.htm">IfcMaterialConstituentSet</a> : for elements containing multiple materials where profiles are not applicable, this indicates materials at named parts.</li>
-<li><a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a> : for elements comprised of a single material where profiles are not applicable, this indicates the material.</li>
-</ul>
+<p>The <a href="../../templates/material-profile-set-usage.htm">Material Profile Set Usage</a> concept applies to this entity.</p><p>The material of the **IfcFlowSegment** is defined using one of the following entities:</p>
+<p>* <a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSetUsage</a> : for parametric segments, this defines the cross section and alignment to the 'Axis' representation, from which the 'Body' representation may be generated.
+* <a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSet</a> : for non-parametric segments (having fixed length or path), this may define the cross section for analysis purposes, however the 'Body' representation is independently generated.
+* <a href="../../ifcmaterialresource/lexical/ifcmaterialconstituentset.htm">IfcMaterialConstituentSet</a> : for elements containing multiple materials where profiles are not applicable, this indicates materials at named parts.
+*  <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a> : for elements comprised of a single material where profiles are not applicable, this indicates the material.</p>
 <p>The material is attached by the <i>RelatingMaterial</i> attribute on the <a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.htm">IfcRelAssociatesMaterial</a> relationship. It is accessible by the <i>HasAssociations</i> inverse attribute. Material information can also be given at the <a href="../../ifcsharedbldgserviceelements/lexical/ifcflowsegmenttype.htm">IfcFlowSegmentType</a>, defining the common attribute data for all occurrences of the same type. Standard names and material types are defined at subtypes.</p>
 
 <br/><br/>

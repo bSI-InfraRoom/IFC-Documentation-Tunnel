@@ -272,11 +272,9 @@ Enumeration that identifies the system type.  If a system type is defined, the p
 
 <a id="port-connectivity" />
 <p class="use-head">Port Connectivity</p>
-<p>The <a href="../../templates/port-connectivity.htm">Port Connectivity</a> concept applies to this entity.</p><p><strong>IfcDistributionPort</strong> may be connected to other objects as follows using the indicated relationship:</p>
-<ul>
-<li><strong>IfcDistributionPort</strong> (<a href="../../ifcproductextension/lexical/ifcrelconnectsports.htm">IfcRelConnectsPorts</a>) : Indicates a connection to another port having the same type and opposite flow direction. For port connections between elements, the <i>RelatingPort</i> is set to a port having <i>FlowDirection=SOURCE</i> and the <i>RelatedPort</i> is set to a port having <i>FlowDirection=SINK</i>. For aggregation scenarios, ports on a device may be mapped to aggregated devices within, in which case ports on the outer device indicate a single <i>FlowDirection</i> but have an additional connection internally to a port on an aggregated inner device. Refer to <a href="../../ifchvacdomain/lexical/ifcunitaryequipment.htm">IfcUnitaryEquipment</a> for an example.</li>
-<li><a href="../../ifcproductextension/lexical/ifcdistributionelement.htm">IfcDistributionElement</a> (through <a href="../../ifcproductextension/lexical/ifcrelconnectsporttoelement.htm">IfcRelConnectsPortToElement</a>): For dynamic ports, indicates the containing element.</li>
-</ul>
+<p>The <a href="../../templates/port-connectivity.htm">Port Connectivity</a> concept applies to this entity.</p><p>**IfcDistributionPort** may be connected to other objects as follows using the indicated relationship:</p>
+<p>* **IfcDistributionPort** (<a href="../../ifcproductextension/lexical/ifcrelconnectsports.htm">IfcRelConnectsPorts</a>) : Indicates a connection to another port having the same type and opposite flow direction. For port connections between elements, the <i>RelatingPort</i> is set to a port having <i>FlowDirection=SOURCE</i> and the <i>RelatedPort</i> is set to a port having <i>FlowDirection=SINK</i>. For aggregation scenarios, ports on a device may be mapped to aggregated devices within, in which case ports on the outer device indicate a single <i>FlowDirection</i> but have an additional connection internally to a port on an aggregated inner device. Refer to <a href="../../ifchvacdomain/lexical/ifcunitaryequipment.htm">IfcUnitaryEquipment</a> for an example.
+* <a href="../../ifcproductextension/lexical/ifcdistributionelement.htm">IfcDistributionElement</a> (through <a href="../../ifcproductextension/lexical/ifcrelconnectsporttoelement.htm">IfcRelConnectsPortToElement</a>): For dynamic ports, indicates the containing element.</p>
 <p>Figure 373 illustrates distribution port connectivity.</p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcdistributionport-connection.png" alt="&quot;Connection Use Definition&quot;" title="Figure 373 &mdash; Distribution port connectivity"></td></tr><tr><td><p class="figure">Figure 373 &mdash; Distribution port connectivity</p></td></tr></table></p>
 
@@ -296,11 +294,9 @@ Enumeration that identifies the system type.  If a system type is defined, the p
 </td></tr>
 <tr><td><p class="table">Table 250 &mdash; IfcDistributionPort Product Assignment</td></tr></table>
 
-<p>The <strong>IfcDistributionPort</strong> may be assigned to the following entities using relationships as indicated:</p>
-<ul>
-<li><a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionsystem.htm">IfcDistributionSystem</a> (through <a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a>): Indicates a system containing interconnected devices.</li>
-<li><a href="../../ifccontrolextension/lexical/ifcperformancehistory.htm">IfcPerformanceHistory</a>&lt; (through <a href="../../ifckernel/lexical/ifcrelassignstocontrol.htm">IfcRelAssignsToControl</a>): Indicates real time or historical infomation captured for the device.</li>
-</ul>
+<p>The **IfcDistributionPort** may be assigned to the following entities using relationships as indicated:</p>
+<p>* <a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionsystem.htm">IfcDistributionSystem</a> (through <a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a>): Indicates a system containing interconnected devices.
+* <a href="../../ifccontrolextension/lexical/ifcperformancehistory.htm">IfcPerformanceHistory</a>&lt; (through <a href="../../ifckernel/lexical/ifcrelassignstocontrol.htm">IfcRelAssignsToControl</a>): Indicates real time or historical infomation captured for the device.</p>
 
 <br/><br/>
 

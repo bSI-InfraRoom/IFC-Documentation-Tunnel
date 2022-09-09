@@ -51,10 +51,10 @@
 <blockquote class="change-ifc2x4">
 <p>IFC4 CHANGE  For electrical power systems, <i>IfcElectricalCircuit</i> has been used for low-voltage (12-1000 V) power circuits and has been replaced by <span class="self-ref">IfcDistributionCircuit</span> in IFC4; <a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionsystem.htm">IfcDistributionSystem</a> with PredefinedType 'ELECTRICAL' should be used for overall power systems, and <span class="self-ref">IfcDistributionCircuit</span> with PredefinedType 'ELECTRICAL' should be used for each switched circuit.</p>
 </blockquote>
-<p><strong><strong>Composition Use Definition</strong></strong></p>
+<p>****Composition Use Definition****</p>
 <p>An <span class="self-ref">IfcDistributionCircuit</span> may aggregate an <a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionsystem.htm">IfcDistributionSystem</a> using the <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship where <i>RelatingObject</i> refers to the <a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionsystem.htm">IfcDistributionSystem</a> and <i>RelatedObjects</i> includes one or more <span class="self-ref">IfcDistributionCircuit</span> groups.</p>
 <p>An <span class="self-ref">IfcDistributionCircuit</span> may be aggregated into sub-circuits using the <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship where <i>RelatingObject</i> refers to the parent <span class="self-ref">IfcDistributionCircuit</span> and <i>RelatedObjects</i> refers to one or more <span class="self-ref">IfcDistributionCircuit</span> sub-circuits.</p>
-<p><strong><strong>Assignment Use Definition</strong></strong></p>
+<p>****Assignment Use Definition****</p>
 <p>An <span class="self-ref">IfcDistributionCircuit</span> should be assigned to an <a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionport.htm">IfcDistributionPort</a> on an <a href="../../ifcsharedbldgserviceelements/lexical/ifcflowcontroller.htm">IfcFlowController</a> element indicating the host or origination of the system using the <a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a> relationship.</p>
 <p>Each device whose operation is conditional based upon the state of the circuit is assigned to the <span class="self-ref">IfcDistributionCircuit</span> via the <a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a> relationship. An <a href="../../ifcproductextension/lexical/ifcdistributionelement.htm">IfcDistributionElement</a> may belong to multiple systems or circuits, however only one <a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionsystem.htm">IfcDistributionSystem</a> or <span class="self-ref">IfcDistributionCircuit</span> of a particular <i>PredefinedType</i>.</p>
 </details>
@@ -153,7 +153,7 @@ IFC4 CHANGE  The cardinality has been changed from 1..1 to 0..? in order to all
 </blockquote>
 </td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a></td></tr>
-<tr><td></td><td><i>ServicesBuildings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatingSystem</td><td>S[0:1]</td><td>Reference to the <del>building</del> spatial structure via the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>, which is serviced by the system.
+<tr><td></td><td><i>ServicesBuildings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatingSystem</td><td>S[0:1]</td><td>Reference to the ~~building~~ spatial structure via the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>, which is serviced by the system.
 </td><td>X</td></tr>
 <tr><td></td><td><i>ServicesFacilities</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:?]</td><td></td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionsystem.htm">IfcDistributionSystem</a></td></tr>

@@ -37,8 +37,8 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReferencedInStructures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc4-update/index.htm">IFC4x3_RC4 Update</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcproductextension/lexical/ifcfacility.htm">IfcFacility</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>IsInterferedByElements</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>InterferesElements</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IsInterferedByElements</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InterferesElements</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -282,10 +282,8 @@ IFC4 CHANGE  Attribute made optional.
 <p class="use-head">Placement</p>
 <p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept applies to this entity.</p><p>The placement for <span class="self-ref">IfcFacility</span> is defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined by either <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> or by <i>IfcLinearPlacement&gt;/em&gt; which define the local coordinate
 system  that is referenced by all geometric representations.</i></p>
-<ul>
-<li>The <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a> shall point (if relative placement is used) to the <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> of type <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>, or of type <span class="self-ref">IfcFacility</span> (e.g. to position a facility relative to a facility complex, or a facility section to a facility).</li>
-<li>If the relative placement is not used, the absolute placement is defined within the world coordinate system.</li>
-</ul>
+<p>* The <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a> shall point (if relative placement is used) to the <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> of type <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>, or of type <span class="self-ref">IfcFacility</span> (e.g. to position a facility relative to a facility complex, or a facility section to a facility).
+* If the relative placement is not used, the absolute placement is defined within the world coordinate system.</p>
 
 <br/><br/>
 

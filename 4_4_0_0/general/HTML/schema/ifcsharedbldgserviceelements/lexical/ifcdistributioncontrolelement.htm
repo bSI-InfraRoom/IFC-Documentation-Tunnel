@@ -47,18 +47,16 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PositionedRelativeTo</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgserviceelements/lexical/ifcdistributioncontrolelement.htm">IfcDistributionControlElement</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasSurfaceFeatures</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasSurfaceFeatures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The distribution element <span class="self-ref">IfcDistributionControlElement</span> defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system.</p>
 <p><span class="self-ref">IfcDistributionControlElement</span> defines elements of a building automation control system. These are typically used to control distribution system elements to maintain variables such as temperature, humidity, pressure, flow, power, or lighting levels, through the modulation, staging or sequencing of mechanical or electrical devices. The three general functional categories of control elements are as follows:</p>
-<ul>
-<li>Impart control over flow control elements (<a href="../../ifcsharedbldgserviceelements/lexical/ifcflowcontroller.htm">IfcFlowController</a>) in a distribution system such as dampers, valves, or relays, typically through the use of actuation (<a href="../../ifcbuildingcontrolsdomain/lexical/ifcactuator.htm">IfcActuator</a>).</li>
-<li>Sensing elements (<a href="../../ifcbuildingcontrolsdomain/lexical/ifcsensor.htm">IfcSensor</a>) that measure changes in the controlled variable such as temperature, humidity, pressure, or flow.</li>
-<li>Controllers (<a href="../../ifcbuildingcontrolsdomain/lexical/ifccontroller.htm">IfcController</a>) typically classified according to the control action they seek to perform and generally responsible for making decisions about the elements under control.</li>
-</ul>
+<p>* Impart control over flow control elements (<a href="../../ifcsharedbldgserviceelements/lexical/ifcflowcontroller.htm">IfcFlowController</a>) in a distribution system such as dampers, valves, or relays, typically through the use of actuation (<a href="../../ifcbuildingcontrolsdomain/lexical/ifcactuator.htm">IfcActuator</a>).
+* Sensing elements (<a href="../../ifcbuildingcontrolsdomain/lexical/ifcsensor.htm">IfcSensor</a>) that measure changes in the controlled variable such as temperature, humidity, pressure, or flow.
+* Controllers (<a href="../../ifcbuildingcontrolsdomain/lexical/ifccontroller.htm">IfcController</a>) typically classified according to the control action they seek to perform and generally responsible for making decisions about the elements under control.</p>
 <p>Since <span class="self-ref">IfcDistributionControlElement</span> and its subtypes typically relate to many different distribution flow elements (<a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionflowelement.htm">IfcDistributionFlowElement</a>), the objectified relationship <a href="../../ifcsharedbldgserviceelements/lexical/ifcrelflowcontrolelements.htm">IfcRelFlowControlElements</a> has been provided to relate control and flow elements as required.</p>
 <p>The key distinction between <a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionflowelement.htm">IfcDistributionFlowElement</a> and <span class="self-ref">IfcDistributionControlElement</span> is whether it is internal or external to the flow system, respectively. For example, the distinction between <a href="../../ifchvacdomain/lexical/ifcflowmeter.htm">IfcFlowMeter</a> (subtype of <a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionflowelement.htm">IfcDistributionFlowElement</a> measuring a flow quantity) and <a href="../../ifcbuildingcontrolsdomain/lexical/ifcflowinstrument.htm">IfcFlowInstrument</a> (subtype of <span class="self-ref">IfcDistributionControlElement</span> measuring a flow quality), is based on this principal. A physical device that connects within the flow system in which it measures (having inlet/outlet pipes for the measured substance) follows the <a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionflowelement.htm">IfcDistributionFlowElement</a> hierarchy (and therefore <a href="../../ifchvacdomain/lexical/ifcflowmeter.htm">IfcFlowMeter</a> which measures the flow internally). Otherwise, if it monitors/controls but does not connect inline within the flow system (it is external or is a component of another device), then it follows the <span class="self-ref">IfcDistributionControlElement</span> hierarchy (and therefore <a href="../../ifcbuildingcontrolsdomain/lexical/ifcflowinstrument.htm">IfcFlowInstrument</a> which may display various attributes through connected sensors).</p>
 <blockquote class="history">
@@ -297,11 +295,9 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 </td></tr>
 <tr><td><p class="table">Table 240 &mdash; IfcDistributionControlElement Product Assignment</td></tr></table>
 
-<p>The <strong>IfcDistributionControlElement</strong> may be assigned to the following entities using relationships as indicated:</p>
-<ul>
-<li><a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionsystem.htm">IfcDistributionSystem</a> (<a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a>): Indicates a system containing interconnected devices, where control elements are typically part of a control system having <i>PredefinedType=CONTROL</i>.</li>
-<li><a href="../../ifccontrolextension/lexical/ifcperformancehistory.htm">IfcPerformanceHistory</a> (<a href="../../ifckernel/lexical/ifcrelassignstocontrol.htm">IfcRelAssignsToControl</a>): Indicates realtime or historical infomation captured for the device.</li>
-</ul>
+<p>The **IfcDistributionControlElement** may be assigned to the following entities using relationships as indicated:</p>
+<p>* <a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionsystem.htm">IfcDistributionSystem</a> (<a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a>): Indicates a system containing interconnected devices, where control elements are typically part of a control system having <i>PredefinedType=CONTROL</i>.
+* <a href="../../ifccontrolextension/lexical/ifcperformancehistory.htm">IfcPerformanceHistory</a> (<a href="../../ifckernel/lexical/ifcrelassignstocontrol.htm">IfcRelAssignsToControl</a>): Indicates realtime or historical infomation captured for the device.</p>
 
 <br/><br/>
 

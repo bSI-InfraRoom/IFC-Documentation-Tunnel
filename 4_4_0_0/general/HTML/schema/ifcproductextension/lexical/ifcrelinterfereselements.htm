@@ -11,7 +11,7 @@
     <title>IfcRelInterferesElements</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 4 index3 3 index4 57 index5 0; }
+      body { counter-reset: index1 5 index2 4 index3 3 index4 58 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.htm#5.4.3.58");
+    parent.index.location.replace("../../toc-5.htm#5.4.3.59");
 //-->
 </script>
 
@@ -52,37 +52,25 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcRelInterferesElements</span> objectified relationship indicates that two elements interfere.
 It is a 1 to 1 relationship, and the concept of two elements interfering physically or logically is described independently of the elements.</p>
-<p>The interference may be related to the shape representation of the entities by providing an interference geometry or zone:</p>
-<ul>
-<li>when the interference is between two physical products, the <i>InterferenceGeometry</i> attribute is used to define the physical interference shape, it can be part of the shape of one of the elements used in the relationship or define the interface between the two shapes using a <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a>.</li>
-<li>when the interference is between two spatial objects, the <i>InterferenceSpace</i> attribute is used to define the interference space between the two footprints associated to the spatial objects, expressed by a specific <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> of predefined type <a href="../../ifcproductextension/lexical/ifcspatialzonetypeenum.htm">IfcSpatialZoneTypeEnum</a> INTERFERENCE.</li>
-</ul>
+<p>The interference may be related to the shape representation of the entities by providing an interference geometry or zone:
+* when the interference is between two physical products, the <i>InterferenceGeometry</i> attribute is used to define the physical interference shape, it can be part of the shape of one of the elements used in the relationship or define the interface between the two shapes using a <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a>.
+* when the interference is between two spatial objects, the <i>InterferenceSpace</i> attribute is used to define the interference space between the two footprints associated to the spatial objects, expressed by a specific <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> of predefined type <a href="../../ifcproductextension/lexical/ifcspatialzonetypeenum.htm">IfcSpatialZoneTypeEnum</a> INTERFERENCE.</p>
 <p>If the interference geometry and Zone are omitted then the interference is provided as a logical relationship. Under this circumstance, the connection point, curve, surface, or solid has to be recalculated by the receiving application.
 Both <i>InterferenceGeometry</i> and <i>InterferenceSpace</i> should not be set together.</p>
 <p>The <i>RelatingElement</i> and <i>RelatedElement</i> define the two elements in the relationship, that may have different roles.
-The relation orientation may be required by certain <i>InterferenceType</i> values or <i>InterferenceGeometry</i> calculation, this is done by setting the attribute <i>ImpliedOrder</i> accordingly:</p>
-<ul>
-<li><i>ImpliedOrder</i>=TRUE The <i>RelatingElement</i> constitutes the primary element of the interference relationship that is oriented from <i>RelatingElement</i> (source) to <i>RelatedElement</i> (target). If the interference is to be resolved by subtracting the overlapping part, it should be subtracted from the <i>RelatingElement</i>. The net result would be the <i>RelatingElement</i> subtracted by the <i>InterferenceGeometry</i>. This would be the case in interference relationships where the <i>RelatedElement</i> creates a void in the <i>RelatingElement</i> dynamically.</li>
-<li><i>ImpliedOrder</i>=FALSE The <i>RelatingElement</i> and <i>RelatedElement</i> have no priority among each other. If the interference is to be resolved then no information about whether the <i>InterferenceGeometry</i> should be subtracted from the <i>RelatingElement</i> or the <i>RelatedElement</i> can be traced. This would be the case for clash detection results.</li>
-<li><i>ImpliedOrder</i>=UNKNOWN No information about the priorities is provided.</li>
-</ul>
-<p>The <i>InterferenceType</i> property optionally specifies the type of interference between the two elements, two set of default types are provided:</p>
-<ul>
-<li><strong>Oriented interferences types</strong> imply usage of <i>ImpliedOrder</i> set to TRUE and specific choice of <i>RelatingElement</i> and <i>RelatedElement</i> to be meaningful:
-<ul>
-<li>Crosses: the <i>RelatingElement</i> is crossing the <i>RelatedElement</i> (e.g. Railway crossing a road)</li>
-<li>PassesThrough: the <i>RelatingElement</i> is passing through the <i>RelatedElement</i> (e.g. a Road passing inside a tunnel)</li>
-<li>PassesOver: the <i>RelatingElement</i> is passing over the <i>RelatedElement</i> (e.g a bridge passing over a water canal)</li>
-<li>PassesUnder: the <i>RelatingElement</i> is passing under the <i>RelatedElement</i> (e.g a Tunnel passing under a road)</li>
-</ul>
-</li>
-<li><strong>Non oriented interferences types</strong> do not imply specific values of <i>ImpliedOrder</i> (but can still be set to detail shape interference calculation)
-<ul>
-<li>Clash: The <i>RelatingElement</i> and <i>RelatedElement</i> have a spatial or shape-based clash</li>
-<li>Along: The <i>RelatingElement</i> and <i>RelatedElement</i> have a common frontier/surface</li>
-</ul>
-</li>
-</ul>
+The relation orientation may be required by certain <i>InterferenceType</i> values or <i>InterferenceGeometry</i> calculation, this is done by setting the attribute <i>ImpliedOrder</i> accordingly:
+* <i>ImpliedOrder</i>=TRUE The <i>RelatingElement</i> constitutes the primary element of the interference relationship that is oriented from <i>RelatingElement</i> (source) to <i>RelatedElement</i> (target). If the interference is to be resolved by subtracting the overlapping part, it should be subtracted from the <i>RelatingElement</i>. The net result would be the <i>RelatingElement</i> subtracted by the <i>InterferenceGeometry</i>. This would be the case in interference relationships where the <i>RelatedElement</i> creates a void in the <i>RelatingElement</i> dynamically.<br>
+* <i>ImpliedOrder</i>=FALSE The <i>RelatingElement</i> and <i>RelatedElement</i> have no priority among each other. If the interference is to be resolved then no information about whether the <i>InterferenceGeometry</i> should be subtracted from the <i>RelatingElement</i> or the <i>RelatedElement</i> can be traced. This would be the case for clash detection results.<br>
+* <i>ImpliedOrder</i>=UNKNOWN No information about the priorities is provided.</p>
+<p>The <i>InterferenceType</i> property optionally specifies the type of interference between the two elements, two set of default types are provided:
+* **Oriented interferences types** imply usage of <i>ImpliedOrder</i> set to TRUE and specific choice of <i>RelatingElement</i> and <i>RelatedElement</i> to be meaningful:
+* Crosses: the <i>RelatingElement</i> is crossing the <i>RelatedElement</i> (e.g. Railway crossing a road)
+* PassesThrough: the <i>RelatingElement</i> is passing through the <i>RelatedElement</i> (e.g. a Road passing inside a tunnel)
+* PassesOver: the <i>RelatingElement</i> is passing over the <i>RelatedElement</i> (e.g a bridge passing over a water canal)
+* PassesUnder: the <i>RelatingElement</i> is passing under the <i>RelatedElement</i> (e.g a Tunnel passing under a road)
+* **Non oriented interferences types** do not imply specific values of <i>ImpliedOrder</i> (but can still be set to detail shape interference calculation)
+* Clash: The <i>RelatingElement</i> and <i>RelatedElement</i> have a spatial or shape-based clash
+* Along: The <i>RelatingElement</i> and <i>RelatedElement</i> have a common frontier/surface</p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC4.</p>
 </blockquote>

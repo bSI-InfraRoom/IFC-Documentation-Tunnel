@@ -46,20 +46,18 @@ z = Position.P[3] =&gt; normal to plane
 </pre> and the surface is parameterized as:
 <blockquote>
 <p><img src="../../../figures/ifcplane-math1.gif.gif" alt="formula">
-where the parametric range is -∞ &lt; <i>u,v</i> &lt; ∞. In the above parameterization the length unit for the unit vectors <strong>x</strong> and <strong>y</strong> is derived from the context of the plane.</p>
+where the parametric range is -∞ &lt; <i>u,v</i> &lt; ∞. In the above parameterization the length unit for the unit vectors **x** and **y** is derived from the context of the plane.</p>
 </blockquote>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  A rectangular bounded planar surface can be defined by an <a href="../../ifcgeometryresource/lexical/ifcrectangulartrimmedsurface.htm">IfcRectangularTrimmedSurface</a> with <i>BasisSurface</i> being the plane and <i>U1</i> = left bound in <strong>x</strong>, <i>U2</i> = right bound in <strong>x</strong>, _V_1 = lower bound in <strong>y</strong>, <i>V2</i> = upper bound in <strong>y</strong> if viewed into the direction of the negative normal. (assuming the <i>Usense</i> and <i>Vsense</i> agree to the sense of the basis surface).</p>
+<p>NOTE  A rectangular bounded planar surface can be defined by an <a href="../../ifcgeometryresource/lexical/ifcrectangulartrimmedsurface.htm">IfcRectangularTrimmedSurface</a> with <i>BasisSurface</i> being the plane and <i>U1</i> = left bound in **x**, <i>U2</i> = right bound in **x**, _V_1 = lower bound in **y**, <i>V2</i> = upper bound in **y** if viewed into the direction of the negative normal. (assuming the <i>Usense</i> and <i>Vsense</i> agree to the sense of the basis surface).</p>
 </blockquote>
 <p>The inherited attributes are interpreted as</p>
-<ul>
-<li><i>SELF\IfcElementarySurface.Position</i> defines the location and orientation of the planar surface.</li>
-<li><i>SELF\IfcElementarySurface.Position.Location</i> defines a point on the planar surface.</li>
-<li><i>SELF\IfcElementarySurface.Position.P[3]</i> defines the normal of the planar surface.</li>
-</ul>
+<p>* <i>SELF\IfcElementarySurface.Position</i> defines the location and orientation of the planar surface.
+* <i>SELF\IfcElementarySurface.Position.Location</i> defines a point on the planar surface.
+* <i>SELF\IfcElementarySurface.Position.P[3]</i> defines the normal of the planar surface.</p>
 <blockquote class="note">
-<p>NOTE  Entity adapted from <strong>plane</strong> in ISO 10303-42.</p>
+<p>NOTE  Entity adapted from **plane** in ISO 10303-42.</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC1.5</p>

@@ -42,19 +42,15 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcGeographicElementType</span> is used to define an element specification of a geographic element (i.e. the specific product information, that is common to all occurrences of that product type). Geographic element types include for different types of element that may be used to represent information within a geographical landscape external to a building. Within the world of geographic information they are referred to generally as 'features'. <span class="self-ref">IfcGeographicElementType</span>'s include:</p>
-<ul>
-<li>point features such as seating, bus shelters, signage, trees;</li>
-<li>linear features such as layby's;</li>
-<li>area features such as ponds, lakes, woods and forests;</li>
-<li>drainage such as catchment, reserver or outfall.</li>
-</ul>
+<p>* point features such as seating, bus shelters, signage, trees;
+* linear features such as layby's;
+* area features such as ponds, lakes, woods and forests;
+* drainage such as catchment, reserver or outfall.</p>
 <p>The specification of the specific types are given by the inherited attribute <i>IfcElementType.ElementType</i> given as an <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>.</p>
 <p>Geographic element types are frequently identified in feature catalogs that are produced for particular purposes. The <span class="self-ref">IfcGeographicElementType</span> entity enables the continued use of existing feature catalogs through capture of their identity and attributes.</p>
 <p>Information from feature catalogs might be captured in various ways:</p>
-<ul>
-<li>via property sets, some of which will be specifically defined within the IFC property set catalog whilst others will be created for local use; this is the form of capture that is expected to be most widely used</li>
-<li>through use of the IFC classification model whereby features might be identified through an <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a> with additional description; in which case, any further attributes required would still need to be captured in property sets.</li>
-</ul>
+<p>* via property sets, some of which will be specifically defined within the IFC property set catalog whilst others will be created for local use; this is the form of capture that is expected to be most widely used
+* through use of the IFC classification model whereby features might be identified through an <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a> with additional description; in which case, any further attributes required would still need to be captured in property sets.</p>
 <blockquote class="note">
 <p>NOTE  This is due to the range of choices of element type thyat are available and their expression in different languages. It is not considered possible to create a reasonably full list of types within an enumeration. It is suggested that selection of the relevant type be drawn from an available 'feature catalog'.</p>
 </blockquote>
@@ -142,17 +138,15 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a></td></tr>
 <tr><td>5</td><td>ApplicableOccurrence</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 The attribute optionally defines the data type of the occurrence object, to which the assigned type object can relate. If not present, no instruction is given to which occurrence object the type object is applicable. The following conventions are used:
-<ul>
-<li>The IFC entity name of the applicable occurrence using the IFC naming convention, CamelCase with IFC prefix</li>
-<li>It can be optionally followed by the predefined type after the separator &quot;/&quot; (forward slash), using uppercase</li>
-<li>If one type object is applicable to many occurrence objects, then those occurrence object names should be separate by comma &quot;,&quot; forming a comma separated string.</li>
-</ul>
+* The IFC entity name of the applicable occurrence using the IFC naming convention, CamelCase with IFC prefix
+* It can be optionally followed by the predefined type after the separator &quot;/&quot; (forward slash), using uppercase
+* If one type object is applicable to many occurrence objects, then those occurrence object names should be separate by comma &quot;,&quot; forming a comma separated string.
 <blockquote class="example">
 EXAMPLE Refering to a furniture as applicable occurrence entity would be expressed as 'IfcFurnishingElement', refering to a brace as applicable entity would be expressed as 'IfcMember/BRACE', refering to a wall and wall standard case would be expressed as 'IfcWall, IfcWallStandardCase'.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>6</td><td>HasPropertySets</td><td><a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a></td><td>? S[1:?]</td><td>
-Set <del>list</del> of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
+Set ~~list~~ of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
 <blockquote>
 IFC2x3 CHANGE  The attribute aggregate type has been changed from LIST to SET.
 </blockquote>

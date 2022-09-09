@@ -42,8 +42,8 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReferencedInStructures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc4-update/index.htm">IFC4x3_RC4 Update</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcproductextension/lexical/ifcfacilitypart.htm">IfcFacilityPart</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>IsInterferedByElements</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>InterferesElements</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IsInterferedByElements</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InterferesElements</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -67,7 +67,6 @@
 <area shape="rect" coords="90,222,278,234" href="../../../schema/ifcportsandwaterwaysdomain/lexical/ifcmarinepart.htm" alt="IfcMarinePart" />
 <area shape="rect" coords="90,246,278,258" href="../../../schema/ifcraildomain/lexical/ifcrailwaypart.htm" alt="IfcRailwayPart" />
 <area shape="rect" coords="90,270,278,282" href="../../../schema/ifcroaddomain/lexical/ifcroadpart.htm" alt="IfcRoadPart" />
-<area shape="rect" coords="90,294,278,306" href="../../../schema/ifctunneldomain/lexical/ifctunnelpart.htm" alt="IfcTunnelPart" />
 <area shape="rect" coords="66,126,302,138" href="../../../schema/ifcproductextension/lexical/ifcspatialstructureelement.htm" alt="IfcSpatialStructureElement" />
 <area shape="rect" coords="54,102,314,114" href="../../../schema/ifcproductextension/lexical/ifcspatialelement.htm" alt="IfcSpatialElement" />
 <area shape="rect" coords="42,78,326,90" href="../../../schema/ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" />
@@ -252,9 +251,7 @@ IFC4 CHANGE  Attribute made optional.
 <a id="spatial-container" />
 <p class="use-head">Spatial Container</p>
 <p>The <a href="../../templates/spatial-container.htm">Spatial Container</a> concept applies to this entity.</p><p>If there are building elements and/or other elements directly related to the <span class="self-ref">IfcFacilityPart</span> (like most building elements, such as walls, columns, etc.), they are associated with the <span class="self-ref">IfcFacilityPart</span> by using the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>. The <span class="self-ref">IfcFacilityPart</span> references them by its inverse relationship:</p>
-<ul>
-<li><i>IfcFacilityPart.ContainsElements</i> -- referencing any subtype of <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> (with the exception of other spatial structure element) by <i>IfcRelContainedInSpatialStructure.RelatedElements</i>.</li>
-</ul>
+<p>* <i>IfcFacilityPart.ContainsElements</i> -- referencing any subtype of <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> (with the exception of other spatial structure element) by <i>IfcRelContainedInSpatialStructure.RelatedElements</i>.</p>
 <p>Elements can also be referenced in an <span class="self-ref">IfcFacilityPart</span>, for example, if they span through several storeys. This is expressed by using the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a>. Systems, such as building service or electrical distribution systems, zonal systems, or structural analysis systems, relate to <span class="self-ref">IfcFacilityPart</span> by using the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>.</p>
 
 <br/><br/>
@@ -262,10 +259,8 @@ IFC4 CHANGE  Attribute made optional.
 <a id="product-local-placement" />
 <p class="use-head">Placement</p>
 <p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept applies to this entity.</p><p>The local placement for <span class="self-ref">IfcFacilityPart</span> is defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines the local coordinate system that is referenced by all geometric representations or by <a href="../../ifcgeometricconstraintresource/lexical/ifclinearplacement.htm">IfcLinearPlacement</a> which measures along a linear positioning element.</p>
-<ul>
-<li>The <i>PlacementRelTo</i> attribute of <a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a> shall point (if relative placement is used) to the <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> of type <a href="../../ifcproductextension/lexical/ifcfacility.htm">IfcFacility</a>, or of type <span class="self-ref">IfcFacilityPart</span> (e.g. to position a facility relative to a facility part complex, or a partial facility part to a facility part).</li>
-<li>If the relative placement is not used, the absolute placement is defined within the world coordinate system.</li>
-</ul>
+<p>* The <i>PlacementRelTo</i> attribute of <a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a> shall point (if relative placement is used) to the <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> of type <a href="../../ifcproductextension/lexical/ifcfacility.htm">IfcFacility</a>, or of type <span class="self-ref">IfcFacilityPart</span> (e.g. to position a facility relative to a facility part complex, or a partial facility part to a facility part).
+* If the relative placement is not used, the absolute placement is defined within the world coordinate system.</p>
 
 <br/><br/>
 
@@ -372,7 +367,7 @@ IFC4 CHANGE  Attribute made optional.
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcFacilityPart<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcproductextension/lexical/ifcbridgepart.htm">IfcBridgePart</a>, <a href="../../ifcproductextension/lexical/ifcfacilitypartcommon.htm">IfcFacilityPartCommon</a>, <a href="../../ifcportsandwaterwaysdomain/lexical/ifcmarinepart.htm">IfcMarinePart</a>, <a href="../../ifcraildomain/lexical/ifcrailwaypart.htm">IfcRailwayPart</a>, <a href="../../ifcroaddomain/lexical/ifcroadpart.htm">IfcRoadPart</a>, <a href="../../ifctunneldomain/lexical/ifctunnelpart.htm">IfcTunnelPart</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcproductextension/lexical/ifcbridgepart.htm">IfcBridgePart</a>, <a href="../../ifcproductextension/lexical/ifcfacilitypartcommon.htm">IfcFacilityPartCommon</a>, <a href="../../ifcportsandwaterwaysdomain/lexical/ifcmarinepart.htm">IfcMarinePart</a>, <a href="../../ifcraildomain/lexical/ifcrailwaypart.htm">IfcRailwayPart</a>, <a href="../../ifcroaddomain/lexical/ifcroadpart.htm">IfcRoadPart</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a>)<b>;</b><br/>
 &nbsp;&nbsp;UsageType : <a href="../../ifcproductextension/lexical/ifcfacilityusageenum.htm">IfcFacilityUsageEnum</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>

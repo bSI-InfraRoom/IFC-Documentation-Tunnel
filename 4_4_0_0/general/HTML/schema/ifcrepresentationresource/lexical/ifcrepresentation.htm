@@ -48,7 +48,7 @@ A representation is a collection of one or more representation items that are re
 <p>A representation item can be related to a representation context directly, when it occurs as an element is a representation, or indirectly, when it is referenced through any number of intervening entities, each of type representation item.</p>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  Entity adapted from <strong>representation</strong> defined in ISO 10303-42.</p>
+<p>NOTE  Entity adapted from **representation** defined in ISO 10303-42.</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2.0</p>
@@ -62,11 +62,9 @@ A representation is a collection of one or more representation items that are re
 <p class="use-head">
 Representation Use Definition</p>
 <p>Each representation, either <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>, or <a href="../../ifcrepresentationresource/lexical/ifctopologyrepresentation.htm">IfcTopologyRepresentation</a> shall have a well defined:</p>
-<ul>
-<li><i>ContextOfItems</i>: Reference to an <a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a> as agreed for this representation.</li>
-<li><i>RepresentationIdentifier</i>: Name of the representation, for example, 'Body' for 3D shape, 'FootPrint' for 2D ground view, 'Axis' for reference axis.</li>
-<li><i>RepresentationType</i>: Name for the geometric, or topological representation type, for example, 'SweptSolid' for 3D swept solids, 'Brep' for boundary representation.</li>
-</ul>
+<p>*  <i>ContextOfItems</i>: Reference to an <a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a> as agreed for this representation.
+*  <i>RepresentationIdentifier</i>: Name of the representation, for example, 'Body' for 3D shape, 'FootPrint' for 2D ground view, 'Axis' for reference axis.
+*  <i>RepresentationType</i>: Name for the geometric, or topological representation type, for example, 'SweptSolid' for 3D swept solids, 'Brep' for boundary representation.</p>
 <blockquote class="note">
 <p>NOTE  Guidelines for applying correct values to those attributes are provided in the geometry use definition section at each subtype of <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>. These guidelines can be further refined in view definitions or implementer agreements.</p>
 </blockquote>

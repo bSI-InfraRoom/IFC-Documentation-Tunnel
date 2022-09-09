@@ -28,42 +28,26 @@
 <p class="std">
 The Second Addendum of the IFC4 release has the main scope to provide improvements to geometry issues that had been reported during the implementation of IFC4 and IFC4 Addendum 1. It resolves these issues and addresses further implementation issues and concerns.</p>
 <p>The main changes incorporated into IFC4 ADD2 schema are:</p>
-<ul>
-<li>Improvement of the tessellated geometry to allow for more complex tessellations then triangulation and to enable an point index for sharing Cartesian point lists.
-<ul>
-<li>new entities <a href="../../../schema/ifcgeometricmodelresource/lexical/ifcpolygonalfaceset.htm">IfcPolygonalFaceSet</a>, <a href="../../../schema/ifcgeometricmodelresource/lexical/ifcindexedpolygonalface.htm">IfcIndexedPolygonalFace</a>, <a href="../../../schema/ifcgeometricmodelresource/lexical/ifcindexedpolygonalfacewithvoids.htm">IfcIndexedPolygonalFaceWithVoids</a>,</li>
-<li>changing the normal index to a point index at <a href="../../../schema/ifcgeometricmodelresource/lexical/ifctriangulatedfaceset.htm">IfcTriangulatedFaceSet</a>,</li>
-<li>adding <a href="../../../schema/ifcgeometricmodelresource/lexical/ifcpolygonalfaceset.htm">IfcPolygonalFaceSet</a> and <a href="../../../schema/ifcgeometricmodelresource/lexical/ifctriangulatedfaceset.htm">IfcTriangulatedFaceSet</a> to <a href="../../../schema/ifcgeometricmodelresource/lexical/ifcbooleanoperand.htm">IfcBooleanOperand</a> with the rule that only closed tessellations can be used,</li>
-<li>extensive improvement of documentation and new figures to explain the use of tessellated face sets.</li>
-</ul>
-</li>
-<li>Improvement of advanced boundary representation, particularly for using elementary surfaces.
-<ul>
-<li>new entities for elementary surfaces <a href="../../../schema/ifcgeometryresource/lexical/ifcsphericalsurface.htm">IfcSphericalSurface</a>, <a href="../../../schema/ifcgeometryresource/lexical/ifctoroidalsurface.htm">IfcToroidalSurface</a>,</li>
-<li>new entities for intersection curves to enable curves defined in u,v parametric space <a href="../../../schema/ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a>, <a href="../../../schema/ifcgeometryresource/lexical/ifcintersectioncurve.htm">IfcIntersectionCurve</a>, <a href="../../../schema/ifcgeometryresource/lexical/ifcseamcurve.htm">IfcSeamCurve</a>,</li>
-<li>new enumeration <a href="../../../schema/ifcgeometryresource/lexical/ifcpreferredsurfacecurverepresentation.htm">IfcPreferredSurfaceCurveRepresentation</a></li>
-<li>extensive improvement of documentation and new figures to explain the use of advanced boundary representations.</li>
-</ul>
-</li>
-</ul>
+<p>* Improvement of the tessellated geometry to allow for more complex tessellations then triangulation and to enable an point index for sharing Cartesian point lists.
+* new entities <a href="../../../schema/ifcgeometricmodelresource/lexical/ifcpolygonalfaceset.htm">IfcPolygonalFaceSet</a>, <a href="../../../schema/ifcgeometricmodelresource/lexical/ifcindexedpolygonalface.htm">IfcIndexedPolygonalFace</a>, <a href="../../../schema/ifcgeometricmodelresource/lexical/ifcindexedpolygonalfacewithvoids.htm">IfcIndexedPolygonalFaceWithVoids</a>,
+* changing the normal index to a point index at <a href="../../../schema/ifcgeometricmodelresource/lexical/ifctriangulatedfaceset.htm">IfcTriangulatedFaceSet</a>,
+* adding <a href="../../../schema/ifcgeometricmodelresource/lexical/ifcpolygonalfaceset.htm">IfcPolygonalFaceSet</a> and <a href="../../../schema/ifcgeometricmodelresource/lexical/ifctriangulatedfaceset.htm">IfcTriangulatedFaceSet</a> to <a href="../../../schema/ifcgeometricmodelresource/lexical/ifcbooleanoperand.htm">IfcBooleanOperand</a> with the rule that only closed tessellations can be used,
+* extensive improvement of documentation and new figures to explain the use of tessellated face sets.
+* Improvement of advanced boundary representation, particularly for using elementary surfaces.
+* new entities for elementary surfaces <a href="../../../schema/ifcgeometryresource/lexical/ifcsphericalsurface.htm">IfcSphericalSurface</a>, <a href="../../../schema/ifcgeometryresource/lexical/ifctoroidalsurface.htm">IfcToroidalSurface</a>,
+* new entities for intersection curves to enable curves defined in u,v parametric space <a href="../../../schema/ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a>, <a href="../../../schema/ifcgeometryresource/lexical/ifcintersectioncurve.htm">IfcIntersectionCurve</a>, <a href="../../../schema/ifcgeometryresource/lexical/ifcseamcurve.htm">IfcSeamCurve</a>,
+* new enumeration <a href="../../../schema/ifcgeometryresource/lexical/ifcpreferredsurfacecurverepresentation.htm">IfcPreferredSurfaceCurveRepresentation</a>
+* extensive improvement of documentation and new figures to explain the use of advanced boundary representations.</p>
 <p>Minor corrections and improvements to the IFC4 ADD1 schema include:</p>
-<ul>
-<li>additional enumerator for <a href="../../../schema/ifcsharedbldgelements/lexical/ifcbuildingelementproxytypeenum.htm">IfcBuildingElementProxyTypeEnum</a> to describe a provision for space,</li>
-<li>additional enumerator for <a href="../../../schema/ifcbuildingcontrolsdomain/lexical/ifcsensortypeenum.htm">IfcSensorTypeEnum</a> to describe a CO Sensor,</li>
-<li>additional property sets, where a common property set was missing,</li>
-<li>further improvements of property set definitions and rationalizations,</li>
-<li>general documentation updates and improvements in the generation of the documentation.</li>
-</ul>
+<p>* additional enumerator for <a href="../../../schema/ifcsharedbldgelements/lexical/ifcbuildingelementproxytypeenum.htm">IfcBuildingElementProxyTypeEnum</a> to describe a provision for space,
+* additional enumerator for <a href="../../../schema/ifcbuildingcontrolsdomain/lexical/ifcsensortypeenum.htm">IfcSensorTypeEnum</a> to describe a CO Sensor,
+* additional property sets, where a common property set was missing,
+* further improvements of property set definitions and rationalizations,
+* general documentation updates and improvements in the generation of the documentation.</p>
 <p> </p>
 <hr>
-<p><strong>Minor corrections after release of IFC4 Add2 schema include:</strong></p>
-<ul>
-<li>
-<ol>
-<li>Aug 16 - add <a href="../../../schema/ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a> to select type <a href="../../../schema/ifcgeometryresource/lexical/ifccurveonsurface.htm">IfcCurveOnSurface</a> to correct the use of the function <a href="../../../schema/ifcgeometryresource/lexical/ifcgetbasissurface.htm">IfcGetBasisSurface</a> in where rule CurveIsNotPcurve in <a href="../../../schema/ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a></li>
-</ol>
-</li>
-</ul>
+<p>**Minor corrections after release of IFC4 Add2 schema include:**</p>
+<p>* 01. Aug 16 - add <a href="../../../schema/ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a> to select type <a href="../../../schema/ifcgeometryresource/lexical/ifccurveonsurface.htm">IfcCurveOnSurface</a> to correct the use of the function <a href="../../../schema/ifcgeometryresource/lexical/ifcgetbasissurface.htm">IfcGetBasisSurface</a> in where rule CurveIsNotPcurve in <a href="../../../schema/ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a></p>
 <p><a href="../../../link/ifc4-addendum-2-4_0_2_0.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
   </body>
 </html>

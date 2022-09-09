@@ -48,12 +48,8 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcStructuralAnalysisModel</span> is used to assemble all information needed to represent a structural analysis model. It encompasses certain general properties (such as analysis type), references to all contained structural members, structural supports or connections, as well as loads and the respective load results.</p>
 <p>Important functionalities for the description of an analysis model are derived from existing IFC entities:</p>
-<ul>
-<li><p>From <a href="../../ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a> it inherits the ability to couple the built system via <a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a> to one or more <a href="../../ifcproductextension/lexical/ifcspatialelement.htm">IfcSpatialElement</a> subtypes as necessary.</p>
-</li>
-<li><p>From <a href="../../ifckernel/lexical/ifcgroup.htm">IfcGroup</a> it inherits the inverse attribute IsGroupedBy, pointing to the relationship class <a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a> . This allows the grouping of structural members (instances of <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralmember.htm">IfcStructuralMember</a>), and supports (instances of <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralconnection.htm">IfcStructuralConnection</a> which belong to a specific analysis model.</p>
-</li>
-</ul>
+<p>* From <a href="../../ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a> it inherits the ability to couple the built system via <a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a> to one or more <a href="../../ifcproductextension/lexical/ifcspatialelement.htm">IfcSpatialElement</a> subtypes as necessary.</p>
+<p>* From <a href="../../ifckernel/lexical/ifcgroup.htm">IfcGroup</a> it inherits the inverse attribute IsGroupedBy, pointing to the relationship class <a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a> . This allows the grouping of structural members (instances of <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralmember.htm">IfcStructuralMember</a>), and supports (instances of <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralconnection.htm">IfcStructuralConnection</a> which belong to a specific analysis model.</p>
 <blockquote class="note">
 <blockquote class="note">
 <p>NOTE  Loads (as instances of <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralaction.htm">IfcStructuralAction</a> are not included through IsGroupedBy. Loads are assigned through the LoadedBy attribute relationship, using load groups as a grouping mechanism. Only top-level load groups should be referenced via LoadedBy, i.e. load combinations if any load combinations exist, or load cases if no load combinations exist in this analysis model.</p>
@@ -64,9 +60,7 @@
 <p>NOTE  Results (as instances of <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralreaction.htm">IfcStructuralReaction</a> are not included through IsGroupedBy. Results are assigned through the HasResults attribute relationship, using result groups as a grouping mechanism.</p>
 </blockquote>
 </blockquote>
-<ul>
-<li>From <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a> it inherits the inverse attribute IsDecomposedBy pointing to the relationship class <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>. It provides the hierarchy between the separate (partial) analysis models.</li>
-</ul>
+<p>* From <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a> it inherits the inverse attribute IsDecomposedBy pointing to the relationship class <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>. It provides the hierarchy between the separate (partial) analysis models.</p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x2.</p>
 </blockquote>
@@ -202,7 +196,7 @@ IFC4 CHANGE  The cardinality has been changed from 1..1 to 0..? in order to all
 </blockquote>
 </td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a></td></tr>
-<tr><td></td><td><i>ServicesBuildings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatingSystem</td><td>S[0:1]</td><td>Reference to the <del>building</del> spatial structure via the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>, which is serviced by the system.
+<tr><td></td><td><i>ServicesBuildings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatingSystem</td><td>S[0:1]</td><td>Reference to the ~~building~~ spatial structure via the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>, which is serviced by the system.
 </td><td>X</td></tr>
 <tr><td></td><td><i>ServicesFacilities</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:?]</td><td></td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralanalysismodel.htm">IfcStructuralAnalysisModel</a></td></tr>

@@ -45,7 +45,7 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PositionedRelativeTo</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcproductextension/lexical/ifcgeographicelement.htm">IfcGeographicElement</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasSurfaceFeatures</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasSurfaceFeatures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -245,11 +245,9 @@ IFC4 CHANGE New inverse relationship.
 <a id="classification-association" />
 <p class="use-head">Classification Association</p>
 <p>The <a href="../../templates/classification-association.htm">Classification Association</a> concept applies to this entity.</p><p>An <span class="self-ref">IfcGeographicElement</span> might be further qualified by referencing a feature catalog as a particular classification. The feature classification is assigned using the inverse relationship <i>HasAssociations</i> pointing to <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a>. The attributes should have the following meaning:</p>
-<ul>
-<li>Catalog : <i>IfcClassification.Name</i></li>
-<li>Identity: <i>IfcClassificationReference.Identification</i></li>
-<li>ElementName: <i>IfcClassificationReference.Name</i></li>
-</ul>
+<p>* Catalog : <i>IfcClassification.Name</i>
+* Identity: <i>IfcClassificationReference.Identification</i>
+* ElementName: <i>IfcClassificationReference.Name</i></p>
 
 <br/><br/>
 

@@ -11,7 +11,7 @@
     <title>IfcSpatialZone</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 4 index3 3 index4 73 index5 0; }
+      body { counter-reset: index1 5 index2 4 index3 3 index4 74 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.htm#5.4.3.74");
+    parent.index.location.replace("../../toc-5.htm#5.4.3.75");
 //-->
 </script>
 
@@ -45,20 +45,18 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReferencedInStructures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc4-update/index.htm">IFC4x3_RC4 Update</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>IsInterferedByElements</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>InterferesElements</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IsInterferedByElements</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InterferesElements</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>A spatial zone is a non-hierarchical and potentially overlapping decomposition of the project under some functional consideration. A spatial zone might be used to represent a thermal zone, a construction zone, a lighting zone, a usable area zone. A spatial zone might have its independent placement and shape representation.</p>
 <p>The <span class="self-ref">IfcSpatialZone</span> inherits and declares these attributes that shall have the following meaning:</p>
-<ul>
-<li><i>Name</i>: A number or designator provided by the user or system for the spatial element, e.g. a space number &quot;1-003&quot;, could also be a running number provided by default by the application</li>
-<li><i>LongName</i>: Name of the spatial element provided by the user, e.g. a space name &quot;Office&quot;.</li>
-<li><i>Description</i>: Any additional description provided by the user, e.g. a space description &quot;Corner office with habour view&quot;.</li>
-<li><i>ObjectType</i>: reserved for typing of spatial elements in case of <i>PredefinedType</i> = .USERDEFINED., restrictions on applicable values might be published in view definitions or implementer agreements.</li>
-</ul>
+<p>* <i>Name</i>: A number or designator provided by the user or system for the spatial element, e.g. a space number &quot;1-003&quot;, could also be a running number provided by default by the application
+* <i>LongName</i>: Name of the spatial element provided by the user, e.g. a space name &quot;Office&quot;.
+* <i>Description</i>: Any additional description provided by the user, e.g. a space description &quot;Corner office with habour view&quot;.
+* <i>ObjectType</i>: reserved for typing of spatial elements in case of <i>PredefinedType</i> = .USERDEFINED., restrictions on applicable values might be published in view definitions or implementer agreements.</p>
 <p>Physical elements that are referenced by this spatial zone are related using the <a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a> relationship as it is a non-hierarchical assignment in addition to the hierarchical spatial containment within a subtype of <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a>. Also spaces, that referenced by this spatial zone are related using the <a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a> relationship. The <span class="self-ref">IfcSpatialZone</span> itself can also be referenced by another spatial element using <a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a>.</p>
 <blockquote class="note">
 <p>NOTE  The <span class="self-ref">IfcSpatialZone</span> is different to the <a href="../../ifcproductextension/lexical/ifczone.htm">IfcZone</a> entity by allowing an own placement and shape representation, whereas <a href="../../ifcproductextension/lexical/ifczone.htm">IfcZone</a> is only a grouping of <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a>'s.</p>

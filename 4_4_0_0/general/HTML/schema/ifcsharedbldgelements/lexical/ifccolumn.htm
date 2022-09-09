@@ -44,15 +44,14 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PositionedRelativeTo</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgelements/lexical/ifccolumn.htm">IfcColumn</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasSurfaceFeatures</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasSurfaceFeatures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>&lt;An <span class="self-ref">IfcColumn</span> is a vertical structural member which often is aligned with a structural grid intersection. It represents a vertical, or nearly vertical, structural member that transmits, through compression, the weight of the structure above to other structural elements below. It represents such a member from an architectural point of view. It is not required to be load bearing.</p>
-<blockquote class="extDef">
-<p>NOTE  Definition according to ISO 6707-1<br>
-structural member of slender form, usually vertical, that transmits to its base the forces, primarily in compression, that are applied to it.</p>
+<details open="open"><summary>Entity definition</summary><p>&lt;an <i>ifccolumn</i>=&quot;&quot; is=&quot;&quot; a=&quot;&quot; vertical=&quot;&quot; structural=&quot;&quot; member=&quot;&quot; which=&quot;&quot; often=&quot;&quot; is=&quot;&quot; aligned=&quot;&quot; with=&quot;&quot; a=&quot;&quot; structural=&quot;&quot; grid=&quot;&quot; intersection.=&quot;&quot; it=&quot;&quot; represents=&quot;&quot; a=&quot;&quot; vertical,=&quot;&quot; or=&quot;&quot; nearly=&quot;&quot; vertical,=&quot;&quot; structural=&quot;&quot; member=&quot;&quot; that=&quot;&quot; transmits,=&quot;&quot; through=&quot;&quot; compression,=&quot;&quot; the=&quot;&quot; weight=&quot;&quot; of=&quot;&quot; the=&quot;&quot; structure=&quot;&quot; above=&quot;&quot; to=&quot;&quot; other=&quot;&quot; structural=&quot;&quot; elements=&quot;&quot; below.=&quot;&quot; it=&quot;&quot; represents=&quot;&quot; such=&quot;&quot; a=&quot;&quot; member=&quot;&quot; from=&quot;&quot; an=&quot;&quot; architectural=&quot;&quot; point=&quot;&quot; of=&quot;&quot; view.=&quot;&quot; it=&quot;&quot; is=&quot;&quot; not=&quot;&quot; required=&quot;&quot; to=&quot;&quot; be=&quot;&quot; load=&quot;&quot; bearing.=&quot;&quot; {=&quot;&quot; .extdef}=&quot;&quot;&gt; NOTE  Definition according to ISO 6707-1</p>
+<blockquote>
+<p>structural member of slender form, usually vertical, that transmits to its base the forces, primarily in compression, that are applied to it.</p>
 </blockquote>
 <blockquote class="note">
 <p>NOTE  The representation of a column in a structural analysis model is provided by <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralcurvemember.htm">IfcStructuralCurveMember</a> being part of an <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralanalysismodel.htm">IfcStructuralAnalysisModel</a>.</p>
@@ -385,10 +384,8 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <tr><td><p class="table">Table 147 &mdash; IfcColumn Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcColumn</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
-<ul>
-<li>the <i>Spatial Containment</i> (defined here), or</li>
-<li>the <i>Element Composition</i>.</li>
-</ul>
+<p>* the <i>Spatial Containment</i> (defined here), or
+* the <i>Element Composition</i>.</p>
 
 <br/><br/>
 
@@ -414,11 +411,9 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <a id="body-sweptsolid-geometry" />
 <p class="use-head">Body SweptSolid Geometry</p>
 <p>The <a href="../../templates/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a> concept applies to this entity.</p><p>The following additional constraints apply to the 'SweptSolid' representation:</p>
-<ul>
-<li><strong>Solid</strong>: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcrevolvedareasolid.htm">IfcRevolvedAreaSolid</a> shall be supported</li>
-<li><strong>Profile</strong>: all subtypes of <a href="../../ifcprofileresource/lexical/ifcprofiledef.htm">IfcProfileDef</a> (with exception of <a href="../../ifcprofileresource/lexical/ifcarbitraryopenprofiledef.htm">IfcArbitraryOpenProfileDef</a>) </li>
-<li><strong>Extrusion</strong>: All extrusion directions shall be supported</li>
-</ul>
+<p>* **Solid**: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcrevolvedareasolid.htm">IfcRevolvedAreaSolid</a> shall be supported
+* **Profile**: all subtypes of <a href="../../ifcprofileresource/lexical/ifcprofiledef.htm">IfcProfileDef</a> (with exception of <a href="../../ifcprofileresource/lexical/ifcarbitraryopenprofiledef.htm">IfcArbitraryOpenProfileDef</a>) 
+* **Extrusion**: All extrusion directions shall be supported</p>
 <p>Figure 334 illustrates a 'SweptSolid' geometric representation. There are no restrictions or conventions on how to use the local placement (black), solid of extrusion placement (red) and profile placement (green).</p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifccolumn_standard-layout1.gif" alt="&quot;standard column&quot;" title="Figure 334 &mdash; Column swept solid"></td></tr><tr><td><p class="figure">Figure 334 &mdash; Column swept solid</p></td></tr></table></p>
 <p>Figure 335 illustrates use of a special profile type (here <a href="../../ifcprofileresource/lexical/ifcishapeprofiledef.htm">IfcIShapeProfileDef</a>) for the definition of the <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>.</p>
@@ -429,30 +424,24 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <a id="body-advancedsweptsolid-geometry" />
 <p class="use-head">Body AdvancedSweptSolid Geometry</p>
 <p>The <a href="../../templates/body-advancedsweptsolid-geometry.htm">Body AdvancedSweptSolid Geometry</a> concept applies to this entity.</p><p>The following additional constraints apply to the 'AdvancedSweptSolid' representation type:</p>
-<ul>
-<li><strong>Solid</strong>: <a href="../../ifcgeometricmodelresource/lexical/ifcsurfacecurvesweptareasolid.htm">IfcSurfaceCurveSweptAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcfixedreferencesweptareasolid.htm">IfcFixedReferenceSweptAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolidtapered.htm">IfcExtrudedAreaSolidTapered</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcrevolvedareasolidtapered.htm">IfcRevolvedAreaSolidTapered</a> shall be supported.</li>
-</ul>
+<p>* **Solid**: <a href="../../ifcgeometricmodelresource/lexical/ifcsurfacecurvesweptareasolid.htm">IfcSurfaceCurveSweptAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcfixedreferencesweptareasolid.htm">IfcFixedReferenceSweptAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolidtapered.htm">IfcExtrudedAreaSolidTapered</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcrevolvedareasolidtapered.htm">IfcRevolvedAreaSolidTapered</a> shall be supported.</p>
 <blockquote class="note">
 <blockquote class="note">
-<p>NOTE  View definitions and implementer agreements can further constrain the allowed swept solid types.</p>
+<p>NOTE  View definitions and implementer agreements can further constrain the allowed swept solid types.
+* **Profile**: see 'SweptSolid' geometric representation
+* **Extrusion**: not applicable</p>
 </blockquote>
 </blockquote>
-<ul>
-<li><strong>Profile</strong>: see 'SweptSolid' geometric representation</li>
-<li><strong>Extrusion</strong>: not applicable</li>
-</ul>
 
 <br/><br/>
 
 <a id="body-clipping-geometry" />
 <p class="use-head">Body Clipping Geometry</p>
 <p>The <a href="../../templates/body-clipping-geometry.htm">Body Clipping Geometry</a> concept applies to this entity.</p><p>The following constraints apply to the 'Clipping' representation:</p>
-<ul>
-<li><strong>Solid</strong>: see 'SweptSolid' geometric representation</li>
-<li><strong>Profile</strong>: see 'SweptSolid' geometric representation</li>
-<li><strong>Extrusion</strong>: see 'SweptSolid' geometric representation</li>
-<li><strong>Boolean result</strong>: The <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> shall be supported, allowing for Boolean differences between the swept solid (here <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>) and one or several <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a>.</li>
-</ul>
+<p>* **Solid**: see 'SweptSolid' geometric representation
+* **Profile**: see 'SweptSolid' geometric representation
+* **Extrusion**: see 'SweptSolid' geometric representation
+* **Boolean result**: The <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> shall be supported, allowing for Boolean differences between the swept solid (here <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>) and one or several <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a>.</p>
 <p>Figure 336 illustrates a 'Clipping' geometric representation with use of <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> between an <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> and an <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a> to create a clipped body.</p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifccolumn_advanced-2-layout1.png" alt="&quot;advanced column&quot;" title="Figure 336 &mdash; Column clipping"></td></tr><tr><td><p class="figure">Figure 336 &mdash; Column clipping</p></td></tr></table></p>
 

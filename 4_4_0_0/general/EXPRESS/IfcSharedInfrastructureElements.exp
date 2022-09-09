@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 18 August 2022
+Friday, 9 September 2022
 
 *)
 
@@ -109,6 +109,11 @@ TYPE IfcGeoScienceObservationTypeEnum = ENUMERATION OF
 	,LOCALINFORMATION
 	,GEOPHYSICALSURVEYRESULT
 	,NOTDEFINED
+	,USERDEFINED);
+END_TYPE;
+
+TYPE IfcGeotechTypicalSectionTypeEnum = ENUMERATION OF
+	(NOTDEFINED
 	,USERDEFINED);
 END_TYPE;
 
@@ -263,6 +268,13 @@ END_ENTITY;
 
 ENTITY IfcGeoslice
  SUBTYPE OF (IfcGeotechnicalAssembly);
+END_ENTITY;
+
+ENTITY IfcGeotechTypicalSection
+ SUBTYPE OF (IfcLinearZone);
+	PredefinedType : IfcGeotechTypicalSectionTypeEnum;
+ WHERE
+	HasObjectType : (PredefinedType <> IfcGeotechTypicalSectionTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
 
 ENTITY IfcGeotechnicalAssembly

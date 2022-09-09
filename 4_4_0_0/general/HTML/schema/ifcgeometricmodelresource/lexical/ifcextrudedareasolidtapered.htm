@@ -45,49 +45,30 @@
 <p>NOTE  Given that the start and end section is provided by a polygon, the corresponding vertices of the start and end cross section are connected, forming a quadrilateral polygon between each pair of corresponding vertices. The surface defined by the bounding quadrilateral polygon is a ruled surface, that could be approximated by triangulation.</p>
 </blockquote>
 <p>The linear spine is defined by:</p>
-<ul>
-<li>Start point: <i>SELF\IfcSweptAreaSolid.Position.Location</i></li>
-<li>Direction: <i>SELF\IfcExtrudedAreaSolid.ExtrudedDirection</i></li>
-<li>Distance: <i>SELF\IfcExtrudedAreaSolid.Depth</i></li>
-</ul>
+<p>* Start point: <i>SELF\IfcSweptAreaSolid.Position.Location</i>
+* Direction: <i>SELF\IfcExtrudedAreaSolid.ExtrudedDirection</i>
+* Distance: <i>SELF\IfcExtrudedAreaSolid.Depth</i></p>
 <p>The start cross section is defined by <i>SELF\IfcSweptAreaSolid.SweptArea</i>:</p>
-<ul>
-<li>A bounded planar surface lying in the XY plane of the position coordinate system defined by <i>SELF\IfcSweptAreaSolid.Position.P[1]</i> and <i>SELF\IfcSweptAreaSolid.Position.P[2]</i></li>
-<li>The linear spine starts at the plane of the start cross section. The spine is not necessarily perpendicular to the plane.</li>
-</ul>
+<p>* A bounded planar surface lying in the XY plane of the position coordinate system defined by <i>SELF\IfcSweptAreaSolid.Position.P[1]</i> and <i>SELF\IfcSweptAreaSolid.Position.P[2]</i>
+* The linear spine starts at the plane of the start cross section. The spine is not necessarily perpendicular to the plane.</p>
 <p>The end cross section is defined by <i>EndSweptArea</i>:</p>
-<ul>
-<li>A bounded planar surface lying in the XY plane of the position coordinate system defined by translating the start position coordinates provided by <i>SELF\IfcSweptAreaSolid.Position</i> along the spine direction by the spine distance. The plane of the end cross section is coplanar to the plane of the start cross section.</li>
-<li>
-<ul>
-<li>The end cross section is topologically similar to the start cross section (i.e. having the same number of vertices and edges).</li>
-<li>The end cross section can either be defined by the same paramteric profile using different parameter values, or by a 2D Cartesian transformation of the start profile within the end cross section plane.</li>
-</ul>
-</li>
-</ul>
+<p>* A bounded planar surface lying in the XY plane of the position coordinate system defined by translating the start position coordinates provided by <i>SELF\IfcSweptAreaSolid.Position</i> along the spine direction by the spine distance. The plane of the end cross section is coplanar to the plane of the start cross section.
+*<br>
+* The end cross section is topologically similar to the start cross section (i.e. having the same number of vertices and edges).
+* The end cross section can either be defined by the same paramteric profile using different parameter values, or by a 2D Cartesian transformation of the start profile within the end cross section plane.</p>
 <p>In case of two parameterized profiles the shape is constructed as follows:</p>
-<ul>
-<li>The end profile, defined by a cross section based on the same profile paramterization as the start profile, is translated by the spine distance along the spine direction.</li>
-<li>It may be shifted within the XY plane of the end postion coordinate system and may be twisted using the rotation parameter.</li>
-<li>The shift and rotation parameter are provided by the end cross section being of type <a href="../../ifcprofileresource/lexical/ifcparameterizedprofiledef.htm">IfcParameterizedProfileDef</a>, where
-<ul>
-<li>Shift is <i>EndSweptArea\IfcParameterizedProfileDef.Position.Location</i></li>
-<li>Rotation is <i>EndSweptArea\IfcParameterizedProfileDef.Position.RefDirection</i></li>
-</ul>
-</li>
-<li>Corresponding vertices of the start and end cross section are connected. Lateral faces are constructed as ruled surfaces between corresponding edges of start and end cross section.</li>
-</ul>
+<p>* The end profile, defined by a cross section based on the same profile paramterization as the start profile, is translated by the spine distance along the spine direction.
+* It may be shifted within the XY plane of the end postion coordinate system and may be twisted using the rotation parameter.
+* The shift and rotation parameter are provided by the end cross section being of type <a href="../../ifcprofileresource/lexical/ifcparameterizedprofiledef.htm">IfcParameterizedProfileDef</a>, where
+* Shift is <i>EndSweptArea\IfcParameterizedProfileDef.Position.Location</i>
+* Rotation is <i>EndSweptArea\IfcParameterizedProfileDef.Position.RefDirection</i>
+* Corresponding vertices of the start and end cross section are connected. Lateral faces are constructed as ruled surfaces between corresponding edges of start and end cross section.</p>
 <p>In case of Cartesian transformation of the start cross section the shape is constructed as follows:</p>
-<ul>
-<li>The cross section curve, which starts as a curve in the XY plane of the position coordinate system, is first scaled about the origin by the scale parameter. It is then translated by the spine distance along the spine direction. It maybe twisted by using the rotation parameter.</li>
-<li>The scale and rotation parameter are provided by the end cross section being of type <a href="../../ifcprofileresource/lexical/ifcderivedprofiledef.htm">IfcDerivedProfileDef</a>, where
-<ul>
-<li>Scale is <i>EndSweptArea\IfcDerivedProfileDef.Operator.Scale</i></li>
-<li>Rotation is <i>EndSweptArea\IfcDerivedProfileDef.Operator.Axis1</i></li>
-</ul>
-</li>
-<li>Corresponding vertices of the start and end cross section are connected. Lateral faces are constructed as ruled surfaces between corresponding edges of start and end cross section.</li>
-</ul>
+<p>* The cross section curve, which starts as a curve in the XY plane of the position coordinate system, is first scaled about the origin by the scale parameter. It is then translated by the spine distance along the spine direction. It maybe twisted by using the rotation parameter.
+* The scale and rotation parameter are provided by the end cross section being of type <a href="../../ifcprofileresource/lexical/ifcderivedprofiledef.htm">IfcDerivedProfileDef</a>, where
+* Scale is <i>EndSweptArea\IfcDerivedProfileDef.Operator.Scale</i>
+* Rotation is <i>EndSweptArea\IfcDerivedProfileDef.Operator.Axis1</i>
+* Corresponding vertices of the start and end cross section are connected. Lateral faces are constructed as ruled surfaces between corresponding edges of start and end cross section.</p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC4.</p>
 </blockquote>

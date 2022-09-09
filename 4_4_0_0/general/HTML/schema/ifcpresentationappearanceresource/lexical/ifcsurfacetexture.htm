@@ -45,7 +45,7 @@ applied to geometry nodes.</span></li>
 texture plus the general parameters necessary for mapping the
 texture to geometry.</span></li>
 </ul>
-Texture are defined by 2D images that contain an array of colour values describing the texture. The texture values are interpreted differently depending on the number of components in the texture and the specifics of the image format. In general, texture may be described using one of the following forms:
+<p>Texture are defined by 2D images that contain an array of colour values describing the texture. The texture values are interpreted differently depending on the number of components in the texture and the specifics of the image format. In general, texture may be described using one of the following forms:</p>
 <ol>
 <li>Intensity textures (one-component)</li>
 <li>Intensity plus alpha opacity textures (two-component)</li>
@@ -58,9 +58,7 @@ Texture are defined by 2D images that contain an array of colour values describi
 <p>Figure 522 illustrates the texture coordinate system.</p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcsurfacetexture_fig-1.png" alt="&quot;texture coordinates&quot;" title="Figure 522 &mdash; Surface texture coordinates"></td></tr><tr><td><p class="figure">Figure 522 &mdash; Surface texture coordinates</p></td></tr></table></p>
 <p>The following definitions from ISO/IEC 19775-1 X3D Architecture and base components (<a href="http://www.web3d.org/x3d/specifications/">X3D Specification</a>) on texture coordinates apply:</p>
-<ul>
-<li><span style="font-size:smaller;color:blue">Texture maps are defined in a 2D coordinate system (s, t) that ranges from [0.0, 1.0] in both directions. The bottom edge of the image corresponds to the S-axis of the texture map, and left edge of the image corresponds to the T-axis of the texture map. The lower-left pixel of the image corresponds to s=0, t=0, and the top-right pixel of the image corresponds to s=1, t=1. Texture maps may be viewed as two dimensional colour functions that, given an <i>(s, t)</i> coordinate, return a colour value <i>colour(s, t)</i>.</span></li>
-</ul>
+<p>* <span style="font-size:smaller;color:blue">Texture maps are defined in a 2D coordinate system (s, t) that ranges from [0.0, 1.0] in both directions. The bottom edge of the image corresponds to the S-axis of the texture map, and left edge of the image corresponds to the T-axis of the texture map. The lower-left pixel of the image corresponds to s=0, t=0, and the top-right pixel of the image corresponds to s=1, t=1. Texture maps may be viewed as two dimensional colour functions that, given an <i>(s, t)</i> coordinate, return a colour value <i>colour(s, t)</i>.</span></p>
 <p>If multiple surface textures are included in the <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestylewithtextures.htm">IfcSurfaceStyleWithTextures</a> applying them to a geometric item, a mode and optional parameters can be included that blending operations.</p>
 <p>The <i>RepeatS</i> and <i>RepeatT</i> Boolean flags control whether the texture map is repeated outside the [0.0, 1.0] texture coordinate range, when applied to a geometric surface, or clamped to lie within the [0.0, 1.0] range. The <i>TextureTransform</i> applies a 2D non-uniform transformation to the texture before it is applied to a geometric surface.</p>
 <p>The following definitions from ISO/IEC 19775-1 X3D Architecture and base components (<a href="http://www.web3d.org/x3d/specifications/">X3D Specification</a>) apply:</p>
@@ -101,7 +99,9 @@ scale T = <i>TextureTransform.Scale2</i></span></li>
 </ul>
 </li>
 </ul>
-> NOTE&nbsp; The definitions of texturing within this standard have been developed in dependence on the texture component of X3D. See ISO/IEC 19775-1.2:2008 X3D Architecture and base components Edition 2, Part 1, 18 Texturing component for the definitions in the international standard.
+<blockquote class="note">
+<p>NOTE  The definitions of texturing within this standard have been developed in dependence on the texture component of X3D. See ISO/IEC 19775-1.2:2008 X3D Architecture and base components Edition 2, Part 1, 18 Texturing component for the definitions in the international standard.</p>
+</blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x2.</p>
 </blockquote>

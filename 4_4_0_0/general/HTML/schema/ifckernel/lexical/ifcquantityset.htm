@@ -43,12 +43,10 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcQuantitySet</span> is the the abstract supertype for all quantity sets attached to objects. The quantity set is a container class that holds the individual quantities within a quantity tree. These quantities are interpreted according to their name attribute and classified according to their measure type. Some quantity sets are included in the IFC specification and have a predefined set of quantities indicated by assigning a significant name. These quantity sets are listed as &quot;quantity sets&quot; within this specification. Quantity sets applicable to certain objects are listed in the object specification.</p>
 <p>An <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> may define the underlying structure, i.e. the required name, the applicable object or object types to which the quantity set can be attached, and the individual quantities that maybe included. Quantity sets are related to other objects by using the relationship object that refers to the corresponding object:</p>
-<ul>
-<li><strong>Occurrence Object</strong>: <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> using the inverse attribute <i>DefinesOccurrence</i>.</li>
-<li><strong>Type Object</strong>: using a direct link by inverse attribute <i>DefinesType</i>.</li>
-<li><strong>Underlying template</strong>: <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a> using the inverse attribute <i>IsDefinedBy</i>.</li>
-<li><strong>External reference</strong>: subtypes of <a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a> are used to provide a link to a classification system, or external library providing further reference to the quantity set. Accessible by inverse attribute <i>HasAssociations</i>.</li>
-</ul>
+<p>* **Occurrence Object**: <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> using the inverse attribute <i>DefinesOccurrence</i>.
+* **Type Object**: using a direct link by inverse attribute <i>DefinesType</i>.
+* **Underlying template**: <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a> using the inverse attribute <i>IsDefinedBy</i>.
+* **External reference**: subtypes of <a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a> are used to provide a link to a classification system, or external library providing further reference to the quantity set. Accessible by inverse attribute <i>HasAssociations</i>.</p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC4.</p>
 </blockquote>

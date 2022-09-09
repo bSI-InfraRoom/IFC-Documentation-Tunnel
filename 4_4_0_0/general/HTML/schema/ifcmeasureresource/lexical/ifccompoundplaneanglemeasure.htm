@@ -47,12 +47,10 @@
 <p>Type: LIST [3:4] OF INTEGER</p>
 <p class="use-head">
 Value restrictions</p>
-<ul>
-<li>The first integer measure is the number of degrees and is generally not range-restricted. However, when <span class="self-ref">IfcCompoundPlaneAngleMeasure</span> is used to express geographic coordinates, only latitudes of [-90, 90] and longitudes of [-180, 180] are used in practice.</li>
-<li>The second integer measure is the number of minutes and shall be in the range (-60, 60).</li>
-<li>The third integer measure is the number of seconds and shall be in the range (-60, 60).</li>
-<li>The optional fourth integer measure is the number of millionth-seconds and shall be in the range (-1 000 000, 1 000 000).</li>
-</ul>
+<p>* The first integer measure is the number of degrees and is generally not range-restricted. However, when <span class="self-ref">IfcCompoundPlaneAngleMeasure</span> is used to express geographic coordinates, only latitudes of [-90, 90] and longitudes of [-180, 180] are used in practice.
+* The second integer measure is the number of minutes and shall be in the range (-60, 60).
+* The third integer measure is the number of seconds and shall be in the range (-60, 60).
+* The optional fourth integer measure is the number of millionth-seconds and shall be in the range (-1 000 000, 1 000 000).</p>
 <p class="use-head">
 Signedness</p>
 <p>All measure components have the same sign (positive or negative). It is therefore trivial to convert between floating point representation (decimal degrees) and compound representation regardless whether the angle is greater or smaller than zero. Example:</p>
@@ -62,17 +60,17 @@ Signedness</p>
 </blockquote>
 <p>LOCAL</p>
 <blockquote>
-<p>  a : IfcPlaneAngleMeasure := -50.975864;  (* decimal degrees, -50° 58' 33&quot; 110400 *)<br>
+<p>  a : IfcPlaneAngleMeasure := -50.975864;  (\* decimal degrees, -50° 58' 33&quot; 110400 \*)<br>
   b : IfcPlaneAngleMeasure;<br>
   c : IfcCompoundPlaneAngleMeasure;<br>
   s : IfcText;<br>
 END_LOCAL;</p>
-<p>(* convert from float to compound *)<br>
+<p>(\* convert from float to compound \<i>)<br>
   c[1] :=    a;                                           -- -50<br>
-  c[2] :=   (a - c[1]) * 60;                              -- -58<br>
-  c[3] :=  ((a - c[1]) * 60 - c[2]) * 60;                 -- -33<br>
-  c[4] := (((a - c[1]) * 60 - c[2]) * 60 - c[3]) * 1.e6;  -- -110400</p>
-<p>(* convert from compound to float *)<br>
+  c[2] :=   (a - c[1]) \</i> 60;                              -- -58<br>
+  c[3] :=  ((a - c[1]) \* 60 - c[2]) \* 60;                 -- -33<br>
+  c[4] := (((a - c[1]) \* 60 - c[2]) \* 60 - c[3]) \* 1.e6;  -- -110400</p>
+<p>(\* convert from compound to float \*)<br>
   b := c[1] + c[2]/60. + c[3]/3600. + c[4]/3600.e6;       -- -50.975864</p>
 <pre><code></code></pre>
 </blockquote>
@@ -83,7 +81,7 @@ Use in string representations</p>
 <pre><code>
 </code></pre>
 </blockquote>
-<p>(* convert from compound to human-readable string *)</p>
+<p>(\* convert from compound to human-readable string \*)</p>
 <blockquote>
 <p>  s := FORMAT(c[1], '+##')     + &quot;000000B0&quot;<br>
      + FORMAT(ABS(c[2]), '##') + ''''<br>

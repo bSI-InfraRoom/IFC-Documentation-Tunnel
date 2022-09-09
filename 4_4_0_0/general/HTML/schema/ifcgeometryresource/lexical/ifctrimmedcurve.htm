@@ -63,28 +63,24 @@
 <blockquote class="extDef">
 <p>NOTE Definition according to ISO/CD 10303-42:1992<br>
 A trimmed curve is a bounded curve which is created by taking a selected portion, between two identified points, of the associated basis curve. The basis curve itself is unaltered and more than one trimmed curve may reference the same basis curve. Trimming points for the curve may be identified by:</p>
-<ul>
-<li>parametric value</li>
-<li>geometric position</li>
-<li>both of the above</li>
-</ul>
+<p>* parametric value
+* geometric position
+* both of the above</p>
 </blockquote>
 <p>At least one of these shall be specified at each end of the curve. The <i>SenseAgreement</i> makes it possible to unambiguously define any segment of a closed curve such as a circle. The combinations of sense and ordered end points make it possible to define four distinct directed segments connecting two different points on a circle or other closed curve. For this purpose cyclic properties of the parameter range are assumed; for example, 370 degrees is equivalent to 10 degrees.</p>
 <blockquote>
 <p>The <span class="self-ref">IfcTrimmedCurve</span> has a parameterization which is inherited from the particular basis curve reference. More precisely the parameter s of the trimmed curve is derived from the parameter of the basis curve as follows:</p>
-<ul>
-<li>if <i>SenseAgreement</i> is TRUE: <i>s = t - t<sub>1</sub></i></li>
-<li>if <i>SenseAgreement</i> is FALSE: <i>s = t<sub>2</sub> - t</i></li>
-</ul>
+<p>* if <i>SenseAgreement</i> is TRUE: <i>s = t - t~1~</i>
+* if <i>SenseAgreement</i> is FALSE: <i>s = t~2~ - t</i></p>
 </blockquote>
-<p>In the above equations t<sub>1</sub> is the value given by <i>Trim1</i> or the parameter value corresponding to point 1 and t<sub>2</sub> is the value given by <i>Trim2</i> or the parameter value corresponding to point 2. The resultant <span class="self-ref">IfcTrimmedCurve</span> has a parameter ranging from 0 at the first trimming point to |t<sub>2</sub> - t<sub>1</sub>| at the second trimming point.</p>
+<p>In the above equations t~1~ is the value given by <i>Trim1</i> or the parameter value corresponding to point 1 and t~2~ is the value given by <i>Trim2</i> or the parameter value corresponding to point 2. The resultant <span class="self-ref">IfcTrimmedCurve</span> has a parameter ranging from 0 at the first trimming point to |t~2~ - t~1~| at the second trimming point.</p>
 <blockquote class="note">
 <blockquote class="note">
 <p>NOTE  In case of a closed curve, it may be necessary to increment t1 or t2 by the parametric length for consistency with the sense flag.</p>
 </blockquote>
 </blockquote>
 <blockquote class="note">
-<p>NOTE Entity adapted from <strong>trimmed_curve</strong> defined in ISO 10303-42</p>
+<p>NOTE Entity adapted from **trimmed_curve** defined in ISO 10303-42</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC1.0</p>
