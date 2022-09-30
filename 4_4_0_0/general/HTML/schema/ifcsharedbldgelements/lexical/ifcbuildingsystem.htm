@@ -50,9 +50,11 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>A building system is a group by which building elements are grouped according to a common function within the facility.</p>
 <p>The group <span class="self-ref">IfcBuildingSystem</span> defines the occurrence of a specialized system for use within the context of a building and finishing fabric. Important functionalities for the description of a building system are derived from supertypes:</p>
-<p>* From <a href="../../ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a> it inherits the ability to couple the building system via <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a> to one or more <a href="../../ifcproductextension/lexical/ifcspatialelement.htm">IfcSpatialElement</a> subtypes as necessary.
-* From <a href="../../ifckernel/lexical/ifcgroup.htm">IfcGroup</a> it inherits the inverse attribute <i>IsGroupedBy</i>, pointing to the relationship class <a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a>. This allows to group building elements (instances of <i>IfcBuildingElement</i> subtypes, <a href="../../ifcproductextension/lexical/ifcfurnishingelement.htm">IfcFurnishingElement</a> subtype, <a href="../../ifcproductextension/lexical/ifcelementassembly.htm">IfcElementAssembly</a> and <a href="../../ifcproductextension/lexical/ifctransportelement.htm">IfcTransportElement</a>).
-* From <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a> it inherits the inverse attribute <i>IsDecomposedBy</i> pointing to the relationship class <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>. It provides the hierarchy between the separate (partial) building systems.</p>
+<ul>
+<li>From <a href="../../ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a> it inherits the ability to couple the building system via <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a> to one or more <a href="../../ifcproductextension/lexical/ifcspatialelement.htm">IfcSpatialElement</a> subtypes as necessary.</li>
+<li>From <a href="../../ifckernel/lexical/ifcgroup.htm">IfcGroup</a> it inherits the inverse attribute <i>IsGroupedBy</i>, pointing to the relationship class <a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a>. This allows to group building elements (instances of <i>IfcBuildingElement</i> subtypes, <a href="../../ifcproductextension/lexical/ifcfurnishingelement.htm">IfcFurnishingElement</a> subtype, <a href="../../ifcproductextension/lexical/ifcelementassembly.htm">IfcElementAssembly</a> and <a href="../../ifcproductextension/lexical/ifctransportelement.htm">IfcTransportElement</a>).</li>
+<li>From <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a> it inherits the inverse attribute <i>IsDecomposedBy</i> pointing to the relationship class <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>. It provides the hierarchy between the separate (partial) building systems.</li>
+</ul>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC4.</p>
 </blockquote>
@@ -165,7 +167,7 @@ IFC4 CHANGE  The cardinality has been changed from 1..1 to 0..? in order to all
 </blockquote>
 </td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a></td></tr>
-<tr><td></td><td><i>ServicesBuildings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatingSystem</td><td>S[0:1]</td><td>Reference to the ~~building~~ spatial structure via the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>, which is serviced by the system.
+<tr><td></td><td><i>ServicesBuildings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatingSystem</td><td>S[0:1]</td><td>Reference to the <del>building</del> spatial structure via the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>, which is serviced by the system.
 </td><td>X</td></tr>
 <tr><td></td><td><i>ServicesFacilities</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:?]</td><td></td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcsharedbldgelements/lexical/ifcbuildingsystem.htm">IfcBuildingSystem</a></td></tr>

@@ -19,11 +19,20 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 9 September 2022
+Friday, 30 September 2022
 
 *)
 
 SCHEMA IFCTUNNELDOMAIN;
+
+TYPE IfcTunnelPartTypeEnum = ENUMERATION OF
+	(TUNNELSECTION
+	,CROSSWAY
+	,RINGSECTION
+	,PORTAL
+	,NOTDEFINED
+	,USERDEFINED);
+END_TYPE;
 
 TYPE IfcTunnelTypeEnum = ENUMERATION OF
 	(ACCESSTUNNEL
@@ -47,6 +56,13 @@ ENTITY IfcTunnel
 	PredefinedType : IfcTunnelTypeEnum;
  WHERE
 	HasObjectType : (PredefinedType <> IfcTunnelTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+END_ENTITY;
+
+ENTITY IfcTunnelPart
+ SUBTYPE OF (IfcFacilityPart);
+	PredefinedType : IfcTunnelPartTypeEnum;
+ WHERE
+	HasObjectType : (PredefinedType <> IfcTunnelPartTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
 
 END_SCHEMA;

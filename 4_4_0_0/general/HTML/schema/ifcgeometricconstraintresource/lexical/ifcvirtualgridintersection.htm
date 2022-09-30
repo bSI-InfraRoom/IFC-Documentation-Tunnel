@@ -41,9 +41,11 @@
 <p>NOTE  The <a href="../../ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a> local placement, that can be provided relative to the local placement of another spatial structure element, has to be taken into account for calculating the absolute placement of the <span class="self-ref">IfcVirtualGridIntersection</span>. Where rules and informal rules ensure, that the <i>IntersectingAxes</i> belong to the same <a href="../../ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a></p>
 </blockquote>
 <p>Offset values may be given (<i>OffsetDistances</i>). If given, the position within the list of <i>OffsetDistances</i> corresponds with the position within the list of <i>IntersectingAxes</i>. Therefore:</p>
-<p>* <i>OffsetDistances[1]</i> sets the offset to <i>IntersectingAxes[1]</i>,
-* <i>OffsetDistances[2]</i> sets the offset to <i>IntersectingAxes[2]</i>, and
-* <i>OffsetDistances[3]</i> sets the offset to the virtual intersection in direction of the orientation of the cross product of <i>IntersectingAxes[1]</i> and the orthogonal complement of the <i>IntersectingAxes[1]</i> (which is the positive or negative direction of the z axis of the design grid position).</p>
+<ul>
+<li><i>OffsetDistances[1]</i> sets the offset to <i>IntersectingAxes[1]</i>,</li>
+<li><i>OffsetDistances[2]</i> sets the offset to <i>IntersectingAxes[2]</i>, and</li>
+<li><i>OffsetDistances[3]</i> sets the offset to the virtual intersection in direction of the orientation of the cross product of <i>IntersectingAxes[1]</i> and the orthogonal complement of the <i>IntersectingAxes[1]</i> (which is the positive or negative direction of the z axis of the design grid position).</li>
+</ul>
 <p>The following figures explain the usage of the <i>OffsetDistances</i> and <i>IntersectingAxes</i> attributes.</p>
 <table cellpadding="2" cellspacing="2">
 <tr valign="top"><td align="left" valign="top"><img src="../../../figures/ifcvirtualgridintersection-layout1.gif" alt="2D offsets" border="0" height="300" width="400"></td>

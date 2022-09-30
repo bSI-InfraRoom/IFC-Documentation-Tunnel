@@ -35,16 +35,20 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcConnectionPointEccentricity</span> is used to describe the geometric constraints that facilitate the physical connection of two objects at a point or vertex point with associated point coordinates. There is a physical distance, or eccentricity, etween the connection points of both object. The eccentricity can be either given by:</p>
-<p>* providing the <i>PointOnRelatingElement</i> and the <i>PointOnRelatedElement</i>, where both point coordinates are not identical within a common parent coordinate system (latestly within the world coordinate system),
-* providing the <i>PointOnRelatingElement</i> and the three distance measures, <i>EccentricityInX</i>, <i>EccentricityInY</i>, and <i>EccentricityInZ</i> (or only <i>EccentricityInX</i>, and <i>EccentricityInY</i> if the underlying coordinate system is two-dimensional), or
-* providing both.</p>
+<ul>
+<li>providing the <i>PointOnRelatingElement</i> and the <i>PointOnRelatedElement</i>, where both point coordinates are not identical within a common parent coordinate system (latestly within the world coordinate system),</li>
+<li>providing the <i>PointOnRelatingElement</i> and the three distance measures, <i>EccentricityInX</i>, <i>EccentricityInY</i>, and <i>EccentricityInZ</i> (or only <i>EccentricityInX</i>, and <i>EccentricityInY</i> if the underlying coordinate system is two-dimensional), or</li>
+<li>providing both.</li>
+</ul>
 <blockquote class="note">
 <p>NOTE  If both, <i>PointOnRelatedElement</i>, and <i>EccentricityInX</i>, <i>EccentricityInY</i>, (<i>EccentricityInZ</i>) are provided, the values should be consistent. In case of any non-consistency, the calculated distance between <i>PointOnRelatingElement</i> and <i>PointOnRelatedElement</i> takes precedence.</p>
 </blockquote>
 <p>The <a href="../../ifcgeometryresource/lexical/ifcpoint.htm">IfcPoint</a> (or the <a href="../../ifctopologyresource/lexical/ifcvertexpoint.htm">IfcVertexPoint</a> with an associated <a href="../../ifcgeometryresource/lexical/ifcpoint.htm">IfcPoint</a>) at the <i>PointOnRelatingElement</i> attribute defines the point where the basic geometry items of the connected elements connects. The point coordinates are provided within the local coordinate system of the <i>RelatingElement</i>, as specified at the <a href="../../ifckernel/lexical/ifcrelconnects.htm">IfcRelConnects</a> subtype that utilizes the <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectionpointgeometry.htm">IfcConnectionPointGeometry</a>. Optionally, the same point coordinates can also be provided within the local coordinate system of the <i>RelatedElement</i> by using the <i>PointOnRelatedElement</i> attribute, otherwise the distance to the point at the RelatedElement has to be given by the three eccentricity values.</p>
 <p>The explicit values for <i>EccentricityInX</i>, <i>EccentricityInY</i>, and <i>EccentricityInZ</i> are always measured in the following direction and coordinate system (defining when the value is positive or negative):</p>
-<p>* from the <i>PointOnRelatedElement</i> to <i>PointOnRelatingElement</i> within the coordinate system of the <i>RelatingElement</i>.
-* in addition: when used to specify connections in structural analysis models, the <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralmember.htm">IfcStructuralMember</a> is to be used as the <i>RelatingElement</i> of the relationship object utilizing <span class="self-ref">IfcConnectionPointEccentricity</span>, and the <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralconnection.htm">IfcStructuralConnection</a> is the <i>RelatedElement</i>.</p>
+<ul>
+<li>from the <i>PointOnRelatedElement</i> to <i>PointOnRelatingElement</i> within the coordinate system of the <i>RelatingElement</i>.</li>
+<li>in addition: when used to specify connections in structural analysis models, the <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralmember.htm">IfcStructuralMember</a> is to be used as the <i>RelatingElement</i> of the relationship object utilizing <span class="self-ref">IfcConnectionPointEccentricity</span>, and the <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralconnection.htm">IfcStructuralConnection</a> is the <i>RelatedElement</i>.</li>
+</ul>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x3.</p>
 </blockquote>

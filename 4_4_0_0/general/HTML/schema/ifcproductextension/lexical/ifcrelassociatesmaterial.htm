@@ -45,42 +45,54 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcRelAssociatesMaterial</span> is an objectified relationship between a material definition and elements or element types to which this material definition applies.</p>
 <p>The material definition can be:</p>
-<p>* assigned to an element occurrence as a specific usage of a layer set or profile set
-* assigned to an element occurrence or element type as a layer set, profile set, constituent set or a single material</p>
+<ul>
+<li>assigned to an element occurrence as a specific usage of a layer set or profile set</li>
+<li>assigned to an element occurrence or element type as a layer set, profile set, constituent set or a single material</li>
+</ul>
 <p>Materials can be arranged by layers and applied to layered elements. Typical elements are walls and slabs.</p>
-<p>* An <a href="../../ifcmaterialresource/lexical/ifcmateriallayerset.htm">IfcMaterialLayerSet</a>, for layered elements with an indication of the layering direction and individual layer thicknesses
-* An <a href="../../ifcmaterialresource/lexical/ifcmateriallayersetusage.htm">IfcMaterialLayerSetUsage</a>, i.e. a material layer set with positioning information along the reference axis or surface of the element.</p>
+<ul>
+<li>An <a href="../../ifcmaterialresource/lexical/ifcmateriallayerset.htm">IfcMaterialLayerSet</a>, for layered elements with an indication of the layering direction and individual layer thicknesses</li>
+<li>An <a href="../../ifcmaterialresource/lexical/ifcmateriallayersetusage.htm">IfcMaterialLayerSetUsage</a>, i.e. a material layer set with positioning information along the reference axis or surface of the element.</li>
+</ul>
 <blockquote class="note">
 <blockquote class="note">
 <p>NOTE  As a material layer set usage is an occurrence based information, that applies to each individual element, it cannot be assigned to an element type.</p>
 </blockquote>
 </blockquote>
 <p>Material can be applied to profiles. Typical elements using profile material are beam, column, member</p>
-<p>* An <a href="../../ifcmaterialresource/lexical/ifcmaterialprofileset.htm">IfcMaterialProfileSet</a>, i.e. a set of material assigned to a set of profiles, with a single material assigned to a single profile as the default.
-* An <a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSetUsage</a>, i.e. a material profile set with positioning information relative to the element axis, also refered to as cardinal point.</p>
+<ul>
+<li>An <a href="../../ifcmaterialresource/lexical/ifcmaterialprofileset.htm">IfcMaterialProfileSet</a>, i.e. a set of material assigned to a set of profiles, with a single material assigned to a single profile as the default.</li>
+<li>An <a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSetUsage</a>, i.e. a material profile set with positioning information relative to the element axis, also refered to as cardinal point.</li>
+</ul>
 <blockquote class="note">
 <blockquote class="note">
 <p>NOTE  As a material profile set usage is an occurrence based information, that applies to each individual element, it cannot be assigned to an element type.</p>
 </blockquote>
 </blockquote>
 <p>Materials can be arranged by identified parts of a component based element. Typical elements are dorrs/windows (with components such as lining, framing and glazing), or distribution elements.</p>
-<p>* An <a href="../../ifcmaterialresource/lexical/ifcmaterialconstituentset.htm">IfcMaterialConstituentSet</a>, for component based elements with an indication of the component by keyword to which the material consituent applies.</p>
+<ul>
+<li>An <a href="../../ifcmaterialresource/lexical/ifcmaterialconstituentset.htm">IfcMaterialConstituentSet</a>, for component based elements with an indication of the component by keyword to which the material consituent applies.</li>
+</ul>
 <blockquote class="note">
 <blockquote class="note">
 <p>NOTE  See the material use definitions at each applicable subtype of <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> or <a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a> for a provision of these keywords.</p>
 </blockquote>
 </blockquote>
 <p>As a fallback, or in cases where only a single material information is needed, material information can be directly associated</p>
-<p>* A single <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a> for any element where the material use definition does not prohibits its direct association
-* An <a href="../../ifcmaterialresource/lexical/ifcmateriallist.htm">IfcMaterialList</a>, e.g. for composite elements, without an information, how the different materials are arranged.</p>
+<ul>
+<li>A single <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a> for any element where the material use definition does not prohibits its direct association</li>
+<li>An <a href="../../ifcmaterialresource/lexical/ifcmateriallist.htm">IfcMaterialList</a>, e.g. for composite elements, without an information, how the different materials are arranged.</li>
+</ul>
 <blockquote>
 <blockquote>
 <p>DEPRECATED  The use of <a href="../../ifcmaterialresource/lexical/ifcmateriallist.htm">IfcMaterialList</a> is deprecated in IFC4 onwards. Use <a href="../../ifcmaterialresource/lexical/ifcmaterialconstituentset.htm">IfcMaterialConstituentSet</a> instead.</p>
 </blockquote>
 </blockquote>
 <p>The <span class="self-ref">IfcRelAssociatesMaterial</span> relationship is a special type of the <a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a> relationship. It can be applied to subtypes of <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> and subtypes of <a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a>.</p>
-<p>* The <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> has an inverse relation to its material definition by the <i>HasAssociations</i> attribute, inherited from <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.
-* The <a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a> has an inverse relation to its material definition by the <i>HasAssociations</i> attribute, inherited from <a href="../../ifckernel/lexical/ifcpropertydefinition.htm">IfcPropertyDefinition</a>.</p>
+<ul>
+<li>The <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> has an inverse relation to its material definition by the <i>HasAssociations</i> attribute, inherited from <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.</li>
+<li>The <a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a> has an inverse relation to its material definition by the <i>HasAssociations</i> attribute, inherited from <a href="../../ifckernel/lexical/ifcpropertydefinition.htm">IfcPropertyDefinition</a>.</li>
+</ul>
 <p>If both, the element occurrence (by an instance of <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>) and the element type (by an instance of <a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a>, connected through <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a>) have an associated material, then the material associated to the element occurrence overrides the material associated to the element type.</p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x.</p>

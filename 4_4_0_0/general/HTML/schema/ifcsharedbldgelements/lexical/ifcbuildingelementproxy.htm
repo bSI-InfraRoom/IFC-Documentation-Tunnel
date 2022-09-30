@@ -57,8 +57,10 @@
 <p>One use of the proxy object is a provision for voids, i.e. where a particular volume of space is requested by an engineering function that might later be accepted or rejected. If accepted it is transformed into a void within a building element, like a wall opening, or a slab opening. The provision for voids is exchanged as an <span class="self-ref">IfcBuildingElementProxy</span> with the <i>PredefinedType</i> = ProvisionForVoid. Such proxy shall have a swept solid geometry, where the profile of the swept solid lies on/near the surface of the referred building element and the extrusion depths is equal to or bigger then (in case of round or otherwise irregular element shape) the thickness of the building element. The appropriate property set should be attached.</p>
 <p>In addition to the provision for voids, the building element proxy can also represent a provision for space, often the necessary space allocation for mechanical equipment that will be determined in a later design phase. The provision for space is exchanged as an <span class="self-ref">IfcBuildingElementProxy</span> with the <i>PredefinedType</i> = ProvisionForSpace.</p>
 <p>Other usages of <span class="self-ref">IfcBuildingElementProxy</span> include:</p>
-<p>* The <span class="self-ref">IfcBuildingElementProxy</span> can be used to exchange special types of building elements for which the current specification does not yet provide a semantic definition.
-* The <span class="self-ref">IfcBuildingElementProxy</span> can also be used to represent building elements for which the participating applications can not provide a semantic definition.</p>
+<ul>
+<li>The <span class="self-ref">IfcBuildingElementProxy</span> can be used to exchange special types of building elements for which the current specification does not yet provide a semantic definition.</li>
+<li>The <span class="self-ref">IfcBuildingElementProxy</span> can also be used to represent building elements for which the participating applications can not provide a semantic definition.</li>
+</ul>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x.</p>
 </blockquote>
@@ -355,8 +357,10 @@ IFC4 CHANGE  The attribute <i>CompositionType</i> has been replaced by <i>Prede
 <tr><td><p class="table">Table 136 &mdash; IfcBuildingElementProxy Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcBuildingElementProxy</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
-<p>* the <i>Spatial Containment</i> (defined here), or
-* the <i>Element Composition</i>.</p>
+<ul>
+<li>the <i>Spatial Containment</i> (defined here), or</li>
+<li>the <i>Element Composition</i>.</li>
+</ul>
 
 <br/><br/>
 

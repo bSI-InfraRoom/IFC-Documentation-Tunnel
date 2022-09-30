@@ -54,8 +54,10 @@
 <p>NOTE  Definition according to ISO 6707-1: Construction comprising a succession of horizontal stages (steps or landings) that make it possible to pass on foot to other levels.</p>
 </blockquote>
 <p>The <span class="self-ref">IfcStair</span> shall either be represented:</p>
-<p>* as a stair assembly entity that aggregates all parts (stair flight, landing, etc. with own representations), or
-* as a single stair entity without decomposition including all representation directly at the stair entity.</p>
+<ul>
+<li>as a stair assembly entity that aggregates all parts (stair flight, landing, etc. with own representations), or</li>
+<li>as a single stair entity without decomposition including all representation directly at the stair entity.</li>
+</ul>
 <blockquote class="note">
 <p>NOTE  In case of an <span class="self-ref">IfcStair</span> being the aggregate of all parts of the stair the aggregation is handled by the <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship, relating an <span class="self-ref">IfcStair</span> with the related <a href="../../ifcsharedbldgelements/lexical/ifcstairflight.htm">IfcStairFlight</a> and landings, <a href="../../ifcsharedbldgelements/lexical/ifcslab.htm">IfcSlab</a> with PredefinedType=LANDING. <a href="../../ifcsharedbldgelements/lexical/ifcrailing.htm">IfcRailing</a>'s belonging to the stair may also be included into the aggregation.</p>
 </blockquote>
@@ -362,8 +364,10 @@ IFC4 CHANGE The attribute has been renamed from <i>ShapeType</i> and changed to 
 <tr><td><p class="table">Table 209 &mdash; IfcStair Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcStair</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
-<p>* the <i>Spatial Containment</i> (defined here), or
-* the <i>Element Composition</i>.</p>
+<ul>
+<li>the <i>Spatial Containment</i> (defined here), or</li>
+<li>the <i>Element Composition</i>.</li>
+</ul>
 
 <br/><br/>
 
@@ -398,7 +402,9 @@ IFC4 CHANGE The attribute has been renamed from <i>ShapeType</i> and changed to 
 <tr><td><p class="table">Table 211 &mdash; IfcStair Product Local Placement</td></tr></table>
 
 <p>The following restriction may be imposed by view definitions or implementer agreements:</p>
-<p>* If the <span class="self-ref">IfcStair</span> establishes an aggregate, then all contained elements shall be placed relative to the <i>IfcStair.ObjectPlacement</i>.</p>
+<ul>
+<li>If the <span class="self-ref">IfcStair</span> establishes an aggregate, then all contained elements shall be placed relative to the <i>IfcStair.ObjectPlacement</i>.</li>
+</ul>
 
 <br/><br/>
 

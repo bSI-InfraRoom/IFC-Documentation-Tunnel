@@ -60,7 +60,9 @@
 </blockquote>
 <p>An <span class="self-ref">IfcProjectionElement</span> has to be linked to a element (all subtypes of <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>) by using the <a href="../../ifcproductextension/lexical/ifcrelprojectselement.htm">IfcRelProjectsElement</a> relationship. Its existence depends on the existence of the master element. The relationship implies a Boolean union operation between the volume of the projection element and the volume of the element.</p>
 <p>The <span class="self-ref">IfcProjectionElement</span> shall not participate in the containment relationship, i.e. it is not linked directly to the spatial structure of the project. It has a mandatory <i>ProjectsElements</i> inverse relationship pointing to the <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> that is contained in the spatial structure.</p>
-<p>* The inverse relationship <i>ContainedInStructure</i> shall be NIL.</p>
+<ul>
+<li>The inverse relationship <i>ContainedInStructure</i> shall be NIL.</li>
+</ul>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x2.</p>
 </blockquote>
@@ -275,7 +277,9 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <tr><td><p class="table">Table 101 &mdash; IfcProjectionElement Product Local Placement</td></tr></table>
 
 <p>The local placement for <i>IfcOpeningRecess</i> is defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines the local coordinate system that is referenced by all geometric representations.</p>
-<p>* The <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> should point to the local placement of the same element, to which the projection adds, i.e. referred to by <i>ProjectsElement.RelatingBuildingElement</i>.</p>
+<ul>
+<li>The <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> should point to the local placement of the same element, to which the projection adds, i.e. referred to by <i>ProjectsElement.RelatingBuildingElement</i>.</li>
+</ul>
 
 <br/><br/>
 
@@ -291,16 +295,22 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <tr><td><p class="table">Table 102 &mdash; IfcProjectionElement Body Geometry</td></tr></table>
 
 <p>The geometric representation of <span class="self-ref">IfcProjectionElement</span> is defined using the swept area solid geometry. The following attribute values for the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> holding this geometric representation shall be used:</p>
-<p>* <i>RepresentationIdentifier</i> : 'Body'
-* <i>RepresentationType</i> : 'SweptSolid'</p>
+<ul>
+<li><i>RepresentationIdentifier</i> : 'Body'</li>
+<li><i>RepresentationType</i> : 'SweptSolid'</li>
+</ul>
 <p>The following additional constraints apply to the swept solid representation:</p>
-<p>* **Solid**: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required.
-* **Profile**: <a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>, <a href="../../ifcprofileresource/lexical/ifccircleprofiledef.htm">IfcCircleProfileDef</a> and <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> shall be supported.
-* **Extrusion**: The profile shall be extruded horizontally (that is, perpendicular to the extrusion direction of the modified element), such as for wall projections, or vertically (that is, in the extrusion direction of the projected element), such as for floor projections.</p>
+<ul>
+<li><strong>Solid</strong>: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required.</li>
+<li><strong>Profile</strong>: <a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>, <a href="../../ifcprofileresource/lexical/ifccircleprofiledef.htm">IfcCircleProfileDef</a> and <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> shall be supported.</li>
+<li><strong>Extrusion</strong>: The profile shall be extruded horizontally (that is, perpendicular to the extrusion direction of the modified element), such as for wall projections, or vertically (that is, in the extrusion direction of the projected element), such as for floor projections.</li>
+</ul>
 <p>As shown in Figure 299, the following interpretation of dimension parameter applies for rectangular projection:</p>
-<p>* <i>IfcRectangleProfileDef.YDim</i> interpreted as projection width
-* <i>IfcRectangleProfileDef.XDim</i> interpreted as projection height
-* <i>IfcExtrudedAreaSolid.Depth</i> is interpreted as projection depth</p>
+<ul>
+<li><i>IfcRectangleProfileDef.YDim</i> interpreted as projection width</li>
+<li><i>IfcRectangleProfileDef.XDim</i> interpreted as projection height</li>
+<li><i>IfcExtrudedAreaSolid.Depth</i> is interpreted as projection depth</li>
+</ul>
 <blockquote class="note">
 <p>NOTE  Rectangles are now defined centric, the placement location has to be set: &gt; * <a href="../../ifcgeometryresource/lexical/ifccartesianpoint.htm">IfcCartesianPoint</a>(XDim/2,YDim/2)</p>
 </blockquote>
@@ -309,8 +319,10 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 </blockquote>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcprojectionelement-layout1.png" alt="&quot;projection&quot;" title="Figure 299 &mdash; Projection representation"></td></tr><tr><td><p class="figure">Figure 299 &mdash; Projection representation</p></td></tr></table></p>
 <p>The general b-rep geometric representation of <span class="self-ref">IfcProjectionElement</span> is defined using the Brep geometry. The Brep representation allows for the representation of complex element shape. The following attribute values for the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> holding this geometric representation shall be used:</p>
-<p>* <i>RepresentationIdentifier</i> : 'Body'
-* <i>RepresentationType</i> : 'Brep'</p>
+<ul>
+<li><i>RepresentationIdentifier</i> : 'Body'</li>
+<li><i>RepresentationType</i> : 'Brep'</li>
+</ul>
 
 <br/><br/>
 

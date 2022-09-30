@@ -77,7 +77,7 @@
 <blockquote class="note">
 <p>NOTE Definitions according to EN 13803/2017 (except CLOTHOID)</p>
 </blockquote>
-<p>**Used Symbols and their meaning**</p>
+<p><strong>Used Symbols and their meaning</strong></p>
 <table>
 <thead>
 <tr>
@@ -166,34 +166,38 @@
 <p>NOTE gradient has a slightly different definition in civil engineering. &quot;Gradient (Civ.Eng.) is the degree of slope, e.g. of a highway or a railway. US grade&quot;.</p>
 </blockquote>
 <blockquote class="note">
-<p>NOTE most railway track designs use the **small angle assumption**. That means θ=tan(θ)=gradient.</p>
+<p>NOTE most railway track designs use the <strong>small angle assumption</strong>. That means θ=tan(θ)=gradient.</p>
 </blockquote>
-<p>**References to EN 13803/2017**</p>
+<p><strong>References to EN 13803/2017</strong></p>
 <p>EN 13803/2017 covers &quot;Track alignment design parameters&quot;. As such it is not fully compatible with definitions for IFC Alignment. Therefore rail specific terms like track have been replaced with more general terms also applicable to road design.</p>
 <p>Referenced content of EN 13803/2017 &quot;Table 2 - Elements for vertical alignment&quot; has been modified as follows:</p>
-<p>**Vertical curve, parabola:** Derivative of gradient with respect to chainage is constant<br>
-**Generalized:** Derivative of gradient with respect to horizontal projection of alignment is constant</p>
-<p>**Vertical curve, circular:** Derivative of vertical angle with respect to sloping length along the track is constant<br>
-**Generalized:** Derivative of vertical angle with respect to 3D arc length along the alignment is constant</p>
+<p><strong>Vertical curve, parabola:</strong> Derivative of gradient with respect to chainage is constant<br>
+<strong>Generalized:</strong> Derivative of gradient with respect to horizontal projection of alignment is constant</p>
+<p><strong>Vertical curve, circular:</strong> Derivative of vertical angle with respect to sloping length along the track is constant<br>
+<strong>Generalized:</strong> Derivative of vertical angle with respect to 3D arc length along the alignment is constant</p>
 <p>EN13803 clause 3.5:
-**Chainage**: longitudinal distance along the horizontal projection of the track centre line.</p>
+<strong>Chainage</strong>: longitudinal distance along the horizontal projection of the track centre line.</p>
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
 <tr><td>CONSTANTGRADIENT</td><td><p>Vertical alignment segment with constant gradient.</p>
 </td></tr><tr><td>CIRCULARARC</td><td><p>Vertical alignment segment where the derivative of vertical angle with respect to sloping length along the track (3D length) is constant.</p>
-<p>**Vertical Curvature**
+<br>
+<p><strong>Vertical Curvature</strong>
 <table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmentverticalsegmenttypeenum-arc_curvature.png" alt="&quot;Vertical circular arc segment&quot;" title="Figure 431 &mdash; Curvature for vertical circular arc segment"></td></tr><tr><td><p class="figure">Figure 431 &mdash; Curvature for vertical circular arc segment</p></td></tr></table></p>
-<p>**Segment length**
+<br>
+<p><strong>Segment length</strong>
 <table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmentverticalsegmenttypeenum-arc_length.png" alt="&quot;Vertical circular arc segment&quot;" title="Figure 432 &mdash; Length for vertical circular arc segment"></td></tr><tr><td><p class="figure">Figure 432 &mdash; Length for vertical circular arc segment</p></td></tr></table></p>
-<p>**Distance between point on segment to tangent**
+<br>
+<p><strong>Distance between point on segment to tangent</strong>
 <table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmentverticalsegmenttypeenum-arc_z_s.png" alt="&quot;Vertical circular arc segment&quot;" title="Figure 433 &mdash; Distance of point an vertical circular arc segment to tangent"></td></tr><tr><td><p class="figure">Figure 433 &mdash; Distance of point an vertical circular arc segment to tangent</p></td></tr></table></p>
-</td></tr><tr><td>PARABOLICARC</td><td><p>Vertical alignment segment where the derivative of gradient with respect to distance along is constant.</p>
-<p>**general equation of the parabolic arc segment**</p>
+</td></tr><tr><td>PARABOLICARC</td><td><p>Vertical alignment segment where the derivative of gradient with respect to distance along is constant.
+<br></p>
+<p><strong>general equation of the parabolic arc segment</strong></p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmentverticalsegmenttypeenum-parabola1.png" alt="&quot;Vertical parabolic arc segment&quot;" title="Figure 434 &mdash; general equation of the parabolic arc segment"></td></tr><tr><td><p class="figure">Figure 434 &mdash; general equation of the parabolic arc segment</p></td></tr></table></p>
-<p>**gradient (slope) of this curve at any point (first derivative)**</p>
+<p><strong>gradient (slope) of this curve at any point (first derivative)</strong></p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmentverticalsegmenttypeenum-parabola2.png" alt="&quot;Vertical parabolic arc segment&quot;" title="Figure 435 &mdash; gradient (slope)  of the parabolic arc segment at any point"></td></tr><tr><td><p class="figure">Figure 435 &mdash; gradient (slope)  of the parabolic arc segment at any point</p></td></tr></table></p>
-<p>**variation of curvature**</p>
+<p><strong>variation of curvature</strong></p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmentverticalsegmenttypeenum-parabola3.png" alt="&quot;Vertical parabolic arc segment&quot;" title="Figure 436 &mdash; the rate of change of gradient of the parabolic arc segment is constant"></td></tr><tr><td><p class="figure">Figure 436 &mdash; the rate of change of gradient of the parabolic arc segment is constant</p></td></tr></table></p>
 </td></tr><tr><td>CLOTHOID</td><td><p>Vertical alignment segment where the derivative of vertical angle with respect to sloping length along the track (3D length) obeys a linear change.</p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmentverticalsegmenttypeenum-clothoid_curvature.png" alt="&quot;Vertical clothoid segment&quot;" title="Figure 437 &mdash; curvature equation of the vertical clothoid segment"></td></tr><tr><td><p class="figure">Figure 437 &mdash; curvature equation of the vertical clothoid segment</p></td></tr></table></p>

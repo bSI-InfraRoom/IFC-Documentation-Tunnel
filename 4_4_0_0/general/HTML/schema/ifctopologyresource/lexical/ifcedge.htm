@@ -46,16 +46,18 @@
 <p> </p>
 <blockquote class="extDef">
 <p>NOTE  Definition according to ISO/CD 10303-42:1992<br>
-An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non-self-intersecting open curve in <i>R^M^</i>, that is, a connected 1-dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 ≤ Ξ ≤ ∞. Associated with an edge may be a geometric curve to locate the edge in a coordinate space; this is represented by the edge curve subtype. The curve shall be finite and non-self-intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus <i>G^e^</i> may be determined by the graph traversal algorithm. Since <i>M</i> = <i>E</i> = 1, the Euler equation (1) reduces in the case to:</p>
+An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non-self-intersecting open curve in <i>R<sup>M</sup></i>, that is, a connected 1-dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 ≤ Ξ ≤ ∞. Associated with an edge may be a geometric curve to locate the edge in a coordinate space; this is represented by the edge curve subtype. The curve shall be finite and non-self-intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus <i>G<sup>e</sup></i> may be determined by the graph traversal algorithm. Since <i>M</i> = <i>E</i> = 1, the Euler equation (1) reduces in the case to:</p>
 <blockquote>
 <p><img src="../../../figures/ifcedge-math1.gif" alt="Image">
-where <i>V</i> = 1 or 2, and <i>G^e^</i> = 1 or 0. Specifically, the topological edge defining data shall satisfy: &gt; * an edge has two vertices   <img src="../../../figures/ifcedge-math2.gif" alt="Image">
-* the vertices need not be distinct   <img src="../../../figures/ifcedge-math3.gif" alt="Image">
-* Equation shall hold   <img src="../../../figures/ifcedge-math4.gif" alt="Image"></p>
+where <i>V</i> = 1 or 2, and <i>G<sup>e</sup></i> = 1 or 0. Specifically, the topological edge defining data shall satisfy: &gt; * an edge has two vertices   <img src="../../../figures/ifcedge-math2.gif" alt="Image"></p>
 </blockquote>
+<ul>
+<li>the vertices need not be distinct   <img src="../../../figures/ifcedge-math3.gif" alt="Image"></li>
+<li>Equation shall hold   <img src="../../../figures/ifcedge-math4.gif" alt="Image"></li>
+</ul>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  Entity adapted from **edge** defined in ISO 10303-42.</p>
+<p>NOTE  Entity adapted from <strong>edge</strong> defined in ISO 10303-42.</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2.0</p>

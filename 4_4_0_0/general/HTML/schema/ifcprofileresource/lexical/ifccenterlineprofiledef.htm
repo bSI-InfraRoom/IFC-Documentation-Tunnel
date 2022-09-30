@@ -36,9 +36,11 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The profile <span class="self-ref">IfcCenterLineProfileDef</span> defines an arbitrary two-dimensional open, not self intersecting profile for the use within the swept solid geometry. It is given by an area defined by applying a constant thickness to a centerline, generating an area from which the solid can be constructed.</p>
 <p>Among else, <span class="self-ref">IfcCenterLineProfileDef</span> is used to model cold-formed steel or aluminium sections (Sigma, Zeta, Omega, and similar sections which are not covered by subtypes of <a href="../../ifcprofileresource/lexical/ifcparameterizedprofiledef.htm">IfcParameterizedProfileDef</a>). However, since <span class="self-ref">IfcCenterLineProfileDef</span> does not provide shape parameters except for the thickness, there is generally a need to further specify the profile definition by means of</p>
-<p>* the name,
-* external reference to a document or library,
-* profile properties,</p>
+<ul>
+<li>the name,</li>
+<li>external reference to a document or library,</li>
+<li>profile properties,</li>
+</ul>
 <p>or a combination of them. See <a href="../../ifcprofileresource/lexical/ifcprofiledef.htm">IfcProfileDef</a> for guidance on external references for profiles.</p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x3.</p>
@@ -50,7 +52,9 @@ Informal Propositions:</p>
 <li>The <i>Curve</i> has to be a non-intersecting curve.</li>
 </ol>
 <p>Figure 537 illustrates the center line profile definition. The <i>Curve</i> is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface that uses the profile definition. It is the xy plane of:</p>
-<p>* <i>IfcSweptSurface.Position</i></p>
+<ul>
+<li><i>IfcSweptSurface.Position</i></li>
+</ul>
 <p>The <i>Curve</i> attribute defines a two dimensional open bounded curve. The <i>Thickness</i> attribute defines a constant thickness along the curve.</p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcarbitraryprofiledef-layout4.gif" alt="&quot;center line&quot;" title="Figure 537 &mdash; Centerline profile"></td></tr><tr><td><p class="figure">Figure 537 &mdash; Centerline profile</p></td></tr></table></p>
 </details>

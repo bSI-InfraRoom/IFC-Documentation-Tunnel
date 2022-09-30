@@ -35,11 +35,19 @@
 <details open="open"><summary>Function Definition</summary><p>
 <p>This function checks whether the start and end profile in a tapered extrusion are topologically similar, i.e. whether both have the same number of vertices and edges.</p>
 <p>It returnes TRUE if:</p>
-<p>* The start profile is defined by a paramterized profile definition and
-* the end profile is either a derived profile, using the start profile as its parent profile, or
-* the end profile is besed on the same subtype of the paramterized profile definition as the start profile
-* The start profile is defined by an arbitrary bounded curve bounding a plane and
-* the end profile is a derived profile using the start profile as its parent profile</p>
+<ul>
+<li>The start profile is defined by a paramterized profile definition and
+<ul>
+<li>the end profile is either a derived profile, using the start profile as its parent profile, or</li>
+<li>the end profile is besed on the same subtype of the paramterized profile definition as the start profile</li>
+</ul>
+</li>
+<li>The start profile is defined by an arbitrary bounded curve bounding a plane and
+<ul>
+<li>the end profile is a derived profile using the start profile as its parent profile</li>
+</ul>
+</li>
+</ul>
 <blockquote class="history">
 <p><small><font color="#0000FF">HISTORY  New function in
 IFC2x Edition 4.</font></small></p>

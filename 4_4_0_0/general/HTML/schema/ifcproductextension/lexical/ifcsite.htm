@@ -60,21 +60,26 @@
 <p>A site may include a definition of the single geographic reference point for this site (global position using WGS84 with <i>Longitude</i>, <i>Latitude</i> and <i>Elevation</i>). The precision is provided up to millionth of a second and it provides an absolute placement in relation to the real world as used in exchange with geospational information systems. If asserted, the <i>Longitude</i>, <i>Latitude</i> and <i>Elevation</i> establish the point in WGS84 where the point 0.,0.,0. of the <i>LocalPlacement</i> of <span class="self-ref">IfcSite</span> is situated.</p>
 <p>The geometrical placement of the site, defined by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, shall be always relative to the spatial structure element, in which this site is included, or absolute, i.e. to the world coordinate system, as established by the geometric representation context of the project. The world coordinate system, established at the <i>IfcProject.RepresentationContexts</i>, may include a definition of the true north within the XY plane of the world coordinate system, if provided, it can be obtained at <i>IfcGeometricRepresentationContext.TrueNorth</i>.</p>
 <p>A project may span over several connected or disconnected sites. Therefore site complex provides for a collection of sites included in a project. A site can also be decomposed in parts, where each part defines a site section. This is defined by the composition type attribute of the supertype <i>IfcSpatialStructureElements</i> which is interpreted as follow:</p>
-<p>* COMPLEX = site complex
-* ELEMENT = site
-* PARTIAL = site section</p>
+<ul>
+<li>COMPLEX = site complex</li>
+<li>ELEMENT = site</li>
+<li>PARTIAL = site section</li>
+</ul>
 <p>The <span class="self-ref">IfcSite</span> is used to build the spatial structure of a building (that serves as the primary project breakdown and is required to be hierarchical).</p>
-<p>Figure 313 shows the <span class="self-ref">IfcSite</span> as part of the spatial structure. In addition to the logical spatial structure, also the placement hierarchy is shown. In this example the spatial structure hierarchy and the placement hierarchy are identical.</p>
+<p>Figure 312 shows the <span class="self-ref">IfcSite</span> as part of the spatial structure. In addition to the logical spatial structure, also the placement hierarchy is shown. In this example the spatial structure hierarchy and the placement hierarchy are identical.</p>
 <blockquote class="note">
 <p>NOTE  Detailed requirements on mandatory element containment and placement structure relationships are given in view definitions and implementer agreements.</p>
 </blockquote>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcsite-spatialstructure.png" alt="&quot;IfcSite as part of a spatial structure&quot;" title="Figure 313 &mdash; Site composition"></td></tr><tr><td><p class="figure">Figure 313 &mdash; Site composition</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcsite-spatialstructure.png" alt="&quot;IfcSite as part of a spatial structure&quot;" title="Figure 312 &mdash; Site composition"></td></tr><tr><td><p class="figure">Figure 312 &mdash; Site composition</p></td></tr></table></p>
 <p>Figure 313 describes the heights and elevations of the <span class="self-ref">IfcSite</span>. It is used to provide the geographic longitude, latitude, and height above sea level for the origin of the site. The origin of the site is the local placement.</p>
 <p>The provision of longitude, latitude, height at the <span class="self-ref">IfcSite</span> for georeferencing is provided for upward compatibility reasons. It requires a single instance of <span class="self-ref">IfcSite</span> and WGS84 as coordinate reference system.</p>
 <p>For exact georeferencing (or referencing to any other geographic coordinate system other than WSG84) the entities <a href="../../ifcrepresentationresource/lexical/ifccoordinatereferencesystem.htm">IfcCoordinateReferenceSystem</a> and <a href="../../ifcrepresentationresource/lexical/ifcmapconversion.htm">IfcMapConversion</a> have to be used to define an exact mapping of the project engineering coordinate system to the geographic (or map) coordinate system.</p>
-<p>* <small>reference height of site is provided by: <i>IfcSite.RefElevation</i>, it is given according to the height datum used at this location.</small>
-* <small>the reference height of each building situated at the site is given againt the same height datum used at this location.</small>
-* <small>the elevations of each storey belonging to each building are given as local height relative to the reference height of the building.</small><table border="0" cellpadding="2" cellspacing="2" summary="attribute use">
+<ul>
+<li><small>reference height of site is provided by: <i>IfcSite.RefElevation</i>, it is given according to the height datum used at this location.</small></li>
+<li><small>the reference height of each building situated at the site is given againt the same height datum used at this location.</small></li>
+<li><small>the elevations of each storey belonging to each building are given as local height relative to the reference height of the building.</small></li>
+</ul>
+<table border="0" cellpadding="2" cellspacing="2" summary="attribute use">
 <tbody>
 <tr valign="top">
 <td align="left" valign="top"><img src="../../../figures/ifcsite_heights.png" alt="building heights" border="0" height="400" width="500">&nbsp;</td>
@@ -325,7 +330,9 @@ Address given to the site for postal purposes.
 <a id="spatial-container" />
 <p class="use-head">Spatial Container</p>
 <p>The <a href="../../templates/spatial-container.htm">Spatial Container</a> concept applies to this entity.</p><p>If there are building elements and/or other elements directly related to the <span class="self-ref">IfcSite</span> (like a fence, or a shear wall), they are associated with the <span class="self-ref">IfcSite</span> by using the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>. The <i>IfcIfcSite</i> references them by its inverse relationship:</p>
-<p>* <i>IfcSite.ContainsElements</i> -- referencing any subtype of <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> (with the exception of other spatial structure element) by <i>IfcRelContainedInSpatialStructure.RelatedElements</i></p>
+<ul>
+<li><i>IfcSite.ContainsElements</i> -- referencing any subtype of <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> (with the exception of other spatial structure element) by <i>IfcRelContainedInSpatialStructure.RelatedElements</i></li>
+</ul>
 
 <br/><br/>
 
@@ -370,8 +377,10 @@ Address given to the site for postal purposes.
 <a id="product-local-placement" />
 <p class="use-head">Placement</p>
 <p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept applies to this entity.</p><p>The local placement for <span class="self-ref">IfcSite</span> is defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines the local coordinate system that is referenced by all geometric representations.</p>
-<p>* The <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> shall point to the <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> of type &quot;<span class="self-ref">IfcSite</span>&quot;, if relative placement is used (e.g. to position a site relative a a site complex, or a site section to a site).
-* If the relative placement is not used, the absolute placement is defined within the world coordinate system. If there is only one site object, then this is the default situation.</p>
+<ul>
+<li>The <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> shall point to the <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> of type &quot;<span class="self-ref">IfcSite</span>&quot;, if relative placement is used (e.g. to position a site relative a a site complex, or a site section to a site).</li>
+<li>If the relative placement is not used, the absolute placement is defined within the world coordinate system. If there is only one site object, then this is the default situation.</li>
+</ul>
 
 <br/><br/>
 
@@ -399,8 +408,10 @@ Address given to the site for postal purposes.
 
 <p>The survey point representation of <span class="self-ref">IfcSite</span> is defined using a set of survey points and optionally breaklines. The breaklines are restricted to only connect points given in the set of survey points. Breaklines, if given, are used to constrain the triangulation.</p>
 <p>The representation identifier and type of this geometric representation of <span class="self-ref">IfcSite</span> is:</p>
-<p>* <i>IfcShapeRepresentation.RepresentationIdentifier</i> = 'SurveyPoints'
-* <i>IfcShapeRepresentation.RepresentationType</i> = 'GeometricCurveSet'</p>
+<ul>
+<li><i>IfcShapeRepresentation.RepresentationIdentifier</i> = 'SurveyPoints'</li>
+<li><i>IfcShapeRepresentation.RepresentationType</i> = 'GeometricCurveSet'</li>
+</ul>
 <p>Figure 314 shows a set of survey points, given as 3D Cartesian points within the object coordinate system of the site. Figure 315 shows the result after facetation.</p>
 <p>The set of <a href="../../ifcgeometryresource/lexical/ifccartesianpoint.htm">IfcCartesianPoint</a> is included in the set of <i>IfcGeometricCurveSet.Elements</i>.</p>
 <table cellpadding="2" cellspacing="2" summary="survey points representation">
@@ -444,8 +455,10 @@ Address given to the site for postal purposes.
 
 <p>The body representation of <span class="self-ref">IfcSite</span> is defined using a solid or surface model. Applicable solids are the <a href="../../ifcgeometricmodelresource/lexical/ifcfacetedbrep.htm">IfcFacetedBrep</a> or on the <a href="../../ifcgeometricmodelresource/lexical/ifcfacetedbrepwithvoids.htm">IfcFacetedBrepWithVoids</a>, applicable surface models are the <a href="../../ifcgeometricmodelresource/lexical/ifcfacebasedsurfacemodel.htm">IfcFaceBasedSurfaceModel</a> and the <a href="../../ifcgeometricmodelresource/lexical/ifcshellbasedsurfacemodel.htm">IfcShellBasedSurfaceModel</a>.</p>
 <p>The representation identifier and type of this representation of <span class="self-ref">IfcSite</span> is:</p>
-<p>* <i>IfcShapeRepresentation.RepresentationIdentifier</i> = 'Body'
-* <i>IfcShapeRepresentation.RepresentationType</i> = 'Brep', or 'SurfaceModel'</p>
+<ul>
+<li><i>IfcShapeRepresentation.RepresentationIdentifier</i> = 'Body'</li>
+<li><i>IfcShapeRepresentation.RepresentationType</i> = 'Brep', or 'SurfaceModel'</li>
+</ul>
 
 <br/><br/>
 

@@ -10231,6 +10231,14 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:element name="IfcTunnelPart" type="ifc:IfcTunnelPart" substitutionGroup="ifc:IfcFacilityPart" nillable="true"/>
+	<xs:complexType name="IfcTunnelPart">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcFacilityPart">
+				<xs:attribute name="PredefinedType" type="ifc:IfcTunnelPartTypeEnum" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="IfcTypeObject" type="ifc:IfcTypeObject" substitutionGroup="ifc:IfcObjectDefinition" nillable="true"/>
 	<xs:complexType name="IfcTypeObject">
 		<xs:complexContent>
@@ -14613,6 +14621,16 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="finned"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IfcTunnelPartTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="tunnelsection"/>
+			<xs:enumeration value="crossway"/>
+			<xs:enumeration value="ringsection"/>
+			<xs:enumeration value="portal"/>
+			<xs:enumeration value="notdefined"/>
+			<xs:enumeration value="userdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcTunnelTypeEnum">

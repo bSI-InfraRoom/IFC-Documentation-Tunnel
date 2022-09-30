@@ -26,11 +26,15 @@
 
 <h4 class="std">4.5.1.1 Element Composition</h4>
 <p>Provision of an aggregation structure where the element is part of another element representing the composite. The part then provides, if such concepts are in scope of the Model View Definition, exclusively the following:</p>
-<p>* <i>Body Geometry</i> — The partial body shape representation and its placement;
-* <i>Material</i> — The material information for the part.</p>
+<ul>
+<li><i>Body Geometry</i> — The partial body shape representation and its placement;</li>
+<li><i>Material</i> — The material information for the part.</li>
+</ul>
 <p>The part may also provide, in addition to the aggregate, more specifically the following:</p>
-<p>* <i>Property Sets</i> — The parts may have individual property sets assigned, solely or in addition to the composite;
-* <i>Quantity Sets</i> — The parts may have individual quantity sets assigned, solely or in addition to the composite.</p>
+<ul>
+<li><i>Property Sets</i> — The parts may have individual property sets assigned, solely or in addition to the composite;</li>
+<li><i>Quantity Sets</i> — The parts may have individual quantity sets assigned, solely or in addition to the composite.</li>
+</ul>
 <p>The part should not be contained in the spatial hierarchy, i.e. the concept <i>Spatial Containment</i> shall not be used at the level of parts. The part is contained in the spatial structure by the spatial containment of its composite.</p>
 <blockquote class="example">
 <p>EXAMPLE  An <a href="../ifcsharedbldgelements/lexical/ifcbeam.htm">IfcBeam</a> may be aggregated into an element assembly using the objectified relationship <a href="../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>, refering to it by its inverse attribute SELF\IfcObjectDefinition.Decomposes. Any subtype of <a href="../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> can be an element assembly, with <a href="../ifcproductextension/lexical/ifcelementassembly.htm">IfcElementAssembly</a> as a special focus subtype. In this case it should not be additionally contained in the spatial hierarchy, i.e. <i>SELF\IfcElement.ContainedInStructure</i> should be NIL.</p>

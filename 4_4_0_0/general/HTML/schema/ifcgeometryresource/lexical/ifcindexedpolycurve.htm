@@ -50,8 +50,10 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcIndexedPolyCurve</span> is a bounded curve with only linear and circular arc segments defined by a Cartesian point list and an optional list of segments, providing indices into the Cartesian point list. In the case that the list of <i>Segments</i> is not provided, all points in the <a href="../../ifcgeometricmodelresource/lexical/ifccartesianpointlist.htm">IfcCartesianPointList</a> are connected by straight line segments in the order they appear in the <a href="../../ifcgeometricmodelresource/lexical/ifccartesianpointlist.htm">IfcCartesianPointList</a>.</p>
 <p>In the case that the list of <i>Segments</i> is provided, it is interpreted as such:</p>
-<p>* Segment of type <a href="../../ifcgeometryresource/lexical/ifclineindex.htm">IfcLineIndex</a>: The first index is the start point of the poly line segment, the last index is the end point of the poly line segment. If more than two indices are included, then all intermediate indices define intermediate points of the polyline connected in the order of appearance of the indices;
-* Segment of type <a href="../../ifcgeometryresource/lexical/ifcarcindex.htm">IfcArcIndex</a>: The first index is the start point of the circular arc, the second index is a point on arc, the third index is the end point of the circular arc. The three points shall not be co-linear. In case that this informal proposition is not maintained, the arc segment shall be treated as a polyline segment.</p>
+<ul>
+<li>Segment of type <a href="../../ifcgeometryresource/lexical/ifclineindex.htm">IfcLineIndex</a>: The first index is the start point of the poly line segment, the last index is the end point of the poly line segment. If more than two indices are included, then all intermediate indices define intermediate points of the polyline connected in the order of appearance of the indices;</li>
+<li>Segment of type <a href="../../ifcgeometryresource/lexical/ifcarcindex.htm">IfcArcIndex</a>: The first index is the start point of the circular arc, the second index is a point on arc, the third index is the end point of the circular arc. The three points shall not be co-linear. In case that this informal proposition is not maintained, the arc segment shall be treated as a polyline segment.</li>
+</ul>
 <blockquote class="example">
 <p>EXAMPLE  Figure 495 illustrates a bounded open <span class="self-ref">IfcIndexedPolyCurve</span> having straight and arc segments. In this example, the straight segments only have two points and one edge, however more then two indices into the Cartesian point list can be includes, defining a multi edge polyline segment.</p>
 </blockquote>
@@ -61,8 +63,10 @@
 </blockquote>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcindexedpolycurve-fig2.png" alt="&quot;poly curve examples&quot;" title="Figure 495 &mdash; Bounded open IfcIndexedPolyCurve with only straight segments"></td></tr><tr><td><p class="figure">Figure 495 &mdash; Bounded open <span class="self-ref">IfcIndexedPolyCurve</span> with only straight segments</p></td></tr></table></p>
 <p>The <span class="self-ref">IfcIndexedPolyCurve</span> represents an open or a closed curve depending on the following condition:</p>
-<p>* In the case that the list of <i>Segments</i> is provided: If the last index of the last <i>Segment</i> and the first index of the first <i>Segment</i> are identical, then the poly curve is a closed curve, otherwise it is an open curve.
-* In the case that the list of <i>Segments</i> is not provided: If the first and the last Cartesian point in the Cartesian point list are identical, then the poly curve is a closed curve, otherwise it is an open curve.</p>
+<ul>
+<li>In the case that the list of <i>Segments</i> is provided: If the last index of the last <i>Segment</i> and the first index of the first <i>Segment</i> are identical, then the poly curve is a closed curve, otherwise it is an open curve.</li>
+<li>In the case that the list of <i>Segments</i> is not provided: If the first and the last Cartesian point in the Cartesian point list are identical, then the poly curve is a closed curve, otherwise it is an open curve.</li>
+</ul>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC4 ADD1</p>
 </blockquote>

@@ -60,15 +60,17 @@
 <p>EXAMPLE  The reference surface is any surface (plane, cylindric, composite) situated in 3D space and positioned in the object coordinate system. In many cases, it is a surface of extrusion. The directrix lies on the surface, often defined as a p-curve at this reference surface. At any point of the directrix, a plane can be constructed. The origin of the position coordinate system lies at the directrix. The Axis3 (the z-axis, or normal) of the position coordinate system is identical to the tangent of the directrix at this point, the Axis1 (the x axis, or u) of the position coordinate system is identical to the <i>FixedReference</i> direction. The Axis2 (the y axis, or v) is constructed. In this case the resulting swept solid is not repositioned.</p>
 </blockquote>
 <p>The orientation of the <i>SweptArea</i> as it sweeps along the <i>Directrix</i> is precisely defined by a <i>CartesianTransformationOperator3d</i> with attributes:</p>
-<p>* <i>LocalOrigin</i> as point (0; 0; 0),<br>
-* <i>Axis1</i> as the orthogonal projection of the <i>FixedReference</i> onto the normal plane defined by <i>Axis3</i>.<br>
-* <i>Axis3</i> as the direction of the tangent vector **t** at the point of the <i>Directrix</i> with parameter **u**.</p>
-<p>The remaining attributes are defaulted to define a corresponding transformation matrix **T(u)**, which varies with the <i>Directrix</i> parameter **u**.</p>
+<ul>
+<li><i>LocalOrigin</i> as point (0; 0; 0),</li>
+<li><i>Axis1</i> as the orthogonal projection of the <i>FixedReference</i> onto the normal plane defined by <i>Axis3</i>.</li>
+<li><i>Axis3</i> as the direction of the tangent vector <strong>t</strong> at the point of the <i>Directrix</i> with parameter <strong>u</strong>.</li>
+</ul>
+<p>The remaining attributes are defaulted to define a corresponding transformation matrix <strong>T(u)</strong>, which varies with the <i>Directrix</i> parameter <strong>u</strong>.</p>
 <blockquote class="note">
 <p>NOTE  The geometric shape of the solid is not dependent upon the curve parameterization; the volume depends upon the area swept and the length of the <i>Directrix</i>.</p>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  Entity adapted from **fixed_reference_swept_surface** defined in ISO 10303-42.</p>
+<p>NOTE  Entity adapted from <strong>fixed_reference_swept_surface</strong> defined in ISO 10303-42.</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC4.</p>

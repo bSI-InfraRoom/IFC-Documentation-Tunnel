@@ -54,8 +54,10 @@
 <p>NOTE  Definition according to ISO 6707-1: construction enclosing the building from above.</p>
 </blockquote>
 <p>The <span class="self-ref">IfcRoof</span> shall either be represented:</p>
-<p>* as a roof assembly that aggregates all parts (slabs, rafters and purlins, or other included roofs, such as dormers) with own shape representaion, or
-* as a single roof without decomposition including all shape representations directly at the roof entity.</p>
+<ul>
+<li>as a roof assembly that aggregates all parts (slabs, rafters and purlins, or other included roofs, such as dormers) with own shape representaion, or</li>
+<li>as a single roof without decomposition including all shape representations directly at the roof entity.</li>
+</ul>
 <blockquote class="note">
 <p>NOTE  In case of an <span class="self-ref">IfcRoof</span> being the assembly of all parts of the roof the aggregation is handled by the <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship, relating an <span class="self-ref">IfcRoof</span> with the related roof elements, like slabs (represented by <a href="../../ifcsharedbldgelements/lexical/ifcslab.htm">IfcSlab</a>), rafters and purlins (represented by <a href="../../ifcsharedbldgelements/lexical/ifcbeam.htm">IfcBeam</a>), or other included roofs, such as dormers (represented by <span class="self-ref">IfcRoof</span>).</p>
 </blockquote>
@@ -385,7 +387,9 @@ IFC4 CHANGE The attribute has been renamed from ShapeType and changed to be OPTI
 <tr><td><p class="table">Table 198 &mdash; IfcRoof Product Local Placement</td></tr></table>
 
 <p>The following restriction may be imposed by view definitions or implementer agreements:</p>
-<p>* If the <span class="self-ref">IfcRoof</span> establishes an aggregate, then all contained elements shall be placed relative to the <i>IfcRoof.ObjectPlacement</i>.</p>
+<ul>
+<li>If the <span class="self-ref">IfcRoof</span> establishes an aggregate, then all contained elements shall be placed relative to the <i>IfcRoof.ObjectPlacement</i>.</li>
+</ul>
 
 <br/><br/>
 

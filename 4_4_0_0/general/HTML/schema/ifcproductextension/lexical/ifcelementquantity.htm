@@ -55,17 +55,21 @@
 <p>EXAMPLE  The same instance of <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a> may have a different area measure assigned in the German region according to a housing regulation, the name would be 'Wohnfläche' and the method of measurement would be '2.BV'. It would be attached to the <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a> by a separate <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> relationship.</p>
 </blockquote>
 <p>The <span class="self-ref">IfcElementQuantity</span> can have the following subtypes of <a href="../../ifcquantityresource/lexical/ifcphysicalquantity.htm">IfcPhysicalQuantity</a> within its SET of <i>Quantities</i>, which count for the basis measure types used:</p>
-<p>* count measure
-* weight measure
-* length measure
-* area measure
-* volume measure
-* time measure</p>
+<ul>
+<li>count measure</li>
+<li>weight measure</li>
+<li>length measure</li>
+<li>area measure</li>
+<li>volume measure</li>
+<li>time measure</li>
+</ul>
 <p>Base quantities are quantity definitions that are independent of a particular method of measurement and therefore internationally applicable. Base quantities are defined as gross and net values and provided by measurement of the correct geometric shape representation of the element. This specification includes a set of base quantity definition. See each subtype of <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> for applicable base quantities.</p>
 <p>The following general agreements apply for each base quantity set</p>
-<p>* <i>IfcElementQuantity.Name</i> = &lt;name of the qto definition template&gt;
-* <i>IfcElementQuantity.MethodOfMeasurement</i> = 'BaseQuantities'
-* <i>IfcElementQuantity.Quantities</i> = SET of subtypes of <a href="../../ifcquantityresource/lexical/ifcphysicalsimplequantity.htm">IfcPhysicalSimpleQuantity</a> with values for the <i>Name</i> attribute as published as part of this specifciation.</p>
+<ul>
+<li><i>IfcElementQuantity.Name</i> = &lt;name of the qto definition template&gt;</li>
+<li><i>IfcElementQuantity.MethodOfMeasurement</i> = 'BaseQuantities'</li>
+<li><i>IfcElementQuantity.Quantities</i> = SET of subtypes of <a href="../../ifcquantityresource/lexical/ifcphysicalsimplequantity.htm">IfcPhysicalSimpleQuantity</a> with values for the <i>Name</i> attribute as published as part of this specifciation.</li>
+</ul>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x.</p>
 </blockquote>

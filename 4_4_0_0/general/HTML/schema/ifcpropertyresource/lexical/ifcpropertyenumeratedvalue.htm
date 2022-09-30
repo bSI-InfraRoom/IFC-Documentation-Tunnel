@@ -42,7 +42,7 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyenumeratedvalue.htm">IfcPropertyEnumeratedValue</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasConstraints</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasApprovals</td><td></td><td></td><td>ADDED</td><td></td></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc4-update-to-ifc4x4/index.htm">IFC4X3_RC4 Update to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-update-to-ifc4x4/index.htm">IFC4X3 Update to IFC4X4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyenumeratedvalue.htm">IfcPropertyEnumeratedValue</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specification</td><td></td><td>X</td><td>MODIFIED</td><td>Name changed from <i>Description</i> to <i>Specification</i>. <br/></td></tr>
 </table>
@@ -54,8 +54,10 @@
 <p>NOTE  Multiple choices from the property enumeration are supported.</p>
 </blockquote>
 <p>The unit is handled by the <i>Unit</i> attribute, see Table 727 for an example of a enumerated property:</p>
-<p>* If the <i>Unit</i> attribute is not given, then the unit is already implied by the type of <a href="../../ifcmeasureresource/lexical/ifcmeasurevalue.htm">IfcMeasureValue</a> or <a href="../../ifcmeasureresource/lexical/ifcderivedmeasurevalue.htm">IfcDerivedMeasureValue</a>. The associated unit can be found at the <a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a> globally defined at the project level (<i>IfcProject.UnitsInContext</i>).
-* If the <i>Unit</i> attribute is given, then the unit assigned by the unit attribute overrides the globally assigned unit.</p>
+<ul>
+<li>If the <i>Unit</i> attribute is not given, then the unit is already implied by the type of <a href="../../ifcmeasureresource/lexical/ifcmeasurevalue.htm">IfcMeasureValue</a> or <a href="../../ifcmeasureresource/lexical/ifcderivedmeasurevalue.htm">IfcDerivedMeasureValue</a>. The associated unit can be found at the <a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a> globally defined at the project level (<i>IfcProject.UnitsInContext</i>).</li>
+<li>If the <i>Unit</i> attribute is given, then the unit assigned by the unit attribute overrides the globally assigned unit.</li>
+</ul>
 <p>More precisely: The <span class="self-ref">IfcPropertyEnumeratedValue</span> defines a property, which value is selected from a defined list of enumerators. The enumerators are stored in a dynamic enumeration of values including the type information from <a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a> (see <a href="../../ifcpropertyresource/lexical/ifcpropertyenumeration.htm">IfcPropertyEnumeration</a>). This enables applications to use an enumeration value as a property within a property set (<a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a>) including the allowed list of values.</p>
 <blockquote class="note">
 <p>NOTE  An <span class="self-ref">IfcPropertyEnumeratedValue</span> may be exchanged with no values assigned yet. In this case the <i>EnumerationValues</i> are set to NIL.</p>

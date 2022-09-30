@@ -324,8 +324,10 @@ Specifies the type for which the value is selected from a predefined type enumer
 <p class="use-head">Placement</p>
 <p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept applies to this entity.</p><p>The local placement for <span class="self-ref">IfcBridge</span> is defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined by <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> or by <i>IfcLinearPlacement&gt;/em&gt; which defines the local coordinate
 system that is referenced by all geometric representations.</i></p>
-<p>* The <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> shall point (if relative placement is used) to the <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> of type <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>, or of type <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a> (e.g. to position a building relative to a building complex, or a building section to a building).
-* If the relative placement is not used, the absolute placement is defined within the world coordinate system.</p>
+<ul>
+<li>The <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> shall point (if relative placement is used) to the <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> of type <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>, or of type <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a> (e.g. to position a building relative to a building complex, or a building section to a building).</li>
+<li>If the relative placement is not used, the absolute placement is defined within the world coordinate system.</li>
+</ul>
 
 <br/><br/>
 

@@ -46,8 +46,10 @@
 <p>NOTE  By convention an <span class="self-ref">IfcPropertySetTemplate</span> can also be used as a template for an <a href="../../ifcproductextension/lexical/ifcelementquantity.htm">IfcElementQuantity</a>, being a particular type of a property set definition.</p>
 </blockquote>
 <p>Property set templates can form part of a property library used and declared within a project. Depending on the <i>TemplateType</i> the <span class="self-ref">IfcPropertySetTemplate</span> defines a template for:</p>
-<p>* &quot;Pset_&quot; - occurrences of <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a>
-* &quot;QTO_&quot; - occurrences of <a href="../../ifcproductextension/lexical/ifcelementquantity.htm">IfcElementQuantity</a></p>
+<ul>
+<li>&quot;Pset_&quot; - occurrences of <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a></li>
+<li>&quot;QTO_&quot; - occurrences of <a href="../../ifcproductextension/lexical/ifcelementquantity.htm">IfcElementQuantity</a></li>
+</ul>
 <p>The inherited <i>HasContext</i> inverse relation to <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a> is used to declare the <span class="self-ref">IfcPropertySetTemplate</span> within a project library. If included in an exchange data set it can then be traversed through the <a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a>. The <i>Defines</i> inverse relation to <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a> is provided to keep the definition relationship between the <span class="self-ref">IfcPropertySetTemplate</span> and the one to many <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a>'s, for which it provides the template. Figure 266 illustrates relationships used for property set templates.</p>
 <p> </p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcpropertysettemplate_fig-1.png" alt="&quot;property set template&quot;" title="Figure 266 &mdash; Property set template relationships"></td></tr><tr><td><p class="figure">Figure 266 &mdash; Property set template relationships</p></td></tr></table></p>
@@ -65,10 +67,12 @@ The attribute <i>ApplicableEntity</i> may further refine the applicability to a 
 </td><td>X</td></tr>
 <tr><td>6</td><td>ApplicableEntity</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 The attribute optionally defines the data type of the applicable type or occurrence object, to which the assigned property set template can relate. If not present, no instruction is given to which type or occurrence object the property set template is applicable. The following conventions are used:
-* The IFC entity name of the applicable entity using the IFC naming convention, CamelCase with IFC prefix
-* It can be optionally followed by the predefined type after the separator &quot;/&quot; (forward slash), using upper case
-* If a performance history object of a particular distribution object is attributes by the property set template, then the entity name (and potentially amended by the predefined type) is expanded by adding '[PerformanceHistory]'
-* If one property set template is applicable to many type and/or occurrence objects, then those object names should be separate by comma &quot;,&quot; forming a comma separated string.
+<ul>
+<li>The IFC entity name of the applicable entity using the IFC naming convention, CamelCase with IFC prefix</li>
+<li>It can be optionally followed by the predefined type after the separator &quot;/&quot; (forward slash), using upper case</li>
+<li>If a performance history object of a particular distribution object is attributes by the property set template, then the entity name (and potentially amended by the predefined type) is expanded by adding '[PerformanceHistory]'</li>
+<li>If one property set template is applicable to many type and/or occurrence objects, then those object names should be separate by comma &quot;,&quot; forming a comma separated string.</li>
+</ul>
 <blockquote class="example">
 EXAMPLE Refering to a boiler type as applicable entity would be expressed as 'IfcBoilerType', refering to a steam boiler type as applicable entity would be expressed as 'IfcBoilerType/STEAM', refering to a wall and wall standard case and a wall type would be expressed as 'IfcWall, IfcWallStandardCase, IfcWallType'. An applicable <a href="../../ifccontrolextension/lexical/ifcperformancehistory.htm">IfcPerformanceHistory</a> assigned to an occurrence or type object would be indicated by IfcBoilerType[PerformanceHistory], or respectively IfcBoilerType/STEAM[PerformanceHistory].
 </blockquote>
@@ -132,10 +136,12 @@ The attribute <i>ApplicableEntity</i> may further refine the applicability to a 
 </td><td>X</td></tr>
 <tr><td>6</td><td>ApplicableEntity</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 The attribute optionally defines the data type of the applicable type or occurrence object, to which the assigned property set template can relate. If not present, no instruction is given to which type or occurrence object the property set template is applicable. The following conventions are used:
-* The IFC entity name of the applicable entity using the IFC naming convention, CamelCase with IFC prefix
-* It can be optionally followed by the predefined type after the separator &quot;/&quot; (forward slash), using upper case
-* If a performance history object of a particular distribution object is attributes by the property set template, then the entity name (and potentially amended by the predefined type) is expanded by adding '[PerformanceHistory]'
-* If one property set template is applicable to many type and/or occurrence objects, then those object names should be separate by comma &quot;,&quot; forming a comma separated string.
+<ul>
+<li>The IFC entity name of the applicable entity using the IFC naming convention, CamelCase with IFC prefix</li>
+<li>It can be optionally followed by the predefined type after the separator &quot;/&quot; (forward slash), using upper case</li>
+<li>If a performance history object of a particular distribution object is attributes by the property set template, then the entity name (and potentially amended by the predefined type) is expanded by adding '[PerformanceHistory]'</li>
+<li>If one property set template is applicable to many type and/or occurrence objects, then those object names should be separate by comma &quot;,&quot; forming a comma separated string.</li>
+</ul>
 <blockquote class="example">
 EXAMPLE Refering to a boiler type as applicable entity would be expressed as 'IfcBoilerType', refering to a steam boiler type as applicable entity would be expressed as 'IfcBoilerType/STEAM', refering to a wall and wall standard case and a wall type would be expressed as 'IfcWall, IfcWallStandardCase, IfcWallType'. An applicable <a href="../../ifccontrolextension/lexical/ifcperformancehistory.htm">IfcPerformanceHistory</a> assigned to an occurrence or type object would be indicated by IfcBoilerType[PerformanceHistory], or respectively IfcBoilerType/STEAM[PerformanceHistory].
 </blockquote>

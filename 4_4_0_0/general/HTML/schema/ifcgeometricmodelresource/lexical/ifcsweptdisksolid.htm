@@ -46,9 +46,11 @@
 <p>The <i>StartParam</i> and <i>EndParam</i> parameter are optional, if not provided they default to the start and end of the <i>Directrix</i>. Only if the <i>Directrix</i> is given by a bounded or by a closed curve, it is permissible to omit the values of <i>StartParam</i> and <i>EndParam</i>.</p>
 <p>If the transitions between consecutive segments of the <i>Directrix</i> are not tangent continuous, the resulting solid is created by a miter at half angle between the two segments. Informal proposition restricts the permissible angle between two non-tangent continuous segments.</p>
 <p>Figure 481 illustrates an example.</p>
-<p>* <i>Directrix</i> given as <a href="../../ifcgeometryresource/lexical/ifcindexedpolycurve.htm">IfcIndexedPolyCurve</a>, having linear and circular arc segments, that are tangent continuous between each segments
-* <i>Directrix</i> being a bounded and open curve
-* No <i>StartParam</i> and <i>EndParam</i> are provided, start and end default to start and end of the bounded curve of the <i>Directrix</i></p>
+<ul>
+<li><i>Directrix</i> given as <a href="../../ifcgeometryresource/lexical/ifcindexedpolycurve.htm">IfcIndexedPolyCurve</a>, having linear and circular arc segments, that are tangent continuous between each segments</li>
+<li><i>Directrix</i> being a bounded and open curve</li>
+<li>No <i>StartParam</i> and <i>EndParam</i> are provided, start and end default to start and end of the bounded curve of the <i>Directrix</i></li>
+</ul>
 <blockquote class="note">
 <p>NOTE  Although the example shows a <i>Directrix</i> as a poly curve on a planar reference surface, the definition of <span class="self-ref">IfcSweptDiskSolid</span> is not restricted to be based on planer curves. However view definitions or implementer agreements may provide restrictions.</p>
 </blockquote>
@@ -61,7 +63,7 @@
 A swept disk solid is the solid produced by sweeping a circular disk along a three dimensional curve. During the sweeping operation the normal to the plane of the circular disk is in the direction of the tangent to the directrix curve and the center of the disk lies on the directrix. The circular disk may, optionally, have a central hole, in this case the resulting solid has a through hole, or, an internal void when the directrix forms a close curve.</p>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  Entity adapted from **swept_disk_solid** defined in ISO 10303-42.</p>
+<p>NOTE  Entity adapted from <strong>swept_disk_solid</strong> defined in ISO 10303-42.</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x2.</p>

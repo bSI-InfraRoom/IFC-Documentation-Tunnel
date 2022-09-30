@@ -42,14 +42,22 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The 2nd level space boundary defines the physical or virtual delimiter of a space by the relationship <span class="self-ref">IfcRelSpaceBoundary2ndLevel</span> to the surrounding elements. 2nd level space boundaries are characterized by:</p>
-<p>* 2nd level space boundaries still represent building elements that bound the space, but are more granular in that they are subdivided in any of the following cases:
-* Differences in materials and/or material assemblies (for example, a wainscot or paneling on the lower portion of a wall).
-* Differences in spaces or zones on the other side of the building element (or virtual boundary) represented by the space boundary (for example, two different spaces on the other side of a wall)
-* 2nd level space boundaries are differentiated in two ways: virtual or physical and internal or external, whereby any space boundary that is both internal and external has to be split into segments being either or.
-* 2nd level space boundaries represent both sides of a heat transfer surface separated by the thickness of the building element. They can be further differentiated in:
-* Type 2a that occurs when there is a space on the opposite side of the building element providing the space boundary
-* Type 2b occurs if there is a building element on the opposite side of the building element providing the space boundary.
-* The connection geometry of 2nd level space boundaries is restricted to planar surfaces only. This means that curved surfaces must be segmented.</p>
+<ul>
+<li>2nd level space boundaries still represent building elements that bound the space, but are more granular in that they are subdivided in any of the following cases:
+<ul>
+<li>Differences in materials and/or material assemblies (for example, a wainscot or paneling on the lower portion of a wall).</li>
+<li>Differences in spaces or zones on the other side of the building element (or virtual boundary) represented by the space boundary (for example, two different spaces on the other side of a wall)</li>
+</ul>
+</li>
+<li>2nd level space boundaries are differentiated in two ways: virtual or physical and internal or external, whereby any space boundary that is both internal and external has to be split into segments being either or.</li>
+<li>2nd level space boundaries represent both sides of a heat transfer surface separated by the thickness of the building element. They can be further differentiated in:
+<ul>
+<li>Type 2a that occurs when there is a space on the opposite side of the building element providing the space boundary</li>
+<li>Type 2b occurs if there is a building element on the opposite side of the building element providing the space boundary.</li>
+</ul>
+</li>
+<li>The connection geometry of 2nd level space boundaries is restricted to planar surfaces only. This means that curved surfaces must be segmented.</li>
+</ul>
 <p>2nd level space boundaries define the heat transfer surfaces on both sides of building elements that separate spaces. The generation of 2nd level space boundaries has to take building elements and spaces on the other side into account.</p>
 <blockquote class="note">
 <p>NOTE  2nd level space boundaries are used by many analysis packages that require a surface view of the building that can be transformed into the various simple topological models. Examples of such analysis packages include: (1) energy analysis, (2) lighting analysis, (3) fluid dynamics</p>
@@ -122,7 +130,7 @@ Optional description, provided for exchanging informative comments.
 Reference to one spaces that is delimited by this boundary.
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatedBuildingElement</td><td><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></td><td></td><td>
-Reference to ~~Building~~ Element, that defines the Space Boundaries.
+Reference to <del>Building</del> Element, that defines the Space Boundaries.
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <i>IfcBuildingElement</i> to <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -131,7 +139,7 @@ IFC4 CHANGE  The attribute has been changed to be mandatory.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>7</td><td>ConnectionGeometry</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a></td><td>? </td><td>
-Physical representation of the space boundary. Provided as a **curve or** surface given within the LCS of the space.
+Physical representation of the space boundary. Provided as a <strong>curve or</strong> surface given within the LCS of the space.
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectionsurfacegeometry.htm">IfcConnectionSurfaceGeometry</a> to <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a> with upward compatibility for file based exchange.
 </blockquote>

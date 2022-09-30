@@ -48,9 +48,11 @@
 </blockquote>
 <p>A group can hold any collection of objects, the relationship <a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a> is used to establish the group collection. Objects within a group are products, processes, controls, resources, actors or other groups, thus groups can be nested. An object can be part of zero, one, or many groups. Grouping relationships are not required to be hierarchical nor do they imply a dependency.</p>
 <p>Groups are assigned to other objects (such as a process or a resource) by the relationship object that refers to the corresponding object:</p>
-<p>* Process: assigned using <a href="../../ifckernel/lexical/ifcrelassignstoprocess.htm">IfcRelAssignsToProcess</a>
-* Resource: assigned using <a href="../../ifckernel/lexical/ifcrelassignstoresource.htm">IfcRelAssignsToResource</a>
-* Controls: affecting the group using <a href="../../ifckernel/lexical/ifcrelassignstocontrol.htm">IfcRelAssignsToControl</a></p>
+<ul>
+<li>Process: assigned using <a href="../../ifckernel/lexical/ifcrelassignstoprocess.htm">IfcRelAssignsToProcess</a></li>
+<li>Resource: assigned using <a href="../../ifckernel/lexical/ifcrelassignstoresource.htm">IfcRelAssignsToResource</a></li>
+<li>Controls: affecting the group using <a href="../../ifckernel/lexical/ifcrelassignstocontrol.htm">IfcRelAssignsToControl</a></li>
+</ul>
 <p>A group can be exchanged without having already objects within the group collection.</p>
 <p><span class="self-ref">IfcGroup</span> does not define an own object coordinate system, nor does it have an independent shape representation.</p>
 <blockquote class="note">

@@ -42,26 +42,30 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcProfileDef</span> is the supertype of all definitions of standard and arbitrary profiles within IFC. It is used to define a standard set of commonly used section profiles by their parameters or by their explicit curve geometry.</p>
-<p>* Parameterized profiles are 2D primitives, which are used within the industry to describe cross sections by a description of its parameters.
-* Arbitrary profiles are cross sections defined by an outer boundary as bounded curve, which may also include holes, defined by inner boundaries.
-* Derived profiles, based on a transformation of a parent profile, are also part of the profile definitions available.
-* In addition composite profiles can be defined, which include two or more profile definitions to define the resulting profile.</p>
+<ul>
+<li>Parameterized profiles are 2D primitives, which are used within the industry to describe cross sections by a description of its parameters.</li>
+<li>Arbitrary profiles are cross sections defined by an outer boundary as bounded curve, which may also include holes, defined by inner boundaries.</li>
+<li>Derived profiles, based on a transformation of a parent profile, are also part of the profile definitions available.</li>
+<li>In addition composite profiles can be defined, which include two or more profile definitions to define the resulting profile.</li>
+</ul>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC1.5, the capabilities have been extended in IFC2x. Profiles can now support swept surfaces and swept area solids with inner boundaries. It had been renamed from IfcAttDrivenProfileDef.</p>
 </blockquote>
 <blockquote class="change-ifc2x4">
 <p>IFC4 CHANGE  Changed from ABSTRACT to non-abstract for uses which do not require an explicitly defined geometry. Added inverse attributes <i>HasProperties</i> and <i>HasExternalReference</i>.</p>
 </blockquote>
-<p>**Use in material association**</p>
+<p><strong>Use in material association</strong></p>
 <p>Beams, columns, and similarly shaped building elements and their type objects may be associated with a section profile definition, combined with material definition, by means of <a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.htm">IfcRelAssociatesMaterial</a> together with <a href="../../ifcmaterialresource/lexical/ifcmaterialprofileset.htm">IfcMaterialProfileSet</a> and <a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSetUsage</a>. This way, building elements and element types with same section and material can share a common section profile definition and association.</p>
 <p>The profile definition in material association is required to be consistent with shape representations of the respective building elements.</p>
 <p>A higher-level description of spatial aligment of the section profile of a member (such as centered, bottom-left, in the geometric centroid, and more) can be provided within <a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSetUsage</a> by means of a cardinal point reference. This can be used redundant to geometric data in order to convey design intent.</p>
-<p>**Use in shape models**</p>
+<p><strong>Use in shape models</strong></p>
 <p>Profile definitions are used within the geometry and geometric model resource to create either swept surfaces, swept area solids, or sectioned spines.</p>
 <p>The purpose of the profile definition within the swept surfaces or swept area solids is to define a uniform cross section being swept:</p>
-<p>* along a line (extrusion) using <a href="../../ifcgeometryresource/lexical/ifcsurfaceoflinearextrusion.htm">IfcSurfaceOfLinearExtrusion</a> or <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>
-* along a circular arc (revolution) using <a href="../../ifcgeometryresource/lexical/ifcsurfaceofrevolution.htm">IfcSurfaceOfRevolution</a> or <a href="../../ifcgeometricmodelresource/lexical/ifcrevolvedareasolid.htm">IfcRevolvedAreaSolid</a>
-* along a directrix lying on a reference surface using <a href="../../ifcgeometricmodelresource/lexical/ifcsurfacecurvesweptareasolid.htm">IfcSurfaceCurveSweptAreaSolid</a></p>
+<ul>
+<li>along a line (extrusion) using <a href="../../ifcgeometryresource/lexical/ifcsurfaceoflinearextrusion.htm">IfcSurfaceOfLinearExtrusion</a> or <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>along a circular arc (revolution) using <a href="../../ifcgeometryresource/lexical/ifcsurfaceofrevolution.htm">IfcSurfaceOfRevolution</a> or <a href="../../ifcgeometricmodelresource/lexical/ifcrevolvedareasolid.htm">IfcRevolvedAreaSolid</a></li>
+<li>along a directrix lying on a reference surface using <a href="../../ifcgeometricmodelresource/lexical/ifcsurfacecurvesweptareasolid.htm">IfcSurfaceCurveSweptAreaSolid</a></li>
+</ul>
 <p>The purpose of the profile definition within the sectioned spine is to define a varying cross sections at several positions along a spine curve. The subtype <a href="../../ifcprofileresource/lexical/ifcderivedprofiledef.htm">IfcDerivedProfileDef</a> is particularly suited to provide the consecutive profiles to be based on transformations of the start profile and thus maintaining the identity of vertices and edges.</p>
 <blockquote class="note">
 <p>NOTE  Subtypes of the <span class="self-ref">IfcProfileDef</span> contain parameterized profiles (as subtypes of <a href="../../ifcprofileresource/lexical/ifcparameterizedprofiledef.htm">IfcParameterizedProfileDef</a>) which establish their own 2D position coordinate system, profiles given by explicit curve geometry (either open or closed profiles) and two special types for composite profiles and derived profiles, based on a 2D Cartesian transformation.</p>
@@ -130,7 +134,7 @@ the swept surface or swept area solid.</p>
 </td></tr>
 <tr><td><p class="figure">Figure 546 &mdash; Profile sweeping</p></td></tr>
 </table>
-<p>**Profile types**</p>
+<p><strong>Profile types</strong></p>
 <p>Results of the different usage of the <i>ProfileType</i> attribute are demonstrated here. The <i>ProfileType</i> defines whether the inside (the bounded area) is part of the profile definition (Area) or not (Curve). Figure 547 illustrates the resulting area or curve depending on <i>ProfileType</i>.</p>
 <table><tr><td>
 <table border="1" cellpadding="2" cellspacing="2" frame="border" width="100%">
@@ -152,17 +156,21 @@ ProfileType = CURVE</p>
 </td></tr>
 <tr><td><p class="figure">Figure 547 &mdash; Profile types</p></td></tr>
 </table>
-<p>**Profile specification by external reference**</p>
+<p><strong>Profile specification by external reference</strong></p>
 <p>If the profile is standardized by a norm or a catalogue, a reference to this norm or catalogue should be provided by means of <i>HasExternalReference</i>. This inverse relationship is used to associate an <a href="../../ifcexternalreferenceresource/lexical/ifcexternalreference.htm">IfcExternalReference</a> (notably <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a> or <a href="../../ifcexternalreferenceresource/lexical/ifclibraryreference.htm">IfcLibraryReference</a>) with the profile.</p>
 <p><a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a> is used to refer to a profile norm (a common standard or manufacturer's standard). In this case,</p>
-<p>* <i>IfcClassificationReference.ItemReference</i> contains the formal profile designation from the norm. (On the other hand, <i>IfcProfileDef.ProfileName</i> contains a displayable name which may not necessarily be the same as the formal designation.)
-* <i>IfcClassificationReference.Name</i> carries the short name of the profile norm.
-* Optionally, the norm can be further described by <i>IfcClassificationReference.ReferencedSource</i>.</p>
+<ul>
+<li><i>IfcClassificationReference.ItemReference</i> contains the formal profile designation from the norm. (On the other hand, <i>IfcProfileDef.ProfileName</i> contains a displayable name which may not necessarily be the same as the formal designation.)</li>
+<li><i>IfcClassificationReference.Name</i> carries the short name of the profile norm.</li>
+<li>Optionally, the norm can be further described by <i>IfcClassificationReference.ReferencedSource</i>.</li>
+</ul>
 <p><a href="../../ifcexternalreferenceresource/lexical/ifclibraryreference.htm">IfcLibraryReference</a> is used to refer to a library which contains profile definitions. In this case,</p>
-<p>* <i>IfcLibraryReference.ItemReference</i> contains the identifier of the profile within the library and is meant to be machine-readable (in contrast to <i>IfcProfileDef.ProfileName</i> which should be human-readable).
-* <i>IfcLibraryReference.Location</i> and .<i>Name</i> or .<i>ReferencedLibrary</i> further describe the library.</p>
+<ul>
+<li><i>IfcLibraryReference.ItemReference</i> contains the identifier of the profile within the library and is meant to be machine-readable (in contrast to <i>IfcProfileDef.ProfileName</i> which should be human-readable).</li>
+<li><i>IfcLibraryReference.Location</i> and .<i>Name</i> or .<i>ReferencedLibrary</i> further describe the library.</li>
+</ul>
 <p>If an external reference is provided, sending systems shall ensure that the shape of the profile definition object agrees with the definitions in the referenced classification or library.</p>
-<p>**Direct instances of <span class="self-ref">IfcProfileDef</span>**</p>
+<p><strong>Direct instances of <span class="self-ref">IfcProfileDef</span></strong></p>
 <p>Usually, only subtypes of <span class="self-ref">IfcProfileDef</span> should be instantiated. In some special cases, e.g. if the profile object is used for purposes other than geometric models (e.g. for structural analysis models), it may be possible to directly instantiate <span class="self-ref">IfcProfileDef</span> and further specify the profile only by external reference or by profile properties. The latter are tracked by the inverse attribute <i>HasProperties</i>.</p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">

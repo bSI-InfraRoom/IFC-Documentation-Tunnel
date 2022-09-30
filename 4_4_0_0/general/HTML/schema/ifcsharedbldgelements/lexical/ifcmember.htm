@@ -54,13 +54,17 @@
 <p>NOTE  The representation of a member in a structural analysis model is provided by <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralcurvemember.htm">IfcStructuralCurveMember</a> being part of an <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralanalysismodel.htm">IfcStructuralAnalysisModel</a>.</p>
 </blockquote>
 <p>The IFC specification provides two entities for member occurrences:</p>
-<p>* <i>IfcMemberStandardCase</i> used for all occurrences of members, that have a profile defined that is swept along a directrix. The profile might be changed uniformly by a taper definition along the directrix. The profile parameter and its cardinal point of insertion can be fully described by the <a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSetUsage</a>. These beams are always represented geometricly by an 'Axis' and a 'SweptSolid' or 'AdvancedSweptSolid' shape representation (or by a 'Clipping' geometry based on the swept solid), if a 3D geometric representation is assigned. In addition they have to have a corresponding <a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSetUsage</a> assigned.</p>
+<ul>
+<li><i>IfcMemberStandardCase</i> used for all occurrences of members, that have a profile defined that is swept along a directrix. The profile might be changed uniformly by a taper definition along the directrix. The profile parameter and its cardinal point of insertion can be fully described by the <a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSetUsage</a>. These beams are always represented geometricly by an 'Axis' and a 'SweptSolid' or 'AdvancedSweptSolid' shape representation (or by a 'Clipping' geometry based on the swept solid), if a 3D geometric representation is assigned. In addition they have to have a corresponding <a href="../../ifcmaterialresource/lexical/ifcmaterialprofilesetusage.htm">IfcMaterialProfileSetUsage</a> assigned.</li>
+</ul>
 <blockquote class="note">
 <blockquote class="note">
-<p>NOTE  View definitions and implementer agreements may further constrain the applicable geometry types, such as by excluding tapering from an <i>IfcMemberStandardCase</i> implementation.
-* <span class="self-ref">IfcMember</span> used for all other occurrences of members, particularly for members with changing profile sizes along the extrusion, or members defined by non-linear extrusion, or members having only 'Brep', or 'SurfaceModel' geometry.</p>
+<p>NOTE  View definitions and implementer agreements may further constrain the applicable geometry types, such as by excluding tapering from an <i>IfcMemberStandardCase</i> implementation.</p>
 </blockquote>
 </blockquote>
+<ul>
+<li><span class="self-ref">IfcMember</span> used for all other occurrences of members, particularly for members with changing profile sizes along the extrusion, or members defined by non-linear extrusion, or members having only 'Brep', or 'SurfaceModel' geometry.</li>
+</ul>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x2 Addendum 1.</p>
 </blockquote>
@@ -365,8 +369,10 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <tr><td><p class="table">Table 171 &mdash; IfcMember Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcMember</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
-<p>* the <i>Spatial Containment</i> (defined here), or
-* the <i>Element Composition</i>.</p>
+<ul>
+<li>the <i>Spatial Containment</i> (defined here), or</li>
+<li>the <i>Element Composition</i>.</li>
+</ul>
 
 <br/><br/>
 
@@ -392,9 +398,11 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <a id="body-sweptsolid-geometry" />
 <p class="use-head">Body SweptSolid Geometry</p>
 <p>The <a href="../../templates/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a> concept applies to this entity.</p><p>The following additional constraints apply to the 'SweptSolid' representation:</p>
-<p>* **Solid**: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcrevolvedareasolid.htm">IfcRevolvedAreaSolid</a> shall be supported
-* **Profile**: all subtypes of <a href="../../ifcprofileresource/lexical/ifcprofiledef.htm">IfcProfileDef</a> (with exception of <a href="../../ifcprofileresource/lexical/ifcarbitraryopenprofiledef.htm">IfcArbitraryOpenProfileDef</a>) 
-* **Extrusion**: All extrusion directions shall be supported.</p>
+<ul>
+<li><strong>Solid</strong>: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcrevolvedareasolid.htm">IfcRevolvedAreaSolid</a> shall be supported</li>
+<li><strong>Profile</strong>: all subtypes of <a href="../../ifcprofileresource/lexical/ifcprofiledef.htm">IfcProfileDef</a> (with exception of <a href="../../ifcprofileresource/lexical/ifcarbitraryopenprofiledef.htm">IfcArbitraryOpenProfileDef</a>) </li>
+<li><strong>Extrusion</strong>: All extrusion directions shall be supported.</li>
+</ul>
 <p>Figure 343 illustrates a 'SweptSolid' geometric representation. There are no restrictions or conventions on how to use the local placement (black), solid of extrusion placement (red) and profile placement (green).</p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcmember_sweptsolid-01.png" alt="&quot;standard member&quot;" title="Figure 343 &mdash; Member swept solid"></td></tr><tr><td><p class="figure">Figure 343 &mdash; Member swept solid</p></td></tr></table></p>
 
@@ -403,14 +411,18 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <a id="body-advancedsweptsolid-geometry" />
 <p class="use-head">Body AdvancedSweptSolid Geometry</p>
 <p>The <a href="../../templates/body-advancedsweptsolid-geometry.htm">Body AdvancedSweptSolid Geometry</a> concept applies to this entity.</p><p>The following additional constraints apply to the 'AdvancedSweptSolid' representation type:</p>
-<p>* **Solid**: <a href="../../ifcgeometricmodelresource/lexical/ifcsurfacecurvesweptareasolid.htm">IfcSurfaceCurveSweptAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcfixedreferencesweptareasolid.htm">IfcFixedReferenceSweptAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolidtapered.htm">IfcExtrudedAreaSolidTapered</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcrevolvedareasolidtapered.htm">IfcRevolvedAreaSolidTapered</a> shall be supported.</p>
+<ul>
+<li><strong>Solid</strong>: <a href="../../ifcgeometricmodelresource/lexical/ifcsurfacecurvesweptareasolid.htm">IfcSurfaceCurveSweptAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcfixedreferencesweptareasolid.htm">IfcFixedReferenceSweptAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolidtapered.htm">IfcExtrudedAreaSolidTapered</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcrevolvedareasolidtapered.htm">IfcRevolvedAreaSolidTapered</a> shall be supported.</li>
+</ul>
 <blockquote class="note">
 <blockquote class="note">
-<p>NOTE  View definitions and implementer agreements can further constrain the allowed swept solid types.
-* **Profile**: see 'SweptSolid' geometric representation
-* **Extrusion**: not applicable</p>
+<p>NOTE  View definitions and implementer agreements can further constrain the allowed swept solid types.</p>
 </blockquote>
 </blockquote>
+<ul>
+<li><strong>Profile</strong>: see 'SweptSolid' geometric representation</li>
+<li><strong>Extrusion</strong>: not applicable</li>
+</ul>
 <p><i>MappedRepresentation Representation Type</i></p>
 
 <br/><br/>
@@ -418,10 +430,12 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <a id="body-clipping-geometry" />
 <p class="use-head">Body Clipping Geometry</p>
 <p>The <a href="../../templates/body-clipping-geometry.htm">Body Clipping Geometry</a> concept applies to this entity.</p><p>The following constraints apply to the 'Clipping' representation:</p>
-<p>* **Solid**: see 'SweptSolid' geometric representation
-* **Profile**: see 'SweptSolid' geometric representation
-* **Extrusion**: see 'SweptSolid' geometric representation
-* **Boolean result**: The <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> shall be supported, allowing for Boolean differences between the swept solid (here <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>) and one or several <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a> (or its subtypes).</p>
+<ul>
+<li><strong>Solid</strong>: see 'SweptSolid' geometric representation</li>
+<li><strong>Profile</strong>: see 'SweptSolid' geometric representation</li>
+<li><strong>Extrusion</strong>: see 'SweptSolid' geometric representation</li>
+<li><strong>Boolean result</strong>: The <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> shall be supported, allowing for Boolean differences between the swept solid (here <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>) and one or several <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a> (or its subtypes).</li>
+</ul>
 <p>Figure 344 illustrates a 'Clipping' geometric representation with use of <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> between an <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> and an <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a> to create a clipped body.</p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcmember_clipping-01.png" alt="&quot;clipped member&quot;" title="Figure 344 &mdash; Member clipping"></td></tr><tr><td><p class="figure">Figure 344 &mdash; Member clipping</p></td></tr></table></p>
 

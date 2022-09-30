@@ -1379,6 +1379,10 @@ OR
 <span class="keyword">TYPE</span> IfcTubeBundleTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
 &nbsp;FINNED, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 <br/>
+<a name="ifctunnelparttypeenum" />
+<span class="keyword">TYPE</span> IfcTunnelPartTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
+&nbsp;TUNNELSECTION, <br/>&nbsp;CROSSWAY, <br/>&nbsp;RINGSECTION, <br/>&nbsp;PORTAL, <br/>&nbsp;NOTDEFINED, <br/>&nbsp;USERDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+<br/>
 <a name="ifctunneltypeenum" />
 <span class="keyword">TYPE</span> IfcTunnelTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
 &nbsp;ACCESSTUNNEL, <br/>&nbsp;SHAFT, <br/>&nbsp;UTILITIES, <br/>&nbsp;RAILWAY, <br/>&nbsp;ROAD, <br/>&nbsp;PEDESTRIAN, <br/>&nbsp;METRO, <br/>&nbsp;BICYCLE, <br/>&nbsp;BYPASS, <br/>&nbsp;MAINTENANCE, <br/>&nbsp;UNDERGROUND_FACILITIES, <br/>&nbsp;RAMP, <br/>&nbsp;NOTDEFINED, <br/>&nbsp;USERDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
@@ -4413,7 +4417,7 @@ AND <br/>
 <br/>
 <a name="ifcfacilitypart" />
 <span class="keyword">ENTITY</span> IfcFacilityPart<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcbridgepart">IfcBridgePart</a>, <a href="#ifcfacilitypartcommon">IfcFacilityPartCommon</a>, <a href="#ifcmarinepart">IfcMarinePart</a>, <a href="#ifcrailwaypart">IfcRailwayPart</a>, <a href="#ifcroadpart">IfcRoadPart</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcbridgepart">IfcBridgePart</a>, <a href="#ifcfacilitypartcommon">IfcFacilityPartCommon</a>, <a href="#ifcmarinepart">IfcMarinePart</a>, <a href="#ifcrailwaypart">IfcRailwayPart</a>, <a href="#ifcroadpart">IfcRoadPart</a>, <a href="#ifctunnelpart">IfcTunnelPart</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcspatialstructureelement">IfcSpatialStructureElement</a>)<b>;</b><br/>
 &nbsp;&nbsp;UsageType : <a href="#ifcfacilityusageenum">IfcFacilityUsageEnum</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
@@ -9306,6 +9310,13 @@ OR<br/>
 &nbsp;&nbsp;PredefinedType : <a href="#ifctunneltypeenum">IfcTunnelTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
 &nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="#ifctunneltypeenum">IfcTunnelTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifctunnelpart" />
+<span class="keyword">ENTITY</span> IfcTunnelPart<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcfacilitypart">IfcFacilityPart</a>)<b>;</b><br/>
+&nbsp;&nbsp;PredefinedType : <a href="#ifctunnelparttypeenum">IfcTunnelPartTypeEnum</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="#ifctunnelparttypeenum">IfcTunnelPartTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifctypeobject" />
 <span class="keyword">ENTITY</span> IfcTypeObject<br/>

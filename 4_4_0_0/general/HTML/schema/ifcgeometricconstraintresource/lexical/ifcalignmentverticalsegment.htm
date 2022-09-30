@@ -58,23 +58,31 @@
 <details open="open"><summary>Entity definition</summary><p>Individual segment along the <a href="../../ifcproductextension/lexical/ifcalignmentvertical.htm">IfcAlignmentVertical</a>, being defined in the distance-along/z coordinate space.</p>
 <p>The vertical alignment is defined by segments that connects end-to-start. The vertical alignment curve geometry is defined in a plane with x = distance along horizontal, the y = height (or elevation). The transition at the segment connection is not enforced to be tangential, The <a href="../../ifcgeometryresource/lexical/ifcsegment.htm">IfcSegment</a> <i>Transition</i> enumeration specifies the type of transition explicitly.</p>
 <p>The following vertical segment types are defined:</p>
-<p>* line segment - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentverticalsegmenttypeenum.htm">IfcAlignmentVerticalSegmentTypeEnum</a> .LINE.
-* circular arc segment - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentverticalsegmenttypeenum.htm">IfcAlignmentVerticalSegmentTypeEnum</a> .ARC.
-* parabolic arc segment - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentverticalsegmenttypeenum.htm">IfcAlignmentVerticalSegmentTypeEnum</a> .PARABOLICARC. which can describe symmetric and unsymmetric parabolas
-* transition segment with linear curvature variation - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentverticalsegmenttypeenum.htm">IfcAlignmentVerticalSegmentTypeEnum</a> .CLOTHOID.</p>
+<ul>
+<li>line segment - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentverticalsegmenttypeenum.htm">IfcAlignmentVerticalSegmentTypeEnum</a> .LINE.</li>
+<li>circular arc segment - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentverticalsegmenttypeenum.htm">IfcAlignmentVerticalSegmentTypeEnum</a> .ARC.</li>
+<li>parabolic arc segment - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentverticalsegmenttypeenum.htm">IfcAlignmentVerticalSegmentTypeEnum</a> .PARABOLICARC. which can describe symmetric and unsymmetric parabolas</li>
+<li>transition segment with linear curvature variation - <a href="../../ifcgeometricconstraintresource/lexical/ifcalignmentverticalsegmenttypeenum.htm">IfcAlignmentVerticalSegmentTypeEnum</a> .CLOTHOID.</li>
+</ul>
 <p>For each vertical segment, the following non-redundant information is provided:</p>
-<p>* the start point (in distance along/ height coordinates)
-* the start gradient (as a ratio measure with horizontal being 0, uphill positive, and downhill negative) usually between 1 &lt; n &lt; -1 (equal to a percentage of 100% &lt; n &lt; -100%, or to a degree of 45° &lt; n &lt; -45° but higher values are possible)
-* the length (as horizontal length along the distance along (not the curve segment length))
-* the curve parameter needed for circular and parabolic arc segments</p>
+<ul>
+<li>the start point (in distance along/ height coordinates)</li>
+<li>the start gradient (as a ratio measure with horizontal being 0, uphill positive, and downhill negative) usually between 1 &lt; n &lt; -1 (equal to a percentage of 100% &lt; n &lt; -100%, or to a degree of 45° &lt; n &lt; -45° but higher values are possible)</li>
+<li>the length (as horizontal length along the distance along (not the curve segment length))</li>
+<li>the curve parameter needed for circular and parabolic arc segments</li>
+</ul>
 <p>The following information can be calculated (and is therefore not exchanged explicitly to avoid redundancy and inconsistencies)</p>
-<p>* the end distance along (from the distance along and segment length)
-* the end height (from start distance along, gradient, length and curve parameter)
-* the end direction (from start direction, segment length and curve parameter)
-* the point of vertical intersection (from start direction and end direction)</p>
+<ul>
+<li>the end distance along (from the distance along and segment length)</li>
+<li>the end height (from start distance along, gradient, length and curve parameter)</li>
+<li>the end direction (from start direction, segment length and curve parameter)</li>
+<li>the point of vertical intersection (from start direction and end direction)</li>
+</ul>
 <p>The following checks can be done to validate the correct exchange:</p>
-<p>* continuity – does the calculated end distance along of the previous segment matches with the provided start distance along of this segment
-* tangential continuity – does the calculated end gradient of the previous segment matches with the provided start gradient of this segment</p>
+<ul>
+<li>continuity – does the calculated end distance along of the previous segment matches with the provided start distance along of this segment</li>
+<li>tangential continuity – does the calculated end gradient of the previous segment matches with the provided start gradient of this segment</li>
+</ul>
 <blockquote class="note">
 <p>NOTE  Specific subtypes of the <span class="self-ref">IfcAlignmentVerticalSegment</span> add specific geometric curve parameters. Connectivity between vertical segments is not necessarily tangential, but this can be enforced as a requirement through the attribute <i>TangentialContinuity</i>.</p>
 </blockquote>

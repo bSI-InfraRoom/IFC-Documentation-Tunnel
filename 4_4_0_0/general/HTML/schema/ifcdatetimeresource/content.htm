@@ -27,15 +27,20 @@
 <h2 class="std">8.5 IfcDateTimeResource</h2>
 <h3 class="std">8.5.1 Schema Definition</h3>
 <p>The <i>IfcDateTimeResource</i> schema defines several generic date and time specific concepts that can be used to identify context within calendars, schedules, and time series. These concepts include:</p>
-<p>*  <a href="../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>, <a href="../ifcdatetimeresource/lexical/ifctime.htm">IfcTime</a>, <a href="../ifcdatetimeresource/lexical/ifcdatetime.htm">IfcDateTime</a> and <a href="../ifcdatetimeresource/lexical/ifcduration.htm">IfcDuration</a>. All given values should be provided in context and converted into a Gregorian date context and be shall be processable by a receiving application.
-* Time series, which are a set of discrete data each with an associated date and time stamp, allowing a natural association of data collected over intervals of time. Time series data can be represented using the following entities:
-*  <a href="../ifcdatetimeresource/lexical/ifcregulartimeseries.htm">IfcRegularTimeSeries</a>: Time series data arrive predictably at predefined intervals and are represented by the entity, and
-*  <a href="../ifcdatetimeresource/lexical/ifcirregulartimeseries.htm">IfcIrregularTimeSeries</a>: some or all time stamps do not follow a repetitive pattern and unpredictable bursts of data may arrive at unspecified points in time.  Time series data must be normalized using the following rules:
-* All time (universal, local, daylight savings, and solar) is normalized against the ISO 8601 standard GMT/UTC (Universal Coordinated Time).
-* The normalized data refer to the preceding time unit.
-* Any rollover is handled by the application providing the data. Rollover occurs, for example, when the measurement device resets itself while measuring and the recording data do not include the data measured before the reset.
-* Only the time when data are taken is recorded.
-* Time associated with processes such as resource allocation (<a href="../ifcdatetimeresource/lexical/ifcresourcetime.htm">IfcResourceTime</a>), time for task completion (<a href="../ifcdatetimeresource/lexical/ifctasktime.htm">IfcTaskTime</a>), work patterns (<a href="../ifcdatetimeresource/lexical/ifcworktime.htm">IfcWorkTime</a>), and scheduled events (<a href="../ifcdatetimeresource/lexical/ifceventtime.htm">IfcEventTime</a>).</p>
+<ul>
+<li><a href="../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>, <a href="../ifcdatetimeresource/lexical/ifctime.htm">IfcTime</a>, <a href="../ifcdatetimeresource/lexical/ifcdatetime.htm">IfcDateTime</a> and <a href="../ifcdatetimeresource/lexical/ifcduration.htm">IfcDuration</a>. All given values should be provided in context and converted into a Gregorian date context and be shall be processable by a receiving application.</li>
+<li>Time series, which are a set of discrete data each with an associated date and time stamp, allowing a natural association of data collected over intervals of time. Time series data can be represented using the following entities:
+<ul>
+<li><a href="../ifcdatetimeresource/lexical/ifcregulartimeseries.htm">IfcRegularTimeSeries</a>: Time series data arrive predictably at predefined intervals and are represented by the entity, and</li>
+<li><a href="../ifcdatetimeresource/lexical/ifcirregulartimeseries.htm">IfcIrregularTimeSeries</a>: some or all time stamps do not follow a repetitive pattern and unpredictable bursts of data may arrive at unspecified points in time.  Time series data must be normalized using the following rules:</li>
+<li>All time (universal, local, daylight savings, and solar) is normalized against the ISO 8601 standard GMT/UTC (Universal Coordinated Time).</li>
+<li>The normalized data refer to the preceding time unit.</li>
+<li>Any rollover is handled by the application providing the data. Rollover occurs, for example, when the measurement device resets itself while measuring and the recording data do not include the data measured before the reset.</li>
+<li>Only the time when data are taken is recorded.</li>
+</ul>
+</li>
+<li>Time associated with processes such as resource allocation (<a href="../ifcdatetimeresource/lexical/ifcresourcetime.htm">IfcResourceTime</a>), time for task completion (<a href="../ifcdatetimeresource/lexical/ifctasktime.htm">IfcTaskTime</a>), work patterns (<a href="../ifcdatetimeresource/lexical/ifcworktime.htm">IfcWorkTime</a>), and scheduled events (<a href="../ifcdatetimeresource/lexical/ifceventtime.htm">IfcEventTime</a>).</li>
+</ul>
 <blockquote class="note">
 <p>NOTE  The schema <i>IfcDateTimeResource</i> includes definitions that are based on <a href="../../bibliography.htm#iso-8601" class="int-ref">ISO 8601</a></p>
 </blockquote>

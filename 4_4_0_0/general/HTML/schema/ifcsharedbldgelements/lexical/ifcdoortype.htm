@@ -45,10 +45,12 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The element type <span class="self-ref">IfcDoorType</span> defines commonly shared information for occurrences of doors. The set of shared information may include:</p>
-<p>* common properties within shared property sets
-* common material information
-* common operation type definitions
-* common shape representations</p>
+<ul>
+<li>common properties within shared property sets</li>
+<li>common material information</li>
+<li>common operation type definitions</li>
+<li>common shape representations</li>
+</ul>
 <p>A door type defines the particular parameter of the lining and one (or several) panels through the <a href="../../ifcarchitecturedomain/lexical/ifcdoorliningproperties.htm">IfcDoorLiningProperties</a> and the <a href="../../ifcarchitecturedomain/lexical/ifcdoorpanelproperties.htm">IfcDoorPanelProperties</a> as predefined property sets applicable to doors only.</p>
 <p>It is used to define a door specification, or door style (i.e. the specific product information that is common to all occurrences of that door type). Door types may be exchanged without being already assigned to occurrences.</p>
 <blockquote class="note">
@@ -149,15 +151,17 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a></td></tr>
 <tr><td>5</td><td>ApplicableOccurrence</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 The attribute optionally defines the data type of the occurrence object, to which the assigned type object can relate. If not present, no instruction is given to which occurrence object the type object is applicable. The following conventions are used:
-* The IFC entity name of the applicable occurrence using the IFC naming convention, CamelCase with IFC prefix
-* It can be optionally followed by the predefined type after the separator &quot;/&quot; (forward slash), using uppercase
-* If one type object is applicable to many occurrence objects, then those occurrence object names should be separate by comma &quot;,&quot; forming a comma separated string.
+<ul>
+<li>The IFC entity name of the applicable occurrence using the IFC naming convention, CamelCase with IFC prefix</li>
+<li>It can be optionally followed by the predefined type after the separator &quot;/&quot; (forward slash), using uppercase</li>
+<li>If one type object is applicable to many occurrence objects, then those occurrence object names should be separate by comma &quot;,&quot; forming a comma separated string.</li>
+</ul>
 <blockquote class="example">
 EXAMPLE Refering to a furniture as applicable occurrence entity would be expressed as 'IfcFurnishingElement', refering to a brace as applicable entity would be expressed as 'IfcMember/BRACE', refering to a wall and wall standard case would be expressed as 'IfcWall, IfcWallStandardCase'.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>6</td><td>HasPropertySets</td><td><a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a></td><td>? S[1:?]</td><td>
-Set ~~list~~ of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
+Set <del>list</del> of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
 <blockquote>
 IFC2x3 CHANGE  The attribute aggregate type has been changed from LIST to SET.
 </blockquote>
@@ -208,8 +212,10 @@ Designator for the user defined operation type, shall only be provided, if the v
 <a id="property-sets-for-types" />
 <p class="use-head">Property Sets for Types</p>
 <p>The <a href="../../templates/property-sets-for-types.htm">Property Sets for Types</a> concept applies to this entity.</p><p>Two subtypes of <a href="../../ifckernel/lexical/ifcpredefinedpropertyset.htm">IfcPreDefinedPropertySet</a> are applicable to <span class="self-ref">IfcDoorType</span>:</p>
-<p>* <a href="../../ifcarchitecturedomain/lexical/ifcdoorliningproperties.htm">IfcDoorLiningProperties</a> - a single instance to define the shape parameters of the door lining
-* <a href="../../ifcarchitecturedomain/lexical/ifcdoorpanelproperties.htm">IfcDoorPanelProperties</a> - one or several instances to define the shape parameters of the door panel(s)</p>
+<ul>
+<li><a href="../../ifcarchitecturedomain/lexical/ifcdoorliningproperties.htm">IfcDoorLiningProperties</a> - a single instance to define the shape parameters of the door lining</li>
+<li><a href="../../ifcarchitecturedomain/lexical/ifcdoorpanelproperties.htm">IfcDoorPanelProperties</a> - one or several instances to define the shape parameters of the door panel(s)</li>
+</ul>
 
 <br/><br/>
 

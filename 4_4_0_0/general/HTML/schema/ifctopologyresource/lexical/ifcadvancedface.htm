@@ -46,17 +46,21 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An advanced face is a specialization of a face surface that has to meet requirements on using particular topological and geometric representation items for the definition of the faces, edges and vertices.</p>
 <p>An <span class="self-ref">IfcAdvancedFace</span> is restricted to:</p>
-<p>* have a face surface geometry of type <a href="../../ifcgeometryresource/lexical/ifcelementarysurface.htm">IfcElementarySurface</a>, <a href="../../ifcgeometryresource/lexical/ifcsweptsurface.htm">IfcSweptSurface</a> or <a href="../../ifcgeometryresource/lexical/ifcbsplinesurface.htm">IfcBSplineSurface</a>,
-* have one <a href="../../ifctopologyresource/lexical/ifcfaceouterbound.htm">IfcFaceOuterBound</a> as the bound of the face, with the exception of closed surfaces,
-* have all faces to be bound by <a href="../../ifctopologyresource/lexical/ifcedgeloop.htm">IfcEdgeLoop</a> or <a href="../../ifctopologyresource/lexical/ifcvertexloop.htm">IfcVertexLoop</a>,
-* have all edges to have an edge curve geometry,
-* have the edge curve geometry restricted to <a href="../../ifcgeometryresource/lexical/ifcline.htm">IfcLine</a>, <a href="../../ifcgeometryresource/lexical/ifcconic.htm">IfcConic</a>, <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>, or <a href="../../ifcgeometryresource/lexical/ifcbsplinecurve.htm">IfcBSplineCurve</a></p>
+<ul>
+<li>have a face surface geometry of type <a href="../../ifcgeometryresource/lexical/ifcelementarysurface.htm">IfcElementarySurface</a>, <a href="../../ifcgeometryresource/lexical/ifcsweptsurface.htm">IfcSweptSurface</a> or <a href="../../ifcgeometryresource/lexical/ifcbsplinesurface.htm">IfcBSplineSurface</a>,</li>
+<li>have one <a href="../../ifctopologyresource/lexical/ifcfaceouterbound.htm">IfcFaceOuterBound</a> as the bound of the face, with the exception of closed surfaces,</li>
+<li>have all faces to be bound by <a href="../../ifctopologyresource/lexical/ifcedgeloop.htm">IfcEdgeLoop</a> or <a href="../../ifctopologyresource/lexical/ifcvertexloop.htm">IfcVertexLoop</a>,</li>
+<li>have all edges to have an edge curve geometry,</li>
+<li>have the edge curve geometry restricted to <a href="../../ifcgeometryresource/lexical/ifcline.htm">IfcLine</a>, <a href="../../ifcgeometryresource/lexical/ifcconic.htm">IfcConic</a>, <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>, or <a href="../../ifcgeometryresource/lexical/ifcbsplinecurve.htm">IfcBSplineCurve</a></li>
+</ul>
 <p>In case of closed faces with periodic surfaces, such as cylindrical or spherical surfaces, the following applies:</p>
-<p>* the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of <a href="../../ifctopologyresource/lexical/ifcvertexpoint.htm">IfcVertexPoint</a> twice,
-* no <a href="../../ifctopologyresource/lexical/ifcfaceouterbound.htm">IfcFaceOuterBound</a> is provided, or the <a href="../../ifctopologyresource/lexical/ifcfaceouterbound.htm">IfcFaceOuterBound</a> is constructed using an <a href="../../ifcgeometryresource/lexical/ifcseamcurve.htm">IfcSeamCurve</a> at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0./360. degree.</p>
+<ul>
+<li>the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of <a href="../../ifctopologyresource/lexical/ifcvertexpoint.htm">IfcVertexPoint</a> twice,</li>
+<li>no <a href="../../ifctopologyresource/lexical/ifcfaceouterbound.htm">IfcFaceOuterBound</a> is provided, or the <a href="../../ifctopologyresource/lexical/ifcfaceouterbound.htm">IfcFaceOuterBound</a> is constructed using an <a href="../../ifcgeometryresource/lexical/ifcseamcurve.htm">IfcSeamCurve</a> at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0./360. degree.</li>
+</ul>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcadvancedface_01.png" alt="&quot;cylindrical surface&quot;" title="Figure 560 &mdash; Use of IfcCylindricalSurface as underlying surface of an IfcAdvancedFace"></td></tr><tr><td><p class="figure">Figure 560 &mdash; Use of <a href="../../ifcgeometryresource/lexical/ifccylindricalsurface.htm">IfcCylindricalSurface</a> as underlying surface of an <span class="self-ref">IfcAdvancedFace</span></p></td></tr></table></p>
 <blockquote class="note">
-<p>NOTE  Entity adapted from **advanced_face** defined in ISO 10303-511.</p>
+<p>NOTE  Entity adapted from <strong>advanced_face</strong> defined in ISO 10303-511.</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC4</p>

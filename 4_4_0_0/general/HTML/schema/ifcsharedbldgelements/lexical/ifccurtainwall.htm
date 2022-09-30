@@ -58,11 +58,19 @@
 </blockquote>
 <p>The geometric representation of <span class="self-ref">IfcCurtainWall</span> is given by the <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>, allowing multiple geometric representations. Independent 'Body' geometric representation, as described below, should only be used when the <span class="self-ref">IfcCurtainWall</span> is not defined as an aggregate. If defined as an aggregate, the geometric representation is the sum of the representations of the components within the aggregate.</p>
 <p>The geometric representation of <span class="self-ref">IfcCurtainWall</span> is defined using the following multiple shape representations for its definition:</p>
-<p>* Axis: A two-dimensional open curve (for restrictions see below) defining the axis for the curtain wall.
-* This is an optional representation for curtain walls.
-* Body: A surface model or boundary representation model representation defining the 3D shape of the curtain wall.
-* If the <span class="self-ref">IfcCurtainWall</span> has components (referenced by <i>SELF\IfcObject.IsDecomposedBy</i>) then no independent shape representation with <i>RepresentationType</i> = 'Body' shall be defined. The body of <span class="self-ref">IfcCurtainWall</span> is then geometrically represented by the shape representation of its components. The components are accessed via <i>SELF\IfcObject.IsDecomposedBy[1].RelatedObjects</i>.
-* If the <span class="self-ref">IfcCurtainWall</span> has no components defined (empty set of <i>SELF\IfcObject.IsDecomposedBy</i>) then the <span class="self-ref">IfcCurtainWall</span> may be represented by an shape representation with the <i>RepresentationIdentifier</i> ='Body'.</p>
+<ul>
+<li>Axis: A two-dimensional open curve (for restrictions see below) defining the axis for the curtain wall.
+<ul>
+<li>This is an optional representation for curtain walls.</li>
+</ul>
+</li>
+<li>Body: A surface model or boundary representation model representation defining the 3D shape of the curtain wall.
+<ul>
+<li>If the <span class="self-ref">IfcCurtainWall</span> has components (referenced by <i>SELF\IfcObject.IsDecomposedBy</i>) then no independent shape representation with <i>RepresentationType</i> = 'Body' shall be defined. The body of <span class="self-ref">IfcCurtainWall</span> is then geometrically represented by the shape representation of its components. The components are accessed via <i>SELF\IfcObject.IsDecomposedBy[1].RelatedObjects</i>.</li>
+<li>If the <span class="self-ref">IfcCurtainWall</span> has no components defined (empty set of <i>SELF\IfcObject.IsDecomposedBy</i>) then the <span class="self-ref">IfcCurtainWall</span> may be represented by an shape representation with the <i>RepresentationIdentifier</i> ='Body'.</li>
+</ul>
+</li>
+</ul>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -319,14 +327,18 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <tr><td><p class="table">Table 160 &mdash; IfcCurtainWall Product Local Placement</td></tr></table>
 
 <p>The following restriction may be imposed by view definitions or implementer agreements:</p>
-<p>* If the <span class="self-ref">IfcCurtainWall</span> establishes an aggregate, then all contained elements shall be placed relative to the <i>IfcCurtainWall.ObjectPlacement</i>.</p>
+<ul>
+<li>If the <span class="self-ref">IfcCurtainWall</span> establishes an aggregate, then all contained elements shall be placed relative to the <i>IfcCurtainWall.ObjectPlacement</i>.</li>
+</ul>
 
 <br/><br/>
 
 <a id="axis-2d-geometry" />
 <p class="use-head">Axis 2D Geometry</p>
 <p>The <a href="../../templates/axis-2d-geometry.htm">Axis 2D Geometry</a> concept applies to this entity.</p><p>The following additional constraints apply to the 'Axis' representation:</p>
-<p>* **Geometry** : <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a> having two <i>Points</i>, or <a href="../../ifcgeometryresource/lexical/ifctrimmedcurve.htm">IfcTrimmedCurve</a> with <i>BasisCurve</i> of type <a href="../../ifcgeometryresource/lexical/ifcline.htm">IfcLine</a> or <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a>.</p>
+<ul>
+<li><strong>Geometry</strong> : <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a> having two <i>Points</i>, or <a href="../../ifcgeometryresource/lexical/ifctrimmedcurve.htm">IfcTrimmedCurve</a> with <i>BasisCurve</i> of type <a href="../../ifcgeometryresource/lexical/ifcline.htm">IfcLine</a> or <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a>.</li>
+</ul>
 
 <br/><br/>
 

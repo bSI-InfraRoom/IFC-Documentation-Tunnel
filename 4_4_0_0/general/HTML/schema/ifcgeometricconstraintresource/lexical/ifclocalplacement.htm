@@ -47,25 +47,51 @@
 <p>The <span class="self-ref">IfcLocalPlacement</span> allows that an <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> can be placed by this <span class="self-ref">IfcLocalPlacement</span> (through the attribute_ObjectPlacement_) within the local coordinate system of the object placement of another <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>, which is referenced by the <i>PlacementRelTo</i>. Rules to prevent cyclic relative placements have to be introduced on the application level.</p>
 <p>If the <i>PlacementRelTo</i> is not given, then the <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> is placed absolutely within the world coordinate system.</p>
 <p>The following conventions shall apply as default relative positions if the relative placement is used. The conventions are given for all five direct subtypes of <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>, the <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a>, <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>, <a href="../../ifcproductextension/lexical/ifcannotation.htm">IfcAnnotation</a>, <a href="../../ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a>, <a href="../../ifcproductextension/lexical/ifcport.htm">IfcPort</a>. More detailed placement information is given at the level of subtypes of those five types mentioned.</p>
-<p>* For the subtypes of <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> the following conventions apply
-* <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a> shall be placed absolutely within the world coordinate system established by the geometric representation context of the <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a>
-* <a href="../../ifcproductextension/lexical/ifcfacility.htm">IfcFacility</a> shall be placed relative to the local placement of <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>
-* <a href="../../ifcproductextension/lexical/ifcfacilitypart.htm">IfcFacilityPart</a> shall be placed relative to the local placement of <a href="../../ifcproductextension/lexical/ifcfacility.htm">IfcFacility</a>
-* For <a href="../../ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a> and <a href="../../ifcproductextension/lexical/ifcannotation.htm">IfcAnnotation</a> the convention applies that it shall be placed relative
-*  to the local placement of its container, either <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>, <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a>, or <a href="../../ifcproductextension/lexical/ifcbuildingstorey.htm">IfcBuildingStorey</a>
-* it should be the same container element that is referenced by the <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a> containment relationship,
-*  For <a href="../../ifcproductextension/lexical/ifcalignment.htm">IfcAlignment</a> placed relative to the local placement of its container <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a> when not placed absolutely within the world coordinate system.
-* For <a href="../../ifcproductextension/lexical/ifcport.htm">IfcPort</a> the convention applies that it shall be placed relative
-*  to the local placement of the <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> it belongs to
-* it should be the same element that is referenced by the <a href="../../ifcproductextension/lexical/ifcrelconnectsporttoelement.htm">IfcRelConnectsPortToElement</a> connection relationship,
-*  For <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> the convention applies that it shall be placed relative:
-*  to the local placement of its container, either <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>, <a href="../../ifcproductextension/lexical/ifcfacility.htm">IfcFacility</a>, or <a href="../../ifcproductextension/lexical/ifcfacilitypart.htm">IfcFacilityPart</a>
-* it should be the same container element that is referenced by the <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a> containment relationship,
-* to the local placement of the <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> to which it is tied by an element composition relationship
-* for features that are located relative to the main component (such as openings), as expressed by <a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a> and <a href="../../ifcproductextension/lexical/ifcrelprojectselement.htm">IfcRelProjectsElement</a>;
-* for elements that fill an opening (such as doors or windows), as expressed by <a href="../../ifcproductextension/lexical/ifcrelfillselement.htm">IfcRelFillsElement</a>;
-* for coverings that cover the element, as expressed by <a href="../../ifcsharedbldgelements/lexical/ifcrelcoversbldgelements.htm">IfcRelCoversBldgElements</a>;
-* for sub components that are aggregated to the main component, as expressed by <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> and <a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a>.</p>
+<ul>
+<li>For the subtypes of <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> the following conventions apply
+<ul>
+<li><a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a> shall be placed absolutely within the world coordinate system established by the geometric representation context of the <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a></li>
+<li><a href="../../ifcproductextension/lexical/ifcfacility.htm">IfcFacility</a> shall be placed relative to the local placement of <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a></li>
+<li><a href="../../ifcproductextension/lexical/ifcfacilitypart.htm">IfcFacilityPart</a> shall be placed relative to the local placement of <a href="../../ifcproductextension/lexical/ifcfacility.htm">IfcFacility</a></li>
+</ul>
+</li>
+<li>For <a href="../../ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a> and <a href="../../ifcproductextension/lexical/ifcannotation.htm">IfcAnnotation</a> the convention applies that it shall be placed relative
+<ul>
+<li>to the local placement of its container, either <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>, <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a>, or <a href="../../ifcproductextension/lexical/ifcbuildingstorey.htm">IfcBuildingStorey</a>
+<ul>
+<li>it should be the same container element that is referenced by the <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a> containment relationship,</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For <a href="../../ifcproductextension/lexical/ifcalignment.htm">IfcAlignment</a> placed relative to the local placement of its container <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a> when not placed absolutely within the world coordinate system.</li>
+<li>For <a href="../../ifcproductextension/lexical/ifcport.htm">IfcPort</a> the convention applies that it shall be placed relative
+<ul>
+<li>to the local placement of the <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> it belongs to
+<ul>
+<li>it should be the same element that is referenced by the <a href="../../ifcproductextension/lexical/ifcrelconnectsporttoelement.htm">IfcRelConnectsPortToElement</a> connection relationship,</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> the convention applies that it shall be placed relative:
+<ul>
+<li>to the local placement of its container, either <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>, <a href="../../ifcproductextension/lexical/ifcfacility.htm">IfcFacility</a>, or <a href="../../ifcproductextension/lexical/ifcfacilitypart.htm">IfcFacilityPart</a>
+<ul>
+<li>it should be the same container element that is referenced by the <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a> containment relationship,</li>
+</ul>
+</li>
+<li>to the local placement of the <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> to which it is tied by an element composition relationship
+<ul>
+<li>for features that are located relative to the main component (such as openings), as expressed by <a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a> and <a href="../../ifcproductextension/lexical/ifcrelprojectselement.htm">IfcRelProjectsElement</a>;</li>
+<li>for elements that fill an opening (such as doors or windows), as expressed by <a href="../../ifcproductextension/lexical/ifcrelfillselement.htm">IfcRelFillsElement</a>;</li>
+<li>for coverings that cover the element, as expressed by <a href="../../ifcsharedbldgelements/lexical/ifcrelcoversbldgelements.htm">IfcRelCoversBldgElements</a>;</li>
+<li>for sub components that are aggregated to the main component, as expressed by <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> and <a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC1.0.</p>
 </blockquote>

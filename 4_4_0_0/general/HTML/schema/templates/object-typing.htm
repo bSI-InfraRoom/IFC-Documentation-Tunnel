@@ -30,15 +30,19 @@
 <p>EXAMPLE  The <a href="../ifchvacdomain/lexical/ifctank.htm">IfcTank</a> is the object occurrence entity that has a corresponding <a href="../ifchvacdomain/lexical/ifctanktype.htm">IfcTankType</a> being the object type entity.</p>
 </blockquote>
 <p>On instance level, an object occurrence instance may have:</p>
-<p>* similar state as its object type instance by applying all characteristics defined at the type;
-* overridden state for particular characteristics;
-* no defined object type instance.</p>
+<ul>
+<li>similar state as its object type instance by applying all characteristics defined at the type;</li>
+<li>overridden state for particular characteristics;</li>
+<li>no defined object type instance.</li>
+</ul>
 <p>Characteristics defined at the object type level may include:</p>
-<p>* common naming and predefined type;
-* common properties within a type driven property set;
-* common geometry representations, applied as mapped representation to each occurences;
-* common material assignments (with exception of material set usages);
-* common definition of a decomposition structure.</p>
+<ul>
+<li>common naming and predefined type;</li>
+<li>common properties within a type driven property set;</li>
+<li>common geometry representations, applied as mapped representation to each occurences;</li>
+<li>common material assignments (with exception of material set usages);</li>
+<li>common definition of a decomposition structure.</li>
+</ul>
 <p>Many object occurrence and object type entities have an attribute named <i>PredefinedType</i> consisting of a specific enumeration. Such predefined type essentially provides another level of inheritance to further differentiate objects without the need for additional entities. Predefined types are not just informational; various rules apply such as applicable property sets, part composition, and distribution ports. If the object is typed by an <a href="../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, then the <i>PredefinedType</i> at the <a href="../ifckernel/lexical/ifcobject.htm">IfcObject</a> occurrence shall only be used if the <i>PredefinedType</i> at <a href="../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a> is set to <i>NOTDEFINED</i>.</p>
 <blockquote class="example">
 <p>EXAMPLE  For scenarios of object types having part compositions, such parts may be reflected at object occurrences having separate state. For example, a <i>wall type</i> may define a particular arrangement of studs, a <i>wall occurrence</i> may reflect the same arrangement of studs, and studs within the wall occurrence may participate in specific relationships that do not exist at the type such as being connected to an electrical junction box.</p>

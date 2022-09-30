@@ -45,9 +45,11 @@
 <p>It defines the assignment of two offset values for a material layer in its intended use within a material layer set. Offsets are applied to the edges of layered elements (that is, in directions perpendicular to the layer set direction). Offsets shall not be used in layer set direction, that is, for modelling gaps (or overlaps) between layers; gaps shall be modeled as layers with appropriate material assignment for the void.</p>
 <blockquote class="example">
 <p>EXAMPLE  At the top of a standard wall, with shape representation 'SweptSolid', offset of a given layer can be specified in the direction of the extrusion (positive Z axis), applied at the start or end (extruded from bottom to top), and with a positive (extending above extrusion) or negative (ending below extrusion).</p>
-<p>Take a standard wall with the outer material layer for the external isolation extending above extrusion by 100mm, but starting at the same base height. In this case the following values are set: &gt; * <i>OffsetDirection</i> = .AXIS3.
-* <i>OffsetValues[1]</i> = 0.0
-* <i>OffsetValues[2]</i> = 100.0 (default unit assumed to be mm)</p>
+<p>Take a standard wall with the outer material layer for the external isolation extending above extrusion by 100mm, but starting at the same base height. In this case the following values are set: &gt; * <i>OffsetDirection</i> = .AXIS3.</p>
+<ul>
+<li><i>OffsetValues[1]</i> = 0.0</li>
+<li><i>OffsetValues[2]</i> = 100.0 (default unit assumed to be mm)</li>
+</ul>
 </blockquote>
 <blockquote class="note">
 <p>NOTE  The 'Body' shape representation of an <a href="../../ifcsharedbldgelements/lexical/ifcwall.htm">IfcWall</a> or an <a href="../../ifcsharedbldgelements/lexical/ifcwallstandardcase.htm">IfcWallStandardCase</a> may have multiple <i>Items</i> each being an <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> corresponding to the <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.htm">IfcMaterialLayer</a> and <span class="self-ref">IfcMaterialLayerWithOffsets</span>.</p>
@@ -120,9 +122,11 @@ IFC4 CHANGE  The attribute datatype has been changed to <a href="../../ifcmeasu
 </td><td>X</td></tr>
 <tr><td>3</td><td>IsVentilated</td><td><a href="../../ifcmeasureresource/lexical/ifclogical.htm">IfcLogical</a></td><td>? </td><td>
 Indication of whether the material layer represents an air layer (or cavity).
-* set to TRUE if the material layer is an air gap and provides air exchange from the layer to the outside air.
-* set to UNKNOWN if the material layer is an air gap and does not provide air exchange (or when this information about air exchange of the air gap is not available).
-* set to FALSE if the material layer is a solid material layer (the default).
+<ul>
+<li>set to TRUE if the material layer is an air gap and provides air exchange from the layer to the outside air.</li>
+<li>set to UNKNOWN if the material layer is an air gap and does not provide air exchange (or when this information about air exchange of the air gap is not available).</li>
+<li>set to FALSE if the material layer is a solid material layer (the default).</li>
+</ul>
 </td><td>X</td></tr>
 <tr><td>4</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 The name by which the material layer is known.
@@ -132,10 +136,12 @@ Definition of the material layer in more descriptive terms than given by attribu
 </td><td>X</td></tr>
 <tr><td>6</td><td>Category</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Category of the material layer, e.g. the role it has in the layer set it belongs to (such as 'load bearing', 'thermal insulation' etc.). The list of keywords might be extended by model view definitions, however the following keywords shall apply in general:
-* 'LoadBearing' — for all material layers having a load bearing function.
-* 'Insulation' — for all material layers having an insolating function.
-* 'Inner finish' — for the material layer being the inner finish.
-* 'Outer finish' — for the material layer being the outer finish.
+<ul>
+<li>'LoadBearing' — for all material layers having a load bearing function.</li>
+<li>'Insulation' — for all material layers having an insolating function.</li>
+<li>'Inner finish' — for the material layer being the inner finish.</li>
+<li>'Outer finish' — for the material layer being the outer finish.</li>
+</ul>
 </td><td>X</td></tr>
 <tr><td>7</td><td>Priority</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td>? </td><td>
 The relative priority of the layer, expressed as normalised integer range [0..100]. Controls how layers intersect in connections and corners of building elements: a layer from one element protrudes into (i.e. displaces) a layer from another element in a joint of these elements if the former element's layer has higher priority than the latter. The priority value for a material layer in an element has to be set and maintained by software applications in relation to the material layers in connected elements.

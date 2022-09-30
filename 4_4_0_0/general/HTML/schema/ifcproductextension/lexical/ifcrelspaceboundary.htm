@@ -45,18 +45,28 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The space boundary defines the physical or virtual delimiter of a space by the relationship <span class="self-ref">IfcRelSpaceBoundary</span> to the surrounding elements.</p>
-<p>* In the case of a physical space boundary, the placement and shape of the boundary may be given, and the building element, providing the boundary, is referenced,
-* In the case of a virtual space boundary, the placement and shape of the boundary may be given, and a virtual element is referenced.</p>
+<ul>
+<li>In the case of a physical space boundary, the placement and shape of the boundary may be given, and the building element, providing the boundary, is referenced,</li>
+<li>In the case of a virtual space boundary, the placement and shape of the boundary may be given, and a virtual element is referenced.</li>
+</ul>
 <p>The <span class="self-ref">IfcRelSpaceBoundary</span> is defined as an objectified relationship that handles the element to space relationship by objectifying the relationship between an element and the space it bounds. It is given as a one-to-one relationship, but allows each element (including virutal elements and openings) to define many such relationship and each space to be defined by many such relationships.</p>
 <p>Space boundaries are always defined as seen from the space. In general two basic types of space boundaries are distinguished:</p>
-<p>* 1^<small>st</small>^ level space boundary: defined as boundaries of the space, not taking into account any change in building element or spaces on the other side.
-* 2^<small>nd</small>^ level space boundary: defined as boundary taking any change in building element or spaces on the other side into account. It can be further distinguished into
-* 2^<small>nd</small>^ level type A: There is a space on the other side.
-* 2^<small>nd</small>^ level type B: There is a building element on the other side.</p>
+<ul>
+<li>1^<small>st</small>^ level space boundary: defined as boundaries of the space, not taking into account any change in building element or spaces on the other side.</li>
+<li>2^<small>nd</small>^ level space boundary: defined as boundary taking any change in building element or spaces on the other side into account. It can be further distinguished into
+<ul>
+<li>2^<small>nd</small>^ level type A: There is a space on the other side.</li>
+<li>2^<small>nd</small>^ level type B: There is a building element on the other side.</li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<p><small>The exact definition of how space boundaries are broken down depends on the view definition, more detailed conventions on how space boundaries are decomposed can only be given at the domain or application type level.</small>&gt; * <small>In an architectural or FM related view, a space boundary is defined totally from inside the space. This is a 1<sup><small>st</small></sup> level space boundary.</small>
-* <small>In a thermal view, the decomposition of the space boundary depends on the material of the providing building element and the adjacent spaces behind. This is a 2<sup><small>nd</small></sup> level space boundary.</small><table summary="space boundary types" border="0">
-</table></blockquote>
+<p><small>The exact definition of how space boundaries are broken down depends on the view definition, more detailed conventions on how space boundaries are decomposed can only be given at the domain or application type level.</small>&gt; * <small>In an architectural or FM related view, a space boundary is defined totally from inside the space. This is a 1<sup><small>st</small></sup> level space boundary.</small></p>
+<ul>
+<li><small>In a thermal view, the decomposition of the space boundary depends on the material of the providing building element and the adjacent spaces behind. This is a 2<sup><small>nd</small></sup> level space boundary.</small></li>
+</ul>
+</blockquote>
+<table summary="space boundary types" border="0">
 <tr>
  <td><img src="../../../figures/ifcrelspaceboundary_1stlevel.png" alt="1st level"></td>
  <td><img src="../../../figures/ifcrelspaceboundary_2ndlevel.png" alt="2nd level"></td>
@@ -73,10 +83,12 @@
  <td><p class="figure">Figure 305 &mdash; Space boundary at second level type A</p></td>
  <td><p class="figure">Figure 306 &mdash; Space boundary at second level type B</p></td>
 </tr>
-
+</table>
 <p>The differences between the 1^<small>st</small>^ and 2^<small>nd</small>^ level space boundaries is identified by:</p>
-<p>* **1^<small>st</small>^ level:**   SELF\IfcRoot.Name = &quot;1stLevel&quot;   SELF\IfcRootDescription = NIL
-* **2^<small>nd</small>^ level:**   SELF\IfcRoot.Name = &quot;2ndLevel&quot;   SELF\IfcRootDescription = &quot;2a&quot;, or &quot;2b&quot;</p>
+<ul>
+<li><strong>1^<small>st</small>^ level:</strong>   SELF\IfcRoot.Name = &quot;1stLevel&quot;   SELF\IfcRootDescription = NIL</li>
+<li><strong>2^<small>nd</small>^ level:</strong>   SELF\IfcRoot.Name = &quot;2ndLevel&quot;   SELF\IfcRootDescription = &quot;2a&quot;, or &quot;2b&quot;</li>
+</ul>
 <p>Differentiation between physical and virtual space boundary is illustrated in Figure 303 and Figure 42.</p>
 <p>As shown in Figure 41, if the <span class="self-ref">IfcRelSpaceBoundary</span> is used to express a virtual boundary, the attribute <i>PhysicalOrVirtualBoundary</i> has to be set to VIRTUAL. The attribute <i>RelatedBuildingElement</i> shall point to an instance of <a href="../../ifcproductextension/lexical/ifcvirtualelement.htm">IfcVirtualElement</a>. If the correct location is of interest, the attribute <i>ConnectionGeometry</i> is required.</p>
 <blockquote class="note">
@@ -93,32 +105,56 @@
 <p>NOTE  In most view definitions the connection geometry for the related <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> is not provided.</p>
 </blockquote>
 <p>The geometric representation (through the <i>ConnectionGeometry</i> attribute) is defined using either 2D curve geometry or 3D surface geometry for space boundaries. In most view definitions the 3D connection surface geometry is required.</p>
-<p>* 1^<small>st</small>^ level space boundary:
-* only connection geometry for related space shall be provided
-* only surface connection geometry shall be provided
-* only the following surface representations are supported:
-* <a href="../../ifcgeometryresource/lexical/ifcsurfaceoflinearextrusion.htm">IfcSurfaceOfLinearExtrusion</a>
-* <a href="../../ifcgeometryresource/lexical/ifccurveboundedplane.htm">IfcCurveBoundedPlane</a>
-* <a href="../../ifcgeometryresource/lexical/ifccurveboundedsurface.htm">IfcCurveBoundedSurface</a>
-* <a href="../../ifcgeometricmodelresource/lexical/ifcfacebasedsurfacemodel.htm">IfcFaceBasedSurfaceModel</a>
-* 2^<small>nd</small>^ level space boundary:
-* only connection geometry for related space shall be provided
-* only surface connection geometry shall be provided
-* only the following surface representations are supported:
-* <a href="../../ifcgeometryresource/lexical/ifccurveboundedplane.htm">IfcCurveBoundedPlane</a> with restrictions to have polygonal boundaries only
-* <a href="../../ifcgeometricmodelresource/lexical/ifcfacebasedsurfacemodel.htm">IfcFaceBasedSurfaceModel</a></p>
-<p>**Surface connection geometry**</p>
+<ul>
+<li>1^<small>st</small>^ level space boundary:
+<ul>
+<li>only connection geometry for related space shall be provided</li>
+<li>only surface connection geometry shall be provided</li>
+<li>only the following surface representations are supported:
+<ul>
+<li><a href="../../ifcgeometryresource/lexical/ifcsurfaceoflinearextrusion.htm">IfcSurfaceOfLinearExtrusion</a></li>
+<li><a href="../../ifcgeometryresource/lexical/ifccurveboundedplane.htm">IfcCurveBoundedPlane</a></li>
+<li><a href="../../ifcgeometryresource/lexical/ifccurveboundedsurface.htm">IfcCurveBoundedSurface</a></li>
+<li><a href="../../ifcgeometricmodelresource/lexical/ifcfacebasedsurfacemodel.htm">IfcFaceBasedSurfaceModel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2^<small>nd</small>^ level space boundary:
+<ul>
+<li>only connection geometry for related space shall be provided</li>
+<li>only surface connection geometry shall be provided</li>
+<li>only the following surface representations are supported:
+<ul>
+<li><a href="../../ifcgeometryresource/lexical/ifccurveboundedplane.htm">IfcCurveBoundedPlane</a> with restrictions to have polygonal boundaries only</li>
+<li><a href="../../ifcgeometricmodelresource/lexical/ifcfacebasedsurfacemodel.htm">IfcFaceBasedSurfaceModel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Surface connection geometry</strong></p>
 <p>The following constraints apply to the surface connection geometry representation:</p>
-<p>* planar boundaries:
-* <a href="../../ifcgeometryresource/lexical/ifcsurfaceoflinearextrusion.htm">IfcSurfaceOfLinearExtrusion</a> defined by a <i>SweptCurve</i> being an <a href="../../ifcprofileresource/lexical/ifcarbitraryopenprofiledef.htm">IfcArbitraryOpenProfileDef</a> with straight segements, or
-* <a href="../../ifcgeometryresource/lexical/ifccurveboundedplane.htm">IfcCurveBoundedPlane</a>
-* curved boundaries
-* <a href="../../ifcgeometryresource/lexical/ifcsurfaceoflinearextrusion.htm">IfcSurfaceOfLinearExtrusion</a> defined by a <i>SweptCurve</i> being an <a href="../../ifcprofileresource/lexical/ifcarbitraryopenprofiledef.htm">IfcArbitraryOpenProfileDef</a> with curves segements, or
-* <a href="../../ifcgeometryresource/lexical/ifccurveboundedsurface.htm">IfcCurveBoundedSurface</a> with a <i>BasisSurface</i> being a non planar surface, such as <a href="../../ifcgeometryresource/lexical/ifccylindricalsurface.htm">IfcCylindricalSurface</a>, or
-* <a href="../../ifcgeometricmodelresource/lexical/ifcfacebasedsurfacemodel.htm">IfcFaceBasedSurfaceModel</a> if already faceted.</p>
-<p>**Curve connection geometry**</p>
+<ul>
+<li>planar boundaries:
+<ul>
+<li><a href="../../ifcgeometryresource/lexical/ifcsurfaceoflinearextrusion.htm">IfcSurfaceOfLinearExtrusion</a> defined by a <i>SweptCurve</i> being an <a href="../../ifcprofileresource/lexical/ifcarbitraryopenprofiledef.htm">IfcArbitraryOpenProfileDef</a> with straight segements, or</li>
+<li><a href="../../ifcgeometryresource/lexical/ifccurveboundedplane.htm">IfcCurveBoundedPlane</a></li>
+</ul>
+</li>
+<li>curved boundaries
+<ul>
+<li><a href="../../ifcgeometryresource/lexical/ifcsurfaceoflinearextrusion.htm">IfcSurfaceOfLinearExtrusion</a> defined by a <i>SweptCurve</i> being an <a href="../../ifcprofileresource/lexical/ifcarbitraryopenprofiledef.htm">IfcArbitraryOpenProfileDef</a> with curves segements, or</li>
+<li><a href="../../ifcgeometryresource/lexical/ifccurveboundedsurface.htm">IfcCurveBoundedSurface</a> with a <i>BasisSurface</i> being a non planar surface, such as <a href="../../ifcgeometryresource/lexical/ifccylindricalsurface.htm">IfcCylindricalSurface</a>, or</li>
+<li><a href="../../ifcgeometricmodelresource/lexical/ifcfacebasedsurfacemodel.htm">IfcFaceBasedSurfaceModel</a> if already faceted.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Curve connection geometry</strong></p>
 <p>The following constraints apply to the 2D curve representation:</p>
-<p>* Curve: <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>, <a href="../../ifcgeometryresource/lexical/ifctrimmedcurve.htm">IfcTrimmedCurve</a> or <a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a></p>
+<ul>
+<li>Curve: <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>, <a href="../../ifcgeometryresource/lexical/ifctrimmedcurve.htm">IfcTrimmedCurve</a> or <a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a></li>
+</ul>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC1.5, the entity has been modified in IFC2x.</p>
 </blockquote>
@@ -136,7 +172,7 @@
 Reference to one spaces that is delimited by this boundary.
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatedBuildingElement</td><td><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></td><td></td><td>
-Reference to ~~Building~~ Element, that defines the Space Boundaries.
+Reference to <del>Building</del> Element, that defines the Space Boundaries.
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <i>IfcBuildingElement</i> to <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -145,7 +181,7 @@ IFC4 CHANGE  The attribute has been changed to be mandatory.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>7</td><td>ConnectionGeometry</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a></td><td>? </td><td>
-Physical representation of the space boundary. Provided as a **curve or** surface given within the LCS of the space.
+Physical representation of the space boundary. Provided as a <strong>curve or</strong> surface given within the LCS of the space.
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectionsurfacegeometry.htm">IfcConnectionSurfaceGeometry</a> to <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -207,7 +243,7 @@ Optional description, provided for exchanging informative comments.
 Reference to one spaces that is delimited by this boundary.
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatedBuildingElement</td><td><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></td><td></td><td>
-Reference to ~~Building~~ Element, that defines the Space Boundaries.
+Reference to <del>Building</del> Element, that defines the Space Boundaries.
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <i>IfcBuildingElement</i> to <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -216,7 +252,7 @@ IFC4 CHANGE  The attribute has been changed to be mandatory.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>7</td><td>ConnectionGeometry</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a></td><td>? </td><td>
-Physical representation of the space boundary. Provided as a **curve or** surface given within the LCS of the space.
+Physical representation of the space boundary. Provided as a <strong>curve or</strong> surface given within the LCS of the space.
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectionsurfacegeometry.htm">IfcConnectionSurfaceGeometry</a> to <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a> with upward compatibility for file based exchange.
 </blockquote>

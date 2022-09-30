@@ -56,14 +56,18 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>Individual segment along the <a href="../../ifcproductextension/lexical/ifcalignmenthorizontal.htm">IfcAlignmentHorizontal</a>, being defined in the x/y coordinate space. Each single horizontal alignment segment has an optional associated segment definition. The placement of <span class="self-ref">IfcAlignmentHorizontalSegment</span> and the <a href="../../ifcgeometryresource/lexical/ifccurvesegment.htm">IfcCurveSegment</a> <i>StartPlacement</i> correspond to each other.</p>
 <p>The following information can be calculated (and is therefore not exchanged explicitly to avoid redundancy and inconsistencies)</p>
-<p>* the end point (from start point, direction, segment length and curve parameter)
-* the start distance along (from the end distance along of the previous segment, or the start distance along of the horizontal alignment (if it is the first segment)
-* the end distance along (from the start distance and the segment length)
-* the end direction (from the curve parameter, the start direction and the segment length)
-* the point of intersection (from the start direction and the end direction)</p>
+<ul>
+<li>the end point (from start point, direction, segment length and curve parameter)</li>
+<li>the start distance along (from the end distance along of the previous segment, or the start distance along of the horizontal alignment (if it is the first segment)</li>
+<li>the end distance along (from the start distance and the segment length)</li>
+<li>the end direction (from the curve parameter, the start direction and the segment length)</li>
+<li>the point of intersection (from the start direction and the end direction)</li>
+</ul>
 <p>The following checks can be done to validate the correct exchange:</p>
-<p>* continuity – does the calculated end point of the previous segment matches with the provided start point of this segment
-* tangential continuity – does the calculated end direction of the previous segment matches with the provided start direction of this segment</p>
+<ul>
+<li>continuity – does the calculated end point of the previous segment matches with the provided start point of this segment</li>
+<li>tangential continuity – does the calculated end direction of the previous segment matches with the provided start direction of this segment</li>
+</ul>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>

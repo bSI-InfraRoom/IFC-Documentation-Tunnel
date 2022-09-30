@@ -43,13 +43,15 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>The energy conversion device type **IfcHumidifierType** defines commonly shared information for occurrences of humidifiers. The set of shared information may include:</p>
-<p>* common properties with shared property sets
-* common representations
-* common materials
-* common composition of elements
-* common ports</p>
-<p>It is used to define a humidifier type specification indicating the specific product information that is common to all occurrences of that product type. The **IfcHumidifierType** may be declared within <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a> or <a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a> using <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a> and may be exchanged with or without occurrences of the type. Occurrences of **IfcHumidifierType** are represented by instances of <a href="../../ifchvacdomain/lexical/ifchumidifier.htm">IfcHumidifier</a>. Refer to the documentation at <a href="../../ifchvacdomain/lexical/ifchumidifier.htm">IfcHumidifier</a> for supported property sets, materials, composition, and ports.</p>
+<details open="open"><summary>Entity definition</summary><p>The energy conversion device type <strong>IfcHumidifierType</strong> defines commonly shared information for occurrences of humidifiers. The set of shared information may include:</p>
+<ul>
+<li>common properties with shared property sets</li>
+<li>common representations</li>
+<li>common materials</li>
+<li>common composition of elements</li>
+<li>common ports</li>
+</ul>
+<p>It is used to define a humidifier type specification indicating the specific product information that is common to all occurrences of that product type. The <strong>IfcHumidifierType</strong> may be declared within <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a> or <a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a> using <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a> and may be exchanged with or without occurrences of the type. Occurrences of <strong>IfcHumidifierType</strong> are represented by instances of <a href="../../ifchvacdomain/lexical/ifchumidifier.htm">IfcHumidifier</a>. Refer to the documentation at <a href="../../ifchvacdomain/lexical/ifchumidifier.htm">IfcHumidifier</a> for supported property sets, materials, composition, and ports.</p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -128,15 +130,17 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a></td></tr>
 <tr><td>5</td><td>ApplicableOccurrence</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 The attribute optionally defines the data type of the occurrence object, to which the assigned type object can relate. If not present, no instruction is given to which occurrence object the type object is applicable. The following conventions are used:
-* The IFC entity name of the applicable occurrence using the IFC naming convention, CamelCase with IFC prefix
-* It can be optionally followed by the predefined type after the separator &quot;/&quot; (forward slash), using uppercase
-* If one type object is applicable to many occurrence objects, then those occurrence object names should be separate by comma &quot;,&quot; forming a comma separated string.
+<ul>
+<li>The IFC entity name of the applicable occurrence using the IFC naming convention, CamelCase with IFC prefix</li>
+<li>It can be optionally followed by the predefined type after the separator &quot;/&quot; (forward slash), using uppercase</li>
+<li>If one type object is applicable to many occurrence objects, then those occurrence object names should be separate by comma &quot;,&quot; forming a comma separated string.</li>
+</ul>
 <blockquote class="example">
 EXAMPLE Refering to a furniture as applicable occurrence entity would be expressed as 'IfcFurnishingElement', refering to a brace as applicable entity would be expressed as 'IfcMember/BRACE', refering to a wall and wall standard case would be expressed as 'IfcWall, IfcWallStandardCase'.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>6</td><td>HasPropertySets</td><td><a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a></td><td>? S[1:?]</td><td>
-Set ~~list~~ of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
+Set <del>list</del> of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
 <blockquote>
 IFC2x3 CHANGE  The attribute aggregate type has been changed from LIST to SET.
 </blockquote>

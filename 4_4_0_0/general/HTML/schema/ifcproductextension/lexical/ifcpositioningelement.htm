@@ -189,8 +189,10 @@ IFC4 CHANGE  The inverse relationship has been promoted from <a href="../../ifc
 <a id="product-local-placement" />
 <p class="use-head">Placement</p>
 <p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept applies to this entity.</p><p>The local placement for <a href="../../ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a> is defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines the local coordinate system that is referenced by all geometric representations.</p>
-<p>* The <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> shall point (if given) to the local placement of the same <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a>, which is used in the <i>ContainedInStructure</i> inverse attribute, or to a spatial structure element at a higher level, referenced by that.
-* If the relative placement is not used, the absolute placement is defined within the world coordinate system.</p>
+<ul>
+<li>The <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> shall point (if given) to the local placement of the same <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a>, which is used in the <i>ContainedInStructure</i> inverse attribute, or to a spatial structure element at a higher level, referenced by that.</li>
+<li>If the relative placement is not used, the absolute placement is defined within the world coordinate system.</li>
+</ul>
 
 <br/><br/>
 
@@ -206,12 +208,16 @@ IFC4 CHANGE  The inverse relationship has been promoted from <a href="../../ifc
 <tr><td><p class="table">Table 98 &mdash; IfcPositioningElement FootPrint Geometry</td></tr></table>
 
 <p>The 2D geometric representation of <a href="../../ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a> is defined using the 'GeometricCurveSet' geometry. The following attribute values should be inserted</p>
-<p>*  <i>IfcShapeRepresentation.RepresentationIdentifier</i> = 'FootPrint'.
-*  <i>IfcShapeRepresentation.RepresentationType</i> = 'GeometricCurveSet' .</p>
+<ul>
+<li><i>IfcShapeRepresentation.RepresentationIdentifier</i> = 'FootPrint'.</li>
+<li><i>IfcShapeRepresentation.RepresentationType</i> = 'GeometricCurveSet' .</li>
+</ul>
 <p>The following constraints apply to the 2D representation:</p>
-<p>* The <a href="../../ifcgeometricmodelresource/lexical/ifcgeometriccurveset.htm">IfcGeometricCurveSet</a> shall be an (and the only) <i>Item</i> of the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>. It should contain an <a href="../../ifcgeometricmodelresource/lexical/ifcgeometriccurveset.htm">IfcGeometricCurveSet</a> containing subtypes of <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a>, each representing a grid axis. Applicable subtypes of <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a> are: <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>, <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a>, <a href="../../ifcgeometryresource/lexical/ifctrimmedcurve.htm">IfcTrimmedCurve</a> (based on <i>BaseCurve</i> referencing <a href="../../ifcgeometryresource/lexical/ifcline.htm">IfcLine</a> or <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a>), and <a href="../../ifcgeometryresource/lexical/ifcoffsetcurve2d.htm">IfcOffsetCurve2D</a>.
-* Each subtype of <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a> may have a curve style assigned, using <a href="../../ifcpresentationappearanceresource/lexical/ifcstyleditem.htm">IfcStyledItem</a> referencing <a href="../../ifcpresentationappearanceresource/lexical/ifccurvestyle.htm">IfcCurveStyle</a>.
-* Optionally the grid axis labels may be added as <a href="../../ifcpresentationdefinitionresource/lexical/ifctextliteral.htm">IfcTextLiteral</a>, and they may have text styles assigned, using <a href="../../ifcpresentationappearanceresource/lexical/ifcstyleditem.htm">IfcStyledItem</a> referencing <a href="../../ifcpresentationappearanceresource/lexical/ifctextstyle.htm">IfcTextStyle</a>.</p>
+<ul>
+<li>The <a href="../../ifcgeometricmodelresource/lexical/ifcgeometriccurveset.htm">IfcGeometricCurveSet</a> shall be an (and the only) <i>Item</i> of the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>. It should contain an <a href="../../ifcgeometricmodelresource/lexical/ifcgeometriccurveset.htm">IfcGeometricCurveSet</a> containing subtypes of <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a>, each representing a grid axis. Applicable subtypes of <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a> are: <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>, <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a>, <a href="../../ifcgeometryresource/lexical/ifctrimmedcurve.htm">IfcTrimmedCurve</a> (based on <i>BaseCurve</i> referencing <a href="../../ifcgeometryresource/lexical/ifcline.htm">IfcLine</a> or <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a>), and <a href="../../ifcgeometryresource/lexical/ifcoffsetcurve2d.htm">IfcOffsetCurve2D</a>.</li>
+<li>Each subtype of <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a> may have a curve style assigned, using <a href="../../ifcpresentationappearanceresource/lexical/ifcstyleditem.htm">IfcStyledItem</a> referencing <a href="../../ifcpresentationappearanceresource/lexical/ifccurvestyle.htm">IfcCurveStyle</a>.</li>
+<li>Optionally the grid axis labels may be added as <a href="../../ifcpresentationdefinitionresource/lexical/ifctextliteral.htm">IfcTextLiteral</a>, and they may have text styles assigned, using <a href="../../ifcpresentationappearanceresource/lexical/ifcstyleditem.htm">IfcStyledItem</a> referencing <a href="../../ifcpresentationappearanceresource/lexical/ifctextstyle.htm">IfcTextStyle</a>.</li>
+</ul>
 <table cellpadding="2" cellspacing="2">
       <tbody>
         <tr>

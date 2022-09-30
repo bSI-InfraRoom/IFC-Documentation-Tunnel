@@ -49,14 +49,24 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcFillAreaStyle</span> provides the style table for presentation information assigned to annotation fill areas or surfaces for hatching and tiling. The _IfcFillAreaStyle_defines hatches as model hatches, that is, the distance between hatch lines, or the curve patterns of hatch lines are given in model space dimensions (that have to be scaled using the target plot scale). The <span class="self-ref">IfcFillAreaStyle</span> allows for the following combinations of defining the style of hatching and tiling:</p>
-<p>* Solid fill for areas and surfaces by only assigning <a href="../../ifcpresentationappearanceresource/lexical/ifccolour.htm">IfcColour</a> to the set of <i>FillStyles</i>. It then provides the background colour for the filled area or surface.</p>
+<ul>
+<li>Solid fill for areas and surfaces by only assigning <a href="../../ifcpresentationappearanceresource/lexical/ifccolour.htm">IfcColour</a> to the set of <i>FillStyles</i>. It then provides the background colour for the filled area or surface.</li>
+</ul>
 <blockquote class="note">
 <p>NOTE  Color information of surfaces for rendering is assigned by using <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestyle.htm">IfcSurfaceStyle</a>, not by using <span class="self-ref">IfcFillAreaStyle</span>.</p>
 </blockquote>
-<p>* Vector based hatching for areas and surfaces based on a single row of hatch lines by assigning a single instance of <a href="../../ifcpresentationappearanceresource/lexical/ifcfillareastylehatching.htm">IfcFillAreaStyleHatching</a> to the set of <i>FillStyles</i>.
-* If an instance of <a href="../../ifcpresentationappearanceresource/lexical/ifccolour.htm">IfcColour</a> is assigned in addition to the set of <i>FillStyles</i>, it provides the background colour for the hatching.</p>
-<p>* Vector based hatching for areas and surfaces based on two (potentially crossing) rows of hatch lines by assigning two instances of <a href="../../ifcpresentationappearanceresource/lexical/ifcfillareastylehatching.htm">IfcFillAreaStyleHatching</a> to the set of <i>FillStyles.</i>
-* If an instance of <a href="../../ifcpresentationappearanceresource/lexical/ifccolour.htm">IfcColour</a> is assigned in addition to the set of <i>FillStyles</i>, it provides the background colour for the hatching.</p>
+<ul>
+<li><p>Vector based hatching for areas and surfaces based on a single row of hatch lines by assigning a single instance of <a href="../../ifcpresentationappearanceresource/lexical/ifcfillareastylehatching.htm">IfcFillAreaStyleHatching</a> to the set of <i>FillStyles</i>.</p>
+<ul>
+<li>If an instance of <a href="../../ifcpresentationappearanceresource/lexical/ifccolour.htm">IfcColour</a> is assigned in addition to the set of <i>FillStyles</i>, it provides the background colour for the hatching.</li>
+</ul>
+</li>
+<li><p>Vector based hatching for areas and surfaces based on two (potentially crossing) rows of hatch lines by assigning two instances of <a href="../../ifcpresentationappearanceresource/lexical/ifcfillareastylehatching.htm">IfcFillAreaStyleHatching</a> to the set of <i>FillStyles.</i></p>
+<ul>
+<li>If an instance of <a href="../../ifcpresentationappearanceresource/lexical/ifccolour.htm">IfcColour</a> is assigned in addition to the set of <i>FillStyles</i>, it provides the background colour for the hatching.</li>
+</ul>
+</li>
+</ul>
 <blockquote class="note">
 <blockquote class="note">
 <p>NOTE  Assigning more then two instances of <a href="../../ifcpresentationappearanceresource/lexical/ifcfillareastylehatching.htm">IfcFillAreaStyleHatching</a> to define three or more rows of hatch lines is not encouraged.</p>
@@ -64,10 +74,18 @@
 </blockquote>
 <blockquote>
 </blockquote>
-<p>* Tiling for areas and surfaces by assigning a single instance of <a href="../../ifcpresentationappearanceresource/lexical/ifcfillareastyletiles.htm">IfcFillAreaStyleTiles</a> to the set of <i>FillStyles</i>.
-* If an instance of <a href="../../ifcpresentationappearanceresource/lexical/ifccolour.htm">IfcColour</a> is assigned in addition to the set of <i>FillStyles</i>, it provides the background colour for the tiling.</p>
-<p>* Externally defined hatch style by assigning a single instance of <a href="../../ifcpresentationappearanceresource/lexical/ifcexternallydefinedhatchstyle.htm">IfcExternallyDefinedHatchStyle</a> to the set of <i>FillStyles</i>.
-* If an instance of <a href="../../ifcpresentationappearanceresource/lexical/ifccolour.htm">IfcColour</a> is assigned in addition to the set of <i>FillStyles</i>, it provides the background colour for the hatching.</p>
+<ul>
+<li><p>Tiling for areas and surfaces by assigning a single instance of <a href="../../ifcpresentationappearanceresource/lexical/ifcfillareastyletiles.htm">IfcFillAreaStyleTiles</a> to the set of <i>FillStyles</i>.</p>
+<ul>
+<li>If an instance of <a href="../../ifcpresentationappearanceresource/lexical/ifccolour.htm">IfcColour</a> is assigned in addition to the set of <i>FillStyles</i>, it provides the background colour for the tiling.</li>
+</ul>
+</li>
+<li><p>Externally defined hatch style by assigning a single instance of <a href="../../ifcpresentationappearanceresource/lexical/ifcexternallydefinedhatchstyle.htm">IfcExternallyDefinedHatchStyle</a> to the set of <i>FillStyles</i>.</p>
+<ul>
+<li>If an instance of <a href="../../ifcpresentationappearanceresource/lexical/ifccolour.htm">IfcColour</a> is assigned in addition to the set of <i>FillStyles</i>, it provides the background colour for the hatching.</li>
+</ul>
+</li>
+</ul>
 <p>Measures given to a hatch or tile pattern are given in global drawing length units.</p>
 <blockquote class="note">
 <p>NOTE  Global units are defined at the single <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a> instance, given by <i>UnitsInContext:IfcUnitAssignment</i>, the same units are used for the geometric representation items and for the style definitions.</p>

@@ -49,10 +49,12 @@
 <p>NOTE  See <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> for how to override property sets assigned to an object type within the object occurrence.</p>
 </blockquote>
 <p>An <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> may define the underlying structure, i.e. the required name, the applicable object or object types to which the property set can be attached, and the individual properties that can be included. Property sets are related to other objects by using the relationship object that refers to the corresponding object:</p>
-<p>*  **Occurrence Object**: <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> using the inverse attribute <i>DefinesOccurrence</i>.
-*  **Type Object**: using a direct link by inverse attribute <i>DefinesType</i>.
-*  **Underlying template**: <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a> using the inverse attribute <i>IsDefinedBy</i>.
-*  **External reference**: subtypes of <a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a> are used to provide a link to a classification system, or external library providing further reference to the property set. Accessible by inverse attribute <i>HasAssociations</i>.</p>
+<ul>
+<li><strong>Occurrence Object</strong>: <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> using the inverse attribute <i>DefinesOccurrence</i>.</li>
+<li><strong>Type Object</strong>: using a direct link by inverse attribute <i>DefinesType</i>.</li>
+<li><strong>Underlying template</strong>: <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a> using the inverse attribute <i>IsDefinedBy</i>.</li>
+<li><strong>External reference</strong>: subtypes of <a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a> are used to provide a link to a classification system, or external library providing further reference to the property set. Accessible by inverse attribute <i>HasAssociations</i>.</li>
+</ul>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC1.0</p>
 </blockquote>

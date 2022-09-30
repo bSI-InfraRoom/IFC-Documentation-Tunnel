@@ -43,15 +43,17 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The cylindrical surface is a surface unbounded in the direction of <i>z</i>. Bounded cylindrical surfaces are defined by using a subtype of <a href="../../ifcgeometryresource/lexical/ifcboundedsurface.htm">IfcBoundedSurface</a> with <i>BasisSurface</i> being a cylindrical surface.</p>
 <blockquote class="note">
-<p>NOTE 1  A bounded cylindrical surface can be defined by an <a href="../../ifcgeometryresource/lexical/ifcrectangulartrimmedsurface.htm">IfcRectangularTrimmedSurface</a> with <i>BasisSurface</i> being the cylindrical surface and <i>U1</i> = 0°, <i>U2</i> = 360° and <i>V1</i> = lower bound in **z**, <i>V2</i> = upper bound in **z** (if the plane angle measure is degree). A bounded cylindrical arc surface is provided with |U1 - U2| &lt; 360° (assuming the Usense and Vsense agree to the sense of the basis surface).</p>
+<p>NOTE 1  A bounded cylindrical surface can be defined by an <a href="../../ifcgeometryresource/lexical/ifcrectangulartrimmedsurface.htm">IfcRectangularTrimmedSurface</a> with <i>BasisSurface</i> being the cylindrical surface and <i>U1</i> = 0°, <i>U2</i> = 360° and <i>V1</i> = lower bound in <strong>z</strong>, <i>V2</i> = upper bound in <strong>z</strong> (if the plane angle measure is degree). A bounded cylindrical arc surface is provided with |U1 - U2| &lt; 360° (assuming the Usense and Vsense agree to the sense of the basis surface).</p>
 </blockquote>
 <blockquote class="note">
 <p>NOTE 2  A non-rectangular bounded cylindrical surface, e.g. the surface of a round wall underneath a sloped roof, cab be defined by an <a href="../../ifcgeometryresource/lexical/ifccurveboundedsurface.htm">IfcCurveBoundedSurface</a> with <a href="../../ifcgeometryresource/lexical/ifcboundarycurve.htm">IfcBoundaryCurve</a>'s, being a collection of p-curve segments. A p-curve is curve which lies on the basis of a surface and is defined in the parameter space of that surface.</p>
 </blockquote>
 <p>The inherited attributes are interpreted as</p>
-<p>* <i>SELF\IfcElementarySurface.Position</i> defines the location and orientation of the cylindrical surface.
-* <i>SELF\IfcElementarySurface.Position.Location</i> definesd a point on the axis of the cylindrical surface.
-* <i>SELF\IfcElementarySurface.Position.P[3]</i> defines the direction of the axis of the cylindrical surface.</p>
+<ul>
+<li><i>SELF\IfcElementarySurface.Position</i> defines the location and orientation of the cylindrical surface.</li>
+<li><i>SELF\IfcElementarySurface.Position.Location</i> definesd a point on the axis of the cylindrical surface.</li>
+<li><i>SELF\IfcElementarySurface.Position.P[3]</i> defines the direction of the axis of the cylindrical surface.</li>
+</ul>
 <blockquote class="extDef">
 <p>NOTE Definition according to ISO/CD 10303-42:1992<br>
 A cylindrical surface is a surface at a constant distance (the radius) from a straight line. A cylindrical surface is defined by its radius and its orientation and location. The data is to be interpreted as follows:</p>
@@ -71,7 +73,7 @@ z = Position.P[3]
 <p><img src="../../../figures/ifccylindricalsurface-math1.gif" alt="formula">
 where the parametric range is -∞ &lt; <i>u,v</i> &lt; ∞ .</p>
 </blockquote>
-<p>In the above parameterization the length unit for the unit vectors **z** is equal to that of the radius **<i>R</i>**. In the placement coordinate system defined above, the surface is represented by the equation <i>S</i> = 0, where</p>
+<p>In the above parameterization the length unit for the unit vectors <strong>z</strong> is equal to that of the radius <strong><i>R</i></strong>. In the placement coordinate system defined above, the surface is represented by the equation <i>S</i> = 0, where</p>
 <blockquote>
 <p><img src="../../../figures/ifccylindricalsurface-math2.gif" alt="formula">
 The positive direction of the normal to the surface at any point on the surface is given by</p>
@@ -83,7 +85,7 @@ The positive direction of the normal to the surface at any point on the surface 
 <p>The direction of the normal is away from the axis of the cylinder.</p>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  Entity adapted from **cylindrical_surface** defined in ISO 10303-42.</p>
+<p>NOTE  Entity adapted from <strong>cylindrical_surface</strong> defined in ISO 10303-42.</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC4.</p>

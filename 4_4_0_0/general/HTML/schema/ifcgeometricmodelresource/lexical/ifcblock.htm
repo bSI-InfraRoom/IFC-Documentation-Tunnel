@@ -36,8 +36,10 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcBlock</span> is a Construction Solid Geometry (CSG) 3D primitive. It is defined by a position and a positve distance along the three orthogonal axes. The inherited <i>Position</i> attribute has the <i>IfcAxisPlacement3D</i> type and provides:</p>
-<p>* <i>SELF\IfcCsgPrimitive3D.Position</i>: The location and orientation of the axis system for the primitive.
-* <i>SELF\IfcCsgPrimitive3D.Position.Location</i>: The block has one vertex at location and the edges are aligned with the placement axes in the positive sense.</p>
+<ul>
+<li><i>SELF\IfcCsgPrimitive3D.Position</i>: The location and orientation of the axis system for the primitive.</li>
+<li><i>SELF\IfcCsgPrimitive3D.Position.Location</i>: The block has one vertex at location and the edges are aligned with the placement axes in the positive sense.</li>
+</ul>
 <p>The <i>XLength</i>, <i>YLength</i>, and <i>ZLength</i> attributes define the size of the IfcBlock along the three axes.</p>
 <table cellpadding="2" cellspacing="2" summary="block geometry">
 <tr>
@@ -60,7 +62,7 @@ direction of the X, Y, and Z axis.</p>
 A block is a solid rectangular parallelepiped, defined with a location and placement coordinate system. The block is specified by the positive lengths x, y, and z along the axes of the placement coordinate system, and has one vertex at the origin of the placement coordinate system.</p>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  Entity adapted from **block** defined in ISO 10303-42.</p>
+<p>NOTE  Entity adapted from <strong>block</strong> defined in ISO 10303-42.</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x3.</p>
@@ -70,7 +72,6 @@ Texture definition</p>
 <p>On each side face, textures are aligned facing upright. On the top and bottom faces, textures are aligned facing front-to-back. Textures are stretched or repeated to the extent of each face according to <i>RepeatS</i> and <i>RepeatT</i>.</p>
 <p>Figure 449 illustrates default texture mapping with a clamped texture (RepeatS=False and RepeatT=False). The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up.</p>
 <p> </p>
-<p class="gridtable"></p>
 <table summary="block texture" class="gridtable">
 <tr>
 <td><img src="../../../figures/ifcblock-texture.png" alt="texture"></td>

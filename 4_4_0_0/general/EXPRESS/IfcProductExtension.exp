@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 9 September 2022
+Friday, 30 September 2022
 
 *)
 
@@ -756,7 +756,8 @@ ENTITY IfcFacilityPart
     ,IfcFacilityPartCommon
     ,IfcMarinePart
     ,IfcRailwayPart
-    ,IfcRoadPart))
+    ,IfcRoadPart
+    ,IfcTunnelPart))
  SUBTYPE OF (IfcSpatialStructureElement);
 	UsageType : IfcFacilityUsageEnum;
 END_ENTITY;

@@ -38,7 +38,7 @@
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcCartesianTransformationOperator</span> defines an abstract supertype of different kinds of geometric transformations.</p>
 <blockquote class="extDef">
 <p>NOTE  Definition according to ISO/CD 10303-42:1992<br>
-A Cartesian transformation operator defines a geometric transformation composed of translation, rotation, mirroring and uniform scaling. The list of normalized vectors u defines the columns of an orthogonal matrix T. These vectors are computed, by the base axis function, from the direction attributes axis1, axis2 and, in Cartesian transformation operator 3d, axis3. If **|T|= -1**, the transformation includes mirroring. The local origin point **A**, the scale value **<i>S</i>** and the matrix **T** together define a transformation.</p>
+A Cartesian transformation operator defines a geometric transformation composed of translation, rotation, mirroring and uniform scaling. The list of normalized vectors u defines the columns of an orthogonal matrix T. These vectors are computed, by the base axis function, from the direction attributes axis1, axis2 and, in Cartesian transformation operator 3d, axis3. If <strong>|T|= -1</strong>, the transformation includes mirroring. The local origin point <strong>A</strong>, the scale value <strong><i>S</i></strong> and the matrix <strong>T</strong> together define a transformation.</p>
 <p>The transformation for a point with position vector P is defined by</p>
 <blockquote>
 <p>P -&gt; A + _S_TP
@@ -56,7 +56,7 @@ For those entities whose attributes include an axis2 placement, the transformati
 <p>For curves on surface the p curve.reference to curve will be unaffected by any transformation. The Cartesian transformation operator shall only be applied to geometry defined in a consistent system of units with the same units on each axis. With all optional attributes omitted, the transformation defaults to the identity transformation. The Cartesian transformation operator shall only be instantiated as one of its subtypes.</p>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  Entity adapted from **cartesian_transformation_operator** defined in ISO10303-42.</p>
+<p>NOTE  Entity adapted from <strong>cartesian_transformation_operator</strong> defined in ISO10303-42.</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x.</p>

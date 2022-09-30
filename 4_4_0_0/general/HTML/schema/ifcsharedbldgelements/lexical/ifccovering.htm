@@ -60,19 +60,32 @@
 <p>NOTE  A more basic information about claddings, floorings, and ceilings of a space can be attached to <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a>'s using the Pset_SpaceCommon properties. Then only a name can be provided and the covering quantities would be interpreted from the space quantities.</p>
 </blockquote>
 <p>Coverings can be assigned to</p>
-<p>* a space represented by <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a>
-* using the inverse relationship <i>CoversSpaces</i> pointing to <a href="../../ifcsharedbldgelements/lexical/ifcrelcoversspaces.htm">IfcRelCoversSpaces</a>. The space is then accessible via <i>IfcRelCoversSpaces.RelatedSpace</i>. It defines to which space a covering is facing towards.
-* a space boundary represented by <a href="../../ifcproductextension/lexical/ifcrelspaceboundary.htm">IfcRelSpaceBoundary</a>
-* using the inverse relationship <i>ProvidesBoundaries</i> pointing to <i>IfcRelSpaceBoundary.</i> The space is then accessible via <i>IfcRelSpaceBoundary.RelatingSpace</i>.
-* a building element represented by <i>IfcBuildingElement</i>
-* using the inverse relationship <i>Covers</i> pointing to <a href="../../ifcsharedbldgelements/lexical/ifcrelcoversbldgelements.htm">IfcRelCoversBldgElements</a>. The building element is then accessible via <i>IfcRelCoversBldgElements.RelatingBuildingElement</i>.</p>
+<ul>
+<li>a space represented by <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a>
+<ul>
+<li>using the inverse relationship <i>CoversSpaces</i> pointing to <a href="../../ifcsharedbldgelements/lexical/ifcrelcoversspaces.htm">IfcRelCoversSpaces</a>. The space is then accessible via <i>IfcRelCoversSpaces.RelatedSpace</i>. It defines to which space a covering is facing towards.</li>
+</ul>
+</li>
+<li>a space boundary represented by <a href="../../ifcproductextension/lexical/ifcrelspaceboundary.htm">IfcRelSpaceBoundary</a>
+<ul>
+<li>using the inverse relationship <i>ProvidesBoundaries</i> pointing to <i>IfcRelSpaceBoundary.</i> The space is then accessible via <i>IfcRelSpaceBoundary.RelatingSpace</i>.</li>
+</ul>
+</li>
+<li>a building element represented by <i>IfcBuildingElement</i>
+<ul>
+<li>using the inverse relationship <i>Covers</i> pointing to <a href="../../ifcsharedbldgelements/lexical/ifcrelcoversbldgelements.htm">IfcRelCoversBldgElements</a>. The building element is then accessible via <i>IfcRelCoversBldgElements.RelatingBuildingElement</i>.</li>
+</ul>
+</li>
+</ul>
 <blockquote class="note">
 <p>NOTE  The mere containment relationship between an <span class="self-ref">IfcCovering</span> and an <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a> is created by using <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a></p>
 </blockquote>
 <p>The following guideline shall apply:</p>
-<p>* (default) if the space has coverings that may not have their own shape representation and no defined relationships to the building elements they cover, then the <span class="self-ref">IfcCovering</span> shall be assigned to <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a> using the <a href="../../ifcsharedbldgelements/lexical/ifcrelcoversspaces.htm">IfcRelCoversSpaces</a> relationship,
-* if the space has coverings that have an own shape representation and the space has defined space boundaries, then the covering, which relates to that space, shall be contained in the space using <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>. It may be assigned to the space boundaries using the <a href="../../ifcproductextension/lexical/ifcrelspaceboundary.htm">IfcRelSpaceBoundary</a>.
-* if the covering does not relate to a space, then the covering should be assigned to the building element or a distribution element using the <a href="../../ifcsharedbldgelements/lexical/ifcrelcoversbldgelements.htm">IfcRelCoversBldgElements</a> relationship.</p>
+<ul>
+<li>(default) if the space has coverings that may not have their own shape representation and no defined relationships to the building elements they cover, then the <span class="self-ref">IfcCovering</span> shall be assigned to <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a> using the <a href="../../ifcsharedbldgelements/lexical/ifcrelcoversspaces.htm">IfcRelCoversSpaces</a> relationship,</li>
+<li>if the space has coverings that have an own shape representation and the space has defined space boundaries, then the covering, which relates to that space, shall be contained in the space using <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>. It may be assigned to the space boundaries using the <a href="../../ifcproductextension/lexical/ifcrelspaceboundary.htm">IfcRelSpaceBoundary</a>.</li>
+<li>if the covering does not relate to a space, then the covering should be assigned to the building element or a distribution element using the <a href="../../ifcsharedbldgelements/lexical/ifcrelcoversbldgelements.htm">IfcRelCoversBldgElements</a> relationship.</li>
+</ul>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC1.0.</p>
 </blockquote>
@@ -323,7 +336,9 @@ IFC4 CHANGE Renamed into <i>CoversElements</i> for consistency.
 <tr><td><p class="table">Table 153 &mdash; IfcCovering Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcCovering</span> has a containment relationship within the hierarchical spatial structure.</p>
-<p>* The <span class="self-ref">IfcCovering</span> is places within the project spatial hierarchy using the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>, referring to it by its inverse attribute <i>SELF\IfcElement.ContainedInStructure</i>. Subtypes of <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> are valid spatial containers, with <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a> being the default container.</p>
+<ul>
+<li>The <span class="self-ref">IfcCovering</span> is places within the project spatial hierarchy using the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>, referring to it by its inverse attribute <i>SELF\IfcElement.ContainedInStructure</i>. Subtypes of <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> are valid spatial containers, with <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a> being the default container.</li>
+</ul>
 
 <br/><br/>
 
@@ -366,8 +381,10 @@ IFC4 CHANGE Renamed into <i>CoversElements</i> for consistency.
 <a id="surface-geometry" />
 <p class="use-head">Surface Geometry</p>
 <p>The <a href="../../templates/surface-geometry.htm">Surface Geometry</a> concept applies to this entity.</p><p>The following additional constraints apply to the 'GeometricSet' representation of <span class="self-ref">IfcCovering</span>:</p>
-<p>* for planar base surfaces - bounded surface representation
-* for cylindrical base surfaces - swept surface representation</p>
+<ul>
+<li>for planar base surfaces - bounded surface representation</li>
+<li>for cylindrical base surfaces - swept surface representation</li>
+</ul>
 <p> </p>
 <table>
  <tr>
@@ -421,8 +438,10 @@ cylindrical</p>
 <a id="body-sweptsolid-geometry" />
 <p class="use-head">Body SweptSolid Geometry</p>
 <p>The <a href="../../templates/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a> concept applies to this entity.</p><p>The following additional constraints apply to the 'SweptSolid' representation of <span class="self-ref">IfcCovering</span>:</p>
-<p>* for planar base surfaces - swept area representation
-* for cylindrical base surfaces - swept area representation</p>
+<ul>
+<li>for planar base surfaces - swept area representation</li>
+<li>for cylindrical base surfaces - swept area representation</li>
+</ul>
 <p> </p>
 <table>
  

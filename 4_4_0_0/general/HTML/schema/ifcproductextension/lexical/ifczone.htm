@@ -172,7 +172,7 @@ IFC4 CHANGE  The cardinality has been changed from 1..1 to 0..? in order to all
 </blockquote>
 </td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a></td></tr>
-<tr><td></td><td><i>ServicesBuildings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatingSystem</td><td>S[0:1]</td><td>Reference to the ~~building~~ spatial structure via the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>, which is serviced by the system.
+<tr><td></td><td><i>ServicesBuildings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatingSystem</td><td>S[0:1]</td><td>Reference to the <del>building</del> spatial structure via the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>, which is serviced by the system.
 </td><td>X</td></tr>
 <tr><td></td><td><i>ServicesFacilities</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:?]</td><td></td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifczone.htm">IfcZone</a></td></tr>
@@ -252,10 +252,12 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <p>NOTE  One of the purposes of a zone is to define a fire compartmentation. In this case it defines the geometric information about the fire compartment (through the contained spaces) and information, whether this compartment is ventilated or sprinkler protected. In addition the fire risk code and the hazard type can be added, the coding is normally defined within a national fire regulation. All that information is available within the relevant property sets. Again, if an independent shape has to be provided to the fire compartment, then the entity <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> shall be used.</p>
 </blockquote>
 <p>In case of a zone denoting a (fire) compartment, the following types should be used, if applicable, as values of the <i>ObjectType</i> attribute:</p>
-<p>* **'FireCompartment'**: a zone of spaces, collected to represent a single fire compartment.
-* **'ElevatorShaft'**: a collection of spaces within an elevator, potentially going through many storeys.
-* **'RisingDuct'**: A collection of vertical airspaces.
-* **'RunningDuct'**: A collection of horizontal airspaces.</p>
+<ul>
+<li><strong>'FireCompartment'</strong>: a zone of spaces, collected to represent a single fire compartment.</li>
+<li><strong>'ElevatorShaft'</strong>: a collection of spaces within an elevator, potentially going through many storeys.</li>
+<li><strong>'RisingDuct'</strong>: A collection of vertical airspaces.</li>
+<li><strong>'RunningDuct'</strong>: A collection of horizontal airspaces.</li>
+</ul>
 
 <br/><br/>
 

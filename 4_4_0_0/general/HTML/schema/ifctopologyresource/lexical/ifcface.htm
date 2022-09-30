@@ -41,17 +41,17 @@
 </blockquote>
 <blockquote class="extDef">
 <p>NOTE  Definition according to ISO/CD 10303-42:1992<br>
-A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2-manifold in <i>R^m^</i>. A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 &lt; Ξ &lt; ∞.</p>
+A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2-manifold in <i>R<sup>m</sup></i>. A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 &lt; Ξ &lt; ∞.</p>
 <p>A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter-clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal (TRUE) or should be reversed (FALSE).</p>
 <p>A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen.</p>
 <p>The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation (1) for this graph becomes:</p>
 <blockquote>
 <p><img src="../../../figures/ifcface-math1.gif" alt="Image">
-where <i>G^l^~i~</i> is the graph genus of the_i_^th^ loop.</p>
+where <i>G<sup>l</sup><sub>i</sub></i> is the graph genus of the_i_<sup>th</sup> loop.</p>
 </blockquote>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  Entity adapted from **face** defined in ISO 10303-42.</p>
+<p>NOTE  Entity adapted from <strong>face</strong> defined in ISO 10303-42.</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC1.0</p>

@@ -45,17 +45,19 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcCurveBoundedSurface</span> is a parametric surface with boundaries defined by p-curves, that is, a curve which lies on the basis of a surface and is defined in the parameter space of that surface. The p-curve is a special type of a composite curve segment and shall only be used to bound a surface.</p>
 <p>The outer boundary shall be either defined by:</p>
-<p>* an <a href="../../ifcgeometryresource/lexical/ifcouterboundarycurve.htm">IfcOuterBoundaryCurve</a> a closed composite curve on surface for the definition of an outer boundary, in this case the attribute <i>ImplicitOuter</i> has to be set to FALSE, or
-* an implicit boundary of the bounded surface, e.g. the u1, u2, v1, v2 of <a href="../../ifcgeometryresource/lexical/ifcrectangulartrimmedsurface.htm">IfcRectangularTrimmedSurface</a>, in this case the attribute <i>ImplicitOuter</i> has to be set to TRUE.</p>
+<ul>
+<li>an <a href="../../ifcgeometryresource/lexical/ifcouterboundarycurve.htm">IfcOuterBoundaryCurve</a> a closed composite curve on surface for the definition of an outer boundary, in this case the attribute <i>ImplicitOuter</i> has to be set to FALSE, or</li>
+<li>an implicit boundary of the bounded surface, e.g. the u1, u2, v1, v2 of <a href="../../ifcgeometryresource/lexical/ifcrectangulartrimmedsurface.htm">IfcRectangularTrimmedSurface</a>, in this case the attribute <i>ImplicitOuter</i> has to be set to TRUE.</li>
+</ul>
 <blockquote class="note">
 <p>NOTE  Some surfaces, like <a href="../../ifcgeometryresource/lexical/ifccylindricalsurface.htm">IfcCylindricalSurface</a> does not have identifiable implicit boundaries.</p>
 </blockquote>
 <blockquote class="extDef">
 <p>NOTE  Definition according to ISO/CD 10303-42:1992<br>
-The curve bounded surface is a parametric surface with curved boundaries defined by one or more boundary curves. One of the boundary curves may be the outer boundary; any number of inner boundaries is permissible. The region of the curve bounded surface in the basis surface is defined to be the portion of the basis surface in the direction of **<i>N</i> x <i>T</i>** from any point on the boundary, where **N** is the surface normal and **T** the boundary curve tangent vector at this point. The region so defined shall be arcwise connected.</p>
+The curve bounded surface is a parametric surface with curved boundaries defined by one or more boundary curves. One of the boundary curves may be the outer boundary; any number of inner boundaries is permissible. The region of the curve bounded surface in the basis surface is defined to be the portion of the basis surface in the direction of <strong><i>N</i> x <i>T</i></strong> from any point on the boundary, where <strong>N</strong> is the surface normal and <strong>T</strong> the boundary curve tangent vector at this point. The region so defined shall be arcwise connected.</p>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  Entity adapted from **curve_bounded_surface** defined in ISO 10303-42.</p>
+<p>NOTE  Entity adapted from <strong>curve_bounded_surface</strong> defined in ISO 10303-42.</p>
 </blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC4.</p>

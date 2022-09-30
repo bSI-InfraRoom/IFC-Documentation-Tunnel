@@ -54,20 +54,36 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The opening element stands for opening, recess or chase, all reflecting voids. It represents a void within any element that has physical manifestation. Openings can be inserted into walls, slabs, beams, columns, or other elements.</p>
 <p>The IFC specification provides two entities for opening elements:</p>
-<p>* <i>IfcOpeningStandardCase</i> is used for all openings that have a constant profile along a linear extrusion. They are placed relative to the voided elements and the extrusion direction is perpendicular to the plane of the element (horizontally for walls, vertically for slabs). Only a single extrusion body is allowed. It cuts through the whole thickness of the voided element, i.e. it reflects a true opening.
-* <span class="self-ref">IfcOpeningElement</span> is used for all other occurrences of openings and in particular also for niches or recesses.</p>
+<ul>
+<li><i>IfcOpeningStandardCase</i> is used for all openings that have a constant profile along a linear extrusion. They are placed relative to the voided elements and the extrusion direction is perpendicular to the plane of the element (horizontally for walls, vertically for slabs). Only a single extrusion body is allowed. It cuts through the whole thickness of the voided element, i.e. it reflects a true opening.</li>
+<li><span class="self-ref">IfcOpeningElement</span> is used for all other occurrences of openings and in particular also for niches or recesses.</li>
+</ul>
 <blockquote class="note">
 <p>NOTE  View definitions or implementer agreements may restrict the types of elements which can be voided by an <span class="self-ref">IfcOpeningElement</span> or <i>IfcOpeningStandardCase</i></p>
 </blockquote>
 <p>There are two different types of opening elements:</p>
-<p>* an opening, where the thickness of the opening is greater or equal to the thickness of the element;
-* a recess or niche, where the thickness of the recess is smaller than the thickness of the element.</p>
+<ul>
+<li>an opening, where the thickness of the opening is greater or equal to the thickness of the element;</li>
+<li>a recess or niche, where the thickness of the recess is smaller than the thickness of the element.</li>
+</ul>
 <p>The attribute <i>PredefinedType</i> should be used to capture the differences,</p>
-<p>* the attribute is set to OPENING for an opening or
-* the attribute is set to RECESS for a recess or niche.
-* If the value for <i>PredefinedType</i> is omitted, or the value is set to NOTDEFINED, no specific information of whether it is an opening or recess shall be assumed.</p>
+<ul>
+<li>the attribute is set to OPENING for an opening or</li>
+<li>the attribute is set to RECESS for a recess or niche.</li>
+<li>If the value for <i>PredefinedType</i> is omitted, or the value is set to NOTDEFINED, no specific information of whether it is an opening or recess shall be assumed.</li>
+</ul>
 <p>An <span class="self-ref">IfcOpeningElement</span> has to be inserted into an <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> by using the <a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a> relationship. It may be filled by an <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a>, <a href="../../ifcsharedbldgelements/lexical/ifcwindow.htm">IfcWindow</a>, or another filling element by using the relationship <i>IfcRelFillsElements</i>. Depending on the type of the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> of the <span class="self-ref">IfcOpeningElement</span> the voiding relationship implies:</p>
-<p>*  if the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>.&lt;emrepresentationidentifier ==&quot;&quot; 'body',=&quot;&quot; then=&quot;&quot; the=&quot;&quot; body=&quot;&quot; shape=&quot;&quot; represntation=&quot;&quot; of=&quot;&quot; the=&quot;&quot; opening=&quot;&quot; has=&quot;&quot; to=&quot;&quot; be=&quot;&quot; subtracted=&quot;&quot; from=&quot;&quot; the=&quot;&quot; body=&quot;&quot; shape=&quot;&quot; representation=&quot;&quot; of=&quot;&quot; the=&quot;&quot; voided=&quot;&quot; element=&quot;&quot; -=&quot;&quot; implicit=&quot;&quot; boolean=&quot;&quot; difference=&quot;&quot; operation.=&quot;&quot; *=&quot;&quot; if=&quot;&quot; the=&quot;&quot;&gt;&lt;emrepresentationidentifier ==&quot;&quot; 'reference',=&quot;&quot; then=&quot;&quot; the=&quot;&quot; reference=&quot;&quot; shape=&quot;&quot; representation=&quot;&quot; of=&quot;&quot; the=&quot;&quot; opening=&quot;&quot; is=&quot;&quot; not=&quot;&quot; subtracted,=&quot;&quot; it=&quot;&quot; is=&quot;&quot; provided=&quot;&quot; in=&quot;&quot; addition=&quot;&quot; to=&quot;&quot; the=&quot;&quot; hole=&quot;&quot; in=&quot;&quot; the=&quot;&quot; body=&quot;&quot; shape=&quot;&quot; representation=&quot;&quot; of=&quot;&quot; the=&quot;&quot; voided=&quot;&quot; element.=&quot;&quot; the=&quot;&quot; <i>ifcopeningelement</i>=&quot;&quot; shall=&quot;&quot; not=&quot;&quot; participate=&quot;&quot; in=&quot;&quot; the=&quot;&quot; containment=&quot;&quot; relationship,=&quot;&quot; i.e.=&quot;&quot; it=&quot;&quot; is=&quot;&quot; not=&quot;&quot; linked=&quot;&quot; directly=&quot;&quot; to=&quot;&quot; the=&quot;&quot; spatial=&quot;&quot; structure=&quot;&quot; of=&quot;&quot; the=&quot;&quot; project.=&quot;&quot; it=&quot;&quot; has=&quot;&quot; a=&quot;&quot; mandatory=&quot;&quot; <i>voidselements</i>=&quot;&quot; inverse=&quot;&quot; relationship=&quot;&quot; pointing=&quot;&quot; to=&quot;&quot; the=&quot;&quot; <i>ifcelement</i>=&quot;&quot; that=&quot;&quot; is=&quot;&quot; contained=&quot;&quot; in=&quot;&quot; the=&quot;&quot; spatial=&quot;&quot; structure.=&quot;&quot; *=&quot;&quot; the=&quot;&quot; inverse=&quot;&quot; relationship=&quot;&quot; <i>containedinstructure</i>=&quot;&quot; shall=&quot;&quot; be=&quot;&quot; nil.=&quot;&quot;&gt; NOTE  See <a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a> for a diagram on how to apply spatial containment and the voiding relationship.</p>
+<ul>
+<li>if the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>.&lt;emRepresentationIdentifier = 'Body', then the Body shape represntation of the opening has to be subtracted from the body shape representation of the voided element - implicit Boolean difference operation.</li>
+<li>if the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>.&lt;emRepresentationIdentifier = 'Reference', then the Reference shape representation of the opening is not subtracted, it is provided in addition to the hole in the Body shape representation of the voided element.</li>
+</ul>
+<p>The <span class="self-ref">IfcOpeningElement</span> shall not participate in the containment relationship, i.e. it is not linked directly to the spatial structure of the project. It has a mandatory <i>VoidsElements</i> inverse relationship pointing to the <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> that is contained in the spatial structure.</p>
+<ul>
+<li>The inverse relationship <i>ContainedInStructure</i> shall be NIL.</li>
+</ul>
+<blockquote class="note">
+<p>NOTE  See <a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a> for a diagram on how to apply spatial containment and the voiding relationship.</p>
+</blockquote>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC1.0</p>
 </blockquote>
@@ -317,7 +333,9 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <tr><td><p class="table">Table 97 &mdash; IfcOpeningElement Product Local Placement</td></tr></table>
 
 <p>The local placement for <span class="self-ref">IfcOpeningElement</span> is defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines the local coordinate system that is referenced by all geometric representations.</p>
-<p>* The <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> should point to the local placement of the same element, which is voided by the opening, i.e. referred to by <i>VoidsElement.RelatingBuildingElement</i>.</p>
+<ul>
+<li>The <i>PlacementRelTo</i> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> should point to the local placement of the same element, which is voided by the opening, i.e. referred to by <i>VoidsElement.RelatingBuildingElement</i>.</li>
+</ul>
 
 <br/><br/>
 
@@ -327,12 +345,16 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <p><i>Swept Solid Representation Type with Horizontal
 Extrusion</i></p>
 <p>The 'SweptSolid' geometric representation of <span class="self-ref">IfcOpeningElement</span>, using horizontal extrusion direction (for walls), is defined using the swept area solid geometry. The following attribute values for the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> holding this geometric representation shall be used:</p>
-<p>* <i>RepresentationIdentifier</i> : 'Body'
-* <i>RepresentationType</i> : 'SweptSolid'</p>
+<ul>
+<li><i>RepresentationIdentifier</i> : 'Body'</li>
+<li><i>RepresentationType</i> : 'SweptSolid'</li>
+</ul>
 <p>The following additional constraints apply to the swept solid representation:</p>
-<p>* **Solid**: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required, the set of <i>IfcShapeRepresentation.Items</i> may include a single, or multiple, instances of <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>.
-* **Profile**: <a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>, <a href="../../ifcprofileresource/lexical/ifccircleprofiledef.htm">IfcCircleProfileDef</a> and <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> shall be supported.
-* **Extrusion**: The profile shall be extruded horizontally (perpendicular to the extrusion direction of the voided element such as for wall openings), or vertically (in the extrusion direction of the voided element such as for for floor openings). If multiple instances of <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> are used, the extrusion direction of each extrusion should be equal.</p>
+<ul>
+<li><strong>Solid</strong>: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required, the set of <i>IfcShapeRepresentation.Items</i> may include a single, or multiple, instances of <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>.</li>
+<li><strong>Profile</strong>: <a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>, <a href="../../ifcprofileresource/lexical/ifccircleprofiledef.htm">IfcCircleProfileDef</a> and <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> shall be supported.</li>
+<li><strong>Extrusion</strong>: The profile shall be extruded horizontally (perpendicular to the extrusion direction of the voided element such as for wall openings), or vertically (in the extrusion direction of the voided element such as for for floor openings). If multiple instances of <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> are used, the extrusion direction of each extrusion should be equal.</li>
+</ul>
 <blockquote class="note">
 <p>NOTE  In case of non-parallel jambs, the shape representation shall be a 'SweptSolid' representation with vertical extrusion.</p>
 </blockquote>
@@ -348,16 +370,22 @@ Extrusion</i></p>
 <blockquote class="note">
 <p>NOTE  Rectangles are now defined centric, the placement location has to be set:</p>
 </blockquote>
-<p>* <a href="../../ifcgeometryresource/lexical/ifccartesianpoint.htm">IfcCartesianPoint</a>(XDim/2,YDim/2)</p>
+<ul>
+<li><a href="../../ifcgeometryresource/lexical/ifccartesianpoint.htm">IfcCartesianPoint</a>(XDim/2,YDim/2)</li>
+</ul>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcopeningelement_recess-layout1.png" alt="&quot;recess&quot;" title="Figure 295 &mdash; Opening with recess extrusion"></td></tr><tr><td><p class="figure">Figure 295 &mdash; Opening with recess extrusion</p></td></tr></table></p>
 <p><i>Swept Solid Representation with Vertical Extrusion</i></p>
 <p>The 'SweptSolid' geometric representation of <span class="self-ref">IfcOpeningElement</span>, using vertical extrusion direction (for walls), is defined using the swept area solid geometry, however the extrusion direction may be vertical, i.e. in case of a wall opening, the extrusion would be in the direction of the wall height. The following attribute values for the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> holding this geometric representation shall be used:</p>
-<p>* <i>RepresentationIdentifier</i> : 'Body'
-* <i>RepresentationType</i> : 'SweptSolid'</p>
+<ul>
+<li><i>RepresentationIdentifier</i> : 'Body'</li>
+<li><i>RepresentationType</i> : 'SweptSolid'</li>
+</ul>
 <p>The following additional constraints apply to the swept solid representation:</p>
-<p>* **Solid**: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required, the set of <i>IfcShapeRepresentation.Items</i> may include a single, or multiple, instances of <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>.
-* **Profile**: <a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>, <a href="../../ifcprofileresource/lexical/ifccircleprofiledef.htm">IfcCircleProfileDef</a> and <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> shall be supported.
-* **Extrusion**: The profile shall be extruded vertically, i.e. for wall openings along the extrusion direction of the voided element.  If multiple instances of <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> are used, the extrusion direction should be equal.</p>
+<ul>
+<li><strong>Solid</strong>: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> is required, the set of <i>IfcShapeRepresentation.Items</i> may include a single, or multiple, instances of <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>.</li>
+<li><strong>Profile</strong>: <a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>, <a href="../../ifcprofileresource/lexical/ifccircleprofiledef.htm">IfcCircleProfileDef</a> and <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> shall be supported.</li>
+<li><strong>Extrusion</strong>: The profile shall be extruded vertically, i.e. for wall openings along the extrusion direction of the voided element.  If multiple instances of <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> are used, the extrusion direction should be equal.</li>
+</ul>
 <p>Vertical extrusions shall be used when an opening or recess has a non rectangular foot print geometry that does not change along the height of the opening or recess.</p>
 <p>Figure 296 shows a vertical extrusion with multiple extrusion bodies for the opening. Each extrusion body has a different extrusion lenght.</p>
 <blockquote class="note">

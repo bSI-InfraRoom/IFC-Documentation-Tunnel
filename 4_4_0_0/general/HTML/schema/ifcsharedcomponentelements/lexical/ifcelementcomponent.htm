@@ -43,10 +43,12 @@
 <p>It is often desirable to model a number of same-shaped element components by means of a single occurrence object, e.g. several bolts within a connection or a row of reinforcement elements. In this IFC release, this is possible by means of multiple mapped representation as documented below.</p>
 <p>To express the multiplicity of element components also on a higher semantic level, a <i>Qto_ElementComponentPatternQuantities</i> should be provided via <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> and contain the number of pieces which are placed by a single <span class="self-ref">IfcElementComponent</span> instance.</p>
 <p class="use-head">
-**Symbolic Representation**</p>
+<strong>Symbolic Representation</strong></p>
 <p>A symbolic representation is defined for a row of components or several rows of components within a single instance of <span class="self-ref">IfcElementComponent</span>. Such rows or arrays may contain possibly large numbers of individual pieces. The product definition shape consists of an <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> with the attribute values</p>
-<p>* <i>RepresentationIdentifier</i> : 'Row'
-* <i>RepresentationType</i> : 'GeometricCurveSet'</p>
+<ul>
+<li><i>RepresentationIdentifier</i> : 'Row'</li>
+<li><i>RepresentationType</i> : 'GeometricCurveSet'</li>
+</ul>
 <p>and one or several curves as geometric items. The curves represent where reference points of the pieces are located. For example, such reference points may be at the heads of mechanical fasteners or at the starting point of the extrusion axis of reinforcement bars. In case of straight components (bolts, nails, staples, straight reinforcement bars, or similar), the local placement of the <span class="self-ref">IfcElementComponent</span> shall be located and oriented such that the local z axis is parallel with the axes of the components. A <i>Qto_ElementComponentPatternQuantities</i> should denote the count of pieces in the row or array and their spacing.</p>
 </details>
 </section>
