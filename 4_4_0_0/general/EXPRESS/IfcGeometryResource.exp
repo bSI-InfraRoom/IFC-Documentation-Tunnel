@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 30 September 2022
+Tuesday, 18 October 2022
 
 *)
 
@@ -105,6 +105,9 @@ TYPE IfcDimensionCount = INTEGER;
 END_TYPE;
 
 TYPE IfcLineIndex = LIST [2:?] OF IfcPositiveInteger;
+END_TYPE;
+
+TYPE IfcWellKnownTextLiteral = STRING;
 END_TYPE;
 
 TYPE IfcBSplineCurveForm = ENUMERATION OF
@@ -582,7 +585,8 @@ ENTITY IfcGeometricRepresentationItem
     ,IfcSurface
     ,IfcTessellatedItem
     ,IfcTextLiteral
-    ,IfcVector))
+    ,IfcVector
+    ,IfcWellKnownText))
  SUBTYPE OF (IfcRepresentationItem);
 END_ENTITY;
 

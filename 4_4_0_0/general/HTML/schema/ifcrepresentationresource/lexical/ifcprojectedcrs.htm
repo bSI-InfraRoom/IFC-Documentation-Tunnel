@@ -11,7 +11,7 @@
     <title>IfcProjectedCRS</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 18 index3 3 index4 8 index5 0; }
+      body { counter-reset: index1 8 index2 18 index3 3 index4 10 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.htm#8.18.3.9");
+    parent.index.location.replace("../../toc-8.htm#8.18.3.11");
 //-->
 </script>
 
@@ -41,6 +41,10 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed from <i>OPTIONAL</i>. <br/></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GeodeticDatum</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasCoordinateOperation</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcrepresentationresource/lexical/ifcprojectedcrs.htm">IfcProjectedCRS</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasWellKnowTextRepresentation</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -61,6 +65,16 @@ A 2D (or with vertical coordinate axis 3D) coordinate reference system used to a
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>G</th></tr>
+<tr><td>4</td><td>VerticalDatum</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
+Name by which the vertical datum is identified. The vertical datum is associated with the height axis of the coordinate reference system and indicates the reference plane and fundamental point defining the origin of a height system. It needs to be provided, if the <i>Name</i> identifier does not unambiguously define the vertical datum as well and if the coordinate reference system is a 3D reference system.
+<blockquote class="examples">
+EXAMPLE  vertical datums include: 
+<ul>
+<li>DHHN92: the German 'Haupthöhennetz'</li>
+<li>EVRS2007; the European Vertical Reference System</li>
+</ul>
+</blockquote>
+</td><td>X</td></tr>
 <tr><td>5</td><td>MapProjection</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 Name by which the map projection is identified.
 <blockquote class="examples">
@@ -108,7 +122,7 @@ NOTE 2  If MapUnit is omited, the unit for the coordinate axes is taken from th
 <details><summary>Attribute inheritance</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcrepresentationresource/lexical/ifccoordinatereferencesystem.htm">IfcCoordinateReferenceSystem</a></i></td></tr>
-<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Name by which the coordinate reference system is identified.
 <blockquote class="note">
 NOTE 1  The name shall be taken from the list recognized by the European Petroleum Survey Group EPSG. It should then be qualified by the EPSG name space, for example as 'EPSG:5555'.
@@ -134,6 +148,14 @@ EXAMPLE  geodetic datums include:
 </ul>
 </blockquote>
 </td><td>X</td></tr>
+<tr><td></td><td><i>HasCoordinateOperation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a><br/>@SourceCRS</td><td>S[0:1]</td><td>Indicates conversion between coordinate systems. In particular it refers to an <a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a> between this coordinate reference system, and another Geographic coordinate reference system.
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasWellKnowTextRepresentation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a><br/>@CoordinateReferenceSystem</td><td>? </td><td>Well known text (string) according to ISO 19162.
+<blockquote class="note">
+NOTE If an EPSG code is given in <i>Name</i>, the WKT (if present) shall be the representation of the EPSG. In case of not matching, the EPSG code in <i>Name</i> takes precedence.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcprojectedcrs.htm">IfcProjectedCRS</a></td></tr>
 <tr><td>4</td><td>VerticalDatum</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 Name by which the vertical datum is identified. The vertical datum is associated with the height axis of the coordinate reference system and indicates the reference plane and fundamental point defining the origin of a height system. It needs to be provided, if the <i>Name</i> identifier does not unambiguously define the vertical datum as well and if the coordinate reference system is a 3D reference system.
 <blockquote class="examples">
@@ -144,9 +166,6 @@ EXAMPLE  vertical datums include:
 </ul>
 </blockquote>
 </td><td>X</td></tr>
-<tr><td></td><td><i>HasCoordinateOperation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a><br/>@SourceCRS</td><td>S[0:1]</td><td>Indicates conversion between coordinate systems. In particular it refers to an <a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a> between this coordinate reference system, and another Geographic coordinate reference system.
-</td><td>X</td></tr>
-<tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcprojectedcrs.htm">IfcProjectedCRS</a></td></tr>
 <tr><td>5</td><td>MapProjection</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 Name by which the map projection is identified.
 <blockquote class="examples">
@@ -187,6 +206,7 @@ NOTE 2  If MapUnit is omited, the unit for the coordinate axes is taken from th
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;MapUnit&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcnamedunit.htm">IfcNamedUnit</a>&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;VerticalDatum&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;MapProjection&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;MapZone&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
@@ -196,6 +216,7 @@ NOTE 2  If MapUnit is omited, the unit for the coordinate axes is taken from th
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcProjectedCRS<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcrepresentationresource/lexical/ifccoordinatereferencesystem.htm">IfcCoordinateReferenceSystem</a>)<b>;</b><br/>
+&nbsp;&nbsp;VerticalDatum : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>;<br/>
 &nbsp;&nbsp;MapProjection : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>;<br/>
 &nbsp;&nbsp;MapZone : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>;<br/>
 &nbsp;&nbsp;MapUnit : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcnamedunit.htm">IfcNamedUnit</a>;<br/>

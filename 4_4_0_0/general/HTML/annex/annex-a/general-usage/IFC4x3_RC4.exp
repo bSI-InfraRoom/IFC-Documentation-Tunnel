@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 30 September 2022
+Tuesday, 18 October 2022
 
 *)
 
@@ -465,6 +465,9 @@ TYPE IfcWarpingConstantMeasure = REAL;
 END_TYPE;
 
 TYPE IfcWarpingMomentMeasure = REAL;
+END_TYPE;
+
+TYPE IfcWellKnownTextLiteral = STRING;
 END_TYPE;
 
 TYPE IfcActionRequestTypeEnum = ENUMERATION OF
@@ -5641,20 +5644,24 @@ END_ENTITY;
 
 ENTITY IfcCoordinateOperation
  ABSTRACT SUPERTYPE OF (ONEOF
-    (IfcMapConversion));
+    (IfcMapConversion
+    ,IfcRigidOperation));
 	SourceCRS : IfcCoordinateReferenceSystemSelect;
 	TargetCRS : IfcCoordinateReferenceSystem;
 END_ENTITY;
 
 ENTITY IfcCoordinateReferenceSystem
  ABSTRACT SUPERTYPE OF (ONEOF
-    (IfcProjectedCRS));
-	Name : IfcLabel;
+    (IfcGeographicCRS
+    ,IfcProjectedCRS));
+	Name : OPTIONAL IfcLabel;
 	Description : OPTIONAL IfcText;
 	GeodeticDatum : OPTIONAL IfcIdentifier;
-	VerticalDatum : OPTIONAL IfcIdentifier;
  INVERSE
 	HasCoordinateOperation : SET [0:1] OF IfcCoordinateOperation FOR SourceCRS;
+	HasWellKnowTextRepresentation : IfcWellKnownText FOR CoordinateReferenceSystem;
+ WHERE
+	CoordinateSystemSpecified : EXISTS(SELF.Name) || EXISTS(SELF.HasWellKnowTextRepresentation);
 END_ENTITY;
 
 ENTITY IfcCosineSpiral
@@ -7433,6 +7440,16 @@ ENTITY IfcGeoScienceObservation
 	HasObjectType : (PredefinedType <> IfcGeoScienceObservationTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
 
+ENTITY IfcGeographicCRS
+ SUBTYPE OF (IfcCoordinateReferenceSystem);
+	PrimeMeridian : OPTIONAL IfcIdentifier;
+	AngleUnit : OPTIONAL IfcNamedUnit;
+	HeightUnit : OPTIONAL IfcNamedUnit;
+ WHERE
+	AngleUnitIsPlaneAngle : NOT EXISTS(SELF.AngleUnit) OR SELF.AngleUnit.UnitType = IfcUnitEnum.PLANEANGLEUNIT;
+	HeightUnitIsLength : NOT EXISTS(SELF.HeightUnit) OR SELF.HeightUnit.UnitType = IfcUnitEnum.LENGTHUNIT;
+END_ENTITY;
+
 ENTITY IfcGeographicElement
  SUBTYPE OF (IfcElement);
 	PredefinedType : OPTIONAL IfcGeographicElementTypeEnum;
@@ -7500,7 +7517,8 @@ ENTITY IfcGeometricRepresentationItem
     ,IfcSurface
     ,IfcTessellatedItem
     ,IfcTextLiteral
-    ,IfcVector))
+    ,IfcVector
+    ,IfcWellKnownText))
  SUBTYPE OF (IfcRepresentationItem);
 END_ENTITY;
 
@@ -8104,6 +8122,8 @@ ENTITY IfcManifoldSolidBrep
 END_ENTITY;
 
 ENTITY IfcMapConversion
+ SUPERTYPE OF (ONEOF
+    (IfcMapConversionScaled))
  SUBTYPE OF (IfcCoordinateOperation);
 	Eastings : IfcLengthMeasure;
 	Northings : IfcLengthMeasure;
@@ -8111,8 +8131,15 @@ ENTITY IfcMapConversion
 	XAxisAbscissa : OPTIONAL IfcReal;
 	XAxisOrdinate : OPTIONAL IfcReal;
 	Scale : OPTIONAL IfcReal;
-	ScaleY : OPTIONAL IfcReal;
-	ScaleZ : OPTIONAL IfcReal;
+ WHERE
+	OnlyProjectedCRS : 'IFC4x3.IFCPROJECTEDCRS' IN TYPEOF(SELF\IfcCoordinateOperation.TargetCRS);
+END_ENTITY;
+
+ENTITY IfcMapConversionScaled
+ SUBTYPE OF (IfcMapConversion);
+	ScaleX : IfcReal;
+	ScaleY : IfcReal;
+	ScaleZ : IfcReal;
 END_ENTITY;
 
 ENTITY IfcMappedItem
@@ -9288,6 +9315,7 @@ END_ENTITY;
 
 ENTITY IfcProjectedCRS
  SUBTYPE OF (IfcCoordinateReferenceSystem);
+	VerticalDatum : OPTIONAL IfcIdentifier;
 	MapProjection : OPTIONAL IfcIdentifier;
 	MapZone : OPTIONAL IfcIdentifier;
 	MapUnit : OPTIONAL IfcNamedUnit;
@@ -10496,6 +10524,21 @@ ENTITY IfcRightCircularCylinder
  SUBTYPE OF (IfcCsgPrimitive3D);
 	Height : IfcPositiveLengthMeasure;
 	Radius : IfcPositiveLengthMeasure;
+END_ENTITY;
+
+ENTITY IfcRigidOperation
+ SUBTYPE OF (IfcCoordinateOperation);
+	FirstCoordinate : IfcMeasureValue;
+	SecondCoordinate : IfcMeasureValue;
+	Height : OPTIONAL IfcLengthMeasure;
+ WHERE
+	CoordinateType : ('IFC4X4.IFCLENGTHMEASURE' IN TYPEOF(FirstCoordinate)
+OR
+'IFC4X4.IFCPLANEANGLEMEASURE' IN TYPEOF(FirstCoordinate))
+AND
+('IFC4X4.IFCLENGTHMEASURE' IN TYPEOF(SecondCoordinate)
+OR
+'IFC4X4.IFCPLANEANGLEMEASURE' IN TYPEOF(SecondCoordinate));
 END_ENTITY;
 
 ENTITY IfcRoad
@@ -12567,6 +12610,12 @@ END_ENTITY;
 
 ENTITY IfcWaterStratum
  SUBTYPE OF (IfcGeotechnicalStratum);
+END_ENTITY;
+
+ENTITY IfcWellKnownText
+ SUBTYPE OF (IfcGeometricRepresentationItem);
+	WellKnownText : IfcWellKnownTextLiteral;
+	CoordinateReferenceSystem : OPTIONAL IfcCoordinateReferenceSystem;
 END_ENTITY;
 
 ENTITY IfcWindow

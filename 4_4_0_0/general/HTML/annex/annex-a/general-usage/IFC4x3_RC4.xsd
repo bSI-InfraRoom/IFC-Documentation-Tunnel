@@ -2047,7 +2047,6 @@ of the material. The information contained in this document is subject to change
 				<xs:attribute name="Name" type="ifc:IfcLabel" use="optional"/>
 				<xs:attribute name="Description" type="ifc:IfcText" use="optional"/>
 				<xs:attribute name="GeodeticDatum" type="ifc:IfcIdentifier" use="optional"/>
-				<xs:attribute name="VerticalDatum" type="ifc:IfcIdentifier" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -3840,6 +3839,18 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:element name="IfcGeographicCRS" type="ifc:IfcGeographicCRS" substitutionGroup="ifc:IfcCoordinateReferenceSystem" nillable="true"/>
+	<xs:complexType name="IfcGeographicCRS">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcCoordinateReferenceSystem">
+				<xs:sequence>
+					<xs:element name="AngleUnit" type="ifc:IfcNamedUnit" nillable="true" minOccurs="0"/>
+					<xs:element name="HeightUnit" type="ifc:IfcNamedUnit" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="PrimeMeridian" type="ifc:IfcIdentifier" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="IfcGeographicElement" type="ifc:IfcGeographicElement" substitutionGroup="ifc:IfcElement" nillable="true"/>
 	<xs:complexType name="IfcGeographicElement">
 		<xs:complexContent>
@@ -4749,6 +4760,14 @@ of the material. The information contained in this document is subject to change
 				<xs:attribute name="XAxisAbscissa" type="ifc:IfcReal" use="optional"/>
 				<xs:attribute name="XAxisOrdinate" type="ifc:IfcReal" use="optional"/>
 				<xs:attribute name="Scale" type="ifc:IfcReal" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcMapConversionScaled" type="ifc:IfcMapConversionScaled" substitutionGroup="ifc:IfcMapConversion" nillable="true"/>
+	<xs:complexType name="IfcMapConversionScaled">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcMapConversion">
+				<xs:attribute name="ScaleX" type="ifc:IfcReal" use="optional"/>
 				<xs:attribute name="ScaleY" type="ifc:IfcReal" use="optional"/>
 				<xs:attribute name="ScaleZ" type="ifc:IfcReal" use="optional"/>
 			</xs:extension>
@@ -6332,6 +6351,7 @@ of the material. The information contained in this document is subject to change
 				<xs:sequence>
 					<xs:element name="MapUnit" type="ifc:IfcNamedUnit" nillable="true" minOccurs="0"/>
 				</xs:sequence>
+				<xs:attribute name="VerticalDatum" type="ifc:IfcIdentifier" use="optional"/>
 				<xs:attribute name="MapProjection" type="ifc:IfcIdentifier" use="optional"/>
 				<xs:attribute name="MapZone" type="ifc:IfcIdentifier" use="optional"/>
 			</xs:extension>
@@ -8048,6 +8068,26 @@ of the material. The information contained in this document is subject to change
 			<xs:extension base="ifc:IfcCsgPrimitive3D">
 				<xs:attribute name="Height" type="ifc:IfcPositiveLengthMeasure" use="optional"/>
 				<xs:attribute name="Radius" type="ifc:IfcPositiveLengthMeasure" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcRigidOperation" type="ifc:IfcRigidOperation" substitutionGroup="ifc:IfcCoordinateOperation" nillable="true"/>
+	<xs:complexType name="IfcRigidOperation">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcCoordinateOperation">
+				<xs:sequence>
+					<xs:element name="FirstCoordinate">
+						<xs:complexType>
+							<xs:group ref="ifc:IfcMeasureValue"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="SecondCoordinate">
+						<xs:complexType>
+							<xs:group ref="ifc:IfcMeasureValue"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="Height" type="ifc:IfcLengthMeasure" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -10618,6 +10658,17 @@ of the material. The information contained in this document is subject to change
 	<xs:complexType name="IfcWaterStratum">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcGeotechnicalStratum"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcWellKnownText" type="ifc:IfcWellKnownText" substitutionGroup="ifc:IfcGeometricRepresentationItem" nillable="true"/>
+	<xs:complexType name="IfcWellKnownText">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcGeometricRepresentationItem">
+				<xs:sequence>
+					<xs:element name="CoordinateReferenceSystem" type="ifc:IfcCoordinateReferenceSystem" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="WellKnownText" type="ifc:IfcWellKnownTextLiteral" use="optional"/>
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="IfcWindow" type="ifc:IfcWindow" substitutionGroup="ifc:IfcBuiltElement" nillable="true"/>
@@ -15393,6 +15444,9 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcWarpingMomentMeasure">
 		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="IfcWellKnownTextLiteral">
+		<xs:restriction base="xs:normalizedString"/>
 	</xs:simpleType>
 	<!-- base entity and entity attribute declaration (for embeded base schema definitions) -->
 	<xs:element name="Entity" type="ifc:Entity" abstract="true" nillable="true"/>

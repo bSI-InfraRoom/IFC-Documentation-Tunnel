@@ -11479,7 +11479,7 @@ History: New in IFC4" TemplateType="pset_typedrivenoverride" ApplicableEntity="I
 						<IfcSimplePropertyTemplate xsi:nil="true" href="DataConnectionType_2cODWDnK9A9RCBk2DE0YiP" />
 					</HasPropertyTemplates>
 				</IfcPropertySetTemplate>
-				<IfcPropertySetTemplate GlobalId="0CRTLokRH2J9JcHKqarM_t" Name="Pset_KerbCommon" Description="Properties for a kerb." TemplateType="pset_typedrivenoverride" ApplicableEntity="IfcKerb,IfcKerbType">
+				<IfcPropertySetTemplate GlobalId="0CRTLokRH2J9JcHKqarM_t" Name="Pset_KerbCommon" Description="Properties for a kerb." TemplateType="pset_typedrivenoverride" ApplicableEntity="IfcKerb">
 					<HasPropertyTemplates>
 						<IfcSimplePropertyTemplate xsi:nil="true" href="CombinedKerbGutter_2XVviYqS9BKeFimfQfNm7U" />
 						<IfcSimplePropertyTemplate xsi:nil="true" href="Upstand_3VCJVzwh9CCfDp_58_XB7_" />

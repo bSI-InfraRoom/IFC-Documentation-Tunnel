@@ -11,7 +11,7 @@
     <title>IfcMapConversion</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 18 index3 3 index4 4 index5 0; }
+      body { counter-reset: index1 8 index2 18 index3 3 index4 5 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.htm#8.18.3.5");
+    parent.index.location.replace("../../toc-8.htm#8.18.3.6");
 //-->
 </script>
 
@@ -40,6 +40,10 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcrepresentationresource/lexical/ifcmapconversion.htm">IfcMapConversion</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ScaleY</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ScaleZ</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcrepresentationresource/lexical/ifcmapconversion.htm">IfcMapConversion</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ScaleY</td><td>X</td><td></td><td>DELETED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ScaleZ</td><td>X</td><td></td><td>DELETED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -99,20 +103,22 @@ NOTE 1 for right-handed Cartesian coordinate systems this would establish the l
 <tr><td>8</td><td>Scale</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
 Scale to be used, when the units of the CRS are not identical to the units of the engineering coordinate system. If omited, the value of 1.0 is assumed.
 </td><td>X</td></tr>
-<tr><td>9</td><td>ScaleY</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
-Scale Y by which the length measures in local engineering CS have to be multiplied to get map coordinates
-</td><td>X</td></tr>
-<tr><td>10</td><td>ScaleZ</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
-Scale Z by which the length measures in local engineering CS have to be multiplied to get map coordinates
-</td><td>X</td></tr>
 </table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>OnlyProjectedCRS</td><td><a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a>.TargetCRS is of type <a href="../../ifcrepresentationresource/lexical/ifcgeographiccrs.htm">IfcGeographicCRS</a>.
+</td></tr>
+</table>
+
 </details>
 </section>
 <section>
 <h5 class="num">Inherited definitions from supertypes</h5>
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcmapconversion.png" usemap="#f"/>
 <map name="f">
-<area shape="rect" coords="6,6,218,18" href="../../../schema/ifcrepresentationresource/lexical/ifccoordinateoperation.htm" alt="IfcCoordinateOperation" />
+<area shape="rect" coords="30,54,218,66" href="../../../schema/ifcrepresentationresource/lexical/ifcmapconversionscaled.htm" alt="IfcMapConversionScaled" />
+<area shape="rect" coords="6,6,242,18" href="../../../schema/ifcrepresentationresource/lexical/ifccoordinateoperation.htm" alt="IfcCoordinateOperation" />
 </map>
 </details>
 <details><summary>Attribute inheritance</summary><table class="attributes">
@@ -164,12 +170,6 @@ NOTE 1 for right-handed Cartesian coordinate systems this would establish the l
 <tr><td>8</td><td>Scale</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
 Scale to be used, when the units of the CRS are not identical to the units of the engineering coordinate system. If omited, the value of 1.0 is assumed.
 </td><td>X</td></tr>
-<tr><td>9</td><td>ScaleY</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
-Scale Y by which the length measures in local engineering CS have to be multiplied to get map coordinates
-</td><td>X</td></tr>
-<tr><td>10</td><td>ScaleZ</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
-Scale Z by which the length measures in local engineering CS have to be multiplied to get map coordinates
-</td><td>X</td></tr>
 </table>
 </details>
 </section>
@@ -186,14 +186,13 @@ Scale Z by which the length measures in local engineering CS have to be multipli
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;XAxisAbscissa&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;XAxisOrdinate&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Scale&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ScaleY&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ScaleZ&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcMapConversion<br/>
+&nbsp;<span class="keyword">SUPERTYPE OF</span>(<a href="../../ifcrepresentationresource/lexical/ifcmapconversionscaled.htm">IfcMapConversionScaled</a>)<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a>)<b>;</b><br/>
 &nbsp;&nbsp;Eastings : <a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a>;<br/>
 &nbsp;&nbsp;Northings : <a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a>;<br/>
@@ -201,9 +200,8 @@ Scale Z by which the length measures in local engineering CS have to be multipli
 &nbsp;&nbsp;XAxisAbscissa : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
 &nbsp;&nbsp;XAxisOrdinate : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
 &nbsp;&nbsp;Scale : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
-&nbsp;&nbsp;ScaleY : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
-&nbsp;&nbsp;ScaleZ : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
-<span class="keyword">END_ENTITY;</span><br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;OnlyProjectedCRS : &#39;IFC4x3.<a href="../../ifcrepresentationresource/lexical/ifcprojectedcrs.htm">IfcProjectedCRS</a>&#39; IN TYPEOF(SELF\<a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a>.TargetCRS);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcrepresentationresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

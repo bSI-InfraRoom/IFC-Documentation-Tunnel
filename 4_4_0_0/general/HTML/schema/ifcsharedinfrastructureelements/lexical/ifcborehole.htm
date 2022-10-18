@@ -35,17 +35,22 @@
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcborehole.htm">IfcBorehole</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasSurfaceFeatures</td><td></td><td></td><td>ADDED</td><td></td></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-update-to-ifc4x4/index.htm">IFC4X3 Update to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcborehole.htm">IfcBorehole</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PredefinedType</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>Representation of the concept of a linear geological and geotechnical model, usually an interpretation but sometimes created direct from ground penetrating measurement<br>
-The assembly may contain one of more strata and other elements such as capping and lining. The contained subtypes of <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a> will have shape representations made from straight or bent tubes reflecting the bore diameter, or discs if a 'Yabuki' top surface model is being used.</p>
+<details open="open"><summary>Entity definition</summary><p>A Borehole is the generalized term for any narrow shaft drilled in the ground, either vertically, horizontally, or inclined.</p>
 <blockquote class="note">
-<p>NOTE Definition from OGC GeoSciML: A Borehole is the generalized term for any narrow shaft drilled in the ground, either vertically, horizontally, or inclined.</p>
+<p>NOTE  In the context of ground models, IfcBorehole is mainly used as a space where observations of the ground conditions are made, and results from tests in place (in-situ) or on samples collected from the borehole are located.</p>
+</blockquote>
+<blockquote class="note">
+<p>NOTE  The IfcBorehole may aggregate other elements such as installations and lining and have IfcGeoScienceObservation instances assigned to represent e.g. intervals and points. Further, the IfcGeoScienceObservation instances can represent the ground classification described by IfcGeoScienceModel, and link a certain part (interval) of the borehole to an IfcGeoScienceFeature like a geotechnical unit.</p>
+</blockquote>
+<blockquote class="note">
+<p>NOTE  The assembly may also contain one or more strata. The contained subtypes of <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a> will have shape representations made from straight or bent tubes reflecting the bore diameter, or discs if a 'Yabuki' top surface model is being used.</p>
 </blockquote>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">

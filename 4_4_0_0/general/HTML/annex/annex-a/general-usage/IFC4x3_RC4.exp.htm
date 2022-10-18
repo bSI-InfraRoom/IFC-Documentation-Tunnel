@@ -435,6 +435,9 @@ OR
 <a name="ifcwarpingmomentmeasure" />
 <span class="keyword">TYPE</span> IfcWarpingMomentMeasure = <span class="self-ref">REAL</span>;<br/><span class="keyword">END_TYPE;</span><br/>
 <br/>
+<a name="ifcwellknowntextliteral" />
+<span class="keyword">TYPE</span> IfcWellKnownTextLiteral = <span class="self-ref">STRING</span>;<br/><span class="keyword">END_TYPE;</span><br/>
+<br/>
 <a name="ifcactionrequesttypeenum" />
 <span class="keyword">TYPE</span> IfcActionRequestTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
 &nbsp;EMAIL, <br/>&nbsp;FAX, <br/>&nbsp;PHONE, <br/>&nbsp;POST, <br/>&nbsp;VERBAL, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
@@ -3247,21 +3250,22 @@ SELF\IfcCartesianTransformationOperator.Axis2,Axis3);<br/>
 <br/>
 <a name="ifccoordinateoperation" />
 <span class="keyword">ENTITY</span> IfcCoordinateOperation<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="#ifcmapconversion">IfcMapConversion</a>)<b>;</b><br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcmapconversion">IfcMapConversion</a>, <a href="#ifcrigidoperation">IfcRigidOperation</a>))<b>;</b><br/>
 &nbsp;&nbsp;SourceCRS : <a href="#ifccoordinatereferencesystemselect">IfcCoordinateReferenceSystemSelect</a>;<br/>
 &nbsp;&nbsp;TargetCRS : <a href="#ifccoordinatereferencesystem">IfcCoordinateReferenceSystem</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifccoordinatereferencesystem" />
 <span class="keyword">ENTITY</span> IfcCoordinateReferenceSystem<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="#ifcprojectedcrs">IfcProjectedCRS</a>)<b>;</b><br/>
-&nbsp;&nbsp;Name : <a href="#ifclabel">IfcLabel</a>;<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcgeographiccrs">IfcGeographicCRS</a>, <a href="#ifcprojectedcrs">IfcProjectedCRS</a>))<b>;</b><br/>
+&nbsp;&nbsp;Name : <span class="keyword">OPTIONAL</span> <a href="#ifclabel">IfcLabel</a>;<br/>
 &nbsp;&nbsp;Description : <span class="keyword">OPTIONAL</span> <a href="#ifctext">IfcText</a>;<br/>
 &nbsp;&nbsp;GeodeticDatum : <span class="keyword">OPTIONAL</span> <a href="#ifcidentifier">IfcIdentifier</a>;<br/>
-&nbsp;&nbsp;VerticalDatum : <span class="keyword">OPTIONAL</span> <a href="#ifcidentifier">IfcIdentifier</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;HasCoordinateOperation : <span class="keyword">SET</span> [0:1] OF <a href="#ifccoordinateoperation">IfcCoordinateOperation</a> <span class="keyword">FOR</span> SourceCRS;<br/>
-<span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;HasWellKnowTextRepresentation : <a href="#ifcwellknowntext">IfcWellKnownText</a> <span class="keyword">FOR</span> CoordinateReferenceSystem;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;CoordinateSystemSpecified : EXISTS(SELF.Name) || EXISTS(SELF.HasWellKnowTextRepresentation);<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifccosinespiral" />
 <span class="keyword">ENTITY</span> IfcCosineSpiral<br/>
@@ -4794,6 +4798,15 @@ EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="key
 &nbsp;<span class="keyword">WHERE</span><br/>
 &nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="#ifcgeoscienceobservationtypeenum">IfcGeoScienceObservationTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
+<a name="ifcgeographiccrs" />
+<span class="keyword">ENTITY</span> IfcGeographicCRS<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifccoordinatereferencesystem">IfcCoordinateReferenceSystem</a>)<b>;</b><br/>
+&nbsp;&nbsp;PrimeMeridian : <span class="keyword">OPTIONAL</span> <a href="#ifcidentifier">IfcIdentifier</a>;<br/>
+&nbsp;&nbsp;AngleUnit : <span class="keyword">OPTIONAL</span> <a href="#ifcnamedunit">IfcNamedUnit</a>;<br/>
+&nbsp;&nbsp;HeightUnit : <span class="keyword">OPTIONAL</span> <a href="#ifcnamedunit">IfcNamedUnit</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;AngleUnitIsPlaneAngle : NOT EXISTS(SELF.AngleUnit) OR SELF.AngleUnit.UnitType = <a href="#ifcunitenum">IfcUnitEnum</a>.PLANEANGLEUNIT;<br/>&nbsp;&nbsp;HeightUnitIsLength : NOT EXISTS(SELF.HeightUnit) OR SELF.HeightUnit.UnitType = <a href="#ifcunitenum">IfcUnitEnum</a>.LENGTHUNIT;<br/><span class="keyword">END_ENTITY;</span><br/>
+<br/>
 <a name="ifcgeographicelement" />
 <span class="keyword">ENTITY</span> IfcGeographicElement<br/>
 &nbsp;<span class="keyword">SUPERTYPE</span><br/>
@@ -4836,7 +4849,7 @@ EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="key
 <br/>
 <a name="ifcgeometricrepresentationitem" />
 <span class="keyword">ENTITY</span> IfcGeometricRepresentationItem<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcannotationfillarea">IfcAnnotationFillArea</a>, <a href="#ifcbooleanresult">IfcBooleanResult</a>, <a href="#ifcboundingbox">IfcBoundingBox</a>, <a href="#ifccartesianpointlist">IfcCartesianPointList</a>, <a href="#ifccartesiantransformationoperator">IfcCartesianTransformationOperator</a>, <a href="#ifccsgprimitive3d">IfcCsgPrimitive3D</a>, <a href="#ifccurve">IfcCurve</a>, <a href="#ifcdirection">IfcDirection</a>, <a href="#ifcfacebasedsurfacemodel">IfcFaceBasedSurfaceModel</a>, <a href="#ifcfillareastylehatching">IfcFillAreaStyleHatching</a>, <a href="#ifcfillareastyletiles">IfcFillAreaStyleTiles</a>, <a href="#ifcgeometricset">IfcGeometricSet</a>, <a href="#ifchalfspacesolid">IfcHalfSpaceSolid</a>, <a href="#ifclightsource">IfcLightSource</a>, <a href="#ifcplacement">IfcPlacement</a>, <a href="#ifcplanarextent">IfcPlanarExtent</a>, <a href="#ifcpoint">IfcPoint</a>, <a href="#ifcsectionedspine">IfcSectionedSpine</a>, <a href="#ifcsegment">IfcSegment</a>, <a href="#ifcshellbasedsurfacemodel">IfcShellBasedSurfaceModel</a>, <a href="#ifcsolidmodel">IfcSolidModel</a>, <a href="#ifcsurface">IfcSurface</a>, <a href="#ifctessellateditem">IfcTessellatedItem</a>, <a href="#ifctextliteral">IfcTextLiteral</a>, <a href="#ifcvector">IfcVector</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcannotationfillarea">IfcAnnotationFillArea</a>, <a href="#ifcbooleanresult">IfcBooleanResult</a>, <a href="#ifcboundingbox">IfcBoundingBox</a>, <a href="#ifccartesianpointlist">IfcCartesianPointList</a>, <a href="#ifccartesiantransformationoperator">IfcCartesianTransformationOperator</a>, <a href="#ifccsgprimitive3d">IfcCsgPrimitive3D</a>, <a href="#ifccurve">IfcCurve</a>, <a href="#ifcdirection">IfcDirection</a>, <a href="#ifcfacebasedsurfacemodel">IfcFaceBasedSurfaceModel</a>, <a href="#ifcfillareastylehatching">IfcFillAreaStyleHatching</a>, <a href="#ifcfillareastyletiles">IfcFillAreaStyleTiles</a>, <a href="#ifcgeometricset">IfcGeometricSet</a>, <a href="#ifchalfspacesolid">IfcHalfSpaceSolid</a>, <a href="#ifclightsource">IfcLightSource</a>, <a href="#ifcplacement">IfcPlacement</a>, <a href="#ifcplanarextent">IfcPlanarExtent</a>, <a href="#ifcpoint">IfcPoint</a>, <a href="#ifcsectionedspine">IfcSectionedSpine</a>, <a href="#ifcsegment">IfcSegment</a>, <a href="#ifcshellbasedsurfacemodel">IfcShellBasedSurfaceModel</a>, <a href="#ifcsolidmodel">IfcSolidModel</a>, <a href="#ifcsurface">IfcSurface</a>, <a href="#ifctessellateditem">IfcTessellatedItem</a>, <a href="#ifctextliteral">IfcTextLiteral</a>, <a href="#ifcvector">IfcVector</a>, <a href="#ifcwellknowntext">IfcWellKnownText</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcrepresentationitem">IfcRepresentationItem</a>)<b>;</b><br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
@@ -5431,6 +5444,7 @@ EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="key
 <br/>
 <a name="ifcmapconversion" />
 <span class="keyword">ENTITY</span> IfcMapConversion<br/>
+&nbsp;<span class="keyword">SUPERTYPE OF</span>(<a href="#ifcmapconversionscaled">IfcMapConversionScaled</a>)<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifccoordinateoperation">IfcCoordinateOperation</a>)<b>;</b><br/>
 &nbsp;&nbsp;Eastings : <a href="#ifclengthmeasure">IfcLengthMeasure</a>;<br/>
 &nbsp;&nbsp;Northings : <a href="#ifclengthmeasure">IfcLengthMeasure</a>;<br/>
@@ -5438,8 +5452,15 @@ EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="key
 &nbsp;&nbsp;XAxisAbscissa : <span class="keyword">OPTIONAL</span> <a href="#ifcreal">IfcReal</a>;<br/>
 &nbsp;&nbsp;XAxisOrdinate : <span class="keyword">OPTIONAL</span> <a href="#ifcreal">IfcReal</a>;<br/>
 &nbsp;&nbsp;Scale : <span class="keyword">OPTIONAL</span> <a href="#ifcreal">IfcReal</a>;<br/>
-&nbsp;&nbsp;ScaleY : <span class="keyword">OPTIONAL</span> <a href="#ifcreal">IfcReal</a>;<br/>
-&nbsp;&nbsp;ScaleZ : <span class="keyword">OPTIONAL</span> <a href="#ifcreal">IfcReal</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;OnlyProjectedCRS : &#39;IFC4x3.<a href="#ifcprojectedcrs">IfcProjectedCRS</a>&#39; IN TYPEOF(SELF\<a href="#ifccoordinateoperation">IfcCoordinateOperation</a>.TargetCRS);<br/><span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifcmapconversionscaled" />
+<span class="keyword">ENTITY</span> IfcMapConversionScaled<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcmapconversion">IfcMapConversion</a>)<b>;</b><br/>
+&nbsp;&nbsp;ScaleX : <a href="#ifcreal">IfcReal</a>;<br/>
+&nbsp;&nbsp;ScaleY : <a href="#ifcreal">IfcReal</a>;<br/>
+&nbsp;&nbsp;ScaleZ : <a href="#ifcreal">IfcReal</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcmappeditem" />
@@ -6530,6 +6551,7 @@ EXISTS (Country);<br/><span class="keyword">END_ENTITY;</span><br/>
 <a name="ifcprojectedcrs" />
 <span class="keyword">ENTITY</span> IfcProjectedCRS<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifccoordinatereferencesystem">IfcCoordinateReferenceSystem</a>)<b>;</b><br/>
+&nbsp;&nbsp;VerticalDatum : <span class="keyword">OPTIONAL</span> <a href="#ifcidentifier">IfcIdentifier</a>;<br/>
 &nbsp;&nbsp;MapProjection : <span class="keyword">OPTIONAL</span> <a href="#ifcidentifier">IfcIdentifier</a>;<br/>
 &nbsp;&nbsp;MapZone : <span class="keyword">OPTIONAL</span> <a href="#ifcidentifier">IfcIdentifier</a>;<br/>
 &nbsp;&nbsp;MapUnit : <span class="keyword">OPTIONAL</span> <a href="#ifcnamedunit">IfcNamedUnit</a>;<br/>
@@ -7671,6 +7693,21 @@ OR <br/>
 &nbsp;&nbsp;Height : <a href="#ifcpositivelengthmeasure">IfcPositiveLengthMeasure</a>;<br/>
 &nbsp;&nbsp;Radius : <a href="#ifcpositivelengthmeasure">IfcPositiveLengthMeasure</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifcrigidoperation" />
+<span class="keyword">ENTITY</span> IfcRigidOperation<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifccoordinateoperation">IfcCoordinateOperation</a>)<b>;</b><br/>
+&nbsp;&nbsp;FirstCoordinate : <a href="#ifcmeasurevalue">IfcMeasureValue</a>;<br/>
+&nbsp;&nbsp;SecondCoordinate : <a href="#ifcmeasurevalue">IfcMeasureValue</a>;<br/>
+&nbsp;&nbsp;Height : <span class="keyword">OPTIONAL</span> <a href="#ifclengthmeasure">IfcLengthMeasure</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;CoordinateType : (&#39;IFCMEASURERESOURCE.<a href="#ifclengthmeasure">IfcLengthMeasure</a>&#39; IN TYPEOF(FirstCoordinate)<br/>
+OR<br/>
+&#39;IFCMEASURERESOURCE.<a href="#ifcplaneanglemeasure">IfcPlaneAngleMeasure</a>&#39; IN TYPEOF(FirstCoordinate))<br/>
+AND<br/>
+(&#39;IFCMEASURERESOURCE.<a href="#ifclengthmeasure">IfcLengthMeasure</a>&#39; IN TYPEOF(SecondCoordinate)<br/>
+OR<br/>
+&#39;IFCMEASURERESOURCE.<a href="#ifcplaneanglemeasure">IfcPlaneAngleMeasure</a>&#39; IN TYPEOF(SecondCoordinate));<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcroad" />
 <span class="keyword">ENTITY</span> IfcRoad<br/>
@@ -9629,6 +9666,13 @@ OR<br/>
 <a name="ifcwaterstratum" />
 <span class="keyword">ENTITY</span> IfcWaterStratum<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcgeotechnicalstratum">IfcGeotechnicalStratum</a>)<b>;</b><br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifcwellknowntext" />
+<span class="keyword">ENTITY</span> IfcWellKnownText<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcgeometricrepresentationitem">IfcGeometricRepresentationItem</a>)<b>;</b><br/>
+&nbsp;&nbsp;WellKnownText : <a href="#ifcwellknowntextliteral">IfcWellKnownTextLiteral</a>;<br/>
+&nbsp;&nbsp;CoordinateReferenceSystem : <span class="keyword">OPTIONAL</span> <a href="#ifccoordinatereferencesystem">IfcCoordinateReferenceSystem</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcwindow" />
