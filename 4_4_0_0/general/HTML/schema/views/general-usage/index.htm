@@ -27,7 +27,7 @@
 <h3><a id="general usage" name="general usage">1.1 General Usage</a></h3>
 <table class="gridtable">
 <tr><th>Code</th><th>Version</th><th>Status</th><th>Author</th><th>Copyright</th></tr>
-<tr><td>IFC4x3_RC4</td><td>4x3 RC4</td><td>Draft</td><td></td><td>&copy; 1996-2021 buildingSMART International Ltd.</td></tr>
+<tr><td>IFC4x3</td><td>4.3.0.0</td><td>Draft</td><td></td><td>&copy; 1996-2021 buildingSMART International Ltd.</td></tr>
 </table>
 <p class="std">
 The following are within the entire scope of this release of IFC:</p>
@@ -68,6 +68,12 @@ The following are within the entire scope of this release of IFC:</p>
 * full project structure and component breakdown structures outside of building engineering, but providing a baseline for civil engineering to be extended in future releases; 
 * behavioral aspects of components and other information items.
 </code></pre>
+<h5>IfcSolidStratum</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+</tr>
+<tr><th>(Query)</th><th></th><th></th></tr>
+<tr><td>Topography Geometry</td><td>\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation<br>\<a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>.Name<br></td><td>The word or group of words by which the product representation is known.</td></tr></table>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
 </tr>
@@ -3128,7 +3134,10 @@ Extrusion</i></p>
 <p>If referenced, the site is the root of the spatial structure.</p>
 <p>If referenced, the building is the root of the spatial structure (no explicit site information included).</p>
 <p>If referenced, the spatial zone is the root of the spatial structure (to be used as a stub for non-building related projects).</p>
-</td></tr><tr><td>Project Representation Context 2D</td><td>\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.RepresentationContexts[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>.ContextIdentifier<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a><br></td><td>The optional identifier of the representation context as used within a project.</td></tr></table>
+</td></tr><tr><td>Project Representation Context 2D</td><td>\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.RepresentationContexts[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>.ContextIdentifier<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a><br></td><td>The optional identifier of the representation context as used within a project.</td></tr><tr><td>Project Dataset Information</td><td>\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesdataset.htm">IfcRelAssociatesDataset</a>.RelatingDataset<br>\<a href="../../ifcexternalreferenceresource/lexical/ifcdatasetinformation.htm">IfcDatasetInformation</a>.Identification<br>\<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a><br></td><td>Identifier that uniquely identifies a document.
+{ .change-ifc2x4}
+> IFC4 CHANGE&nbsp; Attribute renamed from _DocumentId_.</td></tr><tr><td>Project Global Positioning Geodetic</td><td>\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.RepresentationContexts[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>.HasCoordinateOperation[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcrigidoperation.htm">IfcRigidOperation</a>.TargetCRS<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeographiccrs.htm">IfcGeographicCRS</a><br></td><td>Target coordinate reference system for the operation.</td></tr><tr><td>Project Global Positioning Mapped</td><td>\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.RepresentationContexts[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>.HasCoordinateOperation[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcrigidoperation.htm">IfcRigidOperation</a>.TargetCRS<br>\<a href="../../ifcrepresentationresource/lexical/ifcprojectedcrs.htm">IfcProjectedCRS</a><br></td><td><p>The representation context of the project refers to global positioning, i.e. the coordinate system of the project resides within the defined projected coordinate reference system (a map coordinate system) and is subject to a rigid transformation, e.g. to truncate coordinate values. The representation context inherits all properties of the projected coordinate reference system, in particular the distortions resulting in deviations between model dimensions/distances and real-world dimensions/distances.</p>
+</td></tr></table>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
 </tr>
@@ -3693,13 +3702,6 @@ Extrusion</i></p>
 <p>Outgoing heated water.</p>
 <p>Converted electrical power.</p>
 </td></tr></table>
-<h5>IfcSolidStratum</h5>
-<table class="gridtable">
-<tr><th>Field</th><th>Mapping</th><th>Definition</th>
-</tr>
-<tr><th>(Query)</th><th>\<a href="../../ifcsharedinfrastructureelements/lexical/ifcsolidstratum.htm">IfcSolidStratum</a><br>
-</th><th></th></tr>
-<tr><td>Topography Geometry</td><td>\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation<br>\<a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>.Name<br></td><td>The word or group of words by which the product representation is known.</td></tr></table>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
 </tr>

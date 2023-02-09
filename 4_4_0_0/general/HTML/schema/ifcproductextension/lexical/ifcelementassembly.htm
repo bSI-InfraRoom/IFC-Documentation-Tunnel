@@ -249,37 +249,37 @@ A designation of where the assembly is intended to take place defined by an Enum
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 80.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 83.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifcproductextension/lexical/ifcelementassemblytype.htm">IfcElementAssemblyType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 80 &mdash; IfcElementAssembly Object Typing</td></tr></table>
+<tr><td><p class="table">Table 83 &mdash; IfcElementAssembly Object Typing</td></tr></table>
 
 <br/><br/>
 
 <a id="aggregation" />
 <p class="use-head">Aggregation</p>
-<p>The <a href="../../templates/aggregation.htm">Aggregation</a> concept template applies to this entity as shown in Table 81.<table>
+<p>The <a href="../../templates/aggregation.htm">Aggregation</a> concept template applies to this entity as shown in Table 84.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 81 &mdash; IfcElementAssembly Aggregation</td></tr></table>
+<tr><td><p class="table">Table 84 &mdash; IfcElementAssembly Aggregation</td></tr></table>
 
 <p>The <span class="self-ref">IfcElementAssembly</span> shall represent an aggregate, i.e. it should have other elements, being subtypes of <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>, as contained (sub)parts. The table above only represents a selection of subtypes of <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> that are legitimate as parts in an <span class="self-ref">IfcElementAssembly</span></p>
 <ul>
 <li>The <span class="self-ref">IfcElementAssembly</span> is an aggregate i.e. being composed by other elements and acting as an assembly using the objectified relationship <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>, refering to it by its inverse attribute <i>SELF\IfcObjectDefinition.IsDecomposedBy</i>. Components of an assembly are described by instances of subtypes of <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>.</li>
 <li>In this case, the contained subtypes of <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> shall not be additionally contained in the project spatial hierarchy, i.e. the inverse attribute <i>SELF\IfcElement.ContainedInStructure</i> of those <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>'s shall be <i>NIL.</i></li>
 </ul>
-<p>Figure 289 illustrates spatial containment and element aggregation relationships.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcelementassembly-containment.png" alt="&quot;containment relationships&quot;" title="Figure 289 &mdash; Element assembly containment"></td></tr><tr><td><p class="figure">Figure 289 &mdash; Element assembly containment</p></td></tr></table></p>
+<p>Figure 291 illustrates spatial containment and element aggregation relationships.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcelementassembly-containment.png" alt="&quot;containment relationships&quot;" title="Figure 291 &mdash; Element assembly containment"></td></tr><tr><td><p class="figure">Figure 291 &mdash; Element assembly containment</p></td></tr></table></p>
 
 <br/><br/>
 
 <a id="spatial-containment" />
 <p class="use-head">Spatial Containment</p>
-<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 82.<table>
+<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 85.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingStructure</b></th><th><b>Description</b></th></tr>
@@ -291,7 +291,7 @@ A designation of where the assembly is intended to take place defined by an Enum
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 82 &mdash; IfcElementAssembly Spatial Containment</td></tr></table>
+<tr><td><p class="table">Table 85 &mdash; IfcElementAssembly Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcElementAssembly</span> should have a relationship for its containment in the hierachical spatial structure of the project. Only if the <span class="self-ref">IfcElementAssembly</span> is itself a part of another assembly this relationship should be omitted.</p>
 

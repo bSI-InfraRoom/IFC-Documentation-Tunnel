@@ -64,13 +64,13 @@ Construction work that has the provision of shelter for its occupants or content
 <li><strong>ELEMENT</strong>: building</li>
 <li><strong>PARTIAL</strong>: building section</li>
 </ul>
-<p>The <span class="self-ref">IfcBuilding</span> is used to build the spatial structure of a building (that serves as the primary project breakdown and is required to be hierarchical). The spatial structure elements are linked together by using the objectified relationship <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>. Figure 282 shows the <span class="self-ref">IfcBuilding</span> as part of the spatial structure. It also serves as the spatial container for building and other elements.</p>
+<p>The <span class="self-ref">IfcBuilding</span> is used to build the spatial structure of a building (that serves as the primary project breakdown and is required to be hierarchical). The spatial structure elements are linked together by using the objectified relationship <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>. Figure 284 shows the <span class="self-ref">IfcBuilding</span> as part of the spatial structure. It also serves as the spatial container for building and other elements.</p>
 <blockquote class="note">
 <p>NOTE  Detailed requirements on mandatory element containment and placement structure relationships are given in view definitions and implementer agreements.</p>
 </blockquote>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcbuilding-spatialstructure.png" alt="&quot;IfcBuildingStorey as part of a spatial structure&quot;" title="Figure 282 &mdash; Building composition"></td></tr><tr><td><p class="figure">Figure 282 &mdash; Building composition</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcbuilding-spatialstructure.png" alt="&quot;IfcBuildingStorey as part of a spatial structure&quot;" title="Figure 284 &mdash; Building composition"></td></tr><tr><td><p class="figure">Figure 284 &mdash; Building composition</p></td></tr></table></p>
 <p>Systems, such as building service or electrical distribution systems, zonal systems, or structural analysis systems, relate to <span class="self-ref">IfcBuilding</span> by using the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>.</p>
-<p>Figure 283 describes the heights and elevations of the <span class="self-ref">IfcBuilding</span>. It is used to provide the height above sea level of the project height datum for this building, that is, the internal height 0.00. The height 0.00 is often used as a building internal reference height and equal to the floor finish level of the ground floor.</p>
+<p>Figure 285 describes the heights and elevations of the <span class="self-ref">IfcBuilding</span>. It is used to provide the height above sea level of the project height datum for this building, that is, the internal height 0.00. The height 0.00 is often used as a building internal reference height and equal to the floor finish level of the ground floor.</p>
 <ul>
 <li>base elevation of building provided by: <i>IfcBuilding.ElevationOfRefHeight</i>, it is usually the top of construction slab</li>
 <li>base elevation of terrain at the perimeter of the building provided by: <i>IfcBuilding.ElevationOfTerrain</i>, it is usually the minimum elevation is sloped terrain</li>
@@ -86,7 +86,7 @@ Construction work that has the provision of shelter for its occupants or content
         </tr>
         <tr>
           <td>
-            <p class="figure">Figure 283 &mdash; Building elevations
+            <p class="figure">Figure 285 &mdash; Building elevations
             </p>
           </td>
         </tr>
@@ -284,7 +284,7 @@ Elevation above the minimal terrain level around the foot print of the building,
 <summary>Concept usage</summary>
 <a id="spatial-composition" />
 <p class="use-head">Spatial Composition</p>
-<p>The <a href="../../templates/spatial-composition.htm">Spatial Composition</a> concept template applies to this entity as shown in Table 40.<table>
+<p>The <a href="../../templates/spatial-composition.htm">Spatial Composition</a> concept template applies to this entity as shown in Table 43.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingObject</b></th><th><b>Description</b></th></tr>
@@ -292,7 +292,7 @@ Elevation above the minimal terrain level around the foot print of the building,
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 40 &mdash; IfcBuilding Spatial Composition</td></tr></table>
+<tr><td><p class="table">Table 43 &mdash; IfcBuilding Spatial Composition</td></tr></table>
 
 <blockquote class="note">
 <p>NOTE  By using the inverse relationship <i>IfcBuilding.Decomposes</i> it references <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a> || <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a> || <span class="self-ref">IfcBuilding</span> through <i>IfcRelAggregates.RelatingObject</i>. If it refers to another instance of <span class="self-ref">IfcBuilding</span>, the referenced <span class="self-ref">IfcBuilding</span> needs to have a different and higher <i>CompositionType</i>, i.e. COMPLEX (if the other <span class="self-ref">IfcBuilding</span> has ELEMENT), or ELEMENT (if the other <span class="self-ref">IfcBuilding</span> has PARTIAL).</p>
@@ -302,7 +302,7 @@ Elevation above the minimal terrain level around the foot print of the building,
 
 <a id="spatial-decomposition" />
 <p class="use-head">Spatial Decomposition</p>
-<p>The <a href="../../templates/spatial-decomposition.htm">Spatial Decomposition</a> concept template applies to this entity as shown in Table 41.<table>
+<p>The <a href="../../templates/spatial-decomposition.htm">Spatial Decomposition</a> concept template applies to this entity as shown in Table 44.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatedObjects</b></th><th><b>Description</b></th></tr>
@@ -310,7 +310,7 @@ Elevation above the minimal terrain level around the foot print of the building,
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 41 &mdash; IfcBuilding Spatial Decomposition</td></tr></table>
+<tr><td><p class="table">Table 44 &mdash; IfcBuilding Spatial Decomposition</td></tr></table>
 
 <blockquote class="note">
 <p>NOTE  By using the inverse relationship <i>IfcBuilding.IsDecomposedBy</i> it references <span class="self-ref">IfcBuilding</span> || <a href="../../ifcproductextension/lexical/ifcbuildingstorey.htm">IfcBuildingStorey</a> through <i>IfcRelAggregates.RelatedObjects</i>. If it refers to another instance of <span class="self-ref">IfcBuilding</span>, the referenced <span class="self-ref">IfcBuilding</span> needs to have a different and lower <i>CompositionType</i>, i.e. ELEMENT (if the other <span class="self-ref">IfcBuilding</span> has COMPLEX), or PARTIAL (if the other <span class="self-ref">IfcBuilding</span> has ELEMENT).</p>
@@ -320,7 +320,7 @@ Elevation above the minimal terrain level around the foot print of the building,
 
 <a id="spatial-container" />
 <p class="use-head">Spatial Container</p>
-<p>The <a href="../../templates/spatial-container.htm">Spatial Container</a> concept template applies to this entity as shown in Table 42.<table>
+<p>The <a href="../../templates/spatial-container.htm">Spatial Container</a> concept template applies to this entity as shown in Table 45.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Type</b></th><th><b>Description</b></th></tr>
@@ -328,7 +328,7 @@ Elevation above the minimal terrain level around the foot print of the building,
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 42 &mdash; IfcBuilding Spatial Container</td></tr></table>
+<tr><td><p class="table">Table 45 &mdash; IfcBuilding Spatial Container</td></tr></table>
 
 <blockquote class="note">
 <p>NOTE  If there are building elements and/or other elements directly related to the <span class="self-ref">IfcBuilding</span> (like a curtain wall spanning several stories), they are associated with the <span class="self-ref">IfcBuilding</span> by using the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>. The <span class="self-ref">IfcBuilding</span> references them by its inverse relationship: &gt; *  <i>IfcBuilding.ContainsElements</i> -- referencing any subtype of <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> (with the exception of other spatial structure element) by <i>IfcRelContainedInSpatialStructure.RelatedElements</i>.</p>
@@ -338,7 +338,7 @@ Elevation above the minimal terrain level around the foot print of the building,
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 43.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 46.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -389,20 +389,20 @@ Elevation above the minimal terrain level around the foot print of the building,
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 43 &mdash; IfcBuilding Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 46 &mdash; IfcBuilding Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="quantity-sets" />
 <p class="use-head">Quantity Sets</p>
-<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 44.<table>
+<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 47.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>QsetName</b></th><th><b>Quantities</b></th></tr>
 <tr><td><a href="../../ifcproductextension/qset/qto_buildingbasequantities.htm">Qto_BuildingBaseQuantities</a></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 44 &mdash; IfcBuilding Quantity Sets</td></tr></table>
+<tr><td><p class="table">Table 47 &mdash; IfcBuilding Quantity Sets</td></tr></table>
 
 <br/><br/>
 
@@ -418,10 +418,10 @@ Elevation above the minimal terrain level around the foot print of the building,
 
 <a id="footprint-geomset-geometry" />
 <p class="use-head">FootPrint GeomSet Geometry</p>
-<p>The <a href="../../templates/footprint-geomset-geometry.htm">FootPrint GeomSet Geometry</a> concept template applies to this entity as shown in Table 45.<table>
+<p>The <a href="../../templates/footprint-geomset-geometry.htm">FootPrint GeomSet Geometry</a> concept template applies to this entity as shown in Table 48.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 45 &mdash; IfcBuilding FootPrint GeomSet Geometry</td></tr></table>
+<tr><td><p class="table">Table 48 &mdash; IfcBuilding FootPrint GeomSet Geometry</td></tr></table>
 
 <p>The foot print representation of <span class="self-ref">IfcBuilding</span> is given by either a single 2D curve (such as <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a> or <a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a>), or by a list of 2D curves (in case of inner boundaries), if the building has an independent geometric representation.</p>
 <blockquote class="note">

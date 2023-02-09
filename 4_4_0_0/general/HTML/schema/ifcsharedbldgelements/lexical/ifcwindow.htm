@@ -11,7 +11,7 @@
     <title>IfcWindow</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 1 index3 3 index4 49 index5 0; }
+      body { counter-reset: index1 6 index2 1 index3 3 index4 51 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.1.3.50");
+    parent.index.location.replace("../../toc-6.htm#6.1.3.52");
 //-->
 </script>
 
@@ -100,17 +100,17 @@ Construction for closing a vertical or near vertical opening in a wall or pitche
 <p class="use-head">
 Parameteric Representation using parameters at <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a></p>
 <p>The parameters, which define the shape of the <span class="self-ref">IfcWindow</span>, are given at the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> and the property sets, which are included in the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a>. The <span class="self-ref">IfcWindow</span> only defines the local placement. The overall size of the <span class="self-ref">IfcWindow</span> to be used to apply the lining or panel parameter provided by the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> is determined by the IfcShapeRepresentation with the RepresentationIdentifier = 'Profile'. Only in case of an <span class="self-ref">IfcWindow</span> inserted into an <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> using the <a href="../../ifcproductextension/lexical/ifcrelfillselement.htm">IfcRelFillsElement</a> relatioship, having a horizontal extrusion (along the y-axis of the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a>), the overall size is determined by the extrusion profile of the <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a>.</p>
-<p>Figure 367 illustrates the insertion of a window into the <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> by creating an instance of <span class="self-ref">IfcWindow</span> with <i>PartitioningType = DoublePanelHorizontal</i>. The parameters <i>OverallHeight</i> and <i>OverallWidth</i> show the extent of the window in the positive Z and X axis of the local placement of the window. The lining and the transom are created by the given parameters.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcwindow-layout1.gif" alt="&quot;window 1&quot;" title="Figure 367 &mdash; Window placement"></td></tr><tr><td><p class="figure">Figure 367 &mdash; Window placement</p></td></tr></table></p>
-<p>Figure 368 illustrates the final window (DoublePanelHorizontal) with first panel having <i>PanelPosition = TOP</i>, <i>OperationType = BOTTOMHUNG</i> and second panel having <i>PanelPosition = BOTTOM</i> and <i>OperationType = TILTANDTURNLEFTHAND</i>.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcwindow-layout2.gif" alt="&quot;window 2&quot;" title="Figure 368 &mdash; Window planes"></td></tr><tr><td><p class="figure">Figure 368 &mdash; Window planes</p></td></tr></table></p>
+<p>Figure 369 illustrates the insertion of a window into the <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> by creating an instance of <span class="self-ref">IfcWindow</span> with <i>PartitioningType = DoublePanelHorizontal</i>. The parameters <i>OverallHeight</i> and <i>OverallWidth</i> show the extent of the window in the positive Z and X axis of the local placement of the window. The lining and the transom are created by the given parameters.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcwindow-layout1.gif" alt="&quot;window 1&quot;" title="Figure 369 &mdash; Window placement"></td></tr><tr><td><p class="figure">Figure 369 &mdash; Window placement</p></td></tr></table></p>
+<p>Figure 370 illustrates the final window (DoublePanelHorizontal) with first panel having <i>PanelPosition = TOP</i>, <i>OperationType = BOTTOMHUNG</i> and second panel having <i>PanelPosition = BOTTOM</i> and <i>OperationType = TILTANDTURNLEFTHAND</i>.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcwindow-layout2.gif" alt="&quot;window 2&quot;" title="Figure 370 &mdash; Window planes"></td></tr><tr><td><p class="figure">Figure 370 &mdash; Window planes</p></td></tr></table></p>
 <p class="use-head">
 Window opening operation by window type</p>
 <p>The parameters that defines the shape of the <span class="self-ref">IfcWindow</span>, are given at the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> and the property sets, which are included in the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a>. The <span class="self-ref">IfcWindow</span> only defines the local placement which determines the opening direction of the window. The overall layout of the <span class="self-ref">IfcWindow</span> is determined by its <i>IfcWindowType.PartitioningType</i>. Each window panel has its own operation type, provided by <i>IfcWindowPanelProperties.OperationType</i>. All window panels are assumed to open into the same direction (if relevant for the particular window panel operation. The hindge side (whether a window opens to the left or to the right) is determined by the <a href="../../ifcarchitecturedomain/lexical/ifcwindowpanelproperties.htm">IfcWindowPanelProperties</a>.<i>OperationType</i>.</p>
 <blockquote class="note">
 <p>NOTE   There are different conventions in different countries on how to show the symbolic presentation of the window panel operation (the &quot;triangles&quot;). Either as seen from the exterior, or from the interior side. The following figures show the symbolics from the exterior side (the convention as used predominately in Europe).</p>
 </blockquote>
-<p>Figure 369 illustrates window operation types.</p>
+<p>Figure 371 illustrates window operation types.</p>
 <table><tr><td><table border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr valign="top">
@@ -156,7 +156,7 @@ window, given by <i>IfcWindowPanelProperties.OperationType</i>
 </tbody>
 </table>
 </td></tr>
-<tr><td><p class="figure">Figure 369 &mdash; Window operations</p></td></tr>
+<tr><td><p class="figure">Figure 371 &mdash; Window operations</p></td></tr>
 </table>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
@@ -399,7 +399,7 @@ Designator for the user defined partitioning type, shall only be provided, if th
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 226.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 229.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -424,39 +424,39 @@ Designator for the user defined partitioning type, shall only be provided, if th
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 226 &mdash; IfcWindow Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 229 &mdash; IfcWindow Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 227.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 230.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 227 &mdash; IfcWindow Object Typing</td></tr></table>
+<tr><td><p class="table">Table 230 &mdash; IfcWindow Object Typing</td></tr></table>
 
 <br/><br/>
 
 <a id="quantity-sets" />
 <p class="use-head">Quantity Sets</p>
-<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 228.<table>
+<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 231.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>QsetName</b></th><th><b>Quantities</b></th></tr>
 <tr><td><a href="../../ifcsharedbldgelements/qset/qto_windowbasequantities.htm">Qto_WindowBaseQuantities</a></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 228 &mdash; IfcWindow Quantity Sets</td></tr></table>
+<tr><td><p class="table">Table 231 &mdash; IfcWindow Quantity Sets</td></tr></table>
 
 <br/><br/>
 
 <a id="material-constituent-set" />
 <p class="use-head">Material Constituent Set</p>
-<p>The <a href="../../templates/material-constituent-set.htm">Material Constituent Set</a> concept template applies to this entity as shown in Table 229.<table>
+<p>The <a href="../../templates/material-constituent-set.htm">Material Constituent Set</a> concept template applies to this entity as shown in Table 232.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Description</b></th></tr>
@@ -464,7 +464,7 @@ Designator for the user defined partitioning type, shall only be provided, if th
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 229 &mdash; IfcWindow Material Constituent Set</td></tr></table>
+<tr><td><p class="table">Table 232 &mdash; IfcWindow Material Constituent Set</td></tr></table>
 
 <p>The material of the <span class="self-ref">IfcWindow</span> is defined by the <a href="../../ifcmaterialresource/lexical/ifcmaterialconstituentset.htm">IfcMaterialConstituentSet</a> or as fall back by <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a> and attached by the <a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.htm">IfcRelAssociatesMaterial</a>.<i>RelatingMaterial</i>. It is accessible by the inverse <i>HasAssociations</i> relationship.</p>
 <p>If the fall back single <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a> is referenced, it applies to the lining and framing of the window.</p>
@@ -473,21 +473,21 @@ Designator for the user defined partitioning type, shall only be provided, if th
 
 <a id="spatial-containment" />
 <p class="use-head">Spatial Containment</p>
-<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 230.<table>
+<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 233.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingStructure</b></th></tr>
 <tr><td><a href="../../ifcproductextension/lexical/ifcbuildingstorey.htm">IfcBuildingStorey</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 230 &mdash; IfcWindow Spatial Containment</td></tr></table>
+<tr><td><p class="table">Table 233 &mdash; IfcWindow Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcWindow</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
 <ul>
 <li>the <i>Spatial Containment</i> (defined here), or</li>
 <li>the <i>Element Composition</i>.</li>
 </ul>
-<p>The <span class="self-ref">IfcWindow</span> may also be connected to the <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> in which it is placed as a filler. In this case, the spatial containment relationship shall be provided, see Figure 370.</p>
+<p>The <span class="self-ref">IfcWindow</span> may also be connected to the <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> in which it is placed as a filler. In this case, the spatial containment relationship shall be provided, see Figure 372.</p>
 <table>
  
 <tr valign="bottom">
@@ -500,7 +500,7 @@ Designator for the user defined partitioning type, shall only be provided, if th
  </tr>
  
 <tr>
-  <td><p class="figure">Figure 370 &mdash; Window spatial containment</p></td>
+  <td><p class="figure">Figure 372 &mdash; Window spatial containment</p></td>
   <td>&nbsp;</td>
  </tr>
 </table>
@@ -509,10 +509,10 @@ Designator for the user defined partitioning type, shall only be provided, if th
 
 <a id="product-local-placement" />
 <p class="use-head">Product Local Placement</p>
-<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 231.<table>
+<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 234.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 231 &mdash; IfcWindow Product Local Placement</td></tr></table>
+<tr><td><p class="table">Table 234 &mdash; IfcWindow Product Local Placement</td></tr></table>
 
 <p>The following restriction is imposed:</p>
 <ol>
@@ -548,14 +548,14 @@ Designator for the user defined partitioning type, shall only be provided, if th
 
 <a id="window-attributes" />
 <p class="use-head">Window Attributes</p>
-<p>The <a href="../../templates/window-attributes.htm">Window Attributes</a> concept template applies to this entity as shown in Table 232.<table>
+<p>The <a href="../../templates/window-attributes.htm">Window Attributes</a> concept template applies to this entity as shown in Table 235.<table>
 <tr><td>
 <table class="gridtable">
 <tr></tr>
 <tr></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 232 &mdash; IfcWindow Window Attributes</td></tr></table>
+<tr><td><p class="table">Table 235 &mdash; IfcWindow Window Attributes</td></tr></table>
 
 <br/><br/>
 

@@ -1,6 +1,6 @@
 (*
 Copyright by:
-buildingSMART International Limited, 1996-2022
+buildingSMART International Limited, 1996-2023
 
 Any technical documentation made available by buildingSMART International Limited
 is the copyrighted work of buildingSMART International Limited and is owned by the 
@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 18 October 2022
+Thursday, 9 February 2023
 
 *)
 
@@ -34,7 +34,8 @@ REFERENCE FROM IFCEXTERNALREFERENCERESOURCE
 
 REFERENCE FROM IFCGEOMETRICMODELRESOURCE
 (
-  IfcTessellatedFaceSet
+  IfcTessellatedFaceSet,
+  IfcIndexedPolygonalFace
 );
 
 REFERENCE FROM IFCGEOMETRYRESOURCE
@@ -342,9 +343,15 @@ ENTITY IfcIndexedColourMap
 	ColourIndex : LIST [1:?] OF IfcPositiveInteger;
 END_ENTITY;
 
+ENTITY IfcIndexedPolygonalTextureMap
+ SUBTYPE OF (IfcIndexedTextureMap);
+	TexCoordIndices : SET [1:?] OF IfcTextureCoordinateIndices;
+END_ENTITY;
+
 ENTITY IfcIndexedTextureMap
  ABSTRACT SUPERTYPE OF (ONEOF
-    (IfcIndexedTriangleTextureMap))
+    (IfcIndexedPolygonalTextureMap
+    ,IfcIndexedTriangleTextureMap))
  SUBTYPE OF (IfcTextureCoordinate);
 	MappedTo : IfcTessellatedFaceSet;
 	TexCoords : IfcTextureVertexList;
@@ -548,6 +555,20 @@ ENTITY IfcTextureCoordinateGenerator
  SUBTYPE OF (IfcTextureCoordinate);
 	Mode : IfcLabel;
 	Parameter : OPTIONAL LIST [1:?] OF IfcReal;
+END_ENTITY;
+
+ENTITY IfcTextureCoordinateIndices
+ SUPERTYPE OF (ONEOF
+    (IfcTextureCoordinateIndicesWithVoids));
+	TexCoordIndex : LIST [3:?] OF IfcPositiveInteger;
+	TexCoordsOf : IfcIndexedPolygonalFace;
+ INVERSE
+	ToTexMap : IfcIndexedPolygonalTextureMap FOR TexCoordIndices;
+END_ENTITY;
+
+ENTITY IfcTextureCoordinateIndicesWithVoids
+ SUBTYPE OF (IfcTextureCoordinateIndices);
+	InnerTexCoordIndicies : LIST [1:?] OF UNIQUE LIST [3:?] OF UNIQUE IfcPositiveInteger;
 END_ENTITY;
 
 ENTITY IfcTextureMap

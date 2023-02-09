@@ -1,1 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?><PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="02e87dbba4c1453a8b8797240f567eba" templatetype="PSET_PERFORMANCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd"><IfcVersion version="IFC4X4" /><Name>Pset_TrackElementPHistoryDerailer</Name><Definition>Indicates derailer information over time for operation management.</Definition><Applicability /><ApplicableClasses><ClassName>IfcTrackElement/DERAILER</ClassName></ApplicableClasses><ApplicableTypeValue>IfcTrackElement/DERAILER</ApplicableTypeValue><PropertyDefs><PropertyDef ifdguid="eb506ff8aa9b42ae85b18ae72a3db49a"><Name>IsDerailing</Name><Definition>Indicates whether the derailer is on or not.</Definition><PropertyType><TypePropertyReferenceValue reftype="IfcTimeSeries" /></PropertyType><NameAliases /><DefinitionAliases /></PropertyDef></PropertyDefs><PsetDefinitionAliases /></PropertySetDef>
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="02e87dbba4c1453a8b8797240f567eba" templatetype="PSET_PERFORMANCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_TrackElementPHistoryDerailer</Name>
+  <Definition>Indicates derailer information over time for operation management.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcTrackElement/DERAILER</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcTrackElement/DERAILER</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="eb506ff8aa9b42ae85b18ae72a3db49a">
+      <Name>IsDerailing</Name>
+      <Definition>Indicates whether the derailer is on or not.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

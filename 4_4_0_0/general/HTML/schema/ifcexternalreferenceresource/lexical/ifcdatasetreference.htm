@@ -30,7 +30,7 @@
 </details>
 <details open="open"><summary>Change log</summary><table class="gridtable">
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add1-to-ifc4x4/index.htm">IFC4X3_ADD1 to IFC4X4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcdatasetreference.htm">IfcDatasetReference</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
@@ -42,10 +42,10 @@ Furthermore, the optional <i>Filter</i> attribute can be used to provide a text 
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>G</th></tr>
-<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td></td><td>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 Description of the dataset reference for informational purposes.
 </td><td>X</td></tr>
-<tr><td>5</td><td>ReferencedDataset</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdatasetinformation.htm">IfcDatasetInformation</a></td><td></td><td>
+<tr><td>5</td><td>ReferencedDataset</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdatasetinformation.htm">IfcDatasetInformation</a></td><td>? </td><td>
 </td><td>X</td></tr>
 <tr><td>6</td><td>Filter</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 An optional text as e.g. SQL, XQuery etc to filter out data when only a subset is relevant for the dataset reference.
@@ -100,10 +100,10 @@ IFC4 CHANGE  New inverse attribute added with upward compatibility.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcexternalreferenceresource/lexical/ifcdatasetreference.htm">IfcDatasetReference</a></td></tr>
-<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td></td><td>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 Description of the dataset reference for informational purposes.
 </td><td>X</td></tr>
-<tr><td>5</td><td>ReferencedDataset</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdatasetinformation.htm">IfcDatasetInformation</a></td><td></td><td>
+<tr><td>5</td><td>ReferencedDataset</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdatasetinformation.htm">IfcDatasetInformation</a></td><td>? </td><td>
 </td><td>X</td></tr>
 <tr><td>6</td><td>Filter</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 An optional text as e.g. SQL, XQuery etc to filter out data when only a subset is relevant for the dataset reference.
@@ -121,7 +121,7 @@ An optional text as e.g. SQL, XQuery etc to filter out data when only a subset i
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcexternalreferenceresource/lexical/ifcexternalreference.htm">IfcExternalReference</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;ReferencedDataset&quot; type=&quot;ifc:<a href="../../ifcexternalreferenceresource/lexical/ifcdatasetinformation.htm">IfcDatasetInformation</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;ReferencedDataset&quot; type=&quot;ifc:<a href="../../ifcexternalreferenceresource/lexical/ifcdatasetinformation.htm">IfcDatasetInformation</a>&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Description&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Filter&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>&quot; use=&quot;optional&quot;/&gt;<br/>
@@ -132,8 +132,8 @@ An optional text as e.g. SQL, XQuery etc to filter out data when only a subset i
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcDatasetReference<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcexternalreferenceresource/lexical/ifcexternalreference.htm">IfcExternalReference</a>)<b>;</b><br/>
-&nbsp;&nbsp;Description : <a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>;<br/>
-&nbsp;&nbsp;ReferencedDataset : <a href="../../ifcexternalreferenceresource/lexical/ifcdatasetinformation.htm">IfcDatasetInformation</a>;<br/>
+&nbsp;&nbsp;Description : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>;<br/>
+&nbsp;&nbsp;ReferencedDataset : <span class="keyword">OPTIONAL</span> <a href="../../ifcexternalreferenceresource/lexical/ifcdatasetinformation.htm">IfcDatasetInformation</a>;<br/>
 &nbsp;&nbsp;Filter : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;DatasetRefForObjects : <span class="keyword">SET</span> [0:?] OF <a href="../../ifckernel/lexical/ifcrelassociatesdataset.htm">IfcRelAssociatesDataset</a> <span class="keyword">FOR</span> RelatingDataset;<br/>

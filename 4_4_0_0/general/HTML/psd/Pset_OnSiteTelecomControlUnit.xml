@@ -1,1 +1,166 @@
-﻿<?xml version="1.0" encoding="utf-8"?><PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="1e449be7399fa03ba1a1ecfa87db1ec2" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd"><IfcVersion version="IFC4X4" /><Name>Pset_OnSiteTelecomControlUnit</Name><Definition>Properties for on-site telecom control unit used for railway.</Definition><Applicability /><ApplicableClasses><ClassName>IfcController</ClassName></ApplicableClasses><ApplicableTypeValue>IfcController</ApplicableTypeValue><PropertyDefs><PropertyDef ifdguid="2c0db877b20649ab802e9923a1fe6cf6"><Name>HasEarthquakeAlarm</Name><Definition>Indicates whether the on-site control unit includes earthquake alarm function.</Definition><PropertyType><TypePropertySingleValue><DataType type="IfcBoolean" /></TypePropertySingleValue></PropertyType><NameAliases /><DefinitionAliases /></PropertyDef><PropertyDef ifdguid="b4a984b9176742c983309eceb9db4e3b"><Name>HasEarthquakeCollection</Name><Definition>Indicates whether the on-site control unit collects earthquake information.</Definition><PropertyType><TypePropertySingleValue><DataType type="IfcBoolean" /></TypePropertySingleValue></PropertyType><NameAliases /><DefinitionAliases /></PropertyDef><PropertyDef ifdguid="03291ab5737349289e0cffad27322037"><Name>HasForeignObjectCollection</Name><Definition>Indicates whether the on-site control unit collects foreign object information.</Definition><PropertyType><TypePropertySingleValue><DataType type="IfcBoolean" /></TypePropertySingleValue></PropertyType><NameAliases /><DefinitionAliases /></PropertyDef><PropertyDef ifdguid="127c6270d73140ee82b584de2efc7886"><Name>ControllerInterfaceType</Name><Definition>Indicates the type of serial interface used by the device.</Definition><PropertyType><TypePropertyEnumeratedValue><EnumList name="PEnum_ControllerInterfaceType"><EnumItem>RS_422</EnumItem><EnumItem>RS_485</EnumItem><EnumItem>EARTHQUAKERELAYINTERFACE</EnumItem><EnumItem>FOREIGNOBJECTRELAYINTERFACE</EnumItem><EnumItem>OTHER</EnumItem><EnumItem>NOTKNOWN</EnumItem><EnumItem>UNSET</EnumItem></EnumList><ConstantList><ConstantDef><Name>RS_422</Name><Definition>Standard TIA/EIA-422 interface.</Definition><NameAliases /><DefinitionAliases /></ConstantDef><ConstantDef><Name>RS_485</Name><Definition>Standard TIA-485(-A) or EIA-485 interface.</Definition><NameAliases /><DefinitionAliases /></ConstantDef><ConstantDef><Name>EARTHQUAKERELAYINTERFACE</Name><Definition>Earthquake relay interface.</Definition><NameAliases /><DefinitionAliases /></ConstantDef><ConstantDef><Name>FOREIGNOBJECTRELAYINTERFACE</Name><Definition>Foreign object relay interface.</Definition><NameAliases /><DefinitionAliases /></ConstantDef><ConstantDef><Name>OTHER</Name><Definition>required category not on scale</Definition><NameAliases><NameAlias lang="en">(other)</NameAlias></NameAliases><DefinitionAliases><DefinitionAlias lang="en">Value is not listed.</DefinitionAlias></DefinitionAliases></ConstantDef><ConstantDef><Name>NOTKNOWN</Name><Definition>Value is unkown</Definition><NameAliases><NameAlias lang="en">(unknown)</NameAlias></NameAliases><DefinitionAliases><DefinitionAlias lang="en">Value is unknown.</DefinitionAlias></DefinitionAliases></ConstantDef><ConstantDef><Name>UNSET</Name><Definition>Value has not been specified</Definition><NameAliases><NameAlias lang="en">(unset)</NameAlias></NameAliases><DefinitionAliases><DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias></DefinitionAliases></ConstantDef></ConstantList></TypePropertyEnumeratedValue></PropertyType><NameAliases /><DefinitionAliases /></PropertyDef><PropertyDef ifdguid="852856522bfc45b38ea5410291ee358c"><Name>HasOutputFunction</Name><Definition>Indicates whether the on-site control unit includes an output function.</Definition><PropertyType><TypePropertySingleValue><DataType type="IfcBoolean" /></TypePropertySingleValue></PropertyType><NameAliases /><DefinitionAliases /></PropertyDef><PropertyDef ifdguid="785cb8cee39b41789611cd85bd7a38e7"><Name>HasRainCollection</Name><Definition>Indicates whether the on-site control unit collects information on rain.</Definition><PropertyType><TypePropertySingleValue><DataType type="IfcBoolean" /></TypePropertySingleValue></PropertyType><NameAliases /><DefinitionAliases /></PropertyDef><PropertyDef ifdguid="c24ea39e9f6944709b258e7ebdc844db"><Name>HasSnowCollection</Name><Definition>Indicates whether the on-site control unit collects information on snow depth.</Definition><PropertyType><TypePropertySingleValue><DataType type="IfcBoolean" /></TypePropertySingleValue></PropertyType><NameAliases /><DefinitionAliases /></PropertyDef><PropertyDef ifdguid="5796a4da8cbe4907acc1d94832dd697b"><Name>HasWindCollection</Name><Definition>Indicates whether the on-site control unit collects information on wind.</Definition><PropertyType><TypePropertySingleValue><DataType type="IfcBoolean" /></TypePropertySingleValue></PropertyType><NameAliases /><DefinitionAliases /></PropertyDef></PropertyDefs><PsetDefinitionAliases /></PropertySetDef>
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="1e449be7399fa03ba1a1ecfa87db1ec2" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_OnSiteTelecomControlUnit</Name>
+  <Definition>Properties for on-site telecom control unit used for railway.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcController</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcController</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="2c0db877b20649ab802e9923a1fe6cf6">
+      <Name>HasEarthquakeAlarm</Name>
+      <Definition>Indicates whether the on-site control unit includes earthquake alarm function.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b4a984b9176742c983309eceb9db4e3b">
+      <Name>HasEarthquakeCollection</Name>
+      <Definition>Indicates whether the on-site control unit collects earthquake information.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="03291ab5737349289e0cffad27322037">
+      <Name>HasForeignObjectCollection</Name>
+      <Definition>Indicates whether the on-site control unit collects foreign object information.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="127c6270d73140ee82b584de2efc7886">
+      <Name>ControllerInterfaceType</Name>
+      <Definition>Indicates the type of serial interface used by the device.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ControllerInterfaceType">
+            <EnumItem>RS_422</EnumItem>
+            <EnumItem>RS_485</EnumItem>
+            <EnumItem>EARTHQUAKERELAYINTERFACE</EnumItem>
+            <EnumItem>FOREIGNOBJECTRELAYINTERFACE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>RS_422</Name>
+              <Definition>Standard TIA/EIA-422 interface.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>RS_485</Name>
+              <Definition>Standard TIA-485(-A) or EIA-485 interface.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EARTHQUAKERELAYINTERFACE</Name>
+              <Definition>Earthquake relay interface.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FOREIGNOBJECTRELAYINTERFACE</Name>
+              <Definition>Foreign object relay interface.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <Definition>required category not on scale</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="852856522bfc45b38ea5410291ee358c">
+      <Name>HasOutputFunction</Name>
+      <Definition>Indicates whether the on-site control unit includes an output function.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="785cb8cee39b41789611cd85bd7a38e7">
+      <Name>HasRainCollection</Name>
+      <Definition>Indicates whether the on-site control unit collects information on rain.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c24ea39e9f6944709b258e7ebdc844db">
+      <Name>HasSnowCollection</Name>
+      <Definition>Indicates whether the on-site control unit collects information on snow depth.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5796a4da8cbe4907acc1d94832dd697b">
+      <Name>HasWindCollection</Name>
+      <Definition>Indicates whether the on-site control unit collects information on wind.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

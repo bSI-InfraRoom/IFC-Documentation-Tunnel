@@ -1,6 +1,6 @@
 (*
 Copyright by:
-buildingSMART International Limited, 1996-2022
+buildingSMART International Limited, 1996-2023
 
 Any technical documentation made available by buildingSMART International Limited
 is the copyrighted work of buildingSMART International Limited and is owned by the 
@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 18 October 2022
+Thursday, 9 February 2023
 
 *)
 
@@ -93,7 +93,8 @@ REFERENCE FROM IFCPROCESSEXTENSION
 
 REFERENCE FROM IFCPRODUCTEXTENSION
 (
-  IfcRelPositions
+  IfcRelPositions,
+  IfcRelReferencedInSpatialStructure
 );
 
 REFERENCE FROM IFCPROPERTYRESOURCE
@@ -122,20 +123,12 @@ REFERENCE FROM IFCUTILITYRESOURCE
 TYPE IfcPropertySetDefinitionSet = SET [1:?] OF IfcPropertySetDefinition;
 END_TYPE;
 
+TYPE IfcStrippedOptional = BOOLEAN;
+END_TYPE;
+
 TYPE IfcComplexPropertyTemplateTypeEnum = ENUMERATION OF
 	(P_COMPLEX
 	,Q_COMPLEX);
-END_TYPE;
-
-TYPE IfcObjectTypeEnum = ENUMERATION OF
-	(PRODUCT
-	,PROCESS
-	,CONTROL
-	,RESOURCE
-	,ACTOR
-	,GROUP
-	,PROJECT
-	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcPropertySetTemplateTypeEnum = ENUMERATION OF
@@ -251,6 +244,7 @@ ENTITY IfcGroup
  SUBTYPE OF (IfcObject);
  INVERSE
 	IsGroupedBy : SET [0:?] OF IfcRelAssignsToGroup FOR RelatingGroup;
+	ReferencedInStructures : SET [0:?] OF IfcRelReferencedInSpatialStructure FOR RelatedElements;
 END_ENTITY;
 
 ENTITY IfcObject
@@ -321,7 +315,6 @@ ENTITY IfcProduct
     ,IfcLinearElement
     ,IfcPort
     ,IfcPositioningElement
-    ,IfcProxy
     ,IfcSpatialElement
     ,IfcStructuralActivity
     ,IfcStructuralItem))
@@ -413,14 +406,6 @@ ENTITY IfcPropertyTemplateDefinition
  SUBTYPE OF (IfcPropertyDefinition);
 END_ENTITY;
 
-ENTITY IfcProxy
- SUBTYPE OF (IfcProduct);
-	ProxyType : IfcObjectTypeEnum;
-	Tag : OPTIONAL IfcLabel;
- WHERE
-	WR1 : EXISTS(SELF\IfcRoot.Name);
-END_ENTITY;
-
 ENTITY IfcQuantitySet
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcElementQuantity))
@@ -445,9 +430,7 @@ ENTITY IfcRelAssigns
     ,IfcRelAssignsToResource))
  SUBTYPE OF (IfcRelationship);
 	RelatedObjects : SET [1:?] OF IfcObjectDefinition;
-	RelatedObjectsType : OPTIONAL IfcObjectTypeEnum;
- WHERE
-	WR1 : IfcCorrectObjectAssignment(RelatedObjectsType, RelatedObjects);
+	RelatedObjectsType : OPTIONAL IfcStrippedOptional;
 END_ENTITY;
 
 ENTITY IfcRelAssignsToActor
@@ -719,60 +702,6 @@ ENTITY IfcTypeResource
  INVERSE
 	ResourceOf : SET [0:?] OF IfcRelAssignsToResource FOR RelatingResource;
 END_ENTITY;
-
-FUNCTION IfcCorrectObjectAssignment
-  (Constraint: IfcObjectTypeEnum; Objects : SET[1:?] OF IfcObjectDefinition)
-  : LOGICAL ;
-  
-LOCAL
-  Count : INTEGER := 0;
-END_LOCAL;
-
-    IF NOT(EXISTS(Constraint)) THEN 
-      RETURN(TRUE);
-    END_IF;
-  
-    CASE Constraint OF
-      IfcObjectTypeEnum.NOTDEFINED : RETURN(TRUE);
-      IfcObjectTypeEnum.PRODUCT :
-        BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFCKERNEL.IFCPRODUCT' IN TYPEOF(temp))));
-          RETURN(Count = 0);
-        END;
-      IfcObjectTypeEnum.PROCESS :
-        BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFCKERNEL.IFCPROCESS' IN TYPEOF(temp))));
-          RETURN(Count = 0);
-        END;
-      IfcObjectTypeEnum.CONTROL :
-        BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFCKERNEL.IFCCONTROL' IN TYPEOF(temp))));
-          RETURN(Count = 0);
-        END;
-      IfcObjectTypeEnum.RESOURCE :
-        BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFCKERNEL.IFCRESOURCE' IN TYPEOF(temp))));
-          RETURN(Count = 0);
-        END;
-      IfcObjectTypeEnum.ACTOR :
-        BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFCKERNEL.IFCACTOR' IN TYPEOF(temp))));
-          RETURN(Count = 0);
-        END;
-      IfcObjectTypeEnum.GROUP :
-        BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFCKERNEL.IFCGROUP' IN TYPEOF(temp))));
-          RETURN(Count = 0);
-        END;
-      IfcObjectTypeEnum.PROJECT :
-        BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFCKERNEL.IFCPROJECT' IN TYPEOF(temp))));
-          RETURN(Count = 0);
-        END;
-      OTHERWISE : RETURN(?);
-    END_CASE;
-
-END_FUNCTION;
 
 FUNCTION IfcUniqueDefinitionNames
 (Relations : SET [1:?] OF IfcRelDefinesByProperties)

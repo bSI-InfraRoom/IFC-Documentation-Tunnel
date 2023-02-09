@@ -109,6 +109,9 @@ Connectivity between the continuous segments is not enforced per se to be tangen
 </td><td>X</td></tr>
 <tr><td></td><td><i>UsingCurves</i></td><td><a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a><br/>@Segments</td><td>S[1:?]</td><td>The set of composite curves which use this composite curve segment as a segment. This set shall not be empty.
 </td><td>X</td></tr>
+<tr><td></td><td>Dim<br/>:=IfcSegmentDim(SELF)</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td></td><td>The space dimensionality of this class, defined by the dimensionality of the first ParentCurve.
+</td>
+<td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcgeometryresource/lexical/ifccompositecurvesegment.htm">IfcCompositeCurveSegment</a></td></tr>
 <tr><td>2</td><td>SameSense</td><td><a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a></td><td></td><td>
 An indicator of whether or not the sense of the segment agrees with, or opposes, that of the parent curve. If <i>SameSense</i> is false, the point with highest parameter value is taken as the first point of the segment.

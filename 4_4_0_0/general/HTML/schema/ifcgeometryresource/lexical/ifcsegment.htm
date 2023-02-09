@@ -46,6 +46,9 @@ Connectivity between the continuous segments is not enforced per se to be tangen
 </td><td>X</td></tr>
 <tr><td></td><td><i>UsingCurves</i></td><td><a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a><br/>@Segments</td><td>S[1:?]</td><td>The set of composite curves which use this composite curve segment as a segment. This set shall not be empty.
 </td><td>X</td></tr>
+<tr><td></td><td>Dim<br/>:=IfcSegmentDim(SELF)</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td></td><td>The space dimensionality of this class, defined by the dimensionality of the first ParentCurve.
+</td>
+<td>X</td></tr>
 </table>
 </details>
 </section>
@@ -82,6 +85,9 @@ Connectivity between the continuous segments is not enforced per se to be tangen
 </td><td>X</td></tr>
 <tr><td></td><td><i>UsingCurves</i></td><td><a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a><br/>@Segments</td><td>S[1:?]</td><td>The set of composite curves which use this composite curve segment as a segment. This set shall not be empty.
 </td><td>X</td></tr>
+<tr><td></td><td>Dim<br/>:=IfcSegmentDim(SELF)</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td></td><td>The space dimensionality of this class, defined by the dimensionality of the first ParentCurve.
+</td>
+<td>X</td></tr>
 </table>
 </details>
 </section>
@@ -104,6 +110,8 @@ Connectivity between the continuous segments is not enforced per se to be tangen
 &nbsp;&nbsp;Transition : <a href="../../ifcgeometryresource/lexical/ifctransitioncode.htm">IfcTransitionCode</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;UsingCurves : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a> <span class="keyword">FOR</span> Segments;<br/>
+&nbsp;<span class="keyword">DERIVE</span><br/>
+&nbsp;&nbsp;Dim : <a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a> := IfcSegmentDim(SELF);<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

@@ -62,9 +62,6 @@ Length of segment measured as length or parameter value from <i>SegmentStart</i>
 <tr><td>5</td><td>ParentCurve</td><td><a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a></td><td></td><td>
 Curve to be used as base for the segment definition.
 </td><td>X</td></tr>
-<tr><td></td><td>Dim<br/>:=ParentCurve.Dim</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td></td><td>The space dimensionality of this class, defined by the dimensionality of the first ParentCurve.
-</td>
-<td>X</td></tr>
 </table>
 </details>
 </section>
@@ -100,6 +97,9 @@ Connectivity between the continuous segments is not enforced per se to be tangen
 </td><td>X</td></tr>
 <tr><td></td><td><i>UsingCurves</i></td><td><a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a><br/>@Segments</td><td>S[1:?]</td><td>The set of composite curves which use this composite curve segment as a segment. This set shall not be empty.
 </td><td>X</td></tr>
+<tr><td></td><td>Dim<br/>:=IfcSegmentDim(SELF)</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td></td><td>The space dimensionality of this class, defined by the dimensionality of the first ParentCurve.
+</td>
+<td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcgeometryresource/lexical/ifccurvesegment.htm">IfcCurveSegment</a></td></tr>
 <tr><td>2</td><td>Placement</td><td><a href="../../ifcgeometryresource/lexical/ifcplacement.htm">IfcPlacement</a></td><td></td><td>
 Placement in the context of the curve using this segment. As insertion point <i>SegmentStart</i> is the reference point of <i>Placement</i>. <i>RefDirection</i> of <i>Placement</i> also specifies the sense of the trimmed segment of <i>ParentCurve</i>. RefDirection is bound to the paramettrization sense of the segment.
@@ -113,9 +113,6 @@ Length of segment measured as length or parameter value from <i>SegmentStart</i>
 <tr><td>5</td><td>ParentCurve</td><td><a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a></td><td></td><td>
 Curve to be used as base for the segment definition.
 </td><td>X</td></tr>
-<tr><td></td><td>Dim<br/>:=ParentCurve.Dim</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td></td><td>The space dimensionality of this class, defined by the dimensionality of the first ParentCurve.
-</td>
-<td>X</td></tr>
 </table>
 </details>
 </section>
@@ -151,8 +148,6 @@ Curve to be used as base for the segment definition.
 &nbsp;&nbsp;SegmentStart : <a href="../../ifcgeometryresource/lexical/ifccurvemeasureselect.htm">IfcCurveMeasureSelect</a>;<br/>
 &nbsp;&nbsp;SegmentLength : <a href="../../ifcgeometryresource/lexical/ifccurvemeasureselect.htm">IfcCurveMeasureSelect</a>;<br/>
 &nbsp;&nbsp;ParentCurve : <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a>;<br/>
-&nbsp;<span class="keyword">DERIVE</span><br/>
-&nbsp;&nbsp;Dim : <a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a> := ParentCurve.Dim;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

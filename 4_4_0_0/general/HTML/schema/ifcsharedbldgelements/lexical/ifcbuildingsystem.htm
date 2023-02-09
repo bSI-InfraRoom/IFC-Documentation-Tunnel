@@ -11,7 +11,7 @@
     <title>IfcBuildingSystem</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 1 index3 3 index4 6 index5 0; }
+      body { counter-reset: index1 6 index2 1 index3 3 index4 8 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.1.3.7");
+    parent.index.location.replace("../../toc-6.htm#6.1.3.9");
 //-->
 </script>
 
@@ -44,6 +44,9 @@
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x2-to-ifc4x3_rc1/index.htm">IFC4x2 to IFC4x3_RC1</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcbuildingsystem.htm">IfcBuildingSystem</a></td><td></td><td></td><td>MODIFIED</td><td>Status changed to <i>Deprecated</i>. <br/></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ServicesFacilities</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x3_add1/index.htm">IFC4X3 to IFC4X3_ADD1</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcbuildingsystem.htm">IfcBuildingSystem</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReferencedInStructures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -166,6 +169,8 @@ IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexic
 IFC4 CHANGE  The cardinality has been changed from 1..1 to 0..? in order to allow the exchange of a group concept without having already group members assigned. It now also allows the use of many instances of <a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a> to assign the group members. The change has been done with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
+<tr><td></td><td><i>ReferencedInStructures</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:?]</td><td>Reference to the relationship <a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a> that relates the group to a spatial element.
+</td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a></td></tr>
 <tr><td></td><td><i>ServicesBuildings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatingSystem</td><td>S[0:1]</td><td>Reference to the <del>building</del> spatial structure via the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>, which is serviced by the system.
 </td><td>X</td></tr>
@@ -190,7 +195,7 @@ NOTE  In many scenarios the <i>Name</i> attribute refers to the short name or n
 <summary>Concept usage</summary>
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 137.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 140.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -199,22 +204,22 @@ NOTE  In many scenarios the <i>Name</i> attribute refers to the short name or n
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 137 &mdash; IfcBuildingSystem Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 140 &mdash; IfcBuildingSystem Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="aggregation" />
 <p class="use-head">Aggregation</p>
-<p>The <a href="../../templates/aggregation.htm">Aggregation</a> concept template applies to this entity as shown in Table 138.<table>
+<p>The <a href="../../templates/aggregation.htm">Aggregation</a> concept template applies to this entity as shown in Table 141.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 138 &mdash; IfcBuildingSystem Aggregation</td></tr></table>
+<tr><td><p class="table">Table 141 &mdash; IfcBuildingSystem Aggregation</td></tr></table>
 
 <br/><br/>
 
 <a id="group-assignment" />
 <p class="use-head">Group Assignment</p>
-<p>The <a href="../../templates/group-assignment.htm">Group Assignment</a> concept template applies to this entity as shown in Table 139.<table>
+<p>The <a href="../../templates/group-assignment.htm">Group Assignment</a> concept template applies to this entity as shown in Table 142.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>IsGrouped</b></th><th><b>RelatedObjects</b></th><th><b>Description</b></th></tr>
@@ -222,7 +227,7 @@ NOTE  In many scenarios the <i>Name</i> attribute refers to the short name or n
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 139 &mdash; IfcBuildingSystem Group Assignment</td></tr></table>
+<tr><td><p class="table">Table 142 &mdash; IfcBuildingSystem Group Assignment</td></tr></table>
 
 <br/><br/>
 

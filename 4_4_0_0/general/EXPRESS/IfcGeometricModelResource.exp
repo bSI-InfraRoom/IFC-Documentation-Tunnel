@@ -1,6 +1,6 @@
 (*
 Copyright by:
-buildingSMART International Limited, 1996-2022
+buildingSMART International Limited, 1996-2023
 
 Any technical documentation made available by buildingSMART International Limited
 is the copyrighted work of buildingSMART International Limited and is owned by the 
@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 18 October 2022
+Thursday, 9 February 2023
 
 *)
 
@@ -68,7 +68,8 @@ REFERENCE FROM IFCMEASURERESOURCE
 REFERENCE FROM IFCPRESENTATIONAPPEARANCERESOURCE
 (
   IfcIndexedTextureMap,
-  IfcIndexedColourMap
+  IfcIndexedColourMap,
+  IfcTextureCoordinateIndices
 );
 
 REFERENCE FROM IFCPROFILERESOURCE
@@ -309,6 +310,7 @@ ENTITY IfcIndexedPolygonalFace
 	CoordIndex : LIST [3:?] OF IfcPositiveInteger;
  INVERSE
 	ToFaceSet : SET [1:?] OF IfcPolygonalFaceSet FOR Faces;
+	HasTexCoords : SET [0:1] OF IfcTextureCoordinateIndices FOR TexCoordsOf;
 END_ENTITY;
 
 ENTITY IfcIndexedPolygonalFaceWithVoids
@@ -339,7 +341,7 @@ END_ENTITY;
 ENTITY IfcPolygonalFaceSet
  SUBTYPE OF (IfcTessellatedFaceSet);
 	Closed : OPTIONAL IfcBoolean;
-	Faces : LIST [1:?] OF IfcIndexedPolygonalFace;
+	Faces : LIST [1:?] OF UNIQUE IfcIndexedPolygonalFace;
 	PnIndex : OPTIONAL LIST [1:?] OF IfcPositiveInteger;
 END_ENTITY;
 

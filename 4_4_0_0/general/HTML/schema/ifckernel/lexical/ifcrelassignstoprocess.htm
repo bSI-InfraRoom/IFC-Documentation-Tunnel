@@ -11,7 +11,7 @@
     <title>IfcRelAssignsToProcess</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 2 index3 3 index4 26 index5 0; }
+      body { counter-reset: index1 5 index2 2 index3 3 index4 25 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.htm#5.2.3.27");
+    parent.index.location.replace("../../toc-5.htm#5.2.3.26");
 //-->
 </script>
 
@@ -45,6 +45,9 @@
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x1-final-4_1_0_0/index.htm">IFC4x1 Final 4.1.0.0</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifckernel/lexical/ifcrelassignstoprocess.htm">IfcRelAssignsToProcess</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RelatedObjectsType</td><td></td><td></td><td>MODIFIED</td><td>Status changed from <i>Deprecated</i>. <br/></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x3_add1/index.htm">IFC4X3 to IFC4X3_ADD1</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifckernel/lexical/ifcrelassignstoprocess.htm">IfcRelAssignsToProcess</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RelatedObjectsType</td><td>X</td><td>X</td><td>MODIFIED</td><td>Type changed from <i>IfcObjectTypeEnum</i> to <i>IfcStrippedOptional</i>. <br/></td></tr>
 </table>
 </details>
 <section>
@@ -121,10 +124,13 @@ Optional description, provided for exchanging informative comments.
 <tr><td>5</td><td>RelatedObjects</td><td><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></td><td>S[1:?]</td><td>
 Related objects, which are assigned to a single object. The type of the single (or relating) object is defined in the subtypes of IfcRelAssigns.
 </td><td>X</td></tr>
-<tr><td>6</td><td>RelatedObjectsType</td><td><a href="../../ifckernel/lexical/ifcobjecttypeenum.htm">IfcObjectTypeEnum</a></td><td>? </td><td>
+<tr><td>6</td><td>RelatedObjectsType</td><td><a href="../../ifckernel/lexical/ifcstrippedoptional.htm">IfcStrippedOptional</a></td><td>? </td><td>
 Particular type of the assignment relationship. It can constrain the applicable object types, used within the role of <i>RelatedObjects</i>.
 <blockquote>
 IFC4 CHANGE  The attribute is deprecated and shall no longer be used. A NIL value should always be assigned.
+</blockquote>
+<blockquote>
+IFC4.3.0.1-CHANGE The attribute type has been changed to IfcStrippedOptional given that IfcObjectTypeEnum has been deleted.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifcrelassignstoprocess.htm">IfcRelAssignsToProcess</a></td></tr>

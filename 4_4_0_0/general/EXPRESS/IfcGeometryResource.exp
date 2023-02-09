@@ -1,6 +1,6 @@
 (*
 Copyright by:
-buildingSMART International Limited, 1996-2022
+buildingSMART International Limited, 1996-2023
 
 Any technical documentation made available by buildingSMART International Limited
 is the copyrighted work of buildingSMART International Limited and is owned by the 
@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 18 October 2022
+Thursday, 9 February 2023
 
 *)
 
@@ -458,7 +458,7 @@ ENTITY IfcCompositeCurveSegment
 	SameSense : IfcBoolean;
 	ParentCurve : IfcCurve;
  DERIVE
-	Dim : IfcDimensionCount := ParentCurve.Dim;
+	SELF\IfcSegment.Dim : IfcDimensionCount := ParentCurve.Dim;
  WHERE
 	ParentIsBoundedCurve : ('IFCGEOMETRYRESOURCE.IFCBOUNDEDCURVE' IN TYPEOF(ParentCurve));
 END_ENTITY;
@@ -512,8 +512,6 @@ ENTITY IfcCurveSegment
 	SegmentStart : IfcCurveMeasureSelect;
 	SegmentLength : IfcCurveMeasureSelect;
 	ParentCurve : IfcCurve;
- DERIVE
-	Dim : IfcDimensionCount := ParentCurve.Dim;
 END_ENTITY;
 
 ENTITY IfcCylindricalSurface
@@ -832,6 +830,8 @@ ENTITY IfcSegment
     ,IfcCurveSegment))
  SUBTYPE OF (IfcGeometricRepresentationItem);
 	Transition : IfcTransitionCode;
+ DERIVE
+	Dim : IfcDimensionCount := IfcSegmentDim(SELF);
  INVERSE
 	UsingCurves : SET [1:?] OF IfcCompositeCurve FOR Segments;
 END_ENTITY;
@@ -1321,10 +1321,22 @@ FUNCTION IfcGetBasisSurface
     (* For an IfcCompositeCurveOnSurface the BasisSurface is the intersection of the BasisSurface of all the segments. *)
 
     N := SIZEOF(C\IfcCompositeCurve.Segments);
-    Surfs := IfcGetBasisSurface(C\IfcCompositeCurve.Segments[1].ParentCurve);
+
+    IF ('IFCGEOMETRYRESOURCE.IFCCURVESEGMENT' IN TYPEOF(C\IfcCompositeCurve.Segments[1])) THEN
+      Surfs := IfcGetBasisSurface(C\IfcCompositeCurve.Segments[1]\IfcCurveSegment.ParentCurve);
+    END_IF;
+    IF ('IFCGEOMETRYRESOURCE.IFCCOMPOSITECURVESEGMENT' IN TYPEOF(C\IfcCompositeCurve.Segments[1])) THEN
+      Surfs := IfcGetBasisSurface(C\IfcCompositeCurve.Segments[1]\IfcCompositeCurveSegment.ParentCurve);
+    END_IF;
+
     IF N > 1 THEN
       REPEAT i := 2 TO N;
-        Surfs := Surfs * IfcGetBasisSurface(C\IfcCompositeCurve.Segments[1].ParentCurve);
+        IF ('IFCGEOMETRYRESOURCE.IFCCURVESEGMENT' IN TYPEOF(C\IfcCompositeCurve.Segments[i])) THEN
+          Surfs := Surfs * IfcGetBasisSurface(C\IfcCompositeCurve.Segments[i]\IfcCurveSegment.ParentCurve);
+        END_IF;
+        IF ('IFCGEOMETRYRESOURCE.IFCCOMPOSITECURVESEGMENT' IN TYPEOF(C\IfcCompositeCurve.Segments[i])) THEN
+          Surfs := Surfs * IfcGetBasisSurface(C\IfcCompositeCurve.Segments[i]\IfcCompositeCurveSegment.ParentCurve);
+        END_IF;
       END_REPEAT;
     END_IF;
   END_IF;
@@ -1590,6 +1602,20 @@ END_LOCAL;
   YAxis := IfcVectorDifference(YAxis, Temp);
   YAxis := IfcNormalise(YAxis);
   RETURN(YAxis.Orientation);
+
+END_FUNCTION;
+
+FUNCTION IfcSegmentDim
+  (Segment : IfcSegment)
+  : IfcDimensionCount;
+
+   IF ('IFCGEOMETRYRESOURCE.IFCCURVESEGMENT' IN TYPEOF(Segment))
+     THEN RETURN(Segment\IfcCurveSegment.ParentCurve.Dim);
+   END_IF;
+   IF ('IFCGEOMETRYRESOURCE.IFCCOMPOSITECURVESEGMENT' IN TYPEOF(Segment))
+     THEN RETURN(Segment\IfcCompositeCurveSegment.ParentCurve.Dim);
+   END_IF;
+   RETURN (?);
 
 END_FUNCTION;
 

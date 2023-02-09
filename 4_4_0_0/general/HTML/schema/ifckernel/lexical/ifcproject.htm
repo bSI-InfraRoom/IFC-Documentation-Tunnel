@@ -284,8 +284,8 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 <blockquote class="note">
 <p>NOTE  The products and tasks can have direct linking relationships. For example the <a href="../../ifcsharedbldgelements/lexical/ifccurtainwall.htm">IfcCurtainWall</a> can be assigned to a <a href="../../ifcprocessextension/lexical/ifctask.htm">IfcTask</a> as an input or output for a construction schedule.</p>
 </blockquote>
-<p>Figure 264 illustrates the use of <span class="self-ref">IfcProject</span> as context for work plans or work schedules.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-1.png" alt="&quot;project relationships&quot;" title="Figure 264 &mdash; Project spatial and work plan structure"></td></tr><tr><td><p class="figure">Figure 264 &mdash; Project spatial and work plan structure</p></td></tr></table></p>
+<p>Figure 266 illustrates the use of <span class="self-ref">IfcProject</span> as context for work plans or work schedules.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-1.png" alt="&quot;project relationships&quot;" title="Figure 266 &mdash; Project spatial and work plan structure"></td></tr><tr><td><p class="figure">Figure 266 &mdash; Project spatial and work plan structure</p></td></tr></table></p>
 
 <br/><br/>
 
@@ -310,8 +310,8 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 <li><span class="self-ref">IfcProject</span>.Decomposes -- it shall be NIL, i.e. the <span class="self-ref">IfcProject</span> shall be on top of the root of the spatial structure tree.</li>
 <li><span class="self-ref">IfcProject</span>.IsDecomposedBy -- referencing (<a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a> || <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a> || <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a>) by using <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.RelatedObjects. The <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>, <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a>, or <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> being referenced shall be the root of the spatial structure.</li>
 </ul>
-<p>Figure 265 illustrates project relationships with spatial structures, elements, and element type libraries.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-2.png" alt="&quot;spatial decomposition relationships&quot;" title="Figure 265 &mdash; Project spatial structure, products and product type library"></td></tr><tr><td><p class="figure">Figure 265 &mdash; Project spatial structure, products and product type library</p></td></tr></table></p>
+<p>Figure 267 illustrates project relationships with spatial structures, elements, and element type libraries.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-2.png" alt="&quot;spatial decomposition relationships&quot;" title="Figure 267 &mdash; Project spatial structure, products and product type library"></td></tr><tr><td><p class="figure">Figure 267 &mdash; Project spatial structure, products and product type library</p></td></tr></table></p>
 
 <br/><br/>
 
@@ -325,6 +325,47 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 </table>
 </td></tr>
 <tr><td><p class="table">Table 14 &mdash; IfcProject Project Representation Context 2D</td></tr></table>
+
+<br/><br/>
+
+<a id="project-dataset-information" />
+<p class="use-head">Project Dataset Information</p>
+<p>The <a href="../../templates/project-dataset-information.htm">Project Dataset Information</a> concept template applies to this entity as shown in Table 15.<table>
+<tr><td>
+<table class="gridtable">
+<tr></tr>
+<tr></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 15 &mdash; IfcProject Project Dataset Information</td></tr></table>
+
+<br/><br/>
+
+<a id="project-global-positioning-geodetic" />
+<p class="use-head">Project Global Positioning Geodetic</p>
+<p>The <a href="../../templates/project-global-positioning-geodetic.htm">Project Global Positioning Geodetic</a> concept template applies to this entity as shown in Table 16.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>HasGlobalPosition</b></th></tr>
+<tr><td></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 16 &mdash; IfcProject Project Global Positioning Geodetic</td></tr></table>
+
+<br/><br/>
+
+<a id="project-global-positioning-mapped" />
+<p class="use-head">Project Global Positioning Mapped</p>
+<p>The <a href="../../templates/project-global-positioning-mapped.htm">Project Global Positioning Mapped</a> concept template applies to this entity as shown in Table 17.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>HasGlobalPosition</b></th></tr>
+<tr><td></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 17 &mdash; IfcProject Project Global Positioning Mapped</td></tr></table>
+
+<p>The representation context of the project refers to global positioning, i.e. the coordinate system of the project resides within the defined projected coordinate reference system (a map coordinate system) and is subject to a rigid transformation, e.g. to truncate coordinate values. The representation context inherits all properties of the projected coordinate reference system, in particular the distortions resulting in deviations between model dimensions/distances and real-world dimensions/distances.</p>
 
 <br/><br/>
 
@@ -401,6 +442,24 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;e947288e-15f5-4dcb-8e09-a39dcb995e2d&quot; name=&quot;Project Dataset Information&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;6dff8689-6ea0-4f84-86a5-2ef435718ab8&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;d1c8c2c8-903f-4db1-8de9-5078995511e5&quot; name=&quot;Project Global Positioning Geodetic&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f54c3914-74bb-4107-ab87-fea51e45c624&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;225782d2-563c-445b-a7c5-396743a56a6b&quot; name=&quot;Project Global Positioning Mapped&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;570afce6-df2d-483e-bcb8-9241dd6c5479&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&lt;/Concepts&gt;<br/>
 &lt;/ConceptRoot&gt;<br/>
 
@@ -427,6 +486,9 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcproject.htm#project-declaration">Project Declaration</a></td><td><a href="../../templates/project-declaration.htm">Project Declaration</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcproject.htm#spatial-decomposition">Spatial Decomposition</a></td><td><a href="../../templates/spatial-decomposition.htm">Spatial Decomposition</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcproject.htm#project-representation-context-2d">Project Representation Context 2D</a></td><td><a href="../../templates/project-representation-context-2d.htm">Project Representation Context 2D</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcproject.htm#project-dataset-information">Project Dataset Information</a></td><td><a href="../../templates/project-dataset-information.htm">Project Dataset Information</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcproject.htm#project-global-positioning-geodetic">Project Global Positioning Geodetic</a></td><td><a href="../../templates/project-global-positioning-geodetic.htm">Project Global Positioning Geodetic</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcproject.htm#project-global-positioning-mapped">Project Global Positioning Mapped</a></td><td><a href="../../templates/project-global-positioning-mapped.htm">Project Global Positioning Mapped</a></td><td>General Usage</td></tr>
 
 </table>
 </details>

@@ -41,6 +41,9 @@
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x2-to-ifc4x3_rc1/index.htm">IFC4x2 to IFC4x3_RC1</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ServicesFacilities</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x3_add1/index.htm">IFC4X3 to IFC4X3_ADD1</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReferencedInStructures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -158,6 +161,8 @@ IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexic
 IFC4 CHANGE  The cardinality has been changed from 1..1 to 0..? in order to allow the exchange of a group concept without having already group members assigned. It now also allows the use of many instances of <a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a> to assign the group members. The change has been done with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
+<tr><td></td><td><i>ReferencedInStructures</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:?]</td><td>Reference to the relationship <a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a> that relates the group to a spatial element.
+</td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a></td></tr>
 <tr><td></td><td><i>ServicesBuildings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatingSystem</td><td>S[0:1]</td><td>Reference to the <del>building</del> spatial structure via the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>, which is serviced by the system.
 </td><td>X</td></tr>
@@ -172,7 +177,7 @@ IFC4 CHANGE  The cardinality has been changed from 1..1 to 0..? in order to all
 <summary>Concept usage</summary>
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 119.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 122.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -187,20 +192,20 @@ IFC4 CHANGE  The cardinality has been changed from 1..1 to 0..? in order to all
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 119 &mdash; IfcSystem Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 122 &mdash; IfcSystem Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="system-element-attributes" />
 <p class="use-head">System Element Attributes</p>
-<p>The <a href="../../templates/system-element-attributes.htm">System Element Attributes</a> concept template applies to this entity as shown in Table 120.<table>
+<p>The <a href="../../templates/system-element-attributes.htm">System Element Attributes</a> concept template applies to this entity as shown in Table 123.<table>
 <tr><td>
 <table class="gridtable">
 <tr></tr>
 <tr></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 120 &mdash; IfcSystem System Element Attributes</td></tr></table>
+<tr><td><p class="table">Table 123 &mdash; IfcSystem System Element Attributes</td></tr></table>
 
 <br/><br/>
 

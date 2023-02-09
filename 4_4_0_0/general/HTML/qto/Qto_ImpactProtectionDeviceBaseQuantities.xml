@@ -1,1 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?><QtoSetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.buildingsmart-tech.org/xml/qto/QTO_IFC4.xsd"><IfcVersion version="IFC4X4" /><Name>Qto_ImpactProtectionDeviceBaseQuantities</Name><Applicability /><ApplicableClasses><ClassName>IfcImpactProtectionDevice</ClassName></ApplicableClasses><ApplicableTypeValue>IfcImpactProtectionDevice</ApplicableTypeValue><QtoDefs><QtoDef><Name>Weight</Name><Definition>Total weight of object</Definition><QtoType>Q_WEIGHT</QtoType><NameAliases /><DefinitionAliases /></QtoDef></QtoDefs><QtoDefinitionAliases /></QtoSetDef>
+<?xml version="1.0" encoding="utf-8"?>
+<QtoSetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.buildingsmart-tech.org/xml/qto/QTO_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Qto_ImpactProtectionDeviceBaseQuantities</Name>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcImpactProtectionDevice</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcImpactProtectionDevice</ApplicableTypeValue>
+  <QtoDefs>
+    <QtoDef>
+      <Name>Weight</Name>
+      <Definition>Total weight of object</Definition>
+      <QtoType>Q_WEIGHT</QtoType>
+      <NameAliases />
+      <DefinitionAliases />
+    </QtoDef>
+  </QtoDefs>
+  <QtoDefinitionAliases />
+</QtoSetDef>

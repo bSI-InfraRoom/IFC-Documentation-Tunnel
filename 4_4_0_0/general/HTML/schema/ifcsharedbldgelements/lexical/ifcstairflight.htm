@@ -11,7 +11,7 @@
     <title>IfcStairFlight</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 1 index3 3 index4 43 index5 0; }
+      body { counter-reset: index1 6 index2 1 index3 3 index4 45 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.1.3.44");
+    parent.index.location.replace("../../toc-6.htm#6.1.3.46");
 //-->
 </script>
 
@@ -302,20 +302,20 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 212.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 215.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifcsharedbldgelements/lexical/ifcstairflighttype.htm">IfcStairFlightType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 212 &mdash; IfcStairFlight Object Typing</td></tr></table>
+<tr><td><p class="table">Table 215 &mdash; IfcStairFlight Object Typing</td></tr></table>
 
 <br/><br/>
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 213.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 216.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -379,20 +379,20 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 213 &mdash; IfcStairFlight Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 216 &mdash; IfcStairFlight Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="quantity-sets" />
 <p class="use-head">Quantity Sets</p>
-<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 214.<table>
+<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 217.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>QsetName</b></th><th><b>Quantities</b></th></tr>
 <tr><td><a href="../../ifcsharedbldgelements/qset/qto_stairflightbasequantities.htm">Qto_StairFlightBaseQuantities</a></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 214 &mdash; IfcStairFlight Quantity Sets</td></tr></table>
+<tr><td><p class="table">Table 217 &mdash; IfcStairFlight Quantity Sets</td></tr></table>
 
 <br/><br/>
 
@@ -404,7 +404,7 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 
 <a id="spatial-containment" />
 <p class="use-head">Spatial Containment</p>
-<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 215.<table>
+<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 218.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingStructure</b></th><th><b>Description</b></th></tr>
@@ -416,7 +416,7 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 215 &mdash; IfcStairFlight Spatial Containment</td></tr></table>
+<tr><td><p class="table">Table 218 &mdash; IfcStairFlight Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcStairFlight</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
 <ul>
@@ -432,38 +432,38 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <a id="axis-2d-geometry" />
 <p class="use-head">Axis 2D Geometry</p>
 <p>The <a href="../../templates/axis-2d-geometry.htm">Axis 2D Geometry</a> concept applies to this entity.</p><p>The walking line is represented by a two-dimensional open curve as the axis. The curve is directed into the upward direction (direction has to be interpreted as specified at the subtypes of <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a>).</p>
-<p>Figure 356 illustrates the axis representation which has the following constraints:</p>
+<p>Figure 358 illustrates the axis representation which has the following constraints:</p>
 <ul>
 <li>In case of straight flights the curve shall be a single item of type <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>.</li>
 <li>In case of winding flights the curve shall be a single item of type <a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a>.</li>
 <li>In case of a curved flight or a spiral flight the curve shall be a single item of type <a href="../../ifcgeometryresource/lexical/ifctrimmedcurve.htm">IfcTrimmedCurve</a>.</li>
 </ul>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcstairflight_01-layout1.gif" alt="&quot;walking line&quot;" title="Figure 356 &mdash; Stair flight axis"></td></tr><tr><td><p class="figure">Figure 356 &mdash; Stair flight axis</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcstairflight_01-layout1.gif" alt="&quot;walking line&quot;" title="Figure 358 &mdash; Stair flight axis"></td></tr><tr><td><p class="figure">Figure 358 &mdash; Stair flight axis</p></td></tr></table></p>
 
 <br/><br/>
 
 <a id="footprint-geometry" />
 <p class="use-head">Footprint Geometry</p>
-<p>The <a href="../../templates/footprint-geometry.htm">FootPrint Geometry</a> concept template applies to this entity as shown in Table 216.<table>
+<p>The <a href="../../templates/footprint-geometry.htm">FootPrint Geometry</a> concept template applies to this entity as shown in Table 219.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 216 &mdash; IfcStairFlight FootPrint Geometry</td></tr></table>
+<tr><td><p class="table">Table 219 &mdash; IfcStairFlight FootPrint Geometry</td></tr></table>
 
 <p>The flight foot print, including the flight boundary is represented by a two-dimensional geometric curve set.</p>
-<p>Figure 357 illustrates the footprint representation which has the following constraints:</p>
+<p>Figure 359 illustrates the footprint representation which has the following constraints:</p>
 <ul>
 <li>In case of straight flights the curve set shall consists of a single item of type <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>.</li>
 <li>In case of winding flights or curved flights the curve set shall consists of a single item of type <a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a>.</li>
 <li>In case of a spiral flight the curve set shall consists of a single item of type <a href="../../ifcgeometryresource/lexical/ifcconic.htm">IfcConic</a> or <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>.</li>
 </ul>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcstairflight_02-layout1.gif" alt="&quot;boundary&quot;" title="Figure 357 &mdash; Stair flight footprint"></td></tr><tr><td><p class="figure">Figure 357 &mdash; Stair flight footprint</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcstairflight_02-layout1.gif" alt="&quot;boundary&quot;" title="Figure 359 &mdash; Stair flight footprint"></td></tr><tr><td><p class="figure">Figure 359 &mdash; Stair flight footprint</p></td></tr></table></p>
 
 <br/><br/>
 
 <a id="body-sweptsolid-geometry" />
 <p class="use-head">Body SweptSolid Geometry</p>
-<p>The <a href="../../templates/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a> concept applies to this entity.</p><p>Figure 358 illustrates the 'Body' geometric representation using a 'SweptSolid' representation type.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcstairflight_03-layout1.gif" alt="&quot;3D&quot;" title="Figure 358 &mdash; Stair flight body"></td></tr><tr><td><p class="figure">Figure 358 &mdash; Stair flight body</p></td></tr></table></p>
+<p>The <a href="../../templates/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a> concept applies to this entity.</p><p>Figure 360 illustrates the 'Body' geometric representation using a 'SweptSolid' representation type.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcstairflight_03-layout1.gif" alt="&quot;3D&quot;" title="Figure 360 &mdash; Stair flight body"></td></tr><tr><td><p class="figure">Figure 360 &mdash; Stair flight body</p></td></tr></table></p>
 
 <br/><br/>
 

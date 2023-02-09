@@ -35,6 +35,9 @@
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4-addendum-2-4_0_2_0/index.htm">IFC4 Addendum 2 4.0.2.0</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcindexedpolygonalfacewithvoids.htm">IfcIndexedPolygonalFaceWithVoids</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x3_add1/index.htm">IFC4X3 to IFC4X3_ADD1</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcindexedpolygonalfacewithvoids.htm">IfcIndexedPolygonalFaceWithVoids</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasTexCoords</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -93,6 +96,7 @@ NOTE  The coordinates of the vertices are provided by the indexed list of <i>SE
 </td><td>X</td></tr>
 <tr><td></td><td><i>ToFaceSet</i></td><td><a href="../../ifcgeometricmodelresource/lexical/ifcpolygonalfaceset.htm">IfcPolygonalFaceSet</a><br/>@Faces</td><td>S[1:?]</td><td>Reference to the <a href="../../ifcgeometricmodelresource/lexical/ifcpolygonalfaceset.htm">IfcPolygonalFaceSet</a> for which this face is associated.
 </td><td>X</td></tr>
+<tr><td></td><td><i>HasTexCoords</i></td><td><a href="../../ifcpresentationappearanceresource/lexical/ifctexturecoordinateindices.htm">IfcTextureCoordinateIndices</a><br/>@TexCoordsOf</td><td>S[0:1]</td><td></td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcgeometricmodelresource/lexical/ifcindexedpolygonalfacewithvoids.htm">IfcIndexedPolygonalFaceWithVoids</a></td></tr>
 <tr><td>2</td><td>InnerCoordIndices</td><td><a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a></td><td>L[1:?] L[3:?]</td><td>
 Two-dimensional list, where the first dimension represents each inner loop (from 1 to N) and the second dimension the indices to three or more points that define the vertices of each inner loop. If the tessellated face set is closed, indicated by <i>SELF\IfcTessellatedFaceSet.Closed</i>, then the points, defining the inner loops, shall connect clockwise, as seen from the outside of the body.

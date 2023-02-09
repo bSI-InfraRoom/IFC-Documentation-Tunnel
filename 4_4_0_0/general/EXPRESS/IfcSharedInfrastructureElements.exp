@@ -1,6 +1,6 @@
 (*
 Copyright by:
-buildingSMART International Limited, 1996-2022
+buildingSMART International Limited, 1996-2023
 
 Any technical documentation made available by buildingSMART International Limited
 is the copyrighted work of buildingSMART International Limited and is owned by the 
@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 18 October 2022
+Thursday, 9 February 2023
 
 *)
 
@@ -117,6 +117,14 @@ TYPE IfcGeotechTypicalSectionTypeEnum = ENUMERATION OF
 	,USERDEFINED);
 END_TYPE;
 
+TYPE IfcGeotechnicalStratumTypeEnum = ENUMERATION OF
+	(SOLID
+	,VOID
+	,WATER
+	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;
+
 TYPE IfcGroundReinforcementElementTypeEnum = ENUMERATION OF
 	(SPILINGBOLT
 	,ROCKSUPPORTBOLT
@@ -181,7 +189,7 @@ ENTITY IfcBorehole
  SUBTYPE OF (IfcGeoScienceElement);
 	PredefinedType : IfcBoreholeTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcGeoScienceFeatureTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	HasObjectType : (PredefinedType <> IfcBoreholeTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
 
 ENTITY IfcCourse
@@ -252,7 +260,7 @@ ENTITY IfcGeoScienceModel
  SUBTYPE OF (IfcGeoScienceElement);
 	PredefinedType : IfcGeoScienceModelTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcGeoScienceFeatureTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	HasObjectType : (PredefinedType <> IfcGeoScienceModelTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
 
 ENTITY IfcGeoScienceObservation
@@ -292,18 +300,29 @@ ENTITY IfcGeotechnicalElement
 END_ENTITY;
 
 ENTITY IfcGeotechnicalStratum
- ABSTRACT SUPERTYPE OF (ONEOF
-    (IfcSolidStratum
-    ,IfcVoidStratum
-    ,IfcWaterStratum))
  SUBTYPE OF (IfcGeotechnicalElement);
+	PredefinedType : IfcGeotechnicalStratumTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT EXISTS(PredefinedType) OR (PredefinedType <> IfcVoidingFeatureTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
 
 ENTITY IfcGroundReinforcementElement
  SUBTYPE OF (IfcBuiltElement);
+	PredefinedType : OPTIONAL IfcGroundReinforcementElementTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+(PredefinedType <> IfcGroundReinforcementElementTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcGroundReinforcementElementTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+('IFCSHAREDINFRASTRUCTUREELEMENTS.IFCGROUNDREINFORCEMENTELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+END_ENTITY;
+
+ENTITY IfcGroundReinforcementElementType
+ SUBTYPE OF (IfcBuiltElementType);
 	PredefinedType : IfcGroundReinforcementElementTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcGroundReinforcementElementTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcGroundReinforcementElementTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcGroundReinforcementElementTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcImpactProtectionDevice
@@ -312,7 +331,7 @@ ENTITY IfcImpactProtectionDevice
  WHERE
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
 (PredefinedType <> IfcImpactProtectionDeviceTypeEnum.USERDEFINED) OR
-((PredefinedType = IfcImpactProtectionDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));;
+((PredefinedType = IfcImpactProtectionDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
 ('IFCSHAREDINFRASTRUCTUREELEMENTS.IFCIMPACTPROTECTIONDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
@@ -322,7 +341,7 @@ ENTITY IfcImpactProtectionDeviceType
 	PredefinedType : IfcImpactProtectionDeviceTypeEnum;
  WHERE
 	CorrectPredefinedType : (PredefinedType <> IfcImpactProtectionDeviceTypeEnum.USERDEFINED) OR
- ((PredefinedType = IfcImpactProtectionDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));;
+ ((PredefinedType = IfcImpactProtectionDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcImprovedGround
@@ -389,23 +408,11 @@ ENTITY IfcSignalType
 ((PredefinedType = IfcSignalTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
 END_ENTITY;
 
-ENTITY IfcSolidStratum
- SUBTYPE OF (IfcGeotechnicalStratum);
-END_ENTITY;
-
 ENTITY IfcUndergroundExcavation
  SUBTYPE OF (IfcExcavation);
 	PredefinedType : IfcUndergroundExcavationTypeEnum;
  WHERE
 	HasObjectType : (PredefinedType <> IfcUndergroundExcavationTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
-END_ENTITY;
-
-ENTITY IfcVoidStratum
- SUBTYPE OF (IfcGeotechnicalStratum);
-END_ENTITY;
-
-ENTITY IfcWaterStratum
- SUBTYPE OF (IfcGeotechnicalStratum);
 END_ENTITY;
 
 END_SCHEMA;

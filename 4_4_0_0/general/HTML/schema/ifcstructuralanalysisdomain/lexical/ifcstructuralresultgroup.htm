@@ -40,6 +40,9 @@
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4-addendum-1-4_0_1_0/index.htm">IFC4 Addendum 1 4.0.1.0</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcstructuralanalysisdomain/lexical/ifcstructuralresultgroup.htm">IfcStructuralResultGroup</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IsLinear</td><td></td><td></td><td>MODIFIED</td><td>Type changed from <i>BOOLEAN</i> to <i>IfcBoolean</i>. <br/></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x3_add1/index.htm">IFC4X3 to IFC4X3_ADD1</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcstructuralanalysisdomain/lexical/ifcstructuralresultgroup.htm">IfcStructuralResultGroup</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReferencedInStructures</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -167,6 +170,8 @@ IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexic
 IFC4 CHANGE  The cardinality has been changed from 1..1 to 0..? in order to allow the exchange of a group concept without having already group members assigned. It now also allows the use of many instances of <a href="../../ifckernel/lexical/ifcrelassignstogroup.htm">IfcRelAssignsToGroup</a> to assign the group members. The change has been done with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
+<tr><td></td><td><i>ReferencedInStructures</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:?]</td><td>Reference to the relationship <a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a> that relates the group to a spatial element.
+</td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralresultgroup.htm">IfcStructuralResultGroup</a></td></tr>
 <tr><td>6</td><td>TheoryType</td><td><a href="../../ifcstructuralanalysisdomain/lexical/ifcanalysistheorytypeenum.htm">IfcAnalysisTheoryTypeEnum</a></td><td></td><td>
 Specifies the analysis theory used to obtain the respective results.
@@ -189,7 +194,7 @@ This value allows to easily recognize whether a linear analysis has been applied
 <summary>Concept usage</summary>
 <a id="group-assignment" />
 <p class="use-head">Group Assignment</p>
-<p>The <a href="../../templates/group-assignment.htm">Group Assignment</a> concept template applies to this entity as shown in Table 672.<table>
+<p>The <a href="../../templates/group-assignment.htm">Group Assignment</a> concept template applies to this entity as shown in Table 674.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>IsGrouped</b></th><th><b>RelatedObjects</b></th><th><b>Description</b></th></tr>
@@ -197,7 +202,7 @@ This value allows to easily recognize whether a linear analysis has been applied
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 672 &mdash; IfcStructuralResultGroup Group Assignment</td></tr></table>
+<tr><td><p class="table">Table 674 &mdash; IfcStructuralResultGroup Group Assignment</td></tr></table>
 
 <br/><br/>
 

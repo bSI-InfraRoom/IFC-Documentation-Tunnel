@@ -88,7 +88,7 @@ EXAMPLE  geodetic datums include:
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasCoordinateOperation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a><br/>@SourceCRS</td><td>S[0:1]</td><td>Indicates conversion between coordinate systems. In particular it refers to an <a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a> between this coordinate reference system, and another Geographic coordinate reference system.
 </td><td>X</td></tr>
-<tr><td></td><td><i>HasWellKnowTextRepresentation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a><br/>@CoordinateReferenceSystem</td><td>? </td><td>Well known text (string) according to ISO 19162.
+<tr><td></td><td><i>HasWellKnownTextRepresentation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a><br/>@CoordinateReferenceSystem</td><td>? </td><td>Well known text (string) according to ISO 19162.
 <blockquote class="note">
 NOTE If an EPSG code is given in <i>Name</i>, the WKT (if present) shall be the representation of the EPSG. In case of not matching, the EPSG code in <i>Name</i> takes precedence.
 </blockquote>
@@ -142,7 +142,7 @@ EXAMPLE  geodetic datums include:
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasCoordinateOperation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a><br/>@SourceCRS</td><td>S[0:1]</td><td>Indicates conversion between coordinate systems. In particular it refers to an <a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a> between this coordinate reference system, and another Geographic coordinate reference system.
 </td><td>X</td></tr>
-<tr><td></td><td><i>HasWellKnowTextRepresentation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a><br/>@CoordinateReferenceSystem</td><td>? </td><td>Well known text (string) according to ISO 19162.
+<tr><td></td><td><i>HasWellKnownTextRepresentation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a><br/>@CoordinateReferenceSystem</td><td>? </td><td>Well known text (string) according to ISO 19162.
 <blockquote class="note">
 NOTE If an EPSG code is given in <i>Name</i>, the WKT (if present) shall be the representation of the EPSG. In case of not matching, the EPSG code in <i>Name</i> takes precedence.
 </blockquote>
@@ -175,9 +175,9 @@ NOTE If an EPSG code is given in <i>Name</i>, the WKT (if present) shall be the 
 &nbsp;&nbsp;GeodeticDatum : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;HasCoordinateOperation : <span class="keyword">SET</span> [0:1] OF <a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a> <span class="keyword">FOR</span> SourceCRS;<br/>
-&nbsp;&nbsp;HasWellKnowTextRepresentation : <a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a> <span class="keyword">FOR</span> CoordinateReferenceSystem;<br/>
+&nbsp;&nbsp;HasWellKnownTextRepresentation : <a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a> <span class="keyword">FOR</span> CoordinateReferenceSystem;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;CoordinateSystemSpecified : EXISTS(SELF.Name) || EXISTS(SELF.HasWellKnowTextRepresentation);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;CoordinateSystemSpecified : EXISTS(SELF.Name) OR EXISTS(SELF.HasWellKnownTextRepresentation);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcrepresentationresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

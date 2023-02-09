@@ -32,27 +32,45 @@
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x2-to-ifc4x3_rc1/index.htm">IFC4x2 to IFC4x3_RC1</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x3_add1/index.htm">IFC4X3 to IFC4X3_ADD1</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a></td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed from <i>ABSTRACT</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PredefinedType</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>Representation of the concept of an identified discrete almost homogenous geological feature with either an irregular solid or 'Yabuki' top surface shape or a regular voxel cubic shape. A stratum is represented as a discrete entity, specialised (sub typed) from <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>. A stratum may be broken down into smaller entities if properties vary across the stratum or alternatively properties may be described with bounded numeric ranges. A stratum may carry information about the physical form and its interpretation as a Geological Item (GML).
-The shape representations used should correspond to the sub-type of <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalassembly.htm">IfcGeotechnicalAssembly</a> in which it occurs</p>
+The shape representations used should correspond to the sub-type of <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalassembly.htm">IfcGeotechnicalAssembly</a> in which it occurs.</p>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a></td><td></td><td>
+A list of types to further identify the object. Some property sets may be specifically applicable to one of these types.
+<blockquote class="note">
+NOTE If the object has an associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a> with a <i>PredefinedType</i>, then this attribute shall not be used.
+</blockquote>
+</td><td>X</td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>CorrectPredefinedType</td><td>Either the <i>PredefinedType</i> attribute is unset or the attribute ObjectType shall be given if the predefined type is set to USERDEFINED.
+</td></tr>
+</table>
+
 </details>
 </section>
 <section>
 <h5 class="num">Inherited definitions from supertypes</h5>
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcgeotechnicalstratum.png" usemap="#f"/>
 <map name="f">
-<area shape="rect" coords="90,174,278,186" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcsolidstratum.htm" alt="IfcSolidStratum" />
-<area shape="rect" coords="90,198,278,210" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcvoidstratum.htm" alt="IfcVoidStratum" />
-<area shape="rect" coords="90,222,278,234" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcwaterstratum.htm" alt="IfcWaterStratum" />
-<area shape="rect" coords="66,126,302,138" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechnicalelement.htm" alt="IfcGeotechnicalElement" />
-<area shape="rect" coords="54,102,314,114" href="../../../schema/ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" />
-<area shape="rect" coords="42,78,326,90" href="../../../schema/ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" />
-<area shape="rect" coords="30,54,338,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
-<area shape="rect" coords="18,30,350,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
-<area shape="rect" coords="6,6,362,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+<area shape="rect" coords="66,126,278,138" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechnicalelement.htm" alt="IfcGeotechnicalElement" />
+<area shape="rect" coords="54,102,290,114" href="../../../schema/ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" />
+<area shape="rect" coords="42,78,302,90" href="../../../schema/ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" />
+<area shape="rect" coords="30,54,314,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
+<area shape="rect" coords="18,30,326,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,338,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
 </map>
 </details>
 <details><summary>Attribute inheritance</summary><table class="attributes">
@@ -182,7 +200,13 @@ IFC4 CHANGE New inverse relationship.
 <tr><td></td><td><i>HasSurfaceFeatures</i></td><td><a href="../../ifcproductextension/lexical/ifcreladherestoelement.htm">IfcRelAdheresToElement</a><br/>@RelatingElement</td><td>S[0:?]</td><td>Reference to the <a href="../../ifcproductextension/lexical/ifcreladherestoelement.htm">IfcRelAdheresToElement</a> relationship that adheres a <a href="../../ifcstructuralelementsdomain/lexical/ifcsurfacefeature.htm">IfcSurfaceFeature</a> to an element. An element can incorporate zero-to-many surface features in one relationship.
 </td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalelement.htm">IfcGeotechnicalElement</a></i></td></tr>
-<tr><td colspan="6"><i><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a></td></tr>
+<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a></td><td></td><td>
+A list of types to further identify the object. Some property sets may be specifically applicable to one of these types.
+<blockquote class="note">
+NOTE If the object has an associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a> with a <i>PredefinedType</i>, then this attribute shall not be used.
+</blockquote>
+</td><td>X</td></tr>
 </table>
 </details>
 </section>
@@ -251,18 +275,21 @@ IFC4 CHANGE New inverse relationship.
 </section>
 <section>
 <h5 class="num">Formal representations</h5>
-<details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a>&quot; type=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalelement.htm">IfcGeotechnicalElement</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
-&nbsp;&lt;xs:complexType name=&quot;<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a>&quot; abstract=&quot;true&quot;&gt;<br/>
+<details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a>&quot; type=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalelement.htm">IfcGeotechnicalElement</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalelement.htm">IfcGeotechnicalElement</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalelement.htm">IfcGeotechnicalElement</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;PredefinedType&quot; type=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcGeotechnicalStratum<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcsharedinfrastructureelements/lexical/ifcsolidstratum.htm">IfcSolidStratum</a>, <a href="../../ifcsharedinfrastructureelements/lexical/ifcvoidstratum.htm">IfcVoidStratum</a>, <a href="../../ifcsharedinfrastructureelements/lexical/ifcwaterstratum.htm">IfcWaterStratum</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalelement.htm">IfcGeotechnicalElement</a>)<b>;</b><br/>
-<span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;PredefinedType : <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : NOT EXISTS(PredefinedType) OR (PredefinedType &lt;&gt; <a href="../../ifcstructuralelementsdomain/lexical/ifcvoidingfeaturetypeenum.htm">IfcVoidingFeatureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedinfrastructureelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

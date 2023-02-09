@@ -42,7 +42,7 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyenumeratedvalue.htm">IfcPropertyEnumeratedValue</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasConstraints</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasApprovals</td><td></td><td></td><td>ADDED</td><td></td></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add1-to-ifc4x4/index.htm">IFC4X3_ADD1 to IFC4X4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyenumeratedvalue.htm">IfcPropertyEnumeratedValue</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specification</td><td></td><td>X</td><td>MODIFIED</td><td>Name changed from <i>Description</i> to <i>Specification</i>. <br/></td></tr>
 </table>
@@ -53,7 +53,7 @@
 <blockquote class="note">
 <p>NOTE  Multiple choices from the property enumeration are supported.</p>
 </blockquote>
-<p>The unit is handled by the <i>Unit</i> attribute, see Table 727 for an example of a enumerated property:</p>
+<p>The unit is handled by the <i>Unit</i> attribute, see Table 729 for an example of a enumerated property:</p>
 <ul>
 <li>If the <i>Unit</i> attribute is not given, then the unit is already implied by the type of <a href="../../ifcmeasureresource/lexical/ifcmeasurevalue.htm">IfcMeasureValue</a> or <a href="../../ifcmeasureresource/lexical/ifcderivedmeasurevalue.htm">IfcDerivedMeasureValue</a>. The associated unit can be found at the <a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a> globally defined at the project level (<i>IfcProject.UnitsInContext</i>).</li>
 <li>If the <i>Unit</i> attribute is given, then the unit assigned by the unit attribute overrides the globally assigned unit.</li>
@@ -89,11 +89,11 @@
   </td>
  </tr>
  <tr>
-  <td><p class="table">Table 727 &mdash; Enumerated property with values, measure types and units</p></td>
+  <td><p class="table">Table 729 &mdash; Enumerated property with values, measure types and units</p></td>
  </tr>
 </table>
 <p> </p>
-<p>The <span class="self-ref">IfcPropertyEnumeratedValue</span> refers to an <a href="../../ifcpropertyresource/lexical/ifcpropertyenumeration.htm">IfcPropertyEnumeration</a>, see Table 728 for an example:</p>
+<p>The <span class="self-ref">IfcPropertyEnumeratedValue</span> refers to an <a href="../../ifcpropertyresource/lexical/ifcpropertyenumeration.htm">IfcPropertyEnumeration</a>, see Table 730 for an example:</p>
 <table>
  <tr>
   <td>
@@ -114,7 +114,7 @@
   </td>
  </tr>
  <tr>
-  <td><p class="table">Table 728 &mdash; Property enumeration with enumerators</p></td>
+  <td><p class="table">Table 730 &mdash; Property enumeration with enumerators</p></td>
  </tr>
 </table>
 <p>It is not mandatory to use an instance of <a href="../../ifcpropertyresource/lexical/ifcpropertyenumeration.htm">IfcPropertyEnumeration</a> to hold the applicable values for <span class="self-ref">IfcPropertyEnumeratedValue</span>, however this is the preferred way. A single instance of <a href="../../ifcpropertyresource/lexical/ifcpropertyenumeration.htm">IfcPropertyEnumeration</a> can be referenced by multiple instances of <span class="self-ref">IfcPropertyEnumeratedValue</span>.</p>

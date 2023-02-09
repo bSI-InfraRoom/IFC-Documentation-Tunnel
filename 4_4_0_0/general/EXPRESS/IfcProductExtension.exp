@@ -1,6 +1,6 @@
 (*
 Copyright by:
-buildingSMART International Limited, 1996-2022
+buildingSMART International Limited, 1996-2023
 
 Any technical documentation made available by buildingSMART International Limited
 is the copyrighted work of buildingSMART International Limited and is owned by the 
@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 18 October 2022
+Thursday, 9 February 2023
 
 *)
 
@@ -348,6 +348,7 @@ END_TYPE;
 TYPE IfcGeographicElementTypeEnum = ENUMERATION OF
 	(TERRAIN
 	,SOIL_BORING_POINT
+	,VEGETATION
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -460,6 +461,14 @@ TYPE IfcVehicleTypeEnum = ENUMERATION OF
 	,NOTDEFINED);
 END_TYPE;
 
+TYPE IfcVirtualElementTypeEnum = ENUMERATION OF
+	(BOUNDARY
+	,CLEARANCE
+	,PROVISIONFORVOID
+	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;
+
 TYPE IfcInterferenceSelect = SELECT
 	(IfcElement
 	,IfcSpatialElement);
@@ -509,7 +518,7 @@ ENTITY IfcBridge
  SUBTYPE OF (IfcFacility);
 	PredefinedType : IfcBridgeTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType &lt;&gt; IfcBridgePartTypeEnum.USERDEFINED) OR 
+	HasObjectType : (PredefinedType &lt;&gt; IfcBridgeTypeEnum.USERDEFINED) OR 
 
 EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
@@ -590,6 +599,7 @@ ENTITY IfcBuiltElementType
     ,IfcDoorType
     ,IfcFillElementType
     ,IfcFootingType
+    ,IfcGroundReinforcementElementType
     ,IfcKerbType
     ,IfcMemberType
     ,IfcMooringDeviceType
@@ -766,7 +776,7 @@ ENTITY IfcFacilityPartCommon
  SUBTYPE OF (IfcFacilityPart);
 	PredefinedType : IfcFacilityPartCommonTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType &lt;&gt; IfcBridgePartTypeEnum.USERDEFINED) OR 
+	HasObjectType : (PredefinedType &lt;&gt; IfcFacilityPartCommonTypeEnum.USERDEFINED) OR 
 
 EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
@@ -1280,6 +1290,7 @@ END_ENTITY;
 
 ENTITY IfcVirtualElement
  SUBTYPE OF (IfcElement);
+	PredefinedType : IfcVirtualElementTypeEnum;
 END_ENTITY;
 
 ENTITY IfcVoxelData

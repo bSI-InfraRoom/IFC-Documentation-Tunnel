@@ -237,7 +237,7 @@ Specifies the type for which the value is selected from a predefined type enumer
 <summary>Concept usage</summary>
 <a id="spatial-composition" />
 <p class="use-head">Spatial Composition</p>
-<p>The <a href="../../templates/spatial-composition.htm">Spatial Composition</a> concept template applies to this entity as shown in Table 35.<table>
+<p>The <a href="../../templates/spatial-composition.htm">Spatial Composition</a> concept template applies to this entity as shown in Table 38.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingObject</b></th><th><b>Description</b></th></tr>
@@ -249,7 +249,7 @@ Specifies the type for which the value is selected from a predefined type enumer
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 35 &mdash; IfcBridge Spatial Composition</td></tr></table>
+<tr><td><p class="table">Table 38 &mdash; IfcBridge Spatial Composition</td></tr></table>
 
 <blockquote class="note">
 <p>NOTE  By using the inverse relationship <i>IfcBridge.Decomposes</i> it references <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a> || <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a> || <span class="self-ref">IfcBridge</span> through <i>IfcRelAggregates.RelatingObject</i>. If it refers to another instance of <span class="self-ref">IfcBridge</span>, the referenced <span class="self-ref">IfcBridge</span> needs to have a different and higher <i>CompositionType</i>, i.e. COMPLEX (if the other <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a> has ELEMENT), or ELEMENT (if the other <span class="self-ref">IfcBridge</span> has PARTIAL).</p>
@@ -259,7 +259,7 @@ Specifies the type for which the value is selected from a predefined type enumer
 
 <a id="spatial-decomposition" />
 <p class="use-head">Spatial Decomposition</p>
-<p>The <a href="../../templates/spatial-decomposition.htm">Spatial Decomposition</a> concept template applies to this entity as shown in Table 36.<table>
+<p>The <a href="../../templates/spatial-decomposition.htm">Spatial Decomposition</a> concept template applies to this entity as shown in Table 39.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatedObjects</b></th><th><b>Description</b></th></tr>
@@ -269,7 +269,7 @@ Specifies the type for which the value is selected from a predefined type enumer
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 36 &mdash; IfcBridge Spatial Decomposition</td></tr></table>
+<tr><td><p class="table">Table 39 &mdash; IfcBridge Spatial Decomposition</td></tr></table>
 
 <blockquote class="note">
 <p>NOTE  By using the inverse relationship <i>IfcBridge.IsDecomposedBy</i> it references <span class="self-ref">IfcBridge</span> || <a href="../../ifcproductextension/lexical/ifcbridgepart.htm">IfcBridgePart</a> through <i>IfcRelAggregates.RelatedObjects</i>. If it refers to another instance of <span class="self-ref">IfcBridge</span>, the referenced <span class="self-ref">IfcBridge</span> needs to have a different and lower <i>CompositionType</i>, i.e. ELEMENT (if the other <span class="self-ref">IfcBridge</span> has COMPLEX), or PARTIAL (if the other <span class="self-ref">IfcBridge</span> has ELEMENT).</p>
@@ -279,7 +279,7 @@ Specifies the type for which the value is selected from a predefined type enumer
 
 <a id="spatial-container" />
 <p class="use-head">Spatial Container</p>
-<p>The <a href="../../templates/spatial-container.htm">Spatial Container</a> concept template applies to this entity as shown in Table 37.<table>
+<p>The <a href="../../templates/spatial-container.htm">Spatial Container</a> concept template applies to this entity as shown in Table 40.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Type</b></th><th><b>Description</b></th></tr>
@@ -291,7 +291,7 @@ Specifies the type for which the value is selected from a predefined type enumer
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 37 &mdash; IfcBridge Spatial Container</td></tr></table>
+<tr><td><p class="table">Table 40 &mdash; IfcBridge Spatial Container</td></tr></table>
 
 <blockquote class="note">
 <p>NOTE  If there are building elements and/or other elements directly related to the <span class="self-ref">IfcBridge</span>, they are associated with the <span class="self-ref">IfcBridge</span> by using the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>. The <span class="self-ref">IfcBridge</span> references them by its inverse relationship: &gt; *  <i>IfcBridge.ContainsElements</i> -- referencing any subtype of <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> (with the exception of other spatial structure element) by <i>IfcRelContainedInSpatialStructure.RelatedElements</i>.</p>
@@ -305,14 +305,14 @@ Specifies the type for which the value is selected from a predefined type enumer
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 38.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 41.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
 <tr><td><a href="../../ifcproductextension/pset/pset_bridgecommon.htm">Pset_BridgeCommon</a></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 38 &mdash; IfcBridge Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 41 &mdash; IfcBridge Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
@@ -333,14 +333,14 @@ system that is referenced by all geometric representations.</i></p>
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 39.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 42.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
 <tr><td><a href="../../ifcproductextension/pset/pset_bridgecommon.htm">Pset_BridgeCommon</a></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 39 &mdash; IfcBridge Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 42 &mdash; IfcBridge Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
@@ -470,7 +470,7 @@ system that is referenced by all geometric representations.</i></p>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcfacility.htm">IfcFacility</a>)<b>;</b><br/>
 &nbsp;&nbsp;PredefinedType : <a href="../../ifcproductextension/lexical/ifcbridgetypeenum.htm">IfcBridgeTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasObjectType : (PredefinedType &amp;lt;&amp;gt; <a href="../../ifcproductextension/lexical/ifcbridgeparttypeenum.htm">IfcBridgePartTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR <br/>
+&nbsp;&nbsp;HasObjectType : (PredefinedType &amp;lt;&amp;gt; <a href="../../ifcproductextension/lexical/ifcbridgetypeenum.htm">IfcBridgeTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR <br/>
 <br/>
 EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>

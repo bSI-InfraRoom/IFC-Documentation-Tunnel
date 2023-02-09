@@ -41,10 +41,10 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed from <i>OPTIONAL</i>. <br/></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GeodeticDatum</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasCoordinateOperation</td><td></td><td></td><td>ADDED</td><td></td></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add1-to-ifc4x4/index.htm">IFC4X3_ADD1 to IFC4X4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcrepresentationresource/lexical/ifcprojectedcrs.htm">IfcProjectedCRS</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasWellKnowTextRepresentation</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasWellKnownTextRepresentation</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -150,7 +150,7 @@ EXAMPLE  geodetic datums include:
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasCoordinateOperation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a><br/>@SourceCRS</td><td>S[0:1]</td><td>Indicates conversion between coordinate systems. In particular it refers to an <a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a> between this coordinate reference system, and another Geographic coordinate reference system.
 </td><td>X</td></tr>
-<tr><td></td><td><i>HasWellKnowTextRepresentation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a><br/>@CoordinateReferenceSystem</td><td>? </td><td>Well known text (string) according to ISO 19162.
+<tr><td></td><td><i>HasWellKnownTextRepresentation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a><br/>@CoordinateReferenceSystem</td><td>? </td><td>Well known text (string) according to ISO 19162.
 <blockquote class="note">
 NOTE If an EPSG code is given in <i>Name</i>, the WKT (if present) shall be the representation of the EPSG. In case of not matching, the EPSG code in <i>Name</i> takes precedence.
 </blockquote>

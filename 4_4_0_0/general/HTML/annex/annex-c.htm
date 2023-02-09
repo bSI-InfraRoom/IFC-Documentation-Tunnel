@@ -51,7 +51,7 @@
 <table class="gridtable">
 <tr>
 <th>Entity</th>
-<th>IFC4x3_RC4</th>
+<th>IFC4x3</th>
 </tr>
 <tr><td>IfcActorRole</td><td>X</td></tr>
 </ul></li>
@@ -87,6 +87,12 @@
 </ul></li>
 
 <tr><td>IfcApproval</td><td>X</td></tr>
+</ul></li>
+
+<tr><td>IfcArchElement</td><td>X</td></tr>
+</ul></li>
+
+<tr><td>IfcArchElementType</td><td>X</td></tr>
 </ul></li>
 
 <tr><td>IfcBoundaryCondition</td><td>X</td></tr>
@@ -410,6 +416,9 @@
 
 <tr><td>&nbsp;&nbsp;IfcTextureCoordinate</td><td>X</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;IfcIndexedTextureMap</td><td>X</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcIndexedPolygonalTextureMap</td><td>X</td></tr>
+</ul></li>
+
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcIndexedTriangleTextureMap</td><td>X</td></tr>
 </ul></li>
 
@@ -1743,15 +1752,6 @@
 </ul></li>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcGeotechnicalStratum</td><td>X</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcSolidStratum</td><td>X</td></tr>
-</ul></li>
-
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcVoidStratum</td><td>X</td></tr>
-</ul></li>
-
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcWaterStratum</td><td>X</td></tr>
-</ul></li>
-
 </ul></li>
 
 </ul></li>
@@ -1810,9 +1810,6 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcReferent</td><td>X</td></tr>
 </ul></li>
 
-</ul></li>
-
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcProxy</td><td>X</td></tr>
 </ul></li>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcSpatialElement</td><td>X</td></tr>
@@ -2031,6 +2028,9 @@
 </ul></li>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcFootingType</td><td>X</td></tr>
+</ul></li>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcGroundReinforcementElementType</td><td>X</td></tr>
 </ul></li>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcKerbType</td><td>X</td></tr>
@@ -2745,6 +2745,12 @@
 </ul></li>
 
 <tr><td>IfcTableRow</td><td>X</td></tr>
+</ul></li>
+
+<tr><td>IfcTextureCoordinateIndices</td><td>X</td></tr>
+<tr><td>&nbsp;&nbsp;IfcTextureCoordinateIndicesWithVoids</td><td>X</td></tr>
+</ul></li>
+
 </ul></li>
 
 <tr><td>IfcTimePeriod</td><td>X</td></tr>
