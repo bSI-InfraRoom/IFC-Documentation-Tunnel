@@ -26,6 +26,72 @@
 
 <h4 class="num">IfcStructuralLoadSingleDisplacementDistortion</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Verschiebung und/ oder Verdrehung und/ oder Verwölbung</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Structural Load Single Displacement Distortion</b></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>Defines a displacement with warping.</p>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC2x2.</p>
+</blockquote>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>8</td><td>Distortion</td><td><a href="../../ifcmeasureresource/lexical/ifccurvaturemeasure.htm">IfcCurvatureMeasure</a></td><td>? </td><td>
+The distortion curvature (warping, i.e. a cross-sectional deplanation) given to the displacement load.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcstructuralloadsingledisplacementdistortion.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="42,78,254,90" href="../../../schema/ifcstructuralloadresource/lexical/ifcstructuralloadsingledisplacement.htm" alt="IfcStructuralLoadSingleDisplacement" />
+<area shape="rect" coords="30,54,266,66" href="../../../schema/ifcstructuralloadresource/lexical/ifcstructuralloadstatic.htm" alt="IfcStructuralLoadStatic" />
+<area shape="rect" coords="18,30,278,42" href="../../../schema/ifcstructuralloadresource/lexical/ifcstructuralloadorresult.htm" alt="IfcStructuralLoadOrResult" />
+<area shape="rect" coords="6,6,290,18" href="../../../schema/ifcstructuralloadresource/lexical/ifcstructuralload.htm" alt="IfcStructuralLoad" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcstructuralloadresource/lexical/ifcstructuralload.htm">IfcStructuralLoad</a></i></td></tr>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Optionally defines a name for this load.
+</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcstructuralloadresource/lexical/ifcstructuralloadorresult.htm">IfcStructuralLoadOrResult</a></i></td></tr>
+<tr><td colspan="6"><i><a href="../../ifcstructuralloadresource/lexical/ifcstructuralloadstatic.htm">IfcStructuralLoadStatic</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifcstructuralloadresource/lexical/ifcstructuralloadsingledisplacement.htm">IfcStructuralLoadSingleDisplacement</a></td></tr>
+<tr><td>2</td><td>DisplacementX</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
+Displacement in x-direction.
+</td><td>X</td></tr>
+<tr><td>3</td><td>DisplacementY</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
+Displacement in y-direction.
+</td><td>X</td></tr>
+<tr><td>4</td><td>DisplacementZ</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
+Displacement in z-direction.
+</td><td>X</td></tr>
+<tr><td>5</td><td>RotationalDisplacementRX</td><td><a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a></td><td>? </td><td>
+Rotation about the x-axis.
+</td><td>X</td></tr>
+<tr><td>6</td><td>RotationalDisplacementRY</td><td><a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a></td><td>? </td><td>
+Rotation about the y-axis.
+</td><td>X</td></tr>
+<tr><td>7</td><td>RotationalDisplacementRZ</td><td><a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a></td><td>? </td><td>
+Rotation about the z-axis.
+</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcstructuralloadresource/lexical/ifcstructuralloadsingledisplacementdistortion.htm">IfcStructuralLoadSingleDisplacementDistortion</a></td></tr>
+<tr><td>8</td><td>Distortion</td><td><a href="../../ifcmeasureresource/lexical/ifccurvaturemeasure.htm">IfcCurvatureMeasure</a></td><td>? </td><td>
+The distortion curvature (warping, i.e. a cross-sectional deplanation) given to the displacement load.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

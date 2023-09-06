@@ -26,6 +26,57 @@
 
 <h4 class="num">IfcCurveStyleFont</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Linienstilsatz</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Curve Style Font</b></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><blockquote class="extDef">
+<p>NOTE  Definition according to ISO/CD 10303-46:1992<br>
+A curve style font combines several curve style font pattern entities into a more complex pattern. The resulting pattern is repeated along the curve.</p>
+</blockquote>
+<blockquote class="note">
+<p>NOTE  Corresponding ISO 10303 name: curve_style_font. Please refer to ISO/IS 10303-46:1994 for the final definition of the formal standard.</p>
+</blockquote>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC2x2.</p>
+</blockquote>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Name that may be assigned with the curve font.
+</td><td>X</td></tr>
+<tr><td>2</td><td>PatternList</td><td><a href="../../ifcpresentationappearanceresource/lexical/ifccurvestylefontpattern.htm">IfcCurveStyleFontPattern</a></td><td>L[1:?]</td><td>
+A list of curve font pattern entities, that contains the simple patterns used for drawing curves. The patterns are applied in the order they occur in the list.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifccurvestylefont.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="6,6,218,18" href="../../../schema/ifcpresentationdefinitionresource/lexical/ifcpresentationitem.htm" alt="IfcPresentationItem" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcpresentationdefinitionresource/lexical/ifcpresentationitem.htm">IfcPresentationItem</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifcpresentationappearanceresource/lexical/ifccurvestylefont.htm">IfcCurveStyleFont</a></td></tr>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Name that may be assigned with the curve font.
+</td><td>X</td></tr>
+<tr><td>2</td><td>PatternList</td><td><a href="../../ifcpresentationappearanceresource/lexical/ifccurvestylefontpattern.htm">IfcCurveStyleFontPattern</a></td><td>L[1:?]</td><td>
+A list of curve font pattern entities, that contains the simple patterns used for drawing curves. The patterns are applied in the order they occur in the list.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

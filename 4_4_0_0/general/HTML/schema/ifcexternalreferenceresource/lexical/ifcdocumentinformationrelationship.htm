@@ -26,6 +26,78 @@
 
 <h4 class="num">IfcDocumentInformationRelationship</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Dokumenteninformation - Relation</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Document Information Relationship</b></td></tr>
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Relation entre un document et des documents associés</b></td></tr>
+</table>
+</details>
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc2x3-to-ifc4-4_0_0_0/index.htm">IFC2x3 to IFC4 4.0.0.0</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcdocumentinformationrelationship.htm">IfcDocumentInformationRelationship</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name</td><td>X</td><td>X</td><td>MODIFIED</td><td>Name changed from <i>RelatingDocument</i> to <i>Name</i>. <br/>Type changed from <i>IfcDocumentInformation</i> to <i>IfcLabel</i>. <br/>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description</td><td>X</td><td>X</td><td>MODIFIED</td><td>Name changed from <i>RelatedDocuments</i> to <i>Description</i>. <br/>Type changed from <i>IfcDocumentInformation</i> to <i>IfcText</i>. <br/>Instantiation changed to <i>OPTIONAL</i>. <br/>Aggregation changed from <i>SET</i> to <i>NONE</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RelatingDocument</td><td>X</td><td>X</td><td>MODIFIED</td><td>Name changed from <i>RelationshipType</i> to <i>RelatingDocument</i>. <br/>Type changed from <i>IfcLabel</i> to <i>IfcDocumentInformation</i>. <br/>Instantiation changed from <i>OPTIONAL</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RelatedDocuments</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RelationshipType</td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcDocumentInformationRelationship</span> is a relationship entity that enables a document to have the ability to reference other documents. It is used to describe relationships in which one document may reference one or more other sub documents or where a document is used as a replacement for another document (but where both the original and the replacing document need to be retained).</p>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC2x.</p>
+</blockquote>
+<blockquote class="change-ifc2x4">
+<p>IFC4 CHANGE  Subtyped from <a href="../../ifcexternalreferenceresource/lexical/ifcresourcelevelrelationship.htm">IfcResourceLevelRelationship</a>, order of attributes changed.</p>
+</blockquote>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>3</td><td>RelatingDocument</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentinformation.htm">IfcDocumentInformation</a></td><td></td><td>
+The document that acts as the parent, referencing or original document in a relationship.
+</td><td>X</td></tr>
+<tr><td>4</td><td>RelatedDocuments</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentinformation.htm">IfcDocumentInformation</a></td><td>S[1:?]</td><td>
+The document that acts as the child, referenced or replacing document in a relationship.
+</td><td>X</td></tr>
+<tr><td>5</td><td>RelationshipType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Describes the type of relationship between documents. This could be sub-document, replacement etc. The interpretation has to be established in an application context.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcdocumentinformationrelationship.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="6,6,218,18" href="../../../schema/ifcexternalreferenceresource/lexical/ifcresourcelevelrelationship.htm" alt="IfcResourceLevelRelationship" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcexternalreferenceresource/lexical/ifcresourcelevelrelationship.htm">IfcResourceLevelRelationship</a></i></td></tr>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+A name used to identify or qualify the relationship.
+</td><td>X</td></tr>
+<tr><td>2</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
+A description that may apply additional information about the relationship.
+</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentinformationrelationship.htm">IfcDocumentInformationRelationship</a></td></tr>
+<tr><td>3</td><td>RelatingDocument</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentinformation.htm">IfcDocumentInformation</a></td><td></td><td>
+The document that acts as the parent, referencing or original document in a relationship.
+</td><td>X</td></tr>
+<tr><td>4</td><td>RelatedDocuments</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentinformation.htm">IfcDocumentInformation</a></td><td>S[1:?]</td><td>
+The document that acts as the child, referenced or replacing document in a relationship.
+</td><td>X</td></tr>
+<tr><td>5</td><td>RelationshipType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Describes the type of relationship between documents. This could be sub-document, replacement etc. The interpretation has to be established in an application context.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

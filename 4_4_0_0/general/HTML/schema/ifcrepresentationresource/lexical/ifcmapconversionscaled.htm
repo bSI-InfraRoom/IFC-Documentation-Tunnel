@@ -26,6 +26,97 @@
 
 <h4 class="num">IfcMapConversionScaled</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcMapConversionScaled</span> is a type of <a href="../../ifcrepresentationresource/lexical/ifcmapconversion.htm">IfcMapConversion</a> that along with an EPSG code supplies a constant scale factor for coordinate conversion. The usage is restricted to when constant scale factors are explicitly exchanged. Typically, these are relatively speaking smaller facilities such as buildings where a constant scale factor is agreed on a project.</p>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>9</td><td>ScaleX</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
+Scale X by which the length measures in local engineering CS have to be multiplied to get map coordinates.
+</td><td>X</td></tr>
+<tr><td>10</td><td>ScaleY</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
+Scale Y by which the length measures in local engineering CS have to be multiplied to get map coordinates.
+</td><td>X</td></tr>
+<tr><td>11</td><td>ScaleZ</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
+Scale Z by which the length measures in local engineering CS have to be multiplied to get map coordinates.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcmapconversionscaled.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="18,30,230,42" href="../../../schema/ifcrepresentationresource/lexical/ifcmapconversion.htm" alt="IfcMapConversion" />
+<area shape="rect" coords="6,6,242,18" href="../../../schema/ifcrepresentationresource/lexical/ifccoordinateoperation.htm" alt="IfcCoordinateOperation" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a></i></td></tr>
+<tr><td>1</td><td>SourceCRS</td><td><a href="../../ifcrepresentationresource/lexical/ifccoordinatereferencesystemselect.htm">IfcCoordinateReferenceSystemSelect</a></td><td></td><td>
+Source coordinate reference system for the operation.
+</td><td>X</td></tr>
+<tr><td>2</td><td>TargetCRS</td><td><a href="../../ifcrepresentationresource/lexical/ifccoordinatereferencesystem.htm">IfcCoordinateReferenceSystem</a></td><td></td><td>
+Target coordinate reference system for the operation.
+</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcmapconversion.htm">IfcMapConversion</a></td></tr>
+<tr><td>3</td><td>Eastings</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td></td><td>
+Specifies the location along the easting of the coordinate system of the target map coordinate reference system.
+<blockquote class="note">
+NOTE  for right-handed Cartesian coordinate systems this would establish the location along the x axis.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td>4</td><td>Northings</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td></td><td>
+Specifies the location along the northing of the coordinate system of the target map coordinate reference system.
+<blockquote class="note">
+NOTE  for right-handed Cartesian coordinate systems this would establish the location along the y axis
+</blockquote>
+</td><td>X</td></tr>
+<tr><td>5</td><td>OrthogonalHeight</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td></td><td>
+Orthogonal height relativ to the vertical datum specified.
+<blockquote class="note">
+NOTE  for right-handed Cartesian coordinate systems this would establish the location along the z axis
+</blockquote>
+</td><td>X</td></tr>
+<tr><td>6</td><td>XAxisAbscissa</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
+Specifies the value along the easing axis of the end point of a vector indicating the position of the local x axis of the engineering coordinate reference system.
+<blockquote class="note">
+NOTE 1 for right-handed Cartesian coordinate systems this would establish the location along the x axis
+</blockquote>
+<blockquote class="note">
+NOTE 2 together with the <i>XAxisOrdinate</i> it provides the direction of the local x axis within the horizontal plane of the map coordinate system
+</blockquote>
+</td><td>X</td></tr>
+<tr><td>7</td><td>XAxisOrdinate</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
+Specifies the value along the northing axis of the end point of a vector indicating the position of the local x axis of the engineering coordinate reference system.
+<blockquote class="note">
+NOTE 1 for right-handed Cartesian coordinate systems this would establish the location along the y axis
+</blockquote>
+<blockquote class="note">
+</blockquote>
+<i>XAxisAbscissa</i> it provides the direction of the local x axis within the horizontal plane of the map coordinate system.
+</td><td>X</td></tr>
+<tr><td>8</td><td>Scale</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
+Scale to be used, when the units of the CRS are not identical to the units of the engineering coordinate system. If omited, the value of 1.0 is assumed.
+</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcmapconversionscaled.htm">IfcMapConversionScaled</a></td></tr>
+<tr><td>9</td><td>ScaleX</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
+Scale X by which the length measures in local engineering CS have to be multiplied to get map coordinates.
+</td><td>X</td></tr>
+<tr><td>10</td><td>ScaleY</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
+Scale Y by which the length measures in local engineering CS have to be multiplied to get map coordinates.
+</td><td>X</td></tr>
+<tr><td>11</td><td>ScaleZ</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
+Scale Z by which the length measures in local engineering CS have to be multiplied to get map coordinates.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

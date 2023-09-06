@@ -26,6 +26,96 @@
 
 <h4 class="num">IfcVoxelGrid</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcVoxelGrid</span> representation is a 3D solid shape representation that is compiled of a series of regular blocks placed inside a predefined grid.</p>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>1</td><td>VoxelSizeX</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td></td><td>
+Size of voxels in the X axis.
+</td><td>X</td></tr>
+<tr><td>2</td><td>VoxelSizeY</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
+Size of voxels in the Y axis. If not given, the value from <i>VoxelSizeX</i> shall be taken.
+</td><td>X</td></tr>
+<tr><td>3</td><td>VoxelSizeZ</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
+Size of voxels in the Z axis. If not given, the value from <i>VoxelSizeX</i> shall be taken.
+</td><td>X</td></tr>
+<tr><td>4</td><td>NumberOfVoxelsX</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>
+Number of voxels along the X axis.
+</td><td>X</td></tr>
+<tr><td>5</td><td>NumberOfVoxelsY</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td>? </td><td>
+Number of voxels along the Y axis. If not given, the value from <i>NumberOfVoxelsX</i> shall be taken.
+</td><td>X</td></tr>
+<tr><td>6</td><td>NumberOfVoxelsZ</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td>? </td><td>
+NumberOf voxels along the Z axis. If not given, the value from <i>NumberOfVoxelsX</i> shall be taken.
+</td><td>X</td></tr>
+<tr><td>7</td><td>Voxels</td><td><a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a></td><td>L[1:?]</td><td>
+Indication of voxels on the grid. The array is one-dimensional where values are distributed in the following order:
+along X, then Y and finally Z.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcvoxelgrid.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="30,54,242,66" href="../../../schema/ifcgeometricmodelresource/lexical/ifcsolidmodel.htm" alt="IfcSolidModel" />
+<area shape="rect" coords="18,30,254,42" href="../../../schema/ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm" alt="IfcGeometricRepresentationItem" />
+<area shape="rect" coords="6,6,266,18" href="../../../schema/ifcgeometryresource/lexical/ifcrepresentationitem.htm" alt="IfcRepresentationItem" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
+<tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+<blockquote>
+IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
+</blockquote>
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute <i>LayerAssignment</i> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>StyledByItem</i></td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcstyleditem.htm">IfcStyledItem</a><br/>@Item</td><td>S[0:1]</td><td>Reference to the <a href="../../ifcpresentationappearanceresource/lexical/ifcstyleditem.htm">IfcStyledItem</a> that provides presentation information to the representation, e.g. a curve style, including colour and thickness to a geometric curve.
+<blockquote class="change-ifc2x3">
+IFC2x3 CHANGE  The inverse attribute <i>StyledByItem</i> has been added.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a></i></td></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometricmodelresource/lexical/ifcsolidmodel.htm">IfcSolidModel</a></i></td></tr>
+<tr><td></td><td>Dim<br/>:=3</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td></td><td>The space dimensionality of this class, it is always 3.
+</td>
+<td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a></td></tr>
+<tr><td>1</td><td>VoxelSizeX</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td></td><td>
+Size of voxels in the X axis.
+</td><td>X</td></tr>
+<tr><td>2</td><td>VoxelSizeY</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
+Size of voxels in the Y axis. If not given, the value from <i>VoxelSizeX</i> shall be taken.
+</td><td>X</td></tr>
+<tr><td>3</td><td>VoxelSizeZ</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
+Size of voxels in the Z axis. If not given, the value from <i>VoxelSizeX</i> shall be taken.
+</td><td>X</td></tr>
+<tr><td>4</td><td>NumberOfVoxelsX</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>
+Number of voxels along the X axis.
+</td><td>X</td></tr>
+<tr><td>5</td><td>NumberOfVoxelsY</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td>? </td><td>
+Number of voxels along the Y axis. If not given, the value from <i>NumberOfVoxelsX</i> shall be taken.
+</td><td>X</td></tr>
+<tr><td>6</td><td>NumberOfVoxelsZ</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td>? </td><td>
+NumberOf voxels along the Z axis. If not given, the value from <i>NumberOfVoxelsX</i> shall be taken.
+</td><td>X</td></tr>
+<tr><td>7</td><td>Voxels</td><td><a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a></td><td>L[1:?]</td><td>
+Indication of voxels on the grid. The array is one-dimensional where values are distributed in the following order:
+along X, then Y and finally Z.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

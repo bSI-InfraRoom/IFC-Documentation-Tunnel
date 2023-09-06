@@ -26,6 +26,118 @@
 
 <h4 class="num">IfcTableRow</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Tabellenzeile</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Table Row</b></td></tr>
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Ligne de table</b></td></tr>
+</table>
+</details>
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc2x3-to-ifc4-4_0_0_0/index.htm">IFC2x3 to IFC4 4.0.0.0</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcutilityresource/lexical/ifctablerow.htm">IfcTableRow</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RowCells</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IsHeading</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4-addendum-1-4_0_1_0/index.htm">IFC4 Addendum 1 4.0.1.0</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcutilityresource/lexical/ifctablerow.htm">IfcTableRow</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IsHeading</td><td></td><td></td><td>MODIFIED</td><td>Type changed from <i>BOOLEAN</i> to <i>IfcBoolean</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OfTable</td><td></td><td></td><td>DELETED</td><td></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcTableRow</span> contains data for a single row within an <a href="../../ifcutilityresource/lexical/ifctable.htm">IfcTable</a>.</p>
+<p>Limitation: For backward compatibility, all <span class="self-ref">IfcTableRow</span> objects referenced by an <a href="../../ifcutilityresource/lexical/ifctable.htm">IfcTable</a> shall have the same number of Row Cells. The actual number of Cells shall be taken from the number of cells of the first <span class="self-ref">IfcTableRow</span> for that table. The number of Cells is calculated by the derived attribute <i>NumberOfCellsInRow</i> in the associated <a href="../../ifcutilityresource/lexical/ifctable.htm">IfcTable</a>.</p>
+<blockquote class="note">
+<p>NOTE  The attribute <i>IsHeading</i> exists for backward compatibility. <a href="../../ifcutilityresource/lexical/ifctablecolumn.htm">IfcTableColumn</a> should be used instead beginning with IFC4.</p>
+</blockquote>
+<table>
+      <tr>
+        <td>
+          <img src="../../../figures/ifctablerow_image1.gif">
+        </td>
+        <td style="vertical-align:bottom">
+          Figure 337 illustrates table row use.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="figure">
+            Figure 337 &mdash; Table row use
+          </p>
+        </td>
+        <td>
+          <p>
+            &nbsp;
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="../../../figures/ifctablerow_image2.gif">
+        </td>
+        <td style="vertical-align:bottom">
+          Figure 338 depicts how table rows were structured prior
+          to IFC4 with the use of the <i>IsHeading</i> flag. Note
+          that the use of the <a href="../../ifcutilityresource/lexical/ifctablecolumn.htm">IfcTableColumn</a> constructs
+          should be used instead of the <i>IsHeading</i> flag
+          (which remains for backward compatibility only).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="figure">
+            Figure 338 &mdash; Table row use alternative
+          </p>
+        </td>
+        <td>
+          <p>
+            &nbsp;
+          </p>
+        </td>
+      </tr>
+    </table>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC1.5.</p>
+</blockquote>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>1</td><td>RowCells</td><td><a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a></td><td>? L[1:?]</td><td>
+The data value of the table cell..
+</td><td>X</td></tr>
+<tr><td>2</td><td>IsHeading</td><td><a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a></td><td>? </td><td>
+Flag which identifies if the row is a heading row or a row which contains row values.
+<blockquote class="note">
+NOTE - If the row is a heading, the flag takes the value = TRUE.
+</blockquote>
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifctablerow.png" usemap="#f"/>
+<map name="f">
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><a href="../../ifcutilityresource/lexical/ifctablerow.htm">IfcTableRow</a></td></tr>
+<tr><td>1</td><td>RowCells</td><td><a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a></td><td>? L[1:?]</td><td>
+The data value of the table cell..
+</td><td>X</td></tr>
+<tr><td>2</td><td>IsHeading</td><td><a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a></td><td>? </td><td>
+Flag which identifies if the row is a heading row or a row which contains row values.
+<blockquote class="note">
+NOTE - If the row is a heading, the flag takes the value = TRUE.
+</blockquote>
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

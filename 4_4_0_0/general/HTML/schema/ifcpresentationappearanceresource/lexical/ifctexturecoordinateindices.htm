@@ -26,6 +26,48 @@
 
 <h4 class="num">IfcTextureCoordinateIndices</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcTextureCoordinateIndices</span> provide the texture coordinates for an <a href="../../ifcgeometricmodelresource/lexical/ifcindexedpolygonalface.htm">IfcIndexedPolygonalFace</a>. The <i>TexCoordIndex</i> holds a list of indices pointing into the <a href="../../ifcpresentationappearanceresource/lexical/ifctexturevertexlist.htm">IfcTextureVertexList</a> for texture coordinates that correspond to the <i>TexCoordsOf.CoordIndex</i> holding a list of indices pointing into the <a href="../../ifcgeometricmodelresource/lexical/ifccartesianpointlist3d.htm">IfcCartesianPointList3D</a> for vertex coordinates.</p>
+<blockquote class="history">
+<p>HISTORY New entity in IFC4.3.0.0</p>
+</blockquote>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>1</td><td>TexCoordIndex</td><td><a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a></td><td>L[3:?]</td><td>
+List of index pointers into the <a href="../../ifcpresentationappearanceresource/lexical/ifctexturevertexlist.htm">IfcTextureVertexList</a> referenced by the inherited attribute <i>TexCoords</i>.
+</td><td>X</td></tr>
+<tr><td>2</td><td>TexCoordsOf</td><td><a href="../../ifcgeometricmodelresource/lexical/ifcindexedpolygonalface.htm">IfcIndexedPolygonalFace</a></td><td></td><td>
+The <i>IndexedPolygonalFace</i> for which the texture coordinates are provided.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ToTexMap</i></td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcindexedpolygonaltexturemap.htm">IfcIndexedPolygonalTextureMap</a><br/>@TexCoordIndices</td><td></td><td></td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifctexturecoordinateindices.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="18,30,206,42" href="../../../schema/ifcpresentationappearanceresource/lexical/ifctexturecoordinateindiceswithvoids.htm" alt="IfcTextureCoordinateIndicesWithVoids" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><a href="../../ifcpresentationappearanceresource/lexical/ifctexturecoordinateindices.htm">IfcTextureCoordinateIndices</a></td></tr>
+<tr><td>1</td><td>TexCoordIndex</td><td><a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a></td><td>L[3:?]</td><td>
+List of index pointers into the <a href="../../ifcpresentationappearanceresource/lexical/ifctexturevertexlist.htm">IfcTextureVertexList</a> referenced by the inherited attribute <i>TexCoords</i>.
+</td><td>X</td></tr>
+<tr><td>2</td><td>TexCoordsOf</td><td><a href="../../ifcgeometricmodelresource/lexical/ifcindexedpolygonalface.htm">IfcIndexedPolygonalFace</a></td><td></td><td>
+The <i>IndexedPolygonalFace</i> for which the texture coordinates are provided.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ToTexMap</i></td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcindexedpolygonaltexturemap.htm">IfcIndexedPolygonalTextureMap</a><br/>@TexCoordIndices</td><td></td><td></td><td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

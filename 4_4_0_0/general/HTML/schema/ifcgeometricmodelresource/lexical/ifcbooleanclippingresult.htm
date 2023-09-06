@@ -26,6 +26,76 @@
 
 <h4 class="num">IfcBooleanClippingResult</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Boolesches Ergebnis - Abkappen</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Boolean Clipping Result</b></td></tr>
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Résultat d'opération booléen</b></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>A clipping result is defined as a special subtype of the general <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanresult.htm">IfcBooleanResult</a>. It constrains the operands and the operator of the Boolean result.</p>
+<p>A clipping result is the Boolean difference between a swept solid and a half space solid, or between the result of the Boolean difference and a half space solid. Hence more than one difference operation can be applied to achieve the final Boolean result.</p>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC2x.</p>
+</blockquote>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>FirstOperandType</td><td>The first operand of the Boolean clipping operation shall be either an IfcSweptAreaSolid or (in case of more than one clipping) an IfcBooleanResult.
+</td></tr>
+<tr><td>SecondOperandType</td><td>The second operand of the Boolean clipping operation shall be an IfcHalfSpaceSolid.
+</td></tr>
+<tr><td>OperatorType</td><td>The Boolean operator for clipping is always &quot;Difference&quot;.
+</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcbooleanclippingresult.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="30,54,242,66" href="../../../schema/ifcgeometricmodelresource/lexical/ifcbooleanresult.htm" alt="IfcBooleanResult" />
+<area shape="rect" coords="18,30,254,42" href="../../../schema/ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm" alt="IfcGeometricRepresentationItem" />
+<area shape="rect" coords="6,6,266,18" href="../../../schema/ifcgeometryresource/lexical/ifcrepresentationitem.htm" alt="IfcRepresentationItem" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
+<tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+<blockquote>
+IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
+</blockquote>
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute <i>LayerAssignment</i> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>StyledByItem</i></td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcstyleditem.htm">IfcStyledItem</a><br/>@Item</td><td>S[0:1]</td><td>Reference to the <a href="../../ifcpresentationappearanceresource/lexical/ifcstyleditem.htm">IfcStyledItem</a> that provides presentation information to the representation, e.g. a curve style, including colour and thickness to a geometric curve.
+<blockquote class="change-ifc2x3">
+IFC2x3 CHANGE  The inverse attribute <i>StyledByItem</i> has been added.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifcgeometricmodelresource/lexical/ifcbooleanresult.htm">IfcBooleanResult</a></td></tr>
+<tr><td>1</td><td>Operator</td><td><a href="../../ifcgeometricmodelresource/lexical/ifcbooleanoperator.htm">IfcBooleanOperator</a></td><td></td><td>
+The Boolean operator used in the operation to create the result.
+</td><td>X</td></tr>
+<tr><td>2</td><td>FirstOperand</td><td><a href="../../ifcgeometricmodelresource/lexical/ifcbooleanoperand.htm">IfcBooleanOperand</a></td><td></td><td>
+The first operand to be operated upon by the Boolean operation.
+</td><td>X</td></tr>
+<tr><td>3</td><td>SecondOperand</td><td><a href="../../ifcgeometricmodelresource/lexical/ifcbooleanoperand.htm">IfcBooleanOperand</a></td><td></td><td>
+The second operand specified for the operation.
+</td><td>X</td></tr>
+<tr><td></td><td>Dim<br/>:=FirstOperand.Dim</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td></td><td>The space dimensionality of this entity. It is identical with the space dimensionality of the first operand. A where rule ensures that both operands have the same space dimensionality.
+</td>
+<td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a></td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

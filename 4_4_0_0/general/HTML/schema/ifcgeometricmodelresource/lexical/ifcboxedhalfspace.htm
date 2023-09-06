@@ -26,6 +26,115 @@
 
 <h4 class="num">IfcBoxedHalfSpace</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Eingerahmter Halbraum</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Boxed Half Space</b></td></tr>
+</table>
+</details>
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4-addendum-1-4_0_1_0/index.htm">IFC4 Addendum 1 4.0.1.0</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcboxedhalfspace.htm">IfcBoxedHalfSpace</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AgreementFlag</td><td></td><td></td><td>MODIFIED</td><td>Type changed from <i>BOOLEAN</i> to <i>IfcBoolean</i>. <br/></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcBoxedHalfSpace</span> is used (as its supertype <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a>) only within Boolean operations. It divides the domain into exactly two subsets, where the domain in question is that of the attribute <i>Enclosure</i>.</p>
+<p>The purpose of the attribute <i>Enclosure</i> is to provide a search box for the other operand in the Boolean operation. It shall be sufficiently large to fully enclose the resulting solid after the Boolean operation with the half space. It however does not alter the final result. The result of the Boolean operation would be the same, as if executed by the supertype <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a>. See Figure 458 below.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcboxedhalfspace_01.png" alt="&quot;correct use of enclosure&quot;" title="Figure 458 &mdash; Boxed half space operands"></td></tr><tr><td><p class="figure">Figure 458 &mdash; Boxed half space operands</p></td></tr></table></p>
+<p>The <a href="../../ifcgeometricmodelresource/lexical/ifcboundingbox.htm">IfcBoundingBox</a> that provides the enclosure is given for the convenience of the receiving application to enable the use of size box comparison for efficiency (for example, to check first whether size boxes intersect, if not no calculations has to be done to check whether the solids of the entities intersect).</p>
+<table summary="boxed half space">
+<tr>
+<td width="600" valign="top" align="left"><img src="../../../figures/ifcboxedhalfspace-layout1.png" border="0" height="480" width="600" alt="boxed half space"></td>
+<td>The <i>Enclosure</i> therefore helps to prevent dealing with infinite-size related issues. The enclosure box is
+positioned within the object coordinate system, established by the <i>ObjectPlacement</i> of the element represented
+(for example, by <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>). Figure 459 shows the <i>Enclosure</i> box being sufficiently large to
+fully enclose the Boolean result.</td>
+</tr>
+<tr>
+<td>
+<p class="figure">Figure 459 &mdash; Boxed half space geometry</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<p> </p>
+<blockquote class="extDef">
+<p>NOTE  Definition according to ISO/CD 10303-42:1992<br>
+This entity is a subtype of the half space solid which is trimmed by a surrounding rectangular box. The box has its edges parallel to the coordinate axes of the geometric coordinate system.<br>
+The purpose of the box is to facilitate CSG computations by producing a solid of finite size.</p>
+</blockquote>
+<blockquote class="note">
+<p>NOTE  Entity adapted from <strong>boxed_half_space</strong> defined in ISO 10303-42.</p>
+</blockquote>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC1.5.1</p>
+</blockquote>
+<blockquote class="change-ifc2x4">
+<p>IFC4 CHANGE  Usage correct, position coordinate system for <i>Enclosure</i> is the object coordinate system.</p>
+</blockquote>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>3</td><td>Enclosure</td><td><a href="../../ifcgeometricmodelresource/lexical/ifcboundingbox.htm">IfcBoundingBox</a></td><td></td><td>
+The box which bounds the resulting solid of the Boolean operation involving the half space solid for computational purposes only.
+</td><td>X</td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>UnboundedSurface</td><td>The BaseSurface defining the half space shall not be a bounded surface.
+</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcboxedhalfspace.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="30,54,242,66" href="../../../schema/ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm" alt="IfcHalfSpaceSolid" />
+<area shape="rect" coords="18,30,254,42" href="../../../schema/ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm" alt="IfcGeometricRepresentationItem" />
+<area shape="rect" coords="6,6,266,18" href="../../../schema/ifcgeometryresource/lexical/ifcrepresentationitem.htm" alt="IfcRepresentationItem" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
+<tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+<blockquote>
+IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
+</blockquote>
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute <i>LayerAssignment</i> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>StyledByItem</i></td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcstyleditem.htm">IfcStyledItem</a><br/>@Item</td><td>S[0:1]</td><td>Reference to the <a href="../../ifcpresentationappearanceresource/lexical/ifcstyleditem.htm">IfcStyledItem</a> that provides presentation information to the representation, e.g. a curve style, including colour and thickness to a geometric curve.
+<blockquote class="change-ifc2x3">
+IFC2x3 CHANGE  The inverse attribute <i>StyledByItem</i> has been added.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a></td></tr>
+<tr><td>1</td><td>BaseSurface</td><td><a href="../../ifcgeometryresource/lexical/ifcsurface.htm">IfcSurface</a></td><td></td><td>
+Surface defining side of half space.
+</td><td>X</td></tr>
+<tr><td>2</td><td>AgreementFlag</td><td><a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a></td><td></td><td>
+The agreement flag is TRUE if the normal to the BaseSurface points away from the material of the IfcHalfSpaceSolid. Otherwise it is FALSE.
+</td><td>X</td></tr>
+<tr><td></td><td>Dim<br/>:=3</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td></td><td>The space dimensionality of this class, it is always 3
+</td>
+<td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcgeometricmodelresource/lexical/ifcboxedhalfspace.htm">IfcBoxedHalfSpace</a></td></tr>
+<tr><td>3</td><td>Enclosure</td><td><a href="../../ifcgeometricmodelresource/lexical/ifcboundingbox.htm">IfcBoundingBox</a></td><td></td><td>
+The box which bounds the resulting solid of the Boolean operation involving the half space solid for computational purposes only.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

@@ -26,6 +26,77 @@
 
 <h4 class="num">IfcApprovalRelationship</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Genehmigung - Relation</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Approval Relationship</b></td></tr>
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Relation d'approbation</b></td></tr>
+</table>
+</details>
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc2x3-to-ifc4-4_0_0_0/index.htm">IFC2x3 to IFC4 4.0.0.0</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcapprovalresource/lexical/ifcapprovalrelationship.htm">IfcApprovalRelationship</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name</td><td>X</td><td>X</td><td>MODIFIED</td><td>Name changed from <i>RelatedApproval</i> to <i>Name</i>. <br/>Type changed from <i>IfcApproval</i> to <i>IfcLabel</i>. <br/>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description</td><td>X</td><td>X</td><td>MODIFIED</td><td>Name changed from <i>RelatingApproval</i> to <i>Description</i>. <br/>Type changed from <i>IfcApproval</i> to <i>IfcText</i>. <br/>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RelatingApproval</td><td>X</td><td>X</td><td>MODIFIED</td><td>Name changed from <i>Description</i> to <i>RelatingApproval</i>. <br/>Type changed from <i>IfcText</i> to <i>IfcApproval</i>. <br/>Instantiation changed from <i>OPTIONAL</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RelatedApprovals</td><td>X</td><td>X</td><td>MODIFIED</td><td>Name changed from <i>Name</i> to <i>RelatedApprovals</i>. <br/>Type changed from <i>IfcLabel</i> to <i>IfcApproval</i>. <br/>Aggregation changed from <i>NONE</i> to <i>SET</i>. <br/></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcApprovalRelationship</span> associates approvals (one relating approval and one or more related approvals), each having different status or level as the approval process or the approved objects evolve.</p>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC2x2.</p>
+</blockquote>
+<blockquote class="change-ifc2x4">
+<p>IFC4 CHANGE  Subtyped from <a href="../../ifcexternalreferenceresource/lexical/ifcresourcelevelrelationship.htm">IfcResourceLevelRelationship</a>, order of attributes changed.</p>
+</blockquote>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>3</td><td>RelatingApproval</td><td><a href="../../ifcapprovalresource/lexical/ifcapproval.htm">IfcApproval</a></td><td></td><td>
+The approval that other approval is related to.
+</td><td>X</td></tr>
+<tr><td>4</td><td>RelatedApprovals</td><td><a href="../../ifcapprovalresource/lexical/ifcapproval.htm">IfcApproval</a></td><td>S[1:?]</td><td>
+The approvals that are related to another (relating) approval.
+<blockquote>
+IFC4 CHANGE  The cardinality of this attribute has been changed to SET.
+</blockquote>
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcapprovalrelationship.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="6,6,218,18" href="../../../schema/ifcexternalreferenceresource/lexical/ifcresourcelevelrelationship.htm" alt="IfcResourceLevelRelationship" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcexternalreferenceresource/lexical/ifcresourcelevelrelationship.htm">IfcResourceLevelRelationship</a></i></td></tr>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+A name used to identify or qualify the relationship.
+</td><td>X</td></tr>
+<tr><td>2</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
+A description that may apply additional information about the relationship.
+</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcapprovalresource/lexical/ifcapprovalrelationship.htm">IfcApprovalRelationship</a></td></tr>
+<tr><td>3</td><td>RelatingApproval</td><td><a href="../../ifcapprovalresource/lexical/ifcapproval.htm">IfcApproval</a></td><td></td><td>
+The approval that other approval is related to.
+</td><td>X</td></tr>
+<tr><td>4</td><td>RelatedApprovals</td><td><a href="../../ifcapprovalresource/lexical/ifcapproval.htm">IfcApproval</a></td><td>S[1:?]</td><td>
+The approvals that are related to another (relating) approval.
+<blockquote>
+IFC4 CHANGE  The cardinality of this attribute has been changed to SET.
+</blockquote>
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

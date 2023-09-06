@@ -26,6 +26,91 @@
 
 <h4 class="num">IfcDerivedUnit</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Abgeleitete Einheit</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Derived Unit</b></td></tr>
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Unité dérivée</b></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><blockquote class="extDef">
+<p>NOTE  Definition according to ISO/CD 10303-41:1992<br>
+A derived unit is an expression of units.</p>
+</blockquote>
+<blockquote class="example">
+<p>EXAMPLE  Newton per square millimetre is a derived unit.</p>
+</blockquote>
+<blockquote class="note">
+<p>NOTE  Corresponding ISO 10303 name: derived_unit, please refer to ISO/IS 10303-41 for the final definition of the formal standard.</p>
+</blockquote>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC1.5.1.</p>
+</blockquote>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>1</td><td>Elements</td><td><a href="../../ifcmeasureresource/lexical/ifcderivedunitelement.htm">IfcDerivedUnitElement</a></td><td>S[1:?]</td><td>
+The group of units and their exponents that define the derived unit.
+</td><td>X</td></tr>
+<tr><td>2</td><td>UnitType</td><td><a href="../../ifcmeasureresource/lexical/ifcderivedunitenum.htm">IfcDerivedUnitEnum</a></td><td></td><td>
+Name of the derived unit chosen from an enumeration of derived unit types for use in IFC models.
+</td><td>X</td></tr>
+<tr><td>3</td><td>UserDefinedType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+</td><td>X</td></tr>
+<tr><td>4</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
+Name of the unit in addition to the unit type, particularly when the derived unit elements refer to conversion or context based units.
+<blockquote class="example">
+EXAMPLE The imperial unit name for a velocity measure is miles per hour, or MPH, with a <i>Name</i> of 'MPH'.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td>Dimensions<br/>:=IfcDeriveDimensionalExponents(Elements)</td><td><a href="../../ifcmeasureresource/lexical/ifcdimensionalexponents.htm">IfcDimensionalExponents</a></td><td></td><td>Dimensional exponents derived using the function IfcDerivedDimensionalExponents using (SELF) as the input value.
+</td>
+<td>X</td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR1</td><td>Units as such shall not be re-defined as derived units.
+</td></tr>
+<tr><td>WR2</td><td>When attribute UnitType has enumeration value USERDEFINED
+then attribute UserDefinedType shall also have a value.
+</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcderivedunit.png" usemap="#f"/>
+<map name="f">
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><a href="../../ifcmeasureresource/lexical/ifcderivedunit.htm">IfcDerivedUnit</a></td></tr>
+<tr><td>1</td><td>Elements</td><td><a href="../../ifcmeasureresource/lexical/ifcderivedunitelement.htm">IfcDerivedUnitElement</a></td><td>S[1:?]</td><td>
+The group of units and their exponents that define the derived unit.
+</td><td>X</td></tr>
+<tr><td>2</td><td>UnitType</td><td><a href="../../ifcmeasureresource/lexical/ifcderivedunitenum.htm">IfcDerivedUnitEnum</a></td><td></td><td>
+Name of the derived unit chosen from an enumeration of derived unit types for use in IFC models.
+</td><td>X</td></tr>
+<tr><td>3</td><td>UserDefinedType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+</td><td>X</td></tr>
+<tr><td>4</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
+Name of the unit in addition to the unit type, particularly when the derived unit elements refer to conversion or context based units.
+<blockquote class="example">
+EXAMPLE The imperial unit name for a velocity measure is miles per hour, or MPH, with a <i>Name</i> of 'MPH'.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td>Dimensions<br/>:=IfcDeriveDimensionalExponents(Elements)</td><td><a href="../../ifcmeasureresource/lexical/ifcdimensionalexponents.htm">IfcDimensionalExponents</a></td><td></td><td>Dimensional exponents derived using the function IfcDerivedDimensionalExponents using (SELF) as the input value.
+</td>
+<td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

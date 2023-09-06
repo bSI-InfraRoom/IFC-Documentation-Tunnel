@@ -2655,7 +2655,9 @@ NOTE  Using <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasol
 <tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a><br>
 </th><th></th></tr>
 <tr><td>Classification Association</td><td>\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesclassification.htm">IfcRelAssociatesClassification</a>.RelatingClassification<br>\<a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a>.Identification<br>\<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a><br></td><td><p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
-</td></tr></table>
+</td></tr><tr><td>Assignment to Product</td><td>\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssignments[*]<br>\<a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a>.RelatingProduct<br>\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a><br></td><td>Reference to the product or product type to which the objects are assigned to.
+{ .change-ifc2x4}
+> IFC4 CHANGE Datatype expanded to include _IfcProduct_ and _IfcTypeProduct_.</td></tr></table>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
 </tr>

@@ -26,6 +26,68 @@
 
 <h4 class="num">IfcSchedulingTime</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Festgelegte Zeit</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Scheduling Time</b></td></tr>
+</table>
+</details>
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc2x3-to-ifc4-4_0_0_0/index.htm">IFC2x3 to IFC4 4.0.0.0</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcdatetimeresource/lexical/ifcschedulingtime.htm">IfcSchedulingTime</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcSchedulingTime</span> is the abstract supertype of entities that capture time-related information of processes.</p>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC4.</p>
+</blockquote>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Optional name for the time definition.
+</td><td>X</td></tr>
+<tr><td>2</td><td>DataOrigin</td><td><a href="../../ifcdatetimeresource/lexical/ifcdataoriginenum.htm">IfcDataOriginEnum</a></td><td>? </td><td>
+Specifies the origin of the scheduling time entity. It currently
+differentiates between predicted, simulated, measured, and user defined values.
+</td><td>X</td></tr>
+<tr><td>3</td><td>UserDefinedDataOrigin</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Value of the data origin if DataOrigin attribute is USERDEFINED.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcschedulingtime.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="18,30,206,42" href="../../../schema/ifcdatetimeresource/lexical/ifceventtime.htm" alt="IfcEventTime" />
+<area shape="rect" coords="18,54,206,66" href="../../../schema/ifcdatetimeresource/lexical/ifclagtime.htm" alt="IfcLagTime" />
+<area shape="rect" coords="18,78,206,90" href="../../../schema/ifcdatetimeresource/lexical/ifcresourcetime.htm" alt="IfcResourceTime" />
+<area shape="rect" coords="18,102,206,114" href="../../../schema/ifcdatetimeresource/lexical/ifctasktime.htm" alt="IfcTaskTime" />
+<area shape="rect" coords="18,126,206,138" href="../../../schema/ifcdatetimeresource/lexical/ifcworktime.htm" alt="IfcWorkTime" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcdatetimeresource/lexical/ifcschedulingtime.htm">IfcSchedulingTime</a></i></td></tr>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Optional name for the time definition.
+</td><td>X</td></tr>
+<tr><td>2</td><td>DataOrigin</td><td><a href="../../ifcdatetimeresource/lexical/ifcdataoriginenum.htm">IfcDataOriginEnum</a></td><td>? </td><td>
+Specifies the origin of the scheduling time entity. It currently
+differentiates between predicted, simulated, measured, and user defined values.
+</td><td>X</td></tr>
+<tr><td>3</td><td>UserDefinedDataOrigin</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Value of the data origin if DataOrigin attribute is USERDEFINED.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

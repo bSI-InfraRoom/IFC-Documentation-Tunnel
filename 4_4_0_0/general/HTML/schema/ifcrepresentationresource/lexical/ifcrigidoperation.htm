@@ -26,6 +26,63 @@
 
 <h4 class="num">IfcRigidOperation</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>A rigid operation specifies an offset in the coordinate reference system. It does not specify any conversion or distortion only a translation. The coordinate axes of the <a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a> can rotate and set a new basis coordinate system.</p>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>3</td><td>FirstCoordinate</td><td><a href="../../ifcmeasureresource/lexical/ifcmeasurevalue.htm">IfcMeasureValue</a></td><td></td><td>
+The first coordinate of the translation. Can be a length measure in case of map coordinates or a plane angle measure in case of geographic reference systems.
+</td><td>X</td></tr>
+<tr><td>4</td><td>SecondCoordinate</td><td><a href="../../ifcmeasureresource/lexical/ifcmeasurevalue.htm">IfcMeasureValue</a></td><td></td><td>
+The second coordinate of the translation. Can be a length measure in case of map coordinates or a plane angle measure in case of geographic reference systems.
+</td><td>X</td></tr>
+<tr><td>5</td><td>Height</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
+Height above (positive) or below (negative) the coordinate surface.
+</td><td>X</td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>CoordinateType</td><td>Restricts the attributes <i>FirstCoordinate</i> and <i>SecondCoordinate</i> to the same measure type of either <a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a> or <a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>.
+</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcrigidoperation.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="6,6,218,18" href="../../../schema/ifcrepresentationresource/lexical/ifccoordinateoperation.htm" alt="IfcCoordinateOperation" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a></i></td></tr>
+<tr><td>1</td><td>SourceCRS</td><td><a href="../../ifcrepresentationresource/lexical/ifccoordinatereferencesystemselect.htm">IfcCoordinateReferenceSystemSelect</a></td><td></td><td>
+Source coordinate reference system for the operation.
+</td><td>X</td></tr>
+<tr><td>2</td><td>TargetCRS</td><td><a href="../../ifcrepresentationresource/lexical/ifccoordinatereferencesystem.htm">IfcCoordinateReferenceSystem</a></td><td></td><td>
+Target coordinate reference system for the operation.
+</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcrigidoperation.htm">IfcRigidOperation</a></td></tr>
+<tr><td>3</td><td>FirstCoordinate</td><td><a href="../../ifcmeasureresource/lexical/ifcmeasurevalue.htm">IfcMeasureValue</a></td><td></td><td>
+The first coordinate of the translation. Can be a length measure in case of map coordinates or a plane angle measure in case of geographic reference systems.
+</td><td>X</td></tr>
+<tr><td>4</td><td>SecondCoordinate</td><td><a href="../../ifcmeasureresource/lexical/ifcmeasurevalue.htm">IfcMeasureValue</a></td><td></td><td>
+The second coordinate of the translation. Can be a length measure in case of map coordinates or a plane angle measure in case of geographic reference systems.
+</td><td>X</td></tr>
+<tr><td>5</td><td>Height</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
+Height above (positive) or below (negative) the coordinate surface.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

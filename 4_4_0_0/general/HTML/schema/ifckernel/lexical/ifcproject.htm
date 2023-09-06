@@ -26,6 +26,161 @@
 
 <h4 class="num">IfcProject</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Projekt</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Project</b></td></tr>
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Projet</b></td></tr>
+</table>
+</details>
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc2x3-to-ifc4-4_0_0_0/index.htm">IFC2x3 to IFC4 4.0.0.0</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifckernel/lexical/ifcproject.htm">IfcProject</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OwnerHistory</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RepresentationContexts</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UnitsInContext</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed to <i>OPTIONAL</i>. <br/></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcProject</span> indicates the undertaking of some design, engineering, construction, or maintenance activities leading towards a product. The project establishes the context for information to be exchanged or shared, and it may represent a construction project but does not have to. The <span class="self-ref">IfcProject</span>'s main purpose in an exchange structure is to provide the root instance and the context for all other information items included.</p>
+<p>The context provided by the <span class="self-ref">IfcProject</span> includes:</p>
+<ul>
+<li>the default units</li>
+<li>the geometric representation context for exchange structures including shape representations
+<ul>
+<li>the project coordinate system</li>
+<li>the coordinate space dimension</li>
+<li>the precision used within the geometric representations</li>
+<li>optionally the indication of the true north</li>
+<li>optionally the coordinate operation between the project coordinate system and the geospatial coordinate reference system.</li>
+</ul>
+</li>
+</ul>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC1.0</p>
+</blockquote>
+<blockquote class="change-ifc2x4">
+<p>IFC4 CHANGE  The attributes <i>RepresentationContexts</i> and <i>UnitsInContext</i> are made optional and are promoted to supertype <a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.</p>
+</blockquote>
+<p class="spec-head">
+Informal Propositions:</p>
+<ol>
+<li>There shall only be one project within the exchange context. This is enforced by the global rule <a href="../../ifckernel/lexical/ifcsingleprojectinstance.htm">IfcSingleProjectInstance</a>.</li>
+</ol>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>HasName</td><td>The <i>Name</i> attribute has to be provided for <span class="self-ref">IfcProject</span>. It is the short name for the project.
+</td></tr>
+<tr><td>CorrectContext</td><td>If a <i>RepresentationContexts</i> relation is provided then there shall be no instance of <a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a> directly included in the set of <i>RepresentationContexts</i>.
+</td></tr>
+<tr><td>NoDecomposition</td><td>The <span class="self-ref">IfcProject</span> represents the root of the any decomposition tree. It shall therefore not be used to decompose any other object definition.
+</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcproject.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="30,54,242,66" href="../../../schema/ifckernel/lexical/ifccontext.htm" alt="IfcContext" />
+<area shape="rect" coords="18,30,254,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,266,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td></td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.htm">IfcOwnerHistory</a></td><td>? </td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,
+<blockquote class="note">
+NOTE  only the last modification in stored - either as addition, deletion or modification.
+</blockquote>
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The attribute has been changed to be OPTIONAL.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
+Optional description, provided for exchanging informative comments.
+</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
+<tr><td></td><td><i>HasAssignments</i></td><td><a href="../../ifckernel/lexical/ifcrelassigns.htm">IfcRelAssigns</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that assign (by an association relationship) other subtypes of IfcObject to this object instance. Examples are the association to products, processes, controls, resources or groups.
+</td><td>X</td></tr>
+<tr><td></td><td><i>Nests</i></td><td><a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship being a nesting. It determines that this object definition is a part within an ordered whole/part decomposition relationship. An object occurrence or type can only be part of a single decomposition (to allow hierarchical strutures only).
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been added and separated from <i>Decomposes</i> defined at <span class="self-ref">IfcObjectDefinition</span>.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsNestedBy</i></td><td><a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a><br/>@RelatingObject</td><td>S[0:?]</td><td>References to the decomposition relationship being a nesting. It determines that this object definition is the whole within an ordered whole/part decomposition relationship. An object or object type can be nested by several other objects (occurrences or types).
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been added and separated from <i>IsDecomposedBy</i> defined at <span class="self-ref">IfcObjectDefinition</span>.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasContext</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a><br/>@RelatedDefinitions</td><td>S[0:1]</td><td>References to the context providing context information such as project unit or representation context. It should only be asserted for the uppermost non-spatial object.
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been added.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a><br/>@RelatingObject</td><td>S[0:?]</td><td>References to the decomposition relationship being an aggregation. It determines that this object definition is whole within an unordered whole/part decomposition relationship. An object definitions can be aggregated by several other objects (occurrences or parts).
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype <a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a> to subtype <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship being an aggregation. It determines that this object definition is a part within an unordered whole/part decomposition relationship. An object definitions can only be part of a single decomposition (to allow hierarchical strutures only).
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype <a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a> to subtype <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.
+</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a></i></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+The object type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes.
+<blockquote class="note">
+NOTE  Subtypes of <span class="self-ref">IfcContext</span> do not introduce a <i>PredefinedType</i> attribute, therefore the usage of <i>ObjectType</i> is not bound to the selection of USERDEFINED within the <i>PredefinedType</i> enumaration.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td>6</td><td>LongName</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Long name for the context as used for reference purposes.
+</td><td>X</td></tr>
+<tr><td>7</td><td>Phase</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Current project phase, or life-cycle phase of this project. Applicable values have to be agreed upon by view definitions or implementer agreements.
+</td><td>X</td></tr>
+<tr><td>8</td><td>RepresentationContexts</td><td><a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a></td><td>? S[1:?]</td><td>
+Context of the representations used within the context. When the context is a project and it includes shape representations for its components, one or several geometric representation contexts need to be included that define e.g. the world coordinate system, the coordinate space dimensions, and/or the precision factor.
+<blockquote>
+IFC4 CHANGE  The attribute has been changed to be optional. Change made with upward compatibility for file based exchange.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td>9</td><td>UnitsInContext</td><td><a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a></td><td>? </td><td>
+Units globally assigned to measure types used within the context.
+<blockquote>
+IFC4 CHANGE  The attribute has been changed to be optional. Change made with upward compatibility for file based exchange.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context.
+<blockquote>
+IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a><br/>@RelatingContext</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a> relationship that assigns the uppermost entities of includes hierarchies to this context instance.
+<blockquote class="note">
+NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a> using the <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship. This is a single exception due to compatibility reasons with earlier releases.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a></td></tr>
+</table>
+</details>
+</section>
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcproject.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
@@ -43,7 +198,7 @@
 
 <a id="project-units" />
 <p class="use-head">Project Units</p>
-<p>The <a href="../../templates/project-units.htm">Project Units</a> concept template applies to this entity as shown in Table 11.<table>
+<p>The <a href="../../templates/project-units.htm">Project Units</a> concept template applies to this entity as shown in Table 12.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasUnits</b></th><th><b>Description</b></th></tr>
@@ -51,13 +206,13 @@
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 11 &mdash; IfcProject Project Units</td></tr></table>
+<tr><td><p class="table">Table 12 &mdash; IfcProject Project Units</td></tr></table>
 
 <br/><br/>
 
 <a id="project-representation-context" />
 <p class="use-head">Project Representation Context</p>
-<p>The <a href="../../templates/project-representation-context.htm">Project Representation Context</a> concept template applies to this entity as shown in Table 12.<table>
+<p>The <a href="../../templates/project-representation-context.htm">Project Representation Context</a> concept template applies to this entity as shown in Table 13.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>ContextIdentifier</b></th><th><b>ContextType</b></th><th><b>Description</b></th></tr>
@@ -67,7 +222,7 @@
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 12 &mdash; IfcProject Project Representation Context</td></tr></table>
+<tr><td><p class="table">Table 13 &mdash; IfcProject Project Representation Context</td></tr></table>
 
 <br/><br/>
 
@@ -95,7 +250,7 @@
 
 <a id="project-declaration" />
 <p class="use-head">Project Declaration</p>
-<p>The <a href="../../templates/project-declaration.htm">Project Declaration</a> concept template applies to this entity as shown in Table 13.<table>
+<p>The <a href="../../templates/project-declaration.htm">Project Declaration</a> concept template applies to this entity as shown in Table 14.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Type</b></th><th><b>Description</b></th></tr>
@@ -117,7 +272,7 @@
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 13 &mdash; IfcProject Project Declaration</td></tr></table>
+<tr><td><p class="table">Table 14 &mdash; IfcProject Project Declaration</td></tr></table>
 
 <p>The <span class="self-ref">IfcProject</span> is also the context for other information about the construction project such as a work plan. Non-product structures are assigned by their first level object to <span class="self-ref">IfcProject</span> using the <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a> relationship. The <span class="self-ref">IfcProject</span> provides the context for work plans (or other non-product based) descriptions of the construction project. It is handled by the objectified relationship <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a>.</p>
 <blockquote class="note">
@@ -129,14 +284,14 @@
 <blockquote class="note">
 <p>NOTE  The products and tasks can have direct linking relationships. For example the <a href="../../ifcsharedbldgelements/lexical/ifccurtainwall.htm">IfcCurtainWall</a> can be assigned to a <a href="../../ifcprocessextension/lexical/ifctask.htm">IfcTask</a> as an input or output for a construction schedule.</p>
 </blockquote>
-<p>Figure 269 illustrates the use of <span class="self-ref">IfcProject</span> as context for work plans or work schedules.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-1.png" alt="&quot;project relationships&quot;" title="Figure 269 &mdash; Project spatial and work plan structure"></td></tr><tr><td><p class="figure">Figure 269 &mdash; Project spatial and work plan structure</p></td></tr></table></p>
+<p>Figure 271 illustrates the use of <span class="self-ref">IfcProject</span> as context for work plans or work schedules.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-1.png" alt="&quot;project relationships&quot;" title="Figure 271 &mdash; Project spatial and work plan structure"></td></tr><tr><td><p class="figure">Figure 271 &mdash; Project spatial and work plan structure</p></td></tr></table></p>
 
 <br/><br/>
 
 <a id="spatial-decomposition" />
 <p class="use-head">Spatial Decomposition</p>
-<p>The <a href="../../templates/spatial-decomposition.htm">Spatial Decomposition</a> concept template applies to this entity as shown in Table 14.<table>
+<p>The <a href="../../templates/spatial-decomposition.htm">Spatial Decomposition</a> concept template applies to this entity as shown in Table 15.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatedObjects</b></th><th><b>Description</b></th></tr>
@@ -144,7 +299,7 @@
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 14 &mdash; IfcProject Spatial Decomposition</td></tr></table>
+<tr><td><p class="table">Table 15 &mdash; IfcProject Spatial Decomposition</td></tr></table>
 
 <p>The <span class="self-ref">IfcProject</span> is used to reference the root of the spatial structure of a building or other construction project (that serves as the primary project breakdown and is required to be hierarchical). The spatial structure elements are linked together, and to the <span class="self-ref">IfcProject</span>, by using the objectified relationship <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.</p>
 <p>The following constraints are applied to using the relationshio <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> in context of <span class="self-ref">IfcProject</span></p>
@@ -155,60 +310,60 @@
 <li><span class="self-ref">IfcProject</span>.Decomposes -- it shall be NIL, i.e. the <span class="self-ref">IfcProject</span> shall be on top of the root of the spatial structure tree.</li>
 <li><span class="self-ref">IfcProject</span>.IsDecomposedBy -- referencing (<a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a> || <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a> || <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a>) by using <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.RelatedObjects. The <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>, <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a>, or <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> being referenced shall be the root of the spatial structure.</li>
 </ul>
-<p>Figure 270 illustrates project relationships with spatial structures, elements, and element type libraries.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-2.png" alt="&quot;spatial decomposition relationships&quot;" title="Figure 270 &mdash; Project spatial structure, products and product type library"></td></tr><tr><td><p class="figure">Figure 270 &mdash; Project spatial structure, products and product type library</p></td></tr></table></p>
+<p>Figure 272 illustrates project relationships with spatial structures, elements, and element type libraries.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-2.png" alt="&quot;spatial decomposition relationships&quot;" title="Figure 272 &mdash; Project spatial structure, products and product type library"></td></tr><tr><td><p class="figure">Figure 272 &mdash; Project spatial structure, products and product type library</p></td></tr></table></p>
 
 <br/><br/>
 
 <a id="project-representation-context-2d" />
 <p class="use-head">Project Representation Context 2D</p>
-<p>The <a href="../../templates/project-representation-context-2d.htm">Project Representation Context 2D</a> concept template applies to this entity as shown in Table 15.<table>
+<p>The <a href="../../templates/project-representation-context-2d.htm">Project Representation Context 2D</a> concept template applies to this entity as shown in Table 16.<table>
 <tr><td>
 <table class="gridtable">
 <tr></tr>
 <tr></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 15 &mdash; IfcProject Project Representation Context 2D</td></tr></table>
+<tr><td><p class="table">Table 16 &mdash; IfcProject Project Representation Context 2D</td></tr></table>
 
 <br/><br/>
 
 <a id="project-dataset-information" />
 <p class="use-head">Project Dataset Information</p>
-<p>The <a href="../../templates/project-dataset-information.htm">Project Dataset Information</a> concept template applies to this entity as shown in Table 16.<table>
+<p>The <a href="../../templates/project-dataset-information.htm">Project Dataset Information</a> concept template applies to this entity as shown in Table 17.<table>
 <tr><td>
 <table class="gridtable">
 <tr></tr>
 <tr></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 16 &mdash; IfcProject Project Dataset Information</td></tr></table>
+<tr><td><p class="table">Table 17 &mdash; IfcProject Project Dataset Information</td></tr></table>
 
 <br/><br/>
 
 <a id="project-global-positioning-geographic" />
 <p class="use-head">Project Global Positioning Geographic</p>
-<p>The <a href="../../templates/project-global-positioning-geographic.htm">Project Global Positioning Geographic</a> concept template applies to this entity as shown in Table 17.<table>
+<p>The <a href="../../templates/project-global-positioning-geographic.htm">Project Global Positioning Geographic</a> concept template applies to this entity as shown in Table 18.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasGlobalPosition</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 17 &mdash; IfcProject Project Global Positioning Geographic</td></tr></table>
+<tr><td><p class="table">Table 18 &mdash; IfcProject Project Global Positioning Geographic</td></tr></table>
 
 <br/><br/>
 
 <a id="project-global-positioning-mapped" />
 <p class="use-head">Project Global Positioning Mapped</p>
-<p>The <a href="../../templates/project-global-positioning-mapped.htm">Project Global Positioning Mapped</a> concept template applies to this entity as shown in Table 18.<table>
+<p>The <a href="../../templates/project-global-positioning-mapped.htm">Project Global Positioning Mapped</a> concept template applies to this entity as shown in Table 19.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasGlobalPosition</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 18 &mdash; IfcProject Project Global Positioning Mapped</td></tr></table>
+<tr><td><p class="table">Table 19 &mdash; IfcProject Project Global Positioning Mapped</td></tr></table>
 
 <p>The representation context of the project refers to global positioning, i.e. the coordinate system of the project resides within the defined projected coordinate reference system (a map coordinate system) and is subject to a rigid transformation, e.g. to truncate coordinate values. The representation context inherits all properties of the projected coordinate reference system, in particular the distortions resulting in deviations between model dimensions/distances and real-world dimensions/distances.</p>
 
@@ -316,6 +471,7 @@
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcroot.htm#revision-control">Revision Control</a></td><td><a href="../../templates/revision-control.htm">Revision Control</a></td><td>General Usage</td></tr>
 
 <tr><td colspan="3"><a href="../../ifckernel/lexical/ifcobjectdefinition.htm"><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcobjectdefinition.htm#classification-association">Classification Association</a></td><td><a href="../../templates/classification-association.htm">Classification Association</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcobjectdefinition.htm#assignment-to-product">Assignment to Product</a></td><td><a href="../../templates/assignment-to-product.htm">Assignment to Product</a></td><td>General Usage</td></tr>
 
 <tr><td colspan="3"><a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcproject.htm#project-type-definitions">Project Type Definitions</a></td><td><a href="../../templates/project-type-definitions.htm">Project Type Definitions</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcproject.htm#project-template-definitions">Property Template Definitions</a></td><td><a href="../../templates/project-template-definitions.htm">Project Template Definitions</a></td><td>General Usage</td></tr>

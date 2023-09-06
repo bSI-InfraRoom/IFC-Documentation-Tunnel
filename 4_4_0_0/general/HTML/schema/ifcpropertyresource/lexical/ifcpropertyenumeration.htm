@@ -26,6 +26,120 @@
 
 <h4 class="num">IfcPropertyEnumeration</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Merkmal - Aufzählung</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Property Enumeration</b></td></tr>
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Propriété à valeurs énumérées</b></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcPropertyEnumeration</span> is a collection of simple or measure values that define a prescribed set of alternatives from which 'enumeration values' are selected. This enables inclusion of enumeration values in property sets. <span class="self-ref">IfcPropertyEnumeration</span> provides a name for the enumeration as well as a list of unique (numeric or descriptive) values (that may have a measure type assigned). The entity defines the list of potential enumerators to be exchanged together (or separately) with properties of type <a href="../../ifcpropertyresource/lexical/ifcpropertyenumeratedvalue.htm">IfcPropertyEnumeratedValue</a> that selects their actual property values from this enumeration.</p>
+<p>The unit is handled by the <i>Unit</i> attribute, see Table 738 for an example of a unitless property enumeration:</p>
+<ul>
+<li>If the <i>Unit</i> attribute is not given, than the unit is already implied by the type of <a href="../../ifcmeasureresource/lexical/ifcmeasurevalue.htm">IfcMeasureValue</a> or <a href="../../ifcmeasureresource/lexical/ifcderivedmeasurevalue.htm">IfcDerivedMeasureValue</a>. The associated unit can be found at the <a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a> globally defined at the project level (<i>IfcProject.UnitsInContext</i>).</li>
+<li>If the <i>Unit</i> attribute is given, the unit assigned by the unit attribute overrides the globally assigned unit.</li>
+</ul>
+<p> </p>
+<table>
+ <tr>
+  <td>
+   <table class="gridtable">
+    <tr>
+      <th width="30%"><b>Name</b></th>
+      <th width="30%"><b>EnumerationValues</b></th>
+      <th width="25%"><b>Type</b> <span style="font-size:smaller">(through <a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a>)</span></th>
+      <th width="15%"><b>Unit</b></th>
+    </tr>
+    <tr>
+      <td>PEnum_DamperBladeAction</td>
+      <td>Parallel</td>
+      <td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Opposed</td>
+      <td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Other</td>
+      <td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Unset</td>
+      <td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td>
+      <td>&nbsp;</td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+ <tr>
+  <td><p class="table">Table 738 &mdash; Property enumeration with values, measure types and units</p></td>
+ </tr>
+</table>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC2.0, capabilities enhanced in IFC2x.</p>
+</blockquote>
+<blockquote class="change-ifc2x">
+<p>IFC2x CHANGE  Entity has been renamed from IfcEnumeration</p>
+</blockquote>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
+Name of this enumeration.
+</td><td>X</td></tr>
+<tr><td>2</td><td>EnumerationValues</td><td><a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a></td><td>L[1:?]</td><td>
+List of values that form the enumeration.
+</td><td>X</td></tr>
+<tr><td>3</td><td>Unit</td><td><a href="../../ifcmeasureresource/lexical/ifcunit.htm">IfcUnit</a></td><td>? </td><td>
+Unit for the enumerator values, if not given, the default value for the measure type (given by the TYPE of nominal value) is used as defined by the global unit assignment at IfcProject.
+</td><td>X</td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR01</td><td>All values within the list of <i>EnumerationValues</i> shall be of the same measure type.
+</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcpropertyenumeration.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="6,6,218,18" href="../../../schema/ifcpropertyresource/lexical/ifcpropertyabstraction.htm" alt="IfcPropertyAbstraction" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcpropertyresource/lexical/ifcpropertyabstraction.htm">IfcPropertyAbstraction</a></i></td></tr>
+<tr><td></td><td><i>HasExternalReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.htm">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to an external reference, e.g. library, classification, or document information, that is associated to the property definition.
+<blockquote>
+IFC4 CHANGE New inverse attribute.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcpropertyresource/lexical/ifcpropertyenumeration.htm">IfcPropertyEnumeration</a></td></tr>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
+Name of this enumeration.
+</td><td>X</td></tr>
+<tr><td>2</td><td>EnumerationValues</td><td><a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a></td><td>L[1:?]</td><td>
+List of values that form the enumeration.
+</td><td>X</td></tr>
+<tr><td>3</td><td>Unit</td><td><a href="../../ifcmeasureresource/lexical/ifcunit.htm">IfcUnit</a></td><td>? </td><td>
+Unit for the enumerator values, if not given, the default value for the measure type (given by the TYPE of nominal value) is used as defined by the global unit assignment at IfcProject.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

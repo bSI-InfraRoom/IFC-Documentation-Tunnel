@@ -26,6 +26,81 @@
 
 <h4 class="num">IfcStyledRepresentation</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Repräsentation mit Stilinformationen</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Styled Representation</b></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcStyledRepresentation</span> represents the concept of a styled presentation being a representation of a product or a product component, like material. within a representation context. This representation context does not need to be (but may be) a geometric representation context.</p>
+<blockquote class="note">
+<p>NOTE  Current usage of <span class="self-ref">IfcStyledRepresentation</span> is restricted to the assignment of presentation information to an material. The <span class="self-ref">IfcStyledRepresentation</span> includes only presentation styles (<a href="../../ifcpresentationappearanceresource/lexical/ifccurvestyle.htm">IfcCurveStyle</a>, <i>FillAreaStyle</i>, <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestyle.htm">IfcSurfaceStyle</a>) that define how a material should be presented within a particular (eventually view and scale dependent) representation context. All instances of <span class="self-ref">IfcStyledRepresentation</span> are referenced by <a href="../../ifcrepresentationresource/lexical/ifcmaterialdefinitionrepresentation.htm">IfcMaterialDefinitionRepresentation</a>, and assigned to <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a> by <i>IfcMaterialDefinitionRepresentation.RepresentedMaterial</i>.</p>
+</blockquote>
+<p>A styled representation has to include one or several styled items with the associated style information (curve, symbol, text, fill area, or surface styles). It shall not contain the geometric representation items that are styled.</p>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC2x2.</p>
+</blockquote>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>OnlyStyledItems</td><td>Only <a href="../../ifcpresentationappearanceresource/lexical/ifcstyleditem.htm">IfcStyledItem</a>'s (or subtypes) are allowed as members in the list of <i>Items</i>, inherited from <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a>.
+<blockquote>
+IFC2x3 CHANGE  New where rule to ensure the usage for material definition representations, and other non-shape representations
+</blockquote>
+</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcstyledrepresentation.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="18,30,230,42" href="../../../schema/ifcrepresentationresource/lexical/ifcstylemodel.htm" alt="IfcStyleModel" />
+<area shape="rect" coords="6,6,242,18" href="../../../schema/ifcrepresentationresource/lexical/ifcrepresentation.htm" alt="IfcRepresentation" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a></i></td></tr>
+<tr><td>1</td><td>ContextOfItems</td><td><a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a></td><td></td><td>
+Definition of the representation context for which the different subtypes of representation are valid.
+</td><td>X</td></tr>
+<tr><td>2</td><td>RepresentationIdentifier</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+The optional identifier of the representation as used within a project.
+</td><td>X</td></tr>
+<tr><td>3</td><td>RepresentationType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+The description of the type of a representation context. The representation type defines the type of geometry or topology used for representing the product representation. More information is given at the subtypes <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> and <a href="../../ifcrepresentationresource/lexical/ifctopologyrepresentation.htm">IfcTopologyRepresentation</a>.<br>
+The supported values for context type are to be specified by implementers agreements.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Items</td><td><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></td><td>S[1:?]</td><td>
+Set of geometric representation items that are defined for this representation.
+</td><td>X</td></tr>
+<tr><td></td><td><i>RepresentationMap</i></td><td><a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a><br/>@MappedRepresentation</td><td>S[0:1]</td><td>Use of the representation within an <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a>. If used, this <span class="self-ref">IfcRepresentation</span> may be assigned to many representations as one of its <i>Items</i> using an <a href="../../ifcgeometryresource/lexical/ifcmappeditem.htm">IfcMappedItem</a>. Using <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a> is the way to share one representation (often of type <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>) by many products.
+<blockquote>
+IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>LayerAssignments</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:?]</td><td>Assignment of the whole representation to a single or multiple layer(s). The <i>LayerAssigments</i> can be overridden by <i>LayerAssigments</i> of the <a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a>'s within the list of <i>Items</i>.
+<blockquote class="note">
+NOTE  Implementation agreements can restrict the maximum number of layer assignments to 1.
+</blockquote>
+<blockquote class="change-ifc2x3">
+IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>OfProductRepresentation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a><br/>@Representations</td><td>S[0:?]</td><td>Reference to the product representations to which this individual representation applies. In most cases it is the reference to one or many product shapes, to which this shape representation is applicable.
+<blockquote>
+IFC4 CHANGE Inverse relationship cardinality relaxed to be 0:N.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcrepresentationresource/lexical/ifcstylemodel.htm">IfcStyleModel</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcstyledrepresentation.htm">IfcStyledRepresentation</a></td></tr>
+</table>
+</details>
+</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

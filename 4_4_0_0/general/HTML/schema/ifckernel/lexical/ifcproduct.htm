@@ -26,6 +26,168 @@
 
 <h4 class="num">IfcProduct</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Produkt (allgemein)</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Product</b></td></tr>
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Produit</b></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcProduct</span> is an abstract representation of any object that relates to a geometric or spatial context. An <span class="self-ref">IfcProduct</span> occurs at a specific location in space if it has a geometric representation assigned. It can be placed relatively to other products, but ultimately relative to the project coordinate system. The <i>ObjectPlacement</i> attribute establishes the coordinate system in which all points and directions used by the geometric representation items under <i>Representation</i> are founded. The <i>Representation</i> is provided by an <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a> being either a geometric shape representation, or a topology representation (with or without underlying geometry of the topological items).</p>
+<p>Products include manufactured, supplied or created objects (referred to as elements) for incorporation into an AEC/FM project. This also includes objects that are created indirectly by other products, as spaces are defined by bounding elements. Products can be designated for permanent use or temporary use, an example for the latter is formwork. Products are defined by their properties and representations.</p>
+<p>In addition to physical products (covered by the subtype <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>) and spatial items (covered by the subtype <a href="../../ifcproductextension/lexical/ifcspatialelement.htm">IfcSpatialElement</a>) the <span class="self-ref">IfcProduct</span> also includes non-physical items, that relate to a geometric or spatial contexts, such as grid, port, annotation, structural actions, etc.</p>
+<p>Any instance of <span class="self-ref">IfcProduct</span> defines a particular occurrence of a product, the common type information, that relates to many similar (or identical) occurrences of <span class="self-ref">IfcProduct</span>, is handled by the <a href="../../ifckernel/lexical/ifctypeproduct.htm">IfcTypeProduct</a> (and its subtypes), assigned to one or many occurrences of <span class="self-ref">IfcProduct</span> by using the objectified relationship <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a>. The <a href="../../ifckernel/lexical/ifctypeproduct.htm">IfcTypeProduct</a> may provide, in addition to common properties, also a common geometric representation for all occurrences.</p>
+<blockquote class="note">
+<p>NOTE  See <a href="../../ifckernel/lexical/ifctypeproduct.htm">IfcTypeProduct</a> for how to use a common geometric representation and <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> for using and overriding common properties.</p>
+</blockquote>
+<p>On a generic level products can be assigned to processes, controls, resources, project by using the relationship objects that refer to the corresponding object:</p>
+<ul>
+<li><strong>Having a control applied</strong>: assigned using <a href="../../ifckernel/lexical/ifcrelassignstocontrol.htm">IfcRelAssignsToControl</a> linking the <span class="self-ref">IfcProduct</span> to an <a href="../../ifckernel/lexical/ifccontrol.htm">IfcControl</a></li>
+<li><strong>Being assigned to a process</strong>: assigned using <a href="../../ifckernel/lexical/ifcrelassignstoprocess.htm">IfcRelAssignsToProcess</a> linking the <span class="self-ref">IfcProduct</span> to an <a href="../../ifckernel/lexical/ifcprocess.htm">IfcProcess</a></li>
+<li><strong>Being assigned to a resource</strong>: assigned using <a href="../../ifckernel/lexical/ifcrelassignstoresource.htm">IfcRelAssignsToResource</a> linking the <span class="self-ref">IfcProduct</span> to an <a href="../../ifckernel/lexical/ifcresource.htm">IfcResource</a></li>
+</ul>
+<blockquote class="example">
+<p>EXAMPLE  An example of the control relationship is the assignment of a performance history to a distribution element. An example of process assignment relationship is the assignment of products like wall, slab, column to a contruction task for construction planning. And an example of resource assignment relationship is the assignment of products to a construction resource that consumes the product.</p>
+</blockquote>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC1.0</p>
+</blockquote>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>G</th></tr>
+<tr><td>6</td><td>ObjectPlacement</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a></td><td>? </td><td>
+Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the  transformation for the object coordinate system.
+</td><td>X</td></tr>
+<tr><td>7</td><td>Representation</td><td><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a></td><td>? </td><td>
+Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ReferencedBy</i></td><td><a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a><br/>@RelatingProduct</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a> relationship, by which other products, processes, controls, resources or actors (as subtypes of <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>) can be related to this product.
+</td><td>X</td></tr>
+<tr><td></td><td><i>PositionedRelativeTo</i></td><td><a href="../../ifcproductextension/lexical/ifcrelpositions.htm">IfcRelPositions</a><br/>@RelatedProducts</td><td>S[0:?]</td><td></td><td>X</td></tr>
+<tr><td></td><td><i>ReferencedInStructures</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:?]</td><td></td><td>X</td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>PlacementForShapeRepresentation</td><td>If a <i>Representation</i> is given being an <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>, then also an <i>ObjectPlacement</i> has to be given. The <i>ObjectPlacement</i> defines the object coordinate system in which the geometric representation items of the <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a> are founded.
+<blockquote class="note">
+NOTE  If the <i>Representation</i> of several subtypes of <span class="self-ref">IfcProduct</span> have the same coordinate system it is permitted to share an instance of <a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a>.
+</blockquote>
+</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcproduct.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="54,102,242,114" href="../../../schema/ifcproductextension/lexical/ifcannotation.htm" alt="IfcAnnotation" />
+<area shape="rect" coords="54,126,242,138" href="../../../schema/ifcproductextension/lexical/ifccomplementarydata.htm" alt="IfcComplementaryData" />
+<area shape="rect" coords="54,150,242,162" href="../../../schema/ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" />
+<area shape="rect" coords="54,174,242,186" href="../../../schema/ifcproductextension/lexical/ifclinearelement.htm" alt="IfcLinearElement" />
+<area shape="rect" coords="54,198,242,210" href="../../../schema/ifcproductextension/lexical/ifcport.htm" alt="IfcPort" />
+<area shape="rect" coords="54,222,242,234" href="../../../schema/ifcproductextension/lexical/ifcpositioningelement.htm" alt="IfcPositioningElement" />
+<area shape="rect" coords="54,246,242,258" href="../../../schema/ifcproductextension/lexical/ifcspatialelement.htm" alt="IfcSpatialElement" />
+<area shape="rect" coords="54,270,242,282" href="../../../schema/ifcstructuralanalysisdomain/lexical/ifcstructuralactivity.htm" alt="IfcStructuralActivity" />
+<area shape="rect" coords="54,294,242,306" href="../../../schema/ifcstructuralanalysisdomain/lexical/ifcstructuralitem.htm" alt="IfcStructuralItem" />
+<area shape="rect" coords="30,54,266,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
+<area shape="rect" coords="18,30,278,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,290,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td></td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.htm">IfcOwnerHistory</a></td><td>? </td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,
+<blockquote class="note">
+NOTE  only the last modification in stored - either as addition, deletion or modification.
+</blockquote>
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The attribute has been changed to be OPTIONAL.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
+Optional description, provided for exchanging informative comments.
+</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
+<tr><td></td><td><i>HasAssignments</i></td><td><a href="../../ifckernel/lexical/ifcrelassigns.htm">IfcRelAssigns</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that assign (by an association relationship) other subtypes of IfcObject to this object instance. Examples are the association to products, processes, controls, resources or groups.
+</td><td>X</td></tr>
+<tr><td></td><td><i>Nests</i></td><td><a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship being a nesting. It determines that this object definition is a part within an ordered whole/part decomposition relationship. An object occurrence or type can only be part of a single decomposition (to allow hierarchical strutures only).
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been added and separated from <i>Decomposes</i> defined at <span class="self-ref">IfcObjectDefinition</span>.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsNestedBy</i></td><td><a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a><br/>@RelatingObject</td><td>S[0:?]</td><td>References to the decomposition relationship being a nesting. It determines that this object definition is the whole within an ordered whole/part decomposition relationship. An object or object type can be nested by several other objects (occurrences or types).
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been added and separated from <i>IsDecomposedBy</i> defined at <span class="self-ref">IfcObjectDefinition</span>.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasContext</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a><br/>@RelatedDefinitions</td><td>S[0:1]</td><td>References to the context providing context information such as project unit or representation context. It should only be asserted for the uppermost non-spatial object.
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been added.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a><br/>@RelatingObject</td><td>S[0:?]</td><td>References to the decomposition relationship being an aggregation. It determines that this object definition is whole within an unordered whole/part decomposition relationship. An object definitions can be aggregated by several other objects (occurrences or parts).
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype <a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a> to subtype <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship being an aggregation. It determines that this object definition is a part within an unordered whole/part decomposition relationship. An object definitions can only be part of a single decomposition (to allow hierarchical strutures only).
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype <a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a> to subtype <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.
+</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></i></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+<blockquote>
+IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+<blockquote>
+IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+<blockquote>
+IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+<blockquote>
+IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a></i></td></tr>
+<tr><td>6</td><td>ObjectPlacement</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a></td><td>? </td><td>
+Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the  transformation for the object coordinate system.
+</td><td>X</td></tr>
+<tr><td>7</td><td>Representation</td><td><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a></td><td>? </td><td>
+Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ReferencedBy</i></td><td><a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a><br/>@RelatingProduct</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a> relationship, by which other products, processes, controls, resources or actors (as subtypes of <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>) can be related to this product.
+</td><td>X</td></tr>
+<tr><td></td><td><i>PositionedRelativeTo</i></td><td><a href="../../ifcproductextension/lexical/ifcrelpositions.htm">IfcRelPositions</a><br/>@RelatedProducts</td><td>S[0:?]</td><td></td><td>X</td></tr>
+<tr><td></td><td><i>ReferencedInStructures</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:?]</td><td></td><td>X</td></tr>
+</table>
+</details>
+</section>
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcproduct.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
@@ -48,14 +210,14 @@
 
 <a id="product-relative-positioning" />
 <p class="use-head">Relative Position</p>
-<p>The <a href="../../templates/product-relative-positioning.htm">Product Relative Positioning</a> concept template applies to this entity as shown in Table 6.<table>
+<p>The <a href="../../templates/product-relative-positioning.htm">Product Relative Positioning</a> concept template applies to this entity as shown in Table 7.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PositioningElement</b></th></tr>
 <tr><td><a href="../../ifcproductextension/lexical/ifcpositioningelement.htm">IfcPositioningElement</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 6 &mdash; IfcProduct Product Relative Positioning</td></tr></table>
+<tr><td><p class="table">Table 7 &mdash; IfcProduct Product Relative Positioning</td></tr></table>
 
 <p>If the <span class="self-ref">IfcProduct</span> <i>Product Placement</i> is placed relative to an <a href="../../ifcproductextension/lexical/ifcpositioningelement.htm">IfcPositioningElement</a> this relationship covers the information on which <a href="../../ifcproductextension/lexical/ifcpositioningelement.htm">IfcPositioningElement</a> positions the <span class="self-ref">IfcProduct</span>.</p>
 
@@ -63,45 +225,45 @@
 
 <a id="product-span-positioning" />
 <p class="use-head">Product Span Positioning</p>
-<p>The <a href="../../templates/product-span-positioning.htm">Product Span Positioning</a> concept template applies to this entity as shown in Table 7.<table>
+<p>The <a href="../../templates/product-span-positioning.htm">Product Span Positioning</a> concept template applies to this entity as shown in Table 8.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>StartPositionedRelativeTo</b></th><th><b>EndPositionedRelativeTo</b></th></tr>
 <tr><td></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 7 &mdash; IfcProduct Product Span Positioning</td></tr></table>
+<tr><td><p class="table">Table 8 &mdash; IfcProduct Product Span Positioning</td></tr></table>
 
 <br/><br/>
 
 <a id="product-geometry-colour" />
 <p class="use-head">Product Geometry Colour</p>
-<p>The <a href="../../templates/product-geometry-colour.htm">Product Geometry Colour</a> concept template applies to this entity as shown in Table 8.<table>
+<p>The <a href="../../templates/product-geometry-colour.htm">Product Geometry Colour</a> concept template applies to this entity as shown in Table 9.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 8 &mdash; IfcProduct Product Geometry Colour</td></tr></table>
+<tr><td><p class="table">Table 9 &mdash; IfcProduct Product Geometry Colour</td></tr></table>
 
 <br/><br/>
 
 <a id="product-geometry-layer" />
 <p class="use-head">Product Geometry Layer</p>
-<p>The <a href="../../templates/product-geometry-layer.htm">Product Geometry Layer</a> concept template applies to this entity as shown in Table 9.<table>
+<p>The <a href="../../templates/product-geometry-layer.htm">Product Geometry Layer</a> concept template applies to this entity as shown in Table 10.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 9 &mdash; IfcProduct Product Geometry Layer</td></tr></table>
+<tr><td><p class="table">Table 10 &mdash; IfcProduct Product Geometry Layer</td></tr></table>
 
 <br/><br/>
 
 <a id="product-relative-placement" />
 <p class="use-head">Product Relative Placement</p>
-<p>The <a href="../../templates/product-relative-placement.htm">Product Relative Placement</a> concept template applies to this entity as shown in Table 10.<table>
+<p>The <a href="../../templates/product-relative-placement.htm">Product Relative Placement</a> concept template applies to this entity as shown in Table 11.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasPlacement</b></th><th><b>RelativeToElement</b></th></tr>
 <tr><td></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 10 &mdash; IfcProduct Product Relative Placement</td></tr></table>
+<tr><td><p class="table">Table 11 &mdash; IfcProduct Product Relative Placement</td></tr></table>
 
 <br/><br/>
 
@@ -163,6 +325,7 @@
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcroot.htm#revision-control">Revision Control</a></td><td><a href="../../templates/revision-control.htm">Revision Control</a></td><td>General Usage</td></tr>
 
 <tr><td colspan="3"><a href="../../ifckernel/lexical/ifcobjectdefinition.htm"><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcobjectdefinition.htm#classification-association">Classification Association</a></td><td><a href="../../templates/classification-association.htm">Classification Association</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcobjectdefinition.htm#assignment-to-product">Assignment to Product</a></td><td><a href="../../templates/assignment-to-product.htm">Assignment to Product</a></td><td>General Usage</td></tr>
 
 <tr><td colspan="3"><a href="../../ifckernel/lexical/ifcobject.htm"><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#object-user-identity">Object User Identity</a></td><td><a href="../../templates/object-user-identity.htm">Object User Identity</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#object-predefined-type">Object Predefined Type</a></td><td><a href="../../templates/object-predefined-type.htm">Object Predefined Type</a></td><td>General Usage</td></tr>
