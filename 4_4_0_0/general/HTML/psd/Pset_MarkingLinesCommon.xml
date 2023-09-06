@@ -5,9 +5,9 @@
   <Definition>Properties for line markings.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcSurfaceFeature/(.LINEMARKING.)</ClassName>
+    <ClassName>IfcSurfaceFeature/LINEMARKING</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcSurfaceFeature/(.LINEMARKING.)</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcSurfaceFeature/LINEMARKING</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="f6e38981850546008dd70ba25ad8d540">
       <Name>DashedLine</Name>

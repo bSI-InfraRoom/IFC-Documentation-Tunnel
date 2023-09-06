@@ -201,7 +201,7 @@ Hier der Gesamtwärmedurchgangskoeffizient der Dachkonstruktion (für alle Schic
       <Name>LoadBearing</Name>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType />
+          <DataType type="IfcBoolean" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

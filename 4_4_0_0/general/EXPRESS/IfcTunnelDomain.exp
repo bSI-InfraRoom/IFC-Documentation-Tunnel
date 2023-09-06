@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 9 February 2023
+Wednesday, 6 September 2023
 
 *)
 
@@ -51,6 +51,14 @@ TYPE IfcTunnelTypeEnum = ENUMERATION OF
 	,USERDEFINED);
 END_TYPE;
 
+TYPE IfcTunnelTypicalSectionTypeEnum = ENUMERATION OF
+	(GEOTECH
+	,EXCAVATIONSUPPORT
+	,RISK
+	,NOTDEFINED
+	,USERDEFINED);
+END_TYPE;
+
 ENTITY IfcTunnel
  SUBTYPE OF (IfcFacility);
 	PredefinedType : IfcTunnelTypeEnum;
@@ -63,6 +71,13 @@ ENTITY IfcTunnelPart
 	PredefinedType : IfcTunnelPartTypeEnum;
  WHERE
 	HasObjectType : (PredefinedType <> IfcTunnelPartTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+END_ENTITY;
+
+ENTITY IfcTunnelTypicalSection
+ SUBTYPE OF (IfcLinearZone);
+	PredefinedType : IfcTunnelTypicalSectionTypeEnum;
+ WHERE
+	HasObjectType : (PredefinedType <> IfcTunnelTypicalSectionTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
 
 END_SCHEMA;

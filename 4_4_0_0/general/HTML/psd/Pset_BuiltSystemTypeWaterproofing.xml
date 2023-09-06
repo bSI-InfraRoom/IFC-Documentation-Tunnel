@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="faa9d09472c7489692d867aa0b712ca6" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_BuiltSystemTypeWaterproofing</Name>
+  <Definition>Properties for waterproofing systems.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcBuiltSystem/WATERPROOFING</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcBuiltSystem/WATERPROOFING</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="ff92faa592334f4d9e9d28d222b8b98a">
+      <Name>WaterproofingSystem</Name>
+      <Definition>Indicates the type of waterproofing system.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_WaterproofingSystem">
+            <EnumItem>WATERTIGHT</EnumItem>
+            <EnumItem>DRAINED</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>WATERTIGHT</Name>
+              <Definition>The groundwater water is prevented from penetrating the tunnel. The full water pressure acts on the tunnel lining.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DRAINED</Name>
+              <Definition>The groundwater flows freely through a drainage layer into the tunnel and is collected with a seepage pipe. A reduced water pressure acts on the tunnel lining.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="f2156a523a65467f894c0cc7e0a51776">
+      <Name>WatertightnessClassification</Name>
+      <Definition>Specifies the watertightness classification.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

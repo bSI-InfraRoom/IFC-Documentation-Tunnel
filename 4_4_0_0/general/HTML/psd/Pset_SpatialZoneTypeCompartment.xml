@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="243204468c64421e926b9836927b2eb5" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_SpatialZoneTypeCompartment</Name>
+  <Definition>Properties for spatial zones of type compartment.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcSpatialZone/COMPARTMENT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSpatialZone/COMPARTMENT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="6796f5e3b09c4bcdba1a89908fe40f52">
+      <Name>NominalSpacing</Name>
+      <Definition>Specifies the nominal spacing between seals.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="61272dd49ade47cc8438b47b51e9aab7">
+      <Name>NominalWidth</Name>
+      <Definition>Specifies the nominal width of the compartment.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="23586a90748044d1b2f72f94d39f8161">
+      <Name>NominalHeight</Name>
+      <Definition>Specifies the nominal height of the compartment.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

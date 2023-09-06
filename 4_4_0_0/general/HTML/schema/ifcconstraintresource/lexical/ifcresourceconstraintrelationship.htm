@@ -26,67 +26,6 @@
 
 <h4 class="num">IfcResourceConstraintRelationship</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
-<details open="open"><summary>Natural language names</summary><table>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>allgemeine Relation - Zuweisung von Einschränkungen</b></td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Resource Constraint Relationship</b></td></tr>
-</table>
-</details>
-<details open="open"><summary>Change log</summary><table class="gridtable">
-<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc2x3-to-ifc4-4_0_0_0/index.htm">IFC2x3 to IFC4 4.0.0.0</a></b></td>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcconstraintresource/lexical/ifcresourceconstraintrelationship.htm">IfcResourceConstraintRelationship</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
-</table>
-</details>
-<section>
-<h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcResourceConstraintRelationship</span> is a relationship entity that enables a constraint to be related to one or more resource level objects.</p>
-<p>An <span class="self-ref">IfcResourceConstraintRelationship</span> allows for the specification of a constraint to be applied to many entity types. An important case is to apply constraints to properties. The constraints applied therefore enable a property to carry values identifying requirements as well as those identifying the fulfilment of those requirements.</p>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC2x2.</p>
-</blockquote>
-<blockquote class="change-ifc2x4">
-<p>IFC4 CHANGE  Renamed from IfcPropertyConstraintRelationship and extended to apply to all resource level entities. Subtyped from <a href="../../ifcexternalreferenceresource/lexical/ifcresourcelevelrelationship.htm">IfcResourceLevelRelationship</a>.</p>
-</blockquote>
-</details>
-<details open="open"><summary>Attribute definitions</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
-<th>G</th></tr>
-<tr><td>3</td><td>RelatingConstraint</td><td><a href="../../ifcconstraintresource/lexical/ifcconstraint.htm">IfcConstraint</a></td><td></td><td>
-The constraint that is to be related.
-</td><td>X</td></tr>
-<tr><td>4</td><td>RelatedResourceObjects</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcresourceobjectselect.htm">IfcResourceObjectSelect</a></td><td>S[1:?]</td><td>
-The properties to which a constraint is to be related.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
-<section>
-<h5 class="num">Inherited definitions from supertypes</h5>
-<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcresourceconstraintrelationship.png" usemap="#f"/>
-<map name="f">
-<area shape="rect" coords="6,6,218,18" href="../../../schema/ifcexternalreferenceresource/lexical/ifcresourcelevelrelationship.htm" alt="IfcResourceLevelRelationship" />
-</map>
-</details>
-<details><summary>Attribute inheritance</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
-<tr><td colspan="6"><i><a href="../../ifcexternalreferenceresource/lexical/ifcresourcelevelrelationship.htm">IfcResourceLevelRelationship</a></i></td></tr>
-<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
-A name used to identify or qualify the relationship.
-</td><td>X</td></tr>
-<tr><td>2</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
-A description that may apply additional information about the relationship.
-</td><td>X</td></tr>
-<tr><td colspan="6"><a href="../../ifcconstraintresource/lexical/ifcresourceconstraintrelationship.htm">IfcResourceConstraintRelationship</a></td></tr>
-<tr><td>3</td><td>RelatingConstraint</td><td><a href="../../ifcconstraintresource/lexical/ifcconstraint.htm">IfcConstraint</a></td><td></td><td>
-The constraint that is to be related.
-</td><td>X</td></tr>
-<tr><td>4</td><td>RelatedResourceObjects</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcresourceobjectselect.htm">IfcResourceObjectSelect</a></td><td>S[1:?]</td><td>
-The properties to which a constraint is to be related.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

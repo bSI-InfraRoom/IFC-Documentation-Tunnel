@@ -26,63 +26,6 @@
 
 <h4 class="num">IfcSurfaceStyleWithTextures</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
-<details open="open"><summary>Natural language names</summary><table>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Oberflächenstil mit Texturen</b></td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Surface Style With Textures</b></td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Style de surface texturée</b></td></tr>
-</table>
-</details>
-<section>
-<h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>The entity <span class="self-ref">IfcSurfaceStyleWithTextures</span> allows to include image textures in surface styles. These image textures can be applied repeating across the surface or mapped with a particular scale upon the surface.</p>
-<p>The entity <span class="self-ref">IfcSurfaceStyleWithTextures</span> is part of the surface style table for presentation information assigned to surfaces for shading, rendering and lighting with textures. The mapping of the texture onto the surface or the solid is determined by the texture coordinates, in absense of an <a href="../../ifcpresentationappearanceresource/lexical/ifctexturecoordinate.htm">IfcTextureCoordinate</a> assigned to each surface texture, a default mapping of the texture to the geometric face or surface applies.</p>
-<p>Surface textures included in the <span class="self-ref">IfcSurfaceStyleWithTextures</span> are two dimensional map formats. They define 2D images that contain an array of colour values describing the texture. Depending on the number of <i>IfcSurfaceTextures</i> being included in the list of <i>Textures</i> the <span class="self-ref">IfcSurfaceStyleWithTextures</span> either describes a single texture, or a multi texture.</p>
-<ul>
-<li>single texture: a single surface texture is applied to the styled geometric item (entirely or partly) with optional repetition and texture transformation</li>
-<li>multi texture: two or more surface textures are applied to the styled geometric item (entirely or partly) with optional repetition, texture transformation or texture coordinate mapping being specific for each texture.</li>
-</ul>
-<p class="spec-head">
-Informal Propositions:</p>
-<ol>
-<li>Only one instance of <span class="self-ref">IfcSurfaceStyleWithTextures</span> shall be referenced by an <a href="../../ifcpresentationappearanceresource/lexical/ifcstyleditem.htm">IfcStyledItem</a> and be assigned to an <a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a></li>
-</ol>
-<blockquote class="note">
-<p>NOTE  The definitions of texturing within this standard have been developed in dependence on the texture component of X3D. See ISO/IEC 19775-1.2:2008 X3D Architecture and base components Edition 2, Part 1, 18 Texturing component for the definitions in the international standard.</p>
-</blockquote>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC2x2.</p>
-</blockquote>
-<blockquote class="change-ifc2x3">
-<p>IFC2x3 CHANGE  inverse attribute <i>HasTextureCoordinates</i> deleted.</p>
-</blockquote>
-</details>
-<details open="open"><summary>Attribute definitions</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
-<th>G</th></tr>
-<tr><td>1</td><td>Textures</td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacetexture.htm">IfcSurfaceTexture</a></td><td>L[1:?]</td><td>
-The textures applied to the surface. In case of more than one surface texture is included, the <i>IfcSurfaceStyleWithTexture</i> defines a multi texture.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
-<section>
-<h5 class="num">Inherited definitions from supertypes</h5>
-<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcsurfacestylewithtextures.png" usemap="#f"/>
-<map name="f">
-<area shape="rect" coords="6,6,218,18" href="../../../schema/ifcpresentationdefinitionresource/lexical/ifcpresentationitem.htm" alt="IfcPresentationItem" />
-</map>
-</details>
-<details><summary>Attribute inheritance</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
-<tr><td colspan="6"><i><a href="../../ifcpresentationdefinitionresource/lexical/ifcpresentationitem.htm">IfcPresentationItem</a></i></td></tr>
-<tr><td colspan="6"><a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestylewithtextures.htm">IfcSurfaceStyleWithTextures</a></td></tr>
-<tr><td>1</td><td>Textures</td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacetexture.htm">IfcSurfaceTexture</a></td><td>L[1:?]</td><td>
-The textures applied to the surface. In case of more than one surface texture is included, the <i>IfcSurfaceStyleWithTexture</i> defines a multi texture.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

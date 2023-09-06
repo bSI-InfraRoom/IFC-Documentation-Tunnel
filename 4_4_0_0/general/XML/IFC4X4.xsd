@@ -464,18 +464,18 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="IfcArchElement" type="ifc:IfcArchElement" substitutionGroup="ifc:Entity" nillable="true"/>
+	<xs:element name="IfcArchElement" type="ifc:IfcArchElement" substitutionGroup="ifc:IfcBuiltElement" nillable="true"/>
 	<xs:complexType name="IfcArchElement">
 		<xs:complexContent>
-			<xs:extension base="ifc:Entity">
+			<xs:extension base="ifc:IfcBuiltElement">
 				<xs:attribute name="PredefinedType" type="ifc:IfcArchElementTypeEnum" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="IfcArchElementType" type="ifc:IfcArchElementType" substitutionGroup="ifc:Entity" nillable="true"/>
+	<xs:element name="IfcArchElementType" type="ifc:IfcArchElementType" substitutionGroup="ifc:IfcBuiltElementType" nillable="true"/>
 	<xs:complexType name="IfcArchElementType">
 		<xs:complexContent>
-			<xs:extension base="ifc:Entity">
+			<xs:extension base="ifc:IfcBuiltElementType">
 				<xs:attribute name="PredefinedType" type="ifc:IfcArchElementTypeEnum" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
@@ -1604,17 +1604,10 @@ of the material. The information contained in this document is subject to change
 			<xs:extension base="ifc:IfcCompositeCurve"/>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="IfcCompositeCurveSegment-temp" abstract="true">
-		<xs:complexContent>
-			<xs:restriction base="ifc:IfcSegment">
-				<xs:sequence/>
-			</xs:restriction>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:element name="IfcCompositeCurveSegment" type="ifc:IfcCompositeCurveSegment" substitutionGroup="ifc:IfcSegment" nillable="true"/>
 	<xs:complexType name="IfcCompositeCurveSegment">
 		<xs:complexContent>
-			<xs:extension base="ifc:IfcCompositeCurveSegment-temp">
+			<xs:extension base="ifc:IfcSegment">
 				<xs:sequence>
 					<xs:element name="ParentCurve" type="ifc:IfcCurve" nillable="true"/>
 				</xs:sequence>
@@ -3974,14 +3967,6 @@ of the material. The information contained in this document is subject to change
 	<xs:complexType name="IfcGeoslice">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcGeotechnicalAssembly"/>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="IfcGeotechTypicalSection" type="ifc:IfcGeotechTypicalSection" substitutionGroup="ifc:IfcLinearZone" nillable="true"/>
-	<xs:complexType name="IfcGeotechTypicalSection">
-		<xs:complexContent>
-			<xs:extension base="ifc:IfcLinearZone">
-				<xs:attribute name="PredefinedType" type="ifc:IfcGeotechTypicalSectionTypeEnum" use="optional"/>
-			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="IfcGeotechnicalAssembly" type="ifc:IfcGeotechnicalAssembly" abstract="true" substitutionGroup="ifc:IfcGeotechnicalElement" nillable="true"/>
@@ -10353,6 +10338,14 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:element name="IfcTunnelTypicalSection" type="ifc:IfcTunnelTypicalSection" substitutionGroup="ifc:IfcLinearZone" nillable="true"/>
+	<xs:complexType name="IfcTunnelTypicalSection">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcLinearZone">
+				<xs:attribute name="PredefinedType" type="ifc:IfcTunnelTypicalSectionTypeEnum" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="IfcTypeObject" type="ifc:IfcTypeObject" substitutionGroup="ifc:IfcObjectDefinition" nillable="true"/>
 	<xs:complexType name="IfcTypeObject">
 		<xs:complexContent>
@@ -10659,7 +10652,6 @@ of the material. The information contained in this document is subject to change
 	<xs:complexType name="IfcVoxelData" abstract="true">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcComplementaryData">
-				<xs:attribute name="Name" type="ifc:IfcLabel" use="optional"/>
 				<xs:attribute name="ValueType" type="ifc:IfcLabel" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
@@ -11023,6 +11015,7 @@ of the material. The information contained in this document is subject to change
 			<xs:element ref="ifc:IfcTimeMeasure-wrapper"/>
 			<xs:element ref="ifc:IfcTimeStamp-wrapper"/>
 			<xs:element ref="ifc:IfcTorqueMeasure-wrapper"/>
+			<xs:element ref="ifc:IfcURIReference-wrapper"/>
 			<xs:element ref="ifc:IfcVaporPermeabilityMeasure-wrapper"/>
 			<xs:element ref="ifc:IfcVolumeMeasure-wrapper"/>
 			<xs:element ref="ifc:IfcVolumetricFlowRateMeasure-wrapper"/>
@@ -11408,6 +11401,7 @@ of the material. The information contained in this document is subject to change
 			<xs:element ref="ifc:IfcTimeSeries"/>
 			<xs:element ref="ifc:IfcTimeStamp-wrapper"/>
 			<xs:element ref="ifc:IfcTorqueMeasure-wrapper"/>
+			<xs:element ref="ifc:IfcURIReference-wrapper"/>
 			<xs:element ref="ifc:IfcVaporPermeabilityMeasure-wrapper"/>
 			<xs:element ref="ifc:IfcVolumeMeasure-wrapper"/>
 			<xs:element ref="ifc:IfcVolumetricFlowRateMeasure-wrapper"/>
@@ -11537,6 +11531,7 @@ of the material. The information contained in this document is subject to change
 			<xs:element ref="ifc:IfcText-wrapper"/>
 			<xs:element ref="ifc:IfcTime-wrapper"/>
 			<xs:element ref="ifc:IfcTimeStamp-wrapper"/>
+			<xs:element ref="ifc:IfcURIReference-wrapper"/>
 		</xs:choice>
 	</xs:group>
 	<xs:group name="IfcSizeSelect">
@@ -11731,6 +11726,7 @@ of the material. The information contained in this document is subject to change
 			<xs:element ref="ifc:IfcTimeMeasure-wrapper"/>
 			<xs:element ref="ifc:IfcTimeStamp-wrapper"/>
 			<xs:element ref="ifc:IfcTorqueMeasure-wrapper"/>
+			<xs:element ref="ifc:IfcURIReference-wrapper"/>
 			<xs:element ref="ifc:IfcVaporPermeabilityMeasure-wrapper"/>
 			<xs:element ref="ifc:IfcVolumeMeasure-wrapper"/>
 			<xs:element ref="ifc:IfcVolumetricFlowRateMeasure-wrapper"/>
@@ -11944,6 +11940,8 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcArchElementTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="segment"/>
+			<xs:enumeration value="lining"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12176,9 +12174,12 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcCableCarrierFittingTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="bend"/>
+			<xs:enumeration value="connector"/>
 			<xs:enumeration value="cross"/>
 			<xs:enumeration value="reducer"/>
+			<xs:enumeration value="junction"/>
 			<xs:enumeration value="tee"/>
+			<xs:enumeration value="transition"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13301,12 +13302,6 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="elevation_view"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="IfcGeotechTypicalSectionTypeEnum">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="notdefined"/>
-			<xs:enumeration value="userdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcGeotechnicalStratumTypeEnum">
@@ -14757,6 +14752,15 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="maintenance"/>
 			<xs:enumeration value="underground_facilities"/>
 			<xs:enumeration value="ramp"/>
+			<xs:enumeration value="notdefined"/>
+			<xs:enumeration value="userdefined"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IfcTunnelTypicalSectionTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="geotech"/>
+			<xs:enumeration value="excavationsupport"/>
+			<xs:enumeration value="risk"/>
 			<xs:enumeration value="notdefined"/>
 			<xs:enumeration value="userdefined"/>
 		</xs:restriction>
@@ -16573,6 +16577,15 @@ of the material. The information contained in this document is subject to change
 		<xs:complexType>
 			<xs:simpleContent>
 				<xs:extension base="ifc:IfcTorqueMeasure">
+					<xs:attributeGroup ref="ifc:instanceAttributes"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IfcURIReference-wrapper" nillable="true">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="ifc:IfcURIReference">
 					<xs:attributeGroup ref="ifc:instanceAttributes"/>
 				</xs:extension>
 			</xs:simpleContent>

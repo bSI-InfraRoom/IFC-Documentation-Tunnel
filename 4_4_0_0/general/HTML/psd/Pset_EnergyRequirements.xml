@@ -33,7 +33,7 @@
       <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="70bf1f16939c408797bd780289a363e6">
-      <Name>EnergySource</Name>
+      <Name>EnergySourceType</Name>
       <Definition>Type of energy source e.g. Electricity, Diesel, LPG etc. utilised by the element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

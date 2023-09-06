@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="7def2fbb70324e1b93850cdd4b88ee36" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_LabTestCommon</Name>
+  <Definition>Properties describing the laboratory test used to obtain the associated results.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/LABTESTRESULT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/LABTESTRESULT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="cadf0eccfb894c01952f65234570f3f8">
+      <Name>TestMethod</Name>
+      <Definition>Name of the test method that was used to optain the exchanged results.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="67bc90ff195c4c84a808a167c02dd007">
+      <Name>TestStandard</Name>
+      <Definition>Reference to standard that describes the test merthodology.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1bfbad7374544417928cbca0c9ea7301">
+      <Name>TestType</Name>
+      <Definition>Discipline responsible for performing the tests and using ist results.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

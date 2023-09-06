@@ -483,18 +483,18 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a>&quot; substitutionGroup=&quot;ifc:Entity&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcproductextension/lexical/ifcbuiltelement.htm">IfcBuiltElement</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:Entity&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcproductextension/lexical/ifcbuiltelement.htm">IfcBuiltElement</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;PredefinedType&quot; type=&quot;ifc:<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelementtypeenum.htm">IfcArchElementTypeEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelementtype.htm">IfcArchElementType</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelementtype.htm">IfcArchElementType</a>&quot; substitutionGroup=&quot;ifc:Entity&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelementtype.htm">IfcArchElementType</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelementtype.htm">IfcArchElementType</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcproductextension/lexical/ifcbuiltelementtype.htm">IfcBuiltElementType</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelementtype.htm">IfcArchElementType</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:Entity&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcproductextension/lexical/ifcbuiltelementtype.htm">IfcBuiltElementType</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;PredefinedType&quot; type=&quot;ifc:<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelementtypeenum.htm">IfcArchElementTypeEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
@@ -1623,17 +1623,10 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a>&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcgeometryresource/lexical/ifccompositecurvesegment.htm">IfcCompositeCurveSegment</a>-temp&quot; abstract=&quot;true&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:restriction base=&quot;ifc:<a href="../../../schema/ifcgeometryresource/lexical/ifcsegment.htm">IfcSegment</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
-&nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcgeometryresource/lexical/ifccompositecurvesegment.htm">IfcCompositeCurveSegment</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcgeometryresource/lexical/ifccompositecurvesegment.htm">IfcCompositeCurveSegment</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcgeometryresource/lexical/ifcsegment.htm">IfcSegment</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcgeometryresource/lexical/ifccompositecurvesegment.htm">IfcCompositeCurveSegment</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcgeometryresource/lexical/ifccompositecurvesegment.htm">IfcCompositeCurveSegment</a>-temp&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcgeometryresource/lexical/ifcsegment.htm">IfcSegment</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;ParentCurve&quot; type=&quot;ifc:<a href="../../../schema/ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
@@ -3993,14 +3986,6 @@ of the material. The information contained in this document is subject to change
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeoslice.htm">IfcGeoslice</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechnicalassembly.htm">IfcGeotechnicalAssembly</a>&quot;/&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
-&nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechtypicalsection.htm">IfcGeotechTypicalSection</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechtypicalsection.htm">IfcGeotechTypicalSection</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcproductextension/lexical/ifclinearzone.htm">IfcLinearZone</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
-&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechtypicalsection.htm">IfcGeotechTypicalSection</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcproductextension/lexical/ifclinearzone.htm">IfcLinearZone</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;PredefinedType&quot; type=&quot;ifc:<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechtypicalsectiontypeenum.htm">IfcGeotechTypicalSectionTypeEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechnicalassembly.htm">IfcGeotechnicalAssembly</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechnicalassembly.htm">IfcGeotechnicalAssembly</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechnicalelement.htm">IfcGeotechnicalElement</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
@@ -10372,6 +10357,14 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifctunneldomain/lexical/ifctunneltypicalsection.htm">IfcTunnelTypicalSection</a>&quot; type=&quot;ifc:<a href="../../../schema/ifctunneldomain/lexical/ifctunneltypicalsection.htm">IfcTunnelTypicalSection</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcproductextension/lexical/ifclinearzone.htm">IfcLinearZone</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifctunneldomain/lexical/ifctunneltypicalsection.htm">IfcTunnelTypicalSection</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcproductextension/lexical/ifclinearzone.htm">IfcLinearZone</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;PredefinedType&quot; type=&quot;ifc:<a href="../../../schema/ifctunneldomain/lexical/ifctunneltypicalsectiontypeenum.htm">IfcTunnelTypicalSectionTypeEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>&quot; type=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
@@ -10678,7 +10671,6 @@ of the material. The information contained in this document is subject to change
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcproductextension/lexical/ifcvoxeldata.htm">IfcVoxelData</a>&quot; abstract=&quot;true&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcproductextension/lexical/ifccomplementarydata.htm">IfcComplementaryData</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Name&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ValueType&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
@@ -11042,6 +11034,7 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifctimemeasure.htm">IfcTimeMeasure</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcdatetimeresource/lexical/ifctimestamp.htm">IfcTimeStamp</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifctorquemeasure.htm">IfcTorqueMeasure</a>-wrapper&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcvaporpermeabilitymeasure.htm">IfcVaporPermeabilityMeasure</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcvolumemeasure.htm">IfcVolumeMeasure</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcvolumetricflowratemeasure.htm">IfcVolumetricFlowRateMeasure</a>-wrapper&quot;/&gt;<br/>
@@ -11427,6 +11420,7 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcdatetimeresource/lexical/ifctimeseries.htm">IfcTimeSeries</a>&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcdatetimeresource/lexical/ifctimestamp.htm">IfcTimeStamp</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifctorquemeasure.htm">IfcTorqueMeasure</a>-wrapper&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcvaporpermeabilitymeasure.htm">IfcVaporPermeabilityMeasure</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcvolumemeasure.htm">IfcVolumeMeasure</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcvolumetricflowratemeasure.htm">IfcVolumetricFlowRateMeasure</a>-wrapper&quot;/&gt;<br/>
@@ -11556,6 +11550,7 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifctext.htm">IfcText</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcdatetimeresource/lexical/ifctime.htm">IfcTime</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcdatetimeresource/lexical/ifctimestamp.htm">IfcTimeStamp</a>-wrapper&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:choice&gt;<br/>
 &nbsp;&lt;/xs:group&gt;<br/>
 &nbsp;&lt;xs:group name=&quot;<a href="../../../schema/ifcpresentationappearanceresource/lexical/ifcsizeselect.htm">IfcSizeSelect</a>&quot;&gt;<br/>
@@ -11750,6 +11745,7 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifctimemeasure.htm">IfcTimeMeasure</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcdatetimeresource/lexical/ifctimestamp.htm">IfcTimeStamp</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifctorquemeasure.htm">IfcTorqueMeasure</a>-wrapper&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcvaporpermeabilitymeasure.htm">IfcVaporPermeabilityMeasure</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcvolumemeasure.htm">IfcVolumeMeasure</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcvolumetricflowratemeasure.htm">IfcVolumetricFlowRateMeasure</a>-wrapper&quot;/&gt;<br/>
@@ -11963,6 +11959,8 @@ of the material. The information contained in this document is subject to change
 &nbsp;&lt;/xs:simpleType&gt;<br/>
 &nbsp;&lt;xs:simpleType name=&quot;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelementtypeenum.htm">IfcArchElementTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;segment&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;lining&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -12195,9 +12193,12 @@ of the material. The information contained in this document is subject to change
 &nbsp;&lt;xs:simpleType name=&quot;<a href="../../../schema/ifcelectricaldomain/lexical/ifccablecarrierfittingtypeenum.htm">IfcCableCarrierFittingTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;bend&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;connector&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;cross&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;reducer&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;junction&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;tee&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;transition&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -13320,12 +13321,6 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;elevation_view&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
-&nbsp;&lt;/xs:simpleType&gt;<br/>
-&nbsp;&lt;xs:simpleType name=&quot;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechtypicalsectiontypeenum.htm">IfcGeotechTypicalSectionTypeEnum</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
 &nbsp;&lt;/xs:simpleType&gt;<br/>
 &nbsp;&lt;xs:simpleType name=&quot;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a>&quot;&gt;<br/>
@@ -14776,6 +14771,15 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;maintenance&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;underground_facilities&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;ramp&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
+&nbsp;&lt;/xs:simpleType&gt;<br/>
+&nbsp;&lt;xs:simpleType name=&quot;<a href="../../../schema/ifctunneldomain/lexical/ifctunneltypicalsectiontypeenum.htm">IfcTunnelTypicalSectionTypeEnum</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;geotech&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;excavationsupport&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;risk&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -16592,6 +16596,15 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:simpleContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifctorquemeasure.htm">IfcTorqueMeasure</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attributeGroup ref=&quot;ifc:instanceAttributes&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>-wrapper&quot; nillable=&quot;true&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attributeGroup ref=&quot;ifc:instanceAttributes&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent&gt;<br/>

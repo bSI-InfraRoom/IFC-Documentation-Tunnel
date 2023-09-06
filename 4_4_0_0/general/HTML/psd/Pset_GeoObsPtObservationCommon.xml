@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="4246d636dd0342168bf5d55df13125c8" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoObsPtObservationCommon</Name>
+  <Definition>Properties for geo-science observations at points.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/LOCALINFORMATION</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/LOCALINFORMATION</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="ecfdb0f36f974a36a8af67bb12590772">
+      <Name>Weathering</Name>
+      <Definition>Description of the physical and chemical changes produced by atmospheric agents in rocks or other deposits at or near the earth's surface. These changes result in disintegration and decomposition of the material.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="eb006c406e38480882f40b6584d732ea">
+      <Name>Veining</Name>
+      <Definition>Description of observed vein structures related to hydrothermal alteration, mineralisation etc.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="af7202a4d39a4d66aa429f19b6791ed0">
+      <Name>GroundTemperature</Name>
+      <Definition>Ground temperature expected in the subject section.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0a99261bd2a2462aa418d3f1da9eef6b">
+      <Name>Karst</Name>
+      <Definition>Description of expected or observed karst features.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d83defb9061e4e439d25a3bd5187d9fd">
+      <Name>Boulders</Name>
+      <Definition>Description of expected or observed boulders features.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2c1db8a4a717468197d94baf1ef0f078">
+      <Name>GasType</Name>
+      <Definition>Type of natural gas occurence in the subject section.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="9943f4d2240f4d6997dd55c8dfbee8f9">
+      <Name>GasConcentration</Name>
+      <Definition>Expected concentration of gas to be encountered during excavation.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="306b184722ef4928bf17f8623164e733">
+      <Name>GroundwaterAgressiveness</Name>
+      <Definition>Rating of the agressiveness e.g. towards concrete, according to national standards.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7c741ec2858d462eaf9459244ec92e0a">
+      <Name>GroundwaterTemperature</Name>
+      <Definition>Groundwater temperature observed at specific location or expected in the subject section.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

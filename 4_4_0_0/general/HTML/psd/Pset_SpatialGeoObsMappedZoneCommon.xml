@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="3333d5488252407c9afa234e05e868e9" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_SpatialGeoObsMappedZoneCommon</Name>
+  <Definition>Common properties for mapped zone observations.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcSpatialZone/MAPPEDZONE</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSpatialZone/MAPPEDZONE</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="294663360fc24f9c917b72f95142500c">
+      <Name>GSI</Name>
+      <Definition>The Geological Strength Index (GSI): A characterization tool for assessing engineering properties for rock masses.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4ff2c28f27e846d3bd477ff9e30e2b39">
+      <Name>RMR</Name>
+      <Definition>The rock mass rating (RMR) is a geomechanical classification system for rocks, developed by Z. T. Bieniawski.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="80d440dd2af243c3a7e8637857479b44">
+      <Name>Q-value</Name>
+      <Definition>A description of the rock mass stability of an underground opening in jointed rock masses based on Q-system which was originaly developed at NGI.2015 - Handbook on the Q-System - NGI.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

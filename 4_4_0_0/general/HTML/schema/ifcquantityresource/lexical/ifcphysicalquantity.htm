@@ -26,67 +26,6 @@
 
 <h4 class="num">IfcPhysicalQuantity</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
-<details open="open"><summary>Natural language names</summary><table>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Physikalische Größe</b></td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Physical Quantity</b></td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Quantité physique</b></td></tr>
-</table>
-</details>
-<section>
-<h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>The physical quantity, <span class="self-ref">IfcPhysicalQuantity</span>, is an abstract entity that holds a complex or simple quantity measure together with a semantic definition of the usage for the single or several measure value.</p>
-<p>The <i>Name</i> attribute defines the actual usage or kind of measure. The interpretation of the name label has to be established within the actual exchange context. In addition an informative text may be associated to each quantity by the <i>Description</i> attribute.</p>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC2x. It replaces the calcXxx attributes used in previous IFC Releases.</p>
-</blockquote>
-</details>
-<details open="open"><summary>Attribute definitions</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
-<th>G</th></tr>
-<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
-Name of the element quantity or measure. The name attribute has to be made recognizable by further agreements.
-</td><td>X</td></tr>
-<tr><td>2</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
-Further explanation that might be given to the quantity.
-</td><td>X</td></tr>
-<tr><td></td><td><i>HasExternalReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.htm">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to an external reference, e.g. library, classification, or document information, that is associated to the quantity.
-<blockquote>
-IFC4 CHANGE New inverse attribute.
-</blockquote>
-</td><td>X</td></tr>
-<tr><td></td><td><i>PartOfComplex</i></td><td><a href="../../ifcquantityresource/lexical/ifcphysicalcomplexquantity.htm">IfcPhysicalComplexQuantity</a><br/>@HasQuantities</td><td>S[0:1]</td><td>Reference to a physical complex quantity in which the physical quantity may be contained.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
-<section>
-<h5 class="num">Inherited definitions from supertypes</h5>
-<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcphysicalquantity.png" usemap="#f"/>
-<map name="f">
-<area shape="rect" coords="18,30,206,42" href="../../../schema/ifcquantityresource/lexical/ifcphysicalcomplexquantity.htm" alt="IfcPhysicalComplexQuantity" />
-<area shape="rect" coords="18,54,206,66" href="../../../schema/ifcquantityresource/lexical/ifcphysicalsimplequantity.htm" alt="IfcPhysicalSimpleQuantity" />
-</map>
-</details>
-<details><summary>Attribute inheritance</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
-<tr><td colspan="6"><i><a href="../../ifcquantityresource/lexical/ifcphysicalquantity.htm">IfcPhysicalQuantity</a></i></td></tr>
-<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
-Name of the element quantity or measure. The name attribute has to be made recognizable by further agreements.
-</td><td>X</td></tr>
-<tr><td>2</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
-Further explanation that might be given to the quantity.
-</td><td>X</td></tr>
-<tr><td></td><td><i>HasExternalReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.htm">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to an external reference, e.g. library, classification, or document information, that is associated to the quantity.
-<blockquote>
-IFC4 CHANGE New inverse attribute.
-</blockquote>
-</td><td>X</td></tr>
-<tr><td></td><td><i>PartOfComplex</i></td><td><a href="../../ifcquantityresource/lexical/ifcphysicalcomplexquantity.htm">IfcPhysicalComplexQuantity</a><br/>@HasQuantities</td><td>S[0:1]</td><td>Reference to a physical complex quantity in which the physical quantity may be contained.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

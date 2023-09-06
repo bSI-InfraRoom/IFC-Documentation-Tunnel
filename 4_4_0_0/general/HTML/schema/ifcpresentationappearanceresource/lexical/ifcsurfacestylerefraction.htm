@@ -26,55 +26,6 @@
 
 <h4 class="num">IfcSurfaceStyleRefraction</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
-<details open="open"><summary>Natural language names</summary><table>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Oberflächenstil - Lichtbrechung</b></td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Surface Style Refraction</b></td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Style de réfraction de surface</b></td></tr>
-</table>
-</details>
-<section>
-<h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcSurfaceStyleRefraction</span> extends the surface style lighting, or the surface style rendering definition for properties for calculation of physically exact illuminance by adding seldomly used properties. Currently this includes the refraction index (by which the light ray refracts when passing through a prism) and the dispersion factor (or Abbe constant) which takes into account the wavelength dependency of the refraction.</p>
-<blockquote class="note">
-<p>NOTE  If such refraction properties are used, the <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestyle.htm">IfcSurfaceStyle</a> should include within its set of <i>Styles</i> (depending on whether rendering or lighting is used) an instance of <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestylelighting.htm">IfcSurfaceStyleLighting</a> and <span class="self-ref">IfcSurfaceStyleRefraction</span>, or an instance of <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestylerendering.htm">IfcSurfaceStyleRendering</a> and <span class="self-ref">IfcSurfaceStyleRefraction</span>.</p>
-</blockquote>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC2x2.</p>
-</blockquote>
-</details>
-<details open="open"><summary>Attribute definitions</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
-<th>G</th></tr>
-<tr><td>1</td><td>RefractionIndex</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
-The index of refraction for all wave lengths of light. The refraction index is the ratio between the speed of light in a vacuum and the speed of light in the medium. E.g. glass has a refraction index of 1.5, whereas water has an index of 1.33
-</td><td>X</td></tr>
-<tr><td>2</td><td>DispersionFactor</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
-The Abbe constant given as a fixed ratio between the refractive indices of the material at different wavelengths. A low Abbe number means a high dispersive power. In general this translates to a greater angular spread of the emergent spectrum.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
-<section>
-<h5 class="num">Inherited definitions from supertypes</h5>
-<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcsurfacestylerefraction.png" usemap="#f"/>
-<map name="f">
-<area shape="rect" coords="6,6,218,18" href="../../../schema/ifcpresentationdefinitionresource/lexical/ifcpresentationitem.htm" alt="IfcPresentationItem" />
-</map>
-</details>
-<details><summary>Attribute inheritance</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
-<tr><td colspan="6"><i><a href="../../ifcpresentationdefinitionresource/lexical/ifcpresentationitem.htm">IfcPresentationItem</a></i></td></tr>
-<tr><td colspan="6"><a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestylerefraction.htm">IfcSurfaceStyleRefraction</a></td></tr>
-<tr><td>1</td><td>RefractionIndex</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
-The index of refraction for all wave lengths of light. The refraction index is the ratio between the speed of light in a vacuum and the speed of light in the medium. E.g. glass has a refraction index of 1.5, whereas water has an index of 1.33
-</td><td>X</td></tr>
-<tr><td>2</td><td>DispersionFactor</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
-The Abbe constant given as a fixed ratio between the refractive indices of the material at different wavelengths. A low Abbe number means a high dispersive power. In general this translates to a greater angular spread of the emergent spectrum.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

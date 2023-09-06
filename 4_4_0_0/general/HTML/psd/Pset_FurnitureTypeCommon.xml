@@ -13,7 +13,7 @@
       <Name>Reference</Name>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType />
+          <DataType type="IfcIdentifier" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

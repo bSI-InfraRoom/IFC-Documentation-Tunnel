@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="af094bf586bb41a590c45dad32e4f6c3" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoObsBoreholeGeoLogInterval</Name>
+  <Definition>Properties for geolog intervals.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/BOREHOLELOG</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/BOREHOLELOG</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="6b921b25c0f74324b53b06ef9deaea1e">
+      <Name>GeologyCode</Name>
+      <Definition>Reference to any existing classification, e.g. from ageological survey or stratigraphy table.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5c97e835ee6d45189e03313e3d87d56d">
+      <Name>Weathering</Name>
+      <Definition>Description of the physical and chemical changes produced by atmospheric agents in rocks or other deposits at or near the earth's surface. These changes result in disintegration and de composition of the material.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="aafe7b348eee4f15a75f28b13e4e6598">
+      <Name>FractureIndex</Name>
+      <Definition>Count of the number or spacing of fractures over an arbitrary length of core.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcCountMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="98eac533d3f74280bae162af864624da">
+      <Name>RockQualityDesignation</Name>
+      <Definition>Length of solid core each pieces longer than 100 mm expressed as a ratio of the length of core run.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1a1f0787cab24c04a9bdb9e2fe9dcea3">
+      <Name>TotalCoreRecovery</Name>
+      <Definition>Length of core recovered (solid and non-intact) expressed as a ratio of the length of core run.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0086e09e357e48f1aa18a2575b0c623e">
+      <Name>SolidCoreRecovery</Name>
+      <Definition>Length of solid core recovered expressed as a ratio of the length of core run.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

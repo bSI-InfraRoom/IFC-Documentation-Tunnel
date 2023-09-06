@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="77e22b3658e34cc4900f114222aa9a8a" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoScienceFeatureTypeContact</Name>
+  <Definition>Defines properties for contacts where a contact is a general concept representing any kind of surface separating two geologic units, including primary boundaries such as depositional contacts, all kinds of unconformities, intrusive contacts, and gradational contacts, as well as faults that separate geologic units.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceFeature/CONTACT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceFeature/CONTACT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="26e405bc7cac4af68e398f9f9544a369">
+      <Name>GeoContactType</Name>
+      <Definition>Reports a URI referring to a controlled concept from a vocabulary defining the contact types.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4780ea795035493abe486e7c45294fa6">
+      <Name>DipDirection</Name>
+      <Definition>The geographic  direction of a line created by the intersection of a plane and the horizontal plane. If non specific convention is used, this angular value is in the range 0 to 18 degrees. In this case, there is an ambiguity on the dip orientation. For example, a plane with an orientation of 90 degrees from the nord could either have a dip direction to the North or to the South. Thus, to avoid this ambiguity, a strike value is generally completed with an indication of the dip orientation (Quadrant).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

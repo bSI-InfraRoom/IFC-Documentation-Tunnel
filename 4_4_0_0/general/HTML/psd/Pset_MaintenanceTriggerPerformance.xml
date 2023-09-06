@@ -23,7 +23,7 @@
       <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="6cd2c7c12e7e49b9907d3f0771ee1e4a">
-      <Name>MaintenanceLevel</Name>
+      <Name>PerformanceMaintenanceLevel</Name>
       <Definition>Performance level at which maintenance takes place</Definition>
       <PropertyType>
         <TypePropertySingleValue>

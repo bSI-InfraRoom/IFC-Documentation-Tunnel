@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="eb7c91fea3484889bdfa65cc36c81917" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="eb7c91fea3484889bdfa65cc36c81917" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_Uncertainty</Name>
   <Definition>Property set capturing the geometric uncertainty regarding measurements including how the way that uncertainty was assessed.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcProduct</ClassName>
-    <ClassName>IfcTypeProduct</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcProduct,IfcTypeProduct</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcProduct</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="da7247f30bb04cc29b54f11e644eaa76">
       <Name>UncertaintyBasis</Name>

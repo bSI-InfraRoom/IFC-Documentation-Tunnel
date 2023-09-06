@@ -409,7 +409,7 @@ Set to (TRUE) if this stair is rated as handicap accessible  according the local
       <Name>ThermalTransmittance</Name>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType />
+          <DataType type="IfcThermalTransmittanceMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -419,7 +419,7 @@ Set to (TRUE) if this stair is rated as handicap accessible  according the local
       <Name>LoadBearing</Name>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType />
+          <DataType type="IfcBoolean" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

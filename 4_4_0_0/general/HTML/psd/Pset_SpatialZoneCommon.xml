@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="0fd7d69fbe3e44d4be9adf6368e9cc6b" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="0fd7d69fbe3e44d4be9adf6368e9cc6b" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_SpatialZoneCommon</Name>
   <Applicability />
-  <ApplicableClasses />
+  <ApplicableClasses>
+    <ClassName>IfcSpatialZone</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSpatialZone</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="09e2b7b541924636a1d531d532a1a8d2">
       <Name>Reference</Name>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType />
+          <DataType type="IfcIdentifier" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

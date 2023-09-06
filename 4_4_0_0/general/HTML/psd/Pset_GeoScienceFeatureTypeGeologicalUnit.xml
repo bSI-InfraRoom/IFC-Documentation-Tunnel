@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="8da354fbe6ac45cc8a06e994f2d2e98a" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoScienceFeatureTypeGeologicalUnit</Name>
+  <Definition>Properties for geological units.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceFeature/GEOLOGICALUNIT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceFeature/GEOLOGICALUNIT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="eee6e395135d47768bd45c6a8891cb0f">
+      <Name>GeologicUnitType</Name>
+      <Definition>&gt;NOTE Definition according to GeoSciML: The type of GeologicUnit.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b151899fc4164d14ad79ba9231418827">
+      <Name>Rank</Name>
+      <Definition>&gt;NOTE Definition according to ISC: The rank of GeologicUnit e.g., group, formation, member.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d2949ea28ef448d79594a2e6d0762b24">
+      <Name>Lithology</Name>
+      <Definition>Defines all natural materials resulting from the combination of minerals, particles or biogenic elements.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="6c4799775f4a467892fd9aff8022779c">
+      <Name>GeologicHistory</Name>
+      <Definition>Human readable description, possibly formatted with formal syntax, of the age of the GeologicUnit (where age is a sequence of events and may include process and environment information).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1278f79e357c4b7699de4142ca4ecc0e">
+      <Name>RepresentativeAge</Name>
+      <Definition>A URI referring to a controlled concept specifying the most representative stratigraphic age interval for the GeologicUnit. This will be defined entirely at the discretion of the data provider and may be a single event selected from the geologic feature's geological history or a value summarising the all or part of the feature's history.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="a156ef3eb16340e5aabddadc76b73e87">
+      <Name>FaciesLithostratigraphy</Name>
+      <Definition>The characteristics of a rock or a sediment unit that reflect its environment of deposition and allow it to be distinguished from rock or sediment deposited in an adjacent environment.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="93ec2974d20e4500a38bd3d9546a374d">
+      <Name>FaciesPetrophysics</Name>
+      <Definition>A rock mass that can be recognized by its composition, structures or fossil content and mapped on the basis of those characteristics.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ed1d2dcb338c42ce9f874d9af77c8a25">
+      <Name>GeologicalHazard</Name>
+      <Definition>Relates the presence or absence of a certain geological hazard, like e.g. hazardous minerals (asbestos, serpentine) or gas.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

@@ -82,7 +82,7 @@
       <Definition>Identifies the maximum constant speed over the kinematic path.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcVelocityMeasure" />
+          <DataType type="IfcLinearVelocityMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

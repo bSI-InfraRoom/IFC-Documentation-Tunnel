@@ -13,9 +13,72 @@
       <Name>ProcessItem</Name>
       <Definition>The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system.</Definition>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="PEnum_ProcessItem" />
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ProcessItem">
+            <EnumItem>TEU</EnumItem>
+            <EnumItem>CGT</EnumItem>
+            <EnumItem>BARREL</EnumItem>
+            <EnumItem>TONNE</EnumItem>
+            <EnumItem>PASSENGER</EnumItem>
+            <EnumItem>VEHICLE</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>TEU</Name>
+              <NameAliases>
+                <NameAlias lang="en">TEU</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Twenty Foot Equivalent Unit.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CGT</Name>
+              <NameAliases>
+                <NameAlias lang="en">CGT</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Compensated Gross Tonnage</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BARREL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Barrel</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Liquid bulk measurement unit.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TONNE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Tonne</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Dry bulk measurement unit</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PASSENGER</Name>
+              <NameAliases>
+                <NameAlias lang="en">Passenger</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Item unit for the flow and use of passengers.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VEHICLE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Vehicle</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Item unit for the flow and transfer of vehicles</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
       <NameAliases />
       <DefinitionAliases />

@@ -68,12 +68,6 @@ The following are within the entire scope of this release of IFC:</p>
 * full project structure and component breakdown structures outside of building engineering, but providing a baseline for civil engineering to be extended in future releases; 
 * behavioral aspects of components and other information items.
 </code></pre>
-<h5>IfcSolidStratum</h5>
-<table class="gridtable">
-<tr><th>Field</th><th>Mapping</th><th>Definition</th>
-</tr>
-<tr><th>(Query)</th><th></th><th></th></tr>
-<tr><td>Topography Geometry</td><td>\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation<br>\<a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>.Name<br></td><td>The word or group of words by which the product representation is known.</td></tr></table>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
 </tr>
@@ -2099,6 +2093,16 @@ representation</p>
 <p>EXAMPLE  An <a href="../../ifcbuildingcontrolsdomain/lexical/ifcsensor.htm">IfcSensor</a> for a motion sensor may have a &quot;Motion Sensed&quot; event. If the <a href="../../ifcprocessextension/lexical/ifcevent.htm">IfcEvent</a> is defined by an <a href="../../ifcprocessextension/lexical/ifceventtype.htm">IfcEventType</a> and the <a href="../../ifcprocessextension/lexical/ifceventtype.htm">IfcEventType</a> is assigned to a product type (using <a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a>), then the <a href="../../ifcprocessextension/lexical/ifcevent.htm">IfcEvent</a> must be assigned to one or more occurrences of the specified product type using <a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a>.</p>
 </blockquote>
 </td></tr></table>
+<h5>IfcExcavation</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+</tr>
+<tr><th>(Query)</th><th>\<a href="../../ifcsharedinfrastructureelements/lexical/ifcexcavation.htm">IfcExcavation</a><br>
+</th><th></th></tr>
+<tr><td>Guiding Curves Geometry</td><td>\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation<br>\<a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>.Name<br></td><td><p>Accompanying geometry to the Body geometry of Sectioned Solid Horizontal Geometry. The curves connect the control points of the cross sections in Sectioned Solid Horinzontal Geometry.</p>
+</td></tr><tr><td>Sectioned Solid Horizontal Geometry</td><td>\<a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>.Representation<br>\<a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>.Representations['Body']<br>\<a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>.ContextOfItems<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a><br></td><td><p>The main Body geometry of IfcExcavation. Goes hand-in-hand with Guiding Curves Geometry. The parametric cross sections are placed along the Directrix. Between the control points the interpolation is related to the curve type used on the underlying segment where the rate of curvature change is the basis.</p>
+</td></tr><tr><td></td><td>\<a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>.Representation<br>\<a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>.Representations['Body']<br>\<a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>.ContextOfItems<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a><br></td><td><p>Whenever parametric geometry with cross sections (Sectioned Solid Horizontal Geometry) and guiding curves (Guiding Curves Geometry) is not possible, the segment shall be represented with Body Tessellation Geometry.</p>
+</td></tr></table>
 <h5>IfcFacility</h5>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
@@ -2295,13 +2299,22 @@ system  that is referenced by all geometric representations.</i></p>
 </td></tr><tr><td>Spatial Containment</td><td>\<a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>.ContainedInStructure[*]<br>\<a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>.RelatingStructure<br>\<a href="../../ifcproductextension/lexical/ifcspatialelement.htm">IfcSpatialElement</a>.Name<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a><br></td><td><p>Assignment to a site within a building project context</p>
 <p>Assignment to any spatial structure</p>
 </td></tr></table>
+<h5>IfcGeoScienceFeature</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+</tr>
+<tr><th>(Query)</th><th>\<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeature.htm">IfcGeoScienceFeature</a><br>
+</th><th></th></tr>
+<tr><td>Document Association</td><td>\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesdocument.htm">IfcRelAssociatesDocument</a>.Name<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a><br></td><td><p>Documents may be associated with any type of <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeature.htm">IfcGeoScienceFeature</a>.</p>
+</td></tr><tr><td>Dataset Association</td><td>\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesdataset.htm">IfcRelAssociatesDataset</a>.Name<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a><br></td><td><p>Documents may be associated with any type of <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeature.htm">IfcGeoScienceFeature</a>.</p>
+</td></tr></table>
 <h5>IfcGeotechnicalElement</h5>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
 </tr>
 <tr><th>(Query)</th><th>\<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalelement.htm">IfcGeotechnicalElement</a><br>
 </th><th></th></tr>
-<tr><td>Earthworks Cuttings</td><td>\<a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>.HasOpenings[*]<br>\<a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a>.RelatedOpeningElement<br>\<a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkscut.htm">IfcEarthworksCut</a>.FillsVoids[*]<br>\<a href="../../ifcproductextension/lexical/ifcrelfillselement.htm">IfcRelFillsElement</a>.RelatedBuildingElement<br>\<a href="../../ifcsharedinfrastructureelements/lexical/ifccourse.htm">IfcCourse</a><br></td><td>Reference to ~~building~~ element that occupies fully or partially the associated opening.
+<tr><td>Earthworks Cuttings</td><td>\<a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>.HasOpenings[*]<br>\<a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a>.RelatedOpeningElement<br>\<a href="../../ifcsharedinfrastructureelements/lexical/ifcexcavation.htm">IfcExcavation</a>.FillsVoids[*]<br>\<a href="../../ifcproductextension/lexical/ifcrelfillselement.htm">IfcRelFillsElement</a>.RelatedBuildingElement<br>\<a href="../../ifcsharedinfrastructureelements/lexical/ifccourse.htm">IfcCourse</a><br></td><td>Reference to ~~building~~ element that occupies fully or partially the associated opening.
 { .change-ifc2x}
 > IFC2x CHANGE&nbsp; The data type has been changed from _IfcBuildingElement_ to _IfcElement_ with upward compatibility for file based exchange.</td></tr></table>
 <h5>IfcGrid</h5>
@@ -3079,7 +3092,7 @@ Extrusion</i></p>
 > NOTE&nbsp; Implementation agreements can restrict the maximum number of layer assignments to 1.
 
 { .change-ifc2x3}
-> IFC2x3 CHANGE&nbsp; The inverse attribute _LayerAssignments_ has been added</td></tr></table>
+> IFC2x3 CHANGE&nbsp; The inverse attribute _LayerAssignments_ has been added</td></tr><tr><td>Product Relative Placement</td><td>\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.ObjectPlacement<br>\<a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a>.PlacementRelTo<br>\<a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a>.PlacesObject[*]<br>\<a href="../../ifcproductextension/lexical/ifcpositioningelement.htm">IfcPositioningElement</a>.Name<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a><br></td><td>Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.</td></tr></table>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
 </tr>
@@ -3136,7 +3149,7 @@ Extrusion</i></p>
 <p>If referenced, the spatial zone is the root of the spatial structure (to be used as a stub for non-building related projects).</p>
 </td></tr><tr><td>Project Representation Context 2D</td><td>\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.RepresentationContexts[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>.ContextIdentifier<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a><br></td><td>The optional identifier of the representation context as used within a project.</td></tr><tr><td>Project Dataset Information</td><td>\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesdataset.htm">IfcRelAssociatesDataset</a>.RelatingDataset<br>\<a href="../../ifcexternalreferenceresource/lexical/ifcdatasetinformation.htm">IfcDatasetInformation</a>.Identification<br>\<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a><br></td><td>Identifier that uniquely identifies a document.
 { .change-ifc2x4}
-> IFC4 CHANGE&nbsp; Attribute renamed from _DocumentId_.</td></tr><tr><td>Project Global Positioning Geodetic</td><td>\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.RepresentationContexts[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>.HasCoordinateOperation[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcrigidoperation.htm">IfcRigidOperation</a>.TargetCRS<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeographiccrs.htm">IfcGeographicCRS</a><br></td><td>Target coordinate reference system for the operation.</td></tr><tr><td>Project Global Positioning Mapped</td><td>\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.RepresentationContexts[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>.HasCoordinateOperation[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcrigidoperation.htm">IfcRigidOperation</a>.TargetCRS<br>\<a href="../../ifcrepresentationresource/lexical/ifcprojectedcrs.htm">IfcProjectedCRS</a><br></td><td><p>The representation context of the project refers to global positioning, i.e. the coordinate system of the project resides within the defined projected coordinate reference system (a map coordinate system) and is subject to a rigid transformation, e.g. to truncate coordinate values. The representation context inherits all properties of the projected coordinate reference system, in particular the distortions resulting in deviations between model dimensions/distances and real-world dimensions/distances.</p>
+> IFC4 CHANGE&nbsp; Attribute renamed from _DocumentId_.</td></tr><tr><td>Project Global Positioning Geographic</td><td>\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.RepresentationContexts[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>.HasCoordinateOperation[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcrigidoperation.htm">IfcRigidOperation</a>.TargetCRS<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeographiccrs.htm">IfcGeographicCRS</a><br></td><td>Target coordinate reference system for the operation.</td></tr><tr><td>Project Global Positioning Mapped</td><td>\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.RepresentationContexts[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>.HasCoordinateOperation[*]<br>\<a href="../../ifcrepresentationresource/lexical/ifcrigidoperation.htm">IfcRigidOperation</a>.TargetCRS<br>\<a href="../../ifcrepresentationresource/lexical/ifcprojectedcrs.htm">IfcProjectedCRS</a><br></td><td><p>The representation context of the project refers to global positioning, i.e. the coordinate system of the project resides within the defined projected coordinate reference system (a map coordinate system) and is subject to a rigid transformation, e.g. to truncate coordinate values. The representation context inherits all properties of the projected coordinate reference system, in particular the distortions resulting in deviations between model dimensions/distances and real-world dimensions/distances.</p>
 </td></tr></table>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
@@ -3343,6 +3356,13 @@ Extrusion</i></p>
 <tr><th>(Query)</th><th>\<a href="../../ifcsharedbldgelements/lexical/ifcramptype.htm">IfcRampType</a><br>
 </th><th></th></tr>
 <tr><td>Body Geometry</td><td>\<a href="../../ifckernel/lexical/ifctypeproduct.htm">IfcTypeProduct</a>.RepresentationMaps[*]<br>\<a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a>.MappedRepresentation<br>\<a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>.ContextOfItems<br>\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a><br></td><td>Definition of the representation context for which the different subtypes of representation are valid.</td></tr></table>
+<h5>IfcReferent</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+</tr>
+<tr><th>(Query)</th><th>\<a href="../../ifcproductextension/lexical/ifcreferent.htm">IfcReferent</a><br>
+</th><th></th></tr>
+<tr><td>Station</td><td>\<a href="../../ifcproductextension/lexical/ifcreferent.htm">IfcReferent</a>.Positions[*]<br>\<a href="../../ifcproductextension/lexical/ifcrelpositions.htm">IfcRelPositions</a>.RelatedProducts[*]<br>\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Name<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a><br></td><td>Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.</td></tr></table>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
 </tr>

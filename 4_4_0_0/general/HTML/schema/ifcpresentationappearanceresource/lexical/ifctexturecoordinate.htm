@@ -26,67 +26,6 @@
 
 <h4 class="num">IfcTextureCoordinate</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
-<details open="open"><summary>Natural language names</summary><table>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Texturkoordinaten</b></td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Texture Coordinate</b></td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Coordonnées de texture</b></td></tr>
-</table>
-</details>
-<details open="open"><summary>Change log</summary><table class="gridtable">
-<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc2x3-to-ifc4-4_0_0_0/index.htm">IFC2x3 to IFC4 4.0.0.0</a></b></td>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcpresentationappearanceresource/lexical/ifctexturecoordinate.htm">IfcTextureCoordinate</a></td><td></td><td></td><td>MOVED</td><td>Schema changed from <i>IFCPRESENTATIONDEFINITIONRESOURCE</i> to <i>IFCPRESENTATIONAPPEARANCERESOURCE</i>. <br/></td></tr>
-</table>
-</details>
-<section>
-<h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcTextureCoordinate</span> is an abstract supertype of the different kinds to apply texture coordinates to geometries. For vertex based geometries an explicit assignment of 2D texture vertices to the 3D geometry points is supported by the subtype <a href="../../ifcpresentationappearanceresource/lexical/ifctexturemap.htm">IfcTextureMap</a>, in addition there can be a procedural description of how texture coordinates shall be applied to geometric items. If no <span class="self-ref">IfcTextureCoordinate</span> is provided for the <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacetexture.htm">IfcSurfaceTexture</a>, the default mapping shall be used.</p>
-<blockquote class="note">
-<p>NOTE  See relevant subtypes of <a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a> for default texture mapping description.</p>
-</blockquote>
-<blockquote class="note">
-<p>NOTE  The definitions of texturing has been adapted from X3D Architecture and base components, section 18 <strong>Texturing component</strong> as defined in ISO/IEC 19775-1.2</p>
-</blockquote>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC2x2.</p>
-</blockquote>
-<blockquote class="change-ifc2x3">
-<p>IFC2x3 CHANGE  The attribute Texture is deleted.</p>
-</blockquote>
-<blockquote class="change-ifc2x4">
-<p>IFC4 CHANGE  The inverse attribute AnnotatedSurface isdeleted, and the attribute <i>Maps</i> is added.</p>
-</blockquote>
-</details>
-<details open="open"><summary>Attribute definitions</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
-<th>G</th></tr>
-<tr><td>1</td><td>Maps</td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacetexture.htm">IfcSurfaceTexture</a></td><td>L[1:?]</td><td>
-Reference to the one (or many in case of multi textures with identity transformation to geometric surfaces) subtype(s) of <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacetexture.htm">IfcSurfaceTexture</a> that are mapped to a geometric surface by the texture coordinate transformation.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
-<section>
-<h5 class="num">Inherited definitions from supertypes</h5>
-<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifctexturecoordinate.png" usemap="#f"/>
-<map name="f">
-<area shape="rect" coords="30,54,218,66" href="../../../schema/ifcpresentationappearanceresource/lexical/ifcindexedtexturemap.htm" alt="IfcIndexedTextureMap" />
-<area shape="rect" coords="30,78,218,90" href="../../../schema/ifcpresentationappearanceresource/lexical/ifctexturecoordinategenerator.htm" alt="IfcTextureCoordinateGenerator" />
-<area shape="rect" coords="30,102,218,114" href="../../../schema/ifcpresentationappearanceresource/lexical/ifctexturemap.htm" alt="IfcTextureMap" />
-<area shape="rect" coords="6,6,242,18" href="../../../schema/ifcpresentationdefinitionresource/lexical/ifcpresentationitem.htm" alt="IfcPresentationItem" />
-</map>
-</details>
-<details><summary>Attribute inheritance</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
-<tr><td colspan="6"><i><a href="../../ifcpresentationdefinitionresource/lexical/ifcpresentationitem.htm">IfcPresentationItem</a></i></td></tr>
-<tr><td colspan="6"><i><a href="../../ifcpresentationappearanceresource/lexical/ifctexturecoordinate.htm">IfcTextureCoordinate</a></i></td></tr>
-<tr><td>1</td><td>Maps</td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacetexture.htm">IfcSurfaceTexture</a></td><td>L[1:?]</td><td>
-Reference to the one (or many in case of multi textures with identity transformation to geometric surfaces) subtype(s) of <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacetexture.htm">IfcSurfaceTexture</a> that are mapped to a geometric surface by the texture coordinate transformation.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

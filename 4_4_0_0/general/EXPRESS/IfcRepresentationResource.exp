@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 9 February 2023
+Wednesday, 6 September 2023
 
 *)
 
@@ -193,7 +193,7 @@ ENTITY IfcMapConversion
 	XAxisOrdinate : OPTIONAL IfcReal;
 	Scale : OPTIONAL IfcReal;
  WHERE
-	OnlyProjectedCRS : 'IFC4x3.IFCPROJECTEDCRS' IN TYPEOF(SELF\IfcCoordinateOperation.TargetCRS);
+	OnlyProjectedCRS : 'IFCREPRESENTATIONRESOURCE.IFCPROJECTEDCRS' IN TYPEOF(SELF\IfcCoordinateOperation.TargetCRS);
 END_ENTITY;
 
 ENTITY IfcMapConversionScaled
@@ -271,13 +271,13 @@ ENTITY IfcRigidOperation
 	SecondCoordinate : IfcMeasureValue;
 	Height : OPTIONAL IfcLengthMeasure;
  WHERE
-	CoordinateType : ('IFCMEASURERESOURCE.IFCLENGTHMEASURE' IN TYPEOF(FirstCoordinate)
-OR
-'IFCMEASURERESOURCE.IFCPLANEANGLEMEASURE' IN TYPEOF(FirstCoordinate))
+	CoordinateType : (('IFCMEASURERESOURCE.IFCLENGTHMEASURE' IN TYPEOF(FirstCoordinate))
 AND
-('IFCMEASURERESOURCE.IFCLENGTHMEASURE' IN TYPEOF(SecondCoordinate)
+('IFCMEASURERESOURCE.IFCLENGTHMEASURE' IN TYPEOF(SecondCoordinate)))
 OR
-'IFCMEASURERESOURCE.IFCPLANEANGLEMEASURE' IN TYPEOF(SecondCoordinate));
+(('IFCMEASURERESOURCE.IFCPLANEANGLEMEASURE' IN TYPEOF(FirstCoordinate))
+AND
+('IFCMEASURERESOURCE.IFCPLANEANGLEMEASURE' IN TYPEOF(SecondCoordinate)));
 END_ENTITY;
 
 ENTITY IfcShapeAspect;
@@ -572,6 +572,11 @@ FUNCTION IfcShapeRepresentationTypes
     'AdvancedBrep' :
       BEGIN
         Count := SIZEOF(QUERY(temp <* Items | ('IFCGEOMETRICMODELRESOURCE.IFCMANIFOLDSOLIDBREP' IN TYPEOF(temp))));      
+      END;
+
+    'Voxel' :
+      BEGIN
+        Count := SIZEOF(QUERY(temp <* Items | ('IFCGEOMETRICMODELRESOURCE.IFCVOXELGRID' IN TYPEOF(temp))));      
       END;
 
     'BoundingBox' :

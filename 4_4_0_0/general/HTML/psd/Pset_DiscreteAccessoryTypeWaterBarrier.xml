@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="425e075f565a4839b8cf4b1310e0fa55" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_DiscreteAccessoryTypeWaterBarrier</Name>
+  <Definition>Properties for discrete accessories of type water barrier.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcDiscreteAccessory/WATER_BARRIER</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcDiscreteAccessory/WATER_BARRIER</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="c1370329ca54420e8f651f6c860d49e2">
+      <Name>SealType</Name>
+      <Definition>Specifies the type of seal.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SealType">
+            <EnumItem>COMPRESSIBLE</EnumItem>
+            <EnumItem>HYDRO_EXPANDING</EnumItem>
+            <EnumItem>MIXED</EnumItem>
+            <EnumItem>MEMBRANE</EnumItem>
+            <EnumItem>INFLATABLE</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>COMPRESSIBLE</Name>
+              <Definition>Seal that is compressed into joint and expands to provide seal.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>HYDRO_EXPANDING</Name>
+              <Definition>Hydrophilic swellable profile that swells in contact with water to provide seal.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MIXED</Name>
+              <Definition>Hybrid seal combining compressive and hydrophilic components.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MEMBRANE</Name>
+              <Definition>Flexible membrane that bridges a gap to provide seal.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INFLATABLE</Name>
+              <Definition>Seal installed in gap and inflated to provide seal.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

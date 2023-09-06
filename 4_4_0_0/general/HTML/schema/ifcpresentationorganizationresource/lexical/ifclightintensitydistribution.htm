@@ -26,50 +26,6 @@
 
 <h4 class="num">IfcLightIntensityDistribution</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
-<details open="open"><summary>Natural language names</summary><table>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Lichtstärkenverteilung</b></td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Light Intensity Distribution</b></td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Distribution de l'intensité lumineuse</b></td></tr>
-</table>
-</details>
-<section>
-<h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcLightIntensityDistribution</span> defines the the luminous intensity of a light source that changes according to the direction of the ray. It is based on some standardized light distribution curves, which are defined by the <i>LightDistributionCurve</i> attribute.</p>
-<blockquote class="history">
-<p>New entity in IFC2x2.</p>
-</blockquote>
-</details>
-<details open="open"><summary>Attribute definitions</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
-<th>G</th></tr>
-<tr><td>1</td><td>LightDistributionCurve</td><td><a href="../../ifcpresentationorganizationresource/lexical/ifclightdistributioncurveenum.htm">IfcLightDistributionCurveEnum</a></td><td></td><td>
-Standardized  light distribution curve used to define the luminous intensity of the light in all directions.
-</td><td>X</td></tr>
-<tr><td>2</td><td>DistributionData</td><td><a href="../../ifcpresentationorganizationresource/lexical/ifclightdistributiondata.htm">IfcLightDistributionData</a></td><td>L[1:?]</td><td>
-Light distribution data applied to the light source. It is defined by a list of main plane angles (B or C according to the light distribution curve chosen) that includes (for each B or C angle) a second list of secondary plane angles (the β or γ angles) and the according luminous intensity distribution measures.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
-<section>
-<h5 class="num">Inherited definitions from supertypes</h5>
-<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifclightintensitydistribution.png" usemap="#f"/>
-<map name="f">
-</map>
-</details>
-<details><summary>Attribute inheritance</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
-<tr><td colspan="6"><a href="../../ifcpresentationorganizationresource/lexical/ifclightintensitydistribution.htm">IfcLightIntensityDistribution</a></td></tr>
-<tr><td>1</td><td>LightDistributionCurve</td><td><a href="../../ifcpresentationorganizationresource/lexical/ifclightdistributioncurveenum.htm">IfcLightDistributionCurveEnum</a></td><td></td><td>
-Standardized  light distribution curve used to define the luminous intensity of the light in all directions.
-</td><td>X</td></tr>
-<tr><td>2</td><td>DistributionData</td><td><a href="../../ifcpresentationorganizationresource/lexical/ifclightdistributiondata.htm">IfcLightDistributionData</a></td><td>L[1:?]</td><td>
-Light distribution data applied to the light source. It is defined by a list of main plane angles (B or C according to the light distribution curve chosen) that includes (for each B or C angle) a second list of secondary plane angles (the β or γ angles) and the according luminous intensity distribution measures.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

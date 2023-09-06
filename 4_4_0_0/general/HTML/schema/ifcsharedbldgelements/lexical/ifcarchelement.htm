@@ -26,71 +26,86 @@
 
 <h4 class="num">IfcArchElement</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
-<details open="open"><summary>Natural language names</summary><table>
-</details>
-<details open="open"><summary>Change log</summary><table class="gridtable">
-<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add1-to-ifc4x4/index.htm">IFC4X3_ADD1 to IFC4X4</a></b></td>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
-</table>
-</details>
 <section>
-<h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>A typically curved structural member spanning an opening and serving as a support.</p>
-</details>
-<details open="open"><summary>Attribute definitions</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
-<th>G</th></tr>
-<tr><td>1</td><td>PredefinedType</td><td><a href="../../ifcsharedbldgelements/lexical/ifcarchelementtypeenum.htm">IfcArchElementTypeEnum</a></td><td>? </td><td>
-Specifies the type for which the value is selected from a predefined type enumeration. This type may associate additional specific property sets.
-<blockquote class="note">
-NOTE  The <i>PredefinedType</i> shall only be used, if no <a href="../../ifcsharedbldgelements/lexical/ifcarchelementtype.htm">IfcArchElementType</a> is assigned, providing its own <i>IfcArchElementType.PredefinedType</i>.
-</blockquote>
-</td><td>X</td></tr>
-</table>
-</details>
-<details open="open"><summary>Formal Propositions</summary><table class="propositions">
-<tr><th>Rule</th><th>Description</th></tr>
-<tr><td>CorrectPredefinedType</td><td>Either the <i>PredefinedType</i> attribute is unset (e.g. because an <a href="../../ifcsharedbldgelements/lexical/ifcarchelementtype.htm">IfcArchElementType</a> is associated), or the inherited attribute <i>ObjectType</i> shall be provided, if the <i>PredefinedType</i> is set to USERDEFINED.
-</td></tr>
-<tr><td>CorrectTypeAssigned</td><td>Either there is no arch element type object associated, i.e. the <i>IsTypedBy</i> inverse relationship is not provided, or the associated type object has to be of type <a href="../../ifcsharedbldgelements/lexical/ifcarchelementtype.htm">IfcArchElementType</a>.
-</td></tr>
-</table>
+<h5 class="num">Definitions applying to General Usage</h5>
+<hr />
+<section>
+<details>
+<summary>Concept inheritance</summary>
+<p><table class="attributes">
+<tr><th><b>#</b></th><th><b>Concept</b></th><th><b>Template</b></th><th><b>Model View</b></th></tr>
+<tr><td colspan="3"><a href="../../ifckernel/lexical/ifcroot.htm"><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcroot.htm#software-identity">Identity</a></td><td><a href="../../templates/software-identity.htm">Software Identity</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcroot.htm#revision-control">Revision Control</a></td><td><a href="../../templates/revision-control.htm">Revision Control</a></td><td>General Usage</td></tr>
 
-</details>
-</section>
-<section>
-<h5 class="num">Inherited definitions from supertypes</h5>
-<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcarchelement.png" usemap="#f"/>
-<map name="f">
-</map>
-</details>
-<details><summary>Attribute inheritance</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
-<tr><td colspan="6"><a href="../../ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a></td></tr>
-<tr><td>1</td><td>PredefinedType</td><td><a href="../../ifcsharedbldgelements/lexical/ifcarchelementtypeenum.htm">IfcArchElementTypeEnum</a></td><td>? </td><td>
-Specifies the type for which the value is selected from a predefined type enumeration. This type may associate additional specific property sets.
-<blockquote class="note">
-NOTE  The <i>PredefinedType</i> shall only be used, if no <a href="../../ifcsharedbldgelements/lexical/ifcarchelementtype.htm">IfcArchElementType</a> is assigned, providing its own <i>IfcArchElementType.PredefinedType</i>.
-</blockquote>
-</td><td>X</td></tr>
+<tr><td colspan="3"><a href="../../ifckernel/lexical/ifcobjectdefinition.htm"><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcobjectdefinition.htm#classification-association">Classification Association</a></td><td><a href="../../templates/classification-association.htm">Classification Association</a></td><td>General Usage</td></tr>
+
+<tr><td colspan="3"><a href="../../ifckernel/lexical/ifcobject.htm"><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#object-user-identity">Object User Identity</a></td><td><a href="../../templates/object-user-identity.htm">Object User Identity</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#object-predefined-type">Object Predefined Type</a></td><td><a href="../../templates/object-predefined-type.htm">Object Predefined Type</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#object-typing">Object Typing</a></td><td><a href="../../templates/object-typing.htm">Object Typing</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#property-sets-with-override">Property Sets with Override</a></td><td><a href="../../templates/property-sets-with-override.htm">Property Sets with Override</a></td><td>General Usage</td></tr>
+
+<tr><td colspan="3"><a href="../../ifckernel/lexical/ifcproduct.htm"><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a></a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcproduct.htm#product-placement">Product Placement</a></td><td><a href="../../templates/product-placement.htm">Product Placement</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcproduct.htm#product-geometric-representation">Product Geometric Representation</a></td><td><a href="../../templates/product-geometric-representation.htm">Product Geometric Representation</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcproduct.htm#product-relative-positioning">Relative Position</a></td><td><a href="../../templates/product-relative-positioning.htm">Product Relative Positioning</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcproduct.htm#product-span-positioning">Product Span Positioning</a></td><td><a href="../../templates/product-span-positioning.htm">Product Span Positioning</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcproduct.htm#product-geometry-colour">Product Geometry Colour</a></td><td><a href="../../templates/product-geometry-colour.htm">Product Geometry Colour</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcproduct.htm#product-geometry-layer">Product Geometry Layer</a></td><td><a href="../../templates/product-geometry-layer.htm">Product Geometry Layer</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcproduct.htm#product-relative-placement">Product Relative Placement</a></td><td><a href="../../templates/product-relative-placement.htm">Product Relative Placement</a></td><td>General Usage</td></tr>
+
+<tr><td colspan="3"><a href="../../ifcproductextension/lexical/ifcelement.htm"><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></a></td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#element-interference">Element Interference</a></td><td><a href="../../templates/element-interference.htm">Element Interference</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#product-local-placement">Product Local Placement</a></td><td><a href="../../templates/product-local-placement.htm">Product Local Placement</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#cog-geometry">CoG Geometry</a></td><td><a href="../../templates/cog-geometry.htm">CoG Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#box-geometry">Box Geometry</a></td><td><a href="../../templates/box-geometry.htm">Box Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#footprint-geometry">FootPrint Geometry</a></td><td><a href="../../templates/footprint-geometry.htm">FootPrint Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-surfaceorsolidmodel-geometry">Body SurfaceOrSolidModel Geometry</a></td><td><a href="../../templates/body-surfaceorsolidmodel-geometry.htm">Body SurfaceOrSolidModel Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-surfacemodel-geometry">Body SurfaceModel Geometry</a></td><td><a href="../../templates/body-surfacemodel-geometry.htm">Body SurfaceModel Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-tessellation-geometry">Body Tessellation Geometry</a></td><td><a href="../../templates/body-tessellation-geometry.htm">Body Tessellation Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-brep-geometry">Body Brep Geometry</a></td><td><a href="../../templates/body-brep-geometry.htm">Body Brep Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-advancedbrep-geometry">Body AdvancedBrep Geometry</a></td><td><a href="../../templates/body-advancedbrep-geometry.htm">Body AdvancedBrep Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-csg-geometry">Body CSG Geometry</a></td><td><a href="../../templates/body-csg-geometry.htm">Body CSG Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#mapped-geometry">Mapped Geometry</a></td><td><a href="../../templates/mapped-geometry.htm">Mapped Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#element-openings">Element Openings</a></td><td><a href="../../templates/element-openings.htm">Element Openings</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#element-projecting">Element Projecting</a></td><td><a href="../../templates/element-projecting.htm">Element Projecting</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#product-linear-placement">Linear Placement</a></td><td><a href="../../templates/product-linear-placement.htm">Product Linear Placement</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#element-voiding-features">Element Voiding Features</a></td><td><a href="../../templates/element-voiding-features.htm">Element Voiding Features</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#surface-feature-adherence">Surface Feature Adherence</a></td><td><a href="../../templates/surface-feature-adherence.htm">Surface Feature Adherence</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-advancedswept-directrix-geometry">Body AdvancedSwept Directrix Geometry</a></td><td><a href="../../templates/body-advancedswept-directrix-geometry.htm">Body AdvancedSwept Directrix Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-advancedswept-disksolid-polycurve-geometry">Body AdvancedSwept DiskSolid PolyCurve Geometry</a></td><td><a href="../../templates/body-advancedswept-disksolid-polycurve-geometry.htm">Body AdvancedSwept DiskSolid PolyCurve Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-advancedswept-tapered-geometry">Body AdvancedSwept Tapered Geometry</a></td><td><a href="../../templates/body-advancedswept-tapered-geometry.htm">Body AdvancedSwept Tapered Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-sectionedsolidhorizontal">Body SectionedSolidHorizontal</a></td><td><a href="../../templates/body-sectionedsolidhorizontal.htm">Body SectionedSolidHorizontal</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-sweptsolid-composite-geometry">Body SweptSolid Composite Geometry</a></td><td><a href="../../templates/body-sweptsolid-composite-geometry.htm">Body SweptSolid Composite Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-sweptsolid-parameterizedprofile-geometry">Body SweptSolid ParameterizedProfile Geometry</a></td><td><a href="../../templates/body-sweptsolid-parameterizedprofile-geometry.htm">Body SweptSolid ParameterizedProfile Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-sweptsolid-compositecurve-geometry">Body SweptSolid CompositeCurve Geometry</a></td><td><a href="../../templates/body-sweptsolid-compositecurve-geometry.htm">Body SweptSolid CompositeCurve Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-sweptsolid-polycurve-geometry">Body SweptSolid PolyCurve Geometry</a></td><td><a href="../../templates/body-sweptsolid-polycurve-geometry.htm">Body SweptSolid PolyCurve Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#footprint-annotation-geometry">FootPrint Annotation Geometry</a></td><td><a href="../../templates/footprint-annotation-geometry.htm">FootPrint Annotation Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#footprint-geomset-polycurve-geometry">FootPrint GeomSet PolyCurve Geometry</a></td><td><a href="../../templates/footprint-geomset-polycurve-geometry.htm">FootPrint GeomSet PolyCurve Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#surface-sectioned-geometry">Surface Sectioned Geometry</a></td><td><a href="../../templates/surface-sectioned-geometry.htm">Surface Sectioned Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#surface-tessellation-geometry">Surface Tessellation Geometry</a></td><td><a href="../../templates/surface-tessellation-geometry.htm">Surface Tessellation Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#product-grid-placement">Product Grid Placement</a></td><td><a href="../../templates/product-grid-placement.htm">Product Grid Placement</a></td><td>General Usage</td></tr>
+
+<tr><td colspan="3"><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm">IfcBuiltElement</a></td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#property-sets-for-objects">Property Sets for Objects</a></td><td><a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#product-assignment">Product Assignment</a></td><td><a href="../../templates/product-assignment.htm">Product Assignment</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#spatial-containment">Spatial Containment</a></td><td><a href="../../templates/spatial-containment.htm">Spatial Containment</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#surface-3d-geometry">Surface 3D Geometry</a></td><td><a href="../../templates/surface-3d-geometry.htm">Surface 3D Geometry</a></td><td>General Usage</td></tr>
+
 </table>
 </details>
 </section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>
-<details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a>&quot; type=&quot;ifc:<a href="../../ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a>&quot; substitutionGroup=&quot;ifc:Entity&quot; nillable=&quot;true&quot;/&gt;<br/>
+<details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a>&quot; type=&quot;ifc:<a href="../../ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcbuiltelement.htm">IfcBuiltElement</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:Entity&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcbuiltelement.htm">IfcBuiltElement</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;PredefinedType&quot; type=&quot;ifc:<a href="../../ifcsharedbldgelements/lexical/ifcarchelementtypeenum.htm">IfcArchElementTypeEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
-<span class="keyword">ENTITY</span> IfcArchElement<b>;</b><br/>
+<span class="keyword">ENTITY</span> IfcArchElement<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcbuiltelement.htm">IfcBuiltElement</a>)<b>;</b><br/>
 &nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="../../ifcsharedbldgelements/lexical/ifcarchelementtypeenum.htm">IfcArchElementTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
 &nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>

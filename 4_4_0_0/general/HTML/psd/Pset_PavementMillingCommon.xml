@@ -5,9 +5,9 @@
   <Definition>Properties for pavement milling.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcEarthworksCut/(.PAVEMENTMILLING.)</ClassName>
+    <ClassName>IfcEarthworksCut/PAVEMENTMILLING</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcEarthworksCut/(.PAVEMENTMILLING.)</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcEarthworksCut/PAVEMENTMILLING</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="118f1380d1e911e1800000215ad4efdf">
       <Name>NominalDepth</Name>

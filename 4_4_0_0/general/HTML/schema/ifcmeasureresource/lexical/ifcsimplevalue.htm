@@ -48,6 +48,9 @@
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4-addendum-2-4_0_2_0/index.htm">IFC4 Addendum 2 4.0.2.0</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcmeasureresource/lexical/ifcsimplevalue.htm">IfcSimpleValue</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcBinary</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcmeasureresource/lexical/ifcsimplevalue.htm">IfcSimpleValue</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcURIReference</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -67,6 +70,7 @@
 <li><a href="../../ifcdatetimeresource/lexical/ifctime.htm">IfcTime</a>: Defined type of simple type STRING to represent a time.</li>
 <li><a href="../../ifcdatetimeresource/lexical/ifcduration.htm">IfcDuration</a>: Defined type of simple type STRING to represent a duration.</li>
 <li><a href="../../ifcdatetimeresource/lexical/ifctimestamp.htm">IfcTimeStamp</a>: Defined type of simple type INTEGER to represent a point in time by seconds elapsed since 1970.</li>
+<li><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>: Defined type of simple type STRING to represent a URI reference.</li>
 </ul>
 <blockquote class="history">
 <p><i>HISTORY  New type in IFC2x.</i></p>
@@ -74,7 +78,8 @@
 <blockquote class="change-ifc2x4">
 <p><i>IFC4 CHANGE  Items <a href="../../ifcdatetimeresource/lexical/ifcdatetime.htm">IfcDateTime</a>,
 <a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>, <a href="../../ifcdatetimeresource/lexical/ifctime.htm">IfcTime</a>, <a href="../../ifcdatetimeresource/lexical/ifcduration.htm">IfcDuration</a>,
-<a href="../../ifcdatetimeresource/lexical/ifctimestamp.htm">IfcTimeStamp</a> added.</i></p>
+<a href="../../ifcdatetimeresource/lexical/ifctimestamp.htm">IfcTimeStamp</a> added.</i>
+<i>IFC4 CHANGE  Item <a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a> added.</i></p>
 </blockquote>
 </details>
 <details open="open"><summary>Select definition</summary><table class="attributes">
@@ -93,6 +98,7 @@
 </td><td></td></tr><tr><td><a href="../../ifcdatetimeresource/lexical/ifctimestamp.htm">IfcTimeStamp</a>
 </td><td></td></tr><tr><td><a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a>
 </td><td></td></tr><tr><td><a href="../../ifcmeasureresource/lexical/ifcbinary.htm">IfcBinary</a>
+</td><td></td></tr><tr><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>
 </td><td></td></tr></table>
 </details>
 </section>
@@ -114,12 +120,13 @@
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifctime.htm">IfcTime</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifctimestamp.htm">IfcTimeStamp</a>-wrapper&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:choice&gt;<br/>
 &nbsp;&lt;/xs:group&gt;<br/>
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcSimpleValue = <span class="keyword">SELECT</span> (<br/>
-&nbsp;<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifclogical.htm">IfcLogical</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifcdatetime.htm">IfcDateTime</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifctime.htm">IfcTime</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifcduration.htm">IfcDuration</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifctimestamp.htm">IfcTimeStamp</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcbinary.htm">IfcBinary</a>);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifclogical.htm">IfcLogical</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifcdatetime.htm">IfcDateTime</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifctime.htm">IfcTime</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifcduration.htm">IfcDuration</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifctimestamp.htm">IfcTimeStamp</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcbinary.htm">IfcBinary</a>, <br/>&nbsp;<a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcmeasureresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

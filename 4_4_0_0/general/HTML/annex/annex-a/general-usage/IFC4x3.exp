@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 9 February 2023
+Wednesday, 6 September 2023
 
 *)
 
@@ -649,7 +649,9 @@ TYPE IfcAnnotationTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcArchElementTypeEnum = ENUMERATION OF
-	(USERDEFINED
+	(SEGMENT
+	,LINING
+	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
@@ -862,9 +864,12 @@ END_TYPE;
 
 TYPE IfcCableCarrierFittingTypeEnum = ENUMERATION OF
 	(BEND
+	,CONNECTOR
 	,CROSS
 	,REDUCER
+	,JUNCTION
 	,TEE
+	,TRANSITION
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -1903,11 +1908,6 @@ TYPE IfcGeometricProjectionEnum = ENUMERATION OF
 	,ELEVATION_VIEW
 	,USERDEFINED
 	,NOTDEFINED);
-END_TYPE;
-
-TYPE IfcGeotechTypicalSectionTypeEnum = ENUMERATION OF
-	(NOTDEFINED
-	,USERDEFINED);
 END_TYPE;
 
 TYPE IfcGeotechnicalStratumTypeEnum = ENUMERATION OF
@@ -3245,6 +3245,14 @@ TYPE IfcTunnelTypeEnum = ENUMERATION OF
 	,USERDEFINED);
 END_TYPE;
 
+TYPE IfcTunnelTypicalSectionTypeEnum = ENUMERATION OF
+	(GEOTECH
+	,EXCAVATIONSUPPORT
+	,RISK
+	,NOTDEFINED
+	,USERDEFINED);
+END_TYPE;
+
 TYPE IfcUndergroundExcavationTypeEnum = ENUMERATION OF
 	(FACEEXCAVATION
 	,RADIALEXCAVATION
@@ -3876,7 +3884,8 @@ TYPE IfcSimpleValue = SELECT
 	,IfcReal
 	,IfcText
 	,IfcTime
-	,IfcTimeStamp);
+	,IfcTimeStamp
+	,IfcURIReference);
 END_TYPE;
 
 TYPE IfcSizeSelect = SELECT
@@ -4162,6 +4171,8 @@ END_ENTITY;
 ENTITY IfcAlignment
  SUBTYPE OF (IfcLinearPositioningElement);
 	PredefinedType : OPTIONAL IfcAlignmentTypeEnum;
+ WHERE
+	AlignmentRepresentation : IfcAlignmenRepresentation(SELF);
 END_ENTITY;
 
 ENTITY IfcAlignmentCant
@@ -4321,7 +4332,8 @@ ENTITY IfcArbitraryProfileDefWithVoids
 	WR3 : SIZEOF(QUERY(temp <* InnerCurves | 'IFC4X4.IFCLINE' IN TYPEOF(temp))) = 0;
 END_ENTITY;
 
-ENTITY IfcArchElement;
+ENTITY IfcArchElement
+ SUBTYPE OF (IfcBuiltElement);
 	PredefinedType : OPTIONAL IfcArchElementTypeEnum;
  WHERE
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
@@ -4331,7 +4343,8 @@ ENTITY IfcArchElement;
   ('IFC4X4.IFCARCHELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
-ENTITY IfcArchElementType;
+ENTITY IfcArchElementType
+ SUBTYPE OF (IfcBuiltElementType);
 	PredefinedType : IfcArchElementTypeEnum;
  WHERE
 	CorrectPredefinedType : (PredefinedType <> IfcArchElementTypeEnum.USERDEFINED) OR
@@ -4708,7 +4721,7 @@ ENTITY IfcBridge
  SUBTYPE OF (IfcFacility);
 	PredefinedType : IfcBridgeTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType &lt;&gt; IfcBridgeTypeEnum.USERDEFINED) OR 
+	HasObjectType : (PredefinedType <> IfcBridgeTypeEnum.USERDEFINED) OR 
 
 EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
@@ -4717,7 +4730,7 @@ ENTITY IfcBridgePart
  SUBTYPE OF (IfcFacilityPart);
 	PredefinedType : IfcBridgePartTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType &lt;&gt; IfcBridgePartTypeEnum.USERDEFINED) OR 
+	HasObjectType : (PredefinedType <> IfcBridgePartTypeEnum.USERDEFINED) OR 
 
 EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
@@ -4781,7 +4794,8 @@ END_ENTITY;
 
 ENTITY IfcBuiltElement
  SUPERTYPE OF (ONEOF
-    (IfcBeam
+    (IfcArchElement
+    ,IfcBeam
     ,IfcBearing
     ,IfcBuildingElementProxy
     ,IfcChimney
@@ -4822,7 +4836,8 @@ END_ENTITY;
 
 ENTITY IfcBuiltElementType
  SUPERTYPE OF (ONEOF
-    (IfcBeamType
+    (IfcArchElementType
+    ,IfcBeamType
     ,IfcBearingType
     ,IfcBuildingElementProxyType
     ,IfcChimneyType
@@ -5330,8 +5345,6 @@ ENTITY IfcCompositeCurveSegment
  SUBTYPE OF (IfcSegment);
 	SameSense : IfcBoolean;
 	ParentCurve : IfcCurve;
- DERIVE
-	SELF\IfcSegment.Dim : IfcDimensionCount := ParentCurve.Dim;
  WHERE
 	ParentIsBoundedCurve : ('IFC4X4.IFCBOUNDEDCURVE' IN TYPEOF(ParentCurve));
 END_ENTITY;
@@ -6999,7 +7012,7 @@ ENTITY IfcFacilityPartCommon
  SUBTYPE OF (IfcFacilityPart);
 	PredefinedType : IfcFacilityPartCommonTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType &lt;&gt; IfcFacilityPartCommonTypeEnum.USERDEFINED) OR 
+	HasObjectType : (PredefinedType <> IfcFacilityPartCommonTypeEnum.USERDEFINED) OR 
 
 EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
@@ -7583,13 +7596,6 @@ ENTITY IfcGeoslice
  SUBTYPE OF (IfcGeotechnicalAssembly);
 END_ENTITY;
 
-ENTITY IfcGeotechTypicalSection
- SUBTYPE OF (IfcLinearZone);
-	PredefinedType : IfcGeotechTypicalSectionTypeEnum;
- WHERE
-	HasObjectType : (PredefinedType <> IfcGeotechTypicalSectionTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
-END_ENTITY;
-
 ENTITY IfcGeotechnicalAssembly
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcGeomodel
@@ -7608,7 +7614,9 @@ ENTITY IfcGeotechnicalStratum
  SUBTYPE OF (IfcGeotechnicalElement);
 	PredefinedType : IfcGeotechnicalStratumTypeEnum;
  WHERE
-	CorrectPredefinedType : NOT EXISTS(PredefinedType) OR (PredefinedType <> IfcVoidingFeatureTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	HasObjectType : (PredefinedType <> IfcGeotechnicalStratumTypeEnum.USERDEFINED) OR 
+
+				EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
 
 ENTITY IfcGradientCurve
@@ -8111,7 +8119,7 @@ END_ENTITY;
 
 ENTITY IfcLinearZone
  ABSTRACT SUPERTYPE OF (ONEOF
-    (IfcGeotechTypicalSection))
+    (IfcTunnelTypicalSection))
  SUBTYPE OF (IfcLinearElement);
 END_ENTITY;
 
@@ -8173,7 +8181,7 @@ ENTITY IfcMapConversion
 	XAxisOrdinate : OPTIONAL IfcReal;
 	Scale : OPTIONAL IfcReal;
  WHERE
-	OnlyProjectedCRS : 'IFC4x3.IFCPROJECTEDCRS' IN TYPEOF(SELF\IfcCoordinateOperation.TargetCRS);
+	OnlyProjectedCRS : 'IFC4X4.IFCPROJECTEDCRS' IN TYPEOF(SELF\IfcCoordinateOperation.TargetCRS);
 END_ENTITY;
 
 ENTITY IfcMapConversionScaled
@@ -10562,13 +10570,13 @@ ENTITY IfcRigidOperation
 	SecondCoordinate : IfcMeasureValue;
 	Height : OPTIONAL IfcLengthMeasure;
  WHERE
-	CoordinateType : ('IFC4X4.IFCLENGTHMEASURE' IN TYPEOF(FirstCoordinate)
-OR
-'IFC4X4.IFCPLANEANGLEMEASURE' IN TYPEOF(FirstCoordinate))
+	CoordinateType : (('IFC4X4.IFCLENGTHMEASURE' IN TYPEOF(FirstCoordinate))
 AND
-('IFC4X4.IFCLENGTHMEASURE' IN TYPEOF(SecondCoordinate)
+('IFC4X4.IFCLENGTHMEASURE' IN TYPEOF(SecondCoordinate)))
 OR
-'IFC4X4.IFCPLANEANGLEMEASURE' IN TYPEOF(SecondCoordinate));
+(('IFC4X4.IFCPLANEANGLEMEASURE' IN TYPEOF(FirstCoordinate))
+AND
+('IFC4X4.IFCPLANEANGLEMEASURE' IN TYPEOF(SecondCoordinate)));
 END_ENTITY;
 
 ENTITY IfcRoad
@@ -11969,7 +11977,7 @@ END_ENTITY;
 
 ENTITY IfcTendonConduit
  SUBTYPE OF (IfcReinforcingElement);
-	PredefinedType : IfcTendonConduitTypeEnum;
+	PredefinedType : OPTIONAL IfcTendonConduitTypeEnum;
  WHERE
 	CorrectPredefinedType : NOT EXISTS(PredefinedType) OR
 (PredefinedType <> IfcTendonConduitTypeEnum.USERDEFINED) OR
@@ -12225,7 +12233,7 @@ ENTITY IfcTransportElement
 OR
 (PredefinedType <> IfcTransportElementTypeEnum.USERDEFINED)
 OR
-((PredefinedType = IfcTransportElementTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
+((PredefinedType = IfcTransportElementTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
   ('IFC4X4.IFCTRANSPORTELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
@@ -12323,6 +12331,13 @@ ENTITY IfcTunnelPart
 	PredefinedType : IfcTunnelPartTypeEnum;
  WHERE
 	HasObjectType : (PredefinedType <> IfcTunnelPartTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+END_ENTITY;
+
+ENTITY IfcTunnelTypicalSection
+ SUBTYPE OF (IfcLinearZone);
+	PredefinedType : IfcTunnelTypicalSectionTypeEnum;
+ WHERE
+	HasObjectType : (PredefinedType <> IfcTunnelTypicalSectionTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
 
 ENTITY IfcTypeObject
@@ -12490,7 +12505,7 @@ ENTITY IfcVehicle
 OR
 (PredefinedType <> IfcVehicleTypeEnum.USERDEFINED)
 OR
-((PredefinedType = IfcVehicleTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
+((PredefinedType = IfcVehicleTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
   ('IFC4X4.IFCVEHICLETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
@@ -12583,7 +12598,6 @@ ENTITY IfcVoxelData
     ,IfcRealVoxelData
     ,IfcVectorVoxelData))
  SUBTYPE OF (IfcComplementaryData);
-	Name : OPTIONAL IfcLabel;
 	ValueType : OPTIONAL IfcLabel;
 END_ENTITY;
 
@@ -12803,6 +12817,70 @@ ENTITY IfcZone
 		('IFC4X4.IFCSPATIALZONE' IN TYPEOF(temp))
 	))) = 0);
 END_ENTITY;
+
+FUNCTION IfcAlignmentRepresentation
+(Alignment : IfcAlignment) : IfcBoolean;
+	
+	LOCAL
+		AlignmentRepresentations : SET OF IfcShapeRepresentation;
+		TwoDRep : SET OF IfcShapeRepresentation;
+		ThreeDRep : SET OF IfcShapeRepresentation;
+		CurveTwoD : IfcCompositeCurve;
+		CurveThreeD : IfcGradientCurve;
+	END_LOCAL;
+
+	(* no representation is okay *)
+	IF NOT EXISTS(Alignment.Representation) THEN
+		RETURN(TRUE);
+	END_IF;
+	
+	(* Alignment.Representation exists so assign *)
+	AlignmentRepresentations := Alignment.Representation.Representations;
+
+	(* one representation is either Curve2D or 3D *)
+	IF SIZEOF(AlignmentRepresentations) = 1 THEN
+		IF SIZEOF(AlignmentRepresentations.Items) <> 1 THEN
+			RETURN (FALSE);
+		END_IF;
+		IF SIZEOF(QUERY(twoDee <* AlignmentRepresentations | twoDee.RepresentationType = 'Curve2D')) = 1 THEN
+			CASE TRUE OF
+				'IFC4X4.IFCCOMPOSITECURVE' IN TYPEOF(AlignmentRepresentations[1].Items[1]):
+					RETURN(TRUE);
+				'IFC4X4.IFCOFFSETCURVEBYDISTANCE' IN TYPEOF(AlignmentRepresentations[1].Items[1]):
+					RETURN(TRUE);
+				'IFC4X4.IFCPOLYLINE' IN TYPEOF(AlignmentRepresentations[1].Items[1]):
+					RETURN(TRUE);
+			END_CASE;
+		END_IF;
+		IF SIZEOF(QUERY(threeDee <* AlignmentRepresentations | threeDee.RepresentationType = 'Curve3D')) = 1 THEN
+			CASE TRUE OF
+				'IFC4X4.IFCGRADIENTCURVE' IN TYPEOF(AlignmentRepresentations[1].Items[1]):
+					RETURN(TRUE);
+				'IFC4X4.IFCOFFSETCURVEBYDISTANCE' IN TYPEOF(AlignmentRepresentations[1].Items[1]):
+					RETURN(TRUE);
+				'IFC4X4.IFCSEGMENTEDREFERENCECURVE' IN TYPEOF(AlignmentRepresentations[1].Items[1]):
+					RETURN(TRUE);
+				'IFC4X4.IFCPOLYLINE' IN TYPEOF(AlignmentRepresentations[1].Items[1]):
+					RETURN(TRUE);
+			END_CASE;
+		END_IF;
+	END_IF;
+	
+	(* 2 representations and 3D BaseCurve reference equals 2D representation *)
+	IF SIZEOF(AlignmentRepresentations) = 2 THEN
+	
+		TwoDRep := QUERY(twoDee <* AlignmentRepresentations | twoDee.RepresentationType = 'Curve2D');
+		CurveTwoD := QUERY(item <* TwoDRep[1].Items | 'IFC4X4.IFCCOMPOSITECURVE' in TYPEOF(item));
+		ThreeDRep := QUERY(threeDee <* AlignmentRepresentations | threeDee.RepresentationType = 'Curve3D');
+		CurveThreeD := QUERY(item <* ThreeDRep[1].Items | 'IFC4X4.IFCGRADIENTCURVE' in TYPEOF(item));
+		
+		RETURN(SIZEOF(CurveThreeD) = 1 AND SIZEOF(CurveTwoD) = 1 AND CurveThreeD\IfcGradientCurve.BaseCurve :=: CurveTwoD);
+	
+	END_IF;
+	(* Missing an IFCSEGMENTEDREFERENCECURVE various placement option implementation. *)
+
+	RETURN(FALSE);
+END_FUNCTION;
 
 FUNCTION IfcAssociatedSurface
 (Arg : IfcPcurve) : IfcSurface;
@@ -13315,6 +13393,9 @@ FUNCTION IfcCurveDim
   END_IF;
   IF ('IFC4X4.IFCINDEXEDPOLYCURVE' IN TYPEOF(Curve))
     THEN RETURN(Curve\IfcIndexedPolyCurve.Points.Dim);
+  END_IF;
+  IF ('IFC4X4.IFCSPIRAL' IN TYPEOF(Curve))
+    THEN RETURN(Curve\IfcSpiral.Position.Dim);
   END_IF;
 RETURN (?);
 END_FUNCTION;
@@ -14071,6 +14152,11 @@ FUNCTION IfcShapeRepresentationTypes
     'AdvancedBrep' :
       BEGIN
         Count := SIZEOF(QUERY(temp <* Items | ('IFC4X4.IFCMANIFOLDSOLIDBREP' IN TYPEOF(temp))));      
+      END;
+
+    'Voxel' :
+      BEGIN
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X4.IFCVOXELGRID' IN TYPEOF(temp))));      
       END;
 
     'BoundingBox' :

@@ -58,18 +58,18 @@
       <Definition>Hydraulic Conductivity (permeability) of soil for water, given with the K or Kf value in m/s</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcVelocityMeasure" />
+          <DataType type="IfcLinearVelocityMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="b50ba0126eab428d966346bbf1c8a35e">
-      <Name>LoadbearingCapacity</Name>
-      <Definition>Estimate of the loadbearing capacity of the stratum.</Definition>
+      <Name>LoadBearingCapacityArea</Name>
+      <Definition>Estimate or design maximum load bearing capacity of the defined surface/structure (e.g. soil stratum or planar slab). Represented as a force per unit area measurement.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="PressureMeasure" />
+          <DataType type="IfcPressureMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -113,7 +113,7 @@
       <Definition>P-wave velocity of a rock or soil.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcVelocityMeasure" />
+          <DataType type="IfcLinearVelocityMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -146,7 +146,7 @@
       <Definition>S-wave velocity of a rock or soil.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcVelocityMeasure" />
+          <DataType type="IfcLinearVelocityMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

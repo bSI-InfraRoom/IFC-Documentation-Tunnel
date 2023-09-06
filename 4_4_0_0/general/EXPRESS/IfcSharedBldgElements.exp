@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 9 February 2023
+Wednesday, 6 September 2023
 
 *)
 
@@ -121,7 +121,9 @@ REFERENCE FROM IFCREPRESENTATIONRESOURCE
 );
 
 TYPE IfcArchElementTypeEnum = ENUMERATION OF
-	(USERDEFINED
+	(SEGMENT
+	,LINING
+	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
@@ -446,7 +448,8 @@ TYPE IfcWindowTypePartitioningEnum = ENUMERATION OF
 	,NOTDEFINED);
 END_TYPE;
 
-ENTITY IfcArchElement;
+ENTITY IfcArchElement
+ SUBTYPE OF (IfcBuiltElement);
 	PredefinedType : OPTIONAL IfcArchElementTypeEnum;
  WHERE
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
@@ -456,7 +459,8 @@ ENTITY IfcArchElement;
   ('IFCSHAREDBLDGELEMENTS.IFCARCHELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
-ENTITY IfcArchElementType;
+ENTITY IfcArchElementType
+ SUBTYPE OF (IfcBuiltElementType);
 	PredefinedType : IfcArchElementTypeEnum;
  WHERE
 	CorrectPredefinedType : (PredefinedType <> IfcArchElementTypeEnum.USERDEFINED) OR

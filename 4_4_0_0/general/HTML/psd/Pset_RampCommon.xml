@@ -273,7 +273,7 @@ Here it defines an exit ramp in accordance to the national building code.</Defin
       <Name>ThermalTransmittance</Name>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType />
+          <DataType type="IfcThermalTransmittanceMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -283,7 +283,7 @@ Here it defines an exit ramp in accordance to the national building code.</Defin
       <Name>LoadBearing</Name>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType />
+          <DataType type="IfcBoolean" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

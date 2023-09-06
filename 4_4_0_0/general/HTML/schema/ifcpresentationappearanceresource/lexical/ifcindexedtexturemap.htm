@@ -26,65 +26,6 @@
 
 <h4 class="num">IfcIndexedTextureMap</h4>
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
-<details open="open"><summary>Natural language names</summary><table>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Liste von Indizes für Texturen</b></td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Indexed Texture Map</b></td></tr>
-</table>
-</details>
-<details open="open"><summary>Change log</summary><table class="gridtable">
-<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc2x3-to-ifc4-4_0_0_0/index.htm">IFC2x3 to IFC4 4.0.0.0</a></b></td>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcpresentationappearanceresource/lexical/ifcindexedtexturemap.htm">IfcIndexedTextureMap</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
-</table>
-</details>
-<section>
-<h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcIndexedTextureMap</span> provides the mapping of the 2-dimensional texture coordinates to the surface onto which it is mapped. It is used for mapping the texture to faces of tessellated face sets.</p>
-<p>The <span class="self-ref">IfcIndexedTextureMap</span> defines an index into an indexed list of texture coordinates. The <i>TexCoords</i> are a two-dimensional list of texture coordinates provided by two parameter values. Subtypes of <span class="self-ref">IfcIndexedTextureMap</span> establish the index attribute corresponding to subtypes of <a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a> defining the corresponding index lists of vertices.</p>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC4.</p>
-</blockquote>
-</details>
-<details open="open"><summary>Attribute definitions</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
-<th>G</th></tr>
-<tr><td>2</td><td>MappedTo</td><td><a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a></td><td></td><td>
-Reference to the <a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a> to which it applies the texture map.
-</td><td>X</td></tr>
-<tr><td>3</td><td>TexCoords</td><td><a href="../../ifcpresentationappearanceresource/lexical/ifctexturevertexlist.htm">IfcTextureVertexList</a></td><td></td><td>
-Indexable list of texture vertices.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
-<section>
-<h5 class="num">Inherited definitions from supertypes</h5>
-<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcindexedtexturemap.png" usemap="#f"/>
-<map name="f">
-<area shape="rect" coords="42,78,230,90" href="../../../schema/ifcpresentationappearanceresource/lexical/ifcindexedpolygonaltexturemap.htm" alt="IfcIndexedPolygonalTextureMap" />
-<area shape="rect" coords="42,102,230,114" href="../../../schema/ifcpresentationappearanceresource/lexical/ifcindexedtriangletexturemap.htm" alt="IfcIndexedTriangleTextureMap" />
-<area shape="rect" coords="18,30,254,42" href="../../../schema/ifcpresentationappearanceresource/lexical/ifctexturecoordinate.htm" alt="IfcTextureCoordinate" />
-<area shape="rect" coords="6,6,266,18" href="../../../schema/ifcpresentationdefinitionresource/lexical/ifcpresentationitem.htm" alt="IfcPresentationItem" />
-</map>
-</details>
-<details><summary>Attribute inheritance</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
-<tr><td colspan="6"><i><a href="../../ifcpresentationdefinitionresource/lexical/ifcpresentationitem.htm">IfcPresentationItem</a></i></td></tr>
-<tr><td colspan="6"><i><a href="../../ifcpresentationappearanceresource/lexical/ifctexturecoordinate.htm">IfcTextureCoordinate</a></i></td></tr>
-<tr><td>1</td><td>Maps</td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacetexture.htm">IfcSurfaceTexture</a></td><td>L[1:?]</td><td>
-Reference to the one (or many in case of multi textures with identity transformation to geometric surfaces) subtype(s) of <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacetexture.htm">IfcSurfaceTexture</a> that are mapped to a geometric surface by the texture coordinate transformation.
-</td><td>X</td></tr>
-<tr><td colspan="6"><i><a href="../../ifcpresentationappearanceresource/lexical/ifcindexedtexturemap.htm">IfcIndexedTextureMap</a></i></td></tr>
-<tr><td>2</td><td>MappedTo</td><td><a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a></td><td></td><td>
-Reference to the <a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a> to which it applies the texture map.
-</td><td>X</td></tr>
-<tr><td>3</td><td>TexCoords</td><td><a href="../../ifcpresentationappearanceresource/lexical/ifctexturevertexlist.htm">IfcTextureVertexList</a></td><td></td><td>
-Indexable list of texture vertices.
-</td><td>X</td></tr>
-</table>
-</details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>
