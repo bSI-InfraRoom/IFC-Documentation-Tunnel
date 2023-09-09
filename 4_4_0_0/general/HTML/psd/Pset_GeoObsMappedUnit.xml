@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="ec46565e4b0b4ecc81fdc6890ec4948d" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoObsMappedUnit</Name>
+  <Definition>Properties for geoscience observations at mapped units.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/MAPPEDFEATURE</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/MAPPEDFEATURE</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="55843d5dd3c0496db47b0df5e3f20752">
+      <Name>AreaID</Name>
+      <Definition>Identification of the single, specific mapped feature in the same mapped zone.
+&gt;NOTE Mapped zone is represented in IFC using _IfcSpatialZone_ with PredefinedType _MAPPEDZONE_.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="3d3b5b9520b14484b754ff178e534c05">
+      <Name>CoveragePercentage</Name>
+      <Definition>Coverage in percentage of the mapped feature in relation to the mapped zone, e.g. tunnel face, to which it belongs.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="dfe27b9c0d0647eab326269c7815da49">
+      <Name>Weathering</Name>
+      <Definition>Description of the physical and chemical changes produced by atmospheric agents in rocks or other deposits at or near the earth's surface. These changes result in disintegration and decomposition of the material.
+&gt; NOTE Definition according to ISO 14689:2017.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_Weathering">
+            <EnumItem>FRESH</EnumItem>
+            <EnumItem>DISCOLOURED</EnumItem>
+            <EnumItem>DISINTEGRATED</EnumItem>
+            <EnumItem>DECOMPOSED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>FRESH</Name>
+              <Definition>No visible sign of weathering/alteration of the rock.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DISCOLOURED</Name>
+              <Definition>The colour of the original fresh rock is changed and is evidence of weathering/alteration. The degree of change from the original colour should be indicated. If the change is confined to particular mineral constituents, this should be mentioned.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DISINTEGRATED</Name>
+              <Definition>The rock is broken up by physical weathering, so that bonding between grains is lost and the rock is weathered/altered towards the condition of a soil in which the original material fabric is still intact. The rock material is friable but the mineral grains are not decomposed.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DECOMPOSED</Name>
+              <Definition>The rock is weathered by the chemical alteration of the mineral grains to the condition of a soil in which the original material fabric is still intact; some or all of the mineral grains are decomposed.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1f6a32d27e8c4abe8aa13c1def44c268">
+      <Name>DiscontinuitySpacing</Name>
+      <Definition>The term "spacing" refers to the mean or modal spacing of a set of discontinuities and is the perpendicular distance between adjacent discontinuities. The discontinuity spacing should be measured in millimetres.
+&gt;NOTE Definition from ISO 14689:2017, Table 8.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_DiscontinuitySpacing">
+            <EnumItem>EXTREMELY_CLOSE</EnumItem>
+            <EnumItem>VERY_CLOSE</EnumItem>
+            <EnumItem>CLOSE</EnumItem>
+            <EnumItem>MEDIUM</EnumItem>
+            <EnumItem>WIDE</EnumItem>
+            <EnumItem>VERY_WIDE</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>EXTREMELY_CLOSE</Name>
+              <Definition>Less than 20 mm.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VERY_CLOSE</Name>
+              <Definition>20 to 60 mm.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CLOSE</Name>
+              <Definition>60 to 200 mm.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MEDIUM</Name>
+              <Definition>200-600 mm.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WIDE</Name>
+              <Definition>600 to 2000 mm.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VERY_WIDE</Name>
+              <Definition>Greater than 2000 mm.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2d87249320ff46838480072b00e16e2b">
+      <Name>GSI</Name>
+      <Definition>The Geological Strength Index (GSI): A characterization tool for assessing engineering properties for rock masses.
+  &gt;NOTE Definition from Marinos &amp; Hoek (2000) GSI: A Geologically Friendly Tool For Rock Mass Strength Estimation. [Link](https://static.rocscience.cloud/assets/resources/learning/hoek/2000-GSI-A-Geologically-Friendly-Tool-for-Rock-Mass-Strength-Estimation.pdf)</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcInteger" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1912a1db45834ac59dfaae5eb7521ab1">
+      <Name>RMR</Name>
+      <Definition>The rock mass rating (RMR) is a geomechanical classification system for rocks.
+&gt;NOTE Definition from ASTM (1988). Standard Guide for using the Rock Mass Rating (RMR) System (Geomechanics Classification) in Engineering Practices. American Society for Testing and Materials, Book of Standards D5878-08, v.04.09, Philadelphia, PA.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8a642131954643ae9488e67effe1021d">
+      <Name>QValue</Name>
+      <Definition>A description of the rock mass stability of an underground opening in jointed rock masses.
+&gt;NOTE Definition from Barton, N.R.; Lien, R.; Lunde, J. (1974). Engineering classification of rock masses for the design of tunnel support. Rock Mechanics and Rock Engineering.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

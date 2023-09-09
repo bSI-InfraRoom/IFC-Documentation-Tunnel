@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="fba9464893cf47d5957c80d862c6e8c1" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoAspects</Name>
+  <Definition>Description of geological aspects that are relevant for the tunnel design and execution phase.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcTunnelTypicalSection/GEOTECH</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcTunnelTypicalSection/GEOTECH</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="2326abd6185c433b9ae2c19de84864fa">
+      <Name>Overburden</Name>
+      <Definition>Range of overburden (distance from tunnel to ground surface) in the subject section.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="a2dc2bdb517c485fa2282886e773cbcb">
+      <Name>GroundwaterDesignPressure</Name>
+      <Definition>Groundwater pressure to be considered in the design.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="75f9b0a6781f4a9c9ad1fab98bca57e5">
+      <Name>MaxGroundwaterInflow</Name>
+      <Definition>Groundwater inflow measured or expected durng a certain time span.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumetricFlowRateMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="28b2ff1c3118423fae788132eae70dca">
+      <Name>GroundwaterAgressiveness</Name>
+      <Definition>Rating of the agressiveness e.g. towards concrete.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d25bc76088ab407387202160d37ba6e7">
+      <Name>GroundwaterTemperature</Name>
+      <Definition>Groundwater temperature observed at specific location or expected in the subject section.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d9fa26841b0c48db9b742077232a0ae7">
+      <Name>Karst</Name>
+      <Definition>Description of expected or observed karst features.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="e556c0536fb24374823ca55d2da64903">
+      <Name>Boulders</Name>
+      <Definition>Description of expected or observed boulders features.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="fb61762a4ac34f919c7aa82c6812bd37">
+      <Name>GasType</Name>
+      <Definition>Type of natural gas occurence in subject section.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c9912637ec234e9080026a2abe3f641f">
+      <Name>GasConcentration</Name>
+      <Definition>Expected concentration of gas to be encountered during excavation.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="22347558a7bf4c54bc92cff85575f009">
+      <Name>DumpCategory</Name>
+      <Definition>Project-related category for re-use and storage of the excavated material.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="96799dd225764897954c58a4db9e8143">
+      <Name>Contamination</Name>
+      <Definition>Expected anthropogenic contaminations.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="f591ff07cad0481fb6f7546cb22dc451">
+      <Name>InSituStress</Name>
+      <Definition>Anisotropic stress regime, with direction and magnitude of principal stresses.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="594fef1b0b2e4a6ba4c7e19c9bee3941">
+      <Name>Swelling</Name>
+      <Definition>Expected swelling behaviour.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ec69bc9e8db942c58cc0691ada1d8844">
+      <Name>GroundTemperature</Name>
+      <Definition>Ground temperature expected in the subject section.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="45cbba6e9f8c4a45a01015a0bc979a64">
+      <Name>CloggingPotential</Name>
+      <Definition>Description or rating of the potential for clogging equipment in sticky ground.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d4a474a624064cd5845ad1c3c488ae55">
+      <Name>AsbestosPotential</Name>
+      <Definition>Description or rating of the potential presence of asbestos in the ground.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1c4c212a31c14059bbec25d5e253b43b">
+      <Name>HeavyMetalsPotential</Name>
+      <Definition>Description or rating of the potential presence of heavy metals in the ground.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

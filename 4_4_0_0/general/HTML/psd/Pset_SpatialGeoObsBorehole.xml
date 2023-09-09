@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="4c90ddac74f6485d831f1eeb186d7742" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_SpatialGeoObsBorehole</Name>
+  <Definition>Properties for geoscience observations in boreholes.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcBorehole</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcBorehole</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="3d5fa837acf74db78631708432d0d9ab">
+      <Name>BoreholeElevation</Name>
+      <Definition>If present, the property reports the elevation data in meters for the borehole (i.e., wellbore) start point. This is a compromise approach to allow for delivery of legacy 2D data without elevation data, and for software that cannot process a 3D GM_Point.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0d745db5436546eca04d7018492ac315">
+      <Name>BoreholeInclination</Name>
+      <Definition>The angle formed by a vertical line and the vertical component in the borehole direction is entered.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2a5c7f7774824fbd898dda6a859cc7b2">
+      <Name>BoreholeAzimuth</Name>
+      <Definition>If the drilling is inclined, the horizontal component in the borehole direction is entered based on the 360 degree orientation method moving right from true north.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="49c6bd85010f4aa0883788e7c32e2bd1">
+      <Name>BoreholePurpose</Name>
+      <Definition>The purpose property reports the purpose for which the borehole was drilled.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c93f48624da74278954ff1b802101352">
+      <Name>Operator</Name>
+      <Definition>The organisation or agency responsible for commissioning the borehole (as opposed to the agency which drilled the borehole).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d9a4722bda6a445d869cf1c99f81faae">
+      <Name>DrillingContractor</Name>
+      <Definition>The property DrillingContractor reports the organisation responsible for drilling the borehole (as opposed to commissioning the borehole).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7ebab96df2da48f494eda39dd0950df5">
+      <Name>BoreholeLengthPlanned</Name>
+      <Definition>The planned length of a borehole e.g. in a site investigation program, in metres, as determined by the data provider.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="da1171fdf48a4f4992800ec4284bd701">
+      <Name>BoreholeLengthDrilled</Name>
+      <Definition>The length of a borehole as drilled and logged, in metres, as determined by the data provider.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b7be374c4f26457c9ee6e3030fe27ed8">
+      <Name>DrillingMethod</Name>
+      <Definition>Type of drilling methods used to perform the investigation.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

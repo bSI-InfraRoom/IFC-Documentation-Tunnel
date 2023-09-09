@@ -1,0 +1,128 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_GeoObsMappedUnit</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 5 index3 4 index4 6 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.5.4.7");
+//-->
+</script>
+
+<h4 class="std">6.5.4.7 Pset_GeoObsMappedUnit</h4>
+<p><span class="self-ref">PSET_OCCURRENCEDRIVEN</span>
+/
+<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm">IfcGeoScienceObservation</a>
+ / <span class="self-ref">MAPPEDFEATURE</span>
+</p>Properties for geoscience observations at mapped units.
+
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geoobsmappedunit.htm">Pset_GeoObsMappedUnit</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/3iHbPUImjEp87zneaEn9ID/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_GeoObsMappedUnit.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>AreaID</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
+</td><td>
+Identification of the single, specific mapped feature in the same mapped zone.
+<blockquote class="note">
+NOTE Mapped zone is represented in IFC using <em>IfcSpatialZone</em> with PredefinedType <em>MAPPEDZONE</em>.
+</blockquote>
+
+</td></tr>
+<tr><td>CoveragePercentage</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+Coverage in percentage of the mapped feature in relation to the mapped zone, e.g. tunnel face, to which it belongs.
+
+</td></tr>
+<tr><td>Weathering</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+/
+ <a href="../../../penum/penum_weathering.htm">PEnum_Weathering</a></td><td>
+Description of the physical and chemical changes produced by atmospheric agents in rocks or other deposits at or near the earth's surface. These changes result in disintegration and decomposition of the material.
+<blockquote class="note">
+NOTE Definition according to ISO 14689:2017.
+</blockquote>
+
+</td></tr>
+<tr><td>DiscontinuitySpacing</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+/
+ <a href="../../../penum/penum_discontinuityspacing.htm">PEnum_DiscontinuitySpacing</a></td><td>
+The term &quot;spacing&quot; refers to the mean or modal spacing of a set of discontinuities and is the perpendicular distance between adjacent discontinuities. The discontinuity spacing should be measured in millimetres.
+<blockquote class="note">
+NOTE Definition from ISO 14689:2017, Table 8.
+</blockquote>
+
+</td></tr>
+<tr><td>GSI</td><td>
+<span class="self-ref">P_BOUNDEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+</td><td>
+The Geological Strength Index (GSI): A characterization tool for assessing engineering properties for rock masses.
+<blockquote class="note">
+NOTE Definition from Marinos &amp; Hoek (2000) GSI: A Geologically Friendly Tool For Rock Mass Strength Estimation. <a href="https://static.rocscience.cloud/assets/resources/learning/hoek/2000-GSI-A-Geologically-Friendly-Tool-for-Rock-Mass-Strength-Estimation.pdf">Link</a>
+</blockquote>
+
+</td></tr>
+<tr><td>RMR</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+</td><td>
+The rock mass rating (RMR) is a geomechanical classification system for rocks.
+<blockquote class="note">
+NOTE Definition from ASTM (1988). Standard Guide for using the Rock Mass Rating (RMR) System (Geomechanics Classification) in Engineering Practices. American Society for Testing and Materials, Book of Standards D5878-08, v.04.09, Philadelphia, PA.
+</blockquote>
+
+</td></tr>
+<tr><td>QValue</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+A description of the rock mass stability of an underground opening in jointed rock masses.
+<blockquote class="note">
+NOTE Definition from Barton, N.R.; Lien, R.; Lunde, J. (1974). Engineering classification of rock masses for the design of tunnel support. Rock Mechanics and Rock Engineering.
+</blockquote>
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_geoobsmappedunit.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

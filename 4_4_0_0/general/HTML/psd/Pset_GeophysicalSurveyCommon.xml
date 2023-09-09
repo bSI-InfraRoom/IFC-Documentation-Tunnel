@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="26c7ec907b1f4b4a87cb2bed319c79e3" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeophysicalSurveyCommon</Name>
+  <Definition>Common properties for geophysical surveys.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="213ee6333ab5453f8d5500ef2c4923a1">
+      <Name>SurveyMethod</Name>
+      <Definition>Method of gephysical survey used</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_GeophysicalSurveyMethod">
+            <EnumItem>REFLECTION_SEISMIC</EnumItem>
+            <EnumItem>REFRACTION_SEISMIC</EnumItem>
+            <EnumItem>SURFACEWAVE_SEISMIC</EnumItem>
+            <EnumItem>PASSIVE_SEISMIC</EnumItem>
+            <EnumItem>OTHER_SEISMIC</EnumItem>
+            <EnumItem>ELECTRICAL</EnumItem>
+            <EnumItem>ELECTROMAGNETIC</EnumItem>
+            <EnumItem>RADAR</EnumItem>
+            <EnumItem>GRAVITY</EnumItem>
+            <EnumItem>MAGNETIC</EnumItem>
+            <EnumItem>NMR</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>REFLECTION_SEISMIC</Name>
+              <Definition>Using seismic waves reflected from the interface between formations having different physical properties to map geological structures and/or stratigraphic features.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>REFRACTION_SEISMIC</Name>
+              <Definition>Using the refraction of seismic waves on geology layers and rock/soil units to characterize subsurface geologic conditions.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SURFACEWAVE_SEISMIC</Name>
+              <Definition>Using seismic waves that travel along (or near to) the surface to assess the surface wave velocity in the subsurface.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PASSIVE_SEISMIC</Name>
+              <Definition>Using listening capabilities only, that is, no seismic energy is added by the investigator.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER_SEISMIC</Name>
+              <Definition>Any other type of seismic survey method.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ELECTRICAL</Name>
+              <Definition>Introducing current into the ground and measuring the distribution of the resulting potential in the ground to map electrical properties in the subsurface.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ELECTROMAGNETIC</Name>
+              <Definition>Detecting the electromagnetic properties of the subsurface by inducing low-frequency electromagnetic fields within the subsurface and measuring the response of earth's materials.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>RADAR</Name>
+              <Definition>Using radar pulses to image the subsurface.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GRAVITY</Name>
+              <Definition>Measuring variations in the gravitational field of the earth to detect the density changes of subsurface bodies.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MAGNETIC</Name>
+              <Definition>Measuring variations in the magnetic field of the earth which are related to changes of structures or magnetic susceptibility in the subsurface.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NMR</Name>
+              <Definition>Measuring magnetic resonance signals from proton-containing fluids (e.g. water, hydrocarbons) in the earth's subsurface.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="35d2247af6a14e8896829a0d24850edb">
+      <Name>SurveyInstrumentManufacturer</Name>
+      <Definition>Manufacturer of the instrument used in the geophysical survey.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="cdd16358b9374966a550087543a45a4d">
+      <Name>SurveyInstrumentModel</Name>
+      <Definition>Model/name of the instrument used in the geophysical survey.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="cb51e597bf7d4f0ca0ef0ac1743cc728">
+      <Name>SurveyDimension</Name>
+      <Definition>Dimension of the geophysical survey.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="9314b358f15d4fb8b2a163f7e8292646" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoScienceModelCommon</Name>
+  <Definition>Common properties for geoscience models.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceModel</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceModel</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="1fca98c3fffb45c39cb3987828122c07">
+      <Name>ModelUseCase</Name>
+      <Definition>Specifies the use case for which the model was created. ModelUseCase could be e.g.: stability assessment, quantity assessment, tendering etc.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="cc9184ee7cc049139b231954dde07a27">
+      <Name>CreationDate</Name>
+      <Definition>Creation date of the model.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDate" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="482e4a33b3824d5b80628c7e7c7c28ec">
+      <Name>ReleaseDate</Name>
+      <Definition>Date of release of the model.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDate" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d353c1f813c0463aaee9eba8876e2a88">
+      <Name>UpdateDate</Name>
+      <Definition>Date of update of the model.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDate" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="05642fd37b8b4c24ad92633bf1017775">
+      <Name>VersionNumber</Name>
+      <Definition>Version tag of the model regarding its descriptive informations.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="6ac3f634373e4951ad03e1240134eda6">
+      <Name>ModelPurpose</Name>
+      <Definition>Purpose for which the model was done. Purpose could be e.g.: scientific study, mining, oil reservoir, geotechnics, hydrogeology, simulation or a URI from the codelist https://data.geoscience.earth/ncl/ModelPurpose.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="46e5fbc0068c469f90099c8aef50caee">
+      <Name>ModelStatus</Name>
+      <Definition>Status of the model. Status could be e.g.: ended, in-progress, in-development or a URI from the codelist https://data.geoscience.earth/ncl/ModelStatus.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="726a64db7c0b4082b341c6a19d991f4f">
+      <Name>Authors</Name>
+      <Definition>Name of the author(s) involved in producing the model.</Definition>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel" />
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="14da8eaf26884c60b945469f1232c1c2">
+      <Name>Organizations</Name>
+      <Definition>Name of the organization(s) involved in producing the model.</Definition>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel" />
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5480c89276a849b58cc625dd5bc94805">
+      <Name>AreaOfInterest</Name>
+      <Definition>Reference to geographical gazeetteer entries (France, Paris basin etc). 
+&gt;NOTE Geonames (https://www.geonames.org/) could be used in case no other is available.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

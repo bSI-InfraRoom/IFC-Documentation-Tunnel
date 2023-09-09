@@ -14,7 +14,7 @@
       <Definition>The state the borehole or trial pit has been left in. (boreholeML).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
-          <EnumList name="PEnum_BoreholeState">
+          <EnumList name="PEnum_BoreholeStatus">
             <EnumItem>CAP_REPLACED</EnumItem>
             <EnumItem>CASING_REPLACED</EnumItem>
             <EnumItem>CASING_PARTIALLY_REPLACED</EnumItem>
