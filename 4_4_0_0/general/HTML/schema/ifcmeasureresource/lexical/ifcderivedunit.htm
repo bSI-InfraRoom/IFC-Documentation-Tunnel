@@ -60,7 +60,7 @@ Name of the derived unit chosen from an enumeration of derived unit types for us
 </td><td>X</td></tr>
 <tr><td>3</td><td>UserDefinedType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 </td><td>X</td></tr>
-<tr><td>4</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
+<tr><td>4</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Name of the unit in addition to the unit type, particularly when the derived unit elements refer to conversion or context based units.
 <blockquote class="example">
 EXAMPLE The imperial unit name for a velocity measure is miles per hour, or MPH, with a <i>Name</i> of 'MPH'.
@@ -99,7 +99,7 @@ Name of the derived unit chosen from an enumeration of derived unit types for us
 </td><td>X</td></tr>
 <tr><td>3</td><td>UserDefinedType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 </td><td>X</td></tr>
-<tr><td>4</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
+<tr><td>4</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Name of the unit in addition to the unit type, particularly when the derived unit elements refer to conversion or context based units.
 <blockquote class="example">
 EXAMPLE The imperial unit name for a velocity measure is miles per hour, or MPH, with a <i>Name</i> of 'MPH'.
@@ -142,7 +142,7 @@ EXAMPLE The imperial unit name for a velocity measure is miles per hour, or MPH,
 &nbsp;&nbsp;Elements : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifcmeasureresource/lexical/ifcderivedunitelement.htm">IfcDerivedUnitElement</a>;<br/>
 &nbsp;&nbsp;UnitType : <a href="../../ifcmeasureresource/lexical/ifcderivedunitenum.htm">IfcDerivedUnitEnum</a>;<br/>
 &nbsp;&nbsp;UserDefinedType : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
-&nbsp;&nbsp;Name : <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
+&nbsp;&nbsp;Name : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
 &nbsp;<span class="keyword">DERIVE</span><br/>
 &nbsp;&nbsp;Dimensions : <a href="../../ifcmeasureresource/lexical/ifcdimensionalexponents.htm">IfcDimensionalExponents</a> := IfcDeriveDimensionalExponents(Elements);<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>

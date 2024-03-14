@@ -1,6 +1,6 @@
 (*
 Copyright by:
-buildingSMART International Limited, 1996-2023
+buildingSMART International Limited, 1996-2024
 
 Any technical documentation made available by buildingSMART International Limited
 is the copyrighted work of buildingSMART International Limited and is owned by the 
@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Saturday, 9 September 2023
+Thursday, 14 March 2024
 
 *)
 
@@ -1656,7 +1656,8 @@ TYPE IfcElementAssemblyTypeEnum = ENUMERATION OF
 	,SUMPBUSTER
 	,TRAFFIC_CALMING_DEVICE
 	,DUCTBANK
-	,UMBRELLAVAULT
+	,PRESUPPORTVAULT
+	,PRESUPPORTFACE
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -1933,8 +1934,13 @@ TYPE IfcGridTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcGroundReinforcementElementTypeEnum = ENUMERATION OF
-	(SPILINGBOLT
-	,ROCKSUPPORTBOLT
+	(PILE
+	,TUBE
+	,BAR
+	,PLATE
+	,BOLT
+	,TENDON
+	,FABRIC
 	,NOTDEFINED
 	,USERDEFINED);
 END_TYPE;
@@ -4172,7 +4178,7 @@ ENTITY IfcAlignment
  SUBTYPE OF (IfcLinearPositioningElement);
 	PredefinedType : OPTIONAL IfcAlignmentTypeEnum;
  WHERE
-	AlignmentRepresentation : IfcAlignmenRepresentation(SELF);
+	AlignmentRepresentation : IfcAlignmentRepresentation(SELF);
 END_ENTITY;
 
 ENTITY IfcAlignmentCant
@@ -4626,9 +4632,21 @@ END_ENTITY;
 
 ENTITY IfcBorehole
  SUBTYPE OF (IfcGeoScienceElement);
+	PredefinedType : OPTIONAL IfcBoreholeTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+(PredefinedType <> IfcBoreholeTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcBoreholeTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+('IFC4X4.IFCBOREHOLETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+END_ENTITY;
+
+ENTITY IfcBoreholeType
+ SUBTYPE OF (IfcGeoScienceElementType);
 	PredefinedType : IfcBoreholeTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcBoreholeTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcBoreholeTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcBoreholeTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcBoundaryCondition
@@ -5977,7 +5995,7 @@ ENTITY IfcDerivedUnit;
 	Elements : SET [1:?] OF IfcDerivedUnitElement;
 	UnitType : IfcDerivedUnitEnum;
 	UserDefinedType : OPTIONAL IfcLabel;
-	Name : IfcLabel;
+	Name : OPTIONAL IfcLabel;
  DERIVE
 	Dimensions : IfcDimensionalExponents := IfcDeriveDimensionalExponents(Elements);
  WHERE
@@ -6681,6 +6699,7 @@ ENTITY IfcElementType
     ,IfcElementAssemblyType
     ,IfcElementComponentType
     ,IfcFurnishingElementType
+    ,IfcGeoScienceElementType
     ,IfcGeographicElementType
     ,IfcTransportElementType
     ,IfcTransportationDeviceType))
@@ -7454,18 +7473,46 @@ ENTITY IfcGeoScienceElement
  SUBTYPE OF (IfcElement);
 END_ENTITY;
 
+ENTITY IfcGeoScienceElementType
+ ABSTRACT SUPERTYPE OF (ONEOF
+    (IfcBoreholeType))
+ SUBTYPE OF (IfcElementType);
+END_ENTITY;
+
 ENTITY IfcGeoScienceFeature
  SUBTYPE OF (IfcGeoScienceElement);
+	PredefinedType : OPTIONAL IfcGeoScienceFeatureTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+(PredefinedType <> IfcGeoScienceFeatureTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcGeoScienceFeatureTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+('IFC4X4.IFCGEOSCIENCEFEATURETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+END_ENTITY;
+
+ENTITY IfcGeoScienceFeatureType;
 	PredefinedType : IfcGeoScienceFeatureTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcGeoScienceFeatureTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcGeoScienceFeatureTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcGeoScienceFeatureTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcGeoScienceModel
  SUBTYPE OF (IfcGeoScienceElement);
+	PredefinedType : OPTIONAL IfcGeoScienceModelTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+(PredefinedType <> IfcGeoScienceModelTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcGeoScienceModelTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+('IFC4X4.IFCGEOSCIENCEMODELTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+END_ENTITY;
+
+ENTITY IfcGeoScienceModelType;
 	PredefinedType : IfcGeoScienceModelTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcGeoScienceModelTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcGeoScienceModelTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcGeoScienceModelTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcGeoScienceObservation
@@ -7837,8 +7884,10 @@ END_ENTITY;
 
 ENTITY IfcIntegerVoxelData
  SUBTYPE OF (IfcVoxelData);
-	Values : ARRAY [1:?] OF IfcInteger;
+	Values : ARRAY [1:GridSize] OF IfcInteger;
 	Unit : OPTIONAL IfcUnit;
+ DERIVE
+	GridSize : IfcInteger :=  SIZEOF(SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels);
 END_ENTITY;
 
 ENTITY IfcInterceptor
@@ -12214,7 +12263,7 @@ ENTITY IfcTransformer
  (PredefinedType <> IfcTransformerTypeEnum.USERDEFINED) OR 
  ((PredefinedType = IfcTransformerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR 
-  ('IFC4X4.IFCTRANFORMERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X4.IFCTRANSFORMERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcTransformerType
@@ -12599,6 +12648,20 @@ ENTITY IfcVoxelData
     ,IfcVectorVoxelData))
  SUBTYPE OF (IfcComplementaryData);
 	ValueType : OPTIONAL IfcLabel;
+ WHERE
+	IsAssignedToProduct : EXISTS(SELF\IfcObjectDefinition.HasAssignments)
+AND
+(SIZEOF(SELF\IfcObjectDefinition.HasAssignments) = 1)
+AND
+('IFC4X4.IFCRELASSIGNSTOPRODUCT' IN TYPEOF(SELF\IfcObjectDefinition.HasAssignments[1]));
+	VoxelGridRepresentation : EXISTS(SELF\IfcProduct.Representation)
+AND
+(SIZEOF(QUERY(ShapeRep <* SELF\IfcProduct.Representation.Representations | 
+    (SIZEOF(ShapeRep.Items) = 1)
+    AND
+    ('IFC4X4.IFCVOXELGRID' IN TYPEOF(ShapeRep.Items[1])))) = 1);
+	SameRepresentation : SIZEOF(QUERY(ShapeRep <* SELF\IfcObjectDefinition.HasAssignments[1]\IfcRelAssignsToProduct.RelatingProduct\IfcProduct.Representation.Representations |
+ShapeRep = SELF\IfcProduct.Representation.Representations[1])) = 1;
 END_ENTITY;
 
 ENTITY IfcVoxelGrid
@@ -12874,7 +12937,7 @@ FUNCTION IfcAlignmentRepresentation
 		ThreeDRep := QUERY(threeDee <* AlignmentRepresentations | threeDee.RepresentationType = 'Curve3D');
 		CurveThreeD := QUERY(item <* ThreeDRep[1].Items | 'IFC4X4.IFCGRADIENTCURVE' in TYPEOF(item));
 		
-		RETURN(SIZEOF(CurveThreeD) = 1 AND SIZEOF(CurveTwoD) = 1 AND CurveThreeD\IfcGradientCurve.BaseCurve :=: CurveTwoD);
+		RETURN((SIZEOF(CurveThreeD) = 1) AND (SIZEOF(CurveTwoD) = 1) AND (CurveThreeD\IfcGradientCurve.BaseCurve :=: CurveTwoD));
 	
 	END_IF;
 	(* Missing an IFCSEGMENTEDREFERENCECURVE various placement option implementation. *)

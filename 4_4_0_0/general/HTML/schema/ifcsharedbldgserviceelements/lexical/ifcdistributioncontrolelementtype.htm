@@ -187,11 +187,13 @@ The type denotes a particular type that indicates the object further. The use ha
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;6a038274-a625-46d7-944a-ec07c91011f8&quot; name=&quot;IfcDistributionControlElementType&quot; applicableRootEntity=&quot;IfcDistributionControlElementType&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;5d52b8e5-f0d9-447e-8268-096941b0d5cb&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;430a797d-916b-43c7-bb2b-67ec261a2c0c&quot; name=&quot;Product Type Assignment&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;8b9545ad-f9e9-403d-8682-5460bfeb2706&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Indicates task types available to purchase, install, renovate, demolish, operate, or otherwise act upon occurrences of the element type.  Such task types may be instantiated as task occurrences assigned to occurrences of the element type.  Prices (such as for purchasing or shipping) may be established by resource types assigned to task types.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcTaskType&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Indicates procedure types available to operate occurrences of the element type.  Such procedure types may be instantiated as procedure occurrences assigned to occurrences of the element type.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcProcedureType&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Indicates event types available to be raised by occurrences of the element type, sequenced by procedures to be followed.  Such event types may be instantiated as event occurrences assigned to occurrences of the element type.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcEventType&amp;apos;&quot; /&gt;<br/>

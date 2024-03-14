@@ -235,23 +235,25 @@ NOTE  In many scenarios the <i>Name</i> attribute refers to the short name or n
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;751a08d2-7822-4fce-9a0c-0f5135e4f1a8&quot; name=&quot;IfcBuildingSystem&quot; applicableRootEntity=&quot;IfcBuildingSystem&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;7ec039d8-5450-4270-a28a-038d12564062&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;ba7f03c2-21c3-45d6-b863-571d9e6b7923&quot; name=&quot;Property Sets for Objects&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f74255a6-0c0e-4f31-84ad-24981db62461&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PsetName[Value]=&amp;apos;Pset_BuildingSystemCommon&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;8ff8be1d-483a-4a5b-ab2f-89f29c67ad67&quot; name=&quot;Aggregation&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;02eefcc6-b26c-4f20-9c7c-c30ae74eb9a9&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Building systems may be aggregated into subsystems.&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;0a2edab8-d715-4d71-aa78-a5c61a916f27&quot; name=&quot;Group Assignment&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f567967f-5493-44d9-ac51-937c09ac2583&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Building elements participating in the building system.&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>

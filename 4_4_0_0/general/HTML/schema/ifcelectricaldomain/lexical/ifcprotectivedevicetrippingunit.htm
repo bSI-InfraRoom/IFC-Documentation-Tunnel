@@ -380,17 +380,19 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;9e52a93d-7051-412d-aecf-945f4f5bb15e&quot; name=&quot;IfcProtectiveDeviceTrippingUnit&quot; applicableRootEntity=&quot;IfcProtectiveDeviceTrippingUnit&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;5fb8f5cf-aee7-4f1e-8f94-a3e981fc52a6&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;acb845f5-12bb-431e-a553-1ac115b36590&quot; name=&quot;Object Typing&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;35a2e10e-20df-40f4-ab2f-dacf0a6744f4&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;RelatingType[Type]=&amp;apos;IfcProtectiveDeviceTrippingUnitType&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;ec376a4e-df6f-44de-9888-beca84965270&quot; name=&quot;Property Sets for Objects&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f74255a6-0c0e-4f31-84ad-24981db62461&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PsetName[Value]=&amp;apos;Pset_ProtectiveDeviceTrippingFunctionGCurve&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PsetName[Value]=&amp;apos;Pset_ProtectiveDeviceTrippingFunctionICurve&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PsetName[Value]=&amp;apos;Pset_ProtectiveDeviceTrippingFunctionLCurve&amp;apos;&quot; /&gt;<br/>
@@ -402,13 +404,13 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;3aee1d0d-7631-4977-9cf5-3fdd7b0fce8c&quot; name=&quot;Quantity Sets&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;6652398e-6579-4460-8cb4-26295acfacc7&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;QsetName[Value]=&amp;apos;Qto_ProtectiveDeviceTrippingUnitBaseQuantities&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;5a016509-f684-404f-89f6-83e6d3c73658&quot; name=&quot;Control Flow&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;d1d8208b-51e5-4a8f-92ba-e3a2ea2bcb9c&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;The corresponding breaker unit for breaking the circuit.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcProtectiveDevice&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>

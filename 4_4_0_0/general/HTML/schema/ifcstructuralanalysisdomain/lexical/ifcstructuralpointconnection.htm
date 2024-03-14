@@ -208,11 +208,13 @@ Defines a coordinate system used for the description of the support condition pr
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;e102ef86-5fb9-4808-a200-e5c24cf5014b&quot; name=&quot;IfcStructuralPointConnection&quot; applicableRootEntity=&quot;IfcStructuralPointConnection&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;da5b16f3-38ae-44f0-9124-f8c2778fe91f&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;c8bdb635-fa75-442f-a08c-c777980ddaad&quot; name=&quot;Reference Topology&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;79dd6317-2390-44ca-88c2-70d46cd5b969&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;Topology[Type]=&amp;apos;IfcVertexPoint&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>

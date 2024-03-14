@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="29c8459a9c5c48a1953303accc35de1c" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoScienceFeatureTypeFluidBody</Name>
+  <Definition>Properties for fluid bodies.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceFeature/FLUIDBODY</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceFeature/FLUIDBODY</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="3fc32200d1ee11e1800000215ad4efdf">
+      <Name>PHLevel</Name>
+      <Definition>Maximum water PH in a range from 0-14.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPHMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">PHLevel</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

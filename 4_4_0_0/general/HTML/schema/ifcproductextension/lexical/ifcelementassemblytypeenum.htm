@@ -60,7 +60,8 @@
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcproductextension/lexical/ifcelementassemblytypeenum.htm">IfcElementAssemblyTypeEnum</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DUCTBANK</td><td></td><td></td><td>ADDED</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UMBRELLAVAULT</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRESUPPORTVAULT</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRESUPPORTFACE</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -105,7 +106,8 @@ Note: definition from NF EN 13232-1-2004.</p>
 <p>NOTE Definition from ISO 6707-1: Encouragement of restrained and considerate behaviour by means such as road humps and reductions in width of the travelled way (US:traffic restraint, UK:speed bump).
 NOTE Definition from PIARC: Local carriageway layout (staggered section, choker) or physical device (central island, round- or flat-top road hump, speed bump, rumble strips, etc.) to control the speed of road vehicles.</p>
 </td></tr><tr><td>DUCTBANK</td><td><p>A Duct Bank is two or more ducts or conduits used as part of a system. A duct bank is designed to protect and group or consolidate data and electrical cables to and from a facility. The cables are laid in PVC pipes or conduits. These conduit are bundled together and protected with either steel or reinforced concrete casings. Duct banks are often located underground. They can carry cables for all electrical wiring and data requirements in the facility as well as extra cables that are not for immediate use, but may be valuable for future requirements.</p>
-</td></tr><tr><td>UMBRELLAVAULT</td><td><p>A set of boreholes armed with high inertia tubes resting, on the one hand, on the advancement core (part of the ground not yet excavated at the front) and on the other hand, on a rigid support, placed behind the excavation face.</p>
+</td></tr><tr><td>PRESUPPORTVAULT</td><td><p>Outwards inclined radial boreholes around the perimeter of the tunnel with various types of support forming a protective vault around and ahead of the excavation.</p>
+</td></tr><tr><td>PRESUPPORTFACE</td><td><p>Horizontal boreholes in the face of the tunnel with various types of support, reinforcing and stabilising the ground ahead of the face and removed during subsequent excavation.</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined element assembly.</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined element assembly.</p>
 </td></tr></table>
@@ -144,7 +146,8 @@ NOTE Definition from PIARC: Local carriageway layout (staggered section, choker)
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;sumpbuster&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;traffic_calming_device&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;ductbank&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;umbrellavault&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;presupportvault&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;presupportface&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -152,7 +155,7 @@ NOTE Definition from PIARC: Local carriageway layout (staggered section, choker)
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcElementAssemblyTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;ACCESSORY_ASSEMBLY, <br/>&nbsp;ARCH, <br/>&nbsp;BEAM_GRID, <br/>&nbsp;BRACED_FRAME, <br/>&nbsp;GIRDER, <br/>&nbsp;REINFORCEMENT_UNIT, <br/>&nbsp;RIGID_FRAME, <br/>&nbsp;SLAB_FIELD, <br/>&nbsp;TRUSS, <br/>&nbsp;ABUTMENT, <br/>&nbsp;PIER, <br/>&nbsp;PYLON, <br/>&nbsp;CROSS_BRACING, <br/>&nbsp;DECK, <br/>&nbsp;MAST, <br/>&nbsp;SIGNALASSEMBLY, <br/>&nbsp;GRID, <br/>&nbsp;SHELTER, <br/>&nbsp;SUPPORTINGASSEMBLY, <br/>&nbsp;SUSPENSIONASSEMBLY, <br/>&nbsp;TRACTION_SWITCHING_ASSEMBLY, <br/>&nbsp;TRACKPANEL, <br/>&nbsp;TURNOUTPANEL, <br/>&nbsp;DILATATIONPANEL, <br/>&nbsp;RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY, <br/>&nbsp;ENTRANCEWORKS, <br/>&nbsp;SUMPBUSTER, <br/>&nbsp;TRAFFIC_CALMING_DEVICE, <br/>&nbsp;DUCTBANK, <br/>&nbsp;UMBRELLAVAULT, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;ACCESSORY_ASSEMBLY, <br/>&nbsp;ARCH, <br/>&nbsp;BEAM_GRID, <br/>&nbsp;BRACED_FRAME, <br/>&nbsp;GIRDER, <br/>&nbsp;REINFORCEMENT_UNIT, <br/>&nbsp;RIGID_FRAME, <br/>&nbsp;SLAB_FIELD, <br/>&nbsp;TRUSS, <br/>&nbsp;ABUTMENT, <br/>&nbsp;PIER, <br/>&nbsp;PYLON, <br/>&nbsp;CROSS_BRACING, <br/>&nbsp;DECK, <br/>&nbsp;MAST, <br/>&nbsp;SIGNALASSEMBLY, <br/>&nbsp;GRID, <br/>&nbsp;SHELTER, <br/>&nbsp;SUPPORTINGASSEMBLY, <br/>&nbsp;SUSPENSIONASSEMBLY, <br/>&nbsp;TRACTION_SWITCHING_ASSEMBLY, <br/>&nbsp;TRACKPANEL, <br/>&nbsp;TURNOUTPANEL, <br/>&nbsp;DILATATIONPANEL, <br/>&nbsp;RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY, <br/>&nbsp;ENTRANCEWORKS, <br/>&nbsp;SUMPBUSTER, <br/>&nbsp;TRAFFIC_CALMING_DEVICE, <br/>&nbsp;DUCTBANK, <br/>&nbsp;PRESUPPORTVAULT, <br/>&nbsp;PRESUPPORTFACE, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

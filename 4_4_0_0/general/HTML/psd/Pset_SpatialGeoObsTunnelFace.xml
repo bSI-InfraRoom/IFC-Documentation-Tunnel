@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="c7b81ad36e884ea3805f8187d7df95ce" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_SpatialGeoObsTunnelFace</Name>
+  <Definition>Common properties for tunnel face observations.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcSpatialZone/MAPPEDZONE</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSpatialZone/MAPPEDZONE</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="7e7f1e842cb84c60a1ab82730fc000a6">
+      <Name>GroundClassTBM</Name>
+      <Definition>Specific rock mass classification based on TBM data.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel " />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

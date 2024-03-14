@@ -229,6 +229,8 @@ Identifies the predefined types of a beam element from which the type required m
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;5dee1533-a166-45c0-bc63-c1d050b8f729&quot; name=&quot;IfcBeamType&quot; applicableRootEntity=&quot;IfcBeamType&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;21d373b4-6baf-4c41-8ff9-47de83b5ce37&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;4c4fa73e-8154-4a7b-9a21-5736764a79f2&quot; name=&quot;Material Profile Set&quot;&gt;<br/>
@@ -236,7 +238,7 @@ Identifies the predefined types of a beam element from which the type required m
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;9ec943f5-d08b-475b-b49f-1ea55abd617d&quot; name=&quot;Body Geometry&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;3aec2d00-b4bb-476a-a821-fc22b895b531&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;RepresentationType[Value]=&amp;apos;SweptSolid&amp;apos; AND Geometry[Type]=&amp;apos;IfcExtrudedAreaSolid&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;RepresentationType[Value]=&amp;apos;Brep&amp;apos; AND Geometry[Type]=&amp;apos;IfcFacetedBrep&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>

@@ -248,6 +248,8 @@ Defines the typically understood thickness of the structural surface member, mea
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;b5b74da7-fec9-4ef9-b5e1-73b7ff050e91&quot; name=&quot;IfcStructuralSurfaceMember&quot; applicableRootEntity=&quot;IfcStructuralSurfaceMember&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;f62902ac-1ae0-4d2d-86d8-fa2f358484b2&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;464831c6-2e7f-4a28-a579-f594b7df06a7&quot; name=&quot;Material Layer Set Usage&quot;&gt;<br/>
@@ -255,13 +257,13 @@ Defines the typically understood thickness of the structural surface member, mea
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;3c54c12b-cd40-4f98-a65f-124b53a0a4f1&quot; name=&quot;Reference Topology&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;79dd6317-2390-44ca-88c2-70d46cd5b969&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;Topology[Type]=&amp;apos;IfcFaceSurface&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;91437328-4773-43fb-a284-ccf703da116b&quot; name=&quot;Structural Connectivity&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f4f75d4f-6d38-4cbe-9efb-dfb58440dfcb&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Connections to curve members along edge(s) of surface.&quot; Parameters=&quot;StructuralConnection[Type]=&amp;apos;IfcStructuralCurveConnection&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Connections to surface members within face(s) of surface.&quot; Parameters=&quot;StructuralConnection[Type]=&amp;apos;IfcStructuralSurfaceConnection&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>

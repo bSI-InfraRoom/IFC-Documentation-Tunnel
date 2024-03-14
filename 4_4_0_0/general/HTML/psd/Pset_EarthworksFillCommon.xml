@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="2246ee063f2d4c719373c1eab80fc2a6" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_EarthworksFillCommon</Name>
+  <Definition>Common properties for earthworks fill elements.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcEarthworksFill</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcEarthworksFill</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="662857b00c794a65b5d6508117417a47">
+      <Name>SourceOfFill</Name>
+      <Definition>Source of fill.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SourceOfFill">
+            <EnumItem>IMPORTED</EnumItem>
+            <EnumItem>EXCAVATED</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>IMPORTED</Name>
+              <Definition>The fill material is imported.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXCAVATED</Name>
+              <Definition>The fill material is excavated on site.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4839d75928e349a7a795227a6cc751cf">
+      <Name>SourceOfFillOther</Name>
+      <Definition>User defined Source of fill when SourceOfFill = USEDEFINED.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="be7ac5da6f9442e3838f3e4ed6b814b7">
+      <Name>CompactionMethod</Name>
+      <Definition>Method of compaction.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CompactionMethod">
+            <EnumItem>ROLLER</EnumItem>
+            <EnumItem>TAMPING</EnumItem>
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>ROLLER</Name>
+              <Definition>Compaction using some type of roller equipment.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TAMPING</Name>
+              <Definition>Compaction using some kind of tamping equipment.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NONE</Name>
+              <Definition>No waterproof.</Definition>
+              <NameAliases>
+                <NameAlias lang="en">None</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">None, empty or no additional action or function.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="dd749602ffd84cb8b1effee3dfbed40c">
+      <Name>CompactionMethodOther</Name>
+      <Definition>User defined method of compaction when CompactionMethod = USERDEFINED.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d22e7d1cc21a41e7ab45b3cbf4402aec">
+      <Name>CompactionFactor</Name>
+      <Definition>Reduction in volume on compaction.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

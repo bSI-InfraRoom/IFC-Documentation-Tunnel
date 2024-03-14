@@ -195,11 +195,13 @@ IFC4 CHANGE Attribute made optional.
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;06f53ad0-8c39-428c-983c-7bf52abe99e7&quot; name=&quot;IfcOccupant&quot; applicableRootEntity=&quot;IfcOccupant&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;bc7fb892-26c1-4f8a-a1a4-d51bafe32a29&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;203f6afc-052e-4a7b-a261-b999278e82c6&quot; name=&quot;Actor Assignment&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;048079c1-74dd-4bd9-b330-479a148d238f&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Indicates the property to be occupied. Particular details of the agreement relating to the occupancy of a property are dealt within the _Pset_PropertyAgreement_ that is defined for the instance of _IfcSpatialStructureElement_. This means that an occupant may be related to a site, building, building storey or space through the _IfcSpatialStructureElement.ElementComposition_ attribute. For instance, if the property concerned is several office spaces on a building storey, it might be appropriate to reference _IfcBuildingStorey.ElementComposition=PARTIAL_.  Occupants of a property may be considered to be the parties to an agreement. The roles that the occupant may play in respect to an agreement are defined in the _IfcOccupantTypeEnum_ enumeration. If the role is not specified by the predefined contents of this enumeration, the value _USERDEFINED_ may be set and the _ObjectType_ attribute asserted.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcSpatialStructureElement&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>

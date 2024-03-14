@@ -294,6 +294,8 @@ Indicates the kind of surface feature.
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;0363f51c-a75e-4935-b594-4295c56815b0&quot; name=&quot;IfcSurfaceFeature&quot; applicableRootEntity=&quot;IfcSurfaceFeature&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;e6e09889-cd5d-44ef-bab3-2c7c5353de2d&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;08d33b0b-77a1-48af-8a04-e9e86e8fd8da&quot; name=&quot;Property Sets&quot;&gt;<br/>
@@ -304,7 +306,7 @@ Indicates the kind of surface feature.
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;9d94eaf1-8f5c-4519-a035-cc1a3e12d5c6&quot; name=&quot;Body Geometry&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;c446bd16-2de3-4b97-b34f-4446ac0badc2&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Surface representations of treated parts of the lement surface by means of _IfcShellBasedSurfaceModel_.  The faces within the surface model may be included into a B-Rep model within a representation map of the parent element type.&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>

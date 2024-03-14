@@ -810,6 +810,14 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:element name="IfcBoreholeType" type="ifc:IfcBoreholeType" substitutionGroup="ifc:IfcGeoScienceElementType" nillable="true"/>
+	<xs:complexType name="IfcBoreholeType">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcGeoScienceElementType">
+				<xs:attribute name="PredefinedType" type="ifc:IfcBoreholeTypeEnum" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="IfcBoundaryCondition" type="ifc:IfcBoundaryCondition" abstract="true" substitutionGroup="ifc:Entity" nillable="true"/>
 	<xs:complexType name="IfcBoundaryCondition" abstract="true">
 		<xs:complexContent>
@@ -3831,6 +3839,12 @@ of the material. The information contained in this document is subject to change
 			<xs:extension base="ifc:IfcElement"/>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:element name="IfcGeoScienceElementType" type="ifc:IfcGeoScienceElementType" abstract="true" substitutionGroup="ifc:IfcElementType" nillable="true"/>
+	<xs:complexType name="IfcGeoScienceElementType" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcElementType"/>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="IfcGeoScienceFeature" type="ifc:IfcGeoScienceFeature" substitutionGroup="ifc:IfcGeoScienceElement" nillable="true"/>
 	<xs:complexType name="IfcGeoScienceFeature">
 		<xs:complexContent>
@@ -3839,10 +3853,26 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:element name="IfcGeoScienceFeatureType" type="ifc:IfcGeoScienceFeatureType" substitutionGroup="ifc:Entity" nillable="true"/>
+	<xs:complexType name="IfcGeoScienceFeatureType">
+		<xs:complexContent>
+			<xs:extension base="ifc:Entity">
+				<xs:attribute name="PredefinedType" type="ifc:IfcGeoScienceFeatureTypeEnum" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="IfcGeoScienceModel" type="ifc:IfcGeoScienceModel" substitutionGroup="ifc:IfcGeoScienceElement" nillable="true"/>
 	<xs:complexType name="IfcGeoScienceModel">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcGeoScienceElement">
+				<xs:attribute name="PredefinedType" type="ifc:IfcGeoScienceModelTypeEnum" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcGeoScienceModelType" type="ifc:IfcGeoScienceModelType" substitutionGroup="ifc:Entity" nillable="true"/>
+	<xs:complexType name="IfcGeoScienceModelType">
+		<xs:complexContent>
+			<xs:extension base="ifc:Entity">
 				<xs:attribute name="PredefinedType" type="ifc:IfcGeoScienceModelTypeEnum" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
@@ -13026,7 +13056,8 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="sumpbuster"/>
 			<xs:enumeration value="traffic_calming_device"/>
 			<xs:enumeration value="ductbank"/>
-			<xs:enumeration value="umbrellavault"/>
+			<xs:enumeration value="presupportvault"/>
+			<xs:enumeration value="presupportface"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13331,8 +13362,13 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcGroundReinforcementElementTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="spilingbolt"/>
-			<xs:enumeration value="rocksupportbolt"/>
+			<xs:enumeration value="pile"/>
+			<xs:enumeration value="tube"/>
+			<xs:enumeration value="bar"/>
+			<xs:enumeration value="plate"/>
+			<xs:enumeration value="bolt"/>
+			<xs:enumeration value="tendon"/>
+			<xs:enumeration value="fabric"/>
 			<xs:enumeration value="notdefined"/>
 			<xs:enumeration value="userdefined"/>
 		</xs:restriction>

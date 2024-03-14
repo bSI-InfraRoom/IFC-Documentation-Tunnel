@@ -11,7 +11,7 @@
     <title>IfcGeoScienceFeature</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 5 index3 3 index4 9 index5 0; }
+      body { counter-reset: index1 6 index2 5 index3 3 index4 11 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.5.3.10");
+    parent.index.location.replace("../../toc-6.htm#6.5.3.12");
 //-->
 </script>
 
@@ -41,14 +41,16 @@
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>G</th></tr>
-<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetypeenum.htm">IfcGeoScienceFeatureTypeEnum</a></td><td></td><td>
+<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetypeenum.htm">IfcGeoScienceFeatureTypeEnum</a></td><td>? </td><td>
 Specifies the type for which the value is selected from a predefined type enumeration. This type may associate additional specific property sets.
 </td><td>X</td></tr>
 </table>
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>HasObjectType</td><td>The attribute ObjectType shall be given if the predefined type is set to USERDEFINED.
+<tr><td>CorrectPredefinedType</td><td>Either the <i>PredefinedType</i> attribute is unset (e.g. because an <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetype.htm">IfcGeoScienceFeatureType</a> is associated), or the inherited attribute <i>ObjectType</i> shall be provided, if the <i>PredefinedType</i> is set to USERDEFINED.
+</td></tr>
+<tr><td>CorrectTypeAssigned</td><td>Either there is no type object associated, i.e. the <i>IsTypedBy</i> inverse relationship is not provided, or the associated type object has to be of type <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetype.htm">IfcGeoScienceFeatureType</a>.
 </td></tr>
 </table>
 
@@ -194,7 +196,7 @@ IFC4 CHANGE New inverse relationship.
 </td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceelement.htm">IfcGeoScienceElement</a></i></td></tr>
 <tr><td colspan="6"><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeature.htm">IfcGeoScienceFeature</a></td></tr>
-<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetypeenum.htm">IfcGeoScienceFeatureTypeEnum</a></td><td></td><td>
+<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetypeenum.htm">IfcGeoScienceFeatureTypeEnum</a></td><td>? </td><td>
 Specifies the type for which the value is selected from a predefined type enumeration. This type may associate additional specific property sets.
 </td><td>X</td></tr>
 </table>
@@ -242,17 +244,19 @@ Specifies the type for which the value is selected from a predefined type enumer
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;979f3ae0-6f6d-4e0a-9f78-f436e7a28607&quot; name=&quot;IfcGeoScienceFeature&quot; applicableRootEntity=&quot;IfcGeoScienceFeature&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;8cb302b4-625c-4e6b-9af6-b2fbbd5f2868&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;9696ad77-ec01-4445-9a4e-bfc54df14f21&quot; name=&quot;Document Association&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;7dadae9c-0026-44d3-ade7-9a843fe2ef0b&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;0e271434-eb27-4953-8e3b-bbb881809fd6&quot; name=&quot;Dataset Association&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f15b4092-5744-499a-a2c0-f30b2b1ab85c&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
@@ -337,9 +341,12 @@ Specifies the type for which the value is selected from a predefined type enumer
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcGeoScienceFeature<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceelement.htm">IfcGeoScienceElement</a>)<b>;</b><br/>
-&nbsp;&nbsp;PredefinedType : <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetypeenum.htm">IfcGeoScienceFeatureTypeEnum</a>;<br/>
+&nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetypeenum.htm">IfcGeoScienceFeatureTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetypeenum.htm">IfcGeoScienceFeatureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
+(PredefinedType &lt;&gt; <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetypeenum.htm">IfcGeoScienceFeatureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
+((PredefinedType = <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetypeenum.htm">IfcGeoScienceFeatureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/>&nbsp;&nbsp;CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR<br/>
+(&#39;IFCSHAREDINFRASTRUCTUREELEMENTS.<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetype.htm">IfcGeoScienceFeatureType</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedinfrastructureelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

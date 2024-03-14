@@ -1,6 +1,6 @@
 (*
 Copyright by:
-buildingSMART International Limited, 1996-2023
+buildingSMART International Limited, 1996-2024
 
 Any technical documentation made available by buildingSMART International Limited
 is the copyrighted work of buildingSMART International Limited and is owned by the 
@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Saturday, 9 September 2023
+Thursday, 14 March 2024
 
 *)
 
@@ -850,7 +850,7 @@ ENTITY IfcTransformer
  (PredefinedType <> IfcTransformerTypeEnum.USERDEFINED) OR 
  ((PredefinedType = IfcTransformerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR 
-  ('IFCELECTRICALDOMAIN.IFCTRANFORMERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFCELECTRICALDOMAIN.IFCTRANSFORMERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcTransformerType

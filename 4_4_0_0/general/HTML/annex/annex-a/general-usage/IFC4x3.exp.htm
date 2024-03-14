@@ -823,7 +823,7 @@ OR
 <br/>
 <a name="ifcelementassemblytypeenum" />
 <span class="keyword">TYPE</span> IfcElementAssemblyTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;ACCESSORY_ASSEMBLY, <br/>&nbsp;ARCH, <br/>&nbsp;BEAM_GRID, <br/>&nbsp;BRACED_FRAME, <br/>&nbsp;GIRDER, <br/>&nbsp;REINFORCEMENT_UNIT, <br/>&nbsp;RIGID_FRAME, <br/>&nbsp;SLAB_FIELD, <br/>&nbsp;TRUSS, <br/>&nbsp;ABUTMENT, <br/>&nbsp;PIER, <br/>&nbsp;PYLON, <br/>&nbsp;CROSS_BRACING, <br/>&nbsp;DECK, <br/>&nbsp;MAST, <br/>&nbsp;SIGNALASSEMBLY, <br/>&nbsp;GRID, <br/>&nbsp;SHELTER, <br/>&nbsp;SUPPORTINGASSEMBLY, <br/>&nbsp;SUSPENSIONASSEMBLY, <br/>&nbsp;TRACTION_SWITCHING_ASSEMBLY, <br/>&nbsp;TRACKPANEL, <br/>&nbsp;TURNOUTPANEL, <br/>&nbsp;DILATATIONPANEL, <br/>&nbsp;RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY, <br/>&nbsp;ENTRANCEWORKS, <br/>&nbsp;SUMPBUSTER, <br/>&nbsp;TRAFFIC_CALMING_DEVICE, <br/>&nbsp;DUCTBANK, <br/>&nbsp;UMBRELLAVAULT, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;ACCESSORY_ASSEMBLY, <br/>&nbsp;ARCH, <br/>&nbsp;BEAM_GRID, <br/>&nbsp;BRACED_FRAME, <br/>&nbsp;GIRDER, <br/>&nbsp;REINFORCEMENT_UNIT, <br/>&nbsp;RIGID_FRAME, <br/>&nbsp;SLAB_FIELD, <br/>&nbsp;TRUSS, <br/>&nbsp;ABUTMENT, <br/>&nbsp;PIER, <br/>&nbsp;PYLON, <br/>&nbsp;CROSS_BRACING, <br/>&nbsp;DECK, <br/>&nbsp;MAST, <br/>&nbsp;SIGNALASSEMBLY, <br/>&nbsp;GRID, <br/>&nbsp;SHELTER, <br/>&nbsp;SUPPORTINGASSEMBLY, <br/>&nbsp;SUSPENSIONASSEMBLY, <br/>&nbsp;TRACTION_SWITCHING_ASSEMBLY, <br/>&nbsp;TRACKPANEL, <br/>&nbsp;TURNOUTPANEL, <br/>&nbsp;DILATATIONPANEL, <br/>&nbsp;RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY, <br/>&nbsp;ENTRANCEWORKS, <br/>&nbsp;SUMPBUSTER, <br/>&nbsp;TRAFFIC_CALMING_DEVICE, <br/>&nbsp;DUCTBANK, <br/>&nbsp;PRESUPPORTVAULT, <br/>&nbsp;PRESUPPORTFACE, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 <br/>
 <a name="ifcelementcompositionenum" />
 <span class="keyword">TYPE</span> IfcElementCompositionEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
@@ -935,7 +935,7 @@ OR
 <br/>
 <a name="ifcgroundreinforcementelementtypeenum" />
 <span class="keyword">TYPE</span> IfcGroundReinforcementElementTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;SPILINGBOLT, <br/>&nbsp;ROCKSUPPORTBOLT, <br/>&nbsp;NOTDEFINED, <br/>&nbsp;USERDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;PILE, <br/>&nbsp;TUBE, <br/>&nbsp;BAR, <br/>&nbsp;PLATE, <br/>&nbsp;BOLT, <br/>&nbsp;TENDON, <br/>&nbsp;FABRIC, <br/>&nbsp;NOTDEFINED, <br/>&nbsp;USERDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 <br/>
 <a name="ifcheatexchangertypeenum" />
 <span class="keyword">TYPE</span> IfcHeatExchangerTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
@@ -1911,7 +1911,7 @@ TYPEOF(SELF\<a href="#ifcfacesurface">IfcFaceSurface</a>.FaceSurface)) = 1;<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifclinearpositioningelement">IfcLinearPositioningElement</a>)<b>;</b><br/>
 &nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="#ifcalignmenttypeenum">IfcAlignmentTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;AlignmentRepresentation : IfcAlignmenRepresentation(SELF);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;AlignmentRepresentation : <a href="#ifcalignmentrepresentation">IfcAlignmentRepresentation</a>(SELF);<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcalignmentcant" />
 <span class="keyword">ENTITY</span> IfcAlignmentCant<br/>
@@ -2338,9 +2338,20 @@ UpperIndexOnControlPoints, KnotMultiplicities, Knots);<br/>&nbsp;&nbsp;Correspon
 <a name="ifcborehole" />
 <span class="keyword">ENTITY</span> IfcBorehole<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcgeoscienceelement">IfcGeoScienceElement</a>)<b>;</b><br/>
+&nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="#ifcboreholetypeenum">IfcBoreholeTypeEnum</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
+(PredefinedType &lt;&gt; <a href="#ifcboreholetypeenum">IfcBoreholeTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
+((PredefinedType = <a href="#ifcboreholetypeenum">IfcBoreholeTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType));<br/>&nbsp;&nbsp;CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR<br/>
+(&#39;IFCSHAREDINFRASTRUCTUREELEMENTS.<a href="#ifcboreholetype">IfcBoreholeType</a>&#39; IN TYPEOF(SELF\<a href="#ifcobject">IfcObject</a>.IsTypedBy[1].RelatingType));<br/><span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifcboreholetype" />
+<span class="keyword">ENTITY</span> IfcBoreholeType<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcgeoscienceelementtype">IfcGeoScienceElementType</a>)<b>;</b><br/>
 &nbsp;&nbsp;PredefinedType : <a href="#ifcboreholetypeenum">IfcBoreholeTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="#ifcboreholetypeenum">IfcBoreholeTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : (PredefinedType &lt;&gt; <a href="#ifcboreholetypeenum">IfcBoreholeTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
+((PredefinedType = <a href="#ifcboreholetypeenum">IfcBoreholeTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="#ifcelementtype">IfcElementType</a>.ElementType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcboundarycondition" />
 <span class="keyword">ENTITY</span> IfcBoundaryCondition<br/>
@@ -3563,7 +3574,7 @@ SELF\IfcCartesianTransformationOperator.Axis2,Axis3);<br/>
 &nbsp;&nbsp;Elements : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="#ifcderivedunitelement">IfcDerivedUnitElement</a>;<br/>
 &nbsp;&nbsp;UnitType : <a href="#ifcderivedunitenum">IfcDerivedUnitEnum</a>;<br/>
 &nbsp;&nbsp;UserDefinedType : <span class="keyword">OPTIONAL</span> <a href="#ifclabel">IfcLabel</a>;<br/>
-&nbsp;&nbsp;Name : <a href="#ifclabel">IfcLabel</a>;<br/>
+&nbsp;&nbsp;Name : <span class="keyword">OPTIONAL</span> <a href="#ifclabel">IfcLabel</a>;<br/>
 &nbsp;<span class="keyword">DERIVE</span><br/>
 &nbsp;&nbsp;Dimensions : <a href="#ifcdimensionalexponents">IfcDimensionalExponents</a> := IfcDeriveDimensionalExponents(Elements);<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
@@ -4183,7 +4194,7 @@ AND <br/>
 <br/>
 <a name="ifcelementtype" />
 <span class="keyword">ENTITY</span> IfcElementType<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcbuiltelementtype">IfcBuiltElementType</a>, <a href="#ifccivilelementtype">IfcCivilElementType</a>, <a href="#ifcdistributionelementtype">IfcDistributionElementType</a>, <a href="#ifcelementassemblytype">IfcElementAssemblyType</a>, <a href="#ifcelementcomponenttype">IfcElementComponentType</a>, <a href="#ifcfurnishingelementtype">IfcFurnishingElementType</a>, <a href="#ifcgeographicelementtype">IfcGeographicElementType</a>, <a href="#ifctransportelementtype">IfcTransportElementType</a>, <a href="#ifctransportationdevicetype">IfcTransportationDeviceType</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcbuiltelementtype">IfcBuiltElementType</a>, <a href="#ifccivilelementtype">IfcCivilElementType</a>, <a href="#ifcdistributionelementtype">IfcDistributionElementType</a>, <a href="#ifcelementassemblytype">IfcElementAssemblyType</a>, <a href="#ifcelementcomponenttype">IfcElementComponentType</a>, <a href="#ifcfurnishingelementtype">IfcFurnishingElementType</a>, <a href="#ifcgeoscienceelementtype">IfcGeoScienceElementType</a>, <a href="#ifcgeographicelementtype">IfcGeographicElementType</a>, <a href="#ifctransportelementtype">IfcTransportElementType</a>, <a href="#ifctransportationdevicetype">IfcTransportationDeviceType</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifctypeproduct">IfcTypeProduct</a>)<b>;</b><br/>
 &nbsp;&nbsp;ElementType : <span class="keyword">OPTIONAL</span> <a href="#ifclabel">IfcLabel</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
@@ -4801,19 +4812,45 @@ EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="key
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcelement">IfcElement</a>)<b>;</b><br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
+<a name="ifcgeoscienceelementtype" />
+<span class="keyword">ENTITY</span> IfcGeoScienceElementType<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="#ifcboreholetype">IfcBoreholeType</a>)<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcelementtype">IfcElementType</a>)<b>;</b><br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<br/>
 <a name="ifcgeosciencefeature" />
 <span class="keyword">ENTITY</span> IfcGeoScienceFeature<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcgeoscienceelement">IfcGeoScienceElement</a>)<b>;</b><br/>
+&nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="#ifcgeosciencefeaturetypeenum">IfcGeoScienceFeatureTypeEnum</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
+(PredefinedType &lt;&gt; <a href="#ifcgeosciencefeaturetypeenum">IfcGeoScienceFeatureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
+((PredefinedType = <a href="#ifcgeosciencefeaturetypeenum">IfcGeoScienceFeatureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType));<br/>&nbsp;&nbsp;CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR<br/>
+(&#39;IFCSHAREDINFRASTRUCTUREELEMENTS.<a href="#ifcgeosciencefeaturetype">IfcGeoScienceFeatureType</a>&#39; IN TYPEOF(SELF\<a href="#ifcobject">IfcObject</a>.IsTypedBy[1].RelatingType));<br/><span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifcgeosciencefeaturetype" />
+<span class="keyword">ENTITY</span> IfcGeoScienceFeatureType<b>;</b><br/>
 &nbsp;&nbsp;PredefinedType : <a href="#ifcgeosciencefeaturetypeenum">IfcGeoScienceFeatureTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="#ifcgeosciencefeaturetypeenum">IfcGeoScienceFeatureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : (PredefinedType &lt;&gt; <a href="#ifcgeosciencefeaturetypeenum">IfcGeoScienceFeatureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
+((PredefinedType = <a href="#ifcgeosciencefeaturetypeenum">IfcGeoScienceFeatureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="#ifcelementtype">IfcElementType</a>.ElementType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcgeosciencemodel" />
 <span class="keyword">ENTITY</span> IfcGeoScienceModel<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcgeoscienceelement">IfcGeoScienceElement</a>)<b>;</b><br/>
+&nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="#ifcgeosciencemodeltypeenum">IfcGeoScienceModelTypeEnum</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
+(PredefinedType &lt;&gt; <a href="#ifcgeosciencemodeltypeenum">IfcGeoScienceModelTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
+((PredefinedType = <a href="#ifcgeosciencemodeltypeenum">IfcGeoScienceModelTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType));<br/>&nbsp;&nbsp;CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR<br/>
+(&#39;IFCSHAREDINFRASTRUCTUREELEMENTS.<a href="#ifcgeosciencemodeltype">IfcGeoScienceModelType</a>&#39; IN TYPEOF(SELF\<a href="#ifcobject">IfcObject</a>.IsTypedBy[1].RelatingType));<br/><span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifcgeosciencemodeltype" />
+<span class="keyword">ENTITY</span> IfcGeoScienceModelType<b>;</b><br/>
 &nbsp;&nbsp;PredefinedType : <a href="#ifcgeosciencemodeltypeenum">IfcGeoScienceModelTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="#ifcgeosciencemodeltypeenum">IfcGeoScienceModelTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : (PredefinedType &lt;&gt; <a href="#ifcgeosciencemodeltypeenum">IfcGeoScienceModelTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
+((PredefinedType = <a href="#ifcgeosciencemodeltypeenum">IfcGeoScienceModelTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="#ifcelementtype">IfcElementType</a>.ElementType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcgeoscienceobservation" />
 <span class="keyword">ENTITY</span> IfcGeoScienceObservation<br/>
@@ -5149,8 +5186,10 @@ EXISTS(SELF\<a href="#ifcobject">IfcObject</a>.ObjectType);<br/><span class="key
 <a name="ifcintegervoxeldata" />
 <span class="keyword">ENTITY</span> IfcIntegerVoxelData<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcvoxeldata">IfcVoxelData</a>)<b>;</b><br/>
-&nbsp;&nbsp;Values : <span class="keyword">ARRAY</span> [1:?] <span class="keyword">OF</span> <a href="#ifcinteger">IfcInteger</a>;<br/>
+&nbsp;&nbsp;Values : <span class="keyword">ARRAY</span> [1:GridSize] OF <a href="#ifcinteger">IfcInteger</a>;<br/>
 &nbsp;&nbsp;Unit : <span class="keyword">OPTIONAL</span> <a href="#ifcunit">IfcUnit</a>;<br/>
+&nbsp;<span class="keyword">DERIVE</span><br/>
+&nbsp;&nbsp;GridSize : <a href="#ifcinteger">IfcInteger</a> :=  SIZEOF(SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels);<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcinterceptor" />
@@ -9286,7 +9325,7 @@ EXISTS (MessagingIDs);<br/><span class="keyword">END_ENTITY;</span><br/>
 &nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR <br/>
  (PredefinedType &lt;&gt; <a href="#ifctransformertypeenum">IfcTransformerTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR <br/>
  ((PredefinedType = <a href="#ifctransformertypeenum">IfcTransformerTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS (SELF\<a href="#ifcobject">IfcObject</a>.ObjectType));<br/>&nbsp;&nbsp;CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR <br/>
-  (&#39;IFCELECTRICALDOMAIN.IFCTRANFORMERTYPE&#39; IN TYPEOF(SELF\<a href="#ifcobject">IfcObject</a>.IsTypedBy[1].RelatingType));<br/><span class="keyword">END_ENTITY;</span><br/>
+  (&#39;IFCELECTRICALDOMAIN.<a href="#ifctransformertype">IfcTransformerType</a>&#39; IN TYPEOF(SELF\<a href="#ifcobject">IfcObject</a>.IsTypedBy[1].RelatingType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifctransformertype" />
 <span class="keyword">ENTITY</span> IfcTransformerType<br/>
@@ -9650,7 +9689,18 @@ OR<br/>
 &nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcintegervoxeldata">IfcIntegerVoxelData</a>, <a href="#ifclabelvoxeldata">IfcLabelVoxelData</a>, <a href="#ifclogicalvoxeldata">IfcLogicalVoxelData</a>, <a href="#ifcrealvoxeldata">IfcRealVoxelData</a>, <a href="#ifcvectorvoxeldata">IfcVectorVoxelData</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifccomplementarydata">IfcComplementaryData</a>)<b>;</b><br/>
 &nbsp;&nbsp;ValueType : <span class="keyword">OPTIONAL</span> <a href="#ifclabel">IfcLabel</a>;<br/>
-<span class="keyword">END_ENTITY;</span><br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;IsAssignedToProduct : EXISTS(SELF\<a href="#ifcobjectdefinition">IfcObjectDefinition</a>.HasAssignments)<br/>
+AND<br/>
+(SIZEOF(SELF\<a href="#ifcobjectdefinition">IfcObjectDefinition</a>.HasAssignments) = 1)<br/>
+AND<br/>
+(&#39;IFCKERNEL.<a href="#ifcrelassignstoproduct">IfcRelAssignsToProduct</a>&#39; IN TYPEOF(SELF\<a href="#ifcobjectdefinition">IfcObjectDefinition</a>.HasAssignments[1]));<br/>&nbsp;&nbsp;VoxelGridRepresentation : EXISTS(SELF\<a href="#ifcproduct">IfcProduct</a>.Representation)<br/>
+AND<br/>
+(SIZEOF(QUERY(ShapeRep &lt;* SELF\<a href="#ifcproduct">IfcProduct</a>.Representation.Representations | <br/>
+    (SIZEOF(ShapeRep.Items) = 1)<br/>
+    AND<br/>
+    (&#39;IFCGEOMETRICMODELRESOURCE.<a href="#ifcvoxelgrid">IfcVoxelGrid</a>&#39; IN TYPEOF(ShapeRep.Items[1])))) = 1);<br/>&nbsp;&nbsp;SameRepresentation : SIZEOF(QUERY(ShapeRep &lt;* SELF\<a href="#ifcobjectdefinition">IfcObjectDefinition</a>.HasAssignments[1]\<a href="#ifcrelassignstoproduct">IfcRelAssignsToProduct</a>.RelatingProduct\<a href="#ifcproduct">IfcProduct</a>.Representation.Representations |<br/>
+ShapeRep = SELF\<a href="#ifcproduct">IfcProduct</a>.Representation.Representations[1])) = 1;<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcvoxelgrid" />
 <span class="keyword">ENTITY</span> IfcVoxelGrid<br/>
@@ -9869,7 +9919,7 @@ AND <br/>
 <p>
 <span class="keyword">FUNCTION</span> IfcAlignmentRepresentation<br/>
 
-(Alignment : <a href="#ifcalignment">IfcAlignment</a>) : <a href="#ifcboolean">IfcBoolean</a>;<br/>	<br/>	LOCAL<br/>		AlignmentRepresentations : SET OF <a href="#ifcshaperepresentation">IfcShapeRepresentation</a>;<br/>		TwoDRep : SET OF <a href="#ifcshaperepresentation">IfcShapeRepresentation</a>;<br/>		ThreeDRep : SET OF <a href="#ifcshaperepresentation">IfcShapeRepresentation</a>;<br/>		CurveTwoD : <a href="#ifccompositecurve">IfcCompositeCurve</a>;<br/>		CurveThreeD : <a href="#ifcgradientcurve">IfcGradientCurve</a>;<br/>	END_LOCAL;<br/><br/>	(* no representation is okay *)<br/>	IF NOT EXISTS(Alignment.Representation) THEN<br/>		RETURN(TRUE);<br/>	END_IF;<br/>	<br/>	(* Alignment.Representation exists so assign *)<br/>	AlignmentRepresentations := Alignment.Representation.Representations;<br/><br/>	(* one representation is either Curve2D or 3D *)<br/>	IF SIZEOF(AlignmentRepresentations) = 1 THEN<br/>		IF SIZEOF(AlignmentRepresentations.Items) &lt;&gt; 1 THEN<br/>			RETURN (FALSE);<br/>		END_IF;<br/>		IF SIZEOF(QUERY(twoDee &lt;* AlignmentRepresentations | twoDee.RepresentationType = 'Curve2D')) = 1 THEN<br/>			CASE TRUE OF<br/>				'IFCGEOMETRYRESOURCE.<a href="#ifccompositecurve">IfcCompositeCurve</a>' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>				'IFCGEOMETRYRESOURCE.IFCOFFSETCURVEBYDISTANCE' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>				'IFCGEOMETRYRESOURCE.<a href="#ifcpolyline">IfcPolyline</a>' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>			END_CASE;<br/>		END_IF;<br/>		IF SIZEOF(QUERY(threeDee &lt;* AlignmentRepresentations | threeDee.RepresentationType = 'Curve3D')) = 1 THEN<br/>			CASE TRUE OF<br/>				'IFCGEOMETRYRESOURCE.<a href="#ifcgradientcurve">IfcGradientCurve</a>' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>				'IFCGEOMETRYRESOURCE.IFCOFFSETCURVEBYDISTANCE' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>				'IFCGEOMETRYRESOURCE.<a href="#ifcsegmentedreferencecurve">IfcSegmentedReferenceCurve</a>' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>				'IFCGEOMETRYRESOURCE.<a href="#ifcpolyline">IfcPolyline</a>' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>			END_CASE;<br/>		END_IF;<br/>	END_IF;<br/>	<br/>	(* 2 representations and 3D BaseCurve reference equals 2D representation *)<br/>	IF SIZEOF(AlignmentRepresentations) = 2 THEN<br/>	<br/>		TwoDRep := QUERY(twoDee &lt;* AlignmentRepresentations | twoDee.RepresentationType = 'Curve2D');<br/>		CurveTwoD := QUERY(item &lt;* TwoDRep[1].Items | 'IFCGEOMETRYRESOURCE.<a href="#ifccompositecurve">IfcCompositeCurve</a>' in TYPEOF(item));<br/>		ThreeDRep := QUERY(threeDee &lt;* AlignmentRepresentations | threeDee.RepresentationType = 'Curve3D');<br/>		CurveThreeD := QUERY(item &lt;* ThreeDRep[1].Items | 'IFCGEOMETRYRESOURCE.<a href="#ifcgradientcurve">IfcGradientCurve</a>' in TYPEOF(item));<br/>		<br/>		RETURN(SIZEOF(CurveThreeD) = 1 AND SIZEOF(CurveTwoD) = 1 AND CurveThreeD\<a href="#ifcgradientcurve">IfcGradientCurve</a>.BaseCurve :=: CurveTwoD);<br/>	<br/>	END_IF;<br/>	(* Missing an <a href="#ifcsegmentedreferencecurve">IfcSegmentedReferenceCurve</a> various placement option implementation. *)<br/><br/>	RETURN(FALSE);<br/>
+(Alignment : <a href="#ifcalignment">IfcAlignment</a>) : <a href="#ifcboolean">IfcBoolean</a>;<br/>	<br/>	LOCAL<br/>		AlignmentRepresentations : SET OF <a href="#ifcshaperepresentation">IfcShapeRepresentation</a>;<br/>		TwoDRep : SET OF <a href="#ifcshaperepresentation">IfcShapeRepresentation</a>;<br/>		ThreeDRep : SET OF <a href="#ifcshaperepresentation">IfcShapeRepresentation</a>;<br/>		CurveTwoD : <a href="#ifccompositecurve">IfcCompositeCurve</a>;<br/>		CurveThreeD : <a href="#ifcgradientcurve">IfcGradientCurve</a>;<br/>	END_LOCAL;<br/><br/>	(* no representation is okay *)<br/>	IF NOT EXISTS(Alignment.Representation) THEN<br/>		RETURN(TRUE);<br/>	END_IF;<br/>	<br/>	(* Alignment.Representation exists so assign *)<br/>	AlignmentRepresentations := Alignment.Representation.Representations;<br/><br/>	(* one representation is either Curve2D or 3D *)<br/>	IF SIZEOF(AlignmentRepresentations) = 1 THEN<br/>		IF SIZEOF(AlignmentRepresentations.Items) &lt;&gt; 1 THEN<br/>			RETURN (FALSE);<br/>		END_IF;<br/>		IF SIZEOF(QUERY(twoDee &lt;* AlignmentRepresentations | twoDee.RepresentationType = 'Curve2D')) = 1 THEN<br/>			CASE TRUE OF<br/>				'IFCGEOMETRYRESOURCE.<a href="#ifccompositecurve">IfcCompositeCurve</a>' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>				'IFCGEOMETRYRESOURCE.IFCOFFSETCURVEBYDISTANCE' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>				'IFCGEOMETRYRESOURCE.<a href="#ifcpolyline">IfcPolyline</a>' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>			END_CASE;<br/>		END_IF;<br/>		IF SIZEOF(QUERY(threeDee &lt;* AlignmentRepresentations | threeDee.RepresentationType = 'Curve3D')) = 1 THEN<br/>			CASE TRUE OF<br/>				'IFCGEOMETRYRESOURCE.<a href="#ifcgradientcurve">IfcGradientCurve</a>' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>				'IFCGEOMETRYRESOURCE.IFCOFFSETCURVEBYDISTANCE' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>				'IFCGEOMETRYRESOURCE.<a href="#ifcsegmentedreferencecurve">IfcSegmentedReferenceCurve</a>' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>				'IFCGEOMETRYRESOURCE.<a href="#ifcpolyline">IfcPolyline</a>' IN TYPEOF(AlignmentRepresentations[1].Items[1]):<br/>					RETURN(TRUE);<br/>			END_CASE;<br/>		END_IF;<br/>	END_IF;<br/>	<br/>	(* 2 representations and 3D BaseCurve reference equals 2D representation *)<br/>	IF SIZEOF(AlignmentRepresentations) = 2 THEN<br/>	<br/>		TwoDRep := QUERY(twoDee &lt;* AlignmentRepresentations | twoDee.RepresentationType = 'Curve2D');<br/>		CurveTwoD := QUERY(item &lt;* TwoDRep[1].Items | 'IFCGEOMETRYRESOURCE.<a href="#ifccompositecurve">IfcCompositeCurve</a>' in TYPEOF(item));<br/>		ThreeDRep := QUERY(threeDee &lt;* AlignmentRepresentations | threeDee.RepresentationType = 'Curve3D');<br/>		CurveThreeD := QUERY(item &lt;* ThreeDRep[1].Items | 'IFCGEOMETRYRESOURCE.<a href="#ifcgradientcurve">IfcGradientCurve</a>' in TYPEOF(item));<br/>		<br/>		RETURN((SIZEOF(CurveThreeD) = 1) AND (SIZEOF(CurveTwoD) = 1) AND (CurveThreeD\<a href="#ifcgradientcurve">IfcGradientCurve</a>.BaseCurve :=: CurveTwoD));<br/>	<br/>	END_IF;<br/>	(* Missing an <a href="#ifcsegmentedreferencecurve">IfcSegmentedReferenceCurve</a> various placement option implementation. *)<br/><br/>	RETURN(FALSE);<br/>
 <br/>
 
 <span class="keyword">END_FUNCTION</span>;

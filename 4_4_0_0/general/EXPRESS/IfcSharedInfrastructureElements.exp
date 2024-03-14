@@ -1,6 +1,6 @@
 (*
 Copyright by:
-buildingSMART International Limited, 1996-2023
+buildingSMART International Limited, 1996-2024
 
 Any technical documentation made available by buildingSMART International Limited
 is the copyrighted work of buildingSMART International Limited and is owned by the 
@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Saturday, 9 September 2023
+Thursday, 14 March 2024
 
 *)
 
@@ -121,8 +121,13 @@ TYPE IfcGeotechnicalStratumTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcGroundReinforcementElementTypeEnum = ENUMERATION OF
-	(SPILINGBOLT
-	,ROCKSUPPORTBOLT
+	(PILE
+	,TUBE
+	,BAR
+	,PLATE
+	,BOLT
+	,TENDON
+	,FABRIC
 	,NOTDEFINED
 	,USERDEFINED);
 END_TYPE;
@@ -182,9 +187,21 @@ END_TYPE;
 
 ENTITY IfcBorehole
  SUBTYPE OF (IfcGeoScienceElement);
+	PredefinedType : OPTIONAL IfcBoreholeTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+(PredefinedType <> IfcBoreholeTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcBoreholeTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+('IFCSHAREDINFRASTRUCTUREELEMENTS.IFCBOREHOLETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+END_ENTITY;
+
+ENTITY IfcBoreholeType
+ SUBTYPE OF (IfcGeoScienceElementType);
 	PredefinedType : IfcBoreholeTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcBoreholeTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcBoreholeTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcBoreholeTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcCourse
@@ -244,18 +261,46 @@ ENTITY IfcGeoScienceElement
  SUBTYPE OF (IfcElement);
 END_ENTITY;
 
+ENTITY IfcGeoScienceElementType
+ ABSTRACT SUPERTYPE OF (ONEOF
+    (IfcBoreholeType))
+ SUBTYPE OF (IfcElementType);
+END_ENTITY;
+
 ENTITY IfcGeoScienceFeature
  SUBTYPE OF (IfcGeoScienceElement);
+	PredefinedType : OPTIONAL IfcGeoScienceFeatureTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+(PredefinedType <> IfcGeoScienceFeatureTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcGeoScienceFeatureTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+('IFCSHAREDINFRASTRUCTUREELEMENTS.IFCGEOSCIENCEFEATURETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+END_ENTITY;
+
+ENTITY IfcGeoScienceFeatureType;
 	PredefinedType : IfcGeoScienceFeatureTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcGeoScienceFeatureTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcGeoScienceFeatureTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcGeoScienceFeatureTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcGeoScienceModel
  SUBTYPE OF (IfcGeoScienceElement);
+	PredefinedType : OPTIONAL IfcGeoScienceModelTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+(PredefinedType <> IfcGeoScienceModelTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcGeoScienceModelTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+('IFCSHAREDINFRASTRUCTUREELEMENTS.IFCGEOSCIENCEMODELTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+END_ENTITY;
+
+ENTITY IfcGeoScienceModelType;
 	PredefinedType : IfcGeoScienceModelTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcGeoScienceModelTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcGeoScienceModelTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcGeoScienceModelTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcGeoScienceObservation

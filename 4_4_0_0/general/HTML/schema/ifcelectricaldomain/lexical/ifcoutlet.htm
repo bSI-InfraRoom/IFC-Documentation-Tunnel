@@ -333,29 +333,31 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;88d6f6fc-5029-4878-a2e8-7eb3a2b0c67b&quot; name=&quot;IfcOutlet&quot; applicableRootEntity=&quot;IfcOutlet&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;7e0b02cf-5a98-43ff-9a18-fd6ad4580bd5&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;69295d36-39b5-4453-8693-12baf118443d&quot; name=&quot;Object Typing&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;35a2e10e-20df-40f4-ab2f-dacf0a6744f4&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;RelatingType[Type]=&amp;apos;IfcOutletType&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;e2ad74f9-cb7b-4744-898a-27e124ceecda&quot; name=&quot;Property Sets for Objects&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f74255a6-0c0e-4f31-84ad-24981db62461&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PsetName[Value]=&amp;apos;Pset_OutletTypeCommon&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;943d14d9-7285-42a5-9214-572268cad8e1&quot; name=&quot;Quantity Sets&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;6652398e-6579-4460-8cb4-26295acfacc7&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;QsetName[Value]=&amp;apos;Qto_OutletBaseQuantities&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;655eac8d-1899-44d3-800b-5910d37557d2&quot; name=&quot;Material&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;d96f7f7d-e742-4db8-9b5d-18a36a6df884&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Material from which the casing is constructed.&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Material from which the conductors are constructed.&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Material from which the outer plate is constructed.&quot; /&gt;<br/>
@@ -363,7 +365,7 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;fbd6ed10-4f1c-4131-ab95-ad56c170a605&quot; name=&quot;Port&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;bafc93b7-d0e2-42d8-84cf-5da20ee1480a&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;A data line, connecting to a cable commonly originating from a port on a router.&quot; Parameters=&quot;PredefinedType[Value]=&amp;apos;DATAOUTLET&amp;apos; AND PortName[Value]=&amp;apos;Line#1&amp;apos; AND SystemType[Value]=&amp;apos;DATA&amp;apos; AND Flow[Value]=&amp;apos;SINK&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;A data line, connecting to a cable commonly originating from a port on a router.&quot; Parameters=&quot;PredefinedType[Value]=&amp;apos;DATAOUTLET&amp;apos; AND PortName[Value]=&amp;apos;Line#2&amp;apos; AND SystemType[Value]=&amp;apos;DATA&amp;apos; AND Flow[Value]=&amp;apos;SINK&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Jacks in order of layout, going to the right and then down, which may accept a cable.&quot; Parameters=&quot;PredefinedType[Value]=&amp;apos;DATAOUTLET&amp;apos; AND PortName[Value]=&amp;apos;Jack#1&amp;apos; AND SystemType[Value]=&amp;apos;DATA&amp;apos; AND Flow[Value]=&amp;apos;SOURCE&amp;apos;&quot; /&gt;<br/>

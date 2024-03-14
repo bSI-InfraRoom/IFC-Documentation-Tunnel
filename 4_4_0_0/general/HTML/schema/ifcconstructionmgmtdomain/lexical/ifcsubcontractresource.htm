@@ -246,6 +246,8 @@ IFC4 New attribute.
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;af30816c-1e11-47ec-907a-905435dc95ba&quot; name=&quot;IfcSubContractResource&quot; applicableRootEntity=&quot;IfcSubContractResource&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;83b65d3a-d53b-4884-a613-a7353fe32ca6&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;ec664f16-ca3a-4841-bcb2-4666d7de7e34&quot; name=&quot;Object Typing&quot;&gt;<br/>
@@ -253,7 +255,7 @@ IFC4 New attribute.
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;c1e7b6b9-deb1-4205-8d41-9af61ae873e9&quot; name=&quot;Resource Assignment&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;26529b88-e45d-4818-a1ce-02ba12901b7e&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Indicates a specific organization to be considered to fulfill the resource or invited to bid on the resource.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcActor&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>

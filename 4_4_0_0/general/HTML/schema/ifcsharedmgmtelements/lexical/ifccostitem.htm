@@ -268,6 +268,8 @@ IFC4 CHANGE The attribute has been added.
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;5a2f1385-7384-4ec6-9469-58947f9d36b5&quot; name=&quot;IfcCostItem&quot; applicableRootEntity=&quot;IfcCostItem&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;763c62a9-3055-4a39-89b7-0569660ffe0b&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;34af1c2c-7192-4662-840b-7cedd9b33c5d&quot; name=&quot;Classification&quot;&gt;<br/>
@@ -275,13 +277,13 @@ IFC4 CHANGE The attribute has been added.
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;37f27019-7c4e-4dbc-943c-60a4bc30628b&quot; name=&quot;Nesting&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;38ca8788-5e47-411c-8294-d56f9e9a5691&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;Type[Type]=&amp;apos;IfcCostItem&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;60a487ed-b0b3-4218-8fbf-6e78ff497e8e&quot; name=&quot;Control Assignment&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;813e73fe-5641-4648-a680-8887cf4359f1&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;For quantity-based costs based on product occurrences, spatial structures, or other physical artifacts.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcProduct&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;For quantity-based costs based on tasks, procedures, or events.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcProcess&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;For quantity-based costs based on resource allocations.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcResource&amp;apos;&quot; /&gt;<br/>

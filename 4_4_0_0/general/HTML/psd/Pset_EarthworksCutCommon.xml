@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="e41c046542724a578a90fc6e5eef8901" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_EarthworksCutCommon</Name>
+  <Definition>Common properties for earthworks cut elements.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcEarthworksCut</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcEarthworksCut</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="6730135ab5284a13b030acf52a587946">
+      <Name>EarthworksCutExcavationMethod</Name>
+      <Definition>Method of excavation.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_EarthworksCutExcavationMethod">
+            <EnumItem>HAND</EnumItem>
+            <EnumItem>EXCAVATOR</EnumItem>
+            <EnumItem>JACKHAMMER</EnumItem>
+            <EnumItem>RIPPER</EnumItem>
+            <EnumItem>DRILLANDBLAST</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>HAND</Name>
+              <Definition>Manual excavation method using hand tools.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXCAVATOR</Name>
+              <Definition>Mechanized method employing excavator machinery.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>JACKHAMMER</Name>
+              <Definition>Pneumatic or hydraulic tool breaking rock or concrete.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>RIPPER</Name>
+              <Definition>Equipment with a toothed tool to break and loosen hard soil.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DRILLANDBLAST</Name>
+              <Definition>Controlled drilling followed by explosive blasting.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="56339d5cb674443eb9a79778bad57cf5">
+      <Name>UserDefinedExcavationMethod</Name>
+      <Definition>Custom or specialized excavation methods beyond standard categories. Used when EarthworksCutExcavationMethod is set to USERDEFINED.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="400f828e543f476abd9e1aa22cd76dd7">
+      <Name>MaximumUnsupportedCut</Name>
+      <Definition>Maximum unsupported depth of cut.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="01aa59dc3e9b4cc3a789a513fab4d7c5">
+      <Name>SupportDescription</Name>
+      <Definition>Description of Support.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

@@ -428,17 +428,19 @@ IFC4 CHANGE The attribute has been renamed from <i>ShapeType</i> and changed to 
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;4a498025-8a1f-4038-a303-d541bb74d2fc&quot; name=&quot;IfcStair&quot; applicableRootEntity=&quot;IfcStair&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;ea9dd7e5-9453-4abf-9215-c02f35e8f398&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;a0c46600-f44b-4f08-8a23-2132a8ac17d4&quot; name=&quot;Object Typing&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;35a2e10e-20df-40f4-ab2f-dacf0a6744f4&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;RelatingType[Type]=&amp;apos;IfcStairType&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;9d3bc6d5-0583-4dea-b75f-f32076bc60bb&quot; name=&quot;Property Sets for Objects&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f74255a6-0c0e-4f31-84ad-24981db62461&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PsetName[Value]=&amp;apos;Pset_StairCommon&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PsetName[Value]=&amp;apos;Pset_ConcreteElementGeneral&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PsetName[Value]=&amp;apos;Pset_PrecastConcreteElementFabrication&amp;apos;&quot; /&gt;<br/>
@@ -450,7 +452,7 @@ IFC4 CHANGE The attribute has been renamed from <i>ShapeType</i> and changed to 
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;1421e6d1-c993-40eb-b159-4a1468ade509&quot; name=&quot;Spatial Containment&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;d9a3f822-0014-4bc2-8d94-9d9067759045&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Default spatial container&quot; Parameters=&quot;RelatingStructure[Type]=&amp;apos;IfcBuildingStorey&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Spatial container for the element if it cannot be assigned to a building storey&quot; Parameters=&quot;RelatingStructure[Type]=&amp;apos;IfcBuilding&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Spatial container for the element in case that it is placed on site (outside of building)&quot; Parameters=&quot;RelatingStructure[Type]=&amp;apos;IfcSite&amp;apos;&quot; /&gt;<br/>
@@ -458,7 +460,7 @@ IFC4 CHANGE The attribute has been renamed from <i>ShapeType</i> and changed to 
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;1fe0abcf-28f4-40b5-9edb-0254328b48f8&quot; name=&quot;Element Decomposition&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;8a27c15a-c4ea-4ca9-8cce-7fbba1c9bce0&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Stairs may be decomposed into stair flights.&quot; Parameters=&quot;RelatedObjects[Type]=&amp;apos;IfcStairFlight&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Stairs may be decomposed into stair landing, represented by IfcSlab.PredefinedType=LANDING&quot; Parameters=&quot;RelatedObjects[Type]=&amp;apos;IfcSlab&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Stairs may be decomposed into railings for zero, one, or both sides.&quot; Parameters=&quot;RelatedObjects[Type]=&amp;apos;IfcRailing&amp;apos;&quot; /&gt;<br/>

@@ -254,11 +254,13 @@ Reference to the representations of the product, being either a representation (
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;d9ea2999-bca0-4ee5-b750-23e6856eddad&quot; name=&quot;IfcAnnotation&quot; applicableRootEntity=&quot;IfcAnnotation&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;882370a7-5191-4ed3-b85d-a4034b38659a&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;ecd64d15-c9d8-402b-82e7-caeaa7d2a26d&quot; name=&quot;Property Sets for Objects&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f74255a6-0c0e-4f31-84ad-24981db62461&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PredefinedType[Value]=&amp;apos;ContourLine&amp;apos; AND PsetName[Value]=&amp;apos;Pset_AnnotationContourLine&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PredefinedType[Value]=&amp;apos;LineOfSight&amp;apos; AND PsetName[Value]=&amp;apos;Pset_AnnotationLineOfSight&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PredefinedType[Value]=&amp;apos;SurveyArea&amp;apos; AND PsetName[Value]=&amp;apos;Pset_AnnotationSurveyArea&amp;apos;&quot; /&gt;<br/>
@@ -267,7 +269,7 @@ Reference to the representations of the product, being either a representation (
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;b17d6670-1ba5-41f2-a71f-c2df1b699aa9&quot; name=&quot;Annotation 2D Geometry&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;014166a7-ef2b-4818-bfcb-1128a691cf9f&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Any point or curve&quot; Parameters=&quot;Identifier[Value]=&amp;apos;Annotation&amp;apos; AND Type[Value]=&amp;apos;Annotation2D&amp;apos; AND Items[Type]=&amp;apos;IfcGeometricCurveSet&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Area for hatching&quot; Parameters=&quot;Identifier[Value]=&amp;apos;Annotation&amp;apos; AND Type[Value]=&amp;apos;Annotation2D&amp;apos; AND Items[Type]=&amp;apos;IfcAnnotationFillArea&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Text literal for applying text&quot; Parameters=&quot;Identifier[Value]=&amp;apos;Annotation&amp;apos; AND Type[Value]=&amp;apos;Annotation2D&amp;apos; AND Items[Type]=&amp;apos;IfcTextLiteral&amp;apos;&quot; /&gt;<br/>
@@ -275,7 +277,7 @@ Reference to the representations of the product, being either a representation (
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;9bb86507-e646-4b69-ab5e-c2d0bd15b771&quot; name=&quot;Annotation 3D Geometry&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;0f213846-fe15-4607-a66a-b33e98cb5887&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Any point, curve or surface representing the annotation.&quot; Parameters=&quot;Identifier[Value]=&amp;apos;Annotation&amp;apos; AND Type[Value]=&amp;apos;GeometricSet&amp;apos; AND Items[Type]=&amp;apos;IfcGeometricSet&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>

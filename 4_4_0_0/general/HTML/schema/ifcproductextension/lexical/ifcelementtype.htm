@@ -64,8 +64,9 @@ The type denotes a particular type that indicates the object further. The use ha
 <area shape="rect" coords="66,222,254,234" href="../../../schema/ifcsharedcomponentelements/lexical/ifcelementcomponenttype.htm" alt="IfcElementComponentType" />
 <area shape="rect" coords="66,246,254,258" href="../../../schema/ifcproductextension/lexical/ifcfurnishingelementtype.htm" alt="IfcFurnishingElementType" />
 <area shape="rect" coords="66,270,254,282" href="../../../schema/ifcproductextension/lexical/ifcgeographicelementtype.htm" alt="IfcGeographicElementType" />
-<area shape="rect" coords="66,294,254,306" href="../../../schema/ifcproductextension/lexical/ifctransportationdevicetype.htm" alt="IfcTransportationDeviceType" />
-<area shape="rect" coords="66,318,254,330" href="../../../schema/ifcproductextension/lexical/ifctransportelementtype.htm" alt="IfcTransportElementType" />
+<area shape="rect" coords="66,294,254,306" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeoscienceelementtype.htm" alt="IfcGeoScienceElementType" />
+<area shape="rect" coords="66,318,254,330" href="../../../schema/ifcproductextension/lexical/ifctransportationdevicetype.htm" alt="IfcTransportationDeviceType" />
+<area shape="rect" coords="66,342,254,354" href="../../../schema/ifcproductextension/lexical/ifctransportelementtype.htm" alt="IfcTransportElementType" />
 <area shape="rect" coords="42,78,278,90" href="../../../schema/ifckernel/lexical/ifctypeproduct.htm" alt="IfcTypeProduct" />
 <area shape="rect" coords="30,54,290,66" href="../../../schema/ifckernel/lexical/ifctypeobject.htm" alt="IfcTypeObject" />
 <area shape="rect" coords="18,30,302,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
@@ -213,6 +214,8 @@ The type denotes a particular type that indicates the object further. The use ha
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;1ddfd1cb-7d92-4f36-82cf-227f47b2f843&quot; name=&quot;IfcElementType&quot; applicableRootEntity=&quot;IfcElementType&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;1a7b93e6-c372-437f-938b-74ac7f50ccb0&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;0d8f02ca-59dd-49e2-8440-cfe039ba2882&quot; name=&quot;Type Body CSG Geometry&quot;&gt;<br/>
@@ -229,13 +232,13 @@ The type denotes a particular type that indicates the object further. The use ha
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;2bb387c9-3c7e-4a02-b346-954f414ff53c&quot; name=&quot;Type Body Tessellated Geometry&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;6ade4fc7-0d97-4dc4-bc2a-4e045b4ae929&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;acd794a5-1e74-4e03-ae40-e000c128b466&quot; name=&quot;Element Type Predefined Type&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;a0b913af-7d13-46dd-b7cf-a737879fd432&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
@@ -281,7 +284,7 @@ The type denotes a particular type that indicates the object further. The use ha
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcElementType<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcproductextension/lexical/ifcbuiltelementtype.htm">IfcBuiltElementType</a>, <a href="../../ifcproductextension/lexical/ifccivilelementtype.htm">IfcCivilElementType</a>, <a href="../../ifcproductextension/lexical/ifcdistributionelementtype.htm">IfcDistributionElementType</a>, <a href="../../ifcproductextension/lexical/ifcelementassemblytype.htm">IfcElementAssemblyType</a>, <a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponenttype.htm">IfcElementComponentType</a>, <a href="../../ifcproductextension/lexical/ifcfurnishingelementtype.htm">IfcFurnishingElementType</a>, <a href="../../ifcproductextension/lexical/ifcgeographicelementtype.htm">IfcGeographicElementType</a>, <a href="../../ifcproductextension/lexical/ifctransportelementtype.htm">IfcTransportElementType</a>, <a href="../../ifcproductextension/lexical/ifctransportationdevicetype.htm">IfcTransportationDeviceType</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcproductextension/lexical/ifcbuiltelementtype.htm">IfcBuiltElementType</a>, <a href="../../ifcproductextension/lexical/ifccivilelementtype.htm">IfcCivilElementType</a>, <a href="../../ifcproductextension/lexical/ifcdistributionelementtype.htm">IfcDistributionElementType</a>, <a href="../../ifcproductextension/lexical/ifcelementassemblytype.htm">IfcElementAssemblyType</a>, <a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponenttype.htm">IfcElementComponentType</a>, <a href="../../ifcproductextension/lexical/ifcfurnishingelementtype.htm">IfcFurnishingElementType</a>, <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceelementtype.htm">IfcGeoScienceElementType</a>, <a href="../../ifcproductextension/lexical/ifcgeographicelementtype.htm">IfcGeographicElementType</a>, <a href="../../ifcproductextension/lexical/ifctransportelementtype.htm">IfcTransportElementType</a>, <a href="../../ifcproductextension/lexical/ifctransportationdevicetype.htm">IfcTransportationDeviceType</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifctypeproduct.htm">IfcTypeProduct</a>)<b>;</b><br/>
 &nbsp;&nbsp;ElementType : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>

@@ -312,17 +312,19 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;64f6e6b4-076f-40be-a6a7-6ce721fa62f2&quot; name=&quot;IfcDistributionControlElement&quot; applicableRootEntity=&quot;IfcDistributionControlElement&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;a7ace8e6-8a0b-4bde-bfa6-c3e2f41fc78f&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;5cd3aa72-4b98-41cb-b719-4cedc4ab3526&quot; name=&quot;Object Typing&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;35a2e10e-20df-40f4-ab2f-dacf0a6744f4&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;RelatingType[Type]=&amp;apos;IfcDistributionControlElementType&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;408c22ea-cc1d-44a9-bf92-ca33df2c3ca2&quot; name=&quot;Object Classification&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;4a224609-6578-4c75-afcf-8affa86e5ef2&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;32-bit decimal BACnetObjectIdentifier indicating type ID and instance ID (e.g.&amp;apos;12.15&amp;apos; for Digital Input #15).&quot; Parameters=&quot;Name[Value]=&amp;apos;BACnet&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;32-bit decimal address for an IPv4 network (e.g.&amp;apos;192.168.1.1&amp;apos;).&quot; Parameters=&quot;Name[Value]=&amp;apos;IPv4&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;128-bit hexadecimal address for an IPv6 network.&quot; Parameters=&quot;Name[Value]=&amp;apos;IPv6&amp;apos;&quot; /&gt;<br/>
@@ -334,7 +336,7 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;fedbb132-1a6d-44c8-a2c2-fe1f579eeaa2&quot; name=&quot;Product Assignment&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;ec9cfb04-adfe-4868-8168-d78fe995a913&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Indicates tasks used to purchase, install, renovate, demolish, operate, or otherwise act upon the element.  If the element has a type, available task types are assigned to the element type.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcTask&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Indicates procedures used to operate the element.  If the element has a type, available procedure types are assigned to the element type.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcProcedure&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Indicates events to be handled by the element, sequenced by procedures to be followed.  If the element has a type, available event types are assigned to the element type.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcEvent&amp;apos;&quot; /&gt;<br/>

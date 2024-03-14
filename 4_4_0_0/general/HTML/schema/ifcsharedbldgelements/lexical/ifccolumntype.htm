@@ -229,6 +229,8 @@ Identifies the predefined types of a column element from which the type required
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;e64e2bd9-e79d-4118-a170-e23407346c69&quot; name=&quot;IfcColumnType&quot; applicableRootEntity=&quot;IfcColumnType&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;dda5ef34-4c33-4bbf-9ac0-9397ce90815e&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;09439253-f4fb-4efe-bd1a-394c1d2f4599&quot; name=&quot;Material Profile Set&quot;&gt;<br/>
@@ -236,7 +238,7 @@ Identifies the predefined types of a column element from which the type required
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;36f25653-bf53-404d-a7e9-33504223ac58&quot; name=&quot;Body Geometry&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;3aec2d00-b4bb-476a-a821-fc22b895b531&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;RepresentationType[Value]=&amp;apos;SweptSolid&amp;apos; AND Geometry[Type]=&amp;apos;IfcExtrudedAreaSolid&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;RepresentationType[Value]=&amp;apos;Brep&amp;apos; AND Geometry[Type]=&amp;apos;IfcFacetedBrep&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>

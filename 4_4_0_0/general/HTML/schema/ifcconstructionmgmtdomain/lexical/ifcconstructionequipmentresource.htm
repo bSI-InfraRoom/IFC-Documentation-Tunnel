@@ -285,30 +285,32 @@ IFC4 New attribute.
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;79f18954-ba72-4a1d-9d68-72bf90c7cb7e&quot; name=&quot;IfcConstructionEquipmentResource&quot; applicableRootEntity=&quot;IfcConstructionEquipmentResource&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;732b54cc-38b3-47e9-86d5-c64a2c2b1ff1&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;9df89371-d913-49b5-a6d4-fd4bbfc87047&quot; name=&quot;Object Typing&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;35a2e10e-20df-40f4-ab2f-dacf0a6744f4&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;RelatingType[Type]=&amp;apos;IfcConstructionEquipmentResourceType&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;971f7e0e-688f-43a4-bbf6-4f2627e6f11e&quot; name=&quot;Quantity Sets&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;6652398e-6579-4460-8cb4-26295acfacc7&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;QsetName[Value]=&amp;apos;Qto_ConstructionEquipmentResourceBaseQuantities&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;QsetName[Value]=&amp;apos;Qto_ConstructionEquipmentResourceBaseQuantities&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;20ae3c2d-7e28-4cf8-b385-cbc1281e1e77&quot; name=&quot;Resource Assignment&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;26529b88-e45d-4818-a1ce-02ba12901b7e&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Indicates a physical element manifesting the resource such as a crane.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcTransportElement&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;b5eb52e1-f6e4-4329-847a-8a20bda68d8c&quot; name=&quot;Resource Cost&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;678111f9-565e-4c1d-b8c3-d218c4ccd056&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;The amount incurred for acquiring the equipment, such as rental fees or depreciation.&quot; Parameters=&quot;CostType[Type]=&amp;apos;IfcCostValue&amp;apos; AND CostName[Value]=&amp;apos;Usage&amp;apos; AND ValueType[Type]=&amp;apos;IfcMonetaryMeasure&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;The amount incurred for operating the equipment, such as fuel and maintenance.&quot; Parameters=&quot;CostType[Type]=&amp;apos;IfcCostValue&amp;apos; AND CostName[Value]=&amp;apos;Operation&amp;apos; AND ValueType[Type]=&amp;apos;IfcMonetaryMeasure&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;The amount incurred for mobilizing and decomissioning the equipment.&quot; Parameters=&quot;CostType[Type]=&amp;apos;IfcCostValue&amp;apos; AND CostName[Value]=&amp;apos;Deployment&amp;apos; AND ValueType[Type]=&amp;apos;IfcMonetaryMeasure&amp;apos;&quot; /&gt;<br/>
@@ -316,7 +318,7 @@ IFC4 New attribute.
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;12181941-99dc-4413-90d1-fe26f0d9484f&quot; name=&quot;Resource Quantity&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;a057d708-23d4-47d2-a84d-89ffc93d8fe8&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;The unit basis for operating the equipment, such as an hour.&quot; Parameters=&quot;QuantityType[Type]=&amp;apos;IfcQuantityTime&amp;apos; AND QuantityName[Value]=&amp;apos;Operation&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>

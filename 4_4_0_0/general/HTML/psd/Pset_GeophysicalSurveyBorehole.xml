@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="528696926ffb4e49a6fe426c3dd94a38" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeophysicalSurveyBorehole</Name>
+  <Definition>Properties for setup of geophysical surveys incorporating boreholes.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="552f9886c34c4a18bac1dcda742bfeb6">
+      <Name>BoreholeGeophysConfiguration</Name>
+      <Definition>Configuration of the sources and receivers used in the borehole geophysical surveys.</Definition>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel" />
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

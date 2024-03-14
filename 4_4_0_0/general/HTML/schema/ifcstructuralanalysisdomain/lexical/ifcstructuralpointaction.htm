@@ -235,11 +235,13 @@ Indicates if this action may cause a stability problem. If it is 'FALSE', no fur
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;c7ef2bf9-bb62-47bf-bbba-80f3855d65bd&quot; name=&quot;IfcStructuralPointAction&quot; applicableRootEntity=&quot;IfcStructuralPointAction&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;b5641012-a9f5-40f8-9dde-755fa44c91fa&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;922f6a46-2212-4545-b524-ed7a98bfe600&quot; name=&quot;Structural Activity&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;9390ca72-d8e2-482b-9986-e0e1d15e7194&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Point force and moment at a point connection.&quot; Parameters=&quot;AppliedLoad[Type]=&amp;apos;IfcStructuralLoadSingleForce&amp;apos; AND RelatingElement[Type]=&amp;apos;IfcStructuralCurveConnection&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Point force and moment positioned within a curve member.&quot; Parameters=&quot;AppliedLoad[Type]=&amp;apos;IfcStructuralLoadSingleForce&amp;apos; AND RelatingElement[Type]=&amp;apos;IfcStructuralCurveMember&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Point force and moment positioned within a surface member.&quot; Parameters=&quot;AppliedLoad[Type]=&amp;apos;IfcStructuralLoadSingleForce&amp;apos; AND RelatingElement[Type]=&amp;apos;IfcStructuralSurfaceMember&amp;apos;&quot; /&gt;<br/>

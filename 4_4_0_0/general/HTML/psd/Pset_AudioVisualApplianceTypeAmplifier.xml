@@ -58,10 +58,13 @@
             </ConstantDef>
             <ConstantDef>
               <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
               <NameAliases>
-                <NameAlias lang="en">Unset.</NameAlias>
+                <NameAlias lang="en">(unset)</NameAlias>
               </NameAliases>
-              <DefinitionAliases />
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
             </ConstantDef>
           </ConstantList>
         </TypePropertyEnumeratedValue>

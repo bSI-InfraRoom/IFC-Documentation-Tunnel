@@ -47,6 +47,17 @@ An optional value type used for the values defined in one of the subtypes. Only 
 </td><td>X</td></tr>
 </table>
 </details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>IsAssignedToProduct</td><td><span class="self-ref">IfcVoxelData</span> shall have exactly one assignment relationship of type <a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a> to a product.
+</td></tr>
+<tr><td>VoxelGridRepresentation</td><td><span class="self-ref">IfcVoxelData</span> shall have a product definition shape and there shall be exactly one <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> in <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>.<i>Representations</i> that has exactly one geometric item <a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>.
+</td></tr>
+<tr><td>SameRepresentation</td><td>The assigned <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> shall have the same shape representation.
+</td></tr>
+</table>
+
+</details>
 </section>
 <section>
 <h5 class="num">Inherited definitions from supertypes</h5>
@@ -206,7 +217,18 @@ An optional value type used for the values defined in one of the subtypes. Only 
 &nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcproductextension/lexical/ifcintegervoxeldata.htm">IfcIntegerVoxelData</a>, <a href="../../ifcproductextension/lexical/ifclabelvoxeldata.htm">IfcLabelVoxelData</a>, <a href="../../ifcproductextension/lexical/ifclogicalvoxeldata.htm">IfcLogicalVoxelData</a>, <a href="../../ifcproductextension/lexical/ifcrealvoxeldata.htm">IfcRealVoxelData</a>, <a href="../../ifcproductextension/lexical/ifcvectorvoxeldata.htm">IfcVectorVoxelData</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifccomplementarydata.htm">IfcComplementaryData</a>)<b>;</b><br/>
 &nbsp;&nbsp;ValueType : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
-<span class="keyword">END_ENTITY;</span><br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;IsAssignedToProduct : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssignments)<br/>
+AND<br/>
+(SIZEOF(SELF\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssignments) = 1)<br/>
+AND<br/>
+(&#39;IFCKERNEL.<a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssignments[1]));<br/>&nbsp;&nbsp;VoxelGridRepresentation : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation)<br/>
+AND<br/>
+(SIZEOF(QUERY(ShapeRep &lt;* SELF\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation.Representations | <br/>
+    (SIZEOF(ShapeRep.Items) = 1)<br/>
+    AND<br/>
+    (&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&#39; IN TYPEOF(ShapeRep.Items[1])))) = 1);<br/>&nbsp;&nbsp;SameRepresentation : SIZEOF(QUERY(ShapeRep &lt;* SELF\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssignments[1]\<a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a>.RelatingProduct\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation.Representations |<br/>
+ShapeRep = SELF\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation.Representations[1])) = 1;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

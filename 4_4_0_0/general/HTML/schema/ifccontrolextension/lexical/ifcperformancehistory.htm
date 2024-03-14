@@ -232,6 +232,8 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;af4d58e0-738d-4203-9b01-c412e83fb300&quot; name=&quot;IfcPerformanceHistory&quot; applicableRootEntity=&quot;IfcPerformanceHistory&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;c499a7ac-281b-4bb8-9ad9-bb83811f7e44&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;d679c465-499b-4425-b9bf-90e8f803abe1&quot; name=&quot;Property Sets for Performance&quot;&gt;<br/>
@@ -242,13 +244,13 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;39d4c025-11ff-4a19-85dd-0739ed43ba32&quot; name=&quot;Aggregation&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;02eefcc6-b26c-4f20-9c7c-c30ae74eb9a9&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;7bf2b0af-920b-4f59-b127-5e646da32323&quot; name=&quot;Control Assignment&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;813e73fe-5641-4648-a680-8887cf4359f1&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;A system or zone for which time-based system information is provided, such as overall status parameters of a building control system.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcGroup&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;A building space, physical device, or port for which time-based information is provided, such as a chiller or an analog input within a device.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcProduct&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;A process for which time-based information is provided, such as an alarm event being raised and acknowledged, or regular and overtime costs incurred for a task.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcProcess&amp;apos;&quot; /&gt;<br/>

@@ -305,11 +305,13 @@ system  that is referenced by all geometric representations.</i></p>
 &lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;9fe0e85c-a9ca-4dd1-a630-80aed714e14d&quot; name=&quot;IfcFacility&quot; applicableRootEntity=&quot;IfcFacility&quot;&gt;<br/>
 &nbsp;&lt;Applicability&gt;<br/>
 &nbsp;&nbsp;&lt;Template ref=&quot;2d4bb14a-0f48-4cec-81dc-6b0a510d2e84&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&lt;/Applicability&gt;<br/>
 &nbsp;&lt;Concepts&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;5d235417-9674-4363-aafe-478d1c9e8052&quot; name=&quot;Spatial Composition&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;8c0fd2f7-71bb-4e6e-8fdb-0c02b352f14a&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Direct assignment to project, if the facility is the outermost spatial container, and no site information is provided for the building projects&quot; Parameters=&quot;RelatingObject[Type]=&amp;apos;IfcProject&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Assignment to site, if the facility is the spatial container for the building project with site information&quot; Parameters=&quot;RelatingObject[Type]=&amp;apos;IfcSite&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Assignment to another facility as spatial container, e.g. if this facility represents a facility section.&quot; Parameters=&quot;RelatingObject[Type]=&amp;apos;IfcFacility&amp;apos;&quot; /&gt;<br/>
@@ -317,14 +319,14 @@ system  that is referenced by all geometric representations.</i></p>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;0b42bd58-9b5d-4a54-809c-b986940a2bf4&quot; name=&quot;Spatial Decomposition&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;667f8443-ecce-4a8d-a63f-931fab0453e0&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Spatial decomposition into facility parts.&quot; Parameters=&quot;RelatedObjects[Type]=&amp;apos;IfcFacilityPart&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Spatial decomposition into other buildings, e.g. if this building represents a complex facilities that is subdivided into facility sections.&quot; Parameters=&quot;RelatedObjects[Type]=&amp;apos;IfcFacility&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;9b85fa17-e486-4cfc-b09b-1d4d38191d62&quot; name=&quot;Spatial Container&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;61dd08ed-fd01-4955-9337-8afd284a0e6f&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;TemplateRules&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Physical elements contained in the facility.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcElement&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Annotations that are directly related to the facility.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcAnnotation&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Positioning elements that are directly related to the facility.&quot; Parameters=&quot;Type[Type]=&amp;apos;IfcPositioningElement&amp;apos;&quot; /&gt;<br/>

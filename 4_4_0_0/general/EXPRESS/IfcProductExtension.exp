@@ -1,6 +1,6 @@
 (*
 Copyright by:
-buildingSMART International Limited, 1996-2023
+buildingSMART International Limited, 1996-2024
 
 Any technical documentation made available by buildingSMART International Limited
 is the copyrighted work of buildingSMART International Limited and is owned by the 
@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Saturday, 9 September 2023
+Thursday, 14 March 2024
 
 *)
 
@@ -303,7 +303,8 @@ TYPE IfcElementAssemblyTypeEnum = ENUMERATION OF
 	,SUMPBUSTER
 	,TRAFFIC_CALMING_DEVICE
 	,DUCTBANK
-	,UMBRELLAVAULT
+	,PRESUPPORTVAULT
+	,PRESUPPORTFACE
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -488,7 +489,7 @@ ENTITY IfcAlignment
  SUBTYPE OF (IfcLinearPositioningElement);
 	PredefinedType : OPTIONAL IfcAlignmentTypeEnum;
  WHERE
-	AlignmentRepresentation : IfcAlignmenRepresentation(SELF);
+	AlignmentRepresentation : IfcAlignmentRepresentation(SELF);
 END_ENTITY;
 
 ENTITY IfcAlignmentCant
@@ -733,6 +734,7 @@ ENTITY IfcElementType
     ,IfcElementAssemblyType
     ,IfcElementComponentType
     ,IfcFurnishingElementType
+    ,IfcGeoScienceElementType
     ,IfcGeographicElementType
     ,IfcTransportElementType
     ,IfcTransportationDeviceType))
@@ -859,8 +861,10 @@ END_ENTITY;
 
 ENTITY IfcIntegerVoxelData
  SUBTYPE OF (IfcVoxelData);
-	Values : ARRAY [1:?] OF IfcInteger;
+	Values : ARRAY [1:GridSize] OF IfcInteger;
 	Unit : OPTIONAL IfcUnit;
+ DERIVE
+	GridSize : IfcInteger :=  SIZEOF(SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels);
 END_ENTITY;
 
 ENTITY IfcLabelVoxelData
@@ -1306,6 +1310,20 @@ ENTITY IfcVoxelData
     ,IfcVectorVoxelData))
  SUBTYPE OF (IfcComplementaryData);
 	ValueType : OPTIONAL IfcLabel;
+ WHERE
+	IsAssignedToProduct : EXISTS(SELF\IfcObjectDefinition.HasAssignments)
+AND
+(SIZEOF(SELF\IfcObjectDefinition.HasAssignments) = 1)
+AND
+('IFCKERNEL.IFCRELASSIGNSTOPRODUCT' IN TYPEOF(SELF\IfcObjectDefinition.HasAssignments[1]));
+	VoxelGridRepresentation : EXISTS(SELF\IfcProduct.Representation)
+AND
+(SIZEOF(QUERY(ShapeRep <* SELF\IfcProduct.Representation.Representations | 
+    (SIZEOF(ShapeRep.Items) = 1)
+    AND
+    ('IFCGEOMETRICMODELRESOURCE.IFCVOXELGRID' IN TYPEOF(ShapeRep.Items[1])))) = 1);
+	SameRepresentation : SIZEOF(QUERY(ShapeRep <* SELF\IfcObjectDefinition.HasAssignments[1]\IfcRelAssignsToProduct.RelatingProduct\IfcProduct.Representation.Representations |
+ShapeRep = SELF\IfcProduct.Representation.Representations[1])) = 1;
 END_ENTITY;
 
 ENTITY IfcZone
@@ -1376,7 +1394,7 @@ FUNCTION IfcAlignmentRepresentation
 		ThreeDRep := QUERY(threeDee <* AlignmentRepresentations | threeDee.RepresentationType = 'Curve3D');
 		CurveThreeD := QUERY(item <* ThreeDRep[1].Items | 'IFCGEOMETRYRESOURCE.IFCGRADIENTCURVE' in TYPEOF(item));
 		
-		RETURN(SIZEOF(CurveThreeD) = 1 AND SIZEOF(CurveTwoD) = 1 AND CurveThreeD\IfcGradientCurve.BaseCurve :=: CurveTwoD);
+		RETURN((SIZEOF(CurveThreeD) = 1) AND (SIZEOF(CurveTwoD) = 1) AND (CurveThreeD\IfcGradientCurve.BaseCurve :=: CurveTwoD));
 	
 	END_IF;
 	(* Missing an IFCSEGMENTEDREFERENCECURVE various placement option implementation. *)
