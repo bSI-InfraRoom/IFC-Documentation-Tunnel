@@ -118,7 +118,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="222b9380d1c111e1800000215ad4efdf">
-      <Name>Condition</Name>
+      <Name>AlarmCondition</Name>
       <Definition>Table mapping alarm condition identifiers to descriptive labels, which may be used for interpreting Pset_AlarmPHistory.Condition.</Definition>
       <PropertyType>
         <TypePropertyTableValue>

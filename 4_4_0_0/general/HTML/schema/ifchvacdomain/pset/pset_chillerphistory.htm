@@ -47,7 +47,8 @@
 <a href="../../ifcmeasureresource/lexical/ifcpowermeasure.htm">IfcPowerMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Capacity</b></td><td>The product of the  ideal capacity and the overall volumetric efficiency of the compressor.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Capacity</b></td><td>The capacity of the element.
+The product of the ideal capacity and the overall volumetric efficiency of the compressor.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Puissance</b></td><td>Le produit de la puissance optimale par le rendement global du compresseur.
 </td></tr>
@@ -61,8 +62,8 @@
 <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Energy Efficiency Ratio</b></td><td>The Energy efficiency ratio (EER) is the ratio of net cooling capacity to the total input rate of electric power applied.  By definition, the units are BTU/hour per Watt.
-The input electric power may be obtained from Pset_DistributionPortPHistoryElectrical.RealPower on the 'Power' port of the IfcChiller.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Energy Efficiency Ratio</b></td><td>Energy efficiency ratio (EER).
+Ratio of net cooling capacity to the total input rate of electric power applied. By definition, the units are BTU/hour per Watt. The input electric power may be obtained from Pset_DistributionPortPHistoryElectrical.RealPower on the 'Power' port of the IfcChiller.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>CoefficientEfficacitéEnergétique</b></td><td>L'EER ou Energy Efficiency Ratio est le coefficient d'efficacité frigorifique, rapport entre entre l'énergie utile frigorifique divisée parénergie absorbée au compresseur.
 Par définition, l'unité est le BTU/hour par Watt.
@@ -78,10 +79,7 @@ La puissance électrique fournie peut être obtenue depuis Pset_DistributionPort
 <a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Coefficient Of Performance</b></td><td>The Coefficient of performance (COP) is the ratio of heat removed to energy input.
-The energy input may be obtained by multiplying
-Pset_DistributionPortPHistoryGas.FlowRate on the 'Fuel' port of the IfcChiller by Pset_MaterialFuel.LowerHeatingValue.<br>
-The IfcDistributionPort for fuel has an associated IfcMaterial with fuel properties and is assigned to an IfcPerformanceHistory object nested within this IfcPerformanceHistory object.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Coefficient Of Performance</b></td><td>The Coefficient of performance (COP) is the ratio of heat removed to energy input. The energy input may be obtained by multiplying Pset_DistributionPortPHistoryGas.FlowRate on the 'Fuel' port of the IfcChiller by Pset_MaterialFuel.LowerHeatingValue. The IfcDistributionPort for fuel has an associated IfcMaterial with fuel properties and is assigned to an IfcPerformanceHistory object nested within this IfcPerformanceHistory object.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>CoefficientDePerformance</b></td><td>Le coefficient de performance (COP) est le rapport entre l'énergie calorifique fournie sur l'énergie abosrbée.
 L'énergie fournie peut être obtenue en multipliant Pset_DistributionPortHistoryGas.flowRate depuis le port du IfcChiller par Pset_MaterialFuel.LowerHeatingValue.

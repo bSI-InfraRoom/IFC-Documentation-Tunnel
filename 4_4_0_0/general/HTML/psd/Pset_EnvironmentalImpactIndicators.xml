@@ -54,7 +54,7 @@ There is a consensus agreement international for the five one. Last ones are not
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="8f4f2100d1e111e1800000215ad4efdf">
-      <Name>Unit</Name>
+      <Name>IndicatorsUnit</Name>
       <Definition>The unit of the quantity the environmental indicators values are related with.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

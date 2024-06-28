@@ -11,7 +11,7 @@
     <title>Pset_SlabCommon</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 1 index3 4 index4 20 index5 0; }
+      body { counter-reset: index1 6 index2 1 index3 4 index4 22 index5 0; }
     </style>
   </head>
 
@@ -20,11 +20,11 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.1.4.21");
+    parent.index.location.replace("../../toc-6.htm#6.1.4.23");
 //-->
 </script>
 
-<h4 class="std">6.1.4.21 Pset_SlabCommon</h4>
+<h4 class="std">6.1.4.23 Pset_SlabCommon</h4>
 <p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
 /
 <a href="../../ifcsharedbldgelements/lexical/ifcslab.htm">IfcSlab</a>
@@ -86,7 +86,7 @@
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Schallschutzklasse</b></td><td>Schallschutzklasse gemäß der nationalen oder regionalen Schallschutzverordnung.
 </td></tr>
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Acoustic Rating</b></td><td>Acoustic rating for this object.
-It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorbtion values).
+It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorption values).
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>IsolationAcoustique</b></td><td>Classement acoustique de cet objet. Donné selon le Code National du Bâtiment. Il indique la résistance à la transmission du son de cet objet par une valeur de référence (au lieu de fournir les valeurs totales d'absorption du son).
 </td></tr>
@@ -125,8 +125,7 @@ It is provided according to the national building code. It indicates the sound t
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Dachflächenneigung</b></td><td>Neigungswinkel der Decke gegenüber der Horizontalen wenn es sich um eine Dachfläche handelt. Angabe 0 Grad definiert eine horizontale Fläche.
 Dieser Parameter wird zusätzlich zur geometrischen Repräsentation bereitgestellt. Im Fall der Inkonsistenz zwischen dem Parameter und der Geometrie hat die geometrische Repräsention Priorität. Dieser Parameter ist für CAD Software write-only.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Pitch Angle</b></td><td>Angle of the slab to the horizontal when used as a component for the roof (specified as 0 degrees or not asserted for cases where the slab is not used as a roof component).
-The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.  For geometry editing applications, like CAD: this value should be write-only.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Pitch Angle</b></td><td>Angle of the slab to the horizontal when used as a component for the roof (specified as 0 degrees or not asserted for cases where the slab is not used as a roof component).The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.  For geometry editing applications, like CAD: this value should be write-only.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>AngleInclinaison</b></td><td>Angle de la dalle avec l'horizontale quand elle est utilisée comme un élément de la couverture (valeur 0 ou non définie lorsque la dalle ne participe pas à la couverture). Cette propriété  est donnée en complément de la représentation de la forme et des paramètres géométriques qui la déterminent. En cas d'incohérence entre ces paramètres géométriques et cette propriété, ce sont les paramètres géométriques qui priment. Les applications qui déterminent la géométrie comme les logiciels de CAO ne doivent pas autoriser la modification de cette propriété.
 </td></tr>
@@ -161,7 +160,8 @@ The shape information is provided in addition to the shape representation and th
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Brandverhalten</b></td><td>Beschreibung des Brandverhaltens des Bauteils gemäß der nationalen oder regionalen  Brandschutzverordnung.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Surface Spread Of Flame</b></td><td>Indication on how the flames spread around the surface, It is given according to the national building code that governs the fire behaviour for materials.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Surface Spread Of Flame</b></td><td>Indication on how the flames spread around the surface,
+It is given according to the national building code that governs the fire behaviour for materials.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>SurfacePropagationFlamme</b></td><td>Indique comment les flammes se propagent sur une surface. Indication donnée selon le Code National du Bâtiment régissant le comportement au feu des matériaux.
 </td></tr>
@@ -212,7 +212,7 @@ The shape information is provided in addition to the shape representation and th
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>U-Wert</b></td><td>Wärmedurchgangskoeffizient (U-Wert) der Materialschichten.
 Hier der Gesamtwärmedurchgangskoeffizient der Decke (für alle Schichten).
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Thermal Transmittance</b></td><td>Thermal transmittance coefficient (U-Value) of a material. Here the total thermal transmittance coefficient through the slab (including all materials).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Thermal Transmittance</b></td><td>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>TransmissionThermique</b></td><td>Coefficient de transmission thermique surfacique (U). C'est le coefficient global de transmission thermique à travers la dalle (tous matériaux inclus).
 </td></tr>

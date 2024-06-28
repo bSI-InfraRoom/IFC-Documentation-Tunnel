@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="bd94acd0f4e44e7092bf050bae33fce9" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoObsBoreholeGeophysicalInterval</Name>
+  <Definition>Properties for describing geophysical intervals.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/BOREHOLELOG</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/BOREHOLELOG</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="8569754fd668420ca61e0ebab3e099f2">
+      <Name>PwaveVelocity</Name>
+      <Definition>P-wave velocity of a rock or soil.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLinearVelocityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="23dc9f3d7e0b4f0da7b67f8d7cb88a1d">
+      <Name>SwaveVelocity</Name>
+      <Definition>S-wave velocity of a rock or soil.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLinearVelocityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="51595aaa4ef9451f922cb3f3919f8ed6">
+      <Name>YoungModulus</Name>
+      <Definition>Elastic modulus, mean value, α=0°.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcModulusOfElasticityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="85331f80d1ed11e1800000215ad4efdf">
+      <Name>PoissonRatio</Name>
+      <Definition>A measure of the lateral deformations in the elastic range.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Poisson Ratio</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="313bafa6c1a6491abdb136e46e1e4c70">
+      <Name>DryBulkDensity</Name>
+      <Definition>Ratio of the mass of the solid to the unit total volume (dry material).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassDensityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="9226ed5c2201447a8f76fb0c8d6608a9">
+      <Name>WetBulkDensity</Name>
+      <Definition>Ratio of the total mass to the unit total volume (material at its natural moisture content).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0c341fe4f64b4cb68507081d0db3363d">
+      <Name>Resistivity</Name>
+      <Definition>Electrical resistivity of a rock or soil (Ohm-m).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricResistanceMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1a811e842e024073bbcab9ea844e8a60">
+      <Name>SpontaneousPotential</Name>
+      <Definition>Naturally occurring (static) electrical potential in the Earth. Spontaneous potentials (SP) are usually caused by charge separation in clay or other minerals, by the presence of a semipermeable interface impeding the diffusion of ions through the pore space of rocks, or by natural flow of a conducting fluid (salty water) through the rocks. Variations in SP can be measured in the field and in wellbores to determine variations of ionic concentration in pore fluids of rocks.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricVoltageMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d25bc76088ab407387202160d37ba6e7">
+      <Name>GroundwaterTemperature</Name>
+      <Definition>Groundwater temperature observed at specific location or expected in the subject section.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8c6cbc93406649efa83ce332da8c7196">
+      <Name>HoleDiameter</Name>
+      <Definition>Drilled Borehole diameter. Also referred to as "Caliper", continuous measurement of the as-drilled diameter inside the borehole.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="38698c82cc7547aa99df761e9ff55ea5">
+      <Name>GammaRay</Name>
+      <Definition>Naturally occurring gamma radiation which characterizes the rock or sediment in a borehole or drill hole, measured by a gamma ray logging.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

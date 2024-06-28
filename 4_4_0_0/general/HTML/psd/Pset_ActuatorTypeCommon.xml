@@ -28,9 +28,9 @@
         <DefinitionAlias lang="ko-KR">해당 프로젝트에서 사용이 유형에 대한 참조 ID (예 : 'A-1') ※ 기본이있는 경우 그 기호를 사용</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="2f468380d1bd11e1800000215ad4efdf">
-      <Name>Status</Name>
-      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
+    <PropertyDef ifdguid="c1634862ba3f4e188290706e43721e75">
+      <Name>ActuatorStatus</Name>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished, "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">
@@ -108,16 +108,8 @@
           </ConstantList>
         </TypePropertyEnumeratedValue>
       </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Status</NameAlias>
-        <NameAlias lang="ja-JP">状態</NameAlias>
-        <NameAlias lang="ko-KR">페일 세이프 유형</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">要素（主にリノベーションまたは改修プロジェクトにおいて）の状態。 状態は、「新規(New)」－新しく追加される要素。「既存」－要素は存在し、かつ残りもの。「破壊」－要素は存在したが、廃棄されるもの。「一時的」－一時的に存在する要素（一時的にサポートしている構造のようなもの）。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">요청한 액츄에이터의 안전 장치 유형을 표시</DefinitionAlias>
-      </DefinitionAliases>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="42595380d1bd11e1800000215ad4efdf">
       <Name>FailPosition</Name>
@@ -207,8 +199,8 @@
         <DefinitionAlias lang="ja-JP">オーバーライド機能として手動操作が提供されるか (= TRUE) 、否か （= FALSE)を識別する。手動で操作するアクチュエータの場合は、この値をデフォルトとしてFALSEに設定する必要があるので注意すること。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="3469a24941934603a1c9c402d5623291">
-      <Name>Application</Name>
+    <PropertyDef ifdguid="0881bced80cd47a1975960781003e9dd">
+      <Name>ActuatorApplication</Name>
       <Definition>Indicates application of actuator.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
@@ -299,12 +291,8 @@
           </ConstantList>
         </TypePropertyEnumeratedValue>
       </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Application</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-      </DefinitionAliases>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases>

@@ -11,7 +11,9 @@
   <PropertyDefs>
     <PropertyDef ifdguid="90834c80d1e711e1800000215ad4efdf">
       <Name>Value</Name>
-      <Definition>Indicates measured values over time which may be recorded continuously or only when changed beyond a particular deadband.</Definition>
+      <Definition>The expected range and default value.
+
+Indicates measured values over time which may be recorded continuously or only when changed beyond a particular deadband.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
@@ -37,7 +39,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="97aa5a80d1e711e1800000215ad4efdf">
       <Name>Status</Name>
-      <Definition>Indicates an error code or identifier, whose meaning is specific to the particular automation system.  Example values include: 'ConfigurationError', 'NotConnected', 'DeviceFailure', 'SensorFailure', 'LastKnown, 'CommunicationsFailure', 'OutOfService'.</Definition>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure).
+
+Indicates an error code or identifier, whose meaning is specific to the particular automation system.  Example values include: 'ConfigurationError', 'NotConnected', 'DeviceFailure', 'SensorFailure', 'LastKnown, 'CommunicationsFailure', 'OutOfService'.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

@@ -141,7 +141,7 @@
       <Definition>The number of sockets that may be connected. In case of inconsistency, sockets defined on ports take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="0319f2a160e14deb996e9bf765c4343f" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_SupportCommon</Name>
+  <Definition>Properties describing the characteristcs of tunnel support measures.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcBuiltSystem/TUNNEL_SUPPORT</ClassName>
+    <ClassName>IfcTunnelTypicalSection/EXCAVATIONSUPPORT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcBuiltSystem/TUNNEL_SUPPORT,IfcTunnelTypicalSection/EXCAVATIONSUPPORT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="3081ec53b79f453fa0745005e571b88d">
+      <Name>NumberOfBolts</Name>
+      <Definition>Number of bolts in the bolted area.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcCountMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="aa77236a9dd240679e00e4184a5e7b53">
+      <Name>GroutingType</Name>
+      <Definition>Type of grouting used.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_GroutingType">
+            <EnumItem>STDGROUTING_CEMENT</EnumItem>
+            <EnumItem>MICROFINE_CEMENT</EnumItem>
+            <EnumItem>ULTRAFINE_CEMENT</EnumItem>
+            <EnumItem>CHEMICAL_COMPONENT</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>STDGROUTING_CEMENT</Name>
+              <Definition>Standard grouting cement.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MICROFINE_CEMENT</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ULTRAFINE_CEMENT</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CHEMICAL_COMPONENT</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="fbbaf8b4f90d49f887ed19030ef1384c">
+      <Name>UserDefinedGroutingType</Name>
+      <Definition>A user defined grouting type for when _GroutingType_ is set to USERDEFINED.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="6e0146a789374482bdd6e3e1eff1b75b">
+      <Name>PlateType</Name>
+      <Definition>Type of bolt plate used.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="aec4be7549944f78b89a752e31067f8a">
+      <Name>Arrangement</Name>
+      <Definition>Shopuld reuse Arrangement_24IjDcPPnCph3L6aDInL7 from PSet_PreSupportCommon.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2795c6af374a40abb06211985e924ee7">
+      <Name>LongitudinalSpacing</Name>
+      <Definition>Longitudinal spacing of bolts.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d23d52e1430c4ee3817fb61dbfbd00f9">
+      <Name>RadialSpacing</Name>
+      <Definition>Radial spacing of bolts.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5e457da48a8d47be9cf70783176bac7d">
+      <Name>HorizontalSpacing</Name>
+      <Definition>Horizontal spacing of bolts.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="253429dfc3d54cdc9ff9d0b4757054a5">
+      <Name>VerticalSpacing</Name>
+      <Definition>Vertical spacing of bolts.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

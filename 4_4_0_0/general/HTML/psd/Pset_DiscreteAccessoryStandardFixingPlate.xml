@@ -5,9 +5,9 @@
   <Definition>Properties specific to standard fixing plates.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcDiscreteAccessory/Standard fixing plate</ClassName>
+    <ClassName>IfcDiscreteAccessory</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcDiscreteAccessory/Standard fixing plate</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcDiscreteAccessory</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="e8fc1f00d1d211e1800000215ad4efdf">
       <Name>StandardFixingPlateWidth</Name>

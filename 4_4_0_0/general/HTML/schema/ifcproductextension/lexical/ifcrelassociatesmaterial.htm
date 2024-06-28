@@ -114,9 +114,9 @@ Material definition assigned to the elements or element types.
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>NoVoidElement</td><td>The material information must not be associated to a substraction feature (such as an opening) or to a virtual element.
-</td></tr>
 <tr><td>AllowedElements</td><td>The material information, using <a href="../../ifcmaterialresource/lexical/ifcmaterialselect.htm">IfcMaterialSelect</a> should be associated to an element occurrence (including structural members) or an element type (including the door and window styles). Also port can have assigned materials, here indicating the fluid flowing from the port.
+</td></tr>
+<tr><td>NoVoidElement</td><td>The material information must not be associated to a substraction feature (such as an opening) or to a virtual element.
 </td></tr>
 </table>
 
@@ -204,17 +204,16 @@ Material definition assigned to the elements or element types.
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a>)<b>;</b><br/>
 &nbsp;&nbsp;RelatingMaterial : <a href="../../ifcmaterialresource/lexical/ifcmaterialselect.htm">IfcMaterialSelect</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;NoVoidElement : SIZEOF(QUERY(temp &lt;* SELF\<a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a>.RelatedObjects | <br/>
-  (&#39;IFCPRODUCTEXTENSION.<a href="../../ifcproductextension/lexical/ifcfeatureelementsubtraction.htm">IfcFeatureElementSubtraction</a>&#39; IN TYPEOF(temp)) OR <br/>
-  (&#39;IFCPRODUCTEXTENSION.<a href="../../ifcproductextension/lexical/ifcvirtualelement.htm">IfcVirtualElement</a>&#39; IN TYPEOF(temp)) <br/>
-)) = 0;<br/>&nbsp;&nbsp;AllowedElements : SIZEOF(QUERY(temp &lt;* SELF\<a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a>.RelatedObjects | (<br/>
+&nbsp;&nbsp;AllowedElements : SIZEOF(QUERY(temp &lt;* SELF\<a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a>.RelatedObjects | (<br/>
   SIZEOF(TYPEOF(temp) * [   <br/>
     &#39;IFCPRODUCTEXTENSION.<a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>&#39;, <br/>
     &#39;IFCPRODUCTEXTENSION.<a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a>&#39;,<br/>
-    &#39;IFCSHAREDBLDGELEMENTS.<a href="../../ifcarchitecturedomain/lexical/ifcwindowstyle.htm">IfcWindowStyle</a>&#39;,<br/>
-    &#39;IFCSHAREDBLDGELEMENTS.<a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a>&#39;,<br/>
     &#39;IFCSTRUCTURALANALYSISDOMAIN.<a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralmember.htm">IfcStructuralMember</a>&#39;,<br/>
-    &#39;IFCPRODUCTEXTENSION.<a href="../../ifcproductextension/lexical/ifcport.htm">IfcPort</a>&#39;]) = 0) <br/>
+    &#39;IFCPRODUCTEXTENSION.<a href="../../ifcproductextension/lexical/ifcport.htm">IfcPort</a>&#39;,<br/>
+    &#39;IFCSHAREDINFRASTRUCTUREELEMENTS.<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm">IfcGeoScienceObservation</a>&#39;]) = 0) <br/>
+)) = 0;<br/>&nbsp;&nbsp;NoVoidElement : SIZEOF(QUERY(temp &lt;* SELF\<a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a>.RelatedObjects | <br/>
+  (&#39;IFCPRODUCTEXTENSION.<a href="../../ifcproductextension/lexical/ifcfeatureelementsubtraction.htm">IfcFeatureElementSubtraction</a>&#39; IN TYPEOF(temp)) OR <br/>
+  (&#39;IFCPRODUCTEXTENSION.<a href="../../ifcproductextension/lexical/ifcvirtualelement.htm">IfcVirtualElement</a>&#39; IN TYPEOF(temp)) <br/>
 )) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

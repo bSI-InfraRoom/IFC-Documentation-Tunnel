@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="a00e8f80d1ff11e1800000215ad4efdf">
       <Name>Description</Name>
-      <Definition>Description of the reinforcement.</Definition>
+      <Definition>The Description of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText" />
@@ -48,7 +48,7 @@
       <Definition>The number of bars with X direction lower bar.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -65,7 +65,7 @@
       <Definition>The number of bars with Y direction lower bar.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -82,7 +82,7 @@
       <Definition>The number of bars with X direction upper bar.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -99,7 +99,7 @@
       <Definition>The number of bars with Y direction upper bar.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>

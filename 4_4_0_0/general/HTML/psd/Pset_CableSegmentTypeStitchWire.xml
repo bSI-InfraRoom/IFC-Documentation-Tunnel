@@ -18,24 +18,20 @@
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
-    <PropertyDef ifdguid="076d1500d1e911e1800000215ad4efdf">
+    <PropertyDef ifdguid="17701219053141b9b3f1b110eb14c495">
       <Name>NominalLength</Name>
-      <Definition>Nominal length of the object.</Definition>
+      <Definition>The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcNonNegativeLengthMeasure" />
+          <DataType type="IfcPositiveLengthMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Nominal Length</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-      </DefinitionAliases>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="17b55d65a05e43f7838cd76234d9e298">
       <Name>MechanicalTension</Name>
-      <Definition>Nominal value of mechanical force applied to a flow segment.</Definition>
+      <Definition>Nominal value of mechanical force applied to the element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcForceMeasure" />

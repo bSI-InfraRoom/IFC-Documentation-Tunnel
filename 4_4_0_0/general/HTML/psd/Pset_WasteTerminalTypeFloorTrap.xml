@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="5aa98c80d21611e1800000215ad4efdf">
       <Name>NominalBodyLength</Name>
-      <Definition>Nominal or quoted length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the chamber of the trap.</Definition>
+      <Definition>Nominal or quoted length measured along the x-axis of the local coordinate system of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -28,7 +28,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="639a5e00d21611e1800000215ad4efdf">
       <Name>NominalBodyWidth</Name>
-      <Definition>Nominal or quoted length measured along the y-axis in the local coordinate system of the chamber of the trap.</Definition>
+      <Definition>Nominal or quoted length, measured along the y-axis of the local coordinate system of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -45,7 +45,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="6bf29900d21611e1800000215ad4efdf">
       <Name>NominalBodyDepth</Name>
-      <Definition>Nominal or quoted length measured along the z-axis in the local coordinate system of the chamber of the  trap.</Definition>
+      <Definition>Nominal or quoted length measured along the z-axis of the local coordinate system of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -80,7 +80,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="7ca30f00d21611e1800000215ad4efdf">
       <Name>SpilloverLevel</Name>
-      <Definition>The level at which water spills out of the terminal.</Definition>
+      <Definition>The level at which water spills out of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -97,7 +97,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="8593e080d21611e1800000215ad4efdf">
       <Name>TrapType</Name>
-      <Definition>Identifies the predefined types of waste trap used in combination with the floor trap from which the type required may be set.</Definition>
+      <Definition>Identifies the predefined types of trap from which the type required may be set.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_TrapType">
@@ -374,8 +374,7 @@ A trap may have 0,1,2,3 or 4 inlet connections and the pattern of their arrangem
     </PropertyDef>
     <PropertyDef ifdguid="c4299b00d21611e1800000215ad4efdf">
       <Name>InletConnectionSize</Name>
-      <Definition>Size of the inlet connection(s), where used, of the inlet connections.
-
+      <Definition>Size of the inlet connection.
 Note that all inlet connections are assumed to be the same size.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -395,7 +394,7 @@ Note that all inlet connections are assumed to be the same size.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="cdb30300d21611e1800000215ad4efdf">
       <Name>CoverLength</Name>
-      <Definition>The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the trap.</Definition>
+      <Definition>The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -412,7 +411,7 @@ Note that all inlet connections are assumed to be the same size.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="d6a3d480d21611e1800000215ad4efdf">
       <Name>CoverWidth</Name>
-      <Definition>The length measured along the y-axis in the local coordinate system of the cover of the  trap.</Definition>
+      <Definition>The length measured along the y-axis in the local coordinate system of the cover of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

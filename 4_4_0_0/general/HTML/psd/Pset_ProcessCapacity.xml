@@ -5,14 +5,14 @@
   <Definition>Property set for the application of process data to spatial elements and transport assets</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcSpatialElement</ClassName>
     <ClassName>IfcBuiltSystem</ClassName>
     <ClassName>IfcDistributionSystem</ClassName>
-    <ClassName>IfcZone</ClassName>
     <ClassName>IfcDoor</ClassName>
+    <ClassName>IfcSpace</ClassName>
     <ClassName>IfcTransportationDevice</ClassName>
+    <ClassName>IfcZone</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcSpatialElement,IfcBuiltSystem,IfcDistributionSystem,IfcZone,IfcDoor,IfcTransportationDevice</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcBuiltSystem,IfcDistributionSystem,IfcDoor,IfcSpace,IfcTransportationDevice,IfcZone</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="3c8560a7e9dc4706acfb468a77f65fdc">
       <Name>ProcessItem</Name>
@@ -26,6 +26,9 @@
             <EnumItem>TONNE</EnumItem>
             <EnumItem>PASSENGER</EnumItem>
             <EnumItem>VEHICLE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
           </EnumList>
           <ConstantList>
             <ConstantDef>
@@ -82,6 +85,36 @@
                 <DefinitionAlias lang="en">Item unit for the flow and transfer of vehicles</DefinitionAlias>
               </DefinitionAliases>
             </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <Definition>required category not on scale</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
           </ConstantList>
         </TypePropertyEnumeratedValue>
       </PropertyType>
@@ -112,7 +145,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="4fe945f07a10401aaf862404dd29a9ae">
       <Name>DownstreamConnections</Name>
-      <Definition>Names of downstream connected equipment and spaces (comma-separated), if not otherwise represented</Definition>
+      <Definition>Names of downstream connected equipment and spaces, if not otherwise represented</Definition>
       <PropertyType>
         <TypePropertyListValue>
           <ListValue>
@@ -125,7 +158,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="2a9b02331e6a4f088a6a33547c8093ed">
       <Name>UpstreamConnections</Name>
-      <Definition>Names of upstream connected equipment and spaces (comma-separated), if not otherwise represented</Definition>
+      <Definition>Names of upstream connected equipment and spaces, if not otherwise represented</Definition>
       <PropertyType>
         <TypePropertyListValue>
           <ListValue>

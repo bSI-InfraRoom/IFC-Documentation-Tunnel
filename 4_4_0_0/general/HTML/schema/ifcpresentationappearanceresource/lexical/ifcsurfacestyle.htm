@@ -59,15 +59,15 @@ A collection of different surface styles.
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>MaxOneShading</td><td>The <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestyleshading.htm">IfcSurfaceStyleShading</a> shall only be used zero or one time within the set of <i>Styles</i>.
+<tr><td>MaxOneExtDefined</td><td>The <a href="../../ifcpresentationappearanceresource/lexical/ifcexternallydefinedsurfacestyle.htm">IfcExternallyDefinedSurfaceStyle</a> shall only be used zero or one time within the set of <i>Styles</i>.
 </td></tr>
 <tr><td>MaxOneLighting</td><td>The <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestylelighting.htm">IfcSurfaceStyleLighting</a> shall only be used zero or one time within the set of <i>Styles</i>.
 </td></tr>
 <tr><td>MaxOneRefraction</td><td>The <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestylerefraction.htm">IfcSurfaceStyleRefraction</a> shall only be used zero or one time within the set of <i>Styles</i>.
 </td></tr>
-<tr><td>MaxOneTextures</td><td>The <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestylewithtextures.htm">IfcSurfaceStyleWithTextures</a> shall only be used zero or one time within the set of <i>Styles</i>.
+<tr><td>MaxOneShading</td><td>The <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestyleshading.htm">IfcSurfaceStyleShading</a> shall only be used zero or one time within the set of <i>Styles</i>.
 </td></tr>
-<tr><td>MaxOneExtDefined</td><td>The <a href="../../ifcpresentationappearanceresource/lexical/ifcexternallydefinedsurfacestyle.htm">IfcExternallyDefinedSurfaceStyle</a> shall only be used zero or one time within the set of <i>Styles</i>.
+<tr><td>MaxOneTextures</td><td>The <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestylewithtextures.htm">IfcSurfaceStyleWithTextures</a> shall only be used zero or one time within the set of <i>Styles</i>.
 </td></tr>
 </table>
 
@@ -124,8 +124,8 @@ A collection of different surface styles.
 &nbsp;&nbsp;Side : <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfaceside.htm">IfcSurfaceSide</a>;<br/>
 &nbsp;&nbsp;Styles : <span class="keyword">SET</span> [1:5] OF <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestyleelementselect.htm">IfcSurfaceStyleElementSelect</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;MaxOneShading : SIZEOF(QUERY(Style &lt;* SELF.Styles |<br/>
-  &#39;IFCPRESENTATIONAPPEARANCERESOURCE.<a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestyleshading.htm">IfcSurfaceStyleShading</a>&#39; IN<br/>
+&nbsp;&nbsp;MaxOneExtDefined : SIZEOF(QUERY(Style &lt;* SELF.Styles |<br/>
+  &#39;IFCPRESENTATIONAPPEARANCERESOURCE.<a href="../../ifcpresentationappearanceresource/lexical/ifcexternallydefinedsurfacestyle.htm">IfcExternallyDefinedSurfaceStyle</a>&#39; IN<br/>
    TYPEOF(Style)<br/>
   )) &lt;= 1;<br/>&nbsp;&nbsp;MaxOneLighting : SIZEOF(QUERY(Style &lt;* SELF.Styles |<br/>
   &#39;IFCPRESENTATIONAPPEARANCERESOURCE.<a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestylelighting.htm">IfcSurfaceStyleLighting</a>&#39; IN<br/>
@@ -133,11 +133,11 @@ A collection of different surface styles.
   )) &lt;= 1;<br/>&nbsp;&nbsp;MaxOneRefraction : SIZEOF(QUERY(Style &lt;* SELF.Styles |<br/>
   &#39;IFCPRESENTATIONAPPEARANCERESOURCE.<a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestylerefraction.htm">IfcSurfaceStyleRefraction</a>&#39; IN<br/>
    TYPEOF(Style)<br/>
+  )) &lt;= 1;<br/>&nbsp;&nbsp;MaxOneShading : SIZEOF(QUERY(Style &lt;* SELF.Styles |<br/>
+  &#39;IFCPRESENTATIONAPPEARANCERESOURCE.<a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestyleshading.htm">IfcSurfaceStyleShading</a>&#39; IN<br/>
+   TYPEOF(Style)<br/>
   )) &lt;= 1;<br/>&nbsp;&nbsp;MaxOneTextures : SIZEOF(QUERY(Style &lt;* SELF.Styles |<br/>
   &#39;IFCPRESENTATIONAPPEARANCERESOURCE.<a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestylewithtextures.htm">IfcSurfaceStyleWithTextures</a>&#39; IN<br/>
-   TYPEOF(Style)<br/>
-  )) &lt;= 1;<br/>&nbsp;&nbsp;MaxOneExtDefined : SIZEOF(QUERY(Style &lt;* SELF.Styles |<br/>
-  &#39;IFCPRESENTATIONAPPEARANCERESOURCE.<a href="../../ifcpresentationappearanceresource/lexical/ifcexternallydefinedsurfacestyle.htm">IfcExternallyDefinedSurfaceStyle</a>&#39; IN<br/>
    TYPEOF(Style)<br/>
   )) &lt;= 1;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcpresentationappearanceresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>

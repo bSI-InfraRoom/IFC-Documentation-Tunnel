@@ -11,7 +11,9 @@
   <PropertyDefs>
     <PropertyDef ifdguid="52455780d1fe11e1800000215ad4efdf">
       <Name>Sensitivity</Name>
-      <Definition>Current leakage to an unwanted leading path during normal operation (IEC 151-14-49).</Definition>
+      <Definition>Sensitivity.
+
+Current leakage to an unwanted leading path during normal operation (IEC 151-14-49).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure" />

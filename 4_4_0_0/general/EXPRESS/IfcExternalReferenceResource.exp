@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -112,18 +112,18 @@ TYPE IfcURIReference = STRING;
 END_TYPE;
 
 TYPE IfcDocumentConfidentialityEnum = ENUMERATION OF
-	(PUBLIC
-	,RESTRICTED
-	,CONFIDENTIAL
+	(CONFIDENTIAL
 	,PERSONAL
+	,PUBLIC
+	,RESTRICTED
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcDocumentStatusEnum = ENUMERATION OF
 	(DRAFT
-	,FINALDRAFT
 	,FINAL
+	,FINALDRAFT
 	,REVISION
 	,NOTDEFINED);
 END_TYPE;
@@ -180,7 +180,7 @@ ENTITY IfcClassification
 	EditionDate : OPTIONAL IfcDate;
 	Name : IfcLabel;
 	Description : OPTIONAL IfcText;
-	Location : OPTIONAL IfcURIReference;
+	Specification : OPTIONAL IfcURIReference;
 	ReferenceTokens : OPTIONAL LIST [1:?] OF IfcIdentifier;
  INVERSE
 	ClassificationForObjects : SET [0:?] OF IfcRelAssociatesClassification FOR RelatingClassification;

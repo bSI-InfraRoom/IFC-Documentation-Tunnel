@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="b5d18400d20211e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_SanitaryTerminalTypeSanitaryFountain</Name>
-  <Definition>Asanitary terminal that provides a low pressure jet of water for a specific purpose (IAI). HISTORY: In IFC4, Material property removed. Use materials capabilities from IfcMaterialsResource schema. Datatype of color changed to IfcLabel (still a string value).</Definition>
+  <Definition>A sanitary terminal that provides a low pressure jet of water for a specific purpose (IAI). HISTORY: In IFC4, Material property removed. Use materials capabilities from IfcMaterialResource schema. Datatype of color changed to IfcLabel (still a string value).</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcSanitaryTerminal/SANITARYFOUNTAIN</ClassName>
@@ -13,8 +13,8 @@
       <Name>FountainType</Name>
       <Definition>Selection of the type of fountain from the enumerated list of types where:-
 
-DrinkingWater: 	Sanitary appliance that provides a low pressure jet of drinking water.
-Eyewash: 	Waste water appliance, usually installed in work places where there is a risk of injury to eyes by solid particles or dangerous liquids, with which the user can wash the eyes without touching them.</Definition>
+DrinkingWater:  Sanitary appliance that provides a low pressure jet of drinking water.
+Eyewash:    Waste water appliance, usually installed in work places where there is a risk of injury to eyes by solid particles or dangerous liquids, with which the user can wash the eyes without touching them.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_FountainType">
@@ -84,15 +84,16 @@ Eyewash: 	Waste water appliance, usually installed in work places where there is
 ・洗眼器：廃水器具で、通常は個体の粒子か危険な液体による眼への障害の危険がある作業場所に設置され、使用者はそれらに触れずに目を洗うことができる。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="c7b32700d20211e1800000215ad4efdf">
+    <PropertyDef ifdguid="23c97b80d20211e1800000215ad4efdf">
       <Name>Mounting</Name>
-      <Definition>Selection of the form of mounting of the fountain from the enumerated list of mountings where:-
+      <Definition>The property enumeration Pset_SanitaryMountingEnum defines the forms of mounting or fixing of the sanitary terminal that may be specified within property sets used to define sanitary terminals (WC’s, basins, sinks, etc.) where:-
 
-BackToWall: 	A pedestal mounted sanitary terminal that fits flush to the wall at the rear to cover its service connections.
-Pedestal: 	A floor mounted sanitary terminal that has an integral base
-.
-CounterTop: 	A sanitary terminal that is installed into a horizontal surface that is installed into a horizontal surface. Note: When applied to a wash hand basin, the term more normally used is ‘vanity’. See also Wash Hand Basin Type specification.
-WallHung: 	A sanitary terminal cantilevered clear of the floor.</Definition>
+BackToWall:     A pedestal mounted sanitary terminal that fits flush to the wall at the rear to cover its service connections
+Pedestal:   A floor mounted sanitary terminal that has an integral base
+CounterTop:     A sanitary terminal that is installed into a horizontal surface that is installed into a horizontal surface. Note: When applied to a wash hand basin, the term more normally used is ‘vanity’. See also Wash Hand Basin Type specification.
+WallHung:   A sanitary terminal cantilevered clear of the floor.
+
+Note that BackToWall, Pedestal and WallHung are allowable values for a bidet.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_SanitaryMounting">
@@ -168,16 +169,21 @@ WallHung: 	A sanitary terminal cantilevered clear of the floor.</Definition>
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Mounting</NameAlias>
-        <NameAlias lang="ja-JP">設置</NameAlias>
+        <NameAlias lang="ja-JP">装着</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">設置場所の選択：
+        <DefinitionAlias lang="ja-JP">列挙するプロパティはPset_SanitaryMountingEnumでは（トイレの、洗面台、シンクなど）、衛生配管への装着法で定義される：
 
-・床置き壁排出：接続口の後部に出水口を合わせること。
-・台：床置きの衛生器具には基礎があること。
-・調理台：衛生器具の表層が水平に設置されていること。※手洗い台として設置された場合「化粧台」として扱うこと。また、洗面台種類の規格表を参照のこと。
-・壁掛け型：衛生器具は片側固定がされ床から離れていること。</DefinitionAlias>
+床置き壁排水：台座は、カバーの背面の壁にあるフラッシュバルブに接続される。
+
+床置き：床の衛生配管に装着される。
+
+カウンター：水平面に設置された衛生配管に接続します。注：手洗器があると、通常は'化粧'が使用される。手洗器を参照。
+
+壁掛け：衛生配管は壁から出され床には何もなくなる。。
+
+床置き壁排水、床置き、壁掛けは、ビデの許容値であることに注意。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="f8935c00d20211e1800000215ad4efdf">

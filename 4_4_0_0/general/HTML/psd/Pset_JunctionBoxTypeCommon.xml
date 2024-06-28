@@ -121,10 +121,12 @@ History: New in IFC4</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="9dee0600d1ea11e1800000215ad4efdf">
       <Name>NumberOfGangs</Name>
-      <Definition>Number of slots available for switches/outlets (most commonly 1, 2, 3, or 4).</Definition>
+      <Definition>Number of gangs in the object.
+
+Number of slots available for switches/outlets (most commonly 1, 2, 3, or 4).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -140,7 +142,9 @@ History: New in IFC4</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="a34b5080d1ea11e1800000215ad4efdf">
       <Name>ClearDepth</Name>
-      <Definition>Clear unobstructed depth available for cable inclusion within the junction box.</Definition>
+      <Definition>The clear depth.
+
+It indicates the unobstructed depth available for cable inclusion within the junction box.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -316,7 +320,7 @@ History: New in IFC4</Definition>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="cece3b00d1ea11e1800000215ad4efdf">
-      <Name>MountingType</Name>
+      <Name>JunctionBoxMountingType</Name>
       <Definition>Method of mounting to be adopted for the type of junction box.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
@@ -396,7 +400,7 @@ History: New in IFC4</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="df7eb100d1ea11e1800000215ad4efdf">
       <Name>IsExternal</Name>
-      <Definition>Indication of whether the junction box type is allowed for exposure to outdoor elements (set TRUE where external exposure is allowed).</Definition>
+      <Definition>Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -415,7 +419,7 @@ History: New in IFC4</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="e60d2880d1ea11e1800000215ad4efdf">
       <Name>IP_Code</Name>
-      <Definition>IEC 60529 (1989) Classification of degrees of protection provided by enclosures (IP Code).</Definition>
+      <Definition>IP Code, the International Protection Marking, IEC 60529), classifies and rates the degree of protection provided against intrusion.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -434,7 +438,7 @@ History: New in IFC4</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="076d1500d1e911e1800000215ad4efdf">
       <Name>NominalLength</Name>
-      <Definition>Nominal length of the object.</Definition>
+      <Definition>The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNonNegativeLengthMeasure" />
@@ -449,7 +453,7 @@ History: New in IFC4</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="a28e9f226e204a909976810e633a45f4">
       <Name>NominalWidth</Name>
-      <Definition>The nominal width of the object.</Definition>
+      <Definition>The nominal overall width of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNonNegativeLengthMeasure" />
@@ -468,7 +472,7 @@ History: New in IFC4</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="4ff0486291384d74b34d949a401b2a6c">
       <Name>NominalHeight</Name>
-      <Definition>Nominal height of the object.</Definition>
+      <Definition>The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNonNegativeLengthMeasure" />

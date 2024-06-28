@@ -5,9 +5,9 @@
   <Definition>Specifices the general properties for a Width event.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcAnnotation/WIDTHEVENT</ClassName>
+    <ClassName>IfcReferent/WIDTHEVENT</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcAnnotation/WIDTHEVENT</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcReferent/WIDTHEVENT</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="52834ea804d7431d89717aa6920072cf">
       <Name>Side</Name>
@@ -93,7 +93,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="a28e9f226e204a909976810e633a45f4">
       <Name>NominalWidth</Name>
-      <Definition>The nominal width of the object.</Definition>
+      <Definition>The nominal overall width of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNonNegativeLengthMeasure" />

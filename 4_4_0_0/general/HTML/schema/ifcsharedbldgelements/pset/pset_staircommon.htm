@@ -11,7 +11,7 @@
     <title>Pset_StairCommon</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 1 index3 4 index4 21 index5 0; }
+      body { counter-reset: index1 6 index2 1 index3 4 index4 23 index5 0; }
     </style>
   </head>
 
@@ -20,11 +20,11 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.1.4.22");
+    parent.index.location.replace("../../toc-6.htm#6.1.4.24");
 //-->
 </script>
 
-<h4 class="std">6.1.4.22 Pset_StairCommon</h4>
+<h4 class="std">6.1.4.24 Pset_StairCommon</h4>
 <p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
 /
 <a href="../../ifcsharedbldgelements/lexical/ifcstair.htm">IfcStair</a>
@@ -92,7 +92,7 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Anzahl der Steigungen</b></td><td>German-description-2
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Riser</b></td><td>Total number of the risers included in the stair.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Riser</b></td><td>Total number of the risers included in the stair or stair flight.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>NombreContreMarches</b></td><td>Nombre total de contremarches de l'escalier
 </td></tr>
@@ -110,7 +110,7 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Anzahl der Auftritte</b></td><td>German-description-3
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Treads</b></td><td>Total number of treads included in the stair.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Treads</b></td><td>Total number of treads included in the stair or stairflight.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>NombreGirons</b></td><td>Nombre total de girons de l'escalier
 </td></tr>
@@ -246,8 +246,7 @@ Only relevant in case of winding flights, for straight flights it is identical w
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Behindertengerecht</b></td><td>German-description-7
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Handicap Accessible</b></td><td>Indication that this object is designed to be accessible by the handicapped.
-Set to (TRUE) if this stair is rated as handicap accessible  according the local building codes, otherwise (FALSE). Accessibility maybe provided by additional means.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Handicap Accessible</b></td><td>Indication that this object is designed to be accessible by the handicapped. Set to (TRUE) if this object is rated as handicap accessible according to the local building codes, otherwise (FALSE). It is giving according to the requirements of the national building code.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>AccessibleHandicapes</b></td><td>Indique que cet objet est conçu pour être accessible aux handicapés. Indication donnée selon le Code National.
 </td></tr>
@@ -299,6 +298,7 @@ Set to (TRUE) if this stair is rated as handicap accessible  according the local
 /
 <a href="../../ifcmeasureresource/lexical/ifcthermaltransmittancemeasure.htm">IfcThermalTransmittanceMeasure</a>
 </td><td>
+Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).
 
 </td></tr>
 <tr><td>LoadBearing</td><td>
@@ -306,6 +306,7 @@ Set to (TRUE) if this stair is rated as handicap accessible  according the local
 /
 <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
 </td><td>
+Indicates whether the object is intended to carry loads (TRUE) or not (FALSE).
 
 </td></tr>
 <tr><td>FireRating</td><td>
@@ -316,8 +317,7 @@ Set to (TRUE) if this stair is rated as handicap accessible  according the local
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Feuerwiderstandsklasse</b></td><td>Feuerwiderstandasklasse gemäß der nationalen oder regionalen Brandschutzverordnung.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Fire Rating</b></td><td>Fire rating for this object.
-It is given according to the national fire safety classification.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Fire Rating</b></td><td>Fire rating for this object. It is given according to the national fire safety classification.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>ResistanceAuFeu</b></td><td>Classement au feu de l'élément donné selon la classification nationale de sécurité incendie.
 </td></tr>

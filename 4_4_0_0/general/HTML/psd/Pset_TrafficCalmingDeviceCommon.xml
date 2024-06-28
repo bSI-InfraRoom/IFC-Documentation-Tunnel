@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="fec5ed14d21e43eeba124e8eb03952d0">
       <Name>TypeDesignation</Name>
-      <Definition>Type designator according to local standards</Definition>
+      <Definition>Type designator for the element. The content depends on local standards. Eg. 'Bull nose', 'Half batter', 'Dropper', 'Chamfer' etc</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

@@ -10,9 +10,9 @@ This property set represent the long time protection (L-curve) of an electronic 
   </ApplicableClasses>
   <ApplicableTypeValue>IfcProtectiveDeviceTrippingUnit</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="0a710100d1fb11e1800000215ad4efdf">
+    <PropertyDef ifdguid="42c40f80d1fa11e1800000215ad4efdf">
       <Name>IsSelectable</Name>
-      <Definition>Indication whether the L-function can be switched off or not.</Definition>
+      <Definition>Indication whether something can be switched off or not.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -26,7 +26,7 @@ This property set represent the long time protection (L-curve) of an electronic 
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="ja-JP">装置の “ON-OFF”状態を電気的表示が切り替え可能かどうか。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">장치의 "ON-OFF"상태를 전기적으로 표시가 교체 가능합니까?</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">장치"ON-OFF "상태를 전기적으로 표시가 교체 가능합니까?</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="11980f00d1fb11e1800000215ad4efdf">

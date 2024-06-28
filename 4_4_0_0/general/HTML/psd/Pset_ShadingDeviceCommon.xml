@@ -214,7 +214,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="6f325880d20711e1800000215ad4efdf">
       <Name>MechanicalOperated</Name>
-      <Definition>Indication whether the element is operated machanically (TRUE) or not, i.e. manually  (FALSE).</Definition>
+      <Definition>Indication whether the element is operated mechanically (TRUE) or not, i.e. manually  (FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -235,10 +235,10 @@
     </PropertyDef>
     <PropertyDef ifdguid="79eced80d20711e1800000215ad4efdf">
       <Name>SolarTransmittance</Name>
-      <Definition>(Tsol): The ratio of incident solar radiation that directly passes through a shading system (also named τe). Note the following equation Asol + Rsol + Tsol = 1</Definition>
+      <Definition>The ratio of incident solar radiation that directly passes through a system (also named τe). Note the following equation Asol + Rsol + Tsol = 1</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -256,10 +256,10 @@
     </PropertyDef>
     <PropertyDef ifdguid="85401900d20711e1800000215ad4efdf">
       <Name>SolarReflectance</Name>
-      <Definition>(Rsol): The ratio of incident solar radiation that is reflected by a shading system (also named ρe). Note the following equation Asol + Rsol + Tsol = 1</Definition>
+      <Definition>(Rsol): The ratio of incident solar radiation that is reflected by a glazing system (also named ρe). Note the following equation Asol + Rsol + Tsol = 1</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -277,10 +277,10 @@
     </PropertyDef>
     <PropertyDef ifdguid="7f4a3800d20711e1800000215ad4efdf">
       <Name>VisibleLightTransmittance</Name>
-      <Definition>Fraction of the visible light that passes the shading system  at normal incidence. It is a value without unit.</Definition>
+      <Definition>Fraction of the visible light that passes the object at normal incidence. It is a value without unit.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -301,7 +301,7 @@
       <Definition>Fraction of the visible light that is reflected by the glazing at normal incidence. It is a value without unit.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -319,7 +319,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="75283980d20711e1800000215ad4efdf">
       <Name>ThermalTransmittance</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of a material of a certain thickness for this element.</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).
+
+Thermal transmittance coefficient (U-Value) of a material of a certain thickness for this element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />
@@ -384,7 +386,7 @@ Hier der Gesamtwärmedurchgangskoeffizient der Tür.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="a86ac880d20711e1800000215ad4efdf">
-      <Name>SurfaceColor</Name>
+      <Name>SurfaceColour</Name>
       <Definition>The color of the surface.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

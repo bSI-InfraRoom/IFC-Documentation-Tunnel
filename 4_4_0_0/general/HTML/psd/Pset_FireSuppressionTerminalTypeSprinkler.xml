@@ -264,7 +264,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="4d28de00d1e711e1800000215ad4efdf">
       <Name>CoverageArea</Name>
-      <Definition>The area that the sprinkler is designed to protect.</Definition>
+      <Definition>The area that is covered by the object.
+
+Indicates the area that the sprinkler is designed to protect.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure" />
@@ -297,8 +299,8 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="59ad3680d1e711e1800000215ad4efdf">
-      <Name>BulbLiquidColor</Name>
-      <Definition>The color of the liquid in the bulb for a bulb activated sprinkler. Note that the liquid color varies according to the activation temperature requirement of the sprinkler head. Note also that this property does not need to be asserted for quick response activated sprinklers.</Definition>
+      <Name>BulbLiquidColour</Name>
+      <Definition>The colour of the liquid in the bulb for a bulb activated sprinkler. Note that the liquid colour varies according to the activation temperature requirement of the sprinkler head. Note also that this property does not need to be asserted for quick response activated sprinklers.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_SprinklerBulbLiquidColor">
@@ -467,7 +469,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="83665d80d1e711e1800000215ad4efdf">
       <Name>ConnectionSize</Name>
-      <Definition>Size of the inlet connection to the sprinkler.</Definition>
+      <Definition>The connection size of the object.
+
+Inlet connection to sprinkler.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

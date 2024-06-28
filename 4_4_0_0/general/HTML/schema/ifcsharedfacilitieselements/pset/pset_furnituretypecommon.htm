@@ -11,7 +11,7 @@
     <title>Pset_FurnitureTypeCommon</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 4 index3 4 index4 4 index5 0; }
+      body { counter-reset: index1 6 index2 4 index3 4 index4 5 index5 0; }
     </style>
   </head>
 
@@ -20,11 +20,11 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.4.4.5");
+    parent.index.location.replace("../../toc-6.htm#6.4.4.6");
 //-->
 </script>
 
-<h4 class="std">6.4.4.5 Pset_FurnitureTypeCommon</h4>
+<h4 class="std">6.4.4.6 Pset_FurnitureTypeCommon</h4>
 <p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
 /
 <a href="../../ifcsharedfacilitieselements/lexical/ifcfurniture.htm">IfcFurniture</a>
@@ -68,6 +68,7 @@
 <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
 /
  <a href="../../../penum/penum_elementstatus.htm">PEnum_ElementStatus</a></td><td>
+Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).
 
 </td></tr>
 <tr><td>Style</td><td>
@@ -86,19 +87,17 @@
 <a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Nominal Height</b></td><td>The nominal height of the furniture of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Nominal Height</b></td><td>The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
 </td></tr>
 </table>
 </td></tr>
 <tr><td>NominalLength</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
 </td><td>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Nominal Length</b></td><td>Nominal length of the object.
-</td></tr>
-</table>
+The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
+
 </td></tr>
 <tr><td>NominalDepth</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
@@ -112,7 +111,7 @@
 </td></tr>
 </table>
 </td></tr>
-<tr><td>MainColor</td><td>
+<tr><td>MainColour</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>

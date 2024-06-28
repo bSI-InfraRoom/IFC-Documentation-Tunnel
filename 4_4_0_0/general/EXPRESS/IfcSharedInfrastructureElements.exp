@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -35,9 +35,9 @@ END_TYPE;
 
 TYPE IfcCourseTypeEnum = ENUMERATION OF
 	(ARMOUR
-	,FILTER
 	,BALLASTBED
 	,CORE
+	,FILTER
 	,PAVEMENT
 	,PROTECTION
 	,USERDEFINED
@@ -45,18 +45,18 @@ TYPE IfcCourseTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcEarthworksCutTypeEnum = ENUMERATION OF
-	(TRENCH
+	(ANCHOREDOPENEXCAVATION
+	,BASE_EXCAVATION
+	,BRACEDOPENEXCAVATION
+	,CONFINEDOPENEXCAVATION
+	,CUT
 	,DREDGING
 	,EXCAVATION
 	,OVEREXCAVATION
-	,TOPSOILREMOVAL
-	,STEPEXCAVATION
 	,PAVEMENTMILLING
-	,CUT
-	,BASE_EXCAVATION
-	,CONFINEDOPENEXCAVATION
-	,ANCHOREDOPENEXCAVATION
-	,BRACEDOPENEXCAVATION
+	,STEPEXCAVATION
+	,TOPSOILREMOVAL
+	,TRENCH
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -64,52 +64,63 @@ END_TYPE;
 TYPE IfcEarthworksFillTypeEnum = ENUMERATION OF
 	(BACKFILL
 	,COUNTERWEIGHT
-	,SUBGRADE
 	,EMBANKMENT
-	,TRANSITIONSECTION
-	,SUBGRADEBED
 	,SLOPEFILL
+	,SUBGRADE
+	,SUBGRADEBED
+	,TRANSITIONSECTION
+	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;
+
+TYPE IfcFaceExcavationTypeEnum = ENUMERATION OF
+	(CROSSCONNECTION
+	,FULLFACE
+	,PILOTBORE
+	,REAMING
+	,SHAFT
+	,STAGED
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcGeoScienceFeatureTypeEnum = ENUMERATION OF
-	(DISCRETEDISCONTINUITY
-	,FOLD
+	(CONTACT
+	,DISCRETEDISCONTINUITY
+	,FAULT
 	,FLUIDBODY
-	,PIEZOMETRICWATERLEVEL
-	,VOIDBODY
+	,FOLD
 	,GEOLOGICUNIT
 	,GEOTECHNICALUNIT
 	,HAZARDAREA
 	,HYDROGEOUNIT
-	,FAULT
-	,CONTACT
 	,PHYSICALPROPERTYDISTRIBUTION
+	,PIEZOMETRICWATERLEVEL
+	,VOIDBODY
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcGeoScienceModelTypeEnum = ENUMERATION OF
-	(GEOTECHMODEL
-	,HYDROGEOMODEL
+	(GEOHAZARDMODEL
 	,GEOLOGYMODEL
+	,GEOTECHMODEL
 	,GEOTECHSYNTHESISMODEL
+	,HYDROGEOMODEL
 	,PHYSICALPROPERTYDISTIBUTIONMODEL
-	,GEOHAZARDMODEL
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcGeoScienceObservationTypeEnum = ENUMERATION OF
-	(INSITUTESTRESULT
-	,LABTESTRESULT
-	,BOREHOLELOG
-	,MAPPEDFEATURE
-	,LOCALINFORMATION
+	(BOREHOLELOG
 	,GEOPHYSICALSURVEYRESULT
-	,NOTDEFINED
-	,USERDEFINED);
+	,INSITUTESTRESULT
+	,LABTESTRESULT
+	,LOCALINFORMATION
+	,MAPPEDFEATURE
+	,USERDEFINED
+	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcGeotechnicalStratumTypeEnum = ENUMERATION OF
@@ -121,36 +132,38 @@ TYPE IfcGeotechnicalStratumTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcGroundReinforcementElementTypeEnum = ENUMERATION OF
-	(PILE
-	,TUBE
-	,BAR
-	,PLATE
+	(BAR
 	,BOLT
-	,TENDON
 	,FABRIC
-	,NOTDEFINED
-	,USERDEFINED);
+	,PILE
+	,PLATE
+	,TENDON
+	,TUBE
+	,USERDEFINED
+	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcImpactProtectionDeviceTypeEnum = ENUMERATION OF
-	(CRASHCUSHION
+	(BUMPER
+	,CRASHCUSHION
 	,DAMPINGSYSTEM
 	,FENDER
-	,BUMPER
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcImprovedGroundTypeEnum = ENUMERATION OF
-	(SURCHARGEPRELOADED
-	,VERTICALLYDRAINED
+	(DEEPMIXED
+	,DEWATERED
 	,DYNAMICALLYCOMPACTED
+	,FROZEN
+	,INJECTIONGROUTED
+	,JETGROUTED
+	,LATERALLYDRAINED
 	,REPLACED
 	,ROLLERCOMPACTED
-	,GROUTED
-	,DEEPMIXED
-	,LATERALLYDRAINED
-	,FROZEN
+	,SURCHARGEPRELOADED
+	,VERTICALLYDRAINED
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -162,25 +175,37 @@ TYPE IfcPavementTypeEnum = ENUMERATION OF
 	,NOTDEFINED);
 END_TYPE;
 
+TYPE IfcRadialExcavationTypeEnum = ENUMERATION OF
+	(NICHE
+	,PROFILEENLARGEMENT
+	,REPROFILING
+	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;
+
+TYPE IfcReinforcedSoilTypeEnum = ENUMERATION OF
+	(DYNAMICALLYCOMPACTED
+	,GROUTED
+	,REPLACED
+	,ROLLERCOMPACTED
+	,SURCHARGEPRELOADED
+	,VERTICALLYDRAINED
+	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;
+
 TYPE IfcSignTypeEnum = ENUMERATION OF
 	(MARKER
-	,PICTORAL
 	,MIRROR
+	,PICTORAL
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcSignalTypeEnum = ENUMERATION OF
-	(VISUAL
-	,AUDIO
+	(AUDIO
 	,MIXED
-	,USERDEFINED
-	,NOTDEFINED);
-END_TYPE;
-
-TYPE IfcUndergroundExcavationTypeEnum = ENUMERATION OF
-	(FACEEXCAVATION
-	,RADIALEXCAVATION
+	,VISUAL
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -225,15 +250,18 @@ END_ENTITY;
 
 ENTITY IfcEarthworksCut
  SUBTYPE OF (IfcExcavation);
-	PredefinedType : IfcEarthworksCutTypeEnum;
+	PredefinedType : OPTIONAL IfcEarthworksCutTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcEarthworksCutTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcEarthworksCutTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcEarthworksCutTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcEarthworksElement
  SUPERTYPE OF (ONEOF
     (IfcEarthworksFill
-    ,IfcImprovedGround))
+    ,IfcImprovedGround
+    ,IfcReinforcedSoil))
  SUBTYPE OF (IfcBuiltElement);
 END_ENTITY;
 
@@ -253,6 +281,13 @@ ENTITY IfcExcavation
  SUBTYPE OF (IfcFeatureElementSubtraction);
 END_ENTITY;
 
+ENTITY IfcFaceExcavation
+ SUBTYPE OF (IfcUndergroundExcavation);
+	PredefinedType : IfcFaceExcavationTypeEnum;
+ WHERE
+	HasObjectType : (PredefinedType <> IfcFaceExcavationTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+END_ENTITY;
+
 ENTITY IfcGeoScienceElement
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcBorehole
@@ -263,7 +298,9 @@ END_ENTITY;
 
 ENTITY IfcGeoScienceElementType
  ABSTRACT SUPERTYPE OF (ONEOF
-    (IfcBoreholeType))
+    (IfcBoreholeType
+    ,IfcGeoScienceFeatureType
+    ,IfcGeoScienceModelType))
  SUBTYPE OF (IfcElementType);
 END_ENTITY;
 
@@ -278,7 +315,8 @@ ENTITY IfcGeoScienceFeature
 ('IFCSHAREDINFRASTRUCTUREELEMENTS.IFCGEOSCIENCEFEATURETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
-ENTITY IfcGeoScienceFeatureType;
+ENTITY IfcGeoScienceFeatureType
+ SUBTYPE OF (IfcGeoScienceElementType);
 	PredefinedType : IfcGeoScienceFeatureTypeEnum;
  WHERE
 	CorrectPredefinedType : (PredefinedType <> IfcGeoScienceFeatureTypeEnum.USERDEFINED) OR
@@ -296,7 +334,8 @@ ENTITY IfcGeoScienceModel
 ('IFCSHAREDINFRASTRUCTUREELEMENTS.IFCGEOSCIENCEMODELTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
-ENTITY IfcGeoScienceModelType;
+ENTITY IfcGeoScienceModelType
+ SUBTYPE OF (IfcGeoScienceElementType);
 	PredefinedType : IfcGeoScienceModelTypeEnum;
  WHERE
 	CorrectPredefinedType : (PredefinedType <> IfcGeoScienceModelTypeEnum.USERDEFINED) OR
@@ -334,11 +373,11 @@ END_ENTITY;
 
 ENTITY IfcGeotechnicalStratum
  SUBTYPE OF (IfcGeotechnicalElement);
-	PredefinedType : IfcGeotechnicalStratumTypeEnum;
+	PredefinedType : OPTIONAL IfcGeotechnicalStratumTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcGeotechnicalStratumTypeEnum.USERDEFINED) OR 
-
-				EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcGeotechnicalStratumTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcGeotechnicalStratumTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcGroundReinforcementElement
@@ -383,7 +422,8 @@ ENTITY IfcImprovedGround
  SUBTYPE OF (IfcEarthworksElement);
 	PredefinedType : IfcImprovedGroundTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcImprovedGroundTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcImprovedGroundTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcImprovedGroundTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcPavement
@@ -403,6 +443,23 @@ ENTITY IfcPavementType
  WHERE
 	CorrectPredefinedType : (PredefinedType <> IfcPavementTypeEnum.USERDEFINED) OR
 ((PredefinedType = IfcPavementTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
+END_ENTITY;
+
+ENTITY IfcRadialExcavation
+ SUBTYPE OF (IfcUndergroundExcavation);
+	PredefinedType : IfcRadialExcavationTypeEnum;
+ WHERE
+	HasObjectType : (PredefinedType <> IfcRadialExcavationTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+END_ENTITY;
+
+ENTITY IfcReinforcedSoil
+ SUBTYPE OF (IfcEarthworksElement);
+	PredefinedType : OPTIONAL IfcReinforcedSoilTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcReinforcedSoilTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcReinforcedSoilTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType))
+;
 END_ENTITY;
 
 ENTITY IfcSign
@@ -444,10 +501,10 @@ ENTITY IfcSignalType
 END_ENTITY;
 
 ENTITY IfcUndergroundExcavation
+ ABSTRACT SUPERTYPE OF (ONEOF
+    (IfcFaceExcavation
+    ,IfcRadialExcavation))
  SUBTYPE OF (IfcExcavation);
-	PredefinedType : IfcUndergroundExcavationTypeEnum;
- WHERE
-	HasObjectType : (PredefinedType <> IfcUndergroundExcavationTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
 
 END_SCHEMA;

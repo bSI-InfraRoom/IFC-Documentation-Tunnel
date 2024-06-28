@@ -126,9 +126,9 @@ Indication of the connection type in relation to the path of the <i>RelatingObje
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>NormalizedRelatingPriorities</td><td>The <i>RelatingProperties</i> shall all be given as a normalized integer range [0..100], where 0 is the lowest and 100 the highest priority of the material layers.
-</td></tr>
 <tr><td>NormalizedRelatedPriorities</td><td>The <i>RelatedProperties</i> shall all be given as a normalized integer range [0..100], where 0 is the lowest and 100 the highest priority of the material layers.
+</td></tr>
+<tr><td>NormalizedRelatingPriorities</td><td>The <i>RelatingProperties</i> shall all be given as a normalized integer range [0..100], where 0 is the lowest and 100 the highest priority of the material layers.
 </td></tr>
 </table>
 
@@ -254,15 +254,15 @@ Indication of the connection type in relation to the path of the <i>RelatingObje
 &nbsp;&nbsp;RelatedConnectionType : <a href="../../ifcsharedbldgelements/lexical/ifcconnectiontypeenum.htm">IfcConnectionTypeEnum</a>;<br/>
 &nbsp;&nbsp;RelatingConnectionType : <a href="../../ifcsharedbldgelements/lexical/ifcconnectiontypeenum.htm">IfcConnectionTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;NormalizedRelatingPriorities : (SIZEOF(RelatingPriorities) = 0)<br/>
-OR<br/>
-(SIZEOF (QUERY (temp &lt;* RelatingPriorities<br/>
-  | {0 &lt;= temp &lt;= 100}<br/>
-  )) = SIZEOF(RelatingPriorities));<br/>&nbsp;&nbsp;NormalizedRelatedPriorities : (SIZEOF(RelatedPriorities) = 0)<br/>
+&nbsp;&nbsp;NormalizedRelatedPriorities : (SIZEOF(RelatedPriorities) = 0)<br/>
 OR<br/>
 (SIZEOF (QUERY (temp &lt;* RelatedPriorities<br/>
   | {0 &lt;= temp &lt;= 100}<br/>
-  )) = SIZEOF(RelatedPriorities));<br/><span class="keyword">END_ENTITY;</span><br/>
+  )) = SIZEOF(RelatedPriorities));<br/>&nbsp;&nbsp;NormalizedRelatingPriorities : (SIZEOF(RelatingPriorities) = 0)<br/>
+OR<br/>
+(SIZEOF (QUERY (temp &lt;* RelatingPriorities<br/>
+  | {0 &lt;= temp &lt;= 100}<br/>
+  )) = SIZEOF(RelatingPriorities));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedbldgelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

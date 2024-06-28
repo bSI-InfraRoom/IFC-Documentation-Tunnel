@@ -10,7 +10,7 @@
   <ApplicableTypeValue>IfcFlowMeter</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="f374e380d1e711e1800000215ad4efdf">
-      <Name>Purpose</Name>
+      <Name>FlowMeterPurpose</Name>
       <Definition>Enumeration defining the purpose of the flow meter occurrence.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>

@@ -121,7 +121,7 @@ SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties ins
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="6b7ae380d1bf11e1800000215ad4efdf">
-      <Name>Shape</Name>
+      <Name>AirTerminalShape</Name>
       <Definition>Shape of the air terminal. Slot is typically a long narrow supply device with an aspect ratio generally greater than 10 to 1.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
@@ -358,10 +358,10 @@ SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties ins
     </PropertyDef>
     <PropertyDef ifdguid="9c5b1880d1bf11e1800000215ad4efdf">
       <Name>NumberOfSlots</Name>
-      <Definition>Number of slots.</Definition>
+      <Definition>Indicates the number of slots.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -487,8 +487,10 @@ SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties ins
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="b72d8d00d1bf11e1800000215ad4efdf">
-      <Name>AirFlowrateRange</Name>
-      <Definition>Air flowrate range within which the air terminal is designed to operate.</Definition>
+      <Name>AirFlowRateRange</Name>
+      <Definition>Possible range of airflow that can be delivered.
+
+Air flowrate range within which the air terminal is designed to operate.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcVolumetricFlowRateMeasure" />
@@ -507,7 +509,9 @@ SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties ins
     </PropertyDef>
     <PropertyDef ifdguid="be549b00d1bf11e1800000215ad4efdf">
       <Name>TemperatureRange</Name>
-      <Definition>Temperature range within which the air terminal is designed to operate.</Definition>
+      <Definition>Allowable maximum and minimum temperature.
+
+Temperature range within which the air terminal is designed to operate.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />
@@ -737,8 +741,8 @@ Réglable: émission parallèle et aussi s'éloignant de la surface de fixation.
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="f065fd00d1bf11e1800000215ad4efdf">
-      <Name>FinishColor</Name>
-      <Definition>The finish color for the air terminal.</Definition>
+      <Name>FinishColour</Name>
+      <Definition>The finish colour of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -756,7 +760,7 @@ Réglable: émission parallèle et aussi s'éloignant de la surface de fixation.
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="f6f47480d1bf11e1800000215ad4efdf">
-      <Name>MountingType</Name>
+      <Name>AirTerminalMountingType</Name>
       <Definition>The way the air terminal is mounted to the ceiling, wall, etc.
 
 Surface: mounted to the surface of something (e.g., wall, duct, etc.).
@@ -1086,7 +1090,7 @@ LAYIN：天井にlay-in形式での取り付け（下がり天井格子など）
     </PropertyDef>
     <PropertyDef ifdguid="39b64c80d1c011e1800000215ad4efdf">
       <Name>HasSoundAttenuator</Name>
-      <Definition>If TRUE, the air terminal has sound attenuation.</Definition>
+      <Definition>If TRUE, the object has sound attenuation.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

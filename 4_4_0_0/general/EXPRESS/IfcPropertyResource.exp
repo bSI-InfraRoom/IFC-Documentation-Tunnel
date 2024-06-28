@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -71,7 +71,8 @@ REFERENCE FROM IFCKERNEL
 
 REFERENCE FROM IFCMATERIALRESOURCE
 (
-  IfcMaterialDefinition
+  IfcMaterialDefinition,
+  IfcMaterialProperties
 );
 
 REFERENCE FROM IFCMEASURERESOURCE
@@ -159,6 +160,7 @@ ENTITY IfcProperty
 	PartOfComplex : SET [0:?] OF IfcComplexProperty FOR HasProperties;
 	HasConstraints : SET [0:?] OF IfcResourceConstraintRelationship FOR RelatedResourceObjects;
 	HasApprovals : SET [0:?] OF IfcResourceApprovalRelationship FOR RelatedResourceObjects;
+	PartOfMaterialOrProfileProperties : SET [0:?] OF IfcExtendedProperties FOR Properties;
 END_ENTITY;
 
 ENTITY IfcPropertyAbstraction
@@ -178,12 +180,12 @@ ENTITY IfcPropertyBoundedValue
 	Unit : OPTIONAL IfcUnit;
 	SetPointValue : OPTIONAL IfcValue;
  WHERE
+	SameUnitLowerSet : NOT(EXISTS(LowerBoundValue)) OR NOT(EXISTS(SetPointValue)) OR
+(TYPEOF(LowerBoundValue) = TYPEOF(SetPointValue));
 	SameUnitUpperLower : NOT(EXISTS(UpperBoundValue)) OR NOT(EXISTS(LowerBoundValue)) OR
 (TYPEOF(UpperBoundValue) = TYPEOF(LowerBoundValue));
 	SameUnitUpperSet : NOT(EXISTS(UpperBoundValue)) OR NOT(EXISTS(SetPointValue)) OR
 (TYPEOF(UpperBoundValue) = TYPEOF(SetPointValue));
-	SameUnitLowerSet : NOT(EXISTS(LowerBoundValue)) OR NOT(EXISTS(SetPointValue)) OR
-(TYPEOF(LowerBoundValue) = TYPEOF(SetPointValue));
 END_ENTITY;
 
 ENTITY IfcPropertyDependencyRelationship

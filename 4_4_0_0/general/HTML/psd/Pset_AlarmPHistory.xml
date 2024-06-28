@@ -23,8 +23,8 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="ef819b00d1c011e1800000215ad4efdf">
-      <Name>Condition</Name>
-      <Definition>Indicates alarm condition over time.  The range of possible values and their meanings is defined by Pset_AlarmTypeCommon.Condition.  An empty value indicates no present alarm condition.</Definition>
+      <Name>ConditionHistory</Name>
+      <Definition>Indicates alarm condition over time. The range of possible values and their meanings is defined by Pset_AlarmTypeCommon.Condition. An empty value indicates no present alarm condition.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
@@ -62,7 +62,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="fc9e8a00d1c011e1800000215ad4efdf">
-      <Name>User</Name>
+      <Name>UserHistory</Name>
       <Definition>Indicates acknowledging user over time by identification corresponding to IfcPerson.Identification on an IfcActor.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />

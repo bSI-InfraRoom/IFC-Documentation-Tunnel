@@ -33,7 +33,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="7f7557a952e4459db81dcb5b64a7c7e5">
       <Name>InstallationPlan</Name>
-      <Definition>Identifier of the corresponding installation plan.</Definition>
+      <Definition>Reference to external information source about installation or construction plan of the element.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcDocumentReference" />
       </PropertyType>

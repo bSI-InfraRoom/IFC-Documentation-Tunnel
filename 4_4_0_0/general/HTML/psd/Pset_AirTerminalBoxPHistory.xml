@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="5d789300d1be11e1800000215ad4efdf">
       <Name>DamperPosition</Name>
-      <Definition>Control damper position, ranging from 0 to 1.</Definition>
+      <Definition>Control damper position, ranging from 0 to 1; damper position (0=closed=90deg position angle, 1=open=0deg position angle).</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
@@ -58,23 +58,6 @@
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="fr-FR">Performance acoustique</DefinitionAlias>
         <DefinitionAlias lang="ja-JP">騒音性能</DefinitionAlias>
-      </DefinitionAliases>
-    </PropertyDef>
-    <PropertyDef ifdguid="68cbbe80d1be11e1800000215ad4efdf">
-      <Name>AirflowCurve</Name>
-      <Definition>Air flowrate versus damper position relationship;airflow = f ( valve position).</Definition>
-      <PropertyType>
-        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
-      </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Airflow Curve</NameAlias>
-        <NameAlias lang="fr-FR">Courbe de débit d'air</NameAlias>
-        <NameAlias lang="ja-JP">流量曲線</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="fr-FR">Relation entre débit d'air par rapport à la position du registre; Débit d'air = f (position du clapet)</DefinitionAlias>
-        <DefinitionAlias lang="ja-JP">ダンパ開度と風量の関係　　風量＝f(開度)</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
   </PropertyDefs>

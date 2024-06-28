@@ -96,7 +96,9 @@ VARIABLE: Controller element is an in-memory variable.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="89e7db80d1cd11e1800000215ad4efdf">
       <Name>Labels</Name>
-      <Definition>Table mapping values to labels, where each entry corresponds to an integer within the ValueRange.</Definition>
+      <Definition>Table mapping values to labels
+
+Each entry corresponds to an integer within the ValueRange.</Definition>
       <PropertyType>
         <TypePropertyTableValue>
           <Expression />
@@ -116,7 +118,7 @@ VARIABLE: Controller element is an in-memory variable.</Definition>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="910ee980d1cd11e1800000215ad4efdf">
-      <Name>Range</Name>
+      <Name>IntegerRange</Name>
       <Definition>The physical range of values supported by the device.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
@@ -132,7 +134,9 @@ VARIABLE: Controller element is an in-memory variable.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="95d39d80d1cd11e1800000215ad4efdf">
       <Name>Value</Name>
-      <Definition>The expected range and default value.  The LowerLimitValue and UpperLimitValue must fall within the physical Range.</Definition>
+      <Definition>The expected range and default value.
+
+The expected range and default value. The LowerLimitValue and UpperLimitValue must fall within the physical Range.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcInteger" />

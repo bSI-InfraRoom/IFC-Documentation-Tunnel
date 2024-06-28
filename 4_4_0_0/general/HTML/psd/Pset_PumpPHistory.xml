@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="a6503c00d1fe11e1800000215ad4efdf">
       <Name>MechanicalEfficiency</Name>
-      <Definition>The pumps operational mechanical efficiency.</Definition>
+      <Definition>The objects operational mechanical efficiency.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
@@ -26,7 +26,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="a9e3c300d1fe11e1800000215ad4efdf">
       <Name>OverallEfficiency</Name>
-      <Definition>The pump and motor overall operational efficiency.</Definition>
+      <Definition>Total efficiency of object.
+
+The pump and motor overall operational efficiency.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
@@ -71,7 +73,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="b36d2b00d1fe11e1800000215ad4efdf">
       <Name>Flowrate</Name>
-      <Definition>The actual operational fluid flowrate.</Definition>
+      <Definition>The flowrate of the fluid.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
@@ -85,7 +87,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="b6681b80d1fe11e1800000215ad4efdf">
-      <Name>Power</Name>
+      <Name>PowerHistory</Name>
       <Definition>The actual power consumption of the pump.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />

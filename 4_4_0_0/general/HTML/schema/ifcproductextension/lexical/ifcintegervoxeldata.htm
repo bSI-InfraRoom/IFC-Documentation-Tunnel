@@ -30,7 +30,7 @@
 </details>
 <details open="open"><summary>Change log</summary><table class="gridtable">
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcproductextension/lexical/ifcintegervoxeldata.htm">IfcIntegerVoxelData</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
@@ -41,13 +41,14 @@
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>G</th></tr>
-<tr><td>9</td><td>Values</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td>A[1:GridSize]</td><td>
-The values assigned to the voxels. First x, then y and lastly z.
+<tr><td>9</td><td>ValueData</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td>L[1:?]</td><td>
+The values assigned to the voxels as raw integer typed data.
 </td><td>X</td></tr>
 <tr><td>10</td><td>Unit</td><td><a href="../../ifcmeasureresource/lexical/ifcunit.htm">IfcUnit</a></td><td>? </td><td>
 An optional unit for the integer values.
 </td><td>X</td></tr>
-<tr><td></td><td>GridSize<br/>:= SIZEOF(SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels)</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td></td>
+<tr><td></td><td>Values<br/>:=IfcListToExpandedArray(ValueData,1,SELF\IfcVoxelData.GridSize,SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels)</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td>A[1:SELF\IfcVoxelData.GridSize]</td><td>Array of integer values on voxels accessible by the same index as that of the corresponding voxel geometric representation.
+</td>
 <td>X</td></tr>
 </table>
 </details>
@@ -155,14 +156,17 @@ Reference to the representations of the product, being either a representation (
 <tr><td>8</td><td>ValueType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 An optional value type used for the values defined in one of the subtypes. Only the names (as labels) of the types available in the <a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a> select type are allowed.
 </td><td>X</td></tr>
+<tr><td></td><td>GridSize<br/>:= SIZEOF(SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels)</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td></td>
+<td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcintegervoxeldata.htm">IfcIntegerVoxelData</a></td></tr>
-<tr><td>9</td><td>Values</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td>A[1:GridSize]</td><td>
-The values assigned to the voxels. First x, then y and lastly z.
+<tr><td>9</td><td>ValueData</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td>L[1:?]</td><td>
+The values assigned to the voxels as raw integer typed data.
 </td><td>X</td></tr>
 <tr><td>10</td><td>Unit</td><td><a href="../../ifcmeasureresource/lexical/ifcunit.htm">IfcUnit</a></td><td>? </td><td>
 An optional unit for the integer values.
 </td><td>X</td></tr>
-<tr><td></td><td>GridSize<br/>:= SIZEOF(SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels)</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td></td>
+<tr><td></td><td>Values<br/>:=IfcListToExpandedArray(ValueData,1,SELF\IfcVoxelData.GridSize,SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels)</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td>A[1:SELF\IfcVoxelData.GridSize]</td><td>Array of integer values on voxels accessible by the same index as that of the corresponding voxel geometric representation.
+</td>
 <td>X</td></tr>
 </table>
 </details>
@@ -212,13 +216,12 @@ An optional unit for the integer values.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Values&quot; use=&quot;optional&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ValueData&quot; use=&quot;optional&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:restriction&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:list itemType=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleType&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:minLength value=&quot;0&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:simpleType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:attribute&gt;<br/>
@@ -229,10 +232,10 @@ An optional unit for the integer values.
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcIntegerVoxelData<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcvoxeldata.htm">IfcVoxelData</a>)<b>;</b><br/>
-&nbsp;&nbsp;Values : <span class="keyword">ARRAY</span> [1:GridSize] OF <a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>;<br/>
+&nbsp;&nbsp;ValueData : <span class="keyword">LIST</span> [1:?] OF <a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>;<br/>
 &nbsp;&nbsp;Unit : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcunit.htm">IfcUnit</a>;<br/>
 &nbsp;<span class="keyword">DERIVE</span><br/>
-&nbsp;&nbsp;GridSize : <a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a> :=  SIZEOF(SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels);<br/>
+&nbsp;&nbsp;Values : <span class="keyword">ARRAY</span> [1:SELF\IfcVoxelData.GridSize] OF <a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a> := IfcListToExpandedArray(ValueData,1,SELF\IfcVoxelData.GridSize,SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels);<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

@@ -118,7 +118,12 @@
     <PropertyDef ifdguid="1bae1380d1e311e1800000215ad4efdf">
       <Name>EvaporatorMediumType</Name>
       <Definition>ColdLiquid: Evaporator is using liquid type of fluid to exchange heat with refrigerant.
-ColdAir: Evaporator is using air to exchange heat with refrigerant.</Definition>
+ColdAir: Evaporator is using air to exchange heat with refrigerant.
+Property: RefrigerantClass description changed. New description:
+Refrigerant class used by the object.
+CFC: Chlorofluorocarbons.
+HCFC: Hydrochlorofluorocarbons.
+HFC: Hydrofluorocarbons.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_EvaporatorMediumType">
@@ -421,7 +426,7 @@ HFC: Hydrofluorocarbons.
     </PropertyDef>
     <PropertyDef ifdguid="5c0d9180d1e311e1800000215ad4efdf">
       <Name>InternalRefrigerantVolume</Name>
-      <Definition>Internal volume of evaporator (refrigerant side).</Definition>
+      <Definition>Internal volume of object (refrigerant side).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumeMeasure" />
@@ -438,7 +443,7 @@ HFC: Hydrofluorocarbons.
     </PropertyDef>
     <PropertyDef ifdguid="616adc00d1e311e1800000215ad4efdf">
       <Name>InternalWaterVolume</Name>
-      <Definition>Internal volume of evaporator (water side).</Definition>
+      <Definition>Internal volume of object (water side).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumeMeasure" />

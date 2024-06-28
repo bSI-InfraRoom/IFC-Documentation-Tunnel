@@ -168,7 +168,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="c0385180d1f311e1800000215ad4efdf">
       <Name>NominalDiameter</Name>
-      <Definition>The nominal diameter of the pipe segment.</Definition>
+      <Definition>Nominal diameter or width of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -185,7 +185,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="c7f7f600d1f311e1800000215ad4efdf">
       <Name>InnerDiameter</Name>
-      <Definition>The actual inner diameter of the pipe or tube.</Definition>
+      <Definition>The actual inner diameter of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -202,7 +202,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="cf1f0400d1f311e1800000215ad4efdf">
       <Name>OuterDiameter</Name>
-      <Definition>The actual outer diameter of the pipe.</Definition>
+      <Definition>The actual outer diameter of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -217,9 +217,9 @@
         <DefinitionAlias lang="ja-JP">配管の実外径(リストの複数の数字の解釈については呼び径参照)</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="c388842f4a9346c98c00a51f8c2a8fbe">
+    <PropertyDef ifdguid="79787d79ebdf43249c675b90e814ce87">
       <Name>Length</Name>
-      <Definition>The length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <Definition>The length of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

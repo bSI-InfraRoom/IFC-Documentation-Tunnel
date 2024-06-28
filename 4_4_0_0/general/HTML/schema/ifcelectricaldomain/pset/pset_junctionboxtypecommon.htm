@@ -73,10 +73,11 @@ IFC4にて新規。
 <tr><td>NumberOfGangs</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Gangs</b></td><td>Number of slots available for switches/outlets (most commonly 1, 2, 3, or 4).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Gangs</b></td><td>Number of gangs in the object.
+Number of slots available for switches/outlets (most commonly 1, 2, 3, or 4).
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>分岐の数</b></td><td>スロットスイッチ/コンセント（最も一般的に1、2、3、または4）で使用可能な数。
 </td></tr>
@@ -88,7 +89,8 @@ IFC4にて新規。
 <a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Clear Depth</b></td><td>Clear unobstructed depth available for cable inclusion within the junction box.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Clear Depth</b></td><td>The clear depth.
+It indicates the unobstructed depth available for cable inclusion within the junction box.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>明確な深さ</b></td><td>ジヤンクションボックスにケーブルを収められる深さ。
 </td></tr>
@@ -120,7 +122,7 @@ IFC4にて新規。
 </td></tr>
 </table>
 </td></tr>
-<tr><td>MountingType</td><td>
+<tr><td>JunctionBoxMountingType</td><td>
 <span class="self-ref">P_ENUMERATEDVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
@@ -139,7 +141,7 @@ IFC4にて新規。
 <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Is External</b></td><td>Indication of whether the junction box type is allowed for exposure to outdoor elements (set TRUE where external exposure is allowed).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Is External</b></td><td>Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>外部露出</b></td><td>ジャンクションボックスが外部露出の許可がされているかどうかを表示（外部露出が許可されている場合は設定）。
 </td></tr>
@@ -161,7 +163,7 @@ IFC4にて新規。
 <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Nominal Length</b></td><td>Nominal length of the object.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Nominal Length</b></td><td>The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
 </td></tr>
 </table>
 </td></tr>
@@ -171,7 +173,7 @@ IFC4にて新規。
 <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Nominal Width</b></td><td>The nominal width of the object.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Nominal Width</b></td><td>The nominal overall width of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>公称幅</b></td><td>呼び幅寸法。
 </td></tr>
@@ -182,7 +184,7 @@ IFC4にて新規。
 /
 <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>
 </td><td>
-Nominal height of the object.
+The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
 
 </td></tr>
 </table>

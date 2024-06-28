@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="9b2cea00d1c511e1800000215ad4efdf">
       <Name>LoadBearingCapacity</Name>
-      <Definition>Maximum load bearing capacity of a supporting structure ( e.g. as applied to the floor structure of a storey, or the supporting capacity of a frame assembly).</Definition>
+      <Definition>Maximum load bearing capacity of the floor structure throughtout the storey as designed.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPlanarForceMeasure" />

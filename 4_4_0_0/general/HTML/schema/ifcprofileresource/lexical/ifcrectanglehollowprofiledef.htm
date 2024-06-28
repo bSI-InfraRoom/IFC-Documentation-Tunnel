@@ -50,7 +50,7 @@
 <blockquote class="change-ifc2x4">
 <p>IFC4 CHANGE  Types of <i>InnerFilletRadius</i> and <i>OuterFilletRadius</i> relaxed to allow for zero values.</p>
 </blockquote>
-<p>Figure 556 illustrates parameters of a rectangular or square hollow profile definition.</p>
+<p>Figure 554 illustrates parameters of a rectangular or square hollow profile definition.</p>
 <table><tr><td>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
   <tbody>
@@ -76,7 +76,7 @@ relative to the profile.</p>
   </td></tr></tbody>
 </table>
 </td></tr>
-<tr><td><p class="figure">Figure 556 &mdash; Rectangle hollow profile</p></td></tr>
+<tr><td><p class="figure">Figure 554 &mdash; Rectangle hollow profile</p></td></tr>
 </table>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
@@ -95,11 +95,11 @@ Outer corner radius.
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>ValidWallThickness</td><td>The wall thickness shall be smaller than half of the X and Y dimension of the rectangle.
-</td></tr>
 <tr><td>ValidInnerRadius</td><td>The inner fillet radius (if given) shall be small enough to fit into the void.
 </td></tr>
 <tr><td>ValidOuterRadius</td><td>The outer fillet radius (if given) shall be small enough to fit into the bounding box.
+</td></tr>
+<tr><td>ValidWallThickness</td><td>The wall thickness shall be smaller than half of the X and Y dimension of the rectangle.
 </td></tr>
 </table>
 
@@ -191,13 +191,13 @@ Outer corner radius.
 &nbsp;&nbsp;InnerFilletRadius : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>;<br/>
 &nbsp;&nbsp;OuterFilletRadius : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;ValidWallThickness : (WallThickness &lt; (SELF\<a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>.XDim/2.)) AND <br/>
-(WallThickness &lt; (SELF\<a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>.YDim/2.));<br/>&nbsp;&nbsp;ValidInnerRadius : NOT(EXISTS(InnerFilletRadius)) OR <br/>
+&nbsp;&nbsp;ValidInnerRadius : NOT(EXISTS(InnerFilletRadius)) OR <br/>
 ((InnerFilletRadius &lt;= (SELF\<a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>.XDim/2. - WallThickness)) AND <br/>
  (InnerFilletRadius &lt;= (SELF\<a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>.YDim/2. - WallThickness)))<br/>
 ;<br/>&nbsp;&nbsp;ValidOuterRadius : NOT(EXISTS(OuterFilletRadius)) OR <br/>
 ((OuterFilletRadius &lt;= (SELF\<a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>.XDim/2.)) AND <br/>
- (OuterFilletRadius &lt;= (SELF\<a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>.YDim/2.)));<br/><span class="keyword">END_ENTITY;</span><br/>
+ (OuterFilletRadius &lt;= (SELF\<a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>.YDim/2.)));<br/>&nbsp;&nbsp;ValidWallThickness : (WallThickness &lt; (SELF\<a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>.XDim/2.)) AND <br/>
+(WallThickness &lt; (SELF\<a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>.YDim/2.));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcprofileresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

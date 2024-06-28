@@ -5,9 +5,9 @@
   <Definition>Shape properties common to wire loop joint connectors.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcDiscreteAccessory/Wire loop</ClassName>
+    <ClassName>IfcDiscreteAccessory</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcDiscreteAccessory/Wire loop</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcDiscreteAccessory</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="003b0c80d1d311e1800000215ad4efdf">
       <Name>WireLoopBasePlateThickness</Name>

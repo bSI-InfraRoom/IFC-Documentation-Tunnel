@@ -5,9 +5,9 @@
   <Definition>Properties common to all occurrences and types of _IfcImpactProtectionDevice_ with PredefinedType set to _BUMPER_.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcImpactProtectionDevice/IfcImpactProtectionDeviceTypeEnum(.BUMPER.)</ClassName>
+    <ClassName>IfcImpactProtectionDevice/BUMPER</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcImpactProtectionDevice/IfcImpactProtectionDeviceTypeEnum(.BUMPER.)</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcImpactProtectionDevice/BUMPER</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="ee38420c6ff34672a0182253a31ba2fc">
       <Name>IsAbsorbingEnergy</Name>
@@ -32,7 +32,7 @@
       <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="e63a1a3884e64e38bcda8a508392395f">
-      <Name>EnergyAbsorption </Name>
+      <Name>EnergyAbsorption</Name>
       <Definition>Energy absorption capacity of the element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

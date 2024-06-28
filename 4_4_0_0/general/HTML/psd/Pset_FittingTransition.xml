@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="218bc42801504d829c289c249ff9bb10" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_FittingTransition</Name>
+  <Definition>Properties about Fitting Transition.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcCableFitting/TRANSITION</ClassName>
+    <ClassName>IfcDuctFitting/TRANSITION</ClassName>
+    <ClassName>IfcPipeFitting/TRANSITION</ClassName>
+    <ClassName>IfcCableCarrierFitting/TRANSITION</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcCableFitting/TRANSITION,IfcDuctFitting/TRANSITION,IfcPipeFitting/TRANSITION,IfcCableCarrierFitting/TRANSITION</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="17701219053141b9b3f1b110eb14c495">
+      <Name>NominalLength</Name>
+      <Definition>The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="3643903e3fd04551a1671791a3d2a629">
+      <Name>EccentricityInY</Name>
+      <Definition>Distance in y direction between the two points (or vertex points) engaged in the point connection.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="65f5c68eb5b249869fbba4c60d06bfdb">
+      <Name>EccentricityInZ</Name>
+      <Definition>Distance in z direction between the two points (or vertex points) engaged in the point connection.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

@@ -118,10 +118,12 @@ Sound attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.
     </PropertyDef>
     <PropertyDef ifdguid="86128400d1e211e1800000215ad4efdf">
       <Name>FlowArrangement</Name>
-      <Definition>CounterFlow: Air and water flow enter in different directions.
-
-CrossFlow: Air and water flow are perpendicular.
-ParallelFlow: Air and water flow enter in same directions.</Definition>
+      <Definition>Defines the basic flow arrangements for the heat exchanger or cooler tower:
+COUNTERFLOW: Air and water flow enter in different directions.
+CROSSFLOW: Air and water flow are perpendicular.
+PARALLELFLOW: Air and water flow enter in same directions.
+MULTIPASS: Multipass flow heat exchanger arrangement.
+OTHER: Other type of heat exchanger flow arrangement not defined above.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_EvaporativeCoolerFlowArrangement">
@@ -272,7 +274,7 @@ ParallelFlow: Air and water flow enter in same directions.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="b1956e80d1e211e1800000215ad4efdf">
       <Name>AirPressureDropCurve</Name>
-      <Definition>Air pressure drop as function of air flow rate.</Definition>
+      <Definition>Air pressure drop as a function of air flow rate.</Definition>
       <PropertyType>
         <TypePropertyTableValue>
           <Expression />

@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -90,14 +90,17 @@ REFERENCE FROM IFCPRESENTATIONORGANIZATIONRESOURCE
   IfcPresentationLayerAssignment
 );
 
+TYPE IfcWellKnownTextLiteral = STRING;
+END_TYPE;
+
 TYPE IfcGeometricProjectionEnum = ENUMERATION OF
-	(GRAPH_VIEW
-	,SKETCH_VIEW
+	(ELEVATION_VIEW
+	,GRAPH_VIEW
 	,MODEL_VIEW
 	,PLAN_VIEW
 	,REFLECTED_PLAN_VIEW
 	,SECTION_VIEW
-	,ELEVATION_VIEW
+	,SKETCH_VIEW
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -134,9 +137,9 @@ ENTITY IfcCoordinateReferenceSystem
 	GeodeticDatum : OPTIONAL IfcIdentifier;
  INVERSE
 	HasCoordinateOperation : SET [0:1] OF IfcCoordinateOperation FOR SourceCRS;
-	HasWellKnownTextRepresentation : IfcWellKnownText FOR CoordinateReferenceSystem;
+	WellKnownText : SET [0:1] OF IfcWellKnownText FOR CoordinateReferenceSystem;
  WHERE
-	CoordinateSystemSpecified : EXISTS(SELF.Name) OR EXISTS(SELF.HasWellKnownTextRepresentation);
+	NameOrWKT : (HIINDEX(WellKnownText) = 1) OR EXISTS(Name);
 END_ENTITY;
 
 ENTITY IfcGeographicCRS
@@ -145,8 +148,8 @@ ENTITY IfcGeographicCRS
 	AngleUnit : OPTIONAL IfcNamedUnit;
 	HeightUnit : OPTIONAL IfcNamedUnit;
  WHERE
-	AngleUnitIsPlaneAngle : NOT EXISTS(SELF.AngleUnit) OR SELF.AngleUnit.UnitType = IfcUnitEnum.PLANEANGLEUNIT;
-	HeightUnitIsLength : NOT EXISTS(SELF.HeightUnit) OR SELF.HeightUnit.UnitType = IfcUnitEnum.LENGTHUNIT;
+	AngleUnitIsPlaneAngle : NOT(EXISTS(SELF.AngleUnit)) OR (SELF.AngleUnit.UnitType=IfcUnitEnum.PLANEANGLEUNIT);
+	HeightUnitIsLength : NOT EXISTS(SELF.HeightUnit) OR (SELF.HeightUnit.UnitType=IfcUnitEnum.LENGTHUNIT);
 END_ENTITY;
 
 ENTITY IfcGeometricRepresentationContext
@@ -176,10 +179,10 @@ ENTITY IfcGeometricRepresentationSubContext
 	SELF\IfcGeometricRepresentationContext.TrueNorth : IfcDirection := NVL(ParentContext.TrueNorth, IfcConvertDirectionInto2D(SELF\IfcGeometricRepresentationContext.WorldCoordinateSystem.P[2]));
 	SELF\IfcGeometricRepresentationContext.Precision : IfcReal := NVL(ParentContext.Precision,1.E-5);
  WHERE
+	NoCoordOperation : SIZEOF(SELF\IfcGeometricRepresentationContext.HasCoordinateOperation) = 0;
 	ParentNoSub : NOT('IFCREPRESENTATIONRESOURCE.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(ParentContext));
 	UserTargetProvided :  (TargetView <> IfcGeometricProjectionEnum.USERDEFINED) OR 
 ((TargetView =  IfcGeometricProjectionEnum.USERDEFINED) AND EXISTS(UserDefinedTargetView)) ;
-	NoCoordOperation : SIZEOF(SELF\IfcGeometricRepresentationContext.HasCoordinateOperation) = 0;
 END_ENTITY;
 
 ENTITY IfcMapConversion
@@ -193,14 +196,18 @@ ENTITY IfcMapConversion
 	XAxisOrdinate : OPTIONAL IfcReal;
 	Scale : OPTIONAL IfcReal;
  WHERE
-	OnlyProjectedCRS : 'IFCREPRESENTATIONRESOURCE.IFCPROJECTEDCRS' IN TYPEOF(SELF\IfcCoordinateOperation.TargetCRS);
+	TargetCRSProjected : 'IFCREPRESENTATIONRESOURCE.IFCPROJECTEDCRS' IN TYPEOF(SELF\IfcCoordinateOperation.TargetCRS);
+	ValidXAxis : (NOT EXISTS(XAxisAbscissa) AND NOT EXISTS(XAxisOrdinate)) OR
+(NOT EXISTS(XAxisAbscissa) AND XAxisOrdinate <> 0.0) OR
+(NOT EXISTS(XAxisOrdinate) AND XAxisAbscissa <> 0.0) OR
+(EXISTS(XAxisAbscissa) AND EXISTS(XAxisOrdinate) AND NOT ((XAxisAbscissa = 0.0) AND (XAxisOrdinate = 0.0)));
 END_ENTITY;
 
 ENTITY IfcMapConversionScaled
  SUBTYPE OF (IfcMapConversion);
-	ScaleX : IfcReal;
-	ScaleY : IfcReal;
-	ScaleZ : IfcReal;
+	FactorX : IfcReal;
+	FactorY : IfcReal;
+	FactorZ : IfcReal;
 END_ENTITY;
 
 ENTITY IfcMaterialDefinitionRepresentation
@@ -239,7 +246,7 @@ ENTITY IfcProjectedCRS
 	MapZone : OPTIONAL IfcIdentifier;
 	MapUnit : OPTIONAL IfcNamedUnit;
  WHERE
-	IsLengthUnit : NOT(EXISTS(MapUnit)) OR (MapUnit.UnitType = IfcUnitEnum.LENGTHUNIT);
+	MapUnitIsLength : NOT(EXISTS(SELF.MapUnit)) OR (SELF.MapUnit.UnitType = IfcUnitEnum.LENGTHUNIT);
 END_ENTITY;
 
 ENTITY IfcRepresentation
@@ -308,6 +315,9 @@ ENTITY IfcShapeRepresentation
  WHERE
 	CorrectContext : 'IFCREPRESENTATIONRESOURCE.IFCGEOMETRICREPRESENTATIONCONTEXT' 
 IN TYPEOF(SELF\IfcRepresentation.ContextOfItems);
+	CorrectItemsForType : IfcShapeRepresentationTypes(SELF\IfcRepresentation.RepresentationType, SELF\IfcRepresentation.Items);
+	HasRepresentationIdentifier : EXISTS(SELF\IfcRepresentation.RepresentationIdentifier);
+	HasRepresentationType : EXISTS(SELF\IfcRepresentation.RepresentationType);
 	NoTopologicalItem : SIZEOF(QUERY(temp <* Items | 
   ('IFCTOPOLOGYRESOURCE.IFCTOPOLOGICALREPRESENTATIONITEM' IN TYPEOF(temp))
     AND (NOT(SIZEOF(
@@ -315,9 +325,6 @@ IN TYPEOF(SELF\IfcRepresentation.ContextOfItems);
        'IFCTOPOLOGYRESOURCE.IFCEDGECURVE',
        'IFCTOPOLOGYRESOURCE.IFCFACESURFACE'] * TYPEOF(temp)) = 1))
 )) = 0;
-	HasRepresentationType : EXISTS(SELF\IfcRepresentation.RepresentationType);
-	HasRepresentationIdentifier : EXISTS(SELF\IfcRepresentation.RepresentationIdentifier);
-	CorrectItemsForType : IfcShapeRepresentationTypes(SELF\IfcRepresentation.RepresentationType, SELF\IfcRepresentation.Items);
 END_ENTITY;
 
 ENTITY IfcStyleModel
@@ -346,10 +353,9 @@ ENTITY IfcTopologyRepresentation
 	WR23 : IfcTopologyRepresentationTypes(SELF\IfcRepresentation.RepresentationType, SELF\IfcRepresentation.Items);
 END_ENTITY;
 
-ENTITY IfcWellKnownText
- SUBTYPE OF (IfcGeometricRepresentationItem);
+ENTITY IfcWellKnownText;
 	WellKnownText : IfcWellKnownTextLiteral;
-	CoordinateReferenceSystem : OPTIONAL IfcCoordinateReferenceSystem;
+	CoordinateReferenceSystem : IfcCoordinateReferenceSystem;
 END_ENTITY;
 
 FUNCTION IfcConvertDirectionInto2D
@@ -393,12 +399,13 @@ FUNCTION IfcShapeRepresentationTypes
     CASE RepType OF 
     'Point' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFCGEOMETRYRESOURCE.IFCPOINT' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp <* Items | ('IFCGEOMETRYRESOURCE.IFCPOINT' IN TYPEOF(temp))
+            OR ('IFCGEOMETRICMODELRESOURCE.IFCCARTESIANPOINTLIST' IN TYPEOF(temp))));
       END;
 
     'PointCloud' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFCGEOMETRYRESOURCE.IFCCARTESIANPOINTLIST3D' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp <* Items | ('IFCGEOMETRICMODELRESOURCE.IFCCARTESIANPOINTLIST3D' IN TYPEOF(temp))));
       END;
 
     'Curve' :
@@ -651,7 +658,7 @@ FUNCTION IfcTopologyRepresentationTypes
 END_FUNCTION;
 
 RULE IfcRepresentationContextSameWCS FOR
-	(IfcGeometricRepresentationContext);
+ (IfcGeometricRepresentationContext);
 LOCAL
   IsDifferent  : LOGICAL := FALSE;
 END_LOCAL;

@@ -31,7 +31,7 @@
       <Definition>Indicates the maximum number of base transceiver stations (BTSs) that can be handled by the device.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -42,7 +42,7 @@
       <Definition>Indicates how many carrier frequencies can be managed by the device.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

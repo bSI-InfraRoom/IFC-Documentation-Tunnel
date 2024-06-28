@@ -9,9 +9,9 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcDistributionChamberElement/TRENCH</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="7d1ab600d1d411e1800000215ad4efdf">
+    <PropertyDef ifdguid="e6e69000d1d311e1800000215ad4efdf">
       <Name>Width</Name>
-      <Definition>The width of the trench.</Definition>
+      <Definition>The width of the object. Only given, if the object has constant thickness (prismatic).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -19,18 +19,18 @@
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Width</NameAlias>
-        <NameAlias lang="ja-JP">長さ</NameAlias>
-        <NameAlias lang="ko-KR">길이</NameAlias>
+        <NameAlias lang="ja-JP">幅</NameAlias>
+        <NameAlias lang="ko-KR">폭</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">溝の長さ。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">홈의 길이</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">ピット幅。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">피트 폭</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="83a92d80d1d411e1800000215ad4efdf">
+    <PropertyDef ifdguid="ec43da80d1d311e1800000215ad4efdf">
       <Name>Depth</Name>
-      <Definition>The depth of the trench.</Definition>
+      <Definition>The depth of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -38,13 +38,13 @@
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Depth</NameAlias>
-        <NameAlias lang="ja-JP">幅</NameAlias>
-        <NameAlias lang="ko-KR">폭</NameAlias>
+        <NameAlias lang="ja-JP">深さ</NameAlias>
+        <NameAlias lang="ko-KR">깊이</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">溝の幅。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">홈의 폭</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">ピット深さ。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">구덩이 깊이</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="899f0e80d1d411e1800000215ad4efdf">

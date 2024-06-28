@@ -11,7 +11,7 @@
     <title>Pset_RoofCommon</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 1 index3 4 index4 18 index5 0; }
+      body { counter-reset: index1 6 index2 1 index3 4 index4 20 index5 0; }
     </style>
   </head>
 
@@ -20,11 +20,11 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.1.4.19");
+    parent.index.location.replace("../../toc-6.htm#6.1.4.21");
 //-->
 </script>
 
-<h4 class="std">6.1.4.19 Pset_RoofCommon</h4>
+<h4 class="std">6.1.4.21 Pset_RoofCommon</h4>
 <p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
 /
 <a href="../../ifcsharedbldgelements/lexical/ifcroof.htm">IfcRoof</a>
@@ -93,7 +93,7 @@
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Schallschutzklasse</b></td><td>Schallschutzklasse gemäß der nationalen oder regionalen Schallschutzverordnung.
 </td></tr>
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Acoustic Rating</b></td><td>Acoustic rating for this object.
-It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorbtion values).
+It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorption values).
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Isolation acoustique</b></td><td>Classement acoustique de cet objet. Donné selon le Code National du Bâtiment. Il indique la résistance à la transmission du son de cet objet par une valeur de référence (au lieu de fournir les valeurs totales d'absorption du son).
 </td></tr>
@@ -128,8 +128,7 @@ It is provided according to the national building code. It indicates the sound t
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>U-Wert</b></td><td>Wärmedurchgangskoeffizient (U-Wert) der Materialschichten.
 Hier der Gesamtwärmedurchgangskoeffizient der Dachkonstruktion (für alle Schichten).
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Thermal Transmittance</b></td><td>Thermal transmittance coefficient (U-Value) of a material.
-Here the total thermal transmittance coefficient through the roof surface (including all materials).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Thermal Transmittance</b></td><td>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>TransmissionThermique</b></td><td>Coefficient de transmission thermique surfacique (U). C'est le coefficient global de transmission thermique à travers la surface de la couverture (tous matériaux inclus).
 </td></tr>
@@ -146,6 +145,7 @@ Here the total thermal transmittance coefficient through the roof surface (inclu
 /
 <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
 </td><td>
+Indicates whether the object is intended to carry loads (TRUE) or not (FALSE).
 
 </td></tr>
 <tr><td>FireRating</td><td>

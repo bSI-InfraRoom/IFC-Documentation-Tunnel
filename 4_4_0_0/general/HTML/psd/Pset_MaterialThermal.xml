@@ -11,7 +11,9 @@
   <PropertyDefs>
     <PropertyDef ifdguid="07234880d1ee11e1800000215ad4efdf">
       <Name>SpecificHeatCapacity</Name>
-      <Definition>Defines the specific heat of the material: heat energy absorbed per temperature unit.</Definition>
+      <Definition>Defines the specific heat capacity of a material.
+
+Defines the specific heat of the material: heat energy absorbed per temperature unit.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcSpecificHeatCapacityMeasure" />
@@ -56,7 +58,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="17d3be80d1ee11e1800000215ad4efdf">
       <Name>ThermalConductivity</Name>
-      <Definition>The rate at which thermal energy is transmitted through the material.</Definition>
+      <Definition>The thermal conductivity of the object.
+
+The rate at which thermal energy is transmitted through the material.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalConductivityMeasure" />

@@ -26,7 +26,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="6ab17400d1f611e1800000215ad4efdf">
       <Name>CrossSectionArea</Name>
-      <Definition>Area of the profile. For example measured in mm2. If given, the value of the cross section area shall be greater than zero.</Definition>
+      <Definition>Total area of the cross section (or profile) of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure" />
@@ -41,7 +41,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="700ebe80d1f611e1800000215ad4efdf">
       <Name>Perimeter</Name>
-      <Definition>Perimeter of the profile for calculating the surface area. For example measured in mm.</Definition>
+      <Definition>Perimeter of the object.
+
+Perimeter of the profile for calculating the surface area. For example measured in mm.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

@@ -118,7 +118,9 @@ WaterRequirement attribute unit type modified in IFC2x2 Pset Addendum.</Definiti
     </PropertyDef>
     <PropertyDef ifdguid="75a4de00d1cf11e1800000215ad4efdf">
       <Name>NominalCapacity</Name>
-      <Definition>Nominal cooling tower capacity in terms of heat transfer rate of the cooling tower between air stream and water stream at nominal conditions.</Definition>
+      <Definition>The total nominal or volumetric capacity of the object.
+
+Nominal cooling tower capacity in terms of heat transfer rate of the cooling tower between air stream and water stream at nominal conditions.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPowerMeasure" />
@@ -220,9 +222,13 @@ DryWet: A combination of a dry tower and a wet tower.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="89504480d1cf11e1800000215ad4efdf">
       <Name>FlowArrangement</Name>
-      <Definition>CounterFlow: Air and water flow enter in different directions.
-CrossFlow: Air and water flow are perpendicular.
-ParallelFlow: air and water flow enter in same directions.</Definition>
+      <Definition>Defines the basic flow arrangements for the heat exchanger or cooler tower:
+
+COUNTERFLOW: Air and water flow enter in different directions. 
+CROSSFLOW: Air and water flow are perpendicular. 
+PARALLELFLOW: Air and water flow enter in same directions. 
+MULTIPASS: Multipass flow heat exchanger arrangement. 
+OTHER: Other type of heat exchanger flow arrangement not defined above.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_CoolingTowerFlowArrangement">
@@ -496,7 +502,7 @@ VariableSpeedPump: vary pump speed to control duty.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="c583a500d1cf11e1800000215ad4efdf">
       <Name>ControlStrategy</Name>
-      <Definition>FixedExitingWaterTemp: The capacity is controlled to maintain a fixed exiting water temperature.
+      <Definition>FixedExitingWaterTemp: The capacity is controlled to maintain a fixed exiting water temperature. 
 WetBulbTempReset: The set-point is reset based on the wet-bulb temperature.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
@@ -567,7 +573,7 @@ WetBulbTempReset: The set-point is reset based on the wet-bulb temperature.</Def
       <Definition>Number of cells in one cooling tower unit.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -609,7 +615,7 @@ WetBulbTempReset: The set-point is reset based on the wet-bulb temperature.</Def
     </PropertyDef>
     <PropertyDef ifdguid="e0561980d1cf11e1800000215ad4efdf">
       <Name>WaterRequirement</Name>
-      <Definition>Make-up water requirements.</Definition>
+      <Definition>Make-up water requirement.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumetricFlowRateMeasure" />

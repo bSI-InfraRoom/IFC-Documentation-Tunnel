@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -107,36 +107,33 @@ END_TYPE;
 TYPE IfcLineIndex = LIST [2:?] OF IfcPositiveInteger;
 END_TYPE;
 
-TYPE IfcWellKnownTextLiteral = STRING;
-END_TYPE;
-
 TYPE IfcBSplineCurveForm = ENUMERATION OF
-	(POLYLINE_FORM
-	,CIRCULAR_ARC
+	(CIRCULAR_ARC
 	,ELLIPTIC_ARC
-	,PARABOLIC_ARC
 	,HYPERBOLIC_ARC
+	,PARABOLIC_ARC
+	,POLYLINE_FORM
 	,UNSPECIFIED);
 END_TYPE;
 
 TYPE IfcBSplineSurfaceForm = ENUMERATION OF
-	(PLANE_SURF
+	(CONICAL_SURF
 	,CYLINDRICAL_SURF
-	,CONICAL_SURF
-	,SPHERICAL_SURF
-	,TOROIDAL_SURF
-	,SURF_OF_REVOLUTION
-	,RULED_SURF
 	,GENERALISED_CONE
+	,PLANE_SURF
 	,QUADRIC_SURF
+	,RULED_SURF
+	,SPHERICAL_SURF
 	,SURF_OF_LINEAR_EXTRUSION
+	,SURF_OF_REVOLUTION
+	,TOROIDAL_SURF
 	,UNSPECIFIED);
 END_TYPE;
 
 TYPE IfcKnotType = ENUMERATION OF
-	(UNIFORM_KNOTS
+	(PIECEWISE_BEZIER_KNOTS
 	,QUASI_UNIFORM_KNOTS
-	,PIECEWISE_BEZIER_KNOTS
+	,UNIFORM_KNOTS
 	,UNSPECIFIED);
 END_TYPE;
 
@@ -147,10 +144,10 @@ TYPE IfcPreferredSurfaceCurveRepresentation = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcTransitionCode = ENUMERATION OF
-	(DISCONTINUOUS
-	,CONTINUOUS
+	(CONTINUOUS
 	,CONTSAMEGRADIENT
-	,CONTSAMEGRADIENTSAMECURVATURE);
+	,CONTSAMEGRADIENTSAMECURVATURE
+	,DISCONTINUOUS);
 END_TYPE;
 
 TYPE IfcTrimmingPreference = ENUMERATION OF
@@ -165,7 +162,7 @@ TYPE IfcAxis2Placement = SELECT
 END_TYPE;
 
 TYPE IfcCurveMeasureSelect = SELECT
-	(IfcNonNegativeLengthMeasure
+	(IfcLengthMeasure
 	,IfcParameterValue);
 END_TYPE;
 
@@ -207,9 +204,9 @@ ENTITY IfcAxis2Placement2D
  DERIVE
 	P : LIST [2:2] OF IfcDirection := IfcBuild2Axes(RefDirection);
  WHERE
-	RefDirIs2D : (NOT (EXISTS (RefDirection))) OR (RefDirection.Dim = 2);
 	LocationIs2D : SELF\IfcPlacement.Location.Dim = 2;
 	LocationIsCP : 'IFCGEOMETRYRESOURCE.IFCCARTESIANPOINT' IN TYPEOF(SELF\IfcPlacement.Location);
+	RefDirIs2D : (NOT (EXISTS (RefDirection))) OR (RefDirection.Dim = 2);
 END_ENTITY;
 
 ENTITY IfcAxis2Placement3D
@@ -219,12 +216,12 @@ ENTITY IfcAxis2Placement3D
  DERIVE
 	P : LIST [3:3] OF IfcDirection := IfcBuildAxes(Axis, RefDirection);
  WHERE
-	LocationIs3D : SELF\IfcPlacement.Location.Dim = 3;
-	AxisIs3D : (NOT (EXISTS (Axis))) OR (Axis.Dim = 3);
-	RefDirIs3D : (NOT (EXISTS (RefDirection))) OR (RefDirection.Dim = 3);
-	AxisToRefDirPosition : (NOT (EXISTS (Axis))) OR (NOT (EXISTS (RefDirection))) OR (IfcCrossProduct(Axis,RefDirection).Magnitude > 0.0);
 	AxisAndRefDirProvision : NOT ((EXISTS (Axis)) XOR (EXISTS (RefDirection)));
+	AxisIs3D : (NOT (EXISTS (Axis))) OR (Axis.Dim = 3);
+	AxisToRefDirPosition : (NOT (EXISTS (Axis))) OR (NOT (EXISTS (RefDirection))) OR (IfcCrossProduct(Axis,RefDirection).Magnitude > 0.0);
+	LocationIs3D : SELF\IfcPlacement.Location.Dim = 3;
 	LocationIsCP : 'IFCGEOMETRYRESOURCE.IFCCARTESIANPOINT' IN TYPEOF(SELF\IfcPlacement.Location);
+	RefDirIs3D : (NOT (EXISTS (RefDirection))) OR (RefDirection.Dim = 3);
 END_ENTITY;
 
 ENTITY IfcAxis2PlacementLinear
@@ -300,14 +297,14 @@ ENTITY IfcBSplineSurfaceWithKnots
 	KnotVUpper : IfcInteger := SIZEOF(VKnots);
 	KnotUUpper : IfcInteger := SIZEOF(UKnots);
  WHERE
+	CorrespondingULists : SIZEOF(UMultiplicities) = KnotUUpper;
+	CorrespondingVLists : SIZEOF(VMultiplicities) = KnotVUpper;
 	UDirectionConstraints : IfcConstraintsParamBSpline (
   SELF\IfcBSplineSurface.UDegree, KnotUUpper, 
   SELF\IfcBSplineSurface.UUpper, UMultiplicities, UKnots);
 	VDirectionConstraints : IfcConstraintsParamBSpline (
   SELF\IfcBSplineSurface.VDegree, KnotVUpper, 
   SELF\IfcBSplineSurface.VUpper, VMultiplicities, VKnots);
-	CorrespondingULists : SIZEOF(UMultiplicities) = KnotUUpper;
-	CorrespondingVLists : SIZEOF(VMultiplicities) = KnotVUpper;
 END_ENTITY;
 
 ENTITY IfcBoundaryCurve
@@ -340,8 +337,6 @@ END_ENTITY;
 ENTITY IfcCartesianPoint
  SUBTYPE OF (IfcPoint);
 	Coordinates : LIST [1:3] OF IfcLengthMeasure;
- DERIVE
-	Dim : IfcDimensionCount := HIINDEX(Coordinates);
  WHERE
 	CP2Dor3D : HIINDEX(Coordinates) >= 2;
 END_ENTITY;
@@ -370,11 +365,11 @@ ENTITY IfcCartesianTransformationOperator2D
 	U : LIST [2:2] OF IfcDirection := IfcBaseAxis(2,SELF\IfcCartesianTransformationOperator.Axis1,
 SELF\IfcCartesianTransformationOperator.Axis2,?);
  WHERE
-	DimEqual2 : SELF\IfcCartesianTransformationOperator.Dim = 2;
 	Axis1Is2D : NOT(EXISTS(SELF\IfcCartesianTransformationOperator.Axis1)) OR 
 (SELF\IfcCartesianTransformationOperator.Axis1.Dim = 2);
 	Axis2Is2D : NOT(EXISTS(SELF\IfcCartesianTransformationOperator.Axis2)) OR 
 (SELF\IfcCartesianTransformationOperator.Axis2.Dim = 2);
+	DimEqual2 : SELF\IfcCartesianTransformationOperator.Dim = 2;
 END_ENTITY;
 
 ENTITY IfcCartesianTransformationOperator2DnonUniform
@@ -395,12 +390,12 @@ ENTITY IfcCartesianTransformationOperator3D
 	U : LIST [3:3] OF IfcDirection := IfcBaseAxis(3,SELF\IfcCartesianTransformationOperator.Axis1,
 SELF\IfcCartesianTransformationOperator.Axis2,Axis3);
  WHERE
-	DimIs3D : SELF\IfcCartesianTransformationOperator.Dim = 3;
 	Axis1Is3D : NOT(EXISTS(SELF\IfcCartesianTransformationOperator.Axis1)) OR 
 (SELF\IfcCartesianTransformationOperator.Axis1.Dim = 3);
 	Axis2Is3D : NOT(EXISTS(SELF\IfcCartesianTransformationOperator.Axis2)) OR 
 (SELF\IfcCartesianTransformationOperator.Axis2.Dim = 3);
 	Axis3Is3D : NOT(EXISTS(Axis3)) OR (Axis3.Dim = 3);
+	DimIs3D : SELF\IfcCartesianTransformationOperator.Dim = 3;
 END_ENTITY;
 
 ENTITY IfcCartesianTransformationOperator3DnonUniform
@@ -581,8 +576,7 @@ ENTITY IfcGeometricRepresentationItem
     ,IfcSurface
     ,IfcTessellatedItem
     ,IfcTextLiteral
-    ,IfcVector
-    ,IfcWellKnownText))
+    ,IfcVector))
  SUBTYPE OF (IfcRepresentationItem);
 END_ENTITY;
 
@@ -590,8 +584,6 @@ ENTITY IfcGradientCurve
  SUBTYPE OF (IfcCompositeCurve);
 	BaseCurve : IfcBoundedCurve;
 	EndPoint : OPTIONAL IfcPlacement;
- DERIVE
-	RelativeElevation : IfcLengthMeasure := IfcGradient(SELF);
 END_ENTITY;
 
 ENTITY IfcIndexedPolyCurve
@@ -606,8 +598,8 @@ END_ENTITY;
 ENTITY IfcIntersectionCurve
  SUBTYPE OF (IfcSurfaceCurve);
  WHERE
-	TwoPCurves : SIZEOF(SELF\IfcSurfaceCurve.AssociatedGeometry) = 2;
 	DistinctSurfaces : IfcAssociatedSurface(SELF\IfcSurfaceCurve.AssociatedGeometry[1]) <> IfcAssociatedSurface(SELF\IfcSurfaceCurve.AssociatedGeometry[2]);
+	TwoPCurves : SIZEOF(SELF\IfcSurfaceCurve.AssociatedGeometry) = 2;
 END_ENTITY;
 
 ENTITY IfcLine
@@ -691,6 +683,8 @@ ENTITY IfcPoint
     ,IfcPointOnCurve
     ,IfcPointOnSurface))
  SUBTYPE OF (IfcGeometricRepresentationItem);
+ DERIVE
+	Dim : IfcDimensionCount := IfcPointDim(SELF);
 END_ENTITY;
 
 ENTITY IfcPointByDistanceExpression
@@ -700,16 +694,12 @@ ENTITY IfcPointByDistanceExpression
 	OffsetVertical : OPTIONAL IfcLengthMeasure;
 	OffsetLongitudinal : OPTIONAL IfcLengthMeasure;
 	BasisCurve : IfcCurve;
- DERIVE
-	Dim : IfcDimensionCount := BasisCurve.Dim;
 END_ENTITY;
 
 ENTITY IfcPointOnCurve
  SUBTYPE OF (IfcPoint);
 	BasisCurve : IfcCurve;
 	PointParameter : IfcParameterValue;
- DERIVE
-	Dim : IfcDimensionCount := BasisCurve.Dim;
 END_ENTITY;
 
 ENTITY IfcPointOnSurface
@@ -717,8 +707,6 @@ ENTITY IfcPointOnSurface
 	BasisSurface : IfcSurface;
 	PointParameterU : IfcParameterValue;
 	PointParameterV : IfcParameterValue;
- DERIVE
-	Dim : IfcDimensionCount := BasisSurface.Dim;
 END_ENTITY;
 
 ENTITY IfcPolyline
@@ -735,8 +723,8 @@ ENTITY IfcPolynomialCurve
 	CoefficientsY : OPTIONAL LIST [2:?] OF IfcReal;
 	CoefficientsZ : OPTIONAL LIST [2:?] OF IfcReal;
  WHERE
-	ValidCoefficients : (EXISTS(CoefficientsX) AND EXISTS(CoefficientsY)) OR (EXISTS(CoefficientsX) AND EXISTS(CoefficientsZ)) OR (EXISTS(CoefficientsY) AND EXISTS(CoefficientsZ)) OR (EXISTS(CoefficientsX) AND EXISTS(CoefficientsY) AND EXISTS(CoefficientsZ));
 	CorrectPositionDim : ((Position.Dim=2) AND (NOT EXISTS(CoefficientsZ))) OR (Position.Dim=3);
+	ValidCoefficients : (EXISTS(CoefficientsX) AND EXISTS(CoefficientsY)) OR (EXISTS(CoefficientsX) AND EXISTS(CoefficientsZ)) OR (EXISTS(CoefficientsY) AND EXISTS(CoefficientsZ)) OR (EXISTS(CoefficientsX) AND EXISTS(CoefficientsY) AND EXISTS(CoefficientsZ));
 END_ENTITY;
 
 ENTITY IfcRationalBSplineCurveWithKnots
@@ -772,11 +760,11 @@ ENTITY IfcRectangularTrimmedSurface
 	Vsense : IfcBoolean;
  WHERE
 	U1AndU2Different : U1 <> U2;
-	V1AndV2Different : V1 <> V2;
 	UsenseCompatible : (('IFCGEOMETRYRESOURCE.IFCELEMENTARYSURFACE' IN TYPEOF(BasisSurface)) AND
          (NOT ('IFCGEOMETRYRESOURCE.IFCPLANE' IN TYPEOF(BasisSurface)))) OR
          ('IFCGEOMETRYRESOURCE.IFCSURFACEOFREVOLUTION' IN TYPEOF(BasisSurface)) OR
          (Usense = (U2 > U1));
+	V1AndV2Different : V1 <> V2;
 	VsenseCompatible : Vsense = (V2 > V1);
 END_ENTITY;
 
@@ -811,8 +799,8 @@ END_ENTITY;
 ENTITY IfcSeamCurve
  SUBTYPE OF (IfcSurfaceCurve);
  WHERE
-	TwoPCurves : SIZEOF(SELF\IfcSurfaceCurve.AssociatedGeometry) = 2;
 	SameSurface : IfcAssociatedSurface(SELF\IfcSurfaceCurve.AssociatedGeometry[1]) = IfcAssociatedSurface(SELF\IfcSurfaceCurve.AssociatedGeometry[2]);
+	TwoPCurves : SIZEOF(SELF\IfcSurfaceCurve.AssociatedGeometry) = 2;
 END_ENTITY;
 
 ENTITY IfcSecondOrderPolynomialSpiral
@@ -873,7 +861,7 @@ ENTITY IfcSpiral
     ,IfcSineSpiral
     ,IfcThirdOrderPolynomialSpiral))
  SUBTYPE OF (IfcCurve);
-	Position : OPTIONAL IfcAxis2Placement;
+	Position : IfcAxis2Placement;
 END_ENTITY;
 
 ENTITY IfcSurface
@@ -955,9 +943,9 @@ ENTITY IfcTrimmedCurve
 	SenseAgreement : IfcBoolean;
 	MasterRepresentation : IfcTrimmingPreference;
  WHERE
+	NoTrimOfBoundedCurves : NOT('IFCGEOMETRYRESOURCE.IFCBOUNDEDCURVE' IN TYPEOF(BasisCurve));
 	Trim1ValuesConsistent : (HIINDEX(Trim1) = 1) OR (TYPEOF(Trim1[1]) <> TYPEOF(Trim1[2]));
 	Trim2ValuesConsistent : (HIINDEX(Trim2) = 1) OR (TYPEOF(Trim2[1]) <> TYPEOF(Trim2[2]));
-	NoTrimOfBoundedCurves : NOT('IFCGEOMETRYRESOURCE.IFCBOUNDEDCURVE' IN TYPEOF(BasisCurve));
 END_ENTITY;
 
 ENTITY IfcVector
@@ -1191,9 +1179,6 @@ FUNCTION IfcCurveDim
   IF ('IFCGEOMETRYRESOURCE.IFCOFFSETCURVEBYDISTANCES' IN TYPEOF(Curve))
     THEN RETURN(3);
   END_IF;
-  IF ('IFCGEOMETRYRESOURCE.IFCCURVESEGMENT2D' IN TYPEOF(Curve))
-    THEN RETURN(2);
-  END_IF;
   IF ('IFCGEOMETRYRESOURCE.IFCPOLYNOMIALCURVE' IN TYPEOF(Curve)) THEN
     IF ( NOT EXISTS(Curve\IfcPolynomialCurve.CoefficientsZ) AND (Curve\IfcPolynomialCurve.Position.Dim = 2 ))
         THEN RETURN(2);
@@ -1345,12 +1330,6 @@ FUNCTION IfcGetBasisSurface
 
 END_FUNCTION;
 
-FUNCTION IfcGradient
-(GradientCurve : IfcGradientCurve) : IfcLengthMeasure;
-  RETURN(1);
-
-END_FUNCTION;
-
 FUNCTION IfcListToArray
 (Lis : LIST [0:?] OF GENERIC : T;
        Low,U : INTEGER) : ARRAY OF GENERIC : T;
@@ -1369,6 +1348,33 @@ FUNCTION IfcListToArray
      END_REPEAT;
      RETURN(Res);
    END_IF;
+
+END_FUNCTION;
+
+FUNCTION IfcListToExpandedArray
+(Lis : LIST [0:?] OF GENERIC : T;
+      Low, U : INTEGER;
+      Condition : ARRAY OF BOOLEAN) : ARRAY OF OPTIONAL GENERIC : T;
+  LOCAL
+    LisIndex : INTEGER := Low;
+    Res : ARRAY [Low:U] OF OPTIONAL GENERIC : T;
+  END_LOCAL;
+      
+  IF (SIZEOF(QUERY(item <* Condition | item)) <> SIZEOF(Lis)) THEN
+    RETURN(?);
+  END_IF;
+
+  IF (SIZEOF(Lis) <> (U-Low + 1)) THEN
+    RETURN(?);
+  END_IF;
+	  
+  REPEAT i := 1 TO SIZEOF(Condition);
+    IF (Condition[i]) THEN
+      Res[Low + i - 1] := Lis[LisIndex];
+      LisIndex := LisIndex + 1;
+    END_IF;
+  END_REPEAT;
+  RETURN(Res);
 
 END_FUNCTION;
 
@@ -1476,6 +1482,26 @@ END_LOCAL;
 
 END_FUNCTION;
 
+FUNCTION IfcPointDim
+ (Point : IfcPoint)
+ : IfcDimensionCount;
+ 
+  IF ('IFCGEOMETRYRESOURCE.IFCCARTESIANPOINT' IN TYPEOF(Point))
+    THEN RETURN(HIINDEX(Point\IfcCartesianPoint.Coordinates));
+  END_IF;
+  IF ('IFCGEOMETRYRESOURCE.IFCPOINTBYDISTANCEEXPRESSION' IN TYPEOF(Point))
+    THEN RETURN(Point\IfcPointByDistanceExpression.BasisCurve.Dim);
+  END_IF;
+  IF ('IFCGEOMETRYRESOURCE.IFCPOINTONCURVE' IN TYPEOF(Point))
+    THEN RETURN(Point\IfcPointOnCurve.BasisCurve.Dim);
+  END_IF;
+  IF ('IFCGEOMETRYRESOURCE.IFCPOINTONSURFACE' IN TYPEOF(Point))
+    THEN RETURN(Point\IfcPointOnSurface.BasisSurface.Dim);
+  END_IF;
+  RETURN (?);
+
+END_FUNCTION;
+
 FUNCTION IfcSameAxis2Placement
   (ap1, ap2 : IfcAxis2Placement; Epsilon : REAL)
   : LOGICAL ;
@@ -1514,8 +1540,8 @@ FUNCTION IfcSameCartesianPoint
 END_FUNCTION;
 
 FUNCTION IfcSameDirection
-	(dir1, dir2 : IfcDirection; Epsilon : REAL)
-	: LOGICAL;
+  (dir1, dir2 : IfcDirection; Epsilon : REAL)
+  : LOGICAL;
   LOCAL
     dir1x : REAL := dir1.DirectionRatios[1];
     dir1y : REAL := dir1.DirectionRatios[2];
@@ -1540,8 +1566,8 @@ FUNCTION IfcSameDirection
 END_FUNCTION;
 
 FUNCTION IfcSameValue
-	(Value1, Value2 : REAL; Epsilon : REAL)
-	: LOGICAL;
+  (Value1, Value2 : REAL; Epsilon : REAL)
+  : LOGICAL;
   LOCAL
     ValidEps    : REAL;
     DefaultEps  : REAL := 0.000001;

@@ -28,27 +28,82 @@
 <a href="../../views/general-usage/index.htm" ><img src="../../../img/view-general-usage.png" title="General Usage"/></a>
 <details open="open"><summary>Natural language names</summary><table>
 </details>
-<details open="open"><summary>Change log</summary><table class="gridtable">
-<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcrepresentationresource/lexical/ifcmapconversionscaled.htm">IfcMapConversionScaled</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
-</table>
-</details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcMapConversionScaled</span> is a type of <a href="../../ifcrepresentationresource/lexical/ifcmapconversion.htm">IfcMapConversion</a> that along with an EPSG code supplies a constant scale factor for coordinate conversion. The usage is restricted to when constant scale factors are explicitly exchanged. Typically, these are relatively speaking smaller facilities such as buildings where a constant scale factor is agreed on a project.</p>
+<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcMapConversionScaled</span> is a type of <a href="../../ifcrepresentationresource/lexical/ifcmapconversion.htm">IfcMapConversion</a> that supplies factors for coordinate conversion. The usage is restricted to when factors are explicitly exchanged.</p>
+<blockquote class="note">
+<p>NOTE  Typically, these are relatively smaller facilities such as buildings where constant factors are agreed on a project.</p>
+</blockquote>
+<blockquote class="history">
+<p>HISTORY New entity in IFC4X3_ADD1</p>
+</blockquote>
+<p>For this transformation, <span class="self-ref">IfcMapConversionScaled</span> data are used for:</p>
+<ol>
+<li>a scaling of the three axes (x,y,z), by the same <i>IfcMapConversionScaled.Scale</i></li>
+<li>a multiplication of the x-axis by <i>IfcMapConversionScaled.FactorX</i></li>
+<li>a multiplication of the y-axis by <i>IfcMapConversionScaled.FactorY</i></li>
+<li>a multiplication of the z-axis by <i>IfcMapConversionScaled.FactorZ</i></li>
+<li>followed by an <strong>anti-clockwise</strong> rotation about the z-axis of <i>θ</i>, where:
+$$
+\theta=arctan\left(\frac{\text}{\text}\right)
+$$</li>
+<li>and then a translation in (x,y,z) of <i>IfcMapConversionScaled.Eastings</i>, <i>IfcMapConversionScaled.Northings</i>, <i>IfcMapConversionScaled.OrthogonalHeight</i>.</li>
+</ol>
+<p><strong>Equations</strong></p>
+<p>Below are the relevant equations for <span class="self-ref">IfcMapConversionScaled</span>. The equations are given: a) in transformation matrix form, useful for programmers to understand the exact sequence of operations and b) in a simplified equation form, which is sufficient for calculating a single point.</p>
+<p>a) matrix form</p>
+<p bmatrix="" factorx="" factory="" factorz="" scale="" eastings="" northings="" orthogonalheight="">$$
+\begin
+x'\\
+y'\\
+z'
+\end
+= \begin
+cos\theta &amp; -sin\theta &amp; 0 \\
+sin\theta &amp; cos\theta &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end \cdot
+\begin
+\text &amp; 0 &amp; 0 \\
+0 &amp; \text &amp; 0 \\
+0 &amp; 0 &amp; \text
+\end \cdot
+\begin
+\text &amp; 0 &amp; 0 \\
+0 &amp; \text &amp; 0 \\
+0 &amp; 0 &amp; \text
+\end \cdot
+\begin
+x \\
+y \\
+z
+\end +
+\begin
+\text \\
+\text \\
+\text
+\end
+$$</p>
+<p>b) equation form</p>
+<p align="" scale="" factorx="" factory="" eastings="" northings="" factorz="" orthogonalheight="">$$
+\begin
+x' &amp;= \text \cdot \text \cdot cos\theta \cdot x-\text \cdot \text \cdot sin\theta \cdot y+\text \\
+y' &amp;= \text \cdot \text \cdot sin\theta \cdot x+\text \cdot \text \cdot cos\theta \cdot y+\text \\
+z' &amp;= \text \cdot \text \cdot z+\text
+\end
+$$</p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>G</th></tr>
-<tr><td>9</td><td>ScaleX</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
-Scale X by which the length measures in local engineering CS have to be multiplied to get map coordinates.
+<tr><td>9</td><td>FactorX</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
+Factor X by which the length measures in local engineering CS have to be multiplied to get map coordinates
 </td><td>X</td></tr>
-<tr><td>10</td><td>ScaleY</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
-Scale Y by which the length measures in local engineering CS have to be multiplied to get map coordinates.
+<tr><td>10</td><td>FactorY</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
+Factor Y by which the length measures in local engineering CS have to be multiplied to get map coordinates
 </td><td>X</td></tr>
-<tr><td>11</td><td>ScaleZ</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
-Scale Z by which the length measures in local engineering CS have to be multiplied to get map coordinates.
+<tr><td>11</td><td>FactorZ</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
+Factor Z by which the length measures in local engineering CS have to be multiplied to get map coordinates
 </td><td>X</td></tr>
 </table>
 </details>
@@ -90,7 +145,7 @@ NOTE  for right-handed Cartesian coordinate systems this would establish the lo
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>6</td><td>XAxisAbscissa</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td>? </td><td>
-Specifies the value along the easing axis of the end point of a vector indicating the position of the local x axis of the engineering coordinate reference system.
+Specifies the value along the easting axis of the end point of a vector indicating the position of the local x axis of the engineering coordinate reference system.
 <blockquote class="note">
 NOTE 1 for right-handed Cartesian coordinate systems this would establish the location along the x axis
 </blockquote>
@@ -111,14 +166,14 @@ NOTE 1 for right-handed Cartesian coordinate systems this would establish the l
 Scale to be used, when the units of the CRS are not identical to the units of the engineering coordinate system. If omited, the value of 1.0 is assumed.
 </td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcmapconversionscaled.htm">IfcMapConversionScaled</a></td></tr>
-<tr><td>9</td><td>ScaleX</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
-Scale X by which the length measures in local engineering CS have to be multiplied to get map coordinates.
+<tr><td>9</td><td>FactorX</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
+Factor X by which the length measures in local engineering CS have to be multiplied to get map coordinates
 </td><td>X</td></tr>
-<tr><td>10</td><td>ScaleY</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
-Scale Y by which the length measures in local engineering CS have to be multiplied to get map coordinates.
+<tr><td>10</td><td>FactorY</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
+Factor Y by which the length measures in local engineering CS have to be multiplied to get map coordinates
 </td><td>X</td></tr>
-<tr><td>11</td><td>ScaleZ</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
-Scale Z by which the length measures in local engineering CS have to be multiplied to get map coordinates.
+<tr><td>11</td><td>FactorZ</td><td><a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a></td><td></td><td>
+Factor Z by which the length measures in local engineering CS have to be multiplied to get map coordinates
 </td><td>X</td></tr>
 </table>
 </details>
@@ -130,9 +185,9 @@ Scale Z by which the length measures in local engineering CS have to be multipli
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../ifcrepresentationresource/lexical/ifcmapconversionscaled.htm">IfcMapConversionScaled</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcrepresentationresource/lexical/ifcmapconversion.htm">IfcMapConversion</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ScaleX&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ScaleY&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ScaleZ&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;FactorX&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;FactorY&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;FactorZ&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
@@ -140,11 +195,11 @@ Scale Z by which the length measures in local engineering CS have to be multipli
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcMapConversionScaled<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcrepresentationresource/lexical/ifcmapconversion.htm">IfcMapConversion</a>)<b>;</b><br/>
-&nbsp;&nbsp;ScaleX : <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
-&nbsp;&nbsp;ScaleY : <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
-&nbsp;&nbsp;ScaleZ : <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
+&nbsp;&nbsp;FactorX : <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
+&nbsp;&nbsp;FactorY : <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
+&nbsp;&nbsp;FactorZ : <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
-<p class="std"><a href="../../../annex/annex-d/ifcrepresentationresource/diagram_0001.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+<p class="std"><a href="../../../annex/annex-d/ifcrepresentationresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>
 </section>

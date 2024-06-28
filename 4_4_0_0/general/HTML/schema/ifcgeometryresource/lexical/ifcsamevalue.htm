@@ -11,7 +11,7 @@
     <title>IfcSameValue</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 9 index3 4 index4 20 index5 0; }
+      body { counter-reset: index1 8 index2 9 index3 4 index4 21 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.htm#8.9.4.21");
+    parent.index.location.replace("../../toc-8.htm#8.9.4.22");
 //-->
 </script>
 
@@ -45,7 +45,7 @@
 <details open="open"><summary>EXPRESS Specification</summary><div class="xsd"><code class="xsd"><p>
 <span class="keyword">FUNCTION</span> IfcSameValue<br/>
 
-	(Value1, Value2 : REAL; Epsilon : REAL)<br/>	: LOGICAL;<br/>&nbsp;&nbsp;LOCAL<br/>&nbsp;&nbsp;&nbsp;&nbsp;ValidEps&nbsp;&nbsp;&nbsp;&nbsp;: REAL;<br/>&nbsp;&nbsp;&nbsp;&nbsp;DefaultEps&nbsp;&nbsp;: REAL := 0.000001;<br/>&nbsp;&nbsp;END_LOCAL;<br/>&nbsp;&nbsp;<br/>&nbsp;&nbsp;ValidEps := NVL(Epsilon, DefaultEps);<br/>&nbsp;&nbsp;RETURN ((Value1 + ValidEps &gt; Value2) AND (Value1 &lt; Value2 + ValidEps));<br/>
+&nbsp;&nbsp;(Value1, Value2 : REAL; Epsilon : REAL)<br/>&nbsp;&nbsp;: LOGICAL;<br/>&nbsp;&nbsp;LOCAL<br/>&nbsp;&nbsp;&nbsp;&nbsp;ValidEps&nbsp;&nbsp;&nbsp;&nbsp;: REAL;<br/>&nbsp;&nbsp;&nbsp;&nbsp;DefaultEps&nbsp;&nbsp;: REAL := 0.000001;<br/>&nbsp;&nbsp;END_LOCAL;<br/>&nbsp;&nbsp;<br/>&nbsp;&nbsp;ValidEps := NVL(Epsilon, DefaultEps);<br/>&nbsp;&nbsp;RETURN ((Value1 + ValidEps &gt; Value2) AND (Value1 &lt; Value2 + ValidEps));<br/>
 <br/>
 
 <span class="keyword">END_FUNCTION</span>;

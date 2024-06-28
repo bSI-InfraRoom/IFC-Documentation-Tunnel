@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="80f99b4a90664a9bbc27fe1fc72ad7e4" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ElementSize</Name>
+  <Definition>Property set with properties about size of the element.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcDistributionChamberElement</ClassName>
+    <ClassName>IfcEnergyConversionDevice</ClassName>
+    <ClassName>IfcFlowController</ClassName>
+    <ClassName>IfcFlowMovingDevice</ClassName>
+    <ClassName>IfcFlowStorageDevice</ClassName>
+    <ClassName>IfcFlowTerminal</ClassName>
+    <ClassName>IfcFlowTreatmentDevice</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcDistributionChamberElement,IfcEnergyConversionDevice,IfcFlowController,IfcFlowMovingDevice,IfcFlowStorageDevice,IfcFlowTerminal,IfcFlowTreatmentDevice</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="17701219053141b9b3f1b110eb14c495">
+      <Name>NominalLength</Name>
+      <Definition>The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="a42c9dc8bfea4bd78aff726fbf8dd593">
+      <Name>NominalWidth</Name>
+      <Definition>The nominal overall width of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="49bd403ff81e477bb88d76cc8a2e64e3">
+      <Name>NominalHeight</Name>
+      <Definition>The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

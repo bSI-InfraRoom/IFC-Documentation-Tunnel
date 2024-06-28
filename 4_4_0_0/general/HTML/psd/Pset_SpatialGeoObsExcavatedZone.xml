@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="6b870ac622c74e568d6920d614f126af" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_SpatialGeoObsExcavatedZone</Name>
+  <Definition>Common properties for excavated zone observations.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcSpatialZone/MAPPEDZONE</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSpatialZone/MAPPEDZONE</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="12ee2186229b46219260d430dc864a65">
+      <Name>TunnelExcavationMethod</Name>
+      <Definition>Type of the tunnel excavation method that was applied when the observation was made.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="a426fc7949084b4e9fe53c3e3c2059c9">
+      <Name>ExcavationFaceType</Name>
+      <Definition>The excavation surface that was mapped.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ExcavationFaceType">
+            <EnumItem>TUNNELFACE</EnumItem>
+            <EnumItem>TUNNELWALL</EnumItem>
+            <EnumItem>TUNNELROOF</EnumItem>
+            <EnumItem>INVERT</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>TUNNELFACE</Name>
+              <Definition>Observation done on the face of the excavation.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TUNNELWALL</Name>
+              <Definition>Observation done on the sides of the excavation.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TUNNELROOF</Name>
+              <Definition>Observation done on the roof of the excavation.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INVERT</Name>
+              <Definition>Observation done on the floor of the excavation.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8dba0a574318431299004d50c12eda52">
+      <Name>ExcavationStep</Name>
+      <Definition>Excavation step.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ExcavationStep">
+            <EnumItem>TOPHEADING</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>TOPHEADING</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="95e217ba226a4accbb6b8223e5a20d67">
+      <Name>ExcavationMethod</Name>
+      <Definition>Excavation method used.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ExcavationMethod">
+            <EnumItem>DRILLBLAST</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>DRILLBLAST</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="91ff7949437a4c64935b7b3181498379">
+      <Name>LogNumber</Name>
+      <Definition>Identifer of the records.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

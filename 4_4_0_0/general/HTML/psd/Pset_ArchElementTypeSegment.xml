@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="cdfe57bde790407096a7b23dec9da36a" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ArchElementTypeSegment</Name>
+  <Definition>Properties for arch elements of type SEGMENT.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcArchElement/SEGMENT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcArchElement/SEGMENT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="040d2da7aede4221896db27513281a35">
+      <Name>LongitudinalJointType</Name>
+      <Definition>Type of longitudinal joint.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SegmentJointType">
+            <EnumItem>FLAT</EnumItem>
+            <EnumItem>TONGUE_GROOVE</EnumItem>
+            <EnumItem>CONVEX_CONVEX</EnumItem>
+            <EnumItem>CONCAVE_CONVEX</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>FLAT</Name>
+              <Definition>Flat joint connecting 2 rings segments or arches.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TONGUE_GROOVE</Name>
+              <Definition>Joint of type Tongue-Groove connecting 2 rings segments or arches.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CONVEX_CONVEX</Name>
+              <Definition>Joint of type Convex-Convex connecting 2 rings segments or arches.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CONCAVE_CONVEX</Name>
+              <Definition>Joint of type Concave-Convex connecting 2 rings segments or arches.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1d9c7651cd39424da53001203a04692e">
+      <Name>RadialJointType</Name>
+      <Definition>Type of radial joint.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SegmentJointType">
+            <EnumItem>FLAT</EnumItem>
+            <EnumItem>TONGUE_GROOVE</EnumItem>
+            <EnumItem>CONVEX_CONVEX</EnumItem>
+            <EnumItem>CONCAVE_CONVEX</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>FLAT</Name>
+              <Definition>Flat joint connecting 2 rings segments or arches.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TONGUE_GROOVE</Name>
+              <Definition>Joint of type Tongue-Groove connecting 2 rings segments or arches.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CONVEX_CONVEX</Name>
+              <Definition>Joint of type Convex-Convex connecting 2 rings segments or arches.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CONCAVE_CONVEX</Name>
+              <Definition>Joint of type Concave-Convex connecting 2 rings segments or arches.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="28e3b73dbab34a9a93d9e3f2ff205765">
+      <Name>LongitudinalJointConnections</Name>
+      <Definition>Specified if particular connector, e.g. guiding rod, is used.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="32722e803d7e46fbb73e3ed1b4fa4278">
+      <Name>RadialJointConnections</Name>
+      <Definition>Specified if particular connector, e.g. dowel, is used.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="303983f5e48a43b1b1c47d7e30748302">
+      <Name>Mountings</Name>
+      <Definition>Specifies any mountings inserted in segment.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

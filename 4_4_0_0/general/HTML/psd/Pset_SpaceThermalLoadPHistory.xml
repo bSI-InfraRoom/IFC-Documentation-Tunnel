@@ -2,15 +2,15 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="f1bd1700d20b11e1800000215ad4efdf" templatetype="PSET_PERFORMANCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_SpaceThermalLoadPHistory</Name>
-  <Definition>The space thermal load IfcSpaceThermalLoadProperties defines actual measured thermal losses and gains occurring within a space or zone. The thermal load source attribute defines an enumeration of possible sources of the thermal load.</Definition>
+  <Definition>This property set defines actual measured thermal losses and gains occurring within a space or zone. The thermal load source attribute defines an enumeration of possible sources of the thermal load.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcSpace</ClassName>
+    <ClassName>IfcSpatialElement</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcSpace</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcSpatialElement</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="f7b2f800d20b11e1800000215ad4efdf">
-      <Name>People</Name>
+      <Name>PeopleHistory</Name>
       <Definition>Heat gains and losses from people.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -27,7 +27,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="faade880d20b11e1800000215ad4efdf">
-      <Name>Lighting</Name>
+      <Name>LightingHistory</Name>
       <Definition>Lighting loads.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -44,7 +44,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="fda8d900d20b11e1800000215ad4efdf">
-      <Name>EquipmentSensible</Name>
+      <Name>EquipmentSensibleHistory</Name>
       <Definition>Heat gains and losses from equipment.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -61,7 +61,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="000b3300d20c11e1800000215ad4efdf">
-      <Name>VentilationIndoorAir</Name>
+      <Name>VentilationIndoorAirHistory</Name>
       <Definition>Ventilation loads from indoor air.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -78,7 +78,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="03062380d20c11e1800000215ad4efdf">
-      <Name>VentilationOutdoorAir</Name>
+      <Name>VentilationOutdoorAirHistory</Name>
       <Definition>Ventilation loads from outdoor air.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -95,7 +95,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="06011400d20c11e1800000215ad4efdf">
-      <Name>RecirculatedAir</Name>
+      <Name>RecirculatedAirHistory</Name>
       <Definition>Loads from recirculated air.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -112,7 +112,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="08fc0480d20c11e1800000215ad4efdf">
-      <Name>ExhaustAir</Name>
+      <Name>ExhaustAirHistory</Name>
       <Definition>Loads from exhaust air.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -129,7 +129,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="0bf6f500d20c11e1800000215ad4efdf">
-      <Name>AirExchangeRate</Name>
+      <Name>AirExchangeRateTimeHistory</Name>
       <Definition>Loads from the air exchange rate.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -146,7 +146,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="0f8a7c00d20c11e1800000215ad4efdf">
-      <Name>DryBulbTemperature</Name>
+      <Name>DryBulbTemperatureHistory</Name>
       <Definition>Loads from the dry bulb temperature.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -163,7 +163,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="12856c80d20c11e1800000215ad4efdf">
-      <Name>RelativeHumidity</Name>
+      <Name>RelativeHumidityHistory</Name>
       <Definition>Loads from the relative humidity.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -180,7 +180,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="15805d00d20c11e1800000215ad4efdf">
-      <Name>InfiltrationSensible</Name>
+      <Name>InfiltrationSensibleHistory</Name>
       <Definition>Heat gains and losses from infiltration.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -197,7 +197,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="187b4d80d20c11e1800000215ad4efdf">
-      <Name>TotalSensibleLoad</Name>
+      <Name>TotalSensibleLoadHistory</Name>
       <Definition>Total energy added or removed from air that affects its temperature.  If a value is less than zero (negative), then the thermal load is lost from the space. If a value is greater than zero (positive), then the thermal load is a gain to the space.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -214,7 +214,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="1b763e00d20c11e1800000215ad4efdf">
-      <Name>TotalLatentLoad</Name>
+      <Name>TotalLatentLoadHistory</Name>
       <Definition>Total energy added or removed from air that affects its humidity or concentration of water vapor.  If a value is less than zero (negative), then the thermal load is lost from the space. If a value is greater than zero (positive), then the thermal load is a gain to the space.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -231,7 +231,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="1e712e80d20c11e1800000215ad4efdf">
-      <Name>TotalRadiantLoad</Name>
+      <Name>TotalRadiantLoadHistory</Name>
       <Definition>Total electromagnetic energy added or removed by emission or absorption.  If a value is less than zero (negative), then the thermal load is lost from the space. If a value is greater than zero (positive), then the thermal load is a gain to the space.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />

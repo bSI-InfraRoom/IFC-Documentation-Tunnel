@@ -32,7 +32,7 @@
       <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="3129ca9aac6d42af8f5da8acfe939cd3">
-      <Name>IsMountable</Name>
+      <Name>Mountable</Name>
       <Definition>Specifies whether the kerb can be readily climbed by a vehicle or not.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

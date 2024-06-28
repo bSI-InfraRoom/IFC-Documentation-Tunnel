@@ -5,9 +5,9 @@
   <Definition>Thermal and air flow conditions of a space or zone. HISTORY: New property set in IFC 2x2.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcSpace</ClassName>
+    <ClassName>IfcSpatialElement</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcSpace</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcSpatialElement</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="27fa9680d20c11e1800000215ad4efdf">
       <Name>CoolingAirFlowRate</Name>
@@ -40,7 +40,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="2e890e00d20c11e1800000215ad4efdf">
-      <Name>VentilationAirFlowRate</Name>
+      <Name>VentilationAirFlowRateHistory</Name>
       <Definition>Ventilation air flow rate in the space.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -56,7 +56,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="3183fe80d20c11e1800000215ad4efdf">
       <Name>ExhaustAirFlowRate</Name>
-      <Definition>Exhaust air flow rate in the space.</Definition>
+      <Definition>Design exhaust air flow rate for the space.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
@@ -70,7 +70,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="35178580d20c11e1800000215ad4efdf">
-      <Name>SpaceTemperature</Name>
+      <Name>SpaceTemperatureHistory</Name>
       <Definition>Temperature of the space.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />

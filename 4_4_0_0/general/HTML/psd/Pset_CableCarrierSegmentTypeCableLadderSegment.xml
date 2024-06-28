@@ -10,44 +10,6 @@ HISTORY: IFC4 - NominalLength deleted. To be handled as a quantity measure.</Def
   </ApplicableClasses>
   <ApplicableTypeValue>IfcCableCarrierSegment/CABLELADDERSEGMENT</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="a28e9f226e204a909976810e633a45f4">
-      <Name>NominalWidth</Name>
-      <Definition>The nominal width of the object.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcNonNegativeLengthMeasure" />
-        </TypePropertySingleValue>
-      </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Nominal Width</NameAlias>
-        <NameAlias lang="ja-JP">公称幅</NameAlias>
-        <NameAlias lang="ko-KR">공칭 폭</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">呼び幅寸法。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">폭 치수</DefinitionAlias>
-      </DefinitionAliases>
-    </PropertyDef>
-    <PropertyDef ifdguid="7e44e680d1c611e1800000215ad4efdf">
-      <Name>NominalHeight</Name>
-      <Definition>The nominal height of the segment.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveLengthMeasure" />
-        </TypePropertySingleValue>
-      </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Nominal Height</NameAlias>
-        <NameAlias lang="ja-JP">公称高</NameAlias>
-        <NameAlias lang="ko-KR">공칭 높이</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">呼び高寸法。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">고치수</DefinitionAlias>
-      </DefinitionAliases>
-    </PropertyDef>
     <PropertyDef ifdguid="83099a80d1c611e1800000215ad4efdf">
       <Name>LadderConfiguration</Name>
       <Definition>Description of the configuration of the ladder structure used.</Definition>

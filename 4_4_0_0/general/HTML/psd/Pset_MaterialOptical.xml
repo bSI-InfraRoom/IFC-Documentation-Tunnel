@@ -14,7 +14,7 @@
       <Definition>Transmittance at normal incidence (visible). Defines the fraction of the visible spectrum of solar radiation that passes through per unit area, perpendicular to the surface.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -26,10 +26,10 @@
     </PropertyDef>
     <PropertyDef ifdguid="9c720d00d1ed11e1800000215ad4efdf">
       <Name>SolarTransmittance</Name>
-      <Definition>Transmittance at normal incidence (solar). Defines the fraction of solar radiation that passes through per unit area, perpendicular to the surface.</Definition>
+      <Definition>The ratio of incident solar radiation that directly passes through a system (also named τe). Note the following equation Asol + Rsol + Tsol = 1</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -44,7 +44,7 @@
       <Definition>Thermal IR transmittance at normal incidence. Defines the fraction of thermal energy that passes through per unit area, perpendicular to the surface.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -59,7 +59,7 @@
       <Definition>Thermal IR emissivity: back side. Defines the fraction of thermal energy emitted per unit area to "blackbody" at the same temperature, through the "back" side of the material.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -74,7 +74,7 @@
       <Definition>Thermal IR emissivity: front side. Defines the fraction of thermal energy emitted per unit area to "blackbody" at the same temperature, through the "front" side of the material.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -89,7 +89,7 @@
       <Definition>Reflectance at normal incidence (visible): back side. Defines the fraction of the solar ray in the visible spectrum that is reflected and not transmitted when the ray passes from one medium into another, at the "back" side of the other material, perpendicular to the surface. Dependent on material and surface characteristics.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -104,7 +104,7 @@
       <Definition>Reflectance at normal incidence (visible): front side. Defines the fraction of the solar ray in the visible spectrum that is reflected and not transmitted when the ray passes from one medium into another, at the "front" side of the other material, perpendicular to the surface. Dependent on material and surface characteristics.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -119,7 +119,7 @@
       <Definition>Reflectance at normal incidence (solar): back side. Defines the fraction of the solar ray that is reflected and not transmitted when the ray passes from one medium into another, at the "back" side of the other material, perpendicular to the surface. Dependent on material and surface characteristics.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -134,7 +134,7 @@
       <Definition>Reflectance at normal incidence (solar): front side. Defines the fraction of the solar ray that is reflected and not transmitted when the ray passes from one medium into another, at the "front" side of the other material, perpendicular to the surface. Dependent on material and surface characteristics.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure" />
+          <DataType type="IfcNormalisedRatioMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>

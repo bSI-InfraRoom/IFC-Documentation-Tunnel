@@ -57,7 +57,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="fa3e2f00d1c411e1800000215ad4efdf">
       <Name>IsPermanentID</Name>
-      <Definition>Indicates whether the identity assigned to a building is permanent (= TRUE) or temporary (=FALSE).</Definition>
+      <Definition>Indicates whether the identity assigned to the object is permanent (= TRUE) or temporary (=FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -80,7 +80,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="ff02e300d1c411e1800000215ad4efdf">
       <Name>ConstructionMethod</Name>
-      <Definition>The type of construction action to the building, the project deals with, e.g. new construction, renovation, refurbishment, etc.</Definition>
+      <Definition>The type of construction action to the object, e.g. new construction, renovation, refurbishment, etc.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -149,7 +149,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="0c1fd200d1c511e1800000215ad4efdf">
       <Name>SprinklerProtectionAutomatic</Name>
-      <Definition>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE).</Definition>
+      <Definition>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE). It should only be given, if the property "SprinklerProtection" is set to TRUE.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -172,8 +172,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="104bef80d1c511e1800000215ad4efdf">
       <Name>OccupancyType</Name>
-      <Definition>Occupancy type for this object.
-It is defined according to the presiding national building code.</Definition>
+      <Definition>Occupancy type for this object. It is defined according to the presiding national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -196,7 +195,7 @@ It is defined according to the presiding national building code.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="1510a380d1c511e1800000215ad4efdf">
       <Name>GrossPlannedArea</Name>
-      <Definition>Total planned gross area for the building  Used for programming the building.</Definition>
+      <Definition>Total planned gross area of the spatial structure element. Used for programming the spatial structure element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure" />
@@ -219,7 +218,7 @@ It is defined according to the presiding national building code.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="193cc100d1c511e1800000215ad4efdf">
       <Name>NetPlannedArea</Name>
-      <Definition>Total planned net area for the building  Used for programming the building.</Definition>
+      <Definition>Total planned net area of the object. Used for programming the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure" />
@@ -240,11 +239,10 @@ It is defined according to the presiding national building code.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="1d68de80d1c511e1800000215ad4efdf">
       <Name>NumberOfStoreys</Name>
-      <Definition>The number of storeys within a building.
-Captured for those cases where the IfcBuildingStorey entity is not used. Note that if IfcBuilingStorey is asserted and the number of storeys in a building can be determined from it, then this approach should be used in preference to setting a property for the number of storeys.</Definition>
+      <Definition>The number of storeys within a building. Captured for those cases where the IfcBuildingStorey entity is not used. Note that if IfcBuildingStorey is asserted and the number of storeys in a building can be determined from it, then this approach should be used in preference to setting a property for the number of storeys.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -328,6 +326,28 @@ Dieses Attribute soll nur dann eingefügt werden, wenn keine Geschosse als Objek
         <DefinitionAlias lang="ja-JP">この建物は歴史的な建物かどうかを示すブーリアン値。</DefinitionAlias>
         <DefinitionAlias lang="ko-KR">이 건물은 역사적인 건물 있는지 여부를 나타내는 값</DefinitionAlias>
       </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="97328606d202478399b87a2e5f220ee9">
+      <Name>ElevationOfRefHeight</Name>
+      <Definition>Elevation above sea level of the reference height used for all storey elevation measures, equals to height 0.0. It is usually the ground floor level.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="21329ec248474889aa29da31475fd2a3">
+      <Name>ElevationOfTerrain</Name>
+      <Definition>Elevation above the minimal terrain level around the foot print of the building, given in elevation above sea level.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases>

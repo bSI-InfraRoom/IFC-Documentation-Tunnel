@@ -47,11 +47,11 @@
 <p>IFC4.3.0.0 CHANGE New enumeration</p>
 </blockquote>
 </td></tr><tr><td>CROSS</td><td><p>A fitting at which two branches are taken from the main route of the cable carrier simultaneously.</p>
-</td></tr><tr><td>REDUCER</td><td><p>A fitting that changes the physical size of the main route of the cable carrier.</p>
 </td></tr><tr><td>JUNCTION</td><td><p>A fitting with typically more than two ports used to redistribute flow among the ports and/or to change the direction of flow between connected elements (e.g, tee, cross, wye, etc.).</p>
 <blockquote>
 <p>IFC4.3.0.0 CHANGE New enumeration</p>
 </blockquote>
+</td></tr><tr><td>REDUCER</td><td><p>A fitting that changes the physical size of the main route of the cable carrier.</p>
 </td></tr><tr><td>TEE</td><td><p>A fitting at which a branch is taken from the main route of the cable carrier.</p>
 </td></tr><tr><td>TRANSITION</td><td><p>A fitting with typically two ports having different shapes or sizes. Can also be used to change the direction of flow between connected elements.</p>
 <blockquote>
@@ -69,8 +69,8 @@
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;bend&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;connector&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;cross&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;reducer&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;junction&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;reducer&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;tee&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;transition&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
@@ -80,7 +80,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcCableCarrierFittingTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;BEND, <br/>&nbsp;CONNECTOR, <br/>&nbsp;CROSS, <br/>&nbsp;REDUCER, <br/>&nbsp;JUNCTION, <br/>&nbsp;TEE, <br/>&nbsp;TRANSITION, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;BEND, <br/>&nbsp;CONNECTOR, <br/>&nbsp;CROSS, <br/>&nbsp;JUNCTION, <br/>&nbsp;REDUCER, <br/>&nbsp;TEE, <br/>&nbsp;TRANSITION, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcelectricaldomain/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

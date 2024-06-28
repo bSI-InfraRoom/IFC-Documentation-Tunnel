@@ -103,7 +103,7 @@ Additional description provided for the classification.
 IFC4 CHANGE  New attribute added at the end of the attribute list.
 </blockquote>
 </td><td>X</td></tr>
-<tr><td>6</td><td>Location</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
+<tr><td>6</td><td>Specification</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
 Resource identifier or locator, provided as URI, URN or URL, of the classification.
 <blockquote>
 IFC4 CHANGE  New attribute added at the end of the attribute list.
@@ -183,7 +183,7 @@ Additional description provided for the classification.
 IFC4 CHANGE  New attribute added at the end of the attribute list.
 </blockquote>
 </td><td>X</td></tr>
-<tr><td>6</td><td>Location</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
+<tr><td>6</td><td>Specification</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
 Resource identifier or locator, provided as URI, URN or URL, of the classification.
 <blockquote>
 IFC4 CHANGE  New attribute added at the end of the attribute list.
@@ -250,7 +250,7 @@ IFC4 CHANGE  New inverse attribute.
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;EditionDate&quot; type=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Name&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Description&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Location&quot; type=&quot;ifc:<a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Specification&quot; type=&quot;ifc:<a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
@@ -263,7 +263,7 @@ IFC4 CHANGE  New inverse attribute.
 &nbsp;&nbsp;EditionDate : <span class="keyword">OPTIONAL</span> <a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>;<br/>
 &nbsp;&nbsp;Name : <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
 &nbsp;&nbsp;Description : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>;<br/>
-&nbsp;&nbsp;Location : <span class="keyword">OPTIONAL</span> <a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>;<br/>
+&nbsp;&nbsp;Specification : <span class="keyword">OPTIONAL</span> <a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a>;<br/>
 &nbsp;&nbsp;ReferenceTokens : <span class="keyword">OPTIONAL</span> <span class="keyword">LIST</span> [1:?] <span class="keyword">OF</span> <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;ClassificationForObjects : <span class="keyword">SET</span> [0:?] OF <a href="../../ifckernel/lexical/ifcrelassociatesclassification.htm">IfcRelAssociatesClassification</a> <span class="keyword">FOR</span> RelatingClassification;<br/>

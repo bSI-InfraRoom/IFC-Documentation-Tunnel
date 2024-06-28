@@ -100,8 +100,10 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="eacede00d1e411e1800000215ad4efdf">
-      <Name>a</Name>
-      <Definition>Measure a according to ISO 2553</Definition>
+      <Name>NominalThroatThickness</Name>
+      <Definition>Design value of the height of the largest isosceles triangle that can be inscribed in the section of a fillet weld.
+
+&gt; REFERENCE&amp;nbsp; Symbol a according to ISO 2553:2019.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -115,8 +117,10 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="f3271900d1e411e1800000215ad4efdf">
-      <Name>c</Name>
-      <Definition>Measure c according to ISO 2553</Definition>
+      <Name>WeldWidth</Name>
+      <Definition>Required elongated hole width at the faying surface or seam weld width at the faying surface.
+
+&gt; REFERENCE&amp;nbsp; Symbol c according to ISO 2553:2019.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -130,8 +134,10 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="f9b59080d1e411e1800000215ad4efdf">
-      <Name>d</Name>
-      <Definition>Measure d according to ISO 2553</Definition>
+      <Name>WeldDiameter</Name>
+      <Definition>Dimension of the required hole diameter at the faying surface, or required spot weld diameter at the faying surface, or required stud diameter.
+
+&gt; REFERENCE&amp;nbsp; Symbol d according to ISO 2553:2019.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -145,8 +151,10 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="00dc9e80d1e511e1800000215ad4efdf">
-      <Name>e</Name>
-      <Definition>Measure e according to ISO 2553</Definition>
+      <Name>WeldElementSpacing</Name>
+      <Definition>Spacing between weld elements (centre to centre)
+
+&gt; REFERENCE&amp;nbsp; Symbol e according to ISO 2553:2019.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -160,8 +168,10 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="076b1600d1e511e1800000215ad4efdf">
-      <Name>l</Name>
-      <Definition>Measure l according to ISO 2553</Definition>
+      <Name>WeldElementLength</Name>
+      <Definition>Length of each weld element.
+
+&gt; REFERENCE&amp;nbsp; Symbol l according to ISO 2553:2019.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -175,8 +185,10 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="0e922400d1e511e1800000215ad4efdf">
-      <Name>n</Name>
-      <Definition>Count n according to ISO 2553</Definition>
+      <Name>NumberOfWeldElements</Name>
+      <Definition>Number of weld elements.
+
+&gt; REFERENCE&amp;nbsp; Symbol n according to ISO 2553:2019.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcCountMeasure" />
@@ -190,8 +202,10 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="1356d800d1e511e1800000215ad4efdf">
-      <Name>s</Name>
-      <Definition>Measure s according to ISO 2553</Definition>
+      <Name>DeepPenetrationThroatThickness</Name>
+      <Definition>Nominal throat thickness or effective throat thickness to which a certain amount of fusion penetration is added.
+
+&gt; REFERENCE&amp;nbsp; Symbol s according to ISO 2553:2019.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -205,8 +219,10 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="1a7de600d1e511e1800000215ad4efdf">
-      <Name>z</Name>
-      <Definition>Measure z according to ISO 2553</Definition>
+      <Name>WeldLegLength</Name>
+      <Definition>Distance from the actual or projected intersection of the fusion faces and the toe of a fillet weld, measured across the fusion face.
+
+&gt; REFERENCE&amp;nbsp; Symbol z according to ISO 2553:2019.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

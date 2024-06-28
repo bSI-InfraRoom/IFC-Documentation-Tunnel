@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="0651dd00d21511e1800000215ad4efdf">
       <Name>HasHoseUnion</Name>
-      <Definition>Indicates whether the gas tap is fitted with a hose union connection (= TRUE) or not (= FALSE).</Definition>
+      <Definition>Indicates whether the object is fitted with a hose union connection (= TRUE) or not (= FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

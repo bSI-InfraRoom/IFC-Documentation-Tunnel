@@ -5,9 +5,9 @@
   <Definition>Properties specific to edge fixing plates.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcDiscreteAccessory/Edge fixing plate</ClassName>
+    <ClassName>IfcDiscreteAccessory</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcDiscreteAccessory/Edge fixing plate</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcDiscreteAccessory</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="8d319600d1d211e1800000215ad4efdf">
       <Name>EdgeFixingPlateLength</Name>

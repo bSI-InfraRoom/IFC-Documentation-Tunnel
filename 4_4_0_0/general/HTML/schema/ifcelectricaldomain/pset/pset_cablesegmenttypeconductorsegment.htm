@@ -68,7 +68,7 @@
 </td></tr>
 </table>
 </td></tr>
-<tr><td>Material</td><td>
+<tr><td>ConductorMaterial</td><td>
 <span class="self-ref">P_ENUMERATEDVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
@@ -88,13 +88,13 @@
 /
  <a href="../../../penum/penum_constructionenum.htm">PEnum_ConstructionEnum</a></td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Construction</b></td><td>Purpose of informing on how the vonductor is constucted (interwined or solid). I.e. Solid (IEV 461-01-06), stranded (IEV 461-01-07), solid-/finestranded(IEV 461-01-11) (not flexible/flexible).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Construction</b></td><td>Purpose of informing on how the conductor is constructed (interwined or solid). I.e. Solid (IEV 461-01-06), stranded (IEV 461-01-07), solid-/finestranded(IEV 461-01-11) (not flexible/flexible).
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>構造</b></td><td>導体の構成（より線か単線）の定義。すなわち単線（IEV 461-01-06）、より線（IEV 461-01-07）、フレキシブル導体（IEV 461-01-11）（フレキシブルか否か）で定義。
 </td></tr>
 </table>
 </td></tr>
-<tr><td>Shape</td><td>
+<tr><td>ConductorShape</td><td>
 <span class="self-ref">P_ENUMERATEDVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
@@ -195,7 +195,7 @@ The resistance under direct current and 20 degrees centigrade.
 <a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Overall Diameter</b></td><td>The overall diameter of a Cable/Bus.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Overall Diameter</b></td><td>The overall diameter of a object.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>直径</b></td><td>ケーブルや母線の外形寸法（直径）を示す。
 </td></tr>
@@ -204,10 +204,10 @@ The resistance under direct current and 20 degrees centigrade.
 <tr><td>NumberOfCores</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Cores</b></td><td>The number of cores in Cable/Bus.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Cores</b></td><td>The number of cores.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>芯数</b></td><td>ケーブルや母線の芯数を示す。
 </td></tr>
@@ -219,7 +219,7 @@ The resistance under direct current and 20 degrees centigrade.
 <a href="../../ifcmeasureresource/lexical/ifcelectricvoltagemeasure.htm">IfcElectricVoltageMeasure</a>
 *</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Rated Voltage</b></td><td>The voltage that a device is designed to handle.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Rated Voltage</b></td><td>The range of allowed voltage that a device is certified to handle. The upper bound of this value is the maximum.
 </td></tr>
 </table>
 </td></tr>

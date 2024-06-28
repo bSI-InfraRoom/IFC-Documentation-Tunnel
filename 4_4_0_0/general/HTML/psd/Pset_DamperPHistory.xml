@@ -63,7 +63,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="cff26e80d1d011e1800000215ad4efdf">
       <Name>DamperPosition</Name>
-      <Definition>Damper position (0-1); damper position ( 0=closed=90deg position angle, 1=open=0deg position angle.</Definition>
+      <Definition>Control damper position, ranging from 0 to 1; damper position (0=closed=90deg position angle, 1=open=0deg position angle).</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

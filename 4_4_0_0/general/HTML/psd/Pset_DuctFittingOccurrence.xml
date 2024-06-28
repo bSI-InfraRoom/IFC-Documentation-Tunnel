@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="e0f5ac80d1dd11e1800000215ad4efdf">
       <Name>InteriorRoughnessCoefficient</Name>
-      <Definition>The interior roughness of the duct fitting material.</Definition>
+      <Definition>The interior roughness of the material of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -44,10 +44,8 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="eb17ab00d1dd11e1800000215ad4efdf">
-      <Name>Color</Name>
-      <Definition>The color of the duct segment.
-
-Note: This is typically used for any duct segments with a painted surface which is not otherwise specified as a covering.</Definition>
+      <Name>Colour</Name>
+      <Definition>Colour of this object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

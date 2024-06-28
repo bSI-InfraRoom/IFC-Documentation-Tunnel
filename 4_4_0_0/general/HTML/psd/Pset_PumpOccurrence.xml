@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="7dc84200d1fe11e1800000215ad4efdf">
       <Name>ImpellerDiameter</Name>
-      <Definition>Diameter of pump impeller - used to scale performance of geometrically similar pumps.</Definition>
+      <Definition>Diameter of object - used to scale performance of geometrically similar objects.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -30,9 +30,9 @@
       <Name>BaseType</Name>
       <Definition>Defines general types of pump bases.
 
-FRAME: Frame. 
-BASE: Base. 
-NONE: There is no pump base, such as an inline pump. 
+FRAME: Frame.
+BASE: Base.
+NONE: There is no pump base, such as an inline pump.
 OTHER: Other type of pump base.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
@@ -119,9 +119,9 @@ OTHER: Other type of pump base.</Definition>
       <Name>DriveConnectionType</Name>
       <Definition>The way the pump drive mechanism is connected to the pump.
 
-DIRECTDRIVE: Direct drive. 
-BELTDRIVE: Belt drive. 
-COUPLING: Coupling. 
+DIRECTDRIVE: Direct drive.
+BELTDRIVE: Belt drive.
+COUPLING: Coupling.
 OTHER: Other type of drive connection.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>

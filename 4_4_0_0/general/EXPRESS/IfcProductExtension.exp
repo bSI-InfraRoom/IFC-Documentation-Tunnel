@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -203,22 +203,22 @@ TYPE IfcAlignmentTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcAnnotationTypeEnum = ENUMERATION OF
-	(ASSUMEDPOINT
-	,ASBUILTAREA
-	,ASBUILTLINE
-	,NON_PHYSICAL_SIGNAL
-	,ASSUMEDLINE
-	,WIDTHEVENT
-	,ASSUMEDAREA
-	,SUPERELEVATIONEVENT
-	,ASBUILTPOINT
+	(CONTOURLINE
+	,DIMENSION
+	,ISOBAR
+	,ISOLUX
+	,ISOTHERM
+	,LEADER
+	,SURVEY
+	,SYMBOL
+	,TEXT
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcAssemblyPlaceEnum = ENUMERATION OF
-	(SITE
-	,FACTORY
+	(FACTORY
+	,SITE
 	,NOTDEFINED);
 END_TYPE;
 
@@ -251,60 +251,61 @@ TYPE IfcBridgeTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcBuiltSystemTypeEnum = ENUMERATION OF
-	(REINFORCING
-	,MOORING
-	,OUTERSHELL
-	,TRACKCIRCUIT
-	,EROSIONPREVENTION
+	(EROSIONPREVENTION
+	,FENESTRATION
+	,FIREPROTECTION
 	,FOUNDATION
 	,LOADBEARING
-	,SHADING
-	,FENESTRATION
-	,TRANSPORT
+	,MOORING
+	,OUTERSHELL
 	,PRESTRESSING
 	,RAILWAYLINE
 	,RAILWAYTRACK
+	,REINFORCING
+	,SHADING
+	,TRACKCIRCUIT
+	,TRANSPORT
+	,TUNNEL_LINING
 	,TUNNEL_PRESUPPORT
 	,TUNNEL_SUPPORT
-	,TUNNEL_LINING
 	,WATERPROOFING
-	,FIREPROTECTION
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcElementAssemblyTypeEnum = ENUMERATION OF
-	(ACCESSORY_ASSEMBLY
+	(ABUTMENT
+	,ACCESSORY_ASSEMBLY
 	,ARCH
 	,BEAM_GRID
 	,BRACED_FRAME
-	,GIRDER
-	,REINFORCEMENT_UNIT
-	,RIGID_FRAME
-	,SLAB_FIELD
-	,TRUSS
-	,ABUTMENT
-	,PIER
-	,PYLON
 	,CROSS_BRACING
 	,DECK
-	,MAST
-	,SIGNALASSEMBLY
+	,DILATATIONPANEL
+	,DUCTBANK
+	,ENTRANCEWORKS
+	,GIRDER
 	,GRID
+	,MAST
+	,PIER
+	,PRESUPPORTFACE
+	,PRESUPPORTVAULT
+	,PYLON
+	,RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY
+	,REINFORCEMENT_UNIT
+	,RIGID_FRAME
+	,RING
 	,SHELTER
+	,SIGNALASSEMBLY
+	,SLAB_FIELD
+	,SUMPBUSTER
 	,SUPPORTINGASSEMBLY
 	,SUSPENSIONASSEMBLY
-	,TRACTION_SWITCHING_ASSEMBLY
 	,TRACKPANEL
-	,TURNOUTPANEL
-	,DILATATIONPANEL
-	,RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY
-	,ENTRANCEWORKS
-	,SUMPBUSTER
+	,TRACTION_SWITCHING_ASSEMBLY
 	,TRAFFIC_CALMING_DEVICE
-	,DUCTBANK
-	,PRESUPPORTVAULT
-	,PRESUPPORTFACE
+	,TRUSS
+	,TURNOUTPANEL
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -318,57 +319,57 @@ END_TYPE;
 TYPE IfcExternalSpatialElementTypeEnum = ENUMERATION OF
 	(EXTERNAL
 	,EXTERNAL_EARTH
-	,EXTERNAL_WATER
 	,EXTERNAL_FIRE
+	,EXTERNAL_WATER
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcFacilityPartCommonTypeEnum = ENUMERATION OF
-	(SEGMENT
-	,ABOVEGROUND
+	(ABOVEGROUND
+	,BELOWGROUND
 	,JUNCTION
 	,LEVELCROSSING
-	,BELOWGROUND
+	,SEGMENT
 	,SUBSTRUCTURE
-	,TERMINAL
 	,SUPERSTRUCTURE
+	,TERMINAL
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcFacilityUsageEnum = ENUMERATION OF
 	(LATERAL
+	,LONGITUDINAL
 	,REGION
 	,VERTICAL
-	,LONGITUDINAL
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcGeographicElementTypeEnum = ENUMERATION OF
-	(TERRAIN
-	,SOIL_BORING_POINT
+	(SOIL_BORING_POINT
+	,TERRAIN
 	,VEGETATION
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcGridTypeEnum = ENUMERATION OF
-	(RECTANGULAR
+	(IRREGULAR
 	,RADIAL
+	,RECTANGULAR
 	,TRIANGULAR
-	,IRREGULAR
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcInternalOrExternalEnum = ENUMERATION OF
-	(INTERNAL
-	,EXTERNAL
+	(EXTERNAL
 	,EXTERNAL_EARTH
-	,EXTERNAL_WATER
 	,EXTERNAL_FIRE
+	,EXTERNAL_WATER
+	,INTERNAL
 	,NOTDEFINED);
 END_TYPE;
 
@@ -393,71 +394,75 @@ TYPE IfcProjectionElementTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcReferentTypeEnum = ENUMERATION OF
-	(STATION
-	,REFERENCEMARKER
-	,LANDMARK
-	,BOUNDARY
+	(BOUNDARY
 	,INTERSECTION
+	,KILOPOINT
+	,LANDMARK
+	,MILEPOINT
 	,POSITION
+	,REFERENCEMARKER
+	,STATION
+	,SUPERELEVATIONEVENT
+	,WIDTHEVENT
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcSpaceTypeEnum = ENUMERATION OF
-	(SPACE
-	,PARKING
+	(BERTH
+	,EXTERNAL
 	,GFA
 	,INTERNAL
-	,EXTERNAL
-	,BERTH
+	,PARKING
+	,SPACE
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcSpatialZoneTypeEnum = ENUMERATION OF
-	(CONSTRUCTION
+	(ANNULARGAP
+	,CLEARANCE
+	,COMPARTMENT
+	,CONSTRUCTION
 	,FIRESAFETY
+	,INSTALLATION
+	,INTERFERENCE
+	,INTERIOR
+	,INVERT
 	,LIGHTING
+	,LINING
+	,MAPPEDZONE
 	,OCCUPANCY
+	,RESERVATION
 	,SECURITY
+	,SERVICE
+	,TESTEDZONE
 	,THERMAL
 	,TRANSPORT
 	,VENTILATION
-	,RESERVATION
-	,INTERFERENCE
-	,MAPPEDZONE
-	,TESTEDZONE
-	,COMPARTMENT
-	,ANNULARGAP
-	,CLEARANCE
-	,INSTALLATION
-	,INTERIOR
-	,INVERT
-	,LINING
-	,SERVICE
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcTransportElementTypeEnum = ENUMERATION OF
-	(ELEVATOR
+	(CRANEWAY
+	,ELEVATOR
 	,ESCALATOR
-	,MOVINGWALKWAY
-	,CRANEWAY
-	,LIFTINGGEAR
 	,HAULINGGEAR
+	,LIFTINGGEAR
+	,MOVINGWALKWAY
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcVehicleTypeEnum = ENUMERATION OF
-	(VEHICLE
-	,VEHICLETRACKED
+	(CARGO
 	,ROLLINGSTOCK
-	,VEHICLEWHEELED
+	,VEHICLE
 	,VEHICLEAIR
-	,CARGO
 	,VEHICLEMARINE
+	,VEHICLETRACKED
+	,VEHICLEWHEELED
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -519,20 +524,20 @@ END_ENTITY;
 
 ENTITY IfcBridge
  SUBTYPE OF (IfcFacility);
-	PredefinedType : IfcBridgeTypeEnum;
+	PredefinedType : OPTIONAL IfcBridgeTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcBridgeTypeEnum.USERDEFINED) OR 
-
-EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcBridgeTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcBridgeTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcBridgePart
  SUBTYPE OF (IfcFacilityPart);
-	PredefinedType : IfcBridgePartTypeEnum;
+	PredefinedType : OPTIONAL IfcBridgePartTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcBridgePartTypeEnum.USERDEFINED) OR 
-
-EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcBridgePartTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcBridgePartTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcBuilding
@@ -736,7 +741,6 @@ ENTITY IfcElementType
     ,IfcFurnishingElementType
     ,IfcGeoScienceElementType
     ,IfcGeographicElementType
-    ,IfcTransportElementType
     ,IfcTransportationDeviceType))
  SUBTYPE OF (IfcTypeProduct);
 	ElementType : OPTIONAL IfcLabel;
@@ -780,11 +784,11 @@ END_ENTITY;
 
 ENTITY IfcFacilityPartCommon
  SUBTYPE OF (IfcFacilityPart);
-	PredefinedType : IfcFacilityPartCommonTypeEnum;
+	PredefinedType : OPTIONAL IfcFacilityPartCommonTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcFacilityPartCommonTypeEnum.USERDEFINED) OR 
-
-EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcFacilityPartCommonTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcFacilityPartCommonTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcFeatureElement
@@ -861,15 +865,17 @@ END_ENTITY;
 
 ENTITY IfcIntegerVoxelData
  SUBTYPE OF (IfcVoxelData);
-	Values : ARRAY [1:GridSize] OF IfcInteger;
+	ValueData : LIST [1:?] OF IfcInteger;
 	Unit : OPTIONAL IfcUnit;
  DERIVE
-	GridSize : IfcInteger :=  SIZEOF(SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels);
+	Values : ARRAY [1:SELF\IfcVoxelData.GridSize] OF OPTIONAL IfcInteger := IfcListToExpandedArray(ValueData,1,SELF\IfcVoxelData.GridSize,SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels);
 END_ENTITY;
 
 ENTITY IfcLabelVoxelData
  SUBTYPE OF (IfcVoxelData);
-	Values : ARRAY [1:?] OF IfcLabel;
+	ValueData : LIST [1:?] OF IfcLabel;
+ DERIVE
+	Values : ARRAY [1:SELF\IfcVoxelData.GridSize] OF OPTIONAL IfcLabel := IfcListToExpandedArray(ValueData,1,SELF\IfcVoxelData.GridSize,SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels);
 END_ENTITY;
 
 ENTITY IfcLinearElement
@@ -896,7 +902,9 @@ END_ENTITY;
 
 ENTITY IfcLogicalVoxelData
  SUBTYPE OF (IfcVoxelData);
-	Values : ARRAY [1:?] OF IfcLogical;
+	ValueData : LIST [1:?] OF IfcLogical;
+ DERIVE
+	Values : ARRAY [1:SELF\IfcVoxelData.GridSize] OF OPTIONAL IfcLogical := IfcListToExpandedArray(ValueData,1,SELF\IfcVoxelData.GridSize,SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels);
 END_ENTITY;
 
 ENTITY IfcObservation
@@ -950,8 +958,10 @@ END_ENTITY;
 
 ENTITY IfcRealVoxelData
  SUBTYPE OF (IfcVoxelData);
-	Values : ARRAY [1:?] OF IfcReal;
+	ValueData : LIST [1:?] OF IfcReal;
 	Unit : OPTIONAL IfcUnit;
+ DERIVE
+	Values : ARRAY [1:SELF\IfcVoxelData.GridSize] OF OPTIONAL IfcReal := IfcListToExpandedArray(ValueData,1,SELF\IfcVoxelData.GridSize,SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels);
 END_ENTITY;
 
 ENTITY IfcReferent
@@ -969,18 +979,17 @@ ENTITY IfcRelAssociatesMaterial
  SUBTYPE OF (IfcRelAssociates);
 	RelatingMaterial : IfcMaterialSelect;
  WHERE
-	NoVoidElement : SIZEOF(QUERY(temp <* SELF\IfcRelAssociates.RelatedObjects | 
-  ('IFCPRODUCTEXTENSION.IFCFEATUREELEMENTSUBTRACTION' IN TYPEOF(temp)) OR 
-  ('IFCPRODUCTEXTENSION.IFCVIRTUALELEMENT' IN TYPEOF(temp)) 
-)) = 0;
 	AllowedElements : SIZEOF(QUERY(temp <* SELF\IfcRelAssociates.RelatedObjects | (
   SIZEOF(TYPEOF(temp) * [   
     'IFCPRODUCTEXTENSION.IFCELEMENT', 
     'IFCPRODUCTEXTENSION.IFCELEMENTTYPE',
-    'IFCSHAREDBLDGELEMENTS.IFCWINDOWSTYLE',
-    'IFCSHAREDBLDGELEMENTS.IFCDOORSTYLE',
     'IFCSTRUCTURALANALYSISDOMAIN.IFCSTRUCTURALMEMBER',
-    'IFCPRODUCTEXTENSION.IFCPORT']) = 0) 
+    'IFCPRODUCTEXTENSION.IFCPORT',
+    'IFCSHAREDINFRASTRUCTUREELEMENTS.IFCGEOSCIENCEOBSERVATION']) = 0) 
+)) = 0;
+	NoVoidElement : SIZEOF(QUERY(temp <* SELF\IfcRelAssociates.RelatedObjects | 
+  ('IFCPRODUCTEXTENSION.IFCFEATUREELEMENTSUBTRACTION' IN TYPEOF(temp)) OR 
+  ('IFCPRODUCTEXTENSION.IFCVIRTUALELEMENT' IN TYPEOF(temp)) 
 )) = 0;
 END_ENTITY;
 
@@ -1247,7 +1256,7 @@ OR
 END_ENTITY;
 
 ENTITY IfcTransportElementType
- SUBTYPE OF (IfcElementType);
+ SUBTYPE OF (IfcTransportationDeviceType);
 	PredefinedType : IfcTransportElementTypeEnum;
  WHERE
 	CorrectPredefinedType : (PredefinedType <> IfcTransportElementTypeEnum.USERDEFINED)
@@ -1264,14 +1273,17 @@ END_ENTITY;
 
 ENTITY IfcTransportationDeviceType
  ABSTRACT SUPERTYPE OF (ONEOF
-    (IfcVehicleType))
+    (IfcTransportElementType
+    ,IfcVehicleType))
  SUBTYPE OF (IfcElementType);
 END_ENTITY;
 
 ENTITY IfcVectorVoxelData
  SUBTYPE OF (IfcVoxelData);
-	Values : ARRAY [1:?] OF IfcVector;
+	ValueData : LIST [1:?] OF IfcVector;
 	Unit : OPTIONAL IfcUnit;
+ DERIVE
+	Values : ARRAY [1:SELF\IfcVoxelData.GridSize] OF OPTIONAL IfcVector := IfcListToExpandedArray(ValueData,1,SELF\IfcVoxelData.GridSize,SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels);
 END_ENTITY;
 
 ENTITY IfcVehicle
@@ -1298,7 +1310,11 @@ END_ENTITY;
 
 ENTITY IfcVirtualElement
  SUBTYPE OF (IfcElement);
-	PredefinedType : IfcVirtualElementTypeEnum;
+	PredefinedType : OPTIONAL IfcVirtualElementTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcVirtualElementTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcVirtualElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcVoxelData
@@ -1310,20 +1326,22 @@ ENTITY IfcVoxelData
     ,IfcVectorVoxelData))
  SUBTYPE OF (IfcComplementaryData);
 	ValueType : OPTIONAL IfcLabel;
+ DERIVE
+	GridSize : IfcInteger :=  SIZEOF(SELF\IfcProduct.Representation.Representations[1].Items[1]\IfcVoxelGrid.Voxels);
  WHERE
 	IsAssignedToProduct : EXISTS(SELF\IfcObjectDefinition.HasAssignments)
 AND
 (SIZEOF(SELF\IfcObjectDefinition.HasAssignments) = 1)
 AND
 ('IFCKERNEL.IFCRELASSIGNSTOPRODUCT' IN TYPEOF(SELF\IfcObjectDefinition.HasAssignments[1]));
+	SameRepresentation : SIZEOF(QUERY(ShapeRep <* SELF\IfcObjectDefinition.HasAssignments[1]\IfcRelAssignsToProduct.RelatingProduct\IfcProduct.Representation.Representations |
+ShapeRep = SELF\IfcProduct.Representation.Representations[1])) = 1;
 	VoxelGridRepresentation : EXISTS(SELF\IfcProduct.Representation)
 AND
 (SIZEOF(QUERY(ShapeRep <* SELF\IfcProduct.Representation.Representations | 
     (SIZEOF(ShapeRep.Items) = 1)
     AND
     ('IFCGEOMETRICMODELRESOURCE.IFCVOXELGRID' IN TYPEOF(ShapeRep.Items[1])))) = 1);
-	SameRepresentation : SIZEOF(QUERY(ShapeRep <* SELF\IfcObjectDefinition.HasAssignments[1]\IfcRelAssignsToProduct.RelatingProduct\IfcProduct.Representation.Representations |
-ShapeRep = SELF\IfcProduct.Representation.Representations[1])) = 1;
 END_ENTITY;
 
 ENTITY IfcZone
@@ -1345,8 +1363,8 @@ FUNCTION IfcAlignmentRepresentation
 		AlignmentRepresentations : SET OF IfcShapeRepresentation;
 		TwoDRep : SET OF IfcShapeRepresentation;
 		ThreeDRep : SET OF IfcShapeRepresentation;
-		CurveTwoD : IfcCompositeCurve;
-		CurveThreeD : IfcGradientCurve;
+		CurveTwoD : SET OF IfcCompositeCurve;
+		CurveThreeD : SET OF IfcGradientCurve;
 	END_LOCAL;
 
 	(* no representation is okay *)
@@ -1394,7 +1412,7 @@ FUNCTION IfcAlignmentRepresentation
 		ThreeDRep := QUERY(threeDee <* AlignmentRepresentations | threeDee.RepresentationType = 'Curve3D');
 		CurveThreeD := QUERY(item <* ThreeDRep[1].Items | 'IFCGEOMETRYRESOURCE.IFCGRADIENTCURVE' in TYPEOF(item));
 		
-		RETURN((SIZEOF(CurveThreeD) = 1) AND (SIZEOF(CurveTwoD) = 1) AND (CurveThreeD\IfcGradientCurve.BaseCurve :=: CurveTwoD));
+		RETURN((SIZEOF(CurveThreeD) = 1) AND (SIZEOF(CurveTwoD) = 1) AND (CurveThreeD[1].BaseCurve :=: CurveTwoD[1]));
 	
 	END_IF;
 	(* Missing an IFCSEGMENTEDREFERENCECURVE various placement option implementation. *)

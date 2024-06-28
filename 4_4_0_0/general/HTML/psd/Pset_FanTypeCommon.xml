@@ -118,10 +118,10 @@
     <PropertyDef ifdguid="5b292f80d1e411e1800000215ad4efdf">
       <Name>MotorDriveType</Name>
       <Definition>Motor drive type:
-DIRECTDRIVE: Direct drive. 
-BELTDRIVE: Belt drive. 
-COUPLING: Coupling. 
-OTHER: Other type of motor drive. 
+DIRECTDRIVE: Direct drive.
+BELTDRIVE: Belt drive.
+COUPLING: Coupling.
+OTHER: Other type of motor drive.
 UNKNOWN: Unknown motor drive type.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
@@ -210,7 +210,7 @@ OTHER: その他</DefinitionAlias>
     <PropertyDef ifdguid="6a0fe200d1e411e1800000215ad4efdf">
       <Name>CapacityControlType</Name>
       <Definition>InletVane: Control by adjusting inlet vane.
-VariableSpeedDrive: Control by variable speed drive. 
+VariableSpeedDrive: Control by variable speed drive.
 BladePitchAngle: Control by adjusting blade pitch angle.
 TwoSpeed: Control by switch between high and low speed.
 DischargeDamper: Control by modulating discharge damper.</Definition>
@@ -378,7 +378,9 @@ DischargeDamper: 吐出ダンパ制御</DefinitionAlias>
     </PropertyDef>
     <PropertyDef ifdguid="96c3f980d1e411e1800000215ad4efdf">
       <Name>NominalRotationSpeed</Name>
-      <Definition>Nominal fan wheel speed.</Definition>
+      <Definition>Rotational speed of the object under nominal conditions.
+
+Nominal fan wheel speed.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcRotationalFrequencyMeasure" />

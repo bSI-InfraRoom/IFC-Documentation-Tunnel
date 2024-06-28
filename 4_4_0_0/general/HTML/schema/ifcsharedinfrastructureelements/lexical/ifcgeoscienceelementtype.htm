@@ -11,7 +11,7 @@
     <title>IfcGeoScienceElementType</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 5 index3 3 index4 10 index5 0; }
+      body { counter-reset: index1 6 index2 5 index3 3 index4 11 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.5.3.11");
+    parent.index.location.replace("../../toc-6.htm#6.5.3.12");
 //-->
 </script>
 
@@ -30,7 +30,7 @@
 </details>
 <details open="open"><summary>Change log</summary><table class="gridtable">
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeoscienceelementtype.htm">IfcGeoScienceElementType</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
@@ -45,6 +45,8 @@
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcgeoscienceelementtype.png" usemap="#f"/>
 <map name="f">
 <area shape="rect" coords="78,150,266,162" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcboreholetype.htm" alt="IfcBoreholeType" />
+<area shape="rect" coords="78,174,266,186" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetype.htm" alt="IfcGeoScienceFeatureType" />
+<area shape="rect" coords="78,198,266,210" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeosciencemodeltype.htm" alt="IfcGeoScienceModelType" />
 <area shape="rect" coords="54,102,290,114" href="../../../schema/ifcproductextension/lexical/ifcelementtype.htm" alt="IfcElementType" />
 <area shape="rect" coords="42,78,302,90" href="../../../schema/ifckernel/lexical/ifctypeproduct.htm" alt="IfcTypeProduct" />
 <area shape="rect" coords="30,54,314,66" href="../../../schema/ifckernel/lexical/ifctypeobject.htm" alt="IfcTypeObject" />
@@ -182,7 +184,7 @@ The type denotes a particular type that indicates the object further. The use ha
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcGeoScienceElementType<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="../../ifcsharedinfrastructureelements/lexical/ifcboreholetype.htm">IfcBoreholeType</a>)<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcsharedinfrastructureelements/lexical/ifcboreholetype.htm">IfcBoreholeType</a>, <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetype.htm">IfcGeoScienceFeatureType</a>, <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencemodeltype.htm">IfcGeoScienceModelType</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a>)<b>;</b><br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedinfrastructureelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>

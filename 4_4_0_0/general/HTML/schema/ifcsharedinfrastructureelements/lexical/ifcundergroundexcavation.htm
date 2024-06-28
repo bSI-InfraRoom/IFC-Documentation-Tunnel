@@ -11,7 +11,7 @@
     <title>IfcUndergroundExcavation</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 5 index3 3 index4 31 index5 0; }
+      body { counter-reset: index1 6 index2 5 index3 3 index4 34 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.5.3.32");
+    parent.index.location.replace("../../toc-6.htm#6.5.3.35");
 //-->
 </script>
 
@@ -30,7 +30,7 @@
 </details>
 <details open="open"><summary>Change log</summary><table class="gridtable">
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcundergroundexcavation.htm">IfcUndergroundExcavation</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
@@ -38,34 +38,21 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The resulting void from an underground excavation where the uppermost terrain surface is not affected.</p>
 </details>
-<details open="open"><summary>Attribute definitions</summary><table class="attributes">
-<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
-<th>G</th></tr>
-<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavationtypeenum.htm">IfcUndergroundExcavationTypeEnum</a></td><td></td><td>
-Identifies the predefined type of underground excavation elements. This type may associate additional specific property sets.
-</td><td>X</td></tr>
-</table>
-</details>
-<details open="open"><summary>Formal Propositions</summary><table class="propositions">
-<tr><th>Rule</th><th>Description</th></tr>
-<tr><td>HasObjectType</td><td>The attribute ObjectType shall be given if the predefined type is set to USERDEFINED.
-</td></tr>
-</table>
-
-</details>
 </section>
 <section>
 <h5 class="num">Inherited definitions from supertypes</h5>
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcundergroundexcavation.png" usemap="#f"/>
 <map name="f">
-<area shape="rect" coords="90,174,302,186" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcexcavation.htm" alt="IfcExcavation" />
-<area shape="rect" coords="78,150,314,162" href="../../../schema/ifcproductextension/lexical/ifcfeatureelementsubtraction.htm" alt="IfcFeatureElementSubtraction" />
-<area shape="rect" coords="66,126,326,138" href="../../../schema/ifcproductextension/lexical/ifcfeatureelement.htm" alt="IfcFeatureElement" />
-<area shape="rect" coords="54,102,338,114" href="../../../schema/ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" />
-<area shape="rect" coords="42,78,350,90" href="../../../schema/ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" />
-<area shape="rect" coords="30,54,362,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
-<area shape="rect" coords="18,30,374,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
-<area shape="rect" coords="6,6,386,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+<area shape="rect" coords="114,222,302,234" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcfaceexcavation.htm" alt="IfcFaceExcavation" />
+<area shape="rect" coords="114,246,302,258" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcradialexcavation.htm" alt="IfcRadialExcavation" />
+<area shape="rect" coords="90,174,326,186" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcexcavation.htm" alt="IfcExcavation" />
+<area shape="rect" coords="78,150,338,162" href="../../../schema/ifcproductextension/lexical/ifcfeatureelementsubtraction.htm" alt="IfcFeatureElementSubtraction" />
+<area shape="rect" coords="66,126,350,138" href="../../../schema/ifcproductextension/lexical/ifcfeatureelement.htm" alt="IfcFeatureElement" />
+<area shape="rect" coords="54,102,362,114" href="../../../schema/ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" />
+<area shape="rect" coords="42,78,374,90" href="../../../schema/ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" />
+<area shape="rect" coords="30,54,386,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
+<area shape="rect" coords="18,30,398,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,410,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
 </map>
 </details>
 <details><summary>Attribute inheritance</summary><table class="attributes">
@@ -199,10 +186,7 @@ IFC4 CHANGE New inverse relationship.
 <tr><td></td><td><i>VoidsElements</i></td><td><a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a><br/>@RelatedOpeningElement</td><td></td><td>Reference to the Voids Relationship that uses this Opening Element to create a void within an Element. The Opening Element can only be used to create a single void within a single Element.
 </td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifcsharedinfrastructureelements/lexical/ifcexcavation.htm">IfcExcavation</a></i></td></tr>
-<tr><td colspan="6"><a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavation.htm">IfcUndergroundExcavation</a></td></tr>
-<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavationtypeenum.htm">IfcUndergroundExcavationTypeEnum</a></td><td></td><td>
-Identifies the predefined type of underground excavation elements. This type may associate additional specific property sets.
-</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavation.htm">IfcUndergroundExcavation</a></i></td></tr>
 </table>
 </details>
 </section>
@@ -275,21 +259,18 @@ Identifies the predefined type of underground excavation elements. This type may
 </section>
 <section>
 <h5 class="num">Formal representations</h5>
-<details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavation.htm">IfcUndergroundExcavation</a>&quot; type=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavation.htm">IfcUndergroundExcavation</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcexcavation.htm">IfcExcavation</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
-&nbsp;&lt;xs:complexType name=&quot;<a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavation.htm">IfcUndergroundExcavation</a>&quot;&gt;<br/>
+<details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavation.htm">IfcUndergroundExcavation</a>&quot; type=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavation.htm">IfcUndergroundExcavation</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcexcavation.htm">IfcExcavation</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavation.htm">IfcUndergroundExcavation</a>&quot; abstract=&quot;true&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcexcavation.htm">IfcExcavation</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;PredefinedType&quot; type=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavationtypeenum.htm">IfcUndergroundExcavationTypeEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcsharedinfrastructureelements/lexical/ifcexcavation.htm">IfcExcavation</a>&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcUndergroundExcavation<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcsharedinfrastructureelements/lexical/ifcfaceexcavation.htm">IfcFaceExcavation</a>, <a href="../../ifcsharedinfrastructureelements/lexical/ifcradialexcavation.htm">IfcRadialExcavation</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcsharedinfrastructureelements/lexical/ifcexcavation.htm">IfcExcavation</a>)<b>;</b><br/>
-&nbsp;&nbsp;PredefinedType : <a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavationtypeenum.htm">IfcUndergroundExcavationTypeEnum</a>;<br/>
-&nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="../../ifcsharedinfrastructureelements/lexical/ifcundergroundexcavationtypeenum.htm">IfcUndergroundExcavationTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
+<span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedinfrastructureelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

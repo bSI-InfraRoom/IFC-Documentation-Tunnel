@@ -49,9 +49,9 @@
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
-</td><td>
+*</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Referenz ID</b></td><td>Identifikator der projektinternen Referenz für dieses Geschoss, z.B. nach der Geschossklassifizierung des Bauherrn. Wird verwendet, wenn keine allgemein anerkanntes Klassifizierungssystem angewandt wird.
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Raumtyp</b></td><td>Bezeichnung zur Zusammenfassung gleichartiger Räume zu einem Raumtyp (auch Funktionstyp genannt). Alternativ zum Namen des &quot;Typobjekts&quot;, insbesondere wenn die Software keine Raumtypen als Typobjekte unterstützt.
 </td></tr>
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'). Used to store the non-classification driven internal project type.
 </td></tr>
@@ -117,8 +117,7 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Sprinklerschutz automatisch</b></td><td>Angabe, ob das Geschoss durch eine automatische Sprinkleranlage geschützt wird (WAHR) oder nicht (FALSCH).
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Sprinkler Protection Automatic</b></td><td>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE).
-It should only be given, if the property &quot;SprinklerProtection&quot; is set to TRUE.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Sprinkler Protection Automatic</b></td><td>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE). It should only be given, if the property &quot;SprinklerProtection&quot; is set to TRUE.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>ProtectionAutomatiqueParSprinkler</b></td><td>Indication selon laquelle ce bâtiment bénéficie d'une protection automatique par sprinkler (VRAI) ou non (FAUX). Indication à ne fournir que si la propriété &quot;SprinklerProtection&quot; est cochée &quot;VRAI&quot;.
 </td></tr>
@@ -134,7 +133,7 @@ It should only be given, if the property &quot;SprinklerProtection&quot; is set 
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Deckentragfähigkeit</b></td><td>Maximale Deckentragfähigkeit in diesem Geschoss.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Load Bearing Capacity</b></td><td>Maximum load bearing capacity of a supporting structure ( e.g. as applied to the floor structure of a storey, or the supporting capacity of a frame assembly).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Load Bearing Capacity</b></td><td>Maximum load bearing capacity of the floor structure throughtout the storey as designed.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Capacité porteuse</b></td><td>Indique la force maximale pouvant être acceptée par le sol.
 </td></tr>
@@ -144,15 +143,13 @@ It should only be given, if the property &quot;SprinklerProtection&quot; is set 
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcareameasure.htm">IfcAreaMeasure</a>
-</td><td>
+*</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Bruttofläche nach Raumprogramm</b></td><td>Geforderte Bruttofläche des Geschosses laut Raumprogramm.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Planned Area</b></td><td>Total planned gross area of the spatial structure element. Used for programming the spatial structure element.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Planned Area</b></td><td>Total planned area for the building storey. Used for programming the building storey.
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Surface programmée brute</b></td><td>Surface programmée brute totale de la pièce. Telle que définie lors de la programmation.
 </td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Surface programmée brute</b></td><td>Surface programmée brute totale de l'étage. Telle que définie lors de la programmation.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>計画グロス面積</b></td><td>計画された建物階のグロス面積。建物計画に際に使用。
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>計画グロス面積</b></td><td>計画されたグロス面積。建物計画に際に使用。
 </td></tr>
 </table>
 </td></tr>
@@ -160,15 +157,13 @@ It should only be given, if the property &quot;SprinklerProtection&quot; is set 
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcareameasure.htm">IfcAreaMeasure</a>
-</td><td>
+*</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Nettofläche nach Raumprogramm</b></td><td>Geforderte Nettofläche des Geschosses laut Raumprogramm.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Planned Area</b></td><td>Total planned net area of the object. Used for programming the object.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Planned Area</b></td><td>Total planned net area for the building storey. Used for programming the building storey.
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Surface programmée nette</b></td><td>Surface programmée nette totale de la pièce. Telle que définie lors de la programmation.
 </td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Surface programmée nette</b></td><td>Surface programmée nette totale de l'étage. Telle que définie lors de la programmation.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>計画ネット面積</b></td><td>計画された建物階のネット面積。建物計画の際に使用。
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>計画ネット面積</b></td><td>計画されたネット面積。建物計画に際に使用。（通常は、柱型等を抜いた面積となる）
 </td></tr>
 </table>
 </td></tr>

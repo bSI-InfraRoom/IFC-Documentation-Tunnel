@@ -29,7 +29,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="c79c3280d1d411e1800000215ad4efdf">
-      <Name>ColorCode</Name>
+      <Name>ColourCode</Name>
       <Definition>Name of a color for identifying the connector, if applicable.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

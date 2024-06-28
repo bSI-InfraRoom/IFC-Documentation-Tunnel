@@ -48,7 +48,7 @@
 <li>SUPERSTRUCTURE is for the upper part of the railway (vertical decomposition).</li>
 <li>LINESIDESTRUCTURE is for the lateral part of the railway (lateral decomposition).</li>
 </ul>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/IfcRailwayPartTypeEnum-global.png" alt="&quot;Railway vertical and lateral spatial decomposition &quot;" title="Figure 414 &mdash; Railway decomposition"></td></tr><tr><td><p class="figure">Figure 414 &mdash; Railway decomposition</p></td></tr></table>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/IfcRailwayPartTypeEnum-global.png" alt="&quot;Railway vertical and lateral spatial decomposition &quot;" title="Figure 412 &mdash; Railway decomposition"></td></tr><tr><td><p class="figure">Figure 412 &mdash; Railway decomposition</p></td></tr></table>
 The subpart of the railway is generally either a <a href="../../ifcproductextension/lexical/ifcfacilitypartcommontypeenum.htm">IfcFacilityPartCommonTypeEnum</a> BELOWGROUND (non constructed ground) or SUBSTRUCTURE (constructed ground).</p>
 <p>TRACKSTRUCTURE could have longitudinal decomposition based on track specificities:</p>
 <ul>
@@ -57,20 +57,21 @@ The subpart of the railway is generally either a <a href="../../ifcproductextens
 <li>TURNOUTSUPERSTRUCTURE for the area of turnouts (<a href="../../ifcproductextension/lexical/ifcelementassemblytypeenum.htm">IfcElementAssemblyTypeEnum</a> TURNOUTPANEL).</li>
 <li>TRACKSTRUCTUREPART for generic longitudinal decomposition if needed.</li>
 </ul>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/IfcRailwayPartTypeEnum-track.png" alt="&quot;Railway vertical and lateral spatial decomposition &quot;" title="Figure 415 &mdash; Track longitudinal decomposition"></td></tr><tr><td><p class="figure">Figure 415 &mdash; Track longitudinal decomposition</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/IfcRailwayPartTypeEnum-track.png" alt="&quot;Railway vertical and lateral spatial decomposition &quot;" title="Figure 413 &mdash; Track longitudinal decomposition"></td></tr><tr><td><p class="figure">Figure 413 &mdash; Track longitudinal decomposition</p></td></tr></table></p>
 <p>More generic longitudinal subdivision is provided for LINESIDESTRUCTURE with LINESIDESTRUCTUREPART value if needed.</p>
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>TRACKSTRUCTURE</td><td><p>A spatial structure element that contains track-related elements.</p>
-</td></tr><tr><td>TRACKSTRUCTUREPART</td><td><p>A track structure part refers to a segment of a track system. It usually has one of the following functions: plain-track, turnout-track, dilatation-track.</p>
-</td></tr><tr><td>LINESIDESTRUCTUREPART</td><td><p>A railway line side structure part is a longitudinal decomposition of railway lineside structure in more managable volume for engineering purposes.</p>
-</td></tr><tr><td>DILATATIONSUPERSTRUCTURE</td><td><p>The dilatation superstructure is one specific type of the track structure. It does not contain any plain-track  or turnout panel.</p>
-</td></tr><tr><td>PLAINTRACKSUPERSTRUCTURE</td><td><p>The plain-track superstructure is one specific type of the track structure. It does not contain any turnout panel or dilatation panel.</p>
-</td></tr><tr><td>LINESIDESTRUCTURE</td><td><p>A spatial structure element that contains the elements of the railway that are not in or over the tracks, hence line-side.</p>
-</td></tr><tr><td>SUPERSTRUCTURE</td><td><p>A spatial structure element that contains elements that are positioned over the tracks, such as catenaries.</p>
-</td></tr><tr><td>TURNOUTSUPERSTRUCTURE</td><td><p>The turnout superstructure is one specific type of the track structure. It does not contain any plain-track or dilatation panel.</p>
-</td></tr><tr><td>USERDEFINED</td><td><p>User-defined type</p>
+<tr><td>ABOVETRACK</td><td><p>A spatial structure element that contains elements that are positioned above or over the track, for example catenary lines and suspension systems.</p>
+</td></tr><tr><td>DILATIONTRACK</td><td><p>No description available.</p>
+</td></tr><tr><td>LINESIDE</td><td><p>A spatial structure element that contains elements of the railway that are not in or over the tracks, hence line-side.</p>
+</td></tr><tr><td>LINESIDEPART</td><td><p>A spatial structure element to further divide a line-side part. It can be used to distinguish line-side parts into more manageable volumes, for engineering purposes.</p>
+</td></tr><tr><td>PLAINTRACK</td><td><p>A spatial structure element to further divide a track. It does do not contain any turnout panel or dilatation panel.</p>
+</td></tr><tr><td>SUBSTRUCTURE</td><td><p>A spatial structure element that contains elements that are positioned below the track, for example the earthwork platform, prepared subgrade and embankment. This can be above or below finished ground level.</p>
+</td></tr><tr><td>TRACK</td><td><p>A spatial structure element that contains track-related elements, for example rails and sleepers.</p>
+</td></tr><tr><td>TRACKPART</td><td><p>A spatial structure element to further divide a track, for purposes that do not fall into these categories: plain-track, turnout-track, dilatation-track.</p>
+</td></tr><tr><td>TURNOUTTRACK</td><td><p>A spatial structure element to further divide a track. It contains turnouts, and does not contain any plain track or dilatation panel.</p>
+</td></tr><tr><td>USERDEFINED</td><td><p>User-defined type.</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined type.</p>
 </td></tr></table>
 </details>
@@ -79,14 +80,15 @@ The subpart of the railway is generally either a <a href="../../ifcproductextens
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcraildomain/lexical/ifcrailwayparttypeenum.htm">IfcRailwayPartTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;trackstructure&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;trackstructurepart&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;linesidestructurepart&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;dilatationsuperstructure&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;plaintracksuperstructure&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;linesidestructure&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;superstructure&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;turnoutsuperstructure&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;abovetrack&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;dilationtrack&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;lineside&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;linesidepart&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;plaintrack&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;substructure&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;track&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;trackpart&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;turnouttrack&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -94,7 +96,7 @@ The subpart of the railway is generally either a <a href="../../ifcproductextens
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcRailwayPartTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;TRACKSTRUCTURE, <br/>&nbsp;TRACKSTRUCTUREPART, <br/>&nbsp;LINESIDESTRUCTUREPART, <br/>&nbsp;DILATATIONSUPERSTRUCTURE, <br/>&nbsp;PLAINTRACKSUPERSTRUCTURE, <br/>&nbsp;LINESIDESTRUCTURE, <br/>&nbsp;SUPERSTRUCTURE, <br/>&nbsp;TURNOUTSUPERSTRUCTURE, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;ABOVETRACK, <br/>&nbsp;DILATIONTRACK, <br/>&nbsp;LINESIDE, <br/>&nbsp;LINESIDEPART, <br/>&nbsp;PLAINTRACK, <br/>&nbsp;SUBSTRUCTURE, <br/>&nbsp;TRACK, <br/>&nbsp;TRACKPART, <br/>&nbsp;TURNOUTTRACK, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcraildomain/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

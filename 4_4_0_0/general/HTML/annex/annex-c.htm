@@ -51,7 +51,7 @@
 <table class="gridtable">
 <tr>
 <th>Entity</th>
-<th>IFC4x3</th>
+<th>IFC4x4</th>
 </tr>
 <tr><td>IfcActorRole</td><td>X</td></tr>
 </ul></li>
@@ -200,12 +200,6 @@
 
 </ul></li>
 
-<tr><td>IfcGeoScienceFeatureType</td><td>X</td></tr>
-</ul></li>
-
-<tr><td>IfcGeoScienceModelType</td><td>X</td></tr>
-</ul></li>
-
 <tr><td>IfcGridAxis</td><td>X</td></tr>
 </ul></li>
 
@@ -323,6 +317,9 @@
 </ul></li>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;IfcQuantityLength</td><td>X</td></tr>
+</ul></li>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;IfcQuantityNumber</td><td>X</td></tr>
 </ul></li>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;IfcQuantityTime</td><td>X</td></tr>
@@ -1030,9 +1027,6 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;IfcVector</td><td>X</td></tr>
 </ul></li>
 
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;IfcWellKnownText</td><td>X</td></tr>
-</ul></li>
-
 </ul></li>
 
 <tr><td>&nbsp;&nbsp;IfcMappedItem</td><td>X</td></tr>
@@ -1315,6 +1309,9 @@
 </ul></li>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcImprovedGround</td><td>X</td></tr>
+</ul></li>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcReinforcedSoil</td><td>X</td></tr>
 </ul></li>
 
 </ul></li>
@@ -1703,6 +1700,12 @@
 </ul></li>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcUndergroundExcavation</td><td>X</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcFaceExcavation</td><td>X</td></tr>
+</ul></li>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcRadialExcavation</td><td>X</td></tr>
+</ul></li>
+
 </ul></li>
 
 </ul></li>
@@ -1986,9 +1989,6 @@
 </ul></li>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcTypeProduct</td><td>X</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcDoorStyle</td><td>X</td></tr>
-</ul></li>
-
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcElementType</td><td>X</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcBuiltElementType</td><td>X</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcArchElementType</td><td>X</td></tr>
@@ -2414,15 +2414,21 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcBoreholeType</td><td>X</td></tr>
 </ul></li>
 
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcGeoScienceFeatureType</td><td>X</td></tr>
+</ul></li>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcGeoScienceModelType</td><td>X</td></tr>
+</ul></li>
+
 </ul></li>
 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcTransportationDeviceType</td><td>X</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcTransportElementType</td><td>X</td></tr>
+</ul></li>
+
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcVehicleType</td><td>X</td></tr>
 </ul></li>
 
-</ul></li>
-
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcTransportElementType</td><td>X</td></tr>
 </ul></li>
 
 </ul></li>
@@ -2437,9 +2443,6 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcSpatialZoneType</td><td>X</td></tr>
 </ul></li>
 
-</ul></li>
-
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IfcWindowStyle</td><td>X</td></tr>
 </ul></li>
 
 </ul></li>
@@ -2784,6 +2787,9 @@
 </ul></li>
 
 <tr><td>IfcVirtualGridIntersection</td><td>X</td></tr>
+</ul></li>
+
+<tr><td>IfcWellKnownText</td><td>X</td></tr>
 </ul></li>
 
 </table>

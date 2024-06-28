@@ -1,0 +1,152 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_DoorLiningProperties</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 7 index2 1 index3 4 index4 0 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-7.htm#7.1.4.1");
+//-->
+</script>
+
+<h4 class="std">7.1.4.1 Pset_DoorLiningProperties</h4>
+<p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
+/
+<span class="self-ref">IfcDoor,IfcMember</span>
+</p>Properties of the door lining.
+<blockquote class="history">
+HISTORY  New property set in IFC4.3.2.0 to replace the entity IfcDoorLiningProperties
+</blockquote>
+
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/3_FTrO47D19eIJ5NzUGqoo/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_DoorLiningProperties.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>LiningDepth</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+The depth of the lining.
+For a door, it is the depth of the door lining, measured perpendicular to the plane of the door lining. If omitted (and with a given value to lining thickness) it indicates an adjustable depth (i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted).
+
+</td></tr>
+<tr><td>LiningThickness</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>
+</td><td>
+Thickness of the lining.
+For a door, it is the thickness of the door lining as explained in the figure above. If LiningThickness value is 0. (zero) it denotes a door without a lining (all other lining parameters shall be set to NIL in this case). If the LiningThickness is NIL it denotes that the value is not available.
+
+</td></tr>
+<tr><td>ThresholdDepth</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+Depth (dimension in plane perpendicular to door leaf) of the door threshold. Only given if the door lining includes a threshold. If omitted (and with a given value to threshold thickness) it indicates an adjustable depth (i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted).
+
+</td></tr>
+<tr><td>ThresholdThickness</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>
+</td><td>
+Thickness of the door threshold as explained in the figure above. If ThresholdThickness value is 0. (zero) it denotes a door without a threshold (ThresholdDepth shall be set to NIL in this case). If the ThresholdThickness is NIL it denotes that the information about a threshold is not available.
+
+</td></tr>
+<tr><td>TransomThickness</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>
+</td><td>
+Thickness of the transom.
+For a door, it is the thickness (width in plane parallel to door leaf) of the transom (if provided - that is, if the TransomOffset attribute is set), which divides the door leaf from a glazing (or window) above. If the TransomThickness is set to zero (and the TransomOffset set to a positive length), then the door is divided vertically into a leaf and transom window area without a physical frame.
+
+</td></tr>
+<tr><td>TransomOffset</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a>
+</td><td>
+Offset of the transom (if given) which divides the door leaf from a glazing (or window) above. The offset is given from the bottom of the door opening.
+
+</td></tr>
+<tr><td>LiningOffset</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a>
+</td><td>
+Offset of the lining.
+For a door, it is the offset (dimension in plane perpendicular to door leaf) of the door lining. The offset is given as distance to the x axis of the local placement.
+
+</td></tr>
+<tr><td>ThresholdOffset</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a>
+</td><td>
+Offset (dimension in plane perpendicular to door leaf) of the door threshold. The offset is given as distance to the x axis of the local placement. Only given if the door lining includes a threshold and the parameter is known.
+
+</td></tr>
+<tr><td>CasingThickness</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+Thickness of the casing.
+For a door, it is the dimension in plane of the door leaf. If given it is applied equally to all four sides of the adjacent wall.
+
+</td></tr>
+<tr><td>CasingDepth</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+Depth of the casing.
+For a door, it is the dimension in the plane perpendicular to door leaf. If given it is applied equally to all four sides of the adjacent wall.
+
+</td></tr>
+<tr><td>LiningToPanelOffsetX</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a>
+</td><td>
+Offset between the lining and the panel, measured along the x-axis of the local placement.
+For a door, it is the offset between the lining and the window panel.
+
+</td></tr>
+<tr><td>LiningToPanelOffsetY</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a>
+</td><td>
+Offset between the lining and the panel, measured along the y-axis of the local placement.
+For a door, it is the offset between the lining and the door panel.
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_doorliningproperties.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

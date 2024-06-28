@@ -42,17 +42,34 @@
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>ASSUMEDPOINT</td><td><p>A single extra point (assumption or interpretation), used to complement survey data in initial state modelling.</p>
-</td></tr><tr><td>ASBUILTAREA</td><td><p>A set of as-built survey points on a surface.</p>
-</td></tr><tr><td>ASBUILTLINE</td><td><p>A set of as-built survey points on a line (e.g. breakline).</p>
-</td></tr><tr><td>NON_PHYSICAL_SIGNAL</td><td><p>A virtual or fictitious signal. As opposed to the physical signal, the non-physical signal does not need to send information to the train. E.g. a fictitious signal on the signalman's display needed to define the route exit towards open line where there's no real signal. A virtual ERTMS L2 signal is also a non-physical signal but can have a physical presence, i.e. a stop marker board along the track.</p>
-</td></tr><tr><td>ASSUMEDLINE</td><td><p>A set of extra points on a line (breakline) as an assumption or interpretation, used to complement survey data in initial state modelling.</p>
-</td></tr><tr><td>WIDTHEVENT</td><td><p>A kind of event that specifies the width at a specific location along a road alignment, and the type of transition from the previous location. The locations are specified using an IfcLinearPlacement measured along the alignment axis curve.
-The element(s) that are affected by the width event is currently proposed to be specified by containing the event in a specific lateral breakdown element of the road spatial structure (e.g. a Lane or the entire carriageway).</p>
-</td></tr><tr><td>ASSUMEDAREA</td><td><p>A set of extra points on a surface as an assumption or interpretation, used to complement survey data in initial state modelling.</p>
-</td></tr><tr><td>SUPERELEVATIONEVENT</td><td><p>A kind of event that specifies the superelevation (cross slope) at a specific location along a road alignment, and the type of transition from the previous location. The locations are specified using an IfcLinearPlacement measured along the alignment axis curve.</p>
-<p>The element(s) that are affected by the superelevation event is currently proposed to be specified by containing the event in a specific lateral breakdown element of the road spatial structure (e.g. a Lane).</p>
-</td></tr><tr><td>ASBUILTPOINT</td><td><p>A single as-built survey point.</p>
+<tr><td>CONTOURLINE</td><td><p>Annotation used to illustrate lines connecting points of equal elevation or depth, on a map or chart.</p>
+<blockquote class="example">
+<p>EXAMPLE Typically used in cartography, geography, or geology maps, where the spacing of lines at constant intervals of elevation may be used as an indication of slope.</p>
+</blockquote>
+</td></tr><tr><td>DIMENSION</td><td><p>Annotation used to illustrate the measurement or size of an object, often accompanied by numerical values.</p>
+</td></tr><tr><td>ISOBAR</td><td><p>Annotation used to illustrate lines connecting points of equal pressure on a map or chart.</p>
+<blockquote class="example">
+<p>EXAMPLE Typically used on weather maps or to show pressure gradient in spaces, chambers or externally.</p>
+</blockquote>
+</td></tr><tr><td>ISOLUX</td><td><p>Annotation used to illustrate lines connecting points of equal illuminance or light intensity.</p>
+<blockquote class="example">
+<p>EXAMPLE Typically used in lighting design or photometry to show the distribution of illumination levels and/or day lighting in a space or externally.</p>
+</blockquote>
+</td></tr><tr><td>ISOTHERM</td><td><p>Annotation used to illustrate lines connecting points of equal temperature on a map or chart.</p>
+<blockquote class="example">
+<p>EXAMPLE Typically used in to show the heating or cooling distribution within a space or to show temperature distribution on a geographic map.</p>
+</blockquote>
+</td></tr><tr><td>LEADER</td><td><p>Annotation that includes a line or arrow.</p>
+<blockquote class="example">
+<p>EXAMPLE Typically used to connect an object to a specific point of reference or to an explanation.</p>
+</blockquote>
+</td></tr><tr><td>SURVEY</td><td><p>Annotation used for survey information, such as survey points, survey lines or survey areas.</p>
+<blockquote class="example">
+<p>EXAMPLE Typically used in surveying or mapping to indicate the location, elevation, or other relevant data about a specific point or area.
+NOTE The shape representation of the <a href="../../ifcproductextension/lexical/ifcannotation.htm">IfcAnnotation</a> indicates if it is a survey point, survey line, survey area or any other type of representation connected to survey.</p>
+</blockquote>
+</td></tr><tr><td>SYMBOL</td><td><p>Annotation that employs graphical symbols or icons to represent specific meanings.</p>
+</td></tr><tr><td>TEXT</td><td><p>A textual annotation.</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined type</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined type.</p>
 </td></tr></table>
@@ -62,15 +79,15 @@ The element(s) that are affected by the width event is currently proposed to be 
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcproductextension/lexical/ifcannotationtypeenum.htm">IfcAnnotationTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;assumedpoint&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;asbuiltarea&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;asbuiltline&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;non_physical_signal&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;assumedline&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;widthevent&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;assumedarea&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;superelevationevent&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;asbuiltpoint&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;contourline&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;dimension&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;isobar&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;isolux&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;isotherm&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;leader&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;survey&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;symbol&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;text&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -78,7 +95,7 @@ The element(s) that are affected by the width event is currently proposed to be 
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcAnnotationTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;ASSUMEDPOINT, <br/>&nbsp;ASBUILTAREA, <br/>&nbsp;ASBUILTLINE, <br/>&nbsp;NON_PHYSICAL_SIGNAL, <br/>&nbsp;ASSUMEDLINE, <br/>&nbsp;WIDTHEVENT, <br/>&nbsp;ASSUMEDAREA, <br/>&nbsp;SUPERELEVATIONEVENT, <br/>&nbsp;ASBUILTPOINT, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;CONTOURLINE, <br/>&nbsp;DIMENSION, <br/>&nbsp;ISOBAR, <br/>&nbsp;ISOLUX, <br/>&nbsp;ISOTHERM, <br/>&nbsp;LEADER, <br/>&nbsp;SURVEY, <br/>&nbsp;SYMBOL, <br/>&nbsp;TEXT, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

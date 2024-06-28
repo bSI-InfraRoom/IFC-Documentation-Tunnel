@@ -85,7 +85,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="8acd3d00d1ce11e1800000215ad4efdf">
-      <Name>AirflowRateRange</Name>
+      <Name>AirFlowRateRange</Name>
       <Definition>Possible range of airflow that can be delivered.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
@@ -184,10 +184,12 @@
     </PropertyDef>
     <PropertyDef ifdguid="a0426700d1ce11e1800000215ad4efdf">
       <Name>ConnectionSize</Name>
-      <Definition>Duct connection diameter.</Definition>
+      <Definition>The connection size of the object.
+
+Duct connection diameter.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLengthMeasure" />
+          <DataType type="IfcPositiveLengthMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>

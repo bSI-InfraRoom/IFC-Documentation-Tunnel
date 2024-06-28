@@ -9,9 +9,9 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcDistributionChamberElement/SUMP</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="64aa9b80d1d411e1800000215ad4efdf">
+    <PropertyDef ifdguid="e0581880d1d311e1800000215ad4efdf">
       <Name>Length</Name>
-      <Definition>The length of the sump.</Definition>
+      <Definition>The length of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -24,13 +24,13 @@
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">排水チャンバーの長さ。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">배수 챔버의 길이</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">ピット長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">피트 길이</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="6aa07c80d1d411e1800000215ad4efdf">
+    <PropertyDef ifdguid="e6e69000d1d311e1800000215ad4efdf">
       <Name>Width</Name>
-      <Definition>The width of the sump.</Definition>
+      <Definition>The width of the object. Only given, if the object has constant thickness (prismatic).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -43,12 +43,12 @@
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">排水チャンバーの幅。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">배수 챔버의 폭</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">ピット幅。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">피트 폭</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="70965d80d1d411e1800000215ad4efdf">
-      <Name>InvertLevel</Name>
+      <Name>SumpInvertLevel</Name>
       <Definition>The lowest point in the cross section of the sump.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

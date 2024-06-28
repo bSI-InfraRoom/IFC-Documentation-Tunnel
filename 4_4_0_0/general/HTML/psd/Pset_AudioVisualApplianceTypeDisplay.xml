@@ -22,7 +22,7 @@
             <EnumItem>PLASMA</EnumItem>
             <EnumItem>OTHER</EnumItem>
             <EnumItem>NOTKNOWN</EnumItem>
-            <EnumItem>UNSET.</EnumItem>
+            <EnumItem>UNSET</EnumItem>
           </EnumList>
           <ConstantList>
             <ConstantDef>
@@ -86,11 +86,14 @@
               </DefinitionAliases>
             </ConstantDef>
             <ConstantDef>
-              <Name>UNSET.</Name>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
               <NameAliases>
-                <NameAlias lang="en">Unset.</NameAlias>
+                <NameAlias lang="en">(unset)</NameAlias>
               </NameAliases>
-              <DefinitionAliases />
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
             </ConstantDef>
           </ConstantList>
         </TypePropertyEnumeratedValue>
@@ -304,7 +307,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="cbbf5480d1c211e1800000215ad4efdf">
       <Name>VideoResolutionWidth</Name>
-      <Definition>Indicates the number of horizontal pixels, e.g. 1920.</Definition>
+      <Definition>Indicates the number of horizontal pixels (the largest native video resolution width).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcInteger" />
@@ -323,7 +326,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="d2e66280d1c211e1800000215ad4efdf">
       <Name>VideoResolutionHeight</Name>
-      <Definition>Indicates the number of vertical pixels, e.g. 1080.</Definition>
+      <Definition>Indicates the number of vertical pixels (the largest native video resolution height).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcInteger" />

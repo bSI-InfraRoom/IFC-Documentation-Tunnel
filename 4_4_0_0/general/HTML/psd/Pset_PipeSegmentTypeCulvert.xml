@@ -14,7 +14,7 @@
       <Definition>The internal width of the culvert.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLengthMeasure" />
+          <DataType type="IfcPositiveLengthMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -28,10 +28,10 @@
     </PropertyDef>
     <PropertyDef ifdguid="e2ca6a80d1f311e1800000215ad4efdf">
       <Name>ClearDepth</Name>
-      <Definition>The clear depth of the culvert.</Definition>
+      <Definition>The clear depth.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLengthMeasure" />
+          <DataType type="IfcPositiveLengthMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>

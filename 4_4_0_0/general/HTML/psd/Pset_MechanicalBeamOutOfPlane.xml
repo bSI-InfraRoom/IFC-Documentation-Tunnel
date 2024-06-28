@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="2a16648ee8da48db898e2fb3cdc6fc5b" templatetype="PSET_MATERIALDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_MechanicalBeamOutOfPlane</Name>
+  <Definition>Properties about Mechanical Beam Out Of Plane.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcMaterial</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcMaterial</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="7b112100d1ed11e1800000215ad4efdf">
+      <Name>YoungModulus</Name>
+      <Definition>A measure of the Young's modulus of elasticity of the material.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcModulusOfElasticityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Young Modulus</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="508173f23e4f401d8cb1bf22fb8de49e">
+      <Name>YoungModulusMin</Name>
+      <Definition>Elastic modulus, minimal value, α=0°.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcModulusOfElasticityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2b4ac3e3a1f74d949081f129fc33ab18">
+      <Name>YoungModulusPerp</Name>
+      <Definition>Elastic modulus, mean value, α=90°.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcModulusOfElasticityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2121a8f88707424e939b8bedc151b517">
+      <Name>YoungModulusPerpMin</Name>
+      <Definition>Elastic modulus, minimal value, α=90°.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcModulusOfElasticityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="806e6b80d1ed11e1800000215ad4efdf">
+      <Name>ShearModulus</Name>
+      <Definition>A measure of the shear modulus of elasticity of the material.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcModulusOfElasticityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Shear Modulus</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="0b28be5d26ca4cea851ace57e5c20079">
+      <Name>ShearModulusMin</Name>
+      <Definition>Shear modulus, minimal value.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcModulusOfElasticityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="308b1604fa7f4b11ba71175ab14f7ffb">
+      <Name>BendingStrength</Name>
+      <Definition>Bending strength.
+
+Defining values: α; defined values: bending strength.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7561e794915842b6a10e7015c0cbcd6c">
+      <Name>TensileStrength</Name>
+      <Definition>Indicates the ability to withstand breakage apart under applied force.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2d23b14de91444d6aefb5de7a2ce4ed1">
+      <Name>TensileStrengthPerp</Name>
+      <Definition>Tensile strength, α=90°.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="145228e6a32b41f58dd0f484878707f4">
+      <Name>CompStrength</Name>
+      <Definition>Compressive strength, α=0°.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1cb87d675af541d7a93f1c77709838cf">
+      <Name>CompStrengthPerp</Name>
+      <Definition>Compressive strength, α=90°.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="04558612ae3d4334b9bf2c7f74267eee">
+      <Name>RaisedCompStrengthPerp</Name>
+      <Definition>Alternative value for compressive strength, α=90°, which may be used under material and code dependent conditions (e.g. if deformation is tolerable, or far from ends of the member); conditions should be stated in SELF\IfcProperty.Description.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="370ad6a14f8348dda7f7c1d8902fb274">
+      <Name>ShearStrength</Name>
+      <Definition>Defining values: α; defined values: shear strength.</Definition>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression />
+          <DefiningValue>
+            <DataType type="IfcPositivePlaneAngleMeasure" />
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcPressureMeasure" />
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1cfb8d02520d4c35a6e080580465e624">
+      <Name>TorsionalStrength</Name>
+      <Definition>Shear strength in torsion.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="48b02192a22a4ebe9108903c05361ece">
+      <Name>ReferenceDepth</Name>
+      <Definition>Depth in bending for which the mechanical properties are valid; provided as a means to check the integrity of material assignment.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="062a0680fadb47038bbb24c8dc3af1f2">
+      <Name>InstabilityFactors</Name>
+      <Definition>Defining values: slenderness ratios; defined values: either factors or divisors of the strength, depending on the design method (if &lt;1: factors, if &gt;1: divisors).</Definition>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression />
+          <DefiningValue>
+            <DataType type="IfcPositiveRatioMeasure" />
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcPositiveRatioMeasure" />
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

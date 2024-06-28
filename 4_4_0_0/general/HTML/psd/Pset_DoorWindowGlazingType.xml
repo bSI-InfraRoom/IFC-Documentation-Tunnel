@@ -6,9 +6,9 @@
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcDoor</ClassName>
-    <ClassName> IfcWindow</ClassName>
+    <ClassName>IfcWindow</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcDoor, IfcWindow</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcDoor,IfcWindow</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="0df58f80d1dd11e1800000215ad4efdf">
       <Name>GlassLayers</Name>
@@ -126,8 +126,8 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="48f7c300d1dd11e1800000215ad4efdf">
-      <Name>GlassColor</Name>
-      <Definition>Color (tint) selection for this glazing. It is given for information purposes only.</Definition>
+      <Name>GlassColour</Name>
+      <Definition>Colour (tint) selection for this glazing. It is given for information purposes only.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -265,7 +265,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="80666f80d1dd11e1800000215ad4efdf">
       <Name>VisibleLightTransmittance</Name>
-      <Definition>Fraction of the visible light that passes the glazing at normal incidence. It is a value without unit.</Definition>
+      <Definition>Fraction of the visible light that passes the object at normal incidence. It is a value without unit.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNormalisedRatioMeasure" />
@@ -334,7 +334,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="8ceac800d1dd11e1800000215ad4efdf">
       <Name>SolarTransmittance</Name>
-      <Definition>(Tsol): The ratio of incident solar radiation that directly passes through a glazing system (also named τe). Note the following equation Asol + Rsol + Tsol = 1</Definition>
+      <Definition>The ratio of incident solar radiation that directly passes through a system (also named τe). Note the following equation Asol + Rsol + Tsol = 1</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNormalisedRatioMeasure" />
@@ -357,7 +357,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="91af7c00d1dd11e1800000215ad4efdf">
       <Name>SolarHeatGainTransmittance</Name>
-      <Definition>(SHGC): The ratio of incident solar radiation that contributes to the heat gain of the interior, it is the solar radiation that directly passes (Tsol or τe) plus the part of the absorbed radiation that is distributed to the interior (qi). The SHGC is refered to also as g-value (g = τe + qi).</Definition>
+      <Definition>(SHGC): The ratio of incident solar radiation that contributes to the heat gain of the interior, it is the solar radiation that directly passes (Tsol or τe) plus the part of the absorbed radiation that is distributed to the interior (qi). The SHGC is referred to also as g-value (g = τe + qi).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNormalisedRatioMeasure" />
@@ -404,8 +404,7 @@ Der g-Wert dieses Zweischeiben-Normalglasfensters wird als Konstante mit 80 % an
     </PropertyDef>
     <PropertyDef ifdguid="9a07b700d1dd11e1800000215ad4efdf">
       <Name>ThermalTransmittanceSummer</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of a material.
-Summer thermal transmittance coefficient of the glazing only, often referred to as (U-value).</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of a material. Summer thermal transmittance coefficient of the glazing only, often referred to as (U-value).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />
@@ -429,8 +428,7 @@ Summer thermal transmittance coefficient of the glazing only, often referred to 
     </PropertyDef>
     <PropertyDef ifdguid="9e33d480d1dd11e1800000215ad4efdf">
       <Name>ThermalTransmittanceWinter</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of a material.
-Winter thermal transmittance coefficient of the glazing only, often referred to as (U-value).</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of a material. Winter thermal transmittance coefficient of the glazing only, often referred to as (U-value).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />

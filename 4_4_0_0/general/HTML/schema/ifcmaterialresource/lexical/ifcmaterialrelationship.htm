@@ -55,7 +55,7 @@ Reference to the relating material (the composite).
 <tr><td>4</td><td>RelatedMaterials</td><td><a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a></td><td>S[1:?]</td><td>
 Reference to related materials (as constituents of composite material).
 </td><td>X</td></tr>
-<tr><td>5</td><td>Expression</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+<tr><td>5</td><td>MaterialExpression</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Information about the material relationship refering for example to the amount of related materials in the composite material.
 <blockquote class="note">
 NOTE  Any formal meaning of the <i>Expression</i> string value has to be established in model view definitions or implementer agreements. No such formal language is provided as part of this specification.
@@ -87,7 +87,7 @@ Reference to the relating material (the composite).
 <tr><td>4</td><td>RelatedMaterials</td><td><a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a></td><td>S[1:?]</td><td>
 Reference to related materials (as constituents of composite material).
 </td><td>X</td></tr>
-<tr><td>5</td><td>Expression</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+<tr><td>5</td><td>MaterialExpression</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Information about the material relationship refering for example to the amount of related materials in the composite material.
 <blockquote class="note">
 NOTE  Any formal meaning of the <i>Expression</i> string value has to be established in model view definitions or implementer agreements. No such formal language is provided as part of this specification.
@@ -116,7 +116,7 @@ NOTE  Any formal meaning of the <i>Expression</i> string value has to be establ
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Expression&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;MaterialExpression&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
@@ -126,7 +126,7 @@ NOTE  Any formal meaning of the <i>Expression</i> string value has to be establ
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcexternalreferenceresource/lexical/ifcresourcelevelrelationship.htm">IfcResourceLevelRelationship</a>)<b>;</b><br/>
 &nbsp;&nbsp;RelatingMaterial : <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a>;<br/>
 &nbsp;&nbsp;RelatedMaterials : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a>;<br/>
-&nbsp;&nbsp;Expression : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
+&nbsp;&nbsp;MaterialExpression : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcmaterialresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

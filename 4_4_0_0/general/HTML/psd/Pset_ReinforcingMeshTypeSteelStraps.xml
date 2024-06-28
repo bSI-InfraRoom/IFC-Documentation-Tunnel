@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="0b8e504d07f34c0187ef8a556bed2340" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ReinforcingMeshTypeSteelStraps</Name>
+  <Definition>Properties related to reinforcing meshes of type STEELSTRAPS.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcReinforcingMesh/STEELSTRAPS</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcReinforcingMesh/STEELSTRAPS</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="f7b199ec69184e05b9a8d4dc3a89f6d7">
+      <Name>CorrosionTreatment</Name>
+      <Definition>Determines corrosion treatment for metal components. This property is provided if the requirement needs to be expressed (a) independently of a material specification and (b) as a mere requirements statement rather than a workshop design/ processing feature.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementComponentCorrosionTreatment">
+            <EnumItem>PAINTED</EnumItem>
+            <EnumItem>EPOXYCOATED</EnumItem>
+            <EnumItem>GALVANISED</EnumItem>
+            <EnumItem>STAINLESS</EnumItem>
+            <EnumItem>POWDERCOATED</EnumItem>
+            <EnumItem>GALVANIZEDANDPOWDERCOATED</EnumItem>
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>PAINTED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Painted</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EPOXYCOATED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Epoxy Coated</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GALVANISED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Galvanised</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>STAINLESS</Name>
+              <NameAliases>
+                <NameAlias lang="en">Stainless</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>POWDERCOATED</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GALVANIZEDANDPOWDERCOATED</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NONE</Name>
+              <Definition>No waterproof.</Definition>
+              <NameAliases>
+                <NameAlias lang="en">None</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">None, empty or no additional action or function.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Notdefined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Corrosion Treatment</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="6b86441788964b488bd75c9b83c6dc3e">
+      <Name>BoltType</Name>
+      <Definition>Should reuse BoltType in #818</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="f49b20c1ffa940bdb05ada0fcc4e58b9">
+      <Name>BoltLength</Name>
+      <Definition>Length of steel strap mounting bolts.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -74,10 +74,10 @@ TYPE IfcCostScheduleTypeEnum = ENUMERATION OF
 	(BUDGET
 	,COSTPLAN
 	,ESTIMATE
-	,TENDER
 	,PRICEDBILLOFQUANTITIES
-	,UNPRICEDBILLOFQUANTITIES
 	,SCHEDULEOFRATES
+	,TENDER
+	,UNPRICEDBILLOFQUANTITIES
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;

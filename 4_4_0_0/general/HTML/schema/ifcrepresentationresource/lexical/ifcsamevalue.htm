@@ -46,7 +46,7 @@ In the function the following arbitrary ad-hoc value is used: 0.000001 for the d
 <details open="open"><summary>EXPRESS Specification</summary><div class="xsd"><code class="xsd"><p>
 <span class="keyword">FUNCTION</span> IfcSameValue<br/>
 
-	(Value1, Value2 : REAL; Epsilon : REAL)<br/>	: LOGICAL;<br/>&nbsp;&nbsp;LOCAL<br/>&nbsp;&nbsp;&nbsp;&nbsp;ValidEps&nbsp;&nbsp;&nbsp;&nbsp;: REAL;<br/>&nbsp;&nbsp;&nbsp;&nbsp;DefaultEps&nbsp;&nbsp;: REAL := 0.000001;<br/>&nbsp;&nbsp;END_LOCAL;<br/>&nbsp;&nbsp;<br/>&nbsp;&nbsp;ValidEps := NVL(Epsilon, DefaultEps);<br/>&nbsp;&nbsp;RETURN ((Value1 + ValidEps &gt; Value2) AND (Value1 &lt; Value2 + ValidEps));<br/>
+&nbsp;&nbsp;(Value1, Value2 : REAL; Epsilon : REAL)<br/>&nbsp;&nbsp;: LOGICAL;<br/>&nbsp;&nbsp;LOCAL<br/>&nbsp;&nbsp;&nbsp;&nbsp;ValidEps&nbsp;&nbsp;&nbsp;&nbsp;: REAL;<br/>&nbsp;&nbsp;&nbsp;&nbsp;DefaultEps&nbsp;&nbsp;: REAL := 0.000001;<br/>&nbsp;&nbsp;END_LOCAL;<br/>&nbsp;&nbsp;<br/>&nbsp;&nbsp;ValidEps := NVL(Epsilon, DefaultEps);<br/>&nbsp;&nbsp;RETURN ((Value1 + ValidEps &gt; Value2) AND (Value1 &lt; Value2 + ValidEps));<br/>
 <br/>
 
 <span class="keyword">END_FUNCTION</span>;

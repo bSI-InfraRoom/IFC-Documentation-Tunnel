@@ -128,7 +128,7 @@
     <PropertyDef ifdguid="adc51480d20111e1800000215ad4efdf">
       <Name>AcousticRating</Name>
       <Definition>Acoustic rating for this object.
-It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorbtion values).</Definition>
+It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorption values).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -172,8 +172,7 @@ It is provided according to the national building code. It indicates the sound t
     </PropertyDef>
     <PropertyDef ifdguid="c46b6b80d20111e1800000215ad4efdf">
       <Name>ThermalTransmittance</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of a material.
-Here the total thermal transmittance coefficient through the roof surface (including all materials).</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />
@@ -199,6 +198,7 @@ Hier der Gesamtwärmedurchgangskoeffizient der Dachkonstruktion (für alle Schic
     </PropertyDef>
     <PropertyDef ifdguid="87a90f614ea44ebea4d7523924d88911">
       <Name>LoadBearing</Name>
+      <Definition>Indicates whether the object is intended to carry loads (TRUE) or not (FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

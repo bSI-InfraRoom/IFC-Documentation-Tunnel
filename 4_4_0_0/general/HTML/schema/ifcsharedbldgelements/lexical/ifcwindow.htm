@@ -199,12 +199,7 @@ Designator for the user defined partitioning type, shall only be provided, if th
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>CorrectStyleAssigned</td><td>Either there is no door type object associated, i.e. the <i>IsTypedBy</i> inverse relationship is not provided, or the associated type object has to be of type <a href="../../ifcarchitecturedomain/lexical/ifcwindowstyle.htm">IfcWindowStyle</a>.
-<blockquote class="note">
-NOTEnbsp; The deprecated type <a href="../../ifcarchitecturedomain/lexical/ifcwindowstyle.htm">IfcWindowStyle</a> is still included for backward compatibility reasons.
-</blockquote>
-</td></tr>
-<tr><td>CorrectPredefinedType</td><td>Either the <i>PredefinedType</i> attribute is unset (e.g. because an <i>IfcWIndowType</i> is associated), or the inherited attribute <i>ObjectType</i> shall be provided, if the <i>PredefinedType</i> is set to USERDEFINED.
+<tr><td>CorrectPredefinedType</td><td>Either the <i>PredefinedType</i> attribute is unset (e.g. because an <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> is associated), or the inherited attribute <i>ObjectType</i> shall be provided, if the <i>PredefinedType</i> is set to USERDEFINED.
 </td></tr>
 <tr><td>CorrectTypeAssigned</td><td>Either there is no door type object associated, i.e. the <i>IsTypedBy</i> inverse relationship is not provided, or the associated type object has to be of type <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a>.
 </td></tr>
@@ -716,8 +711,7 @@ Designator for the user defined partitioning type, shall only be provided, if th
 &nbsp;&nbsp;PartitioningType : <span class="keyword">OPTIONAL</span> <a href="../../ifcsharedbldgelements/lexical/ifcwindowtypepartitioningenum.htm">IfcWindowTypePartitioningEnum</a>;<br/>
 &nbsp;&nbsp;UserDefinedPartitioningType : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;CorrectStyleAssigned : (SIZEOF(IsTypedBy) = 0) <br/>
-OR (&#39;IFCSHAREDBLDGELEMENTS.<a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));<br/>&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
+&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
  (PredefinedType &lt;&gt; <a href="../../ifcsharedbldgelements/lexical/ifcwindowtypeenum.htm">IfcWindowTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
  ((PredefinedType = <a href="../../ifcsharedbldgelements/lexical/ifcwindowtypeenum.htm">IfcWindowTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS (SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/>&nbsp;&nbsp;CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR<br/>
   (&#39;IFCSHAREDBLDGELEMENTS.<a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));<br/><span class="keyword">END_ENTITY;</span><br/>

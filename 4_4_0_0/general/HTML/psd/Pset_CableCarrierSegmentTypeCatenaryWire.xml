@@ -111,7 +111,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="17b55d65a05e43f7838cd76234d9e298">
       <Name>MechanicalTension</Name>
-      <Definition>Nominal value of mechanical force applied to a flow segment.</Definition>
+      <Definition>Nominal value of mechanical force applied to the element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcForceMeasure" />

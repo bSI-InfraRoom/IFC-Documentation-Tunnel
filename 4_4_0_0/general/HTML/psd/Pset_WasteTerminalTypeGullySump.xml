@@ -399,10 +399,9 @@ A gulley trap may have 0,1,2,3 or 4 inlet connections and the pattern of their a
 一つの溝防臭弁に0.1.2.3.4.の吸気口接続口とパターンがあるときは変化する可能性があります。表記されるときは、接続口が垂直である様子か、防臭弁の底（南）におかれます。位置1は左(西)に、位置2は上方(北)に、位置3は右(東)に、位置4は下方(南）になります。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="87aa6f00d21711e1800000215ad4efdf">
+    <PropertyDef ifdguid="c4299b00d21611e1800000215ad4efdf">
       <Name>InletConnectionSize</Name>
-      <Definition>Size of the inlet connection(s), where used, of the inlet connections.
-
+      <Definition>Size of the inlet connection.
 Note that all inlet connections are assumed to be the same size.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -411,18 +410,18 @@ Note that all inlet connections are assumed to be the same size.</Definition>
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Inlet Connection Size</NameAlias>
-        <NameAlias lang="ja-JP">吸気口接続口サイズ</NameAlias>
+        <NameAlias lang="ja-JP">吸気口サイズ</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">吸気口接続口のサイズ。
+        <DefinitionAlias lang="ja-JP">吸気口接続口のサイズ
 
-注意：同サイズの吸気口接続口がないものとします。</DefinitionAlias>
+注意：同サイズの吸気口接続口がないものとする。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="909b4080d21711e1800000215ad4efdf">
+    <PropertyDef ifdguid="cdb30300d21611e1800000215ad4efdf">
       <Name>CoverLength</Name>
-      <Definition>The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the gully trap.</Definition>
+      <Definition>The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -430,16 +429,16 @@ Note that all inlet connections are assumed to be the same size.</Definition>
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Cover Length</NameAlias>
-        <NameAlias lang="ja-JP">カバーの長さ</NameAlias>
+        <NameAlias lang="ja-JP">カバー長さ</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">局所座標系のX軸に沿うか、半径（円状の形の場合）で測定された溝防臭弁カバーの長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">局所座標系のX軸に沿うか、半径（円状の形の場合）で測定された防臭弁カバーの長さ。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="9abd3f00d21711e1800000215ad4efdf">
+    <PropertyDef ifdguid="d6a3d480d21611e1800000215ad4efdf">
       <Name>CoverWidth</Name>
-      <Definition>The length measured along the y-axis in the local coordinate system of the cover of the gully trap.</Definition>
+      <Definition>The length measured along the y-axis in the local coordinate system of the cover of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -447,11 +446,11 @@ Note that all inlet connections are assumed to be the same size.</Definition>
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Cover Width</NameAlias>
-        <NameAlias lang="ja-JP">カバーの幅</NameAlias>
+        <NameAlias lang="ja-JP">カバー幅</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">局所座標系のY軸で測定された溝防臭弁カバーの長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">局所座標系のY軸で測定された防臭弁カバーの長さ。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
   </PropertyDefs>

@@ -127,7 +127,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="1959b280d1ff11e1800000215ad4efdf">
       <Name>Height</Name>
-      <Definition>Height of the object. It is the upper hight of the railing above the floor or stair.
+      <Definition>Characteristic height
+
+It is the upper height of the railing above the floor or stair.
 The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -152,9 +154,9 @@ The size information is provided in addition to the shape representation and the
     </PropertyDef>
     <PropertyDef ifdguid="1fe82a00d1ff11e1800000215ad4efdf">
       <Name>Diameter</Name>
-      <Definition>Diameter of the object. It is the diameter of the handrail of the railing.
-The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
-Here the diameter of the hand or guardrail within the railing.</Definition>
+      <Definition>The Diameter of the object.
+
+Specifically handrail of the railing.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

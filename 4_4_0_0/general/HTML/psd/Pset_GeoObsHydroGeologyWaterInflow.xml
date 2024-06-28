@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="69782dffd6b6452197b3c5c18f283d00" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoObsHydroGeologyWaterInflow</Name>
+  <Definition>Properties for hydrogeological water inflow observations.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/LOCALINFORMATION</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/LOCALINFORMATION</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="7a5cafaf3c8b451cadec1cd8e8e9092d">
+      <Name>SourceType</Name>
+      <Definition>Natural or artificial structure at the origin of the water inflow, like fracture, bedding, borehole, drainage pipe, drainage channel etc.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4b59ff1a6f8541f5b70020b3d0f73119">
+      <Name>SourceArea</Name>
+      <Definition>Description of the area at the origin of the water inflow.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4f969fc7eee64dd38632344cf550274a">
+      <Name>InflowRate</Name>
+      <Definition>Measured or expected water inflow rate during observation.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumetricFlowRateMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="985bae6a0a0349f1a6c5381831dcd6f8">
+      <Name>InflowSum</Name>
+      <Definition>Groundwater inflow measured or expected during one hour.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumeMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

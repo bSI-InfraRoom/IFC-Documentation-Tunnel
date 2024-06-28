@@ -119,9 +119,9 @@
         <DefinitionAlias lang="ja-JP">要素（主にリノベーションまたは改修プロジェクトにおいて）の状態。 状態は、「新規(New)」－新しく追加される要素。「既存」－要素は存在し、かつ残りもの。「破壊」－要素は存在したが、廃棄されるもの。「一時的」－一時的に存在する要素（一時的にサポートしている構造のようなもの）。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="3cb43b80d1c611e1800000215ad4efdf">
+    <PropertyDef ifdguid="adf2ef00d1c411e1800000215ad4efdf">
       <Name>EnergySource</Name>
-      <Definition>Enumeration defining the energy source or fuel combusted to generate heat.</Definition>
+      <Definition>Enumeration defining the energy source or fuel cumbusted.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_EnergySource">
@@ -246,7 +246,7 @@
       <NameAliases>
         <NameAlias lang="en">Energy Source</NameAlias>
         <NameAlias lang="fr-FR">SourceEnergie</NameAlias>
-        <NameAlias lang="ja-JP">エネルギ源</NameAlias>
+        <NameAlias lang="ja-JP">エネルギ種別</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />

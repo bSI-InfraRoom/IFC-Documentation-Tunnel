@@ -26,8 +26,9 @@
         <DefinitionAlias lang="ja-JP">このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="d296b7a0f2bb4e309010357681bd4adc">
+    <PropertyDef ifdguid="00093400d20811e1800000215ad4efdf">
       <Name>Status</Name>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">
@@ -105,12 +106,22 @@
           </ConstantList>
         </TypePropertyEnumeratedValue>
       </PropertyType>
-      <NameAliases />
-      <DefinitionAliases />
+      <NameAliases>
+        <NameAlias lang="de-DE">Status</NameAlias>
+        <NameAlias lang="en">Status</NameAlias>
+        <NameAlias lang="fr-FR">Statut</NameAlias>
+        <NameAlias lang="ja-JP">状態</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="de-DE">Status bzw. Phase des Bauteils insbesondere beim Bauen im Bestand. "Neu" (new) neues Bauteil als Ergänzung, "Bestand" (existing) bestehendes Bauteil, dass erhalten bleibt, "Abbruch" (demolish) Bauteil, das abgebrochen wird, "Temporär" (temporary) Bauteil und andere Bauelemente, die vorübergehend eingebaut werden (wie Abstützungen, etc.)</DefinitionAlias>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Statut de l'élément, principalement utilisé dans les projets de rénovation et de réhabilitation. Le statut a pour valeur NOUVEAU pour un nouvel élément, EXISTANT pour un élément existant qui est conservé, DEMOLI pour un élément existant à démolir et TEMPORAIRE pour un élément temporaire (comme une structure support provisoire).</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">要素（主にリノベーションまたは改修プロジェクトにおいて）の状態。 状態は、「新規(New)」－新しく追加される要素。「既存」－要素は存在し、かつ残りもの。「破壊」－要素は存在したが、廃棄されるもの。「一時的」－一時的に存在する要素（一時的にサポートしている構造のようなもの）。</DefinitionAlias>
+      </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="94ee3c00d1cc11e1800000215ad4efdf">
+    <PropertyDef ifdguid="36748e00d1cb11e1800000215ad4efdf">
       <Name>RefrigerantClass</Name>
-      <Definition>Refrigerant class used by the condenser.
+      <Definition>Refrigerant class used by the object.
 
 CFC: Chlorofluorocarbons.
 HCFC: Hydrochlorofluorocarbons.
@@ -220,9 +231,15 @@ HFC: Hydrofluorocarbons.</Definition>
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Refrigerant Class</NameAlias>
+        <NameAlias lang="fr-FR">ClasseRéfrigérant</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Classe de réfrigérant utilisé par le compresseur.
+
+CFC
+HCFC
+HFC</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="b0f1dd80d1cc11e1800000215ad4efdf">
@@ -257,7 +274,7 @@ HFC: Hydrofluorocarbons.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="bc450900d1cc11e1800000215ad4efdf">
       <Name>InternalRefrigerantVolume</Name>
-      <Definition>Internal volume of condenser (refrigerant side).</Definition>
+      <Definition>Internal volume of object (refrigerant side).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumeMeasure" />
@@ -272,7 +289,7 @@ HFC: Hydrofluorocarbons.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="c1a25380d1cc11e1800000215ad4efdf">
       <Name>InternalWaterVolume</Name>
-      <Definition>Internal volume of condenser (water side).</Definition>
+      <Definition>Internal volume of object (water side).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumeMeasure" />

@@ -11,7 +11,7 @@
     <title>IfcKnotType</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 9 index3 2 index4 6 index5 0; }
+      body { counter-reset: index1 8 index2 9 index3 2 index4 5 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.htm#8.9.2.7");
+    parent.index.location.replace("../../toc-8.htm#8.9.2.6");
 //-->
 </script>
 
@@ -54,9 +54,9 @@ This type indicates that the B-spline knots shall have a particularly simple for
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>UNIFORM_KNOTS</td><td><p>The form of knots appropriate for a uniform B-spline curve.</p>
+<tr><td>PIECEWISE_BEZIER_KNOTS</td><td><p>The form of knots appropriate for a piecewise Bezier curve.</p>
 </td></tr><tr><td>QUASI_UNIFORM_KNOTS</td><td><p>The form of knots appropriate for a quasi-uniform B-spline curve.</p>
-</td></tr><tr><td>PIECEWISE_BEZIER_KNOTS</td><td><p>The form of knots appropriate for a piecewise Bezier curve.</p>
+</td></tr><tr><td>UNIFORM_KNOTS</td><td><p>The form of knots appropriate for a uniform B-spline curve.</p>
 </td></tr><tr><td>UNSPECIFIED</td><td><p>The type of knots is not specified. This includes the case of non uniform knots.</p>
 </td></tr></table>
 </details>
@@ -65,16 +65,16 @@ This type indicates that the B-spline knots shall have a particularly simple for
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcgeometryresource/lexical/ifcknottype.htm">IfcKnotType</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;uniform_knots&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;quasi_uniform_knots&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;piecewise_bezier_knots&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;quasi_uniform_knots&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;uniform_knots&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;unspecified&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
 &nbsp;&lt;/xs:simpleType&gt;<br/>
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcKnotType = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;UNIFORM_KNOTS, <br/>&nbsp;QUASI_UNIFORM_KNOTS, <br/>&nbsp;PIECEWISE_BEZIER_KNOTS, <br/>&nbsp;UNSPECIFIED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;PIECEWISE_BEZIER_KNOTS, <br/>&nbsp;QUASI_UNIFORM_KNOTS, <br/>&nbsp;UNIFORM_KNOTS, <br/>&nbsp;UNSPECIFIED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

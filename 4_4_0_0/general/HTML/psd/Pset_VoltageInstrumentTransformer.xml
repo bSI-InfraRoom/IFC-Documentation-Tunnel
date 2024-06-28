@@ -6,9 +6,9 @@
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcFlowInstrument/VOLTMETER</ClassName>
-    <ClassName> IfcFlowInstrument/COMBINED</ClassName>
+    <ClassName>IfcFlowInstrument/COMBINED</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcFlowInstrument/VOLTMETER, IfcFlowInstrument/COMBINED</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcFlowInstrument/VOLTMETER,IfcFlowInstrument/COMBINED</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="c288ea3513764938b1830ea14f504273">
       <Name>AccuracyClass</Name>
@@ -34,7 +34,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="a2e15fb5e52e49e3b86731401fe07f86">
       <Name>RatedVoltage</Name>
-      <Definition>The voltage that a device is designed to handle.</Definition>
+      <Definition>The range of allowed voltage that a device is certified to handle. The upper bound of this value is the maximum.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcElectricVoltageMeasure" />
@@ -78,7 +78,7 @@
       <Definition>Number of phases that the equipment operates on.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

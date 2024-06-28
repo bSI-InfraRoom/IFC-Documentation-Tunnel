@@ -41,7 +41,7 @@
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>FIRST_ORDER_THEORY</td><td></td></tr><tr><td>SECOND_ORDER_THEORY</td><td></td></tr><tr><td>THIRD_ORDER_THEORY</td><td></td></tr><tr><td>FULL_NONLINEAR_THEORY</td><td></td></tr><tr><td>USERDEFINED</td><td></td></tr><tr><td>NOTDEFINED</td><td></td></tr></table>
+<tr><td>FIRST_ORDER_THEORY</td><td></td></tr><tr><td>FULL_NONLINEAR_THEORY</td><td></td></tr><tr><td>SECOND_ORDER_THEORY</td><td></td></tr><tr><td>THIRD_ORDER_THEORY</td><td></td></tr><tr><td>USERDEFINED</td><td></td></tr><tr><td>NOTDEFINED</td><td></td></tr></table>
 </details>
 </section>
 <section>
@@ -49,9 +49,9 @@
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcstructuralanalysisdomain/lexical/ifcanalysistheorytypeenum.htm">IfcAnalysisTheoryTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;first_order_theory&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;full_nonlinear_theory&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;second_order_theory&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;third_order_theory&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;full_nonlinear_theory&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -59,7 +59,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcAnalysisTheoryTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;FIRST_ORDER_THEORY, <br/>&nbsp;SECOND_ORDER_THEORY, <br/>&nbsp;THIRD_ORDER_THEORY, <br/>&nbsp;FULL_NONLINEAR_THEORY, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;FIRST_ORDER_THEORY, <br/>&nbsp;FULL_NONLINEAR_THEORY, <br/>&nbsp;SECOND_ORDER_THEORY, <br/>&nbsp;THIRD_ORDER_THEORY, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcstructuralanalysisdomain/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

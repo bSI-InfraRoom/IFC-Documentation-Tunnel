@@ -125,10 +125,9 @@
         <DefinitionAlias lang="ja-JP">要素（主にリノベーションまたは改修プロジェクトにおいて）の状態。 状態は、「新規(New)」－新しく追加される要素。「既存」－要素は存在し、かつ残りもの。「破壊」－要素は存在したが、廃棄されるもの。「一時的」－一時的に存在する要素（一時的にサポートしている構造のようなもの）。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="8b66d300d1d011e1800000215ad4efdf">
+    <PropertyDef ifdguid="2e6b1d00d1d011e1800000215ad4efdf">
       <Name>AcousticRating</Name>
-      <Definition>Acoustic rating for this object.
-It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorbtion values).</Definition>
+      <Definition>Acoustic rating for this object. It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorption values).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -137,7 +136,7 @@ It is provided according to the national building code. It indicates the sound t
       <NameAliases>
         <NameAlias lang="de-DE">Schallschutzklasse</NameAlias>
         <NameAlias lang="en">Acoustic Rating</NameAlias>
-        <NameAlias lang="fr-FR">IsolationAcoustique</NameAlias>
+        <NameAlias lang="fr-FR">Isolation acoustique</NameAlias>
         <NameAlias lang="ja-JP">遮音等級</NameAlias>
         <NameAlias lang="zh-CN">隔音等级</NameAlias>
       </NameAliases>
@@ -145,14 +144,15 @@ It is provided according to the national building code. It indicates the sound t
         <DefinitionAlias lang="de-DE">Schallschutzklasse gemäß der nationalen oder regionalen Schallschutzverordnung.</DefinitionAlias>
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="fr-FR">Classement acoustique de cet objet. Donné selon le Code National du Bâtiment. Il indique la résistance à la transmission du son de cet objet par une valeur de référence (au lieu de fournir les valeurs totales d'absorption du son).</DefinitionAlias>
-        <DefinitionAlias lang="ja-JP">遮音等級情報。関連する建築基準法を参照。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">遮音等級。当該国の建築法規による。
+このオブジェクトの音の透過損失を等級値で示す。</DefinitionAlias>
         <DefinitionAlias lang="zh-CN">该构件的隔音等级。
 该属性的依据为国家建筑规范。为表示该构件隔音效果的比率（而不是完全吸收声音的值）。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="915cb400d1d011e1800000215ad4efdf">
+    <PropertyDef ifdguid="13b49a80d20811e1800000215ad4efdf">
       <Name>FireRating</Name>
-      <Definition>Fire rating given according to the national fire safety classification.</Definition>
+      <Definition>Fire rating for this object. It is given according to the national fire safety classification.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -197,10 +197,9 @@ It is provided according to the national building code. It indicates the sound t
         <DefinitionAlias lang="zh-CN">表示该构件是否由可燃材料制成。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="9c174900d1d011e1800000215ad4efdf">
+    <PropertyDef ifdguid="3f1b9300d1d011e1800000215ad4efdf">
       <Name>SurfaceSpreadOfFlame</Name>
-      <Definition>Indication on how the flames spread around the surface,
-It is given according to the national building code that governs the fire behaviour for materials.</Definition>
+      <Definition>Indication on how the flames spread around the surface, It is given according to the national building code that governs the fire behaviour for materials.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -209,20 +208,19 @@ It is given according to the national building code that governs the fire behavi
       <NameAliases>
         <NameAlias lang="de-DE">Brandverhalten</NameAlias>
         <NameAlias lang="en">Surface Spread Of Flame</NameAlias>
-        <NameAlias lang="fr-FR">SurfacePropagationFlamme</NameAlias>
-        <NameAlias lang="ja-JP">火炎伝播性</NameAlias>
+        <NameAlias lang="fr-FR">Propagation des flammes en surface</NameAlias>
+        <NameAlias lang="ja-JP">火炎表面伝播性</NameAlias>
       </NameAliases>
       <DefinitionAliases>
-        <DefinitionAlias lang="de-DE">German-description-5</DefinitionAlias>
+        <DefinitionAlias lang="de-DE">Beschreibung des Brandverhaltens des Bauteils gemäß der nationalen oder regionalen  Brandschutzverordnung.</DefinitionAlias>
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="fr-FR">Indique comment les flammes se propagent sur une surface. Indication donnée selon le Code National du Bâtiment régissant le comportement au feu des matériaux.</DefinitionAlias>
-        <DefinitionAlias lang="ja-JP">炎がどのように材料の表面を広がるかという指標。材料の炎に対する振る舞いについての国家建築規則に従って提供される。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">火炎表面伝播性。当該国の建築法規による。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="a1749380d1d011e1800000215ad4efdf">
+    <PropertyDef ifdguid="61f67900d1c911e1800000215ad4efdf">
       <Name>ThermalTransmittance</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of a material.
-Here the total thermal transmittance coefficient through the wall (including all materials).</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />
@@ -231,18 +229,18 @@ Here the total thermal transmittance coefficient through the wall (including all
       <NameAliases>
         <NameAlias lang="de-DE">U-Wert</NameAlias>
         <NameAlias lang="en">Thermal Transmittance</NameAlias>
-        <NameAlias lang="fr-FR">TransmissionThermique</NameAlias>
+        <NameAlias lang="fr-FR">Transmission thermique surfacique</NameAlias>
         <NameAlias lang="ja-JP">熱貫流率</NameAlias>
         <NameAlias lang="zh-CN">导热系数</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="de-DE">Wärmedurchgangskoeffizient (U-Wert) der Materialschichten.
-Hier der Gesamtwärmedurchgangskoeffizient des Balkens (in Richtung des Wärmeflusses), angegeben ohne den inneren und äußeren Wärmeübergangswiderstand.</DefinitionAlias>
+Hier der Gesamtwärmedurchgangskoeffizient des Schornsteins (in Richtung des Wärmeflusses), angegeben ohne den inneren und äußeren Wärmeübergangswiderstand.</DefinitionAlias>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="fr-FR">Coefficient de transmission thermique surfacique (U). C'est le coefficient global de transmission thermique à travers le mur dans la direction du flux thermique (tous matériaux inclus). Nouvelle propriété de la version 2x4.</DefinitionAlias>
-        <DefinitionAlias lang="ja-JP">熱貫流率U値。ここではカーテンウォールを通した熱移動の方向における全体の熱還流率を示す。</DefinitionAlias>
+        <DefinitionAlias lang="fr-FR">Coefficient de transmission thermique surfacique (U). C'est le coefficient global de transmission thermique à travers la cheminée dans la direction du flux thermique (tous matériaux inclus). Nouvelle propriété de la version 2x4.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">材料の熱貫流率（U値）。ここでは、煙突全体の熱の流れる方向の熱貫流率（全ての材料を含む）。</DefinitionAlias>
         <DefinitionAlias lang="zh-CN">材料的导热系数（U值）。
-表示穿过该墙的整体导热系数（包括所有材料）。</DefinitionAlias>
+表示该烟囱在传热方向上的整体导热系数（包括所有材料）。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="a6394780d1d011e1800000215ad4efdf">

@@ -133,26 +133,28 @@ InsertionLoss and RegeneratedSound attributes deleted in IFC2x2 Pset Addendum: U
         <DefinitionAlias lang="ja-JP">水力直径</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="f4554780d1de11e1800000215ad4efdf">
+    <PropertyDef ifdguid="e0581880d1d311e1800000215ad4efdf">
       <Name>Length</Name>
-      <Definition>The finished length of the silencer.</Definition>
+      <Definition>The length of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLengthMeasure" />
+          <DataType type="IfcPositiveLengthMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Length</NameAlias>
         <NameAlias lang="ja-JP">長さ</NameAlias>
+        <NameAlias lang="ko-KR">길이</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">サイレンサの仕上げ長さ</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">ピット長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">피트 길이</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="f919fb80d1de11e1800000215ad4efdf">
       <Name>Weight</Name>
-      <Definition>The weight of the silencer.</Definition>
+      <Definition>Total weight of object</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure" />
@@ -168,7 +170,7 @@ InsertionLoss and RegeneratedSound attributes deleted in IFC2x2 Pset Addendum: U
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="fe774600d1de11e1800000215ad4efdf">
-      <Name>AirFlowrateRange</Name>
+      <Name>AirFlowRateRange</Name>
       <Definition>Possible range of airflow that can be delivered.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
@@ -203,7 +205,7 @@ InsertionLoss and RegeneratedSound attributes deleted in IFC2x2 Pset Addendum: U
     </PropertyDef>
     <PropertyDef ifdguid="0f27bc00d1df11e1800000215ad4efdf">
       <Name>TemperatureRange</Name>
-      <Definition>Allowable minimum and maximum temperature.</Definition>
+      <Definition>Allowable maximum and minimum temperature.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />

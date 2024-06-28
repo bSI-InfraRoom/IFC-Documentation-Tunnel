@@ -30,7 +30,7 @@
 </details>
 <details open="open"><summary>Change log</summary><table class="gridtable">
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcexcavation.htm">IfcExcavation</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
@@ -229,7 +229,16 @@ IFC4 CHANGE New inverse relationship.
 
 <a id="body-tessellation-geometry" />
 <p class="use-head">Body Tessellation Geometry</p>
-<p>The <a href="../../templates/body-tessellation-geometry.htm">Body Tessellation Geometry</a> concept applies to this entity.</p><p>Whenever parametric geometry with cross sections (Sectioned Solid Horizontal Geometry) and guiding curves (Guiding Curves Geometry) is not possible, the segment shall be represented with Body Tessellation Geometry.</p>
+<p>The <a href="../../templates/body-tessellation-geometry.htm">Body Tessellation Geometry</a> concept template applies to this entity as shown in Table 285.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Items</b></th></tr>
+<tr><td></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 285 &mdash; IfcExcavation Body Tessellation Geometry</td></tr></table>
+
+<p>Whenever parametric geometry with cross sections (Sectioned Solid Horizontal Geometry) and guiding curves (Guiding Curves Geometry) is not possible, the segment shall be represented with Body Tessellation Geometry.</p>
 
 <br/><br/>
 
@@ -254,10 +263,14 @@ IFC4 CHANGE New inverse relationship.
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;5ebffd94-c51e-4e58-ba79-1b6e9f3542d8&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;dd6bfbbc-8431-4512-8e9f-b232cc5fff1b&quot; name=&quot;Body Tessellation Geometry&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;5cfd4403-6545-4c6d-bc27-0a95a3d09950&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&lt;/Concepts&gt;<br/>
 &lt;/ConceptRoot&gt;<br/>

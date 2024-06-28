@@ -228,7 +228,7 @@ NONE: No end-style has been applied.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="a28e9f226e204a909976810e633a45f4">
       <Name>NominalWidth</Name>
-      <Definition>The nominal width of the object.</Definition>
+      <Definition>The nominal overall width of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNonNegativeLengthMeasure" />
@@ -247,7 +247,9 @@ NONE: No end-style has been applied.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="90a90418907a41809a527bb1ef069005">
       <Name>NominalHeight</Name>
-      <Definition>The nominal height of the duct connection. Only provided for rectangular shaped ducts.</Definition>
+      <Definition>The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
+
+The nominal height of the duct connection. Only provided for rectangular shaped ducts.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -260,24 +262,22 @@ NONE: No end-style has been applied.</Definition>
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="9aa93573818943ee9e7ad7e898fddfae">
+    <PropertyDef ifdguid="e67741b634704b7caa49bc70951af4bc">
       <Name>NominalThickness</Name>
-      <Definition>The nominal  thickness of the entity.</Definition>
+      <Definition>The nominal thickness of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNonNegativeLengthMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Nominal Thickness</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en">The nominal wall thickness of the duct at the connection point.</DefinitionAlias>
-      </DefinitionAliases>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="0e28d2efe50346319664f17e52ebd118">
       <Name>DryBulbTemperature</Name>
-      <Definition>Dry bulb temperature of the air.</Definition>
+      <Definition>Dry bulb temperature of the object.
+
+Indicates dry bulb temperature of the air.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />

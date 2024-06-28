@@ -35,9 +35,6 @@
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcearthworkscut.htm">IfcEarthworksCut</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasSurfaceFeatures</td><td></td><td></td><td>ADDED</td><td></td></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcearthworkscut.htm">IfcEarthworksCut</a></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PredefinedType</td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed from <i>OPTIONAL</i>. <br/></td></tr>
 </table>
 </details>
 <section>
@@ -51,14 +48,14 @@ NOTE The material excavated and either used as fill or discarded as waste is not
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>G</th></tr>
-<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkscuttypeenum.htm">IfcEarthworksCutTypeEnum</a></td><td></td><td>
+<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkscuttypeenum.htm">IfcEarthworksCutTypeEnum</a></td><td>? </td><td>
 Identifies the predefined type of a earthworks cut elements. This type may associate additional specific property sets.
 </td><td>X</td></tr>
 </table>
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>HasObjectType</td><td>The attribute ObjectType shall be given if the predefined type is set to USERDEFINED.
+<tr><td>CorrectPredefinedType</td><td>Either the <i>PredefinedType</i> attribute is unset, or the inherited attribute <i>ObjectType</i> shall be provided, if the <i>PredefinedType</i> is set to USERDEFINED.
 </td></tr>
 </table>
 
@@ -210,7 +207,7 @@ IFC4 CHANGE New inverse relationship.
 </td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifcsharedinfrastructureelements/lexical/ifcexcavation.htm">IfcExcavation</a></i></td></tr>
 <tr><td colspan="6"><a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkscut.htm">IfcEarthworksCut</a></td></tr>
-<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkscuttypeenum.htm">IfcEarthworksCutTypeEnum</a></td><td></td><td>
+<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkscuttypeenum.htm">IfcEarthworksCutTypeEnum</a></td><td>? </td><td>
 Identifies the predefined type of a earthworks cut elements. This type may associate additional specific property sets.
 </td><td>X</td></tr>
 </table>
@@ -297,9 +294,11 @@ Identifies the predefined type of a earthworks cut elements. This type may assoc
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcEarthworksCut<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcsharedinfrastructureelements/lexical/ifcexcavation.htm">IfcExcavation</a>)<b>;</b><br/>
-&nbsp;&nbsp;PredefinedType : <a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkscuttypeenum.htm">IfcEarthworksCutTypeEnum</a>;<br/>
+&nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkscuttypeenum.htm">IfcEarthworksCutTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkscuttypeenum.htm">IfcEarthworksCutTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
+  (PredefinedType &lt;&gt; <a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkscuttypeenum.htm">IfcEarthworksCutTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
+  ((PredefinedType = <a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkscuttypeenum.htm">IfcEarthworksCutTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS (SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedinfrastructureelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

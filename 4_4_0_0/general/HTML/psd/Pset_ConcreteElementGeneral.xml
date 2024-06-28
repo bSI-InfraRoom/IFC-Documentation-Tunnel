@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="7f2c4700d1cb11e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_ConcreteElementGeneral</Name>
-  <Definition>General properties common to different types of concrete elements, including reinforced concrete elements. The property set can be used by a number of subtypes of IfcBuildingElement, indicated that such element is designed or constructed using a concrete construction method.</Definition>
+  <Definition>General properties common to different types of concrete elements, including reinforced concrete elements. The property set can be used by a number of subtypes of IfcBuiltElement, indicated that such element is designed or constructed using a concrete construction method.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcBeam</ClassName>
@@ -25,22 +25,155 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="64af56b30b4540c2b43d74b49a28b9db">
-      <Name>ConstructionMethod</Name>
-      <Definition>Designator for whether the element is constructed/welded on site or prefabricated. Example of allowed values : 'On-site' vs 'Prefabricated'.</Definition>
+    <PropertyDef ifdguid="62543b80d1ec11e1800000215ad4efdf">
+      <Name>AssemblyPlace</Name>
+      <Definition>Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.</Definition>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel" />
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AssemblyPlace">
+            <EnumItem>FACTORY</EnumItem>
+            <EnumItem>OFFSITE</EnumItem>
+            <EnumItem>SITE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>FACTORY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Factory</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OFFSITE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Offsite</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SITE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Site</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <Definition>required category not on scale</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
       <NameAliases>
-        <NameAlias lang="de-DE">Ausführung</NameAlias>
-        <NameAlias lang="en">Construction Method</NameAlias>
+        <NameAlias lang="en">Assembly Place</NameAlias>
       </NameAliases>
       <DefinitionAliases>
-        <DefinitionAlias lang="de-DE">Angabe, ob dieses Betonbauteil als Ortbeton ("In-Situ") oder als Fertigteil ("Precast") ausgeführt werden soll.</DefinitionAlias>
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7b6c8b99028c465c818a42a4a479bff6">
+      <Name>CastingMethod</Name>
+      <Definition>The method of casting the concrete into its designed form.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ConcreteCastingMethod">
+            <EnumItem>INSITU</EnumItem>
+            <EnumItem>MIXED</EnumItem>
+            <EnumItem>PRECAST</EnumItem>
+            <EnumItem>PRINTED</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>INSITU</Name>
+              <Definition>The concrete mixture is cast into formwork on site.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MIXED</Name>
+              <Definition>A combination of casting methods are used.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PRECAST</Name>
+              <Definition>The concrete mixture is cast into typically a reusable mold or form that is cured in a controlled environment.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PRINTED</Name>
+              <Definition>Concrete extruded into the designed form, either on-site or off-site.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <Definition>required category not on scale</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="84899180d1cb11e1800000215ad4efdf">
       <Name>StructuralClass</Name>

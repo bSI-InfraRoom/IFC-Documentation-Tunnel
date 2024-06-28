@@ -14,25 +14,25 @@
       <Definition>The type of junction. TEE=3 ports, CROSS = 4 ports.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
-          <EnumList name="PEnum_PipeFittingJunctionType">
-            <EnumItem>TEE</EnumItem>
+          <EnumList name="PEnum_FittingJunctionType">
             <EnumItem>CROSS</EnumItem>
+            <EnumItem>TEE</EnumItem>
             <EnumItem>OTHER</EnumItem>
             <EnumItem>NOTKNOWN</EnumItem>
             <EnumItem>UNSET</EnumItem>
           </EnumList>
           <ConstantList>
             <ConstantDef>
-              <Name>TEE</Name>
+              <Name>CROSS</Name>
               <NameAliases>
-                <NameAlias lang="en">Tee</NameAlias>
+                <NameAlias lang="en">Cross</NameAlias>
               </NameAliases>
               <DefinitionAliases />
             </ConstantDef>
             <ConstantDef>
-              <Name>CROSS</Name>
+              <Name>TEE</Name>
               <NameAliases>
-                <NameAlias lang="en">Cross</NameAlias>
+                <NameAlias lang="en">Tee</NameAlias>
               </NameAliases>
               <DefinitionAliases />
             </ConstantDef>

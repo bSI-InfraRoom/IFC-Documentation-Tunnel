@@ -48,8 +48,8 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="b0bd0680d1fb11e1800000215ad4efdf">
-      <Name>AdjustmentRange</Name>
-      <Definition>Upper and lower current adjustment limits for an AdjustmentValueType = RANGE. Note that this property should not have a value for an  AdjustmentValueType = LIST.</Definition>
+      <Name>CurrentAdjustmentRange</Name>
+      <Definition>Upper and lower current adjustment limits for an AdjustmentValueType = RANGE. Note that this property should not have a value for an AdjustmentValueType = LIST.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcElectricCurrentMeasure" />
@@ -67,8 +67,8 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="b87cab00d1fb11e1800000215ad4efdf">
-      <Name>AdjustmentRangeStepValue</Name>
-      <Definition>Step value of current adjustment for an AdjustmentValueType = RANGE. Note that this property should not have a value for an  AdjustmentValueType = LIST.</Definition>
+      <Name>CurrentAdjustmentRangeStepValue</Name>
+      <Definition>Step value of current adjustment for an AdjustmentValueType = RANGE. Note that this property should not have a value for an AdjustmentValueType = LIST.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure" />
@@ -86,8 +86,8 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="be728c00d1fb11e1800000215ad4efdf">
-      <Name>AdjustmentValues</Name>
-      <Definition>A list of current adjustment values that may be applied to a tripping unit for an AdjustmentValueType = LIST. A minimum of 1 and a maximum of 16 adjustment values may be specified. Note that this property should not have a value for an  AdjustmentValueType = RANGE.</Definition>
+      <Name>CurrentAdjustmentValues</Name>
+      <Definition>A list of current adjustment values that may be applied to a tripping unit for an AdjustmentValueType = LIST. A minimum of 1 and a maximum of 16 adjustment values may be specified. Note that this property should not have a value for an AdjustmentValueType = RANGE.</Definition>
       <PropertyType>
         <TypePropertyListValue>
           <ListValue>

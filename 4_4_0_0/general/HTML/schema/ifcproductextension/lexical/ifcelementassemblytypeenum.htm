@@ -57,11 +57,12 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENTRANCEWORKS</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUMPBUSTER</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRAFFIC_CALMING_DEVICE</td><td></td><td></td><td>ADDED</td><td></td></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcproductextension/lexical/ifcelementassemblytypeenum.htm">IfcElementAssemblyTypeEnum</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DUCTBANK</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRESUPPORTVAULT</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRESUPPORTFACE</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RING</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -73,41 +74,48 @@
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>ACCESSORY_ASSEMBLY</td><td><p>Assembled accessories or components.</p>
+<tr><td>ABUTMENT</td><td><p>A bridge abutment built up of walls, beams, slabs etc.</p>
+</td></tr><tr><td>ACCESSORY_ASSEMBLY</td><td><p>Assembled accessories or components.</p>
 </td></tr><tr><td>ARCH</td><td><p>A curved structure.</p>
 </td></tr><tr><td>BEAM_GRID</td><td><p>Interconnected beams, located in one (typically horizontal) plane.</p>
 </td></tr><tr><td>BRACED_FRAME</td><td><p>A rigid frame with additional bracing members.</p>
-</td></tr><tr><td>GIRDER</td><td><p>A beam-like superstructure, such as bridge main girder extending between abutments and piers built up of beams, braces (as Members) etc. - may also be an aggregation of girder segments.</p>
-</td></tr><tr><td>REINFORCEMENT_UNIT</td><td><p>Assembled reinforcement elements.</p>
-</td></tr><tr><td>RIGID_FRAME</td><td><p>A structure built up of beams, columns, etc. with moment-resisting joints, such as gantry</p>
-</td></tr><tr><td>SLAB_FIELD</td><td><p>Slabs, laid out in one plane.</p>
-</td></tr><tr><td>TRUSS</td><td><p>A structure built up of members with (quasi) pinned joint.</p>
-</td></tr><tr><td>ABUTMENT</td><td><p>A bridge abutment built up of walls, beams, slabs etc.</p>
-</td></tr><tr><td>PIER</td><td><p>An intermediate support e.g. in a bridge, built up of walls, columns, beams etc.</p>
-</td></tr><tr><td>PYLON</td><td><p>A vertical structure supporting cables in suspended or stayed structure.</p>
 </td></tr><tr><td>CROSS_BRACING</td><td><p>A Structural linear member or assembly of memebrs inside a box girder or between girders, typically on a pier, to resist lateral forces and transfer them to the support.</p>
 </td></tr><tr><td>DECK</td><td><p>A platform (such as floor or bridge deck) built up of beams, slabs.</p>
-</td></tr><tr><td>MAST</td><td><p>An assembly of plates, members, cables or fasteners that form a vertical structure for the support or mounting of other equipment such as lights, sonar or wireless transmitters.</p>
-</td></tr><tr><td>SIGNALASSEMBLY</td><td><p>An assembly to physically aggregate together one or more signal instances (and also sign instances) including any supporting structural elements such as a simple pole or a rigid frame gantry.</p>
-</td></tr><tr><td>GRID</td><td><p>A framework of spaced cables or bars that are parallel to or cross each other.</p>
-</td></tr><tr><td>SHELTER</td><td><p>A structure, fairly quick to setup, move or dismantle, used to give protection, especially from the weather or intrusion.</p>
-</td></tr><tr><td>SUPPORTINGASSEMBLY</td><td><p>An assembly intends to support Overhead Contact Line System. It includes foundation, supporting elements and suspension assembly.</p>
-</td></tr><tr><td>SUSPENSIONASSEMBLY</td><td><p>A complex assembly of components used to suspend elements or cable segments.</p>
-</td></tr><tr><td>TRACTION_SWITCHING_ASSEMBLY</td><td><p>A common assembly used to insure the switching function. It is composed of switches, control instruments and other components.</p>
-</td></tr><tr><td>TRACKPANEL</td><td><p>Trackwork ensuring the support and guidance of a vehicle along a route. It consists of assembly of rail, sleepers and fastenings.</p>
-</td></tr><tr><td>TURNOUTPANEL</td><td><p>Trackwork ensuring the support and guidance of a vehicle along any given route among various diverging or intersecting tracks.
-Note: definition from NF EN 13232-1-2004.</p>
 </td></tr><tr><td>DILATATIONPANEL</td><td><p>Device which permits longitudinal relative rail movement of two adjacent rails, while maintaining correct guidance and support.
 Note: definition from NF EN 13232-1-2004.</p>
-</td></tr><tr><td>RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY</td><td><p>A complex assembly made up of several components like blocking device, speed regulator, bias loaded inspector, track scale or controllable retarder.</p>
+</td></tr><tr><td>DUCTBANK</td><td><p>A Duct Bank is two or more ducts or conduits used as part of a system. A duct bank is designed to protect and group or consolidate data and electrical cables to and from a facility. The cables are laid in PVC pipes or conduits. These conduit are bundled together and protected with either steel or reinforced concrete casings. Duct banks are often located underground. They can carry cables for all electrical wiring and data requirements in the facility as well as extra cables that are not for immediate use, but may be valuable for future requirements.</p>
 </td></tr><tr><td>ENTRANCEWORKS</td><td><p>An assembly forming the support structure of a chamber (lock, dock) gate and associated elements, plus the containment of operational equipment.</p>
+</td></tr><tr><td>GIRDER</td><td><p>A beam-like superstructure, such as bridge main girder extending between abutments and piers built up of beams, braces (as Members) etc. - may also be an aggregation of girder segments.</p>
+</td></tr><tr><td>GRID</td><td><p>A framework of spaced cables or bars that are parallel to or cross each other.</p>
+</td></tr><tr><td>MAST</td><td><p>An assembly of plates, members, cables or fasteners that form a vertical structure for the support or mounting of other equipment such as lights, sonar or wireless transmitters.</p>
+</td></tr><tr><td>PIER</td><td><p>An intermediate support e.g. in a bridge, built up of walls, columns, beams etc.</p>
+</td></tr><tr><td>PRESUPPORTFACE</td><td><p>Horizontal boreholes in the face of the tunnel with various types of support, reinforcing and stabilising the ground ahead of the face and removed during subsequent excavation.</p>
+</td></tr><tr><td>PRESUPPORTVAULT</td><td><p>Outwards inclined radial boreholes around the perimeter of the tunnel with various types of support forming a protective vault around and ahead of the excavation.</p>
+</td></tr><tr><td>PYLON</td><td><p>A vertical structure supporting cables in suspended or stayed structure.</p>
+</td></tr><tr><td>RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY</td><td><p>A complex assembly made up of several components like blocking device, speed regulator, bias loaded inspector, track scale or controllable retarder.</p>
+</td></tr><tr><td>REINFORCEMENT_UNIT</td><td><p>Assembled reinforcement elements.</p>
+</td></tr><tr><td>RIGID_FRAME</td><td><p>A structure built up of beams, columns, etc. with moment-resisting joints, such as gantry</p>
+</td></tr><tr><td>RING</td><td><p>The ring is the basic unit for construction progress in tunneling, and the position of the TBM (Tunnel Boring Machine) can be determined by the ring number.
+The rings are portions of cylinders with surfaces that can be either parallel or non-parallel, identified below:</p>
+<ul>
+<li>parallel surfaces: straight ring</li>
+<li>non parallel surfaces: tapered trapezoidal ring / tapered universal ring
+The ring is composed from <a href="../../ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a> of type <i>SEGMENT</i>.</li>
+</ul>
+</td></tr><tr><td>SHELTER</td><td><p>A structure, fairly quick to setup, move or dismantle, used to give protection, especially from the weather or intrusion.</p>
+</td></tr><tr><td>SIGNALASSEMBLY</td><td><p>An assembly to physically aggregate together one or more signal instances (and also sign instances) including any supporting structural elements such as a simple pole or a rigid frame gantry.</p>
+</td></tr><tr><td>SLAB_FIELD</td><td><p>Slabs, laid out in one plane.</p>
 </td></tr><tr><td>SUMPBUSTER</td><td><p>An obstacle (with oil catchment basin) installed typically in a bus lane to prevent other traffic with lower ground clearance from using it. Also Sump breaker or Sump trap.</p>
+</td></tr><tr><td>SUPPORTINGASSEMBLY</td><td><p>An assembly intends to support Overhead Contact Line System. It includes foundation, supporting elements and suspension assembly.</p>
+</td></tr><tr><td>SUSPENSIONASSEMBLY</td><td><p>A complex assembly of components used to suspend elements or cable segments.</p>
+</td></tr><tr><td>TRACKPANEL</td><td><p>Trackwork ensuring the support and guidance of a vehicle along a route. It consists of assembly of rail, sleepers and fastenings.</p>
+</td></tr><tr><td>TRACTION_SWITCHING_ASSEMBLY</td><td><p>A common assembly used to insure the switching function. It is composed of switches, control instruments and other components.</p>
 </td></tr><tr><td>TRAFFIC_CALMING_DEVICE</td><td><p>A structure on the carriageway to control the speed of vehicles.</p>
 <p>NOTE Definition from ISO 6707-1: Encouragement of restrained and considerate behaviour by means such as road humps and reductions in width of the travelled way (US:traffic restraint, UK:speed bump).
 NOTE Definition from PIARC: Local carriageway layout (staggered section, choker) or physical device (central island, round- or flat-top road hump, speed bump, rumble strips, etc.) to control the speed of road vehicles.</p>
-</td></tr><tr><td>DUCTBANK</td><td><p>A Duct Bank is two or more ducts or conduits used as part of a system. A duct bank is designed to protect and group or consolidate data and electrical cables to and from a facility. The cables are laid in PVC pipes or conduits. These conduit are bundled together and protected with either steel or reinforced concrete casings. Duct banks are often located underground. They can carry cables for all electrical wiring and data requirements in the facility as well as extra cables that are not for immediate use, but may be valuable for future requirements.</p>
-</td></tr><tr><td>PRESUPPORTVAULT</td><td><p>Outwards inclined radial boreholes around the perimeter of the tunnel with various types of support forming a protective vault around and ahead of the excavation.</p>
-</td></tr><tr><td>PRESUPPORTFACE</td><td><p>Horizontal boreholes in the face of the tunnel with various types of support, reinforcing and stabilising the ground ahead of the face and removed during subsequent excavation.</p>
+</td></tr><tr><td>TRUSS</td><td><p>A structure built up of members with (quasi) pinned joint.</p>
+</td></tr><tr><td>TURNOUTPANEL</td><td><p>Trackwork ensuring the support and guidance of a vehicle along any given route among various diverging or intersecting tracks.
+Note: definition from NF EN 13232-1-2004.</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined element assembly.</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined element assembly.</p>
 </td></tr></table>
@@ -117,37 +125,38 @@ NOTE Definition from PIARC: Local carriageway layout (staggered section, choker)
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcproductextension/lexical/ifcelementassemblytypeenum.htm">IfcElementAssemblyTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;abutment&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;accessory_assembly&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;arch&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;beam_grid&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;braced_frame&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;girder&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;reinforcement_unit&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rigid_frame&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;slab_field&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;truss&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;abutment&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pier&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pylon&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;cross_bracing&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;deck&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;mast&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;signalassembly&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;dilatationpanel&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;ductbank&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;entranceworks&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;girder&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;grid&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;mast&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pier&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;presupportface&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;presupportvault&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pylon&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rail_mechanical_equipment_assembly&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;reinforcement_unit&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rigid_frame&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;ring&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;shelter&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;signalassembly&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;slab_field&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;sumpbuster&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;supportingassembly&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;suspensionassembly&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;traction_switching_assembly&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;trackpanel&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;turnoutpanel&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;dilatationpanel&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rail_mechanical_equipment_assembly&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;entranceworks&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;sumpbuster&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;traction_switching_assembly&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;traffic_calming_device&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;ductbank&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;presupportvault&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;presupportface&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;truss&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;turnoutpanel&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -155,7 +164,7 @@ NOTE Definition from PIARC: Local carriageway layout (staggered section, choker)
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcElementAssemblyTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;ACCESSORY_ASSEMBLY, <br/>&nbsp;ARCH, <br/>&nbsp;BEAM_GRID, <br/>&nbsp;BRACED_FRAME, <br/>&nbsp;GIRDER, <br/>&nbsp;REINFORCEMENT_UNIT, <br/>&nbsp;RIGID_FRAME, <br/>&nbsp;SLAB_FIELD, <br/>&nbsp;TRUSS, <br/>&nbsp;ABUTMENT, <br/>&nbsp;PIER, <br/>&nbsp;PYLON, <br/>&nbsp;CROSS_BRACING, <br/>&nbsp;DECK, <br/>&nbsp;MAST, <br/>&nbsp;SIGNALASSEMBLY, <br/>&nbsp;GRID, <br/>&nbsp;SHELTER, <br/>&nbsp;SUPPORTINGASSEMBLY, <br/>&nbsp;SUSPENSIONASSEMBLY, <br/>&nbsp;TRACTION_SWITCHING_ASSEMBLY, <br/>&nbsp;TRACKPANEL, <br/>&nbsp;TURNOUTPANEL, <br/>&nbsp;DILATATIONPANEL, <br/>&nbsp;RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY, <br/>&nbsp;ENTRANCEWORKS, <br/>&nbsp;SUMPBUSTER, <br/>&nbsp;TRAFFIC_CALMING_DEVICE, <br/>&nbsp;DUCTBANK, <br/>&nbsp;PRESUPPORTVAULT, <br/>&nbsp;PRESUPPORTFACE, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;ABUTMENT, <br/>&nbsp;ACCESSORY_ASSEMBLY, <br/>&nbsp;ARCH, <br/>&nbsp;BEAM_GRID, <br/>&nbsp;BRACED_FRAME, <br/>&nbsp;CROSS_BRACING, <br/>&nbsp;DECK, <br/>&nbsp;DILATATIONPANEL, <br/>&nbsp;DUCTBANK, <br/>&nbsp;ENTRANCEWORKS, <br/>&nbsp;GIRDER, <br/>&nbsp;GRID, <br/>&nbsp;MAST, <br/>&nbsp;PIER, <br/>&nbsp;PRESUPPORTFACE, <br/>&nbsp;PRESUPPORTVAULT, <br/>&nbsp;PYLON, <br/>&nbsp;RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY, <br/>&nbsp;REINFORCEMENT_UNIT, <br/>&nbsp;RIGID_FRAME, <br/>&nbsp;RING, <br/>&nbsp;SHELTER, <br/>&nbsp;SIGNALASSEMBLY, <br/>&nbsp;SLAB_FIELD, <br/>&nbsp;SUMPBUSTER, <br/>&nbsp;SUPPORTINGASSEMBLY, <br/>&nbsp;SUSPENSIONASSEMBLY, <br/>&nbsp;TRACKPANEL, <br/>&nbsp;TRACTION_SWITCHING_ASSEMBLY, <br/>&nbsp;TRAFFIC_CALMING_DEVICE, <br/>&nbsp;TRUSS, <br/>&nbsp;TURNOUTPANEL, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

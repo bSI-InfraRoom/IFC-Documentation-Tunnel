@@ -14,7 +14,7 @@
       <Definition>Total number of twisted wire pairs in copper pair cables.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -25,7 +25,7 @@
       <Definition>Total number of untwisted wire pairs in the copper pair cable.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

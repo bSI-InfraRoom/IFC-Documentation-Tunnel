@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcPointDim</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 9 index3 4 index4 17 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.9.4.18");
+//-->
+</script>
+
+<h4 class="num">IfcPointDim</h4>
+<details open="open"><summary>Natural language names</summary><table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the function</h5>
+<details open="open"><summary>Function Definition</summary><p>
+<p>This function checks the dimensionality of the various subtypes of IfcPoint.</p>
+<p>Returns the number of coordinate components in case of IfcCartesianPoint or the dimensionality of the basis curve or surface in other cases.</p>
+<blockquote class="history">
+<p>HISTORY  New function in IFC4.3.0.1</p>
+</blockquote>
+</p>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details open="open"><summary>EXPRESS Specification</summary><div class="xsd"><code class="xsd"><p>
+<span class="keyword">FUNCTION</span> IfcPointDim<br/>
+
+ (Point : <a href="../../ifcgeometryresource/lexical/ifcpoint.htm">IfcPoint</a>)<br/> : <a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a>;<br/> <br/>&nbsp;&nbsp;IF ('IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifccartesianpoint.htm">IfcCartesianPoint</a>' IN TYPEOF(Point))<br/>&nbsp;&nbsp;&nbsp;&nbsp;THEN RETURN(HIINDEX(Point\<a href="../../ifcgeometryresource/lexical/ifccartesianpoint.htm">IfcCartesianPoint</a>.Coordinates));<br/>&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;IF ('IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifcpointbydistanceexpression.htm">IfcPointByDistanceExpression</a>' IN TYPEOF(Point))<br/>&nbsp;&nbsp;&nbsp;&nbsp;THEN RETURN(Point\<a href="../../ifcgeometryresource/lexical/ifcpointbydistanceexpression.htm">IfcPointByDistanceExpression</a>.BasisCurve.Dim);<br/>&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;IF ('IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifcpointoncurve.htm">IfcPointOnCurve</a>' IN TYPEOF(Point))<br/>&nbsp;&nbsp;&nbsp;&nbsp;THEN RETURN(Point\<a href="../../ifcgeometryresource/lexical/ifcpointoncurve.htm">IfcPointOnCurve</a>.BasisCurve.Dim);<br/>&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;IF ('IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifcpointonsurface.htm">IfcPointOnSurface</a>' IN TYPEOF(Point))<br/>&nbsp;&nbsp;&nbsp;&nbsp;THEN RETURN(Point\<a href="../../ifcgeometryresource/lexical/ifcpointonsurface.htm">IfcPointOnSurface</a>.BasisSurface.Dim);<br/>&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;RETURN (?);<br/>
+<br/>
+
+<span class="keyword">END_FUNCTION</span>;
+
+</p>
+
+</code></div></details>
+</section>
+</p>
+<p><a href="../../../link/ifcpointdim.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

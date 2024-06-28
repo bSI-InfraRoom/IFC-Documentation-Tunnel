@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -82,12 +82,12 @@ TYPE IfcDataOriginEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcRecurrenceTypeEnum = ENUMERATION OF
-	(DAILY
-	,WEEKLY
+	(BY_DAY_COUNT
+	,BY_WEEKDAY_COUNT
+	,DAILY
 	,MONTHLY_BY_DAY_OF_MONTH
 	,MONTHLY_BY_POSITION
-	,BY_DAY_COUNT
-	,BY_WEEKDAY_COUNT
+	,WEEKLY
 	,YEARLY_BY_DAY_OF_MONTH
 	,YEARLY_BY_POSITION);
 END_TYPE;
@@ -241,8 +241,8 @@ END_ENTITY;
 ENTITY IfcWorkTime
  SUBTYPE OF (IfcSchedulingTime);
 	RecurrencePattern : OPTIONAL IfcRecurrencePattern;
-	Start : OPTIONAL IfcDate;
-	Finish : OPTIONAL IfcDate;
+	StartDate : OPTIONAL IfcDate;
+	FinishDate : OPTIONAL IfcDate;
 END_ENTITY;
 
 END_SCHEMA;

@@ -52,19 +52,7 @@
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>STATION</td><td><p>Represents a linearly measured location along the linear positioning element into which the <a href="../../ifcproductextension/lexical/ifcreferent.htm">IfcReferent</a> is nested. The location is described by a station value or a station equation using <a href="../../ifcsharedinfrastructureelements/pset/pset_stationing.htm">Pset_Stationing</a> and optionally the method of measurement (<a href="../../ifcsharedinfrastructureelements/pset/pset_linearreferencingmethod.htm">Pset_LinearReferencingMethod</a>). If a linear referencing method is specified for the STATION referent, it overrides any linear referencing method specified for the alignment.</p>
-</td></tr><tr><td>REFERENCEMARKER</td><td><p>The reference marker is a notation referent, typically located in the right of way of the road, rail or other transportation system. Usually reference markers are initially spaced at a uniform distance along the linear element being measured, though subsequent re-alignments can result in uneven spacing between the markers.</p>
-<blockquote class="note">
-<p>NOTE definition from ISO 19148:2021</p>
-</blockquote>
-<blockquote class="note">
-<p>NOTE The physical manifestation of the IfcReferent.REFERENCEMARKER can be an IfcSign.MARKER (e.g., a bolt fixed on a post)</p>
-</blockquote>
-</td></tr><tr><td>LANDMARK</td><td><p>The referent is the location of a physical landmark visible in the field.</p>
-<blockquote class="note">
-<p>NOTE definition from ISO 19148:2021</p>
-</blockquote>
-</td></tr><tr><td>BOUNDARY</td><td><p>The referent represents where an administrative or maintenance boundary crosses the linear element being measured. This is typically the first time the boundary crosses the linear element. If the boundary runs along the linear element, it would be the point at which they first become collinear. The LRS should include specific rules about how boundaries are handled if this type of referent is permitted. If the linear element changes at the boundary as for a county route beginning at the county boundary, then the LRM is more correctly categorized as absolute.</p>
+<tr><td>BOUNDARY</td><td><p>The referent represents where an administrative or maintenance boundary crosses the linear element being measured. This is typically the first time the boundary crosses the linear element. If the boundary runs along the linear element, it would be the point at which they first become collinear. The LRS should include specific rules about how boundaries are handled if this type of referent is permitted. If the linear element changes at the boundary as for a county route beginning at the county boundary, then the LRM is more correctly categorized as absolute.</p>
 <blockquote class="note">
 <p>NOTE definition from ISO 19148:2021</p>
 </blockquote>
@@ -72,7 +60,25 @@
 <blockquote class="note">
 <p>NOTE definition from ISO 19148:2021</p>
 </blockquote>
+</td></tr><tr><td>KILOPOINT</td><td><p>Kilo point</p>
+</td></tr><tr><td>LANDMARK</td><td><p>The referent is the location of a physical landmark visible in the field.</p>
+<blockquote class="note">
+<p>NOTE definition from ISO 19148:2021</p>
+</blockquote>
+</td></tr><tr><td>MILEPOINT</td><td><p>Mile point</p>
 </td></tr><tr><td>POSITION</td><td><p>Used to fully represent and describe a fixed location, relative to which other elements can be positioned using <a href="../../ifcproductextension/lexical/ifcrelpositions.htm">IfcRelPositions</a>.</p>
+</td></tr><tr><td>REFERENCEMARKER</td><td><p>The reference marker is a notation referent, typically located in the right of way of the road, rail or other transportation system. Usually reference markers are initially spaced at a uniform distance along the linear element being measured, though subsequent re-alignments can result in uneven spacing between the markers.</p>
+<blockquote class="note">
+<p>NOTE definition from ISO 19148:2021</p>
+</blockquote>
+<blockquote class="note">
+<p>NOTE The physical manifestation of the IfcReferent.REFERENCEMARKER can be an IfcSign.MARKER (e.g., a bolt fixed on a post)</p>
+</blockquote>
+</td></tr><tr><td>STATION</td><td><p>Represents a linearly measured location along the linear positioning element into which the <a href="../../ifcproductextension/lexical/ifcreferent.htm">IfcReferent</a> is nested. The location is described by a station value or a station equation using <a href="../../ifcsharedinfrastructureelements/pset/pset_stationing.htm">Pset_Stationing</a> and optionally the method of measurement (<a href="../../ifcsharedinfrastructureelements/pset/pset_linearreferencingmethod.htm">Pset_LinearReferencingMethod</a>). If a linear referencing method is specified for the STATION referent, it overrides any linear referencing method specified for the alignment.</p>
+</td></tr><tr><td>SUPERELEVATIONEVENT</td><td><p>A kind of event that specifies the superelevation (cross slope) at a specific location along a road alignment, and the type of transition from the previous location. The locations are specified using an IfcLinearPlacement measured along the alignment axis curve.</p>
+<p>The element(s) that are affected by the superelevation event is currently proposed to be specified by containing the event in a specific lateral breakdown element of the road spatial structure (e.g. a Lane).</p>
+</td></tr><tr><td>WIDTHEVENT</td><td><p>A kind of event that specifies the width at a specific location along a road alignment, and the type of transition from the previous location. The locations are specified using an IfcLinearPlacement measured along the alignment axis curve.
+The element(s) that are affected by the width event is currently proposed to be specified by containing the event in a specific lateral breakdown element of the road spatial structure (e.g. a Lane or the entire carriageway).</p>
 </td></tr><tr><td>USERDEFINED</td><td></td></tr><tr><td>NOTDEFINED</td><td></td></tr></table>
 </details>
 </section>
@@ -80,12 +86,16 @@
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcproductextension/lexical/ifcreferenttypeenum.htm">IfcReferentTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;station&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;referencemarker&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;landmark&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;boundary&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;intersection&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;kilopoint&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;landmark&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;milepoint&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;position&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;referencemarker&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;station&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;superelevationevent&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;widthevent&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -93,7 +103,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcReferentTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;STATION, <br/>&nbsp;REFERENCEMARKER, <br/>&nbsp;LANDMARK, <br/>&nbsp;BOUNDARY, <br/>&nbsp;INTERSECTION, <br/>&nbsp;POSITION, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;BOUNDARY, <br/>&nbsp;INTERSECTION, <br/>&nbsp;KILOPOINT, <br/>&nbsp;LANDMARK, <br/>&nbsp;MILEPOINT, <br/>&nbsp;POSITION, <br/>&nbsp;REFERENCEMARKER, <br/>&nbsp;STATION, <br/>&nbsp;SUPERELEVATIONEVENT, <br/>&nbsp;WIDTHEVENT, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

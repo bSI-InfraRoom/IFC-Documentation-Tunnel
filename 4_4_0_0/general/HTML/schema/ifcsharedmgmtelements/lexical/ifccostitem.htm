@@ -214,14 +214,14 @@ IFC4 CHANGE The attribute has been added.
 
 <a id="object-nesting" />
 <p class="use-head">Nesting</p>
-<p>The <a href="../../templates/object-nesting.htm">Object Nesting</a> concept template applies to this entity as shown in Table 291.<table>
+<p>The <a href="../../templates/object-nesting.htm">Object Nesting</a> concept template applies to this entity as shown in Table 292.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Type</b></th></tr>
 <tr><td><a href="../../ifcsharedmgmtelements/lexical/ifccostitem.htm">IfcCostItem</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 291 &mdash; IfcCostItem Object Nesting</td></tr></table>
+<tr><td><p class="table">Table 292 &mdash; IfcCostItem Object Nesting</td></tr></table>
 
 <p>An <span class="self-ref">IfcCostItem</span> can nest other instances of <span class="self-ref">IfcCostItem</span> through its relationships to <a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a>. This can be used to enable the development of complex groups of costs as may be found in cost schedules through to pages, sections and complete cost schedules.</p>
 <p>There is always a summary cost item as the root item of the tree representing the cost item nesting. Subsequent instances of <span class="self-ref">IfcCostItem</span> are assigned to the summary cost item using <a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a>. The summary cost item itself is assigned to <a href="../../ifcsharedmgmtelements/lexical/ifccostschedule.htm">IfcCostSchedule</a> through the <a href="../../ifckernel/lexical/ifcrelassignstocontrol.htm">IfcRelAssignsToControl</a> relationship.</p>
@@ -232,7 +232,7 @@ IFC4 CHANGE The attribute has been added.
 
 <a id="control-assignment" />
 <p class="use-head">Control Assignment</p>
-<p>The <a href="../../templates/control-assignment.htm">Control Assignment</a> concept template applies to this entity as shown in Table 292.<table>
+<p>The <a href="../../templates/control-assignment.htm">Control Assignment</a> concept template applies to this entity as shown in Table 293.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Type</b></th><th><b>Description</b></th></tr>
@@ -250,7 +250,7 @@ IFC4 CHANGE The attribute has been added.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 292 &mdash; IfcCostItem Control Assignment</td></tr></table>
+<tr><td><p class="table">Table 293 &mdash; IfcCostItem Control Assignment</td></tr></table>
 
 <p>An <span class="self-ref">IfcCostItem</span> can be calculated based on quantities from objects through its relationship to <a href="../../ifckernel/lexical/ifcrelassignstocontrol.htm">IfcRelAssignsToControl</a>.</p>
 <p>For quantity-based costing, <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>, <a href="../../ifcprocessextension/lexical/ifctask.htm">IfcTask</a>, or <a href="../../ifckernel/lexical/ifcresource.htm">IfcResource</a> occurrence subtypes may be used. Multiple elements may be assigned of the same or different types, using <a href="../../ifcquantityresource/lexical/ifcphysicalquantity.htm">IfcPhysicalQuantity</a> entities defined at each object. Each <a href="../../ifcquantityresource/lexical/ifcphysicalquantity.htm">IfcPhysicalQuantity</a> type must be identical (for example, all values are <i>IfcAreaQuantity</i>) such that they can be added together.</p>

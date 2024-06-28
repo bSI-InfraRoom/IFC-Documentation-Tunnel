@@ -88,7 +88,9 @@ TimeDelayed: Device that operates after a time delay.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="e6fb8580d1fd11e1800000215ad4efdf">
       <Name>Sensitivity</Name>
-      <Definition>The rated rms value of the vector sum of the instantaneous currents flowing in the main circuits of the device which causes the device to operate under specified conditions. (IEC 61008-1).</Definition>
+      <Definition>Sensitivity.
+
+The rated rms value of the vector sum of the instantaneous currents flowing in the main circuits of the device which causes the device to operate under specified conditions. (IEC 61008-1).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure" />

@@ -88,16 +88,7 @@
 <a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Diversity</b></td><td>The ratio, expressed as a numerical
-value or as a percentage, of the
-simultaneous maximum demand of
-a group of electrical appliances or
-consumers within a specified period,
-to the sum of their individual maximum
-demands within the same
-period. The group of electrical appliances is in this case connected to this circuit. Defenition from IEC 60050, IEV 691-10-04
-NOTE1: It is often not desirable to size each conductor in a distribution system to support the total connected load at that point in the network. Diversity is applied on the basis of the anticipated loadings that are likely to result from all loads not being connected at the same time.
-NOTE2: Diversity is applied to final circuits only, not to sub-main circuits supplying other DBs.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Diversity</b></td><td>The ratio, expressed as a numerical value or as a percentage, of the simultaneous maximum demand of a group of electrical appliances or consumers within a specified period, to the sum of their individual maximum demands within the same period. The group of electrical appliances is in this case connected to this circuit. Definition from IEC 60050, IEV 691-10-04 NOTE1: It is often not desirable to size each conductor in a distribution system to support the total connected load at that point in the network. Diversity is applied on the basis of the anticipated loadings that are likely to result from all loads not being connected at the same time. NOTE2: Diversity is applied to final circuits only, not to sub-main circuits supplying other DBs.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>負荷率</b></td><td>ある期間中同じ回路にある複数電気設備の同時最大負荷と各設備の合計負荷の比率。
 </td></tr>
@@ -106,7 +97,7 @@ NOTE2: Diversity is applied to final circuits only, not to sub-main circuits sup
 <tr><td>NumberOfLiveConductors</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
 </td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Live Conductors</b></td><td>Number of live conductors within this circuit. Either this property or the ConductorFunction property (if only one) may be asserted.
@@ -119,8 +110,7 @@ NOTE2: Diversity is applied to final circuits only, not to sub-main circuits sup
 <a href="../../ifcmeasureresource/lexical/ifcelectricvoltagemeasure.htm">IfcElectricVoltageMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Maximum Allowed Voltage Drop</b></td><td>The maximum voltage drop across the circuit that must not be exceeded.
-There are two  voltage drop limit settings that may be applied; one for sub-main circuits, and one in each Distribution Board or Consumer Unit for final circuits connected to that board. The settings should limit the overall voltage drop to the required level. Default settings of 1.5% for sub-main circuits and 2.5% for final circuits, giving an overall limit of 4% may be applied.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Maximum Allowed Voltage Drop</b></td><td>The maximum voltage drop across the circuit that must not be exceeded. There are two voltage drop limit settings that may be applied; one for sub-main circuits, and one in each Distribution Board or Consumer Unit for final circuits connected to that board. The settings should limit the overall voltage drop to the required level. Default settings of 1.5% for sub-main circuits and 2.5% for final circuits, giving an overall limit of 4% may be applied.
 NOTE: This value may also be specified as a constraint within an IFC model if required but is included within the property set at this stage pending implementation of the required capabilities within software applications.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>最大許容電圧降下</b></td><td>電気回路での電圧降下は最大電圧降下を超えないように。二種類の電圧降下限度があり、一つは分岐－主回路、もう一つは各分電盤或いは末端回路の電気需要装置と接続電気盤である。総電圧下降を使用範囲以内に制限する。デフォルト値は分岐－主回路1.5％、末端回路2.5％、合計総電圧4％である。

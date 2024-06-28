@@ -118,7 +118,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="3ac49980d21311e1800000215ad4efdf">
-      <Name>Mode</Name>
+      <Name>OperationMode</Name>
       <Definition>Table mapping operation mode identifiers to descriptive labels, which may be used for interpreting Pset_UnitaryControlElementPHistory.Mode.</Definition>
       <PropertyType>
         <TypePropertyTableValue>

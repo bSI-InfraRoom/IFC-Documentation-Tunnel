@@ -64,6 +64,8 @@ A coordinate reference system is a coordinate system which is related to the rea
 Name by which the coordinate reference system is identified.
 <blockquote class="note">
 NOTE 1  The name shall be taken from the list recognized by the European Petroleum Survey Group EPSG. It should then be qualified by the EPSG name space, for example as 'EPSG:5555'.
+</blockquote>
+<blockquote class="note">
 NOTE 2  The name shall be 'WKT' if an EPSG code does not exist for the CRS.
 </blockquote>
 </td><td>X</td></tr>
@@ -71,9 +73,9 @@ NOTE 2  The name shall be 'WKT' if an EPSG code does not exist for the CRS.
 Informal description of this coordinate reference system
 <blockquote class="extDef">
 NOTE  In case Name equals 'WKT' the Description is well-known text that corresponds to ISO 19162 definition specifying the necessary parameters for the coordinate reference system.
-</blockquote>
 Example for ellipsoid:
 ELLIPSOID[&lt;name&gt;,&lt;major axis&gt;,&lt;inverse flattening&gt;,&lt;length unit&gt;]
+</blockquote>
 </td><td>X</td></tr>
 <tr><td>3</td><td>GeodeticDatum</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 Name by which this datum is identified. The geodetic datum is associated with the coordinate reference system and indicates the shape and size of the rotation ellipsoid and this ellipsoid's connection and orientation to the actual globe/earth. It needs to be provided, if the <i>Name</i> identifier does not unambiguously define the geodetic datum as well.
@@ -88,16 +90,13 @@ EXAMPLE  geodetic datums include:
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasCoordinateOperation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a><br/>@SourceCRS</td><td>S[0:1]</td><td>Indicates conversion between coordinate systems. In particular it refers to an <a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a> between this coordinate reference system, and another Geographic coordinate reference system.
 </td><td>X</td></tr>
-<tr><td></td><td><i>HasWellKnownTextRepresentation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a><br/>@CoordinateReferenceSystem</td><td>? </td><td>Well known text (string) according to ISO 19162.
-<blockquote class="note">
-NOTE If an EPSG code is given in <i>Name</i>, the WKT (if present) shall be the representation of the EPSG. In case of not matching, the EPSG code in <i>Name</i> takes precedence.
-</blockquote>
+<tr><td></td><td><i>WellKnownText</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a><br/>@CoordinateReferenceSystem</td><td>S[0:1]</td><td>Well Known Text (WKT) definition for this coordinate reference system inversely associated as a <a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a> entity.
 </td><td>X</td></tr>
 </table>
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>CoordinateSystemSpecified</td><td>Ensures that the coordinate reference system is properly specified by either a reference to an EPSG code in <i>Name</i> or a well known text in <i>HasWellKnownTextRepresentation</i>.
+<tr><td>NameOrWKT</td><td>Ensures that the coordinate reference system is properly specified by either a reference to an EPSG code in <i>Name</i> or a well known text in <i>WellKnownText</i>.
 </td></tr>
 </table>
 
@@ -118,6 +117,8 @@ NOTE If an EPSG code is given in <i>Name</i>, the WKT (if present) shall be the 
 Name by which the coordinate reference system is identified.
 <blockquote class="note">
 NOTE 1  The name shall be taken from the list recognized by the European Petroleum Survey Group EPSG. It should then be qualified by the EPSG name space, for example as 'EPSG:5555'.
+</blockquote>
+<blockquote class="note">
 NOTE 2  The name shall be 'WKT' if an EPSG code does not exist for the CRS.
 </blockquote>
 </td><td>X</td></tr>
@@ -125,9 +126,9 @@ NOTE 2  The name shall be 'WKT' if an EPSG code does not exist for the CRS.
 Informal description of this coordinate reference system
 <blockquote class="extDef">
 NOTE  In case Name equals 'WKT' the Description is well-known text that corresponds to ISO 19162 definition specifying the necessary parameters for the coordinate reference system.
-</blockquote>
 Example for ellipsoid:
 ELLIPSOID[&lt;name&gt;,&lt;major axis&gt;,&lt;inverse flattening&gt;,&lt;length unit&gt;]
+</blockquote>
 </td><td>X</td></tr>
 <tr><td>3</td><td>GeodeticDatum</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 Name by which this datum is identified. The geodetic datum is associated with the coordinate reference system and indicates the shape and size of the rotation ellipsoid and this ellipsoid's connection and orientation to the actual globe/earth. It needs to be provided, if the <i>Name</i> identifier does not unambiguously define the geodetic datum as well.
@@ -142,10 +143,7 @@ EXAMPLE  geodetic datums include:
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasCoordinateOperation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a><br/>@SourceCRS</td><td>S[0:1]</td><td>Indicates conversion between coordinate systems. In particular it refers to an <a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a> between this coordinate reference system, and another Geographic coordinate reference system.
 </td><td>X</td></tr>
-<tr><td></td><td><i>HasWellKnownTextRepresentation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a><br/>@CoordinateReferenceSystem</td><td>? </td><td>Well known text (string) according to ISO 19162.
-<blockquote class="note">
-NOTE If an EPSG code is given in <i>Name</i>, the WKT (if present) shall be the representation of the EPSG. In case of not matching, the EPSG code in <i>Name</i> takes precedence.
-</blockquote>
+<tr><td></td><td><i>WellKnownText</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a><br/>@CoordinateReferenceSystem</td><td>S[0:1]</td><td>Well Known Text (WKT) definition for this coordinate reference system inversely associated as a <a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a> entity.
 </td><td>X</td></tr>
 </table>
 </details>
@@ -175,9 +173,9 @@ NOTE If an EPSG code is given in <i>Name</i>, the WKT (if present) shall be the 
 &nbsp;&nbsp;GeodeticDatum : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;HasCoordinateOperation : <span class="keyword">SET</span> [0:1] OF <a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a> <span class="keyword">FOR</span> SourceCRS;<br/>
-&nbsp;&nbsp;HasWellKnownTextRepresentation : <a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a> <span class="keyword">FOR</span> CoordinateReferenceSystem;<br/>
+&nbsp;&nbsp;WellKnownText : <span class="keyword">SET</span> [0:1] OF <a href="../../ifcrepresentationresource/lexical/ifcwellknowntext.htm">IfcWellKnownText</a> <span class="keyword">FOR</span> CoordinateReferenceSystem;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;CoordinateSystemSpecified : EXISTS(SELF.Name) OR EXISTS(SELF.HasWellKnownTextRepresentation);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;NameOrWKT : (HIINDEX(WellKnownText) = 1) OR EXISTS(Name);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcrepresentationresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

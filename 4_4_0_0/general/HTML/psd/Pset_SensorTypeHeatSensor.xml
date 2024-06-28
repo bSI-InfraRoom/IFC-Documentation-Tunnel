@@ -9,9 +9,11 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcSensor/HEATSENSOR</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="7f493880d20511e1800000215ad4efdf">
+    <PropertyDef ifdguid="6a6ca500d20511e1800000215ad4efdf">
       <Name>CoverageArea</Name>
-      <Definition>The area that is covered by the sensor (typically measured as a circle whose center is at the location of the sensor).</Definition>
+      <Definition>The area that is covered by the object.
+
+Floor area (typically measured as a circle whose center is at the location of the sensor).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure" />
@@ -20,12 +22,10 @@
       <NameAliases>
         <NameAlias lang="en">Coverage Area</NameAlias>
         <NameAlias lang="ja-JP">測定範囲</NameAlias>
-        <NameAlias lang="ko-KR">측정 범위</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">センサでカバーされている範囲。(通常、センターがセンサの位置にある円として測定される)</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">센서 커버하는 범위. (일반적으로 센터 센서의 위치에있는 원형으로 측정되는)</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">センサでカバーされている床面積。(通常、センターがセンサの位置にある円として測定される)</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="84a68300d20511e1800000215ad4efdf">

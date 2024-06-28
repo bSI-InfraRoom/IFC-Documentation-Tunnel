@@ -11,7 +11,9 @@
   <PropertyDefs>
     <PropertyDef ifdguid="84a08600d1f911e1800000215ad4efdf">
       <Name>PowerLoss</Name>
-      <Definition>The power loss in [W] per pole of the MCB  when the nominal current is flowing through the MCB.</Definition>
+      <Definition>The power loss in [W].
+
+The power loss in [W] per pole of the MCB  when the nominal current is flowing through the MCB.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPowerMeasure" />
@@ -133,7 +135,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="ae59ad00d1f911e1800000215ad4efdf">
       <Name>NominalCurrents</Name>
-      <Definition>A set of nominal currents in [A] for which the data of this instance is valid. At least one value shall be provided. Any value in the set shall not exceed the value of the 
+      <Definition>A set of values providing information on available modules (chips) for setting the nominal current of the protective device.
+
+A set of nominal currents in [A] for which the data of this instance is valid. At least one value shall be provided. Any value in the set shall not exceed the value of the
 UltimateRatedCurrent associated with the same breaker unit.</Definition>
       <PropertyType>
         <TypePropertyListValue>
@@ -157,7 +161,7 @@ UltimateRatedCurrent associated with the same breaker unit.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="b6b1e800d1f911e1800000215ad4efdf">
       <Name>ICU60947</Name>
-      <Definition>The ultimate breaking capacity in [A] for an MCB tested in accordance with the IEC 60947 series.</Definition>
+      <Definition>The ultimate breaking capacity in [A] for an object tested in accordance with the IEC 60947 series.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure" />
@@ -176,7 +180,7 @@ UltimateRatedCurrent associated with the same breaker unit.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="c0d3e680d1f911e1800000215ad4efdf">
       <Name>ICS60947</Name>
-      <Definition>The service breaking capacity in [A] for an MCB tested in accordance with the IEC 60947 series.</Definition>
+      <Definition>The service breaking capacity in [A] for an object tested in accordance with the IEC 60947 series.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure" />

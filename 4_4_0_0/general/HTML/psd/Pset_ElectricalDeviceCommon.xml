@@ -26,7 +26,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="a2e15fb5e52e49e3b86731401fe07f86">
       <Name>RatedVoltage</Name>
-      <Definition>The voltage that a device is designed to handle.</Definition>
+      <Definition>The range of allowed voltage that a device is certified to handle. The upper bound of this value is the maximum.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcElectricVoltageMeasure" />
@@ -56,7 +56,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="cf5234358315441fa6c17c9b65bf62a0">
       <Name>PowerFactor</Name>
-      <Definition>The ratio between the rated electrical power and the product of the rated current and rated voltage</Definition>
+      <Definition>Power factor; usually as ratio.
+
+The ratio between the rated electrical power and the product of the rated current and rated voltage</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNormalisedRatioMeasure" />
@@ -71,7 +73,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="f936102bd4824b7eb989a5571e353770">
       <Name>ConductorFunction</Name>
-      <Definition>Function of a line conductor to which a device  is intended to be connected where L1, L2 and L3 represent the phase lines according to IEC 60446 notation (sometimes phase lines may be referenced by color [Red, Blue, Yellow] or by number [1, 2, 3] etc). Protective Earth is sometimes also known as CPC or common protective conductor. Note that for an electrical device, a set of line conductor functions may be applied.</Definition>
+      <Definition>Indicates function of the conductors to which the load is connected. Where L1, L2 and L3 represent the phase lines according to IEC 60446 notation (sometimes phase lines may be referenced by color [Red, Blue, Yellow] or by number [1, 2, 3] etc). Protective Earth is sometimes also known as CPC or common protective conductor. Note that for an electrical device, a set of line conductor functions may be applied.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ConductorFunctionEnum">
@@ -170,10 +172,12 @@
     </PropertyDef>
     <PropertyDef ifdguid="4b5b1c80d1df11e1800000215ad4efdf">
       <Name>NumberOfPoles</Name>
-      <Definition>The number of live lines that is intended to be handled by the device.</Definition>
+      <Definition>Number of poles that the object would affect.
+
+The number of live lines that is intended to be handled by the device.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -185,7 +189,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="50b86700d1df11e1800000215ad4efdf">
       <Name>HasProtectiveEarth</Name>
-      <Definition>Indicates whether the electrical device has a protective earth connection (=TRUE) or not (= FALSE).</Definition>
+      <Definition>Indicates whether the object has a protective earth connection (=TRUE) or not (= FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

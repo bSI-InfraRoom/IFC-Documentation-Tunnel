@@ -55,7 +55,7 @@
 <p>NOTE  The <span class="self-ref">IfcDoorLiningProperties</span> shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>.ParameterTakesPrecedence is set TRUE.</p>
 </blockquote>
 <p>The <span class="self-ref">IfcDoorLiningProperties</span> are included in the list of properties of <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>.HasPropertySets. More information about the door lining can be included in the same list of the <i>IfcDoorTyype</i> using another <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> for dynamic extensions.</p>
-<p>The <span class="self-ref">IfcDoorLiningProperties</span> does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type (which is inserted by the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a> into the spatial context of the project) as shown in Figure 401. The parameters of the <span class="self-ref">IfcDoorLiningProperties</span> define a standard door lining, including (if given) a threshold and a transom. The outer boundary of the lining is determined by the 'Profile' shape representation assigned to the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a>, which inserts the <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>.</p>
+<p>The <span class="self-ref">IfcDoorLiningProperties</span> does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type (which is inserted by the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a> into the spatial context of the project) as shown in Figure 399. The parameters of the <span class="self-ref">IfcDoorLiningProperties</span> define a standard door lining, including (if given) a threshold and a transom. The outer boundary of the lining is determined by the 'Profile' shape representation assigned to the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a>, which inserts the <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>.</p>
 <p> </p>
 <table>
  <tr>
@@ -119,7 +119,7 @@
   </td>
  </tr>
  <tr>
-  <td><p class="figure">Figure 401 &mdash; Door lining properties</p></td>
+  <td><p class="figure">Figure 399 &mdash; Door lining properties</p></td>
  </tr>
 </table>
 <blockquote class="note">
@@ -218,9 +218,6 @@ IFC4 CHANGE  Rule corrected.
 <tr><td>WR34</td><td>Either both parameter, the <i>CasingDepth</i> and the <i>CasingThickness</i>, are given, or none of them.
 </td></tr>
 <tr><td>WR35</td><td>The <span class="self-ref">IfcDoorLiningProperties</span> shall only be used in the context of an <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>.
-<blockquote class="note">
-NOTE  The deprecated entity <a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a> is applicable as well.
-</blockquote>
 </td></tr>
 </table>
 
@@ -404,11 +401,7 @@ IFC4 CHANGE  New attribute added at the end of the entity definition.
 (NOT(EXISTS(TransomOffset)) AND NOT(EXISTS(TransomThickness)));<br/>&nbsp;&nbsp;WR34 : (EXISTS(CasingDepth) AND EXISTS(CasingThickness)) XOR<br/>
 (NOT(EXISTS(CasingDepth)) AND NOT(EXISTS(CasingThickness)));<br/>&nbsp;&nbsp;WR35 : (EXISTS(SELF\<a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) <br/>
 AND <br/>
-(<br/>
- (&#39;IFCSHAREDBLDGELEMENTS.<a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))<br/>
-  OR<br/>
- (&#39;IFCARCHITECTUREDOMAIN.<a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))<br/>
-);<br/><span class="keyword">END_ENTITY;</span><br/>
+ (&#39;IFCSHAREDBLDGELEMENTS.<a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcarchitecturedomain/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

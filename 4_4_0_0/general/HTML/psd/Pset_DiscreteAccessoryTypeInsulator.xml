@@ -45,7 +45,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="5bc342594f1a4e53846269d3c1b6d8ea">
       <Name>InsulationVoltage</Name>
-      <Definition>The max voltage for normal insulation operation.</Definition>
+      <Definition>The insulation voltage.
+
+The max voltage for normal insulation operation.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricVoltageMeasure" />
@@ -154,7 +156,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="7c0ce24f9d034d9b83da2ac5e4a0634c">
       <Name>InstallationMethod</Name>
-      <Definition>Method of installation of cable/conductor or other elements. Installation methods are typically defined by reference in standards such as IEC 60364-5-52, table 52A-1 or BS7671 Appendix 4 Table 4A1 etc. Selection of the value to be used should be determined from such a standard according to local usage.</Definition>
+      <Definition>Method of installation of cable/conductor. Installation methods are typically defined by reference in standards such as IEC 60364-5-52, table 52A-1 or BS7671 Appendix 4 Table 4A1 etc. Selection of the value to be used should be determined from such a standard according to local usage.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -180,7 +182,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="308b1604fa7f4b11ba71175ab14f7ffb">
       <Name>BendingStrength</Name>
-      <Definition>Bending strength.</Definition>
+      <Definition>Bending strength.
+
+Defining values: α; defined values: bending strength.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure" />

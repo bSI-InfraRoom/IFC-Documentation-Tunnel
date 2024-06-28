@@ -116,13 +116,13 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="70ed2380d1e911e1800000215ad4efdf">
-      <Name>Arrangement</Name>
-      <Definition>Defines the basic flow arrangements for the heat exchanger:
+      <Name>FlowArrangement</Name>
+      <Definition>Defines the basic flow arrangements for the heat exchanger or cooler tower:
 
-COUNTERFLOW: Counterflow heat exchanger arrangement. 
-CROSSFLOW: Crossflow heat exchanger arrangement. 
-PARALLELFLOW: Parallel flow heat exchanger arrangement. 
-MULTIPASS: Multipass flow heat exchanger arrangement. 
+COUNTERFLOW: Air and water flow enter in different directions.
+CROSSFLOW: Air and water flow are perpendicular.
+PARALLELFLOW: Air and water flow enter in same directions.
+MULTIPASS: Multipass flow heat exchanger arrangement.
 OTHER: Other type of heat exchanger flow arrangement not defined above.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>

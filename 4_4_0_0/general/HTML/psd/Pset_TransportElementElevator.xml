@@ -32,8 +32,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="20d68700d21211e1800000215ad4efdf">
       <Name>ClearWidth</Name>
-      <Definition>Clear width of the object (elevator). It indicates the distance from the inner surfaces of the elevator car left and right from the elevator door. 
-The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.</Definition>
+      <Definition>The clear width.
+
+It indicates the distance from the inner surfaces of the elevator car left and right from the elevator door</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -53,8 +54,9 @@ The shape information is provided in addition to the shape representation and th
     </PropertyDef>
     <PropertyDef ifdguid="29c75880d21211e1800000215ad4efdf">
       <Name>ClearDepth</Name>
-      <Definition>Clear depth of the object (elevator). It indicates the distance from the inner surface of the elevator door to the opposite surface of the elevator car. 
-The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.</Definition>
+      <Definition>The clear depth.
+
+It indicates the distance from the inner surface of the elevator door to the opposite surface of the elevator car.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -74,7 +76,7 @@ The shape information is provided in addition to the shape representation and th
     </PropertyDef>
     <PropertyDef ifdguid="321f9380d21211e1800000215ad4efdf">
       <Name>ClearHeight</Name>
-      <Definition>Clear height of the object (elevator).  
+      <Definition>Clear height of the object (elevator).
 The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

@@ -78,11 +78,12 @@ A list of types to further identify the object. Some property sets may be specif
 <h5 class="num">Inherited definitions from supertypes</h5>
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifctransportelementtype.png" usemap="#f"/>
 <map name="f">
-<area shape="rect" coords="54,102,266,114" href="../../../schema/ifcproductextension/lexical/ifcelementtype.htm" alt="IfcElementType" />
-<area shape="rect" coords="42,78,278,90" href="../../../schema/ifckernel/lexical/ifctypeproduct.htm" alt="IfcTypeProduct" />
-<area shape="rect" coords="30,54,290,66" href="../../../schema/ifckernel/lexical/ifctypeobject.htm" alt="IfcTypeObject" />
-<area shape="rect" coords="18,30,302,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
-<area shape="rect" coords="6,6,314,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+<area shape="rect" coords="66,126,278,138" href="../../../schema/ifcproductextension/lexical/ifctransportationdevicetype.htm" alt="IfcTransportationDeviceType" />
+<area shape="rect" coords="54,102,290,114" href="../../../schema/ifcproductextension/lexical/ifcelementtype.htm" alt="IfcElementType" />
+<area shape="rect" coords="42,78,302,90" href="../../../schema/ifckernel/lexical/ifctypeproduct.htm" alt="IfcTypeProduct" />
+<area shape="rect" coords="30,54,314,66" href="../../../schema/ifckernel/lexical/ifctypeobject.htm" alt="IfcTypeObject" />
+<area shape="rect" coords="18,30,326,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,338,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
 </map>
 </details>
 <details><summary>Attribute inheritance</summary><table class="attributes">
@@ -172,6 +173,7 @@ IFC4 CHANGE  New inverse relationship.
 <tr><td>9</td><td>ElementType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute 'PredefinedType' is set to USERDEFINED.
 </td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifctransportationdevicetype.htm">IfcTransportationDeviceType</a></i></td></tr>
 <tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifctransportelementtype.htm">IfcTransportElementType</a></td></tr>
 <tr><td>10</td><td>PredefinedType</td><td><a href="../../ifcproductextension/lexical/ifctransportelementtypeenum.htm">IfcTransportElementTypeEnum</a></td><td></td><td>
 A list of types to further identify the object. Some property sets may be specifically applicable to one of these types.
@@ -209,10 +211,10 @@ A list of types to further identify the object. Some property sets may be specif
 </section>
 <section>
 <h5 class="num">Formal representations</h5>
-<details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifcproductextension/lexical/ifctransportelementtype.htm">IfcTransportElementType</a>&quot; type=&quot;ifc:<a href="../../ifcproductextension/lexical/ifctransportelementtype.htm">IfcTransportElementType</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+<details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifcproductextension/lexical/ifctransportelementtype.htm">IfcTransportElementType</a>&quot; type=&quot;ifc:<a href="../../ifcproductextension/lexical/ifctransportelementtype.htm">IfcTransportElementType</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcproductextension/lexical/ifctransportationdevicetype.htm">IfcTransportationDeviceType</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../ifcproductextension/lexical/ifctransportelementtype.htm">IfcTransportElementType</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcproductextension/lexical/ifctransportationdevicetype.htm">IfcTransportationDeviceType</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;PredefinedType&quot; type=&quot;ifc:<a href="../../ifcproductextension/lexical/ifctransportelementtypeenum.htm">IfcTransportElementTypeEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
@@ -220,7 +222,7 @@ A list of types to further identify the object. Some property sets may be specif
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcTransportElementType<br/>
-&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a>)<b>;</b><br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifctransportationdevicetype.htm">IfcTransportationDeviceType</a>)<b>;</b><br/>
 &nbsp;&nbsp;PredefinedType : <a href="../../ifcproductextension/lexical/ifctransportelementtypeenum.htm">IfcTransportElementTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
 &nbsp;&nbsp;CorrectPredefinedType : (PredefinedType &lt;&gt; <a href="../../ifcproductextension/lexical/ifctransportelementtypeenum.htm">IfcTransportElementTypeEnum</a>.<span class="self-ref">USERDEFINED</span>)<br/>

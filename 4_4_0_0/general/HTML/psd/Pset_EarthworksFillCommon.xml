@@ -82,13 +82,9 @@
             </ConstantDef>
             <ConstantDef>
               <Name>NONE</Name>
-              <Definition>No waterproof.</Definition>
-              <NameAliases>
-                <NameAlias lang="en">None</NameAlias>
-              </NameAliases>
-              <DefinitionAliases>
-                <DefinitionAlias lang="en">None, empty or no additional action or function.</DefinitionAlias>
-              </DefinitionAliases>
+              <Definition>No compaction.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
             </ConstantDef>
             <ConstantDef>
               <Name>USERDEFINED</Name>

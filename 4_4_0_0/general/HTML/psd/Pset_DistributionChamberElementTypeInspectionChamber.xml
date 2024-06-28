@@ -48,7 +48,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="9e2ed700d1d311e1800000215ad4efdf">
-      <Name>InvertLevel</Name>
+      <Name>InspectionChamberInvertLevel</Name>
       <Definition>Level of the lowest part of the cross section as measured from ground level.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -104,10 +104,10 @@ NOTE: It is assumed that chamber walls will be constructed of a single material.
         <DefinitionAlias lang="ko-KR">덕트 공간 벽의 재질 참고 : 덕트 공간의 벽은 단층 가정</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="ab4bc600d1d311e1800000215ad4efdf">
+    <PropertyDef ifdguid="7e97ae80d1d311e1800000215ad4efdf">
       <Name>WallThickness</Name>
-      <Definition>The thickness of the chamber wall construction
-NOTE: It is assumed that chamber walls will be constructed at a single thickness.</Definition>
+      <Definition>The thickness of the wall construction. 
+NOTE: It is assumed that walls will be constructed at a single thickness.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -115,7 +115,7 @@ NOTE: It is assumed that chamber walls will be constructed at a single thickness
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Wall Thickness</NameAlias>
-        <NameAlias lang="ja-JP">壁厚さ</NameAlias>
+        <NameAlias lang="ja-JP">壁の厚さ</NameAlias>
         <NameAlias lang="ko-KR">벽 두께</NameAlias>
       </NameAliases>
       <DefinitionAliases>
@@ -146,8 +146,7 @@ NOTE: It is assumed that chamber base will be constructed of a single material.<
     </PropertyDef>
     <PropertyDef ifdguid="b30b6a80d1d311e1800000215ad4efdf">
       <Name>BaseThickness</Name>
-      <Definition>The thickness of the chamber base construction
-NOTE: It is assumed that chamber base will be constructed at a single thickness.</Definition>
+      <Definition>The thickness of the base construction, assumed to be constructed at a single thickness.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -184,7 +183,7 @@ NOTE: It is assumed that chamber base will be constructed at a single thickness.
         <DefinitionAlias lang="ko-KR">덕트 공간 백드롭 혹은 보 표시 여부 (TRUE 또는 FALSE)</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="bdc5ff80d1d311e1800000215ad4efdf">
+    <PropertyDef ifdguid="23b28700d1d411e1800000215ad4efdf">
       <Name>AccessCoverMaterial</Name>
       <Definition>The material from which the access cover to the chamber is constructed.
 NOTE: It is assumed that chamber walls will be constructed of a single material.</Definition>

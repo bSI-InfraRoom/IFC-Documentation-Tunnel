@@ -20,7 +20,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="0d62ce4aa6614698806a91f7acd0bb08">
       <Name>IsReducedResistanceFastening</Name>
-      <Definition>Indicates wether the rail fastening is a reduced resistance fastening (YES) or not (NO).</Definition>
+      <Definition>Indicates whether the rail fastening is a reduced resistance fastening (YES) or not (NO).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

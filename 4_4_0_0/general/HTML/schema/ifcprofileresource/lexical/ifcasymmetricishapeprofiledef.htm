@@ -66,12 +66,12 @@ Type of <i>TopFlangeFilletRadius</i> relaxed to allow for zero radius.<br>
 Trailing attribute <i>CentreOfGravityInY</i> deleted, use respective property in <i>IfcExtendedProfileProperties</i> instead.<br>
 Attributes <i>BottomFlangeEdgeRadius</i>, <i>BottomFlangeSlope</i>, <i>TopFlangeEdgeRadius</i>, <i>TopFlangeSlope</i> added.</p>
 </blockquote>
-<p>Figure 544 illustrates parameters of the asymmetric I-shaped section definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of:</p>
+<p>Figure 542 illustrates parameters of the asymmetric I-shaped section definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of:</p>
 <ul>
 <li><i>IfcSweptAreaSolid.Position</i></li>
 </ul>
 <p>By using offsets of the position location, the parameterized profile can be positioned centric (using x,y offsets = 0.), or at any position relative to the profile. The parameterized profile is defined by a set of parameter attributes. In the illustrated example, the 'CentreOfGravityInY' property in <i>IfcExtendedProfileProperties</i>, if provided, is negative.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcasymmetricishapeprofiledef.gif" alt="&quot;asymmetric I shape profile&quot;" title="Figure 544 &mdash; Assymetric I-shape profile"></td></tr><tr><td><p class="figure">Figure 544 &mdash; Assymetric I-shape profile</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcasymmetricishapeprofiledef.gif" alt="&quot;asymmetric I shape profile&quot;" title="Figure 542 &mdash; Assymetric I-shape profile"></td></tr><tr><td><p class="figure">Figure 542 &mdash; Assymetric I-shape profile</p></td></tr></table></p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -116,13 +116,13 @@ Slope of the lower faces of the top flange.  Non-zero in case of of tapered top 
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>ValidFlangeThickness</td><td>The sum of flange thicknesses shall be less than the overall depth.
-</td></tr>
-<tr><td>ValidWebThickness</td><td>The web thickness shall be less than either flange width.
-</td></tr>
 <tr><td>ValidBottomFilletRadius</td><td>The bottom fillet radius, if given, shall be within the range of allowed values.
 </td></tr>
+<tr><td>ValidFlangeThickness</td><td>The sum of flange thicknesses shall be less than the overall depth.
+</td></tr>
 <tr><td>ValidTopFilletRadius</td><td>The top fillet radius, if given, shall be within the range of allowed values.
+</td></tr>
+<tr><td>ValidWebThickness</td><td>The web thickness shall be less than either flange width.
 </td></tr>
 </table>
 
@@ -251,9 +251,9 @@ Slope of the lower faces of the top flange.  Non-zero in case of of tapered top 
 &nbsp;&nbsp;TopFlangeEdgeRadius : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>;<br/>
 &nbsp;&nbsp;TopFlangeSlope : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;ValidFlangeThickness : NOT(EXISTS(TopFlangeThickness)) OR ((BottomFlangeThickness + TopFlangeThickness) &lt; OverallDepth);<br/>&nbsp;&nbsp;ValidWebThickness : (WebThickness &lt; BottomFlangeWidth) AND (WebThickness &lt; TopFlangeWidth);<br/>&nbsp;&nbsp;ValidBottomFilletRadius : (NOT(EXISTS(BottomFlangeFilletRadius))) OR <br/>
-(BottomFlangeFilletRadius &lt;= (BottomFlangeWidth - WebThickness)/2.);<br/>&nbsp;&nbsp;ValidTopFilletRadius : (NOT(EXISTS(TopFlangeFilletRadius))) OR <br/>
-(TopFlangeFilletRadius &lt;= (TopFlangeWidth - WebThickness)/2.);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;ValidBottomFilletRadius : (NOT(EXISTS(BottomFlangeFilletRadius))) OR <br/>
+(BottomFlangeFilletRadius &lt;= (BottomFlangeWidth - WebThickness)/2.);<br/>&nbsp;&nbsp;ValidFlangeThickness : NOT(EXISTS(TopFlangeThickness)) OR ((BottomFlangeThickness + TopFlangeThickness) &lt; OverallDepth);<br/>&nbsp;&nbsp;ValidTopFilletRadius : (NOT(EXISTS(TopFlangeFilletRadius))) OR <br/>
+(TopFlangeFilletRadius &lt;= (TopFlangeWidth - WebThickness)/2.);<br/>&nbsp;&nbsp;ValidWebThickness : (WebThickness &lt; BottomFlangeWidth) AND (WebThickness &lt; TopFlangeWidth);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcprofileresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -42,7 +42,8 @@ REFERENCE FROM IFCMEASURERESOURCE
   IfcNamedUnit,
   IfcSIUnit,
   IfcUnitEnum,
-  IfcTimeMeasure
+  IfcTimeMeasure,
+  IfcNumericMeasure
 );
 
 ENTITY IfcPhysicalComplexQuantity
@@ -72,6 +73,7 @@ ENTITY IfcPhysicalSimpleQuantity
     (IfcQuantityArea
     ,IfcQuantityCount
     ,IfcQuantityLength
+    ,IfcQuantityNumber
     ,IfcQuantityTime
     ,IfcQuantityVolume
     ,IfcQuantityWeight))
@@ -94,7 +96,7 @@ ENTITY IfcQuantityCount
 	CountValue : IfcCountMeasure;
 	Formula : OPTIONAL IfcLabel;
  WHERE
-	WR21 : CountValue >= 0.;
+	WR21 : CountValue >= 0;
 END_ENTITY;
 
 ENTITY IfcQuantityLength
@@ -105,6 +107,12 @@ ENTITY IfcQuantityLength
 	WR21 : NOT(EXISTS(SELF\IfcPhysicalSimpleQuantity.Unit)) OR
    (SELF\IfcPhysicalSimpleQuantity.Unit.UnitType = IfcUnitEnum.LENGTHUNIT);
 	WR22 : LengthValue >= 0.;
+END_ENTITY;
+
+ENTITY IfcQuantityNumber
+ SUBTYPE OF (IfcPhysicalSimpleQuantity);
+	NumberValue : IfcNumericMeasure;
+	Formula : OPTIONAL IfcLabel;
 END_ENTITY;
 
 ENTITY IfcQuantityTime

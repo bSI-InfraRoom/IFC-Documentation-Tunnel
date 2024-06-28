@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="fd37b5eb60a9458986e6d9d96651eeaa" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_BoreholeTestPressuremeter</Name>
+  <Definition>Properties for results of pressuremeter tests in boreholes.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/INSITUTESTRESULT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/INSITUTESTRESULT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="da87596f28154feebf30bbf0526c2d79">
+      <Name>MenardPressuremeterModulus</Name>
+      <Definition>The first loading modulus, resulting from the interpretation of Menard's pressuremeter test.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d7cbb419214240b8832a227bfa0f9747">
+      <Name>MenardLoadingUnloadingRatio</Name>
+      <Definition>The reloading modulus, resulting from the interpretation of Menard's pressuremeter test.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="002ef235f8fe47e09e685e2e869c5dd3">
+      <Name>MenardLimitPressure</Name>
+      <Definition>The limit pressure, resulting from interpretation of Menard's pressuremeter test.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7c0d3b7dc52c44ada64f90a17030ff03">
+      <Name>PressuremeterType</Name>
+      <Definition>Indication of the type of equipment used for the pressuremeter test.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="51595aaa4ef9451f922cb3f3919f8ed6">
+      <Name>YoungModulus</Name>
+      <Definition>Elastic modulus, mean value, α=0°.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcModulusOfElasticityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

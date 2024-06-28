@@ -6,9 +6,8 @@
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcCovering/FLOORING</ClassName>
-    <ClassName></ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcCovering/FLOORING,</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcCovering/FLOORING</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="62ded900d1d011e1800000215ad4efdf">
       <Name>HasNonSkidSurface</Name>

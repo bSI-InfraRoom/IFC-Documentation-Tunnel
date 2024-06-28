@@ -5,12 +5,13 @@
   <Definition>Properties applicable to _IfcFacilityPart_ with PredefinedType set to TRACKSTRUCTURE, or more specialized types including PLAINTRACKSUPERSTRUCTURE, TURNOUTSUPERSTRUCTURE or DILATATIONSUPERSTRUCTURE.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcFacilityPart/IfcRailwayPartTypeEnum(.TRACKSTRUCTURE.)</ClassName>
-    <ClassName>IfcFacilityPart/IfcRailwayPartTypeEnum(.PLAINTRACKSUPESTRUCTURE.)</ClassName>
-    <ClassName>IfcFacilityPart/IfcRailwayPartTypeEnum(.TURNOUTSUPERSTRUCTURE.)</ClassName>
-    <ClassName>IfcFacilityPart/IfcRailwayPartTypeEnum(.DILATATIONSUPERSTRUCTURE.)</ClassName>
+    <ClassName>IfcRailwayPart/DILATIONTRACK</ClassName>
+    <ClassName>IfcRailwayPart/PLAINTRACK</ClassName>
+    <ClassName>IfcRailwayPart/TRACK</ClassName>
+    <ClassName>IfcRailwayPart/TURNOUTTRACK</ClassName>
+    <ClassName>IfcRailwayPart/TRACKPART)</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcFacilityPart/IfcRailwayPartTypeEnum(.TRACKSTRUCTURE.),IfcFacilityPart/IfcRailwayPartTypeEnum(.PLAINTRACKSUPESTRUCTURE.),IfcFacilityPart/IfcRailwayPartTypeEnum(.TURNOUTSUPERSTRUCTURE.),IfcFacilityPart/IfcRailwayPartTypeEnum(.DILATATIONSUPERSTRUCTURE.)</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcRailwayPart/DILATIONTRACK,IfcRailwayPart/PLAINTRACK,IfcRailwayPart/TRACK,IfcRailwayPart/TURNOUTTRACK,IfcRailwayPart/TRACKPART)</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="d081abe3d2394c62bf236258e3f74dbf">
       <Name>HasBallastTrack</Name>

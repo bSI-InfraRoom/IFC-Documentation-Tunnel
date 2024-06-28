@@ -117,7 +117,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="5fa01900d1e111e1800000215ad4efdf">
       <Name>EnergySource</Name>
-      <Definition>The source of energy.</Definition>
+      <Definition>Enumeration defining the energy source or fuel cumbusted.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_EngineEnergySource">

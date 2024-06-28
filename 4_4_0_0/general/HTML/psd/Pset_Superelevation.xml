@@ -2,12 +2,12 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="94d6b7401a364f72811f3dcef7b2dbab" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_Superelevation</Name>
-  <Definition>Specifices the general properties for a Superelevation event.</Definition>
+  <Definition>Specifies the general properties for a Superelevation event.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcAnnotation/SUPERELEVATIONEVENT</ClassName>
+    <ClassName>IfcReferent/SUPERELEVATIONEVENT</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcAnnotation/SUPERELEVATIONEVENT</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcReferent/SUPERELEVATIONEVENT</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="52834ea804d7431d89717aa6920072cf">
       <Name>Side</Name>

@@ -53,9 +53,9 @@ An intersection curve is a type of surface curve, which results from the interse
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>TwoPCurves</td><td>The intersection curve shall have precisely two associated geometry elements.
-</td></tr>
 <tr><td>DistinctSurfaces</td><td>The two associated geometry elements shall be related to distinct surfaces. These are the surfaces which define the intersection curve.
+</td></tr>
+<tr><td>TwoPCurves</td><td>The intersection curve shall have precisely two associated geometry elements.
 </td></tr>
 </table>
 
@@ -127,7 +127,7 @@ NOTE  The master representation attribute acknowledges the impracticality of en
 <span class="keyword">ENTITY</span> IfcIntersectionCurve<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a>)<b>;</b><br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;TwoPCurves : SIZEOF(SELF\<a href="../../ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a>.AssociatedGeometry) = 2;<br/>&nbsp;&nbsp;DistinctSurfaces : <a href="../../ifcgeometryresource/lexical/ifcassociatedsurface.htm">IfcAssociatedSurface</a>(SELF\<a href="../../ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a>.AssociatedGeometry[1]) &lt;&gt; <a href="../../ifcgeometryresource/lexical/ifcassociatedsurface.htm">IfcAssociatedSurface</a>(SELF\<a href="../../ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a>.AssociatedGeometry[2]);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;DistinctSurfaces : <a href="../../ifcgeometryresource/lexical/ifcassociatedsurface.htm">IfcAssociatedSurface</a>(SELF\<a href="../../ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a>.AssociatedGeometry[1]) &lt;&gt; <a href="../../ifcgeometryresource/lexical/ifcassociatedsurface.htm">IfcAssociatedSurface</a>(SELF\<a href="../../ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a>.AssociatedGeometry[2]);<br/>&nbsp;&nbsp;TwoPCurves : SIZEOF(SELF\<a href="../../ifcgeometryresource/lexical/ifcsurfacecurve.htm">IfcSurfaceCurve</a>.AssociatedGeometry) = 2;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

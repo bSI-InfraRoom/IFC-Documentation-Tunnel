@@ -11,7 +11,7 @@
     <title>Pset_ColumnCommon</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 1 index3 4 index4 6 index5 0; }
+      body { counter-reset: index1 6 index2 1 index3 4 index4 8 index5 0; }
     </style>
   </head>
 
@@ -20,11 +20,11 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.1.4.7");
+    parent.index.location.replace("../../toc-6.htm#6.1.4.9");
 //-->
 </script>
 
-<h4 class="std">6.1.4.7 Pset_ColumnCommon</h4>
+<h4 class="std">6.1.4.9 Pset_ColumnCommon</h4>
 <p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
 /
 <a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm">IfcColumn</a>
@@ -86,7 +86,7 @@
 Dieser Parameter wird zusätzlich zur geometrischen Repräsentation bereitgestellt. Im Fall der Inkonsistenz zwischen dem Parameter und der Geometrie hat die geometrische Repräsention Priorität. Dieser Parameter ist für CAD Software write-only.
 </td></tr>
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Slope</b></td><td>Slope angle - relative to horizontal (0.0 degrees).
-The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.   For geometry editing applications, like CAD: this value should be write-only.
+The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence. For geometry editing applications, like CAD: this value should be write-only.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Inclinaison</b></td><td>Angle d'inclinaison avec l'horizontale (0 degrés). Cette propriété est donnée en complément de la représentation de la forme et des paramètres géométriques qui la déterminent. En cas d'incohérence entre ces paramètres géométriques et cette propriété, ce sont les paramètres géométriques qui priment.
 </td></tr>
@@ -106,8 +106,8 @@ The shape information is provided in addition to the shape representation and th
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Drehwinkel</b></td><td>Drehwinkel der Stütze relative zur globalen X Ausrichtung (O Grad). Bei nicht-vertikalen Stützen wird die Verdrehung analog zu den Balken (Verkippung gegen die Vertikale) angegeben.
 Dieser Parameter wird zusätzlich zur geometrischen Repräsentation bereitgestellt. Im Fall der Inkonsistenz zwischen dem Parameter und der Geometrie hat die geometrische Repräsention Priorität. Dieser Parameter ist für CAD Software write-only.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Roll</b></td><td>Rotation against the longitudinal axis - relative to the global  X direction for all columns that are vertical in regard to the global coordinate system (Profile direction equals global X is Roll = 0.). For all non-vertical columns the following applies:  Roll is relative to the global Z direction f(Profile direction of non-vertical columns that equals global Z is Roll = 0.)
-The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.  For geometry editing applications, like CAD: this value should be write-only.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Roll</b></td><td>Rotation against the longitudinal axis.
+Relative to the global X direction for all columns that are vertical in regard to the global coordinate system (Profile direction equals global X is Roll = 0.). For all non-vertical columns the following applies: Roll is relative to the global Z direction f(Profile direction of non-vertical columns that equals global Z is Roll = 0.)The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence. For geometry editing applications, like CAD: this value should be write-only.
 Note: new property in IFC4
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>RotationAutourAxeLongitudinal</b></td><td>Rotation autour de l'axe longitudinal - relativement à l'axe X pour tous les poteaux qui sont verticaux relativement au repère absolu (la direction du profil est celle de l'axe X si la valeur est 0). Pour tous les poteaux non verticaux, la valeur de la propriété est relative à l'axe Z (la direction du profil des poteaux non verticaux est celle de l'axe Z si la valeur est 0).
@@ -148,8 +148,7 @@ Cette propriété est donnée en complément de la représentation de la forme d
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>U-Wert</b></td><td>Wärmedurchgangskoeffizient (U-Wert) der Materialschichten.
 Hier der Gesamtwärmedurchgangskoeffizient des Balkens (in Richtung des Wärmeflusses), angegeben ohne den inneren und äußeren Wärmeübergangswiderstand.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Thermal Transmittance</b></td><td>Thermal transmittance coefficient (U-Value) of the element. Here the total thermal transmittance coefficient through the column within the direction of the thermal flow (including all materials).
-Nore: new property in IFC4
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Thermal Transmittance</b></td><td>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>TransmissionThermique</b></td><td>Coefficient de transmission thermique surfacique (U). C'est le coefficient global de transmission thermique à travers le poteau dans la direction du flux thermique (tous matériaux inclus). Nouvelle propriété de la version 2x4.
 </td></tr>
@@ -185,14 +184,14 @@ Nore: new property in IFC4
 <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Feuerwiderstandsklasse</b></td><td>Feuerwiderstandasklasse gemäß der nationalen oder regionalen Brandschutzverordnung.
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Feuerwiderstandsklasse</b></td><td>Feuerwiderstandsklasse gemäß der nationalen oder regionalen Brandschutzverordnung.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Fire Rating</b></td><td>Fire rating for the element.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Fire Rating</b></td><td>Fire rating for this object.
 It is given according to the national fire safety classification.
 </td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>ResistanceAuFeu</b></td><td>Classement au feu de l'élément donné selon la classification nationale de sécurité incendie.
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Résistance au feu</b></td><td>Classement au feu de l'élément donné selon la classification nationale de sécurité incendie.
 </td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>耐火等級</b></td><td>主要な耐火等級。関連する建築基準法、消防法などの国家基準を参照。
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>耐火等級</b></td><td>耐火等級。当該国の建築法規による。
 </td></tr>
 <tr><td><img src="../../../img/locale-zh.png" /></td><td><b>防火等级</b></td><td>该构件的防火等级。
 该属性的依据为国家防火安全分级。

@@ -11,7 +11,9 @@
   <PropertyDefs>
     <PropertyDef ifdguid="f2e14a80d1f111e1800000215ad4efdf">
       <Name>HeatingDryBulb</Name>
-      <Definition>Outside dry bulb temperature for heating design.</Definition>
+      <Definition>Dry bulb temperature for heating design.
+
+At outside.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />
@@ -68,7 +70,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="0391c080d1f211e1800000215ad4efdf">
       <Name>CoolingDryBulb</Name>
-      <Definition>Outside dry bulb temperature for cooling design.</Definition>
+      <Definition>Dry bulb temperature, usually for for cooling design.
+
+Outside dry bulb temperature</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />

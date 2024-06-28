@@ -17,7 +17,7 @@ There are various types of risk that may be encountered and there may be several
   <PropertyDefs>
     <PropertyDef ifdguid="2a61adb47fe94a12a790b4a5a292f94c">
       <Name>RiskName</Name>
-      <Definition>A locally unique identifier for the risk entry that can be used to track the development and mitiagtion of the risk throughout the project life cycle</Definition>
+      <Definition>A locally unique identifier for the risk entry that can be used to track the development and mitigation of the risk throughout the project life cycle</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -761,7 +761,7 @@ There are various types of risk that may be encountered and there may be several
     </PropertyDef>
     <PropertyDef ifdguid="2810074d990a4edc9d3dade96c37188c">
       <Name>UnmitigatedRiskSignificance</Name>
-      <Definition>Identifies the signifiance of the risk given the likelihood and consequence prior to any specific mitigation.</Definition>
+      <Definition>Identifies the significance of the risk given the likelihood and consequence prior to any specific mitigation.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_RiskRating">
@@ -1156,7 +1156,7 @@ There are various types of risk that may be encountered and there may be several
     </PropertyDef>
     <PropertyDef ifdguid="e48d6babae8843cd985203b84d33dc40">
       <Name>MitigatedRiskSignificance</Name>
-      <Definition>Identifies the signifiance of the risk given the mitigation of likelihood and consequence.</Definition>
+      <Definition>Identifies the significance of the risk given the mitigation of likelihood and consequence.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_RiskRating">
@@ -1295,7 +1295,7 @@ There are various types of risk that may be encountered and there may be several
     </PropertyDef>
     <PropertyDef ifdguid="432690e38f4044c39d0a7691ac65c4c3">
       <Name>AssociatedProduct</Name>
-      <Definition>An indication or link to any associated product or material that may trigger the hazard. If used directly on an annotation or semantic object. for an alternative see group use encording template</Definition>
+      <Definition>An indication or link to any associated product or material that may trigger the hazard. If used directly on an annotation or semantic object. for an alternative see group use encoding template</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -1306,7 +1306,7 @@ There are various types of risk that may be encountered and there may be several
     </PropertyDef>
     <PropertyDef ifdguid="8a3c59a6eee34dbd84183e0b8749d92c">
       <Name>AssociatedActivity</Name>
-      <Definition>An indication or link to any associated activity or process that may trigger the hazard. If used directly on an annotation or semantic object. for an alternative see group use encording template</Definition>
+      <Definition>An indication or link to any associated activity or process that may trigger the hazard. If used directly on an annotation or semantic object. for an alternative see group use encoding template</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -1317,7 +1317,7 @@ There are various types of risk that may be encountered and there may be several
     </PropertyDef>
     <PropertyDef ifdguid="147db099a93c44fb896f5aa2c8efbe8d">
       <Name>AssociatedLocation</Name>
-      <Definition>An indication or link to any associated location or space that may trigger the hazard. If used directly on an annotation or semantic object. for an alternative see group use encording template</Definition>
+      <Definition>An indication or link to any associated location or space that may trigger the hazard. If used directly on an annotation or semantic object. for an alternative see group use encoding template</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

@@ -125,9 +125,9 @@
         <DefinitionAlias lang="ja-JP">要素（主にリノベーションまたは改修プロジェクトにおいて）の状態。 状態は、「新規(New)」－新しく追加される要素。「既存」－要素は存在し、かつ残りもの。「破壊」－要素は存在したが、廃棄されるもの。「一時的」－一時的に存在する要素（一時的にサポートしている構造のようなもの）。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="7ba0bc00d1db11e1800000215ad4efdf">
+    <PropertyDef ifdguid="13b49a80d20811e1800000215ad4efdf">
       <Name>FireRating</Name>
-      <Definition>Fire rating for this object. It is given according to the national fire safety code or regulation.</Definition>
+      <Definition>Fire rating for this object. It is given according to the national fire safety classification.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -141,7 +141,7 @@
         <NameAlias lang="zh-CN">防火等级</NameAlias>
       </NameAliases>
       <DefinitionAliases>
-        <DefinitionAlias lang="de-DE">Feuerwiderstandsklasse für den Brandschutz gemäß der nationalen oder regionalen Richtlinie die für den Brandschutz der Brandschutztür gewährleistet werden muss.</DefinitionAlias>
+        <DefinitionAlias lang="de-DE">Feuerwiderstandasklasse gemäß der nationalen oder regionalen Brandschutzverordnung.</DefinitionAlias>
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="fr-FR">Classement au feu de l'élément donné selon la classification nationale de sécurité incendie.</DefinitionAlias>
         <DefinitionAlias lang="ja-JP">主要な耐火等級。関連する建築基準法、消防法などの国家基準を参照。</DefinitionAlias>
@@ -151,8 +151,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="95420380d1db11e1800000215ad4efdf">
       <Name>AcousticRating</Name>
-      <Definition>Acoustic rating for this object.
-It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorbtion values).</Definition>
+      <Definition>Acoustic rating for this object. It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorption values).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -176,8 +175,7 @@ It is provided according to the national building code. It indicates the sound t
     </PropertyDef>
     <PropertyDef ifdguid="b4409580d1db11e1800000215ad4efdf">
       <Name>SecurityRating</Name>
-      <Definition>Index based rating system indicating security level.
-It is giving according to the national building code.</Definition>
+      <Definition>Index based rating system indicating security level. It is giving according to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -220,7 +218,7 @@ It is giving according to the national building code.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="ec47d880d1db11e1800000215ad4efdf">
       <Name>HygrothermalRating</Name>
-      <Definition>Resistence against hygrothermal impact from different temperatures and humidities inside and outside. It is given according to the national code or regulation.</Definition>
+      <Definition>Resistance against hygrothermal impact from different temperatures and humidities inside and outside. It is given according to the national code or regulation.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -239,8 +237,7 @@ It is giving according to the national building code.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="5030f04224d94c74aba753294170b227">
       <Name>WaterTightnessRating</Name>
-      <Definition>Water tightness rating for this object.
-It is provided according to the national building code.</Definition>
+      <Definition>Water tightness rating for this object. It is provided according to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -251,8 +248,7 @@ It is provided according to the national building code.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="da9b78dfa88b4538887d4c597a1059dd">
       <Name>MechanicalLoadRating</Name>
-      <Definition>Mechanical load rating for this object.
-It is provided according to the national building code.</Definition>
+      <Definition>Mechanical load rating for this object. It is provided according to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -263,8 +259,7 @@ It is provided according to the national building code.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="9be0892ff9324135bdafcd98782a64ff">
       <Name>WindLoadRating</Name>
-      <Definition>Wind load resistance rating for this object.
-It is provided according to the national building code.</Definition>
+      <Definition>Wind load resistance rating for this object. It is provided according to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -317,8 +312,7 @@ It is provided according to the national building code.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="42b51700d1dc11e1800000215ad4efdf">
       <Name>ThermalTransmittance</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of a material.
-It applies to the total door construction.</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />
@@ -343,8 +337,7 @@ Hier der Gesamtwärmedurchgangskoeffizient der Tür.</DefinitionAlias>
     </PropertyDef>
     <PropertyDef ifdguid="5d878b80d1dc11e1800000215ad4efdf">
       <Name>GlazingAreaFraction</Name>
-      <Definition>Fraction of the glazing area relative to the total area of the filling element. 
-It shall be used, if the glazing area is not given separately for all panels within the filling element.</Definition>
+      <Definition>Fraction of the glazing area relative to the total area of the filling element. It shall be used, if the glazing area is not given separately for all panels within the filling element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure" />
@@ -363,8 +356,7 @@ It shall be used, if the glazing area is not given separately for all panels wit
     </PropertyDef>
     <PropertyDef ifdguid="76903c80d1dc11e1800000215ad4efdf">
       <Name>HandicapAccessible</Name>
-      <Definition>Indication that this object is designed to be accessible by the handicapped. 
-It is giving according to the requirements of the national building code.</Definition>
+      <Definition>Indication that this object is designed to be accessible by the handicapped. Set to (TRUE) if this object is rated as handicap accessible according to the local building codes, otherwise (FALSE). It is giving according to the requirements of the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -384,6 +376,7 @@ It is giving according to the requirements of the national building code.</Defin
     <PropertyDef ifdguid="8f98ed80d1dc11e1800000215ad4efdf">
       <Name>FireExit</Name>
       <Definition>Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE).
+
 Here it defines an exit door in accordance to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

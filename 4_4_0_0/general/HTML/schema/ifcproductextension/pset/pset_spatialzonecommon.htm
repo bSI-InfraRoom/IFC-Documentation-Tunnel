@@ -11,7 +11,7 @@
     <title>Pset_SpatialZoneCommon</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 4 index3 5 index4 26 index5 0; }
+      body { counter-reset: index1 5 index2 4 index3 5 index4 30 index5 0; }
     </style>
   </head>
 
@@ -20,15 +20,16 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.htm#5.4.5.27");
+    parent.index.location.replace("../../toc-5.htm#5.4.5.31");
 //-->
 </script>
 
-<h4 class="std">5.4.5.27 Pset_SpatialZoneCommon</h4>
+<h4 class="std">5.4.5.31 Pset_SpatialZoneCommon</h4>
 <p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
 /
 <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a>
-</p>
+</p>Common properties for Spatial Zones.
+
 <details open="open"><summary>Change log</summary><table class="gridtable">
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4-addendum-2-4_0_2_0/index.htm">IFC4 Addendum 2 4.0.2.0</a></b></td>
@@ -46,16 +47,33 @@
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
-</td><td>
-
+*</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Raumtyp</b></td><td>Bezeichnung zur Zusammenfassung gleichartiger Räume zu einem Raumtyp (auch Funktionstyp genannt). Alternativ zum Namen des &quot;Typobjekts&quot;, insbesondere wenn die Software keine Raumtypen als Typobjekte unterstützt.
+</td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'). Used to store the non-classification driven internal project type.
+</td></tr>
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Reference</b></td><td>Référence à l'identifiant d'un type spécifié dans le contexte du projet (exemple : &quot;type A1&quot;). Utilisé pour enregistrer un type sans recourir à une classification.
+</td></tr>
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照記号</b></td><td>このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。
+</td></tr>
+</table>
 </td></tr>
 <tr><td>IsExternal</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
-</td><td>
-Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external zone at the outside of the building.
-
+*</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>IstAußenraum</b></td><td>Angabe, ob dieser Raum ein Aussenaum ist (JA) oder ein Innenraum (NEIN).
+</td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Is External</b></td><td>Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.
+</td></tr>
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Est extérieur</b></td><td>Indique si l'élément est conçu pour être utilisé à l'extérieur (VRAI) ou non (FAUX). Si VRAI, c'est un élément extérieur qui donne sur l'extérieur du bâtiment.
+</td></tr>
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>外部区分</b></td><td>外部の部材かどうかを示すブーリアン値。もしTRUEの場合、外部の部材で建物の外側に面している。
+</td></tr>
+</table>
 </td></tr>
 </table>
 </details>

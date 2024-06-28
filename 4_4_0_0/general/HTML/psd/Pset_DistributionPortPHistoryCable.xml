@@ -10,7 +10,7 @@
   <ApplicableTypeValue>IfcDistributionPort/CABLE</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="9fadeb7592de4a228764c24ee4f76b0b">
-      <Name>Current</Name>
+      <Name>CurrentHistory</Name>
       <Definition>Log of electrical current.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -25,7 +25,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="6fa8730d435442e497527bd9defeb047">
-      <Name>Voltage</Name>
+      <Name>VoltageHistory</Name>
       <Definition>Log of electrical voltage.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -85,7 +85,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="53e43bcebef54a4096fd8862a450903d">
-      <Name>PowerFactor</Name>
+      <Name>PowerFactorHistory</Name>
       <Definition>Power factor.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />

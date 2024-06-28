@@ -28,6 +28,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="1b1c71bc34194116982bbacb563822d6">
       <Name>Status</Name>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">
@@ -108,24 +109,20 @@
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
-    <PropertyDef ifdguid="076d1500d1e911e1800000215ad4efdf">
+    <PropertyDef ifdguid="17701219053141b9b3f1b110eb14c495">
       <Name>NominalLength</Name>
-      <Definition>Nominal length of the object.</Definition>
+      <Definition>The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcNonNegativeLengthMeasure" />
+          <DataType type="IfcPositiveLengthMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Nominal Length</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-      </DefinitionAliases>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="a28e9f226e204a909976810e633a45f4">
       <Name>NominalWidth</Name>
-      <Definition>The nominal width of the object.</Definition>
+      <Definition>The nominal overall width of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNonNegativeLengthMeasure" />
@@ -160,8 +157,8 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="93112095298e44d29aea7995d82eb202">
-      <Name>Color</Name>
-      <Definition>Color selection for this object.</Definition>
+      <Name>Colour</Name>
+      <Definition>Colour of this object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

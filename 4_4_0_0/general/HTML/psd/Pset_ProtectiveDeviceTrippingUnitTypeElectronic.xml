@@ -106,8 +106,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="a2231f00d1fc11e1800000215ad4efdf">
       <Name>NominalCurrents</Name>
-      <Definition>A set of values providing information on available modules (chips) for setting the nominal current of the protective device. If
-the set is empty, no nominal current modules are available for the tripping unit.</Definition>
+      <Definition>A set of values providing information on available modules (chips) for setting the nominal current of the protective device. If the set is empty, no nominal current modules are available for the tripping unit.</Definition>
       <PropertyType>
         <TypePropertyListValue>
           <ListValue>

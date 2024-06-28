@@ -46,7 +46,7 @@
 <blockquote class="note">
 <p>NOTE  A polygonal bounded half space is not a subtype of <a href="../../ifcgeometricmodelresource/lexical/ifcsolidmodel.htm">IfcSolidModel</a>, half space solids are only useful as operands in Boolean expressions.</p>
 </blockquote>
-<p>Figure 467 illustrates a polygonal bounded half space.</p>
+<p>Figure 465 illustrates a polygonal bounded half space.</p>
 <table border="0" cellpadding="2" cellspacing="2" summary="illustration">
 <tr>
 <td width="650"><img src="../../../figures/ifcpolygonalboundedhalfspace-layout1.png" border="0" height="480" width="640" alt="polygonal bounded halfspace"></td>
@@ -63,7 +63,7 @@ to the object coordinate system. The extrusion direction of the subtraction body
 </tr>
 <tr>
 <td>
-<p class="figure">Figure 467 &mdash; Polygonal half space geometry</p>
+<p class="figure">Figure 465 &mdash; Polygonal half space geometry</p>
 </td>
 <td>&nbsp;</td>
 </tr>
@@ -100,7 +100,7 @@ IFC2x3 CHANGE  The attribute type has been changed from <a href="../../ifcgeome
 <tr><th>Rule</th><th>Description</th></tr>
 <tr><td>BoundaryDim</td><td>The bounding polyline should have the dimensionality of 2.
 </td></tr>
-<tr><td>BoundaryType</td><td>Only bounded curves of type <a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a>, or <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a> are valid boundaries.
+<tr><td>BoundaryType</td><td>Only bounded curves of type <a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a>, <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>, and <a href="../../ifcgeometryresource/lexical/ifcindexedpolycurve.htm">IfcIndexedPolyCurve</a>  are valid boundary curves.
 </td></tr>
 </table>
 
@@ -178,7 +178,8 @@ IFC2x3 CHANGE  The attribute type has been changed from <a href="../../ifcgeome
 &nbsp;<span class="keyword">WHERE</span><br/>
 &nbsp;&nbsp;BoundaryDim : PolygonalBoundary.Dim = 2;<br/>&nbsp;&nbsp;BoundaryType : SIZEOF(TYPEOF(PolygonalBoundary) * [<br/>
   &#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>&#39;, <br/>
-  &#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a>&#39;]<br/>
+  &#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifccompositecurve.htm">IfcCompositeCurve</a>&#39;, <br/>
+  &#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifcindexedpolycurve.htm">IfcIndexedPolyCurve</a>&#39;]<br/>
 ) = 1;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometricmodelresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

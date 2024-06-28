@@ -233,7 +233,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="38d4e900d1c711e1800000215ad4efdf">
       <Name>OverallDiameter</Name>
-      <Definition>The overall diameter of a Cable/Bus.</Definition>
+      <Definition>The overall diameter of a object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -252,7 +252,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="bea16600d1c011e1800000215ad4efdf">
       <Name>OperationalTemperatureRange</Name>
-      <Definition>Allowable operation ambient air temperature range.</Definition>
+      <Definition>The temperature range in which the device operates normally.
+
+Allowable operation ambient air temperature range.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />

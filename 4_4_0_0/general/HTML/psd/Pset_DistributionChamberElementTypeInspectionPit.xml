@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="e0581880d1d311e1800000215ad4efdf">
       <Name>Length</Name>
-      <Definition>The length of the pit.</Definition>
+      <Definition>The length of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -30,7 +30,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="e6e69000d1d311e1800000215ad4efdf">
       <Name>Width</Name>
-      <Definition>The width of the pit.</Definition>
+      <Definition>The width of the object. Only given, if the object has constant thickness (prismatic).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -49,7 +49,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="ec43da80d1d311e1800000215ad4efdf">
       <Name>Depth</Name>
-      <Definition>The depth of the pit.</Definition>
+      <Definition>The depth of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

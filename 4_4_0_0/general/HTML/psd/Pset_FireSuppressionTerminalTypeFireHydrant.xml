@@ -3,7 +3,6 @@
   <IfcVersion version="IFC4X4" />
   <Name>Pset_FireSuppressionTerminalTypeFireHydrant</Name>
   <Definition>Device, fitted to a pipe, through which a temporary supply of water may be provided (BS6100 330 6107)
-
 For further details on fire hydrants, see www.firehydrant.org</Definition>
   <Applicability />
   <ApplicableClasses>
@@ -14,9 +13,8 @@ For further details on fire hydrants, see www.firehydrant.org</Definition>
     <PropertyDef ifdguid="8a40a080d1e611e1800000215ad4efdf">
       <Name>FireHydrantType</Name>
       <Definition>Defines the range of hydrant types from which the required type can be selected where.
-
-DryBarrel:	 A hydrant that has isolating valves fitted below ground and that may be used where the possibility of water freezing is a consideration.
-WetBarrel:	 A hydrant that has isolating valves fitted above ground and that may be used where there is no possibility of water freezing.</Definition>
+DryBarrel:   A hydrant that has isolating valves fitted below ground and that may be used where the possibility of water freezing is a consideration.
+WetBarrel:   A hydrant that has isolating valves fitted above ground and that may be used where there is no possibility of water freezing.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_FireHydrantType">
@@ -109,7 +107,7 @@ WetBarrel:	 A hydrant that has isolating valves fitted above ground and that may
       <Definition>The number of hose connections on the hydrant (excluding the pumper connection).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -191,7 +189,9 @@ WetBarrel:	 A hydrant that has isolating valves fitted above ground and that may
     </PropertyDef>
     <PropertyDef ifdguid="b65c2180d1e611e1800000215ad4efdf">
       <Name>PressureRating</Name>
-      <Definition>Maximum pressure that the hydrant is manufactured to withstand.</Definition>
+      <Definition>Pressure rating of the object.
+
+Maximum pressure that the hydrant is manufactured to withstand.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure" />
@@ -207,10 +207,10 @@ WetBarrel:	 A hydrant that has isolating valves fitted above ground and that may
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="bbb96c00d1e611e1800000215ad4efdf">
-      <Name>BodyColor</Name>
-      <Definition>Color of the body of the hydrant.
+      <Name>BodyColour</Name>
+      <Definition>Colour of the body of the hydrant.
 
-Note: Consult local fire regulations for statutory colors that may be required for hydrant bodies in particular circumstances.</Definition>
+Note: Consult local fire regulations for statutory colours that may be required for hydrant bodies in particular circumstances.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText" />
@@ -228,10 +228,10 @@ Note: Consult local fire regulations for statutory colors that may be required f
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="c07e2000d1e611e1800000215ad4efdf">
-      <Name>CapColor</Name>
-      <Definition>Color of the caps of the hydrant.
+      <Name>CapColour</Name>
+      <Definition>Colour of the caps of the hydrant.
 
-Note: Consult local fire regulations for statutory colors that may be required for hydrant caps in particular circumstances.</Definition>
+Note: Consult local fire regulations for statutory colours that may be required for hydrant caps in particular circumstances.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText" />

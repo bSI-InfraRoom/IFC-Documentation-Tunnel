@@ -117,7 +117,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="42bc1380d1ea11e1800000215ad4efdf">
       <Name>NominalBodyLength</Name>
-      <Definition>Nominal or quoted length, measured along the x-axis of the local coordinate system of the object, of the body of the object.</Definition>
+      <Definition>Nominal or quoted length measured along the x-axis of the local coordinate system of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -132,7 +132,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="4a7bb800d1ea11e1800000215ad4efdf">
       <Name>NominalBodyWidth</Name>
-      <Definition>Nominal or quoted length, measured along the y-axis of the local coordinate system of the object, of the body of the object.</Definition>
+      <Definition>Nominal or quoted length, measured along the y-axis of the local coordinate system of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -147,7 +147,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="523b5c80d1ea11e1800000215ad4efdf">
       <Name>NominalBodyDepth</Name>
-      <Definition>Nominal or quoted =length, measured along the z-axis of the local coordinate system of the object, of the body of the object.</Definition>
+      <Definition>Nominal or quoted length measured along the z-axis of the local coordinate system of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -162,7 +162,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="59fb0100d1ea11e1800000215ad4efdf">
       <Name>InletConnectionSize</Name>
-      <Definition>Size of the inlet connection.</Definition>
+      <Definition>Size of the inlet connection.
+
+Note that all inlet connections are assumed to be the same size.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -177,7 +179,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="62533c00d1ea11e1800000215ad4efdf">
       <Name>OutletConnectionSize</Name>
-      <Definition>Size of the outlet connection.</Definition>
+      <Definition>Size of the outlet connection from the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -192,7 +194,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="697a4a00d1ea11e1800000215ad4efdf">
       <Name>CoverLength</Name>
-      <Definition>The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the oil interceptor.</Definition>
+      <Definition>The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -207,7 +209,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="71d28500d1ea11e1800000215ad4efdf">
       <Name>CoverWidth</Name>
-      <Definition>The length measured along the x-axis in the local coordinate system of the cover of the oil interceptor.</Definition>
+      <Definition>The length measured along the y-axis in the local coordinate system of the cover of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

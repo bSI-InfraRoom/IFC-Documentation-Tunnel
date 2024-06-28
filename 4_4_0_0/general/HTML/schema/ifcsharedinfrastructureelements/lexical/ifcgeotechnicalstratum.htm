@@ -11,7 +11,7 @@
     <title>IfcGeotechnicalStratum</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 5 index3 3 index4 19 index5 0; }
+      body { counter-reset: index1 6 index2 5 index3 3 index4 20 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.5.3.20");
+    parent.index.location.replace("../../toc-6.htm#6.5.3.21");
 //-->
 </script>
 
@@ -33,7 +33,7 @@
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x2-to-ifc4x3_rc1/index.htm">IFC4x2 to IFC4x3_RC1</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a></td><td></td><td></td><td>MODIFIED</td><td>Status changed to <i>Deprecated</i>. <br/></td></tr>
 </table>
 </details>
@@ -48,7 +48,7 @@ The shape representations used should correspond to the sub-type of <a href="../
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>G</th></tr>
-<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a></td><td></td><td>
+<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a></td><td>? </td><td>
 A list of types to further identify the object. Some property sets may be specifically applicable to one of these types.
 <blockquote class="note">
 NOTE If the object has an associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a> with a <i>PredefinedType</i>, then this attribute shall not be used.
@@ -58,8 +58,7 @@ NOTE If the object has an associated <a href="../../ifckernel/lexical/ifctypeobj
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>HasObjectType</td><td>Either the <i>PredefinedType</i> attribute is unset or the attribute ObjectType shall be given if the predefined type is set to USERDEFINED.
-</td></tr>
+<tr><td>CorrectPredefinedType</td><td></td></tr>
 </table>
 
 </details>
@@ -204,7 +203,7 @@ IFC4 CHANGE New inverse relationship.
 </td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalelement.htm">IfcGeotechnicalElement</a></i></td></tr>
 <tr><td colspan="6"><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratum.htm">IfcGeotechnicalStratum</a></td></tr>
-<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a></td><td></td><td>
+<tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a></td><td>? </td><td>
 A list of types to further identify the object. Some property sets may be specifically applicable to one of these types.
 <blockquote class="note">
 NOTE If the object has an associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a> with a <i>PredefinedType</i>, then this attribute shall not be used.
@@ -292,11 +291,11 @@ NOTE If the object has an associated <a href="../../ifckernel/lexical/ifctypeobj
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcGeotechnicalStratum<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalelement.htm">IfcGeotechnicalElement</a>)<b>;</b><br/>
-&nbsp;&nbsp;PredefinedType : <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a>;<br/>
+&nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR <br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
+  (PredefinedType &lt;&gt; <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
+  ((PredefinedType = <a href="../../ifcsharedinfrastructureelements/lexical/ifcgeotechnicalstratumtypeenum.htm">IfcGeotechnicalStratumTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS (SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedinfrastructureelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

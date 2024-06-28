@@ -242,7 +242,9 @@ SwitchDisconnectorFuse: A switch disconnector in which one or more poles have a 
     </PropertyDef>
     <PropertyDef ifdguid="45c0ff00d1fe11e1800000215ad4efdf">
       <Name>PowerLoss</Name>
-      <Definition>The power loss in [W] of the fuse when the nominal current is flowing through the fuse.</Definition>
+      <Definition>The power loss in [W].
+
+The power loss in [W] of the fuse when the nominal current is flowing through the fuse.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPowerMeasure" />
@@ -264,7 +266,7 @@ SwitchDisconnectorFuse: A switch disconnector in which one or more poles have a 
       <Definition>Number of phases that the equipment operates on.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -305,10 +307,12 @@ SwitchDisconnectorFuse: A switch disconnector in which one or more poles have a 
     </PropertyDef>
     <PropertyDef ifdguid="afd3bec348e7427ab799dff593420f84">
       <Name>NumberOfPoles</Name>
-      <Definition>Number of poles that the equipment would affect.</Definition>
+      <Definition>Number of poles that the object would affect.
+
+Number of poles that the equipment would affect.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

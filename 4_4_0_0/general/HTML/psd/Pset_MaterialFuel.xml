@@ -11,7 +11,9 @@
   <PropertyDefs>
     <PropertyDef ifdguid="3eddc080d1ed11e1800000215ad4efdf">
       <Name>CombustionTemperature</Name>
-      <Definition>Combustion temperature of the material when air is at 298 K and 100 kPa.</Definition>
+      <Definition>Combustion temperature.
+
+Combustion temperature of the material when air is at 298 K and 100 kPa.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />

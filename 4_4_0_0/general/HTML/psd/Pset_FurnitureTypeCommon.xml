@@ -21,6 +21,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="7334640eaf3943b9acb2ae43ea34a47d">
       <Name>Status</Name>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">
@@ -118,7 +119,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="00460700d1e911e1800000215ad4efdf">
       <Name>NominalHeight</Name>
-      <Definition>The nominal height of the furniture of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <Definition>The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -131,20 +132,16 @@
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="076d1500d1e911e1800000215ad4efdf">
+    <PropertyDef ifdguid="17701219053141b9b3f1b110eb14c495">
       <Name>NominalLength</Name>
-      <Definition>Nominal length of the object.</Definition>
+      <Definition>The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcNonNegativeLengthMeasure" />
+          <DataType type="IfcPositiveLengthMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Nominal Length</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-      </DefinitionAliases>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="118f1380d1e911e1800000215ad4efdf">
       <Name>NominalDepth</Name>
@@ -164,7 +161,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="19e74e80d1e911e1800000215ad4efdf">
-      <Name>MainColor</Name>
+      <Name>MainColour</Name>
       <Definition>The main color of the furniture of this type.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

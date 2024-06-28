@@ -10,7 +10,7 @@
   <ApplicableTypeValue>IfcConstructionResource</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="ee566b00d1cc11e1800000215ad4efdf">
-      <Name>ScheduleWork</Name>
+      <Name>ScheduleWorkProgression</Name>
       <Definition>The scheduled work on behalf of the resource allocation.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -25,7 +25,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="f1515b80d1cc11e1800000215ad4efdf">
-      <Name>ActualWork</Name>
+      <Name>ActualWorkTime</Name>
       <Definition>The actual work on behalf of the resource allocation.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -40,7 +40,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="f3b3b580d1cc11e1800000215ad4efdf">
-      <Name>RemainingWork</Name>
+      <Name>RemainingWorkProgression</Name>
       <Definition>The remaining work on behalf of the resource allocation.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />

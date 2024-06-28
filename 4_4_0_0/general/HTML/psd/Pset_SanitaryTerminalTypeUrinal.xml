@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="304ed380d20411e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_SanitaryTerminalTypeUrinal</Name>
-  <Definition>Soil appliance that receives urine and directs it to a waste outlet (BS6100). HISTORY: In IFC4, Material property removed. Use materials capabilities from IfcMaterialsResource schema. Prefix for color property removed. Datatype of color changed to IfcLabel (still a string value).  Mounting property added.</Definition>
+  <Definition>Soil appliance that receives urine and directs it to a waste outlet (BS6100). HISTORY: In IFC4, Material property removed. Use materials capabilities from IfcMaterialResource schema. Prefix for color property removed. Datatype of color changed to IfcLabel (still a string value).  Mounting property added.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcSanitaryTerminal/URINAL</ClassName>
@@ -104,17 +104,16 @@ Trough: Wall mounted urinal of elongated rectangular shape on plan, that can be 
 溝：一人以上の人数が同時に使用できるよう、壁に直角に長く引き伸ばした形</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="4361a380d20411e1800000215ad4efdf">
+    <PropertyDef ifdguid="23c97b80d20211e1800000215ad4efdf">
       <Name>Mounting</Name>
-      <Definition>Selection of the form of mounting from the enumerated list of mountings where:-
+      <Definition>The property enumeration Pset_SanitaryMountingEnum defines the forms of mounting or fixing of the sanitary terminal that may be specified within property sets used to define sanitary terminals (WC’s, basins, sinks, etc.) where:-
 
-BackToWall =	A pedestal mounted sanitary terminal that fits flush to the wall at the rear to cover its service connections
-Pedestal =	A floor mounted sanitary terminal that has an integral base
-CounterTop =	A sanitary terminal that is installed into a horizontal surface that is installed into a horizontal surface. Note: When applied to a wash hand basin, the term more normally used is ‘vanity’. See also Wash Hand Basin Type specification.
-WallHung =	A sanitary terminal cantilevered clear of the floor
-.
+BackToWall:     A pedestal mounted sanitary terminal that fits flush to the wall at the rear to cover its service connections
+Pedestal:   A floor mounted sanitary terminal that has an integral base
+CounterTop:     A sanitary terminal that is installed into a horizontal surface that is installed into a horizontal surface. Note: When applied to a wash hand basin, the term more normally used is ‘vanity’. See also Wash Hand Basin Type specification.
+WallHung:   A sanitary terminal cantilevered clear of the floor.
 
-Note that BackToWall, Pedestal and WallHung are allowable values for a urinal.</Definition>
+Note that BackToWall, Pedestal and WallHung are allowable values for a bidet.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_SanitaryMounting">
@@ -190,19 +189,21 @@ Note that BackToWall, Pedestal and WallHung are allowable values for a urinal.</
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Mounting</NameAlias>
-        <NameAlias lang="ja-JP">設置</NameAlias>
+        <NameAlias lang="ja-JP">装着</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">下記の設置方法より選択
+        <DefinitionAlias lang="ja-JP">列挙するプロパティはPset_SanitaryMountingEnumでは（トイレの、洗面台、シンクなど）、衛生配管への装着法で定義される：
 
+床置き壁排水：台座は、カバーの背面の壁にあるフラッシュバルブに接続される。
 
-・床置き壁排出：接続口の後部に出水口を合わせること。
-・台：床置きの衛生器具には基礎があること。
-・カウンター：衛生器具の表層が水平に設置されていること。※手洗い台として設置された場合「化粧台」として扱うこと。また、洗面台種類の規格表を参照のこと。
-・壁掛け型：衛生器具は片側固定がされ床から離れていること。
+床置き：床の衛生配管に装着される。
 
-床置き壁排出型・台座と壁掛け型は便器と同等とされます。</DefinitionAlias>
+カウンター：水平面に設置された衛生配管に接続します。注：手洗器があると、通常は'化粧'が使用される。手洗器を参照。
+
+壁掛け：衛生配管は壁から出され床には何もなくなる。。
+
+床置き壁排水、床置き、壁掛けは、ビデの許容値であることに注意。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="596f6400d20411e1800000215ad4efdf">

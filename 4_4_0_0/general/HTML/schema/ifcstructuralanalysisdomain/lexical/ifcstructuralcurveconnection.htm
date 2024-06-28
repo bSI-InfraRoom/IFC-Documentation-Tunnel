@@ -61,7 +61,7 @@
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>G</th></tr>
-<tr><td>9</td><td>Axis</td><td><a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a></td><td></td><td>
+<tr><td>9</td><td>AxisDirection</td><td><a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a></td><td></td><td>
 Direction which is used in the definition of the local z axis.  <i>Axis</i> is specified relative to the so-called global coordinate system, i.e. the <i>SELF\IfcProduct.ObjectPlacement</i>.
 <blockquote class="note">
 NOTE  It is desirable and usually possible that many instances of <span class="self-ref">IfcStructuralCurveConnection</span> and <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralcurvemember.htm">IfcStructuralCurveMember</a> share a common instance of <a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a> as their <i>Axis</i> attribute.
@@ -178,7 +178,7 @@ Optional boundary conditions which define support conditions of this connection 
 <tr><td></td><td><i>ConnectsStructuralMembers</i></td><td><a href="../../ifcstructuralanalysisdomain/lexical/ifcrelconnectsstructuralmember.htm">IfcRelConnectsStructuralMember</a><br/>@RelatedStructuralConnection</td><td>S[1:?]</td><td>References to the IfcRelConnectsStructuralMembers relationship by which structural members can be associated to structural connections.
 </td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralcurveconnection.htm">IfcStructuralCurveConnection</a></td></tr>
-<tr><td>9</td><td>Axis</td><td><a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a></td><td></td><td>
+<tr><td>9</td><td>AxisDirection</td><td><a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a></td><td></td><td>
 Direction which is used in the definition of the local z axis.  <i>Axis</i> is specified relative to the so-called global coordinate system, i.e. the <i>SELF\IfcProduct.ObjectPlacement</i>.
 <blockquote class="note">
 NOTE  It is desirable and usually possible that many instances of <span class="self-ref">IfcStructuralCurveConnection</span> and <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralcurvemember.htm">IfcStructuralCurveMember</a> share a common instance of <a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a> as their <i>Axis</i> attribute.
@@ -194,14 +194,14 @@ NOTE  It is desirable and usually possible that many instances of <span class="
 <summary>Concept usage</summary>
 <a id="reference-topology" />
 <p class="use-head">Reference Topology</p>
-<p>The <a href="../../templates/reference-topology.htm">Reference Topology</a> concept template applies to this entity as shown in Table 672.<table>
+<p>The <a href="../../templates/reference-topology.htm">Reference Topology</a> concept template applies to this entity as shown in Table 673.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Topology</b></th></tr>
 <tr><td><a href="../../ifctopologyresource/lexical/ifcedge.htm">IfcEdge</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 672 &mdash; IfcStructuralCurveConnection Reference Topology</td></tr></table>
+<tr><td><p class="table">Table 673 &mdash; IfcStructuralCurveConnection Reference Topology</td></tr></table>
 
 <br/><br/>
 
@@ -264,7 +264,7 @@ NOTE  It is desirable and usually possible that many instances of <span class="
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralconnection.htm">IfcStructuralConnection</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;Axis&quot; type=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;AxisDirection&quot; type=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
@@ -273,7 +273,7 @@ NOTE  It is desirable and usually possible that many instances of <span class="
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcStructuralCurveConnection<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralconnection.htm">IfcStructuralConnection</a>)<b>;</b><br/>
-&nbsp;&nbsp;Axis : <a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a>;<br/>
+&nbsp;&nbsp;AxisDirection : <a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcstructuralanalysisdomain/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

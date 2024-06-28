@@ -14,7 +14,7 @@
       <Definition>Indicates the number of cantilevers in the OCS supporting system.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

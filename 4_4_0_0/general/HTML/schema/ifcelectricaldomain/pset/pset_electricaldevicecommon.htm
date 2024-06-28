@@ -62,7 +62,7 @@
 <a href="../../ifcmeasureresource/lexical/ifcelectricvoltagemeasure.htm">IfcElectricVoltageMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Rated Voltage</b></td><td>The voltage that a device is designed to handle.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Rated Voltage</b></td><td>The range of allowed voltage that a device is certified to handle. The upper bound of this value is the maximum.
 </td></tr>
 </table>
 </td></tr>
@@ -82,7 +82,8 @@
 <a href="../../ifcmeasureresource/lexical/ifcnormalisedratiomeasure.htm">IfcNormalisedRatioMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Power Factor</b></td><td>The ratio between the rated electrical power and the product of the rated current and rated voltage
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Power Factor</b></td><td>Power factor; usually as ratio.
+The ratio between the rated electrical power and the product of the rated current and rated voltage
 </td></tr>
 </table>
 </td></tr>
@@ -93,17 +94,18 @@
 /
  <a href="../../../penum/penum_conductorfunctionenum.htm">PEnum_ConductorFunctionEnum</a></td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Conductor Function</b></td><td>Function of a line conductor to which a device  is intended to be connected where L1, L2 and L3 represent the phase lines according to IEC 60446 notation (sometimes phase lines may be referenced by color [Red, Blue, Yellow] or by number [1, 2, 3] etc). Protective Earth is sometimes also known as CPC or common protective conductor. Note that for an electrical device, a set of line conductor functions may be applied.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Conductor Function</b></td><td>Indicates function of the conductors to which the load is connected. Where L1, L2 and L3 represent the phase lines according to IEC 60446 notation (sometimes phase lines may be referenced by color [Red, Blue, Yellow] or by number [1, 2, 3] etc). Protective Earth is sometimes also known as CPC or common protective conductor. Note that for an electrical device, a set of line conductor functions may be applied.
 </td></tr>
 </table>
 </td></tr>
 <tr><td>NumberOfPoles</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Poles</b></td><td>The number of live lines that is intended to be handled by the device.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Poles</b></td><td>Number of poles that the object would affect.
+The number of live lines that is intended to be handled by the device.
 </td></tr>
 </table>
 </td></tr>
@@ -113,7 +115,7 @@
 <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Has Protective Earth</b></td><td>Indicates whether the electrical device has a protective earth connection (=TRUE) or not (= FALSE).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Has Protective Earth</b></td><td>Indicates whether the object has a protective earth connection (=TRUE) or not (= FALSE).
 </td></tr>
 </table>
 </td></tr>

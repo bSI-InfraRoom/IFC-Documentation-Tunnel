@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="02e73300d1ce11e1800000215ad4efdf">
       <Name>ControlType</Name>
-      <Definition>The type of signal modification effected and applicable ports:
+      <Definition>The type controller, signal modification effected and applicable ports
 
 LOWERLIMITSWITCH: Single analog input is read and if less than Value.LowerBound then True is written to the output value.
 UPPERLIMITSWITCH: Single analog input is read and if more than Value.UpperBound then True is written to the output value.
@@ -205,7 +205,9 @@ VARIABLE: Controller element is an in-memory variable.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="201c0180d1ce11e1800000215ad4efdf">
       <Name>Labels</Name>
-      <Definition>Table mapping values to labels, where such labels indicate the meanings of True and False, such as 'Open' and 'Closed'</Definition>
+      <Definition>Table mapping values to labels
+
+Labels indicate the meanings of True and False, such as 'Open' and 'Closed'</Definition>
       <PropertyType>
         <TypePropertyTableValue>
           <Expression />
@@ -241,7 +243,9 @@ VARIABLE: Controller element is an in-memory variable.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="2d38f080d1ce11e1800000215ad4efdf">
       <Name>Value</Name>
-      <Definition>The default value such as normally-closed or normally-open.</Definition>
+      <Definition>The expected range and default value.
+
+The default value such as normally-closed or normally-open.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

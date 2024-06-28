@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="469b6600d1e911e1800000215ad4efdf">
       <Name>WorksurfaceArea</Name>
-      <Definition>The value of the work surface area of the desk..</Definition>
+      <Definition>The value of the work surface area of the desk.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure" />
@@ -29,7 +29,7 @@
       <Definition>Maximum number of chairs that can fit with the table for normal use.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>

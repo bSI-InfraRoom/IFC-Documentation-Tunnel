@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="7dd87e3e4db7483bbbcfde0685d2f560" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ArchElementTypeSteelRib</Name>
+  <Definition>Properties for arch elements of type _STEELRIB_.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcArchElement/(.STEELRIB.)</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcArchElement/(.STEELRIB.)</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="8fd26ff3597b45308b5b4d9c6d23170c">
+      <Name>LongitudinalSpacing</Name>
+      <Definition>Longitudinal spacing between steel ribs.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="64f4feaf4e4148f6abd6ac94ed4b0a75">
+      <Name>LongitudinalConnections</Name>
+      <Definition>Specifies the type of steel profiles that connect ribs longitudinally.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b46e5cfac42046afabbbe04ad9cde7eb">
+      <Name>FootOfArches</Name>
+      <Definition>Specifies the type of vertical structure upon which the lower part of the arch leans onto.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="088b2092cfea4a59be1466e9c84a89c2">
+      <Name>ReticularArchType</Name>
+      <Definition>Specifies the type when the arch is made of interlaced profiles.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c8c5878e92ae46a5b4963d7840cffb04">
+      <Name>ApertureAngle</Name>
+      <Definition>Specifies the angle from which an arch rises.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="3889ebe7a96445c1b9b98c31cc482e92">
+      <Name>BoltType</Name>
+      <Definition>Specifies the type of bolts used for the steel rib.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_BoltType">
+            <EnumItem>GROUTED</EnumItem>
+            <EnumItem>ANCHORED</EnumItem>
+            <EnumItem>ANCHOREDWITHEXPANSIONCASING</EnumItem>
+            <EnumItem>COMBINATION</EnumItem>
+            <EnumItem>FRICTION</EnumItem>
+            <EnumItem>FITTING</EnumItem>
+            <EnumItem>CABLE</EnumItem>
+            <EnumItem>WIRE</EnumItem>
+            <EnumItem>SELFDRILLING</EnumItem>
+            <EnumItem>GLASSFIBREREINFORCEDPLASTICS</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>GROUTED</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ANCHORED</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ANCHOREDWITHEXPANSIONCASING</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>COMBINATION</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FRICTION</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FITTING</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CABLE</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WIRE</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SELFDRILLING</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GLASSFIBREREINFORCEDPLASTICS</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="51163fdd0a2841a780261febe16dc3c8">
+      <Name>BoltLength</Name>
+      <Definition>Length of the bolt. When there is a solid geometry from which the length can be derived, the geometric representation takes precedence.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7b9e818793a5476eb0c1c3dfb7f7123b">
+      <Name>CorrosionTreatmentBolt</Name>
+      <Definition>Specifies the corrosion treatment for the bolts.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementComponentCorrosionTreatment">
+            <EnumItem>PAINTED</EnumItem>
+            <EnumItem>EPOXYCOATED</EnumItem>
+            <EnumItem>GALVANISED</EnumItem>
+            <EnumItem>STAINLESS</EnumItem>
+            <EnumItem>POWDERCOATED</EnumItem>
+            <EnumItem>GALVANIZEDANDPOWDERCOATED</EnumItem>
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>PAINTED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Painted</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EPOXYCOATED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Epoxy Coated</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GALVANISED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Galvanised</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>STAINLESS</Name>
+              <NameAliases>
+                <NameAlias lang="en">Stainless</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>POWDERCOATED</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GALVANIZEDANDPOWDERCOATED</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NONE</Name>
+              <Definition>No waterproof.</Definition>
+              <NameAliases>
+                <NameAlias lang="en">None</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">None, empty or no additional action or function.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Notdefined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

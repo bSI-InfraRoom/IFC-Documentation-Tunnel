@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="4ff0486291384d74b34d949a401b2a6c">
       <Name>NominalHeight</Name>
-      <Definition>Nominal height of the object.</Definition>
+      <Definition>The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNonNegativeLengthMeasure" />
@@ -37,20 +37,16 @@
         <DefinitionAlias lang="ja-JP">実電流と動作可能範囲。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="076d1500d1e911e1800000215ad4efdf">
+    <PropertyDef ifdguid="17701219053141b9b3f1b110eb14c495">
       <Name>NominalLength</Name>
-      <Definition>Nominal length of the object.</Definition>
+      <Definition>The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcNonNegativeLengthMeasure" />
+          <DataType type="IfcPositiveLengthMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Nominal Length</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-      </DefinitionAliases>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="63bd0ed8ed964fc3ac02aa99144f569a">
       <Name>InsulationResistance</Name>
@@ -62,25 +58,6 @@
       </PropertyType>
       <NameAliases />
       <DefinitionAliases />
-    </PropertyDef>
-    <PropertyDef ifdguid="a28e9f226e204a909976810e633a45f4">
-      <Name>NominalWidth</Name>
-      <Definition>The nominal width of the object.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcNonNegativeLengthMeasure" />
-        </TypePropertySingleValue>
-      </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Nominal Width</NameAlias>
-        <NameAlias lang="ja-JP">公称幅</NameAlias>
-        <NameAlias lang="ko-KR">공칭 폭</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">呼び幅寸法。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">폭 치수</DefinitionAlias>
-      </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="16c52d4c70564777aa0c8e376b7badf0">
       <Name>ContactResistance</Name>
@@ -130,6 +107,25 @@
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="ja-JP">実電圧と動作可能範囲。</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a28e9f226e204a909976810e633a45f4">
+      <Name>NominalWidth</Name>
+      <Definition>The nominal overall width of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Width</NameAlias>
+        <NameAlias lang="ja-JP">公称幅</NameAlias>
+        <NameAlias lang="ko-KR">공칭 폭</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">呼び幅寸法。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">폭 치수</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
   </PropertyDefs>

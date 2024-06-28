@@ -3,7 +3,7 @@
   <IfcVersion version="IFC4X4" />
   <Name>Pset_BoilerTypeCommon</Name>
   <Definition>Boiler type common attributes.
-SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead. PrimaryEnergySource and AuxiliaryEnergySource attributes deleted in IFC2x2 Pset Addendum: Use IfcEnergyProperties, IfcFuelProperties, etc. instead.</Definition>
+SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead. PrimaryEnergySource and AuxiliaryEnergySource attributes deleted in IFC2x2 Pset Addendum: Use IfcMaterialProperties instead.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcBoiler</ClassName>
@@ -122,7 +122,9 @@ SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties ins
     </PropertyDef>
     <PropertyDef ifdguid="75ebac00d1c411e1800000215ad4efdf">
       <Name>PressureRating</Name>
-      <Definition>Nominal pressure rating of the boiler as rated by the agency having jurisdiction.</Definition>
+      <Definition>Pressure rating of the object.
+
+Nominal pressure rating of the boiler as rated by the agency having jurisdiction.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure" />
@@ -378,7 +380,7 @@ SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties ins
     </PropertyDef>
     <PropertyDef ifdguid="adf2ef00d1c411e1800000215ad4efdf">
       <Name>EnergySource</Name>
-      <Definition>Enumeration defining the energy source or fuel cumbusted to generate heat.</Definition>
+      <Definition>Enumeration defining the energy source or fuel cumbusted.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_EnergySource">

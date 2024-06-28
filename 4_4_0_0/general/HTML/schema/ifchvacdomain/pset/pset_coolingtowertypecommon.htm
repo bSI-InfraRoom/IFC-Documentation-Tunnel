@@ -73,7 +73,8 @@ WaterRequirement attribute unit type modified in IFC2x2 Pset Addendum.
 <a href="../../ifcmeasureresource/lexical/ifcpowermeasure.htm">IfcPowerMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Nominal Capacity</b></td><td>Nominal cooling tower capacity in terms of heat transfer rate of the cooling tower between air stream and water stream at nominal conditions.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Nominal Capacity</b></td><td>The total nominal or volumetric capacity of the object.
+Nominal cooling tower capacity in terms of heat transfer rate of the cooling tower between air stream and water stream at nominal conditions.
 </td></tr>
 </table>
 </td></tr>
@@ -99,9 +100,12 @@ DryWet: A combination of a dry tower and a wet tower.
 /
  <a href="../../../penum/penum_coolingtowerflowarrangement.htm">PEnum_CoolingTowerFlowArrangement</a></td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Flow Arrangement</b></td><td>CounterFlow: Air and water flow enter in different directions.
-CrossFlow: Air and water flow are perpendicular.
-ParallelFlow: air and water flow enter in same directions.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Flow Arrangement</b></td><td>Defines the basic flow arrangements for the heat exchanger or cooler tower:
+COUNTERFLOW: Air and water flow enter in different directions.
+CROSSFLOW: Air and water flow are perpendicular.
+PARALLELFLOW: Air and water flow enter in same directions.
+MULTIPASS: Multipass flow heat exchanger arrangement.
+OTHER: Other type of heat exchanger flow arrangement not defined above.
 </td></tr>
 </table>
 </td></tr>
@@ -151,7 +155,7 @@ WetBulbTempReset: The set-point is reset based on the wet-bulb temperature.
 <tr><td>NumberOfCells</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
 </td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Cells</b></td><td>Number of cells in one cooling tower unit.
@@ -184,7 +188,7 @@ WetBulbTempReset: The set-point is reset based on the wet-bulb temperature.
 <a href="../../ifcmeasureresource/lexical/ifcvolumetricflowratemeasure.htm">IfcVolumetricFlowRateMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Water Requirement</b></td><td>Make-up water requirements.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Water Requirement</b></td><td>Make-up water requirement.
 </td></tr>
 </table>
 </td></tr>

@@ -110,7 +110,9 @@ HISTORY: New property set in IFC Release 2.0.  Renamed from Pset_DuctDesignCrite
     </PropertyDef>
     <PropertyDef ifdguid="ce2da880d1da11e1800000215ad4efdf">
       <Name>PressureClass</Name>
-      <Definition>Nominal pressure rating of the system components. (Data type = PressureMeasure)</Definition>
+      <Definition>Nominal pressure rating of the object.
+
+Nominal pressure rating of the system components.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure" />

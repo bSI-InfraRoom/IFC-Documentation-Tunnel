@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="6b8ad37a4faa441bb3f21b042d265af0" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_SignCommon</Name>
+  <Definition>Common properties for Signs.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcSign</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSign</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="a108f4615a9f4c0080a18917fb12bd7a">
+      <Name>Reference</Name>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types and no classification reference to a recognized classification system used.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0aadd400d1dc11e1800000215ad4efdf">
+      <Name>IsExternal</Name>
+      <Definition>Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="de-DE">Außenbauteil</NameAlias>
+        <NameAlias lang="en">Is External</NameAlias>
+        <NameAlias lang="fr-FR">EstExterieur</NameAlias>
+        <NameAlias lang="ja-JP">外部区分</NameAlias>
+        <NameAlias lang="zh-CN">是否外部构件</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="de-DE">Angabe, ob dieses Bauteil ein Aussenbauteil ist (JA) oder ein Innenbauteil (NEIN). Als Aussenbauteil grenzt es an den Aussenraum (oder Erdreich, oder Wasser).</DefinitionAlias>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Indique si l'élément est conçu pour être utilisé à l'extérieur (VRAI) ou non (FAUX). Si VRAI, c'est un élément extérieur qui donne sur l'extérieur du bâtiment.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">外部の部材かどうかを示すブーリアン値。もしTRUEの場合、外部の部材で建物の外側に面している。</DefinitionAlias>
+        <DefinitionAlias lang="zh-CN">表示该图元是否设计为外部构件。若是，则该图元为外部图元，朝向建筑物的外部。</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="06be8980d1bd11e1800000215ad4efdf">
+      <Name>Category</Name>
+      <Definition>Designation of the category into which the actors in the population belong.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Category</NameAlias>
+        <NameAlias lang="ja-JP">部門</NameAlias>
+        <NameAlias lang="zh-CN">类别</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">母集団の中の関与者のカテゴリー（部門・分野）の指定。</DefinitionAlias>
+        <DefinitionAlias lang="zh-CN">该组参与者所属的类别。</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7d005eeb2ce746cf9b658d4667bb8b2f">
+      <Name>TactileMarking</Name>
+      <Definition>The kind of Tactile Marking of the element.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

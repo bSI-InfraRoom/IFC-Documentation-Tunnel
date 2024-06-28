@@ -117,7 +117,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="1601ff00d1de11e1800000215ad4efdf">
       <Name>PressureClass</Name>
-      <Definition>Pressure classification as defined by the authority having jurisdiction (e.g., SMACNA, etc.).</Definition>
+      <Definition>Nominal pressure rating of the object.
+
+Pressure classification as defined by the authority having jurisdiction (e.g., SMACNA, etc.).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure" />

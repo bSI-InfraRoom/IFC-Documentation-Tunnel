@@ -211,7 +211,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="bea16600d1c011e1800000215ad4efdf">
       <Name>OperationalTemperatureRange</Name>
-      <Definition>Allowable operation ambient air temperature range.</Definition>
+      <Definition>The temperature range in which the device operates normally.
+
+Allowable operation ambient air temperature range.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />
@@ -229,7 +231,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="d1b43600d1c011e1800000215ad4efdf">
-      <Name>PrimaryAirflowRateRange</Name>
+      <Name>PrimaryAirFlowRateRange</Name>
       <Definition>possible range of primary airflow that can be delivered..</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
@@ -248,7 +250,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="db3d9e00d1c011e1800000215ad4efdf">
-      <Name>SecondaryAirflowRateRange</Name>
+      <Name>SecondaryAirFlowRateRange</Name>
       <Definition>possible range of secondary airflow that can be delivered.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>

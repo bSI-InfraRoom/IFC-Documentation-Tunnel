@@ -5,9 +5,9 @@
   <Definition>Properties common to fixing sockets.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcDiscreteAccessory/Fixing socket</ClassName>
+    <ClassName>IfcDiscreteAccessory</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcDiscreteAccessory/Fixing socket</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcDiscreteAccessory</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="a9353780d1d211e1800000215ad4efdf">
       <Name>FixingSocketTypeReference</Name>

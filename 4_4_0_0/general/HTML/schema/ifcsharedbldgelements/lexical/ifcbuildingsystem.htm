@@ -304,7 +304,8 @@ NOTE  In many scenarios the <i>Name</i> attribute refers to the short name or n
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcsystem.htm">IfcSystem</a>)<b>;</b><br/>
 &nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="../../ifcsharedbldgelements/lexical/ifcbuildingsystemtypeenum.htm">IfcBuildingSystemTypeEnum</a>;<br/>
 &nbsp;&nbsp;LongName : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
-<span class="keyword">END_ENTITY;</span><br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR (PredefinedType &lt;&gt; <a href="../../ifcsharedbldgelements/lexical/ifcbuildingsystemtypeenum.htm">IfcBuildingSystemTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR ((PredefinedType = <a href="../../ifcsharedbldgelements/lexical/ifcbuildingsystemtypeenum.htm">IfcBuildingSystemTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS (SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedbldgelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

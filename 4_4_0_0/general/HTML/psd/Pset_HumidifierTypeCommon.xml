@@ -117,7 +117,7 @@ WaterProperties attribute renamed to WaterRequirement and unit type modified in 
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="caede900d1e911e1800000215ad4efdf">
-      <Name>Application</Name>
+      <Name>HumidifierApplication</Name>
       <Definition>Humidifier application.
 
 Fixed: Humidifier installed in a ducted flow distribution system.
@@ -190,7 +190,7 @@ Portable: Humidifier is not installed in a ducted flow distribution system.</Def
     </PropertyDef>
     <PropertyDef ifdguid="d6d9ab00d1e911e1800000215ad4efdf">
       <Name>Weight</Name>
-      <Definition>The weight of the humidifier.</Definition>
+      <Definition>Total weight of object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure" />
@@ -224,7 +224,9 @@ Portable: Humidifier is not installed in a ducted flow distribution system.</Def
     </PropertyDef>
     <PropertyDef ifdguid="e1944000d1e911e1800000215ad4efdf">
       <Name>NominalAirFlowRate</Name>
-      <Definition>Nominal rate of air flow into which water vapor is added.</Definition>
+      <Definition>Nominal air flow rate.
+
+Nominal rate of air flow into which water vapor is added.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumetricFlowRateMeasure" />
@@ -367,7 +369,9 @@ Portable: Humidifier is not installed in a ducted flow distribution system.</Def
     </PropertyDef>
     <PropertyDef ifdguid="11dbde80d1ea11e1800000215ad4efdf">
       <Name>AirPressureDropCurve</Name>
-      <Definition>Air pressure drop versus air-flow rate.</Definition>
+      <Definition>Air pressure drop as a function of air flow rate.
+
+Air pressure drop versus air-flow rate.</Definition>
       <PropertyType>
         <TypePropertyTableValue>
           <Expression />

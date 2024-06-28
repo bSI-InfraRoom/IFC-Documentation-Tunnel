@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="fec5ed14d21e43eeba124e8eb03952d0">
       <Name>TypeDesignation</Name>
-      <Definition>Type designator according to local standards</Definition>
+      <Definition>Type designator for the element. The content depends on local standards. Eg. 'Bull nose', 'Half batter', 'Dropper', 'Chamfer' etc</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -97,7 +97,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="9aa93573818943ee9e7ad7e898fddfae">
       <Name>NominalThickness</Name>
-      <Definition>The nominal  thickness of the entity.</Definition>
+      <Definition>The nominal thickness of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNonNegativeLengthMeasure" />

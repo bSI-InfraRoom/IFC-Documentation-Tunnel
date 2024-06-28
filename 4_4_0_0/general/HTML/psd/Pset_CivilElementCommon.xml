@@ -4,7 +4,10 @@
   <Name>Pset_CivilElementCommon</Name>
   <Definition>Properties common to the definition of all occurrence and type objects of civil element.</Definition>
   <Applicability />
-  <ApplicableClasses />
+  <ApplicableClasses>
+    <ClassName>IfcCivilElement</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcCivilElement</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="70725207486940a2a2df14795defd067">
       <Name>Reference</Name>
@@ -18,6 +21,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="0c528b1c7565457c85ee19a5f19a76f1">
       <Name>Status</Name>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished, "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">

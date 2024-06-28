@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -33,25 +33,26 @@ REFERENCE FROM IFCPRODUCTEXTENSION
 );
 
 TYPE IfcRailTypeEnum = ENUMERATION OF
-	(RACKRAIL
-	,BLADE
-	,GUARDRAIL
-	,STOCKRAIL
+	(BLADE
 	,CHECKRAIL
+	,GUARDRAIL
+	,RACKRAIL
 	,RAIL
+	,STOCKRAIL
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcRailwayPartTypeEnum = ENUMERATION OF
-	(TRACKSTRUCTURE
-	,TRACKSTRUCTUREPART
-	,LINESIDESTRUCTUREPART
-	,DILATATIONSUPERSTRUCTURE
-	,PLAINTRACKSUPERSTRUCTURE
-	,LINESIDESTRUCTURE
-	,SUPERSTRUCTURE
-	,TURNOUTSUPERSTRUCTURE
+	(ABOVETRACK
+	,DILATIONTRACK
+	,LINESIDE
+	,LINESIDEPART
+	,PLAINTRACK
+	,SUBSTRUCTURE
+	,TRACK
+	,TRACKPART
+	,TURNOUTTRACK
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -62,14 +63,14 @@ TYPE IfcRailwayTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcTrackElementTypeEnum = ENUMERATION OF
-	(TRACKENDOFALIGNMENT
-	,BLOCKINGDEVICE
-	,VEHICLESTOP
-	,SLEEPER
-	,HALF_SET_OF_BLADES
-	,SPEEDREGULATOR
+	(BLOCKINGDEVICE
 	,DERAILER
 	,FROG
+	,HALF_SET_OF_BLADES
+	,SLEEPER
+	,SPEEDREGULATOR
+	,TRACKENDOFALIGNMENT
+	,VEHICLESTOP
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -95,18 +96,20 @@ END_ENTITY;
 
 ENTITY IfcRailway
  SUBTYPE OF (IfcFacility);
-	PredefinedType : IfcRailwayTypeEnum;
+	PredefinedType : OPTIONAL IfcRailwayTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcRailwayTypeEnum.USERDEFINED) OR 
-
-EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcRailwayTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcRailwayTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcRailwayPart
  SUBTYPE OF (IfcFacilityPart);
-	PredefinedType : IfcRailwayPartTypeEnum;
+	PredefinedType : OPTIONAL IfcRailwayPartTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <>IfcRailwayPartTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcRailwayPartTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcRailwayPartTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcTrackElement

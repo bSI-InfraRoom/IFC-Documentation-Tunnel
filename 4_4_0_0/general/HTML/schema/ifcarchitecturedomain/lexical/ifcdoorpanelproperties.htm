@@ -47,8 +47,8 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>A door panel is normally a door leaf that opens to allow people or goods to pass. The parameters of the door panel define the geometrically relevant parameter of the panel,</p>
 <p>The <span class="self-ref">IfcDoorPanelProperties</span> are used to parametrically describe the shape and operation of door panels. The parametric definition can be added solely or additionally to the explicit shape representation of the door.</p>
-<p>The <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a> can define doors consisting of more then one panel. In this case, one instance of <span class="self-ref">IfcDoorPanelProperties</span> has to be included for each door panel. The <i>PanelPosition</i> attribute, in conjunction with the <i>IfcDoorStyle.OperationType</i> attribute, determines to which panel the <span class="self-ref">IfcDoorPanelProperties</span> apply. The <span class="self-ref">IfcDoorPanelProperties</span> are included in the list of properties , given by attribute <i>HasPropertySets</i> of the <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>. More information about the door panel can be included in the same list of the <a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a> using the <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> for dynamic extensions.</p>
-<p>The <span class="self-ref">IfcDoorPanelProperties</span> does not hold a geometric representation. However it defines parameters which can be used to create the shape of the door type(which is inserted by the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a> into the spatial context of the project) as shown in Figure 402.</p>
+<p>The <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a> can define doors consisting of more then one panel. In this case, one instance of <span class="self-ref">IfcDoorPanelProperties</span> has to be included for each door panel. The <i>PanelPosition</i> attribute, in conjunction with the <i>IfcDoorStyle.OperationType</i> attribute, determines to which panel the <span class="self-ref">IfcDoorPanelProperties</span> apply. The <span class="self-ref">IfcDoorPanelProperties</span> are included in the list of properties , given by attribute <i>HasPropertySets</i> of the <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>. More information about the door panel can be included in the same list of the <i>IfcDoorStyle</i> using the <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> for dynamic extensions.</p>
+<p>The <span class="self-ref">IfcDoorPanelProperties</span> does not hold a geometric representation. However it defines parameters which can be used to create the shape of the door type(which is inserted by the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a> into the spatial context of the project) as shown in Figure 400.</p>
 <p>The parameters of the <span class="self-ref">IfcDoorPanelProperties</span> define a standard door panel, including (if given) a proportional width to define non-uniform double swing (or sliding, or folding) doors. The outer boundary of the panel is determined by the 'Profile' shape representation assigned to the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a>, which inserts the <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>. It has to take the lining parameter into account as well.</p>
 <p> </p>
 <table>
@@ -76,7 +76,7 @@
   </td>
  </tr>
  <tr>
-  <td><p class="figure">Figure 402 &mdash; Door panel properties</p></td>
+  <td><p class="figure">Figure 400 &mdash; Door panel properties</p></td>
  </tr>
 </table>
 <blockquote class="history">
@@ -93,13 +93,13 @@
 Depth of the door panel, measured perpendicular to the plane of the door leaf.
 </td><td>X</td></tr>
 <tr><td>6</td><td>PanelOperation</td><td><a href="../../ifcarchitecturedomain/lexical/ifcdoorpaneloperationenum.htm">IfcDoorPanelOperationEnum</a></td><td></td><td>
-The <i>PanelOperation</i> defines the way of operation of that panel. The <i>PanelOperation</i> of the door panel has to correspond with the <i>OperationType</i> of the <a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a> by which it is referenced.
+The <i>PanelOperation</i> defines the way of operation of that panel. The <i>PanelOperation</i> of the door panel has to correspond with the <i>OperationType</i> of the <i>IfcDoorStyle</i> by which it is referenced.
 </td><td>X</td></tr>
 <tr><td>7</td><td>PanelWidth</td><td><a href="../../ifcmeasureresource/lexical/ifcnormalisedratiomeasure.htm">IfcNormalisedRatioMeasure</a></td><td>? </td><td>
-Width of this panel, given as ratio relative to the total clear opening width of the door. If omited, it defaults to 1. A value has to be provided for all doors with <i>OperationType</i>'s at <a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a> defining a door with more then one panel.
+Width of this panel, given as ratio relative to the total clear opening width of the door. If omited, it defaults to 1. A value has to be provided for all doors with <i>OperationType</i>'s at <i>IfcDoorStyle</i> defining a door with more then one panel.
 </td><td>X</td></tr>
 <tr><td>8</td><td>PanelPosition</td><td><a href="../../ifcarchitecturedomain/lexical/ifcdoorpanelpositionenum.htm">IfcDoorPanelPositionEnum</a></td><td></td><td>
-Position of this panel within the door. The <i>PanelPosition</i> of the door panel has to correspond with the <i>OperationType</i> of the <a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a> by which it is referenced.
+Position of this panel within the door. The <i>PanelPosition</i> of the door panel has to correspond with the <i>OperationType</i> of the <i>IfcDoorStyle</i> by which it is referenced.
 </td><td>X</td></tr>
 <tr><td>9</td><td>ShapeAspectStyle</td><td><a href="../../ifcrepresentationresource/lexical/ifcshapeaspect.htm">IfcShapeAspect</a></td><td>? </td><td>
 Pointer to the shape aspect, if given. The shape aspect reflects the part of the door shape, which represents the door panel.
@@ -112,9 +112,6 @@ DEPRECATION  The attribute is deprecated and shall no longer be used, i.e. the 
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
 <tr><td>ApplicableToType</td><td>The <span class="self-ref">IfcDoorPanelProperties</span> shall only be used in the context of an <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>.
-<blockquote class="note">
-NOTE  The deprecated entity <a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a> is applicable as well.
-</blockquote>
 </td></tr>
 </table>
 
@@ -180,13 +177,13 @@ IFC4 CHANGE Inverse attribute renamed from PropertyDefinitionOf with upward comp
 Depth of the door panel, measured perpendicular to the plane of the door leaf.
 </td><td>X</td></tr>
 <tr><td>6</td><td>PanelOperation</td><td><a href="../../ifcarchitecturedomain/lexical/ifcdoorpaneloperationenum.htm">IfcDoorPanelOperationEnum</a></td><td></td><td>
-The <i>PanelOperation</i> defines the way of operation of that panel. The <i>PanelOperation</i> of the door panel has to correspond with the <i>OperationType</i> of the <a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a> by which it is referenced.
+The <i>PanelOperation</i> defines the way of operation of that panel. The <i>PanelOperation</i> of the door panel has to correspond with the <i>OperationType</i> of the <i>IfcDoorStyle</i> by which it is referenced.
 </td><td>X</td></tr>
 <tr><td>7</td><td>PanelWidth</td><td><a href="../../ifcmeasureresource/lexical/ifcnormalisedratiomeasure.htm">IfcNormalisedRatioMeasure</a></td><td>? </td><td>
-Width of this panel, given as ratio relative to the total clear opening width of the door. If omited, it defaults to 1. A value has to be provided for all doors with <i>OperationType</i>'s at <a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a> defining a door with more then one panel.
+Width of this panel, given as ratio relative to the total clear opening width of the door. If omited, it defaults to 1. A value has to be provided for all doors with <i>OperationType</i>'s at <i>IfcDoorStyle</i> defining a door with more then one panel.
 </td><td>X</td></tr>
 <tr><td>8</td><td>PanelPosition</td><td><a href="../../ifcarchitecturedomain/lexical/ifcdoorpanelpositionenum.htm">IfcDoorPanelPositionEnum</a></td><td></td><td>
-Position of this panel within the door. The <i>PanelPosition</i> of the door panel has to correspond with the <i>OperationType</i> of the <a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a> by which it is referenced.
+Position of this panel within the door. The <i>PanelPosition</i> of the door panel has to correspond with the <i>OperationType</i> of the <i>IfcDoorStyle</i> by which it is referenced.
 </td><td>X</td></tr>
 <tr><td>9</td><td>ShapeAspectStyle</td><td><a href="../../ifcrepresentationresource/lexical/ifcshapeaspect.htm">IfcShapeAspect</a></td><td>? </td><td>
 Pointer to the shape aspect, if given. The shape aspect reflects the part of the door shape, which represents the door panel.
@@ -240,11 +237,7 @@ DEPRECATION  The attribute is deprecated and shall no longer be used, i.e. the 
 &nbsp;<span class="keyword">WHERE</span><br/>
 &nbsp;&nbsp;ApplicableToType : (EXISTS(SELF\<a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) <br/>
 AND <br/>
-(<br/>
- (&#39;IFCSHAREDBLDGELEMENTS.<a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))<br/>
-  OR<br/>
- (&#39;IFCARCHITECTUREDOMAIN.<a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))<br/>
-);<br/><span class="keyword">END_ENTITY;</span><br/>
+(&#39;IFCSHAREDBLDGELEMENTS.<a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcarchitecturedomain/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

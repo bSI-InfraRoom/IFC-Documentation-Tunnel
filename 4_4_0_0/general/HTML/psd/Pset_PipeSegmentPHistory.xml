@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="849d8780d1f311e1800000215ad4efdf">
       <Name>LeakageCurve</Name>
-      <Definition>Leakage per unit length curve versus working pressure.</Definition>
+      <Definition>Leakage versus pressure drop; Leakage = f (pressure).</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

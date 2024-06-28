@@ -14,7 +14,7 @@
       <Definition>Indicates the number of branches that can be supported by the optical splitter.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

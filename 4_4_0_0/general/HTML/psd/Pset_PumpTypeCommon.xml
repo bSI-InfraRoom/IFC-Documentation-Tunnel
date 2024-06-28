@@ -151,7 +151,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="e6afba00d1fe11e1800000215ad4efdf">
       <Name>ConnectionSize</Name>
-      <Definition>The connection size of the to and from the pump.</Definition>
+      <Definition>The connection size of the object.
+
+The connection to and from the pump.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -168,7 +170,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="edd6c800d1fe11e1800000215ad4efdf">
       <Name>TemperatureRange</Name>
-      <Definition>Allowable operational range of the fluid temperature.</Definition>
+      <Definition>Allowable maximum and minimum temperature.
+
+Allowable operational range of the fluid temperature.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />
@@ -202,7 +206,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="fb8c4d80d1fe11e1800000215ad4efdf">
       <Name>NominalRotationSpeed</Name>
-      <Definition>Pump rotational speed under nominal conditions.</Definition>
+      <Definition>Rotational speed of the object under nominal conditions.
+
+Pump rotational speed under nominal conditions.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcRotationalFrequencyMeasure" />

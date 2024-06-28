@@ -128,7 +128,7 @@
     <PropertyDef ifdguid="0d262300d20811e1800000215ad4efdf">
       <Name>AcousticRating</Name>
       <Definition>Acoustic rating for this object.
-It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorbtion values).</Definition>
+It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorption values).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -176,9 +176,7 @@ It is provided according to the national building code. It indicates the sound t
     </PropertyDef>
     <PropertyDef ifdguid="49598380d20811e1800000215ad4efdf">
       <Name>PitchAngle</Name>
-      <Definition>Angle of the slab to the horizontal when used as a component for the roof (specified as 0 degrees or not asserted for cases where the slab is not used as a roof component).      
-
-The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.  For geometry editing applications, like CAD: this value should be write-only.</Definition>
+      <Definition>Angle of the slab to the horizontal when used as a component for the roof (specified as 0 degrees or not asserted for cases where the slab is not used as a roof component).The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.  For geometry editing applications, like CAD: this value should be write-only.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPlaneAngleMeasure" />
@@ -226,7 +224,8 @@ Dieser Parameter wird zusätzlich zur geometrischen Repräsentation bereitgestel
     </PropertyDef>
     <PropertyDef ifdguid="2038f300d20811e1800000215ad4efdf">
       <Name>SurfaceSpreadOfFlame</Name>
-      <Definition>Indication on how the flames spread around the surface, It is given according to the national building code that governs the fire behaviour for materials.</Definition>
+      <Definition>Indication on how the flames spread around the surface,
+It is given according to the national building code that governs the fire behaviour for materials.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -291,7 +290,7 @@ Dieser Parameter wird zusätzlich zur geometrischen Repräsentation bereitgestel
     </PropertyDef>
     <PropertyDef ifdguid="2e870f00d20811e1800000215ad4efdf">
       <Name>ThermalTransmittance</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of a material. Here the total thermal transmittance coefficient through the slab (including all materials).</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />

@@ -5,15 +5,16 @@
   <Definition>Properties concerning work activities occurring or expected to occur within one or a set of similar spatial structure elements.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcSpace</ClassName>
-    <ClassName> IfcSpatialZone</ClassName>
-    <ClassName> IfcZone</ClassName>
+    <ClassName>IfcSpatialElement</ClassName>
+    <ClassName>IfcSpatialZone</ClassName>
+    <ClassName>IfcZone</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcSpace, IfcSpatialZone, IfcZone</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcSpatialElement,IfcSpatialZone,IfcZone</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="c84fbb80d20a11e1800000215ad4efdf">
       <Name>OccupancyType</Name>
-      <Definition>Occupancy type for this object. It is defined according to the presiding national building code.</Definition>
+      <Definition>Occupancy type for this object.
+It is defined according to the presiding national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

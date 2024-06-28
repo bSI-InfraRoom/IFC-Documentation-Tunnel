@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -90,10 +90,10 @@ END_TYPE;
 
 TYPE IfcPileTypeEnum = ENUMERATION OF
 	(BORED
-	,DRIVEN
-	,JETGROUTING
 	,COHESION
+	,DRIVEN
 	,FRICTION
+	,JETGROUTING
 	,SUPPORT
 	,USERDEFINED
 	,NOTDEFINED);
@@ -107,29 +107,30 @@ TYPE IfcReinforcingBarTypeEnum = ENUMERATION OF
 	,PUNCHING
 	,RING
 	,SHEAR
-	,STUD
 	,SPACEBAR
+	,STUD
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcReinforcingMeshTypeEnum = ENUMERATION OF
-	(USERDEFINED
+	(STEELSTRAPS
+	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcSurfaceFeatureTypeEnum = ENUMERATION OF
-	(MARK
-	,TAG
-	,TREATMENT
-	,DEFECT
+	(DEFECT
 	,HATCHMARKING
 	,LINEMARKING
-	,PAVEMENTSURFACEMARKING
-	,SYMBOLMARKING
+	,MARK
 	,NONSKIDSURFACING
+	,PAVEMENTSURFACEMARKING
 	,RUMBLESTRIP
+	,SYMBOLMARKING
+	,TAG
 	,TRANSVERSERUMBLESTRIP
+	,TREATMENT
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -143,11 +144,11 @@ TYPE IfcTendonAnchorTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcTendonConduitTypeEnum = ENUMERATION OF
-	(DUCT
-	,COUPLER
+	(COUPLER
+	,DIABOLO
+	,DUCT
 	,GROUTING_DUCT
 	,TRUMPET
-	,DIABOLO
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -162,12 +163,12 @@ TYPE IfcTendonTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcVoidingFeatureTypeEnum = ENUMERATION OF
-	(CUTOUT
-	,NOTCH
+	(CHAMFER
+	,CUTOUT
+	,EDGE
 	,HOLE
 	,MITER
-	,CHAMFER
-	,EDGE
+	,NOTCH
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -249,9 +250,9 @@ ENTITY IfcReinforcingBarType
 	BendingShapeCode : OPTIONAL IfcLabel;
 	BendingParameters : OPTIONAL LIST [1:?] OF IfcBendingParameterSelect;
  WHERE
+	BendingShapeCodeProvided : NOT EXISTS(BendingParameters) OR EXISTS(BendingShapeCode);
 	CorrectPredefinedType : (PredefinedType <> IfcReinforcingBarTypeEnum.USERDEFINED) OR
 ((PredefinedType = IfcReinforcingBarTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
-	BendingShapeCodeProvided : NOT EXISTS(BendingParameters) OR EXISTS(BendingShapeCode);
 END_ENTITY;
 
 ENTITY IfcReinforcingElement
@@ -309,9 +310,9 @@ ENTITY IfcReinforcingMeshType
 	BendingShapeCode : OPTIONAL IfcLabel;
 	BendingParameters : OPTIONAL LIST [1:?] OF IfcBendingParameterSelect;
  WHERE
+	BendingShapeCodeProvided : NOT EXISTS(BendingParameters) OR EXISTS(BendingShapeCode);
 	CorrectPredefinedType : (PredefinedType <> IfcReinforcingMeshTypeEnum.USERDEFINED) OR
 ((PredefinedType = IfcReinforcingMeshTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
-	BendingShapeCodeProvided : NOT EXISTS(BendingParameters) OR EXISTS(BendingShapeCode);
 END_ENTITY;
 
 ENTITY IfcSurfaceFeature
@@ -320,7 +321,9 @@ ENTITY IfcSurfaceFeature
  INVERSE
 	AdheresToElement : IfcRelAdheresToElement FOR RelatedSurfaceFeatures;
  WHERE
-	HasObjectType : NOT EXISTS(PredefinedType) OR (PredefinedType <> IfcSurfaceFeatureTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcSurfaceFeatureTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcSurfaceFeatureTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcTendon
@@ -395,7 +398,9 @@ ENTITY IfcVoidingFeature
  SUBTYPE OF (IfcFeatureElementSubtraction);
 	PredefinedType : OPTIONAL IfcVoidingFeatureTypeEnum;
  WHERE
-	HasObjectType : NOT EXISTS(PredefinedType) OR (PredefinedType <> IfcVoidingFeatureTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcVoidingFeatureTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcVoidingFeatureTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 END_SCHEMA;

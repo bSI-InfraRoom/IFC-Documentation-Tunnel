@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -82,18 +82,18 @@ REFERENCE FROM IFCPRESENTATIONAPPEARANCERESOURCE
 );
 
 TYPE IfcEventTriggerTypeEnum = ENUMERATION OF
-	(EVENTRULE
+	(EVENTCOMPLEX
 	,EVENTMESSAGE
+	,EVENTRULE
 	,EVENTTIME
-	,EVENTCOMPLEX
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcEventTypeEnum = ENUMERATION OF
-	(STARTEVENT
-	,ENDEVENT
+	(ENDEVENT
 	,INTERMEDIATEEVENT
+	,STARTEVENT
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -111,10 +111,10 @@ TYPE IfcProcedureTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcSequenceEnum = ENUMERATION OF
-	(START_START
-	,START_FINISH
+	(FINISH_FINISH
 	,FINISH_START
-	,FINISH_FINISH
+	,START_FINISH
+	,START_START
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -186,17 +186,17 @@ ENTITY IfcEventType
 	EventTriggerType : IfcEventTriggerTypeEnum;
 	UserDefinedEventTriggerType : OPTIONAL IfcLabel;
  WHERE
-	CorrectPredefinedType : (PredefinedType <> IfcEventTypeEnum.USERDEFINED) OR ((PredefinedType = IfcEventTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcTypeProcess.ProcessType)) ;
 	CorrectEventTriggerType : (EventTriggerType <> IfcEventTriggerTypeEnum.USERDEFINED) OR ((EventTriggerType = IfcEventTriggerTypeEnum.USERDEFINED) AND EXISTS(UserDefinedEventTriggerType)) ;
+	CorrectPredefinedType : (PredefinedType <> IfcEventTypeEnum.USERDEFINED) OR ((PredefinedType = IfcEventTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcTypeProcess.ProcessType)) ;
 END_ENTITY;
 
 ENTITY IfcProcedure
  SUBTYPE OF (IfcProcess);
 	PredefinedType : OPTIONAL IfcProcedureTypeEnum;
  WHERE
-	HasName : EXISTS(SELF\IfcRoot.Name);
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR (PredefinedType <> IfcProcedureTypeEnum.USERDEFINED) OR
 ((PredefinedType = IfcProcedureTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
+	HasName : EXISTS(SELF\IfcRoot.Name);
 END_ENTITY;
 
 ENTITY IfcProcedureType
@@ -227,8 +227,8 @@ ENTITY IfcTask
 	TaskTime : OPTIONAL IfcTaskTime;
 	PredefinedType : OPTIONAL IfcTaskTypeEnum;
  WHERE
-	HasName : EXISTS(SELF\IfcRoot.Name);
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR (PredefinedType <> IfcTaskTypeEnum.USERDEFINED) OR ((PredefinedType = IfcTaskTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
+	HasName : EXISTS(SELF\IfcRoot.Name);
 END_ENTITY;
 
 ENTITY IfcTaskType

@@ -97,7 +97,7 @@
       <Definition>Number of overlapping spans in the overhead contactline system.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -105,7 +105,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="7487d57736e44a609d2e2511a63dfa35">
       <Name>PantographType</Name>
-      <Definition>Indicates the type of pantograph as a desgin parameter for the overhead contactline system.</Definition>
+      <Definition>Indicates the type of pantograph as a design parameter for the overhead contactline system.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -116,7 +116,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="671c4f7dfe5949a6b2c4e5a8b60d063f">
       <Name>TensionLength</Name>
-      <Definition>Length of overhead contactline between two teminating points. It is a design parameter for the overhead contactline system.</Definition>
+      <Definition>Length of overhead contactline between two terminating points. It is a design parameter for the overhead contactline system.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

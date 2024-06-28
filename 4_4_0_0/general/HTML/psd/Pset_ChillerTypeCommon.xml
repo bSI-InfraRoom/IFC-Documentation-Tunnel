@@ -120,7 +120,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="fe6c4b80d1c811e1800000215ad4efdf">
-      <Name>NominalCapacity</Name>
+      <Name>ChillerCapacity</Name>
       <Definition>Nominal cooling capacity of chiller at standardized conditions as defined by the agency having jurisdiction.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -138,7 +138,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="04622c80d1c911e1800000215ad4efdf">
       <Name>NominalEfficiency</Name>
-      <Definition>Nominal chiller efficiency under nominal conditions.</Definition>
+      <Definition>Nominal object efficiency under nominal conditions.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure" />
@@ -223,8 +223,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="1e9c0a80d1c911e1800000215ad4efdf">
       <Name>CapacityCurve</Name>
-      <Definition>Chiller cooling capacity is a function of condensing temperature and evaporating temperature, data is in table form, Capacity = f (TempCon, TempEvp), capacity = a1+b1\*Tei+c1\*Tei\^2+d1\*Tci+e1\*Tci\^2+f1\*Tei\*Tci. 
-This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcPropertyConstraintRelationship and IfcMetric.  Columns are specified in the following order: 
+      <Definition>Chiller cooling capacity is a function of condensing temperature and evaporating temperature, data is in table form, Capacity = f (TempCon, TempEvp), capacity = a1+b1*Tei+c1*Tei\^2+d1*Tci+e1*Tci\^2+f1*Tei*Tci. This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcResourceConstraintRelationship and IfcMetric. Columns are specified in the following order:
 1.IfcPowerMeasure:Capacity
 2.IfcThermodynamicTemperatureMeasure:CondensingTemperature
 3.IfcThermodynamicTemperatureMeasure:EvaporatingTemperature</Definition>
@@ -254,9 +253,7 @@ Ce tableau utilises plusieurs entrées variables; pour la  représenter, Definin
     </PropertyDef>
     <PropertyDef ifdguid="278cdc00d1c911e1800000215ad4efdf">
       <Name>CoefficientOfPerformanceCurve</Name>
-      <Definition>Chiller coefficient of performance (COP) is function of condensing temperature and evaporating temperature, data is in table form, COP= f (TempCon, TempEvp), COP = a2+b2\*Tei+c2\*Tei\^2+d2\*Tci+e2\*Tci\^2+f2\*Tei\*Tci. 
-This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcPropertyConstraintRelationship and IfcMetric.  Columns are specified in the following order: 
-1.IfcPositiveRatioMeasure:CoefficientOfPerformance
+      <Definition>Chiller coefficient of performance (COP) is function of condensing temperature and evaporating temperature, data is in table form, COP= f (TempCon, TempEvp), COP = a2+b2*Tei+c2*Tei\^2+d2*Tci+e2*Tci\^2+f2*Tei*Tci. This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcResourceConstraintRelationship and IfcMetric. Columns are specified in the following order: 1.IfcPositiveRatioMeasure:CoefficientOfPerformance
 2.IfcThermodynamicTemperatureMeasure:CondensingTemperature
 3.IfcThermodynamicTemperatureMeasure:EvaporatingTemperature</Definition>
       <PropertyType>

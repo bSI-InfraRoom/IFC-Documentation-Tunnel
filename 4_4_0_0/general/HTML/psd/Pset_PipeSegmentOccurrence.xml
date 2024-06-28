@@ -9,9 +9,9 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcPipeSegment</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="659ef580d1f311e1800000215ad4efdf">
+    <PropertyDef ifdguid="c974ee80d1f211e1800000215ad4efdf">
       <Name>InteriorRoughnessCoefficient</Name>
-      <Definition>The interior roughness coefficient of the pipe segment.</Definition>
+      <Definition>The interior roughness of the material of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -26,11 +26,9 @@
         <DefinitionAlias lang="ja-JP">配管部の内部粗度係数</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="6c2d6d00d1f311e1800000215ad4efdf">
-      <Name>Color</Name>
-      <Definition>The color of the pipe segment.
-
-Note: This is typically used only for plastic pipe segments. However, it may be used for any pipe segments with a painted surface which is not otherwise specified as a covering.</Definition>
+    <PropertyDef ifdguid="d0036600d1f211e1800000215ad4efdf">
+      <Name>Colour</Name>
+      <Definition>Colour of this object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -42,7 +40,7 @@ Note: This is typically used only for plastic pipe segments. However, it may be 
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">配管部の内部粗度係数　記：この語はプラスチック配管にのみ使われる。しかしながら、保護のためではない塗装された表面を持つ配管にも使われる。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">配管部の内部粗度係数　記：プラスチック配管にのみ使われる。保護のためではない塗装された表面を持つ配管にも使われる。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="73547b00d1f311e1800000215ad4efdf">

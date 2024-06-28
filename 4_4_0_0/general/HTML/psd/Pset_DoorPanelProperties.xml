@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="cb85a0e6eec1452c8613b36c90a7fc57" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_DoorPanelProperties</Name>
+  <Definition>Properties of the door panel.
+
+&gt; HISTORY&amp;nbsp; New property set in IFC4.3.2.0 to replace the entity IfcDoorPanelProperties</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcDoor</ClassName>
+    <ClassName>IfcPlate</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcDoor,IfcPlate</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="69d9e29e00f5463aa650183ac60a99df">
+      <Name>PanelDepth</Name>
+      <Definition>Depth of the panel.
+
+For a door, it is the depth of the door panel, measured perpendicular to the plane of the door leaf.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="64f02af0bcbf40deae5590cbf9486be9">
+      <Name>PanelOperation</Name>
+      <Definition>The way of operation of a panel.
+
+For a door, it is the way of operation of the panel. The PanelOperation of the door panel shall correspond to the OperationType of the _IfcDoorType_ by which it is referenced.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_DoorPanelOperationEnum">
+            <EnumItem>DOUBLE_ACTING</EnumItem>
+            <EnumItem>FIXED_PANEL</EnumItem>
+            <EnumItem>FOLDING</EnumItem>
+            <EnumItem>REVOLVING</EnumItem>
+            <EnumItem>ROLLINGUP</EnumItem>
+            <EnumItem>SLIDING</EnumItem>
+            <EnumItem>SWINGING</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>DOUBLE_ACTING</Name>
+              <Definition>Double acting:
+!["DOUBLE_ACTING"](../../../../../../figures/ifcdoorpaneloperationenum-fig02.gif "Figure 1")</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FIXED_PANEL</Name>
+              <Definition>Fixed panel:
+!["FIXEDPANEL"](../../../../../../figures/ifcdoorpaneloperationenum-fig07.gif "Figure 1")</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FOLDING</Name>
+              <Definition>Folding:
+!["FOLDING"](../../../../../../figures/ifcdoorpaneloperationenum-fig04.gif "Figure 1")</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>REVOLVING</Name>
+              <Definition>Revolving:
+!["REVOLVING"](../../../../../../figures/ifcdoorpaneloperationenum-fig05.gif "Figure 1")</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ROLLINGUP</Name>
+              <Definition>Rolling up:
+!["ROLLINGUP"](../../../../../../figures/ifcdoorpaneloperationenum-fig06.gif "Figure 1")</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SLIDING</Name>
+              <Definition>Sliding:
+!["SLIDING"](../../../../../../figures/ifcdoorpaneloperationenum-fig03.gif "Figure 1")</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SWINGING</Name>
+              <Definition>Swinging:
+!["SWINGING"](../../../../../../figures/ifcdoorpaneloperationenum-fig01.gif "Figure 1")</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <Definition>required category not on scale</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Notdefined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="395f15be78ab413db794931bba6dba35">
+      <Name>PanelWidth</Name>
+      <Definition>Width of the panel.
+
+For a door, it is the width of the panel, given as ratio relative to the total clear opening width of the door. If omitted, it defaults to 1. A value shall be provided for all doors with OperationType's at IfcDoorType defining a door with more then one panel.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNormalisedRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8fd6c47cf4634aad8bbaf2c8c6c69823">
+      <Name>PanelPosition</Name>
+      <Definition>Position of the panel.
+
+For a door, it is the position of the panel within the door. The PanelPosition of the door panel shall correspond to the OperationType of the _IfcDoorType_ by which it is referenced.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_DoorPanelPositionEnum">
+            <EnumItem>LEFT</EnumItem>
+            <EnumItem>MIDDLE</EnumItem>
+            <EnumItem>RIGHT</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>LEFT</Name>
+              <Definition>Left</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Left</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MIDDLE</Name>
+              <Definition>Middle</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>RIGHT</Name>
+              <Definition>Right</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Right</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <Definition>required category not on scale</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

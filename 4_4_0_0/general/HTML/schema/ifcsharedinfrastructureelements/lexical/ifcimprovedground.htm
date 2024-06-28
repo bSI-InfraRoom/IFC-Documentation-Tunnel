@@ -11,7 +11,7 @@
     <title>IfcImprovedGround</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 5 index3 3 index4 24 index5 0; }
+      body { counter-reset: index1 6 index2 5 index3 3 index4 25 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.5.3.25");
+    parent.index.location.replace("../../toc-6.htm#6.5.3.26");
 //-->
 </script>
 
@@ -30,9 +30,9 @@
 </details>
 <details open="open"><summary>Change log</summary><table class="gridtable">
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcimprovedground.htm">IfcImprovedGround</a></td><td></td><td></td><td>MODIFIED</td><td>Name changed from <i>IfcReinforcedSoil</i> to <i>IfcImprovedGround</i>. <br/></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PredefinedType</td><td></td><td></td><td>MODIFIED</td><td>Type changed from <i>IfcReinforcedSoilTypeEnum</i> to <i>IfcImprovedGroundTypeEnum</i>. <br/>Instantiation changed from <i>OPTIONAL</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PredefinedType</td><td>X</td><td>X</td><td>MODIFIED</td><td>Type changed from <i>IfcReinforcedSoilTypeEnum</i> to <i>IfcImprovedGroundTypeEnum</i>. <br/>Instantiation changed from <i>OPTIONAL</i>. <br/></td></tr>
 </table>
 </details>
 <section>
@@ -49,7 +49,7 @@ Identifies the predefined type (methods) of improving the ground. This type may 
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>HasObjectType</td><td>The attribute ObjectType shall be given if the predefined type is set to USERDEFINED.
+<tr><td>CorrectPredefinedType</td><td>The attribute ObjectType shall be given if the predefined type is set to USERDEFINED.
 </td></tr>
 </table>
 
@@ -286,7 +286,8 @@ Identifies the predefined type (methods) of improving the ground. This type may 
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkselement.htm">IfcEarthworksElement</a>)<b>;</b><br/>
 &nbsp;&nbsp;PredefinedType : <a href="../../ifcsharedinfrastructureelements/lexical/ifcimprovedgroundtypeenum.htm">IfcImprovedGroundTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasObjectType : (PredefinedType &lt;&gt; <a href="../../ifcsharedinfrastructureelements/lexical/ifcimprovedgroundtypeenum.htm">IfcImprovedGroundTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : (PredefinedType &lt;&gt; <a href="../../ifcsharedinfrastructureelements/lexical/ifcimprovedgroundtypeenum.htm">IfcImprovedGroundTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
+ ((PredefinedType = <a href="../../ifcsharedinfrastructureelements/lexical/ifcimprovedgroundtypeenum.htm">IfcImprovedGroundTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS (SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedinfrastructureelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

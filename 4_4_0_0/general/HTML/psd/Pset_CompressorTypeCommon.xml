@@ -198,7 +198,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="36748e00d1cb11e1800000215ad4efdf">
       <Name>RefrigerantClass</Name>
-      <Definition>Refrigerant class used by the compressor.
+      <Definition>Refrigerant class used by the object.
 
 CFC: Chlorofluorocarbons.
 HCFC: Hydrochlorofluorocarbons.
@@ -372,7 +372,9 @@ HFC</DefinitionAlias>
     </PropertyDef>
     <PropertyDef ifdguid="5dcb5b00d1cb11e1800000215ad4efdf">
       <Name>NominalCapacity</Name>
-      <Definition>Compressor nameplate capacity.</Definition>
+      <Definition>The total nominal or volumetric capacity of the object.
+
+Compressor nameplate capacity.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPowerMeasure" />
@@ -440,7 +442,7 @@ HFC</DefinitionAlias>
     </PropertyDef>
     <PropertyDef ifdguid="76d40c00d1cb11e1800000215ad4efdf">
       <Name>ImpellerDiameter</Name>
-      <Definition>Diameter of compressor impeller - used to scale performance of geometrically similar compressors.</Definition>
+      <Definition>Diameter of object - used to scale performance of geometrically similar objects.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

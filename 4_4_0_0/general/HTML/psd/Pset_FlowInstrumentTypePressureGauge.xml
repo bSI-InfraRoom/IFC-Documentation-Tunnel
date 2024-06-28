@@ -90,7 +90,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="caece980d1e711e1800000215ad4efdf">
       <Name>DisplaySize</Name>
-      <Definition>The physical size of the display. For a dial pressure gauge it will be the diameter of the dial.</Definition>
+      <Definition>The physical size of the display.
+
+For a dial pressure gauge it will be the diameter of the dial.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

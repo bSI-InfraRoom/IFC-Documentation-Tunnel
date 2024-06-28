@@ -128,7 +128,7 @@
     <PropertyDef ifdguid="24f3ac00d1f411e1800000215ad4efdf">
       <Name>AcousticRating</Name>
       <Definition>Acoustic rating for this object.
-It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorbtion values).</Definition>
+It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorption values).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -175,8 +175,7 @@ It is provided according to the national building code. It indicates the sound t
     </PropertyDef>
     <PropertyDef ifdguid="31780480d1f411e1800000215ad4efdf">
       <Name>ThermalTransmittance</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of a material.
-It applies to the total door construction.</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />
@@ -224,8 +223,7 @@ Hier der Gesamtwärmedurchgangskoeffizient der Platte (für alle Schichten).</De
     </PropertyDef>
     <PropertyDef ifdguid="2c1aba00d1f411e1800000215ad4efdf">
       <Name>FireRating</Name>
-      <Definition>Fire rating for this object.
-It is given according to the national fire safety classification.</Definition>
+      <Definition>Fire rating for this object. It is given according to the national fire safety classification.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

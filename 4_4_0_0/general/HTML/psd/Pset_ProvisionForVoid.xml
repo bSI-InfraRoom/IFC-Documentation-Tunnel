@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="65610d7504fb4afe9c45a864bf11d9e5" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ProvisionForVoid</Name>
+  <Definition>Properties for Provisions For Voids.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcBuildingElementProxy/PROVISIONFORVOID</ClassName>
+    <ClassName>IfcVirtualElement/PROVISIONFORVOID</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcBuildingElementProxy/PROVISIONFORVOID,IfcVirtualElement/PROVISIONFORVOID</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="5102efd5730f4a5f898a3b0c54969d2f">
+      <Name>VoidShape</Name>
+      <Definition>The shape form of the provision for void, the minimum set of agreed values includes 'Rectangle', 'Round', and 'Undefined'.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ed8e551cc017494fa2add6b6ecbe609d">
+      <Name>Width</Name>
+      <Definition>The width of the object. Only given, if the object has constant thickness (prismatic).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="efa1bc0d12af4e9dbab13785728a1241">
+      <Name>Height</Name>
+      <Definition>Characteristic height
+
+Vertical extension in elevation. Only provided if the Shape property is set to "rectangle".</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="218f70199667485e864fd1cfccefa8bb">
+      <Name>Diameter</Name>
+      <Definition>The Diameter of the object.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2d9602961dd94354b0a3e8725581df62">
+      <Name>Depth</Name>
+      <Definition>The depth of the object.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="24cad75612214fd78f8df9bd9f44ff97">
+      <Name>System</Name>
+      <Definition>The building service system that requires the provision for voids, e.g. 'Air Conditioning', 'Plumbing', 'Electro', etc.
+
+Reference to the building service is done using the Name attribute.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

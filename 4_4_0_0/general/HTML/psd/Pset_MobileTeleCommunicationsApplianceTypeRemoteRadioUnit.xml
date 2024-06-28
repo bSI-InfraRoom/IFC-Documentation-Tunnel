@@ -25,7 +25,7 @@
       <Definition>Indicates how many carrier frequencies can be managed by the device.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -95,7 +95,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="99f36675d14b43919826a691c1363d8a">
       <Name>AntennaType</Name>
-      <Definition>Indicates the type of antenna integrated in the device.</Definition>
+      <Definition>Indicates the type of antenna.
+
+Indicates the type of antenna integrated in the device.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

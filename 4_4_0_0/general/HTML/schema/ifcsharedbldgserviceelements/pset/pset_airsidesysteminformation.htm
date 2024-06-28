@@ -27,7 +27,7 @@
 <h4 class="std">6.2.4.1 Pset_AirSideSystemInformation</h4>
 <p><span class="self-ref">PSET_OCCURRENCEDRIVEN</span>
 /
-<span class="self-ref">IfcSpace,IfcZone,IfcSpatialZone</span>
+<span class="self-ref">IfcZone,IfcSpatialZone,IfcSpatialElement</span>
 </p><table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Air Side System Information</b></td><td>Attributes that apply to an air side HVAC system.
 <blockquote class="history">
@@ -44,29 +44,13 @@ HISTORY: New property set in IFC Release 1.0.
 
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
-<tr><td>Name</td><td>
-<span class="self-ref">P_SINGLEVALUE</span>
-/
-<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
-</td><td>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Name</b></td><td>The name of the air side system.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>名前</b></td><td>空調方式の名称。
-</td></tr>
-</table>
-</td></tr>
 <tr><td>Description</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>
 </td><td>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Description</b></td><td>The description of the air side system.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>説明</b></td><td>空調方式の説明。
-</td></tr>
-</table>
+The Description of the object.
+
 </td></tr>
 <tr><td>AirSideSystemType</td><td>
 <span class="self-ref">P_ENUMERATEDVALUE</span>
@@ -92,18 +76,6 @@ HISTORY: New property set in IFC Release 1.0.
 </td></tr>
 </table>
 </td></tr>
-<tr><td>TotalAirflow</td><td>
-<span class="self-ref">P_SINGLEVALUE</span>
-/
-<a href="../../ifcmeasureresource/lexical/ifcvolumetricflowratemeasure.htm">IfcVolumetricFlowRateMeasure</a>
-</td><td>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Total Airflow</b></td><td>The total design supply air flowrate required for the system for either heating or cooling conditions, whichever is greater.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>給気量</b></td><td>暖房、冷房の条件の、いずれか大きい条件で要求される設計給気量。
-</td></tr>
-</table>
-</td></tr>
 <tr><td>EnergyGainTotal</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
@@ -113,18 +85,6 @@ HISTORY: New property set in IFC Release 1.0.
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Energy Gain Total</b></td><td>The total amount of energy gains for the spaces served by the system during the peak cooling conditions, plus any system-level total energy gains.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>総熱取得</b></td><td>居室の最大冷房負荷と空調システム（機器等）の再熱負荷による最大熱負荷。
-</td></tr>
-</table>
-</td></tr>
-<tr><td>AirflowSensible</td><td>
-<span class="self-ref">P_SINGLEVALUE</span>
-/
-<a href="../../ifcmeasureresource/lexical/ifcvolumetricflowratemeasure.htm">IfcVolumetricFlowRateMeasure</a>
-</td><td>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Airflow Sensible</b></td><td>The air flowrate required to satisfy the sensible peak loads.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>顕熱空調給気量</b></td><td>最大潜熱負荷に対応する給気量。
 </td></tr>
 </table>
 </td></tr>
@@ -152,23 +112,11 @@ HISTORY: New property set in IFC Release 1.0.
 </td></tr>
 </table>
 </td></tr>
-<tr><td>LightingDiversity</td><td>
-<span class="self-ref">P_SINGLEVALUE</span>
-/
-<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
-*</td><td>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Lighting Diversity</b></td><td>Lighting diversity.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>照明負荷係数</b></td><td>照明負荷係数。
-</td></tr>
-</table>
-</td></tr>
 <tr><td>InfiltrationDiversitySummer</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
-*</td><td>
+</td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Infiltration Diversity Summer</b></td><td>Diversity factor for Summer infiltration.
 </td></tr>
@@ -180,7 +128,7 @@ HISTORY: New property set in IFC Release 1.0.
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
-*</td><td>
+</td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Infiltration Diversity Winter</b></td><td>Diversity factor for Winter infiltration.
 </td></tr>
@@ -192,23 +140,11 @@ HISTORY: New property set in IFC Release 1.0.
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
-*</td><td>
+</td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Appliance Diversity</b></td><td>Diversity of appliance load.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>機器の負荷率</b></td><td>機器の負荷率。
-</td></tr>
-</table>
-</td></tr>
-<tr><td>LoadSafetyFactor</td><td>
-<span class="self-ref">P_SINGLEVALUE</span>
-/
-<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
-*</td><td>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Load Safety Factor</b></td><td>Load safety factor.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>負荷の安全率</b></td><td>空調負荷計算用の安全率（割増係数）。
 </td></tr>
 </table>
 </td></tr>

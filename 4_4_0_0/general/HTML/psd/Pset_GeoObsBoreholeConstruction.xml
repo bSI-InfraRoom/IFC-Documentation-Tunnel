@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="eb3a13d4e62c40569c623ff416a46863" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoObsBoreholeConstruction</Name>
+  <Definition>Properties for describing the construction of a borehole.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcBorehole</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcBorehole</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="c24d521febf5492eb5c736af0097d65e">
+      <Name>DrillingDiameter</Name>
+      <Definition>Drilled Borehole diameter.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="3028a06a808f47c28e5caa79a82d2cc5">
+      <Name>LiningMaterial</Name>
+      <Definition>The material of the lining for borehole wall stabilizing.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcMaterialDefinition" />
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="e9384a16c4c747a39a1a49c93059abe3">
+      <Name>BoreholeFilter</Name>
+      <Definition>Identification of filter segment installed in the casing of a borehole.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="32006e57820240078f3f0744d3db6807">
+      <Name>BoreholeInstallation</Name>
+      <Definition>Equipment installed in the borehole.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

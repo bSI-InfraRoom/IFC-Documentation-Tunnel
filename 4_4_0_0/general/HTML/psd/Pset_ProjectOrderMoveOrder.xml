@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="cfb99980d1f711e1800000215ad4efdf">
       <Name>SpecialInstructions</Name>
-      <Definition>Special instructions that affect the move.</Definition>
+      <Definition>Special instructions.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText" />

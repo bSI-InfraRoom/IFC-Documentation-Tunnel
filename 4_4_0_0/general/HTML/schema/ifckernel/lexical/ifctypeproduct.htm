@@ -89,10 +89,8 @@ IFC4 CHANGE  New inverse relationship.
 <h5 class="num">Inherited definitions from supertypes</h5>
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifctypeproduct.png" usemap="#f"/>
 <map name="f">
-<area shape="rect" coords="54,102,242,114" href="../../../schema/ifcarchitecturedomain/lexical/ifcdoorstyle.htm" alt="IfcDoorStyle" />
-<area shape="rect" coords="54,126,242,138" href="../../../schema/ifcproductextension/lexical/ifcelementtype.htm" alt="IfcElementType" />
-<area shape="rect" coords="54,150,242,162" href="../../../schema/ifcproductextension/lexical/ifcspatialelementtype.htm" alt="IfcSpatialElementType" />
-<area shape="rect" coords="54,174,242,186" href="../../../schema/ifcarchitecturedomain/lexical/ifcwindowstyle.htm" alt="IfcWindowStyle" />
+<area shape="rect" coords="54,102,242,114" href="../../../schema/ifcproductextension/lexical/ifcelementtype.htm" alt="IfcElementType" />
+<area shape="rect" coords="54,126,242,138" href="../../../schema/ifcproductextension/lexical/ifcspatialelementtype.htm" alt="IfcSpatialElementType" />
 <area shape="rect" coords="30,54,266,66" href="../../../schema/ifckernel/lexical/ifctypeobject.htm" alt="IfcTypeObject" />
 <area shape="rect" coords="18,30,278,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
 <area shape="rect" coords="6,6,290,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
@@ -267,7 +265,7 @@ IFC4 CHANGE  New inverse relationship.
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcTypeProduct<br/>
-&nbsp;<span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcarchitecturedomain/lexical/ifcdoorstyle.htm">IfcDoorStyle</a>, <a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a>, <a href="../../ifcproductextension/lexical/ifcspatialelementtype.htm">IfcSpatialElementType</a>, <a href="../../ifcarchitecturedomain/lexical/ifcwindowstyle.htm">IfcWindowStyle</a>))<br/>
+&nbsp;<span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a>, <a href="../../ifcproductextension/lexical/ifcspatialelementtype.htm">IfcSpatialElementType</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>)<b>;</b><br/>
 &nbsp;&nbsp;RepresentationMaps : <span class="keyword">OPTIONAL</span> <span class="keyword">LIST</span> [1:?] <span class="keyword">OF</span> <span class="keyword">UNIQUE</span> <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a>;<br/>
 &nbsp;&nbsp;Tag : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>

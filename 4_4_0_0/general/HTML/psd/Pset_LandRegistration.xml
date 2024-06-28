@@ -32,7 +32,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="73e91380d1eb11e1800000215ad4efdf">
       <Name>IsPermanentID</Name>
-      <Definition>Indicates whether the identity assigned to a land parcel is permanent (= TRUE) or temporary (=FALSE).</Definition>
+      <Definition>Indicates whether the identity assigned to the object is permanent (= TRUE) or temporary (=FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

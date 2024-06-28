@@ -39,19 +39,21 @@
         <DefinitionAlias lang="fr-FR">EER, coefficient d'efficacité Thermique</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="e09fe600d1ca11e1800000215ad4efdf">
+    <PropertyDef ifdguid="e0065000d1c811e1800000215ad4efdf">
       <Name>CoefficientOfPerformance</Name>
-      <Definition>Coefficient of performance (COP).</Definition>
+      <Definition>The Coefficient of performance (COP) is the ratio of heat removed to energy input. The energy input may be obtained by multiplying Pset_DistributionPortPHistoryGas.FlowRate on the 'Fuel' port of the IfcChiller by Pset_MaterialFuel.LowerHeatingValue. The IfcDistributionPort for fuel has an associated IfcMaterial with fuel properties and is assigned to an IfcPerformanceHistory object nested within this IfcPerformanceHistory object.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Coefficient Of Performance</NameAlias>
-        <NameAlias lang="fr-FR">CoefficientPerformance</NameAlias>
+        <NameAlias lang="fr-FR">CoefficientDePerformance</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="fr-FR">Coefficient de performance (COP).</DefinitionAlias>
+        <DefinitionAlias lang="fr-FR">Le coefficient de performance (COP) est le rapport entre l'énergie calorifique fournie sur l'énergie abosrbée.
+L'énergie fournie peut être obtenue en multipliant Pset_DistributionPortHistoryGas.flowRate depuis le port du IfcChiller par Pset_MaterialFuel.LowerHeatingValue.
+Le IfcDistributionPort pour combustible est associé à IfcMaterial pour les propriétés du combustible et est atrribué à l'objet IfcPerformanceHistory situé à l'intérieur même de cet objet IfcPerformanceHistory.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="e4336d00d1ca11e1800000215ad4efdf">
@@ -86,7 +88,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="ea294e00d1ca11e1800000215ad4efdf">
       <Name>MechanicalEfficiency</Name>
-      <Definition>Ratio of the work (as measured) delivered to the gas to the work input to the compressor shaft.</Definition>
+      <Definition>The objects operational mechanical efficiency.
+
+Ratio of the work (as measured) delivered to the gas to the work input to the compressor shaft.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

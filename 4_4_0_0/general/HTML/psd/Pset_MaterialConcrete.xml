@@ -5,13 +5,13 @@
   <Definition>A set of extended mechanical properties related to concrete materials.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcMaterial/Concrete</ClassName>
+    <ClassName>IfcMaterial</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcMaterial/Concrete</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcMaterial</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="ea3a4580d1ec11e1800000215ad4efdf">
       <Name>CompressiveStrength</Name>
-      <Definition>The compressive strength of the concrete.</Definition>
+      <Definition>The compressive strength of the object or material.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure" />

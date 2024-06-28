@@ -42,7 +42,7 @@ HISTORY: IFC 2x4: AssemblyPlace property added. This property does not need to b
     </PropertyDef>
     <PropertyDef ifdguid="56687980d1ec11e1800000215ad4efdf">
       <Name>SerialNumber</Name>
-      <Definition>The serial number assigned to an occurrence of a product.</Definition>
+      <Definition>The manufacturer's serial number assigned to an occurrence of a product.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier" />

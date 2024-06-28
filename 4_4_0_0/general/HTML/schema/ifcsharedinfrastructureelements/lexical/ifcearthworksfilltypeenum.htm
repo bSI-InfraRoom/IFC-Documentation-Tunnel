@@ -42,14 +42,14 @@
 <tr><th>Constant</th><th>Description</th></tr>
 <tr><td>BACKFILL</td><td><p>Fill behind retaining walls or other structures such as quays, behind abutments and bridges.</p>
 </td></tr><tr><td>COUNTERWEIGHT</td><td><p>Embankment built on the side of the main road structure to reduce the settlement of the road.</p>
+</td></tr><tr><td>EMBANKMENT</td><td><p>Predominantly longitudinal type of earthworks element with no other particular assigned type according to its role in Pavement or Subgrade.
+NOTE Definition from ISO6707-1: section of earthworks, often formed by cut or fill, where the finished ground level is above or below original ground level and whose length usually greatly exceeds its width.</p>
+</td></tr><tr><td>SLOPEFILL</td><td><p>Side slope (batter) fill abutting the road structure or back slope fill.</p>
 </td></tr><tr><td>SUBGRADE</td><td><p>Type of earthworks element forming the structure below pavement and above natural soil.
 NOTE Definition from ISO 6707-1: upper part of the soil, natural or constructed, that supports the loads transmitted by the overlying structure of a road, runway, or similar hard surface.
 NOTE Definition from PIARC: Upper layer of the natural ground upon which the pavement is constructed.</p>
-</td></tr><tr><td>EMBANKMENT</td><td><p>Predominantly longitudinal type of earthworks element with no other particular assigned type according to its role in Pavement or Subgrade.
-NOTE Definition from ISO6707-1: section of earthworks, often formed by cut or fill, where the finished ground level is above or below original ground level and whose length usually greatly exceeds its width.</p>
-</td></tr><tr><td>TRANSITIONSECTION</td><td><p>Section of subgrade to ensure the consistency of stiffness and prevent uneven settlement. Transition section may appear e.g. between: embankment and bridge abutment; embankment and transverse structure; cutting and tunnel; embankment and cutting.</p>
 </td></tr><tr><td>SUBGRADEBED</td><td><p>Upper part of the soil, natural or constructed, that supports the loads transmitted by the overlying structure of a road, runway, or similar hard surface.</p>
-</td></tr><tr><td>SLOPEFILL</td><td><p>Side slope (batter) fill abutting the road structure or back slope fill.</p>
+</td></tr><tr><td>TRANSITIONSECTION</td><td><p>Section of subgrade to ensure the consistency of stiffness and prevent uneven settlement. Transition section may appear e.g. between: embankment and bridge abutment; embankment and transverse structure; cutting and tunnel; embankment and cutting.</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined type</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined type.</p>
 </td></tr></table>
@@ -61,11 +61,11 @@ NOTE Definition from ISO6707-1: section of earthworks, often formed by cut or fi
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;backfill&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;counterweight&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;subgrade&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;embankment&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;transitionsection&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;subgradebed&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;slopefill&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;subgrade&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;subgradebed&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;transitionsection&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -73,7 +73,7 @@ NOTE Definition from ISO6707-1: section of earthworks, often formed by cut or fi
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcEarthworksFillTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;BACKFILL, <br/>&nbsp;COUNTERWEIGHT, <br/>&nbsp;SUBGRADE, <br/>&nbsp;EMBANKMENT, <br/>&nbsp;TRANSITIONSECTION, <br/>&nbsp;SUBGRADEBED, <br/>&nbsp;SLOPEFILL, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;BACKFILL, <br/>&nbsp;COUNTERWEIGHT, <br/>&nbsp;EMBANKMENT, <br/>&nbsp;SLOPEFILL, <br/>&nbsp;SUBGRADE, <br/>&nbsp;SUBGRADEBED, <br/>&nbsp;TRANSITIONSECTION, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedinfrastructureelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

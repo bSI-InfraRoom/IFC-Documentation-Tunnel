@@ -55,8 +55,8 @@
 <blockquote class="note">
 <p>NOTE  In case of the <i>BasisCurve</i> being a closed curve, such as an <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a> or <a href="../../ifcgeometryresource/lexical/ifcellipse.htm">IfcEllipse</a>, the <i>SenseAgreement</i> affects the geometric shape of the <span class="self-ref">IfcTrimmedCurve</span>.</p>
 </blockquote>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifctrimmedcurve_parameterization.png" alt="&quot;curve parameterization&quot;" title="Figure 510 &mdash; Trimmed curve parameterization"></td></tr><tr><td><p class="figure">Figure 510 &mdash; Trimmed curve parameterization</p></td></tr></table></p>
-<p>Figure 510 shows the four arcs (dashed blue and green lines with arrow showing different orientations) that can be defined by the same <i>BasisCurve</i> (of type <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a>) and the same trimming points (given by Cartesian points and parameter values) by using different assignments to <i>Trim1</i> and <i>Trim2</i> and <i>SenseAgreement</i>.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifctrimmedcurve_parameterization.png" alt="&quot;curve parameterization&quot;" title="Figure 508 &mdash; Trimmed curve parameterization"></td></tr><tr><td><p class="figure">Figure 508 &mdash; Trimmed curve parameterization</p></td></tr></table></p>
+<p>Figure 508 shows the four arcs (dashed blue and green lines with arrow showing different orientations) that can be defined by the same <i>BasisCurve</i> (of type <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a>) and the same trimming points (given by Cartesian points and parameter values) by using different assignments to <i>Trim1</i> and <i>Trim2</i> and <i>SenseAgreement</i>.</p>
 <blockquote class="note">
 <p>NOTE  Since the <i>BasisCurve</i> is closed (type <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a>), the exception of the informal proposition IP3 applies, i.e. the sense flag is not required to be consistent with the parameter values of <i>Trim1</i> and <i>Trim1</i>, so the rule (sense = parameter 1 &lt; parameter 2) may not be fulfilled.</p>
 </blockquote>
@@ -121,11 +121,11 @@ Where both parameter and point are present at either end of the curve this indic
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
+<tr><td>NoTrimOfBoundedCurves</td><td>Already bounded curves shall not be trimmed.
+</td></tr>
 <tr><td>Trim1ValuesConsistent</td><td>Either a single value is specified for Trim1, or the two trimming values are of different type (point and parameter)
 </td></tr>
 <tr><td>Trim2ValuesConsistent</td><td>Either a single value is specified for Trim2, or the two trimming values are of different type (point and parameter)
-</td></tr>
-<tr><td>NoTrimOfBoundedCurves</td><td>Already bounded curves shall not be trimmed.
 </td></tr>
 </table>
 
@@ -223,7 +223,7 @@ Where both parameter and point are present at either end of the curve this indic
 &nbsp;&nbsp;SenseAgreement : <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>;<br/>
 &nbsp;&nbsp;MasterRepresentation : <a href="../../ifcgeometryresource/lexical/ifctrimmingpreference.htm">IfcTrimmingPreference</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;Trim1ValuesConsistent : (HIINDEX(Trim1) = 1) OR (TYPEOF(Trim1[1]) &lt;&gt; TYPEOF(Trim1[2]));<br/>&nbsp;&nbsp;Trim2ValuesConsistent : (HIINDEX(Trim2) = 1) OR (TYPEOF(Trim2[1]) &lt;&gt; TYPEOF(Trim2[2]));<br/>&nbsp;&nbsp;NoTrimOfBoundedCurves : NOT(&#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifcboundedcurve.htm">IfcBoundedCurve</a>&#39; IN TYPEOF(BasisCurve));<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;NoTrimOfBoundedCurves : NOT(&#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifcboundedcurve.htm">IfcBoundedCurve</a>&#39; IN TYPEOF(BasisCurve));<br/>&nbsp;&nbsp;Trim1ValuesConsistent : (HIINDEX(Trim1) = 1) OR (TYPEOF(Trim1[1]) &lt;&gt; TYPEOF(Trim1[2]));<br/>&nbsp;&nbsp;Trim2ValuesConsistent : (HIINDEX(Trim2) = 1) OR (TYPEOF(Trim2[1]) &lt;&gt; TYPEOF(Trim2[2]));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

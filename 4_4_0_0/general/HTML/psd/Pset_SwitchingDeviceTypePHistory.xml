@@ -10,7 +10,7 @@
   <ApplicableTypeValue>IfcSwitchingDevice</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="5b3e2500d20e11e1800000215ad4efdf">
-      <Name>SetPoint</Name>
+      <Name>SetPointHistory</Name>
       <Definition>Indicates the switch position over time according to Pset_SwitchingDeviceTypeCommon.SetPoint.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />

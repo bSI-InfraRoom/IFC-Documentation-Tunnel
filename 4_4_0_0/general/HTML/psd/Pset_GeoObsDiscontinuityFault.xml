@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="05b5225ef53d4f65935816b454331b20" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoObsDiscontinuityFault</Name>
+  <Definition>Properties for geological fault observations.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/MAPPEDFEATURE</ClassName>
+    <ClassName>IfcGeoScienceObservation/LOCALINFORMATION</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/MAPPEDFEATURE,IfcGeoScienceObservation/LOCALINFORMATION</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="a674f0e87efa42f88015c54fb11d81bb">
+      <Name>FaultType</Name>
+      <Definition>Type of the fault classified with the dip and the direction of slip.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="f3475cd4d17f4d0bb0bfc43b33c1bb2f">
+      <Name>FaultThickness</Name>
+      <Definition>Thickness range of the fault zone, which can range from millimeters to kilometers.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c644c4ce10fb41e4adaca34f00231a29">
+      <Name>FaultLength</Name>
+      <Definition>Length range of the exposed fault trace.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c4e4845fbc7345febb6f80f81a369b94">
+      <Name>DeformationPhase</Name>
+      <Definition>Name or label for a geologic event such as a basin formation, compressional tectonic phase, orogeny etc.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="3e6f92537d514d75b078aafbe5ea1784">
+      <Name>FaultSlipDirection</Name>
+      <Definition>Observed relative displacement direction of the hanging wall (top) to the footwall, e.g. up. down, left, right or combinations (like top down - left) when looking from one block across the fault to the other block.
+
+![FaultSlipDirection](..\..\..\figures\FaultSlipDirection.png  "Figure 1")</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="93cf629c71f14cb29bb3cbf04f1c0e9b">
+      <Name>Displacement</Name>
+      <Definition>True displacement range or total slip on the fault.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="a4c1ec8669524136842a8d5691a96f29">
+      <Name>FaultPitchAngle</Name>
+      <Definition>Angle between the strike of the slip surface and the slip vector (striation).
+
+&gt; NOTE&amp;nbsp; In geology, "pitch" and "rake" are terms used to describe the orientation and inclination of geological features, such as folds and faults, with respect to a horizontal plane. Pitch refers to the angle of inclination of a geological feature from the horizontal plane, measured perpendicular to the strike of the feature. It is commonly expressed in degrees or as a ratio of vertical to horizontal distance. For example, if a geological feature has a pitch of 45 degrees, it means that it is inclined at an angle of 45 degrees from the horizontal. Rake, on the other hand, refers to the angle of inclination of a geological feature measured parallel to the strike of the feature. It is also commonly expressed in degrees or as a ratio of vertical to horizontal distance. Rake is often used to describe the orientation of faults, where it represents the angle between the fault plane and a horizontal plane. Both pitch and rake are important parameters in geology as they can provide information about the deformation history and the mechanical behavior of rocks in response to tectonic forces.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

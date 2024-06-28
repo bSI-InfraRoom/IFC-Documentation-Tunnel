@@ -63,9 +63,10 @@ Optional assignment of a unit. If no unit is given, then the global unit assignm
 <area shape="rect" coords="30,54,218,66" href="../../../schema/ifcquantityresource/lexical/ifcquantityarea.htm" alt="IfcQuantityArea" />
 <area shape="rect" coords="30,78,218,90" href="../../../schema/ifcquantityresource/lexical/ifcquantitycount.htm" alt="IfcQuantityCount" />
 <area shape="rect" coords="30,102,218,114" href="../../../schema/ifcquantityresource/lexical/ifcquantitylength.htm" alt="IfcQuantityLength" />
-<area shape="rect" coords="30,126,218,138" href="../../../schema/ifcquantityresource/lexical/ifcquantitytime.htm" alt="IfcQuantityTime" />
-<area shape="rect" coords="30,150,218,162" href="../../../schema/ifcquantityresource/lexical/ifcquantityvolume.htm" alt="IfcQuantityVolume" />
-<area shape="rect" coords="30,174,218,186" href="../../../schema/ifcquantityresource/lexical/ifcquantityweight.htm" alt="IfcQuantityWeight" />
+<area shape="rect" coords="30,126,218,138" href="../../../schema/ifcquantityresource/lexical/ifcquantitynumber.htm" alt="IfcQuantityNumber" />
+<area shape="rect" coords="30,150,218,162" href="../../../schema/ifcquantityresource/lexical/ifcquantitytime.htm" alt="IfcQuantityTime" />
+<area shape="rect" coords="30,174,218,186" href="../../../schema/ifcquantityresource/lexical/ifcquantityvolume.htm" alt="IfcQuantityVolume" />
+<area shape="rect" coords="30,198,218,210" href="../../../schema/ifcquantityresource/lexical/ifcquantityweight.htm" alt="IfcQuantityWeight" />
 <area shape="rect" coords="6,6,242,18" href="../../../schema/ifcquantityresource/lexical/ifcphysicalquantity.htm" alt="IfcPhysicalQuantity" />
 </map>
 </details>
@@ -108,7 +109,7 @@ Optional assignment of a unit. If no unit is given, then the global unit assignm
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcPhysicalSimpleQuantity<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcquantityresource/lexical/ifcquantityarea.htm">IfcQuantityArea</a>, <a href="../../ifcquantityresource/lexical/ifcquantitycount.htm">IfcQuantityCount</a>, <a href="../../ifcquantityresource/lexical/ifcquantitylength.htm">IfcQuantityLength</a>, <a href="../../ifcquantityresource/lexical/ifcquantitytime.htm">IfcQuantityTime</a>, <a href="../../ifcquantityresource/lexical/ifcquantityvolume.htm">IfcQuantityVolume</a>, <a href="../../ifcquantityresource/lexical/ifcquantityweight.htm">IfcQuantityWeight</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcquantityresource/lexical/ifcquantityarea.htm">IfcQuantityArea</a>, <a href="../../ifcquantityresource/lexical/ifcquantitycount.htm">IfcQuantityCount</a>, <a href="../../ifcquantityresource/lexical/ifcquantitylength.htm">IfcQuantityLength</a>, <a href="../../ifcquantityresource/lexical/ifcquantitynumber.htm">IfcQuantityNumber</a>, <a href="../../ifcquantityresource/lexical/ifcquantitytime.htm">IfcQuantityTime</a>, <a href="../../ifcquantityresource/lexical/ifcquantityvolume.htm">IfcQuantityVolume</a>, <a href="../../ifcquantityresource/lexical/ifcquantityweight.htm">IfcQuantityWeight</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcquantityresource/lexical/ifcphysicalquantity.htm">IfcPhysicalQuantity</a>)<b>;</b><br/>
 &nbsp;&nbsp;Unit : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcnamedunit.htm">IfcNamedUnit</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>

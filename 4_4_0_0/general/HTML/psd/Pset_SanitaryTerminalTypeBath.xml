@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="ca614c80d20111e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_SanitaryTerminalTypeBath</Name>
-  <Definition>Sanitary appliance for immersion of the human body or parts of it (BS6100). HISTORY: In IFC4, Material and MaterialThickness properties removed. Use materials capabilities from IfcMaterialsResource schema. Datatype of color changed to IfcLabel (still a string value)</Definition>
+  <Definition>Waste water appliance for washing the excretory organs while sitting astride the bowl (BS6100). HISTORY: In IFC4, Material property removed. Use materials capabilities from IfcMaterialResource schema. Datatype of color changed to IfcLabel (still a string value). BidetMounting changed to Mounting.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcSanitaryTerminal/BATH</ClassName>

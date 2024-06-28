@@ -44,7 +44,7 @@
       <Definition>Number of parallel circuits.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -56,7 +56,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="7c0ce24f9d034d9b83da2ac5e4a0634c">
       <Name>InstallationMethod</Name>
-      <Definition>Method of installation of cable/conductor or other elements. Installation methods are typically defined by reference in standards such as IEC 60364-5-52, table 52A-1 or BS7671 Appendix 4 Table 4A1 etc. Selection of the value to be used should be determined from such a standard according to local usage.</Definition>
+      <Definition>Method of installation of cable/conductor. Installation methods are typically defined by reference in standards such as IEC 60364-5-52, table 52A-1 or BS7671 Appendix 4 Table 4A1 etc. Selection of the value to be used should be determined from such a standard according to local usage.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -326,10 +326,12 @@
     </PropertyDef>
     <PropertyDef ifdguid="47d6edba8d714af2b05f07d968909ff6">
       <Name>PowerLoss</Name>
-      <Definition>Total loss of power across this cable.</Definition>
+      <Definition>The power loss in [W].
+
+Total loss of power across this cable.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcElectricCurrentMeasure" />
+          <DataType type="IfcPowerMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>

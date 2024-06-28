@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="fe2c7a00d1e111e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_EnvironmentalImpactValues</Name>
-  <Definition>The following properties capture environmental impact values of an element. They correspond to the indicators defined into Pset_EnvironmentalImpactIndicators. 
+  <Definition>The following properties capture environmental impact values of an element. They correspond to the indicators defined into Pset_EnvironmentalImpactIndicators.
 Environmental impact values are obtained multiplying indicator value per unit by the relevant quantity of the element.</Definition>
   <Applicability />
   <ApplicableClasses>
@@ -321,7 +321,9 @@ Environmental impact values are obtained multiplying indicator value per unit by
     </PropertyDef>
     <PropertyDef ifdguid="b5b49d200bf249a49d558cef7acb75bd">
       <Name>Duration</Name>
-      <Definition>Duration of process.</Definition>
+      <Definition>Duration.
+
+Duration of process.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcDuration" />

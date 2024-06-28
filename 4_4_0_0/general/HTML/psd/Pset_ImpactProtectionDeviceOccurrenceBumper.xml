@@ -5,9 +5,9 @@
   <Definition>Properties common to all occurrences of _IfcImpactProtectionDevice_ with PredefinedType set to _BUMPER_.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcImpactProtectionDevice/IfcImpactProtectionDeviceTypeEnum(.BUMPER.)</ClassName>
+    <ClassName>IfcImpactProtectionDevice/BUMPER</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcImpactProtectionDevice/IfcImpactProtectionDeviceTypeEnum(.BUMPER.)</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcImpactProtectionDevice/BUMPER</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="dc14c12fb90a43fb9a39511091483544">
       <Name>BrakingLength</Name>

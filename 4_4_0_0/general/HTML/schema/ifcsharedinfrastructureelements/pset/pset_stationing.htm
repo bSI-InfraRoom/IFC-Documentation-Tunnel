@@ -11,7 +11,7 @@
     <title>Pset_Stationing</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 5 index3 4 index4 33 index5 0; }
+      body { counter-reset: index1 6 index2 5 index3 4 index4 49 index5 0; }
     </style>
   </head>
 
@@ -20,11 +20,11 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.5.4.34");
+    parent.index.location.replace("../../toc-6.htm#6.5.4.50");
 //-->
 </script>
 
-<h4 class="std">6.5.4.34 Pset_Stationing</h4>
+<h4 class="std">6.5.4.50 Pset_Stationing</h4>
 <p><span class="self-ref">PSET_OCCURRENCEDRIVEN</span>
 /
 <a href="../../ifcproductextension/lexical/ifcreferent.htm">IfcReferent</a>
@@ -59,14 +59,14 @@ The optional station value of the incoming segment that ends at this location. T
 The station value at this location.
 
 </td></tr>
-<tr><td>Increasing</td><td>
+<tr><td>HasIncreasingStation</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
 </td><td>
-It is meant for use in referents of predefined type REFERENCEMARKER being nested to a given alignment.
-If present and true, or if not present, then the relevant subsequently nested STATION referents are generally expected to have Pset_Stationing.Station values being greater than the REFERENCEMARKER's Pset_Stationing.Station value.
-If present and false, then the relevant subsequently nested STATION referents are expected to have Pset_Stationing.Station values being lower than the REFERENCEMARKER's Pset_Stationing.Station value.
+Inform on the increasing or decreasing progress of stationing values, for referents nested in a given alignment.
+If present and true, or if not present, then the relevant subsequently nested referents are expected to have greater Pset_Stationing.Station values (i.e., increasing stations).
+If present and false, then the relevant subsequently nested referents are expected to have lower Pset_Stationing.Station values (i.e., decreasing stations).
 
 </td></tr>
 </table>

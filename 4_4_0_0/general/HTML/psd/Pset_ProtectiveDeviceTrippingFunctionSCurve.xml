@@ -10,9 +10,9 @@ This property set represent the short time protection (S-curve) of an electronic
   </ApplicableClasses>
   <ApplicableTypeValue>IfcProtectiveDeviceTrippingUnit</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="4310da80d1fb11e1800000215ad4efdf">
+    <PropertyDef ifdguid="42c40f80d1fa11e1800000215ad4efdf">
       <Name>IsSelectable</Name>
-      <Definition>Indication whether the S-function can be switched off or not.</Definition>
+      <Definition>Indication whether something can be switched off or not.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -246,7 +246,9 @@ This property set represent the short time protection (S-curve) of an electronic
     </PropertyDef>
     <PropertyDef ifdguid="8c612a00d1fb11e1800000215ad4efdf">
       <Name>ReleaseCurrentI2tStart</Name>
-      <Definition>The release current in [x In] for the start point of the I2t tripping curve of the S-function, if any.</Definition>
+      <Definition>The release current in [x In].
+
+For the start point of the I2t tripping curve of the S-function, if any.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure" />
@@ -265,7 +267,9 @@ This property set represent the short time protection (S-curve) of an electronic
     </PropertyDef>
     <PropertyDef ifdguid="92efa180d1fb11e1800000215ad4efdf">
       <Name>ReleaseTimeI2tStart</Name>
-      <Definition>The release time in [s] for the start point of the I2t tripping curve of the S-function, if any</Definition>
+      <Definition>The release time in [s].
+
+For the start point of the I2t tripping curve of the S-function, if any</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcTimeMeasure" />
@@ -284,7 +288,9 @@ This property set represent the short time protection (S-curve) of an electronic
     </PropertyDef>
     <PropertyDef ifdguid="97b45580d1fb11e1800000215ad4efdf">
       <Name>ReleaseCurrentI2tEnd</Name>
-      <Definition>The release current in [x In] for the end point of the I2t tripping curve of the S-function, if any. The value of ReleaseCurrentI2tEnd shall be larger than ReleaseCurrentI2tStart.</Definition>
+      <Definition>The release current in [x In].
+
+For the end point of the I2t tripping curve of the S-function, if any. The value of ReleaseCurrentI2tEnd shall be larger than ReleaseCurrentI2tStart.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure" />
@@ -304,7 +310,9 @@ This property set represent the short time protection (S-curve) of an electronic
     </PropertyDef>
     <PropertyDef ifdguid="9e42cd00d1fb11e1800000215ad4efdf">
       <Name>ReleaseTimeI2tEnd</Name>
-      <Definition>The release time in [s] for the end point of the I2 tripping curve of the S-function, if any. The value of ReleaseTimeI2tEnd shall be lower than ReleaseTimeI2tStart.</Definition>
+      <Definition>The release time in [s].
+
+For the end point of the I2 tripping curve of the S-function, if any. The value of ReleaseTimeI2tEnd shall be lower than ReleaseTimeI2tStart.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcTimeMeasure" />

@@ -116,7 +116,7 @@ HandleWithCare: 注意深い取り扱いでしないと損害を受ける品物�
     </PropertyDef>
     <PropertyDef ifdguid="510e2d80d1f211e1800000215ad4efdf">
       <Name>SpecialInstructions</Name>
-      <Definition>Special instructions for packing.</Definition>
+      <Definition>Special instructions.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText" />

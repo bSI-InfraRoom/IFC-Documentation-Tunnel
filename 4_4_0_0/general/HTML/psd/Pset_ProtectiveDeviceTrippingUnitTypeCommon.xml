@@ -119,7 +119,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="1f01c900d1fc11e1800000215ad4efdf">
       <Name>Standard</Name>
-      <Definition>The designation of the standard applicable for the definition of the characteristics of the
+      <Definition>The designation of the standard applicable for the definition of the object used.
+
+The designation of the standard applicable for the definition of the characteristics of the
 tripping_unit.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

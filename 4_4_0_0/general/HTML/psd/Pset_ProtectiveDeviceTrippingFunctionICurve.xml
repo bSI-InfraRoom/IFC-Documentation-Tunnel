@@ -10,9 +10,9 @@ This property set represent the instantaneous time protection (I-curve) of an el
   </ApplicableClasses>
   <ApplicableTypeValue>IfcProtectiveDeviceTrippingUnit</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="ac441e00d1fa11e1800000215ad4efdf">
+    <PropertyDef ifdguid="42c40f80d1fa11e1800000215ad4efdf">
       <Name>IsSelectable</Name>
-      <Definition>Indication whether the S-function can be switched off or not.</Definition>
+      <Definition>Indication whether something can be switched off or not.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -26,7 +26,7 @@ This property set represent the instantaneous time protection (I-curve) of an el
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="ja-JP">装置の “ON-OFF”状態を電気的表示が切り替え可能かどうか。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">장치의 "ON-OFF"상태를 전기적으로 표시가 교체 가능합니까?</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">장치"ON-OFF "상태를 전기적으로 표시가 교체 가능합니까?</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="b239ff00d1fa11e1800000215ad4efdf">
@@ -246,8 +246,7 @@ This property set represent the instantaneous time protection (I-curve) of an el
     </PropertyDef>
     <PropertyDef ifdguid="ffb66c00d1fa11e1800000215ad4efdf">
       <Name>MaxAdjustmentX_ICS</Name>
-      <Definition>Provides the maximum setting value for the available current adjustment in relation to the
-Ics breaking capacity of the protection device of which the actual tripping unit is a part of. The value is not asserted unless the instantaneous time protection is.</Definition>
+      <Definition>Provides the maximum setting value for the available current adjustment in relation to the Ics breaking capacity of the protection device of which the actual tripping unit is a part of. The value is not asserted unless the instantaneous time protection is.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure" />

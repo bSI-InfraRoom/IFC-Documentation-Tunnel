@@ -47,7 +47,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="33577650938b4dbba5011a5c579628ce">
       <Name>LockingForce</Name>
-      <Definition>Locking force of the point machine motor.</Definition>
+      <Definition>Locking force of the element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcForceMeasure" />

@@ -9,9 +9,11 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcSensor/SMOKESENSOR</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="58d7cd00d20611e1800000215ad4efdf">
+    <PropertyDef ifdguid="6a6ca500d20511e1800000215ad4efdf">
       <Name>CoverageArea</Name>
-      <Definition>The floor area that is covered by the sensor (typically measured as a circle whose center is at the location of the sensor).</Definition>
+      <Definition>The area that is covered by the object.
+
+Floor area (typically measured as a circle whose center is at the location of the sensor).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure" />
@@ -20,17 +22,15 @@
       <NameAliases>
         <NameAlias lang="en">Coverage Area</NameAlias>
         <NameAlias lang="ja-JP">測定範囲</NameAlias>
-        <NameAlias lang="ko-KR">측정 범위</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="ja-JP">センサでカバーされている床面積。(通常、センターがセンサの位置にある円として測定される)</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">센서 커버되는 바닥 면적. (일반적으로 센터 센서의 위치에있는 원형으로 측정되는)</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="5f664480d20611e1800000215ad4efdf">
+    <PropertyDef ifdguid="5163f400d20511e1800000215ad4efdf">
       <Name>SetPointConcentration</Name>
-      <Definition>The smoke concentration value to be sensed. Use IfcPropertyBoundedValue.SetPointValue to set the set point value.</Definition>
+      <Definition>The concentration to be sensed. Use IfcPropertyBoundedValue.SetPointValue to set the set point value.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcPositiveRatioMeasure" />
@@ -38,14 +38,12 @@
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Set Point Concentration</NameAlias>
-        <NameAlias lang="ja-JP">煙濃度設定値</NameAlias>
-        <NameAlias lang="ko-KR">연기 농도 설정</NameAlias>
+        <NameAlias lang="ja-JP">ガス濃度設定値</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">感知される煙濃度。
+        <DefinitionAlias lang="ja-JP">感知されるガス濃度。
 セットポイント値を置くために、IfcPropertyBoundedValue.SetPointValueを使用する。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">감지되는 연기 농도. 세트 포인트 값을 넣으려면, IfcPropertyBoundedValue.SetPointValue를 사용하십시오.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="68571600d20611e1800000215ad4efdf">

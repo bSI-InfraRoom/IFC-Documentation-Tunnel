@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="e9e1176baa474b9a8115cf28b5cf6541" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_WindowLiningProperties</Name>
+  <Definition>Properties of the window lining.
+
+&gt; HISTORY&amp;nbsp; New property set in IFC4.3.2.0 to replace the entity IfcWindowLiningProperties</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcMember</ClassName>
+    <ClassName>IfcWindow</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcMember,IfcWindow</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="64ddfb53fdce480da4f59b17fa1a7397">
+      <Name>LiningDepth</Name>
+      <Definition>The depth of the lining.
+
+For a window, it is the depth of the window lining, measured perpendicularly to window elevation plane.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8f194fc8545449a69cdafd0e9f611589">
+      <Name>LiningThickness</Name>
+      <Definition>Thickness of the lining.
+
+For a window, it is the thickness of the window lining as explained in the figure below. If LiningThickness value is 0. (zero) it denotes a window without a lining (all other lining parameters shall be set to NIL in this case). If the LiningThickness is NIL it denotes that the value is not available.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="51ad68e16981437aaaf94ef9dcaab8ad">
+      <Name>TransomThickness</Name>
+      <Definition>Thickness of the transom.
+
+For a window, it is the thickness of the transom (horizontal separator of window panels within a window), measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth. If the TransomThickness is set to zero (and the TransomOffset set to a positive length), then the window is divided vertically without a physical divider.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="136236ffff5d431baec28ddfe4e15305">
+      <Name>MullionThickness</Name>
+      <Definition>Thickness of the mullion.
+
+For a window, it is the thickness of the mullion (i.e., the vertical separator of window panels within a window), measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth. If the MullionThickness is set to zero (and the MullionOffset set to a positive length), then the window is divided horizontally without a physical divider.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="25e92fbca3b14990a6e6f5470e78a795">
+      <Name>FirstTransomOffset</Name>
+      <Definition>Offset of the transom centerline, measured along the z-axis of the window placement coordinate system. An offset value = 0.5 indicates that the transom is positioned in the middle of the window.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNormalisedRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ae2d54695a7f41d9b14504294d6149fe">
+      <Name>SecondTransomOffset</Name>
+      <Definition>Offset of the transom centerline for the second transom, measured along the x-axis of the window placement co-ordinate system. An offset value = 0.666 indicates that the second transom is positioned at two/third of the window.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNormalisedRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ce875b9cf71c4a8e86b9803d5ff72cc0">
+      <Name>FirstMullionOffset</Name>
+      <Definition>Offset of the mullion centerline, measured along the x-axis of the window placement coordinate system. An offset value = 0.5 indicates that the mullion is positioned in the middle of the window.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNormalisedRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0378a50ea9f54d6aa2375a44600f9375">
+      <Name>SecondMullionOffset</Name>
+      <Definition>Offset of the mullion centerline for the second mullion, measured along the x-axis of the window placement co-ordinate system. An offset value = 0.666 indicates that the second mullion is positioned at two/third of the window.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNormalisedRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="040f848b3a7a4c70bc2a7424b4efd06e">
+      <Name>LiningOffset</Name>
+      <Definition>Offset of the lining.
+
+For a window, it is the offset of the window lining, given as distance along the y axis of the local placement (perpendicular to the window plane).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b462456a5d6e4d88aad1fb460961b6e2">
+      <Name>LiningToPanelOffsetX</Name>
+      <Definition>Offset between the lining and the panel, measured along the x-axis of the local placement.
+
+For a window, it is the offset between the lining and the window panel. Should be smaller or equal to the LiningThickness.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5b610b21b1b64741b30b8354d4ecdc81">
+      <Name>LiningToPanelOffsetY</Name>
+      <Definition>Offset between the lining and the panel, measured along the y-axis of the local placement.
+
+For a window, it is the offset between the lining and the window panel. Should be smaller or equal to the IfcWindowPanelProperties.PanelThickness.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

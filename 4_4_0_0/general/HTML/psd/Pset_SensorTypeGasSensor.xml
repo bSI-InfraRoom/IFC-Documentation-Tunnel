@@ -28,7 +28,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="5163f400d20511e1800000215ad4efdf">
       <Name>SetPointConcentration</Name>
-      <Definition>The gas concentration value to be sensed. Use IfcPropertyBoundedValue.SetPointValue to set the set point value.</Definition>
+      <Definition>The concentration to be sensed. Use IfcPropertyBoundedValue.SetPointValue to set the set point value.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcPositiveRatioMeasure" />
@@ -46,7 +46,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="6a6ca500d20511e1800000215ad4efdf">
       <Name>CoverageArea</Name>
-      <Definition>The floor area that is covered by the sensor (typically measured as a circle whose center is at the location of the sensor).</Definition>
+      <Definition>The area that is covered by the object.
+
+Floor area (typically measured as a circle whose center is at the location of the sensor).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure" />

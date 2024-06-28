@@ -3,7 +3,7 @@
   <IfcVersion version="IFC4X4" />
   <Name>Pset_SpaceHeaterTypeCommon</Name>
   <Definition>Space heater type common attributes.
-SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.  Properties added in IFC4.</Definition>
+SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.  Properties added in IFC4</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcSpaceHeater</ClassName>
@@ -117,7 +117,7 @@ SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties ins
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="e9fc7300d20911e1800000215ad4efdf">
-      <Name>PlacementType</Name>
+      <Name>SpaceHeaterPlacement</Name>
       <Definition>Indicates how the space heater is designed to be placed.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
@@ -420,7 +420,9 @@ high temperature - surface temperature is relatively high, usually heated by gas
     </PropertyDef>
     <PropertyDef ifdguid="216b1f80d20a11e1800000215ad4efdf">
       <Name>EnergySource</Name>
-      <Definition>Enumeration defining the energy source or fuel combusted to generate heat if applicable.  Note: hydronic heaters shall use UNSET; dual-use hydronic/electric heaters shall use ELECTRICITY.</Definition>
+      <Definition>Enumeration defining the energy source or fuel cumbusted.
+
+Note: hydronic heaters shall use UNSET; dual-use hydronic/electric heaters shall use ELECTRICITY.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_EnergySource">
@@ -624,7 +626,7 @@ high temperature - surface temperature is relatively high, usually heated by gas
       <Definition>Number of panels.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -638,10 +640,12 @@ high temperature - surface temperature is relatively high, usually heated by gas
     </PropertyDef>
     <PropertyDef ifdguid="727b1380d20a11e1800000215ad4efdf">
       <Name>NumberOfSections</Name>
-      <Definition>Number of vertical sections, measured in the direction of flow.</Definition>
+      <Definition>Number of sections.
+
+Number of vertical sections, measured in the direction of flow.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>

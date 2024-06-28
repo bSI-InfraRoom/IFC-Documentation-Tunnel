@@ -25,7 +25,7 @@
       <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="48893d2906644bf8aa8a57a137d6d9a9">
-      <Name>MaintenanceDowntime </Name>
+      <Name>MaintenanceDowntime</Name>
       <Definition>Maintenance downtime proportion</Definition>
       <PropertyType>
         <TypePropertySingleValue>

@@ -90,7 +90,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="e5bf5e00d1e711e1800000215ad4efdf">
       <Name>DisplaySize</Name>
-      <Definition>The physical size of the display. In the case of a stem thermometer, this will be the length of the stem. For a dial thermometer, it will be the diameter of the dial.</Definition>
+      <Definition>The physical size of the display.
+
+In the case of a stem thermometer, this will be the length of the stem. For a dial thermometer, it will be the diameter of the dial.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

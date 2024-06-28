@@ -103,8 +103,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="95cf9f80d1c511e1800000215ad4efdf">
       <Name>SprinklerProtectionAutomatic</Name>
-      <Definition>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE).
-It should only be given, if the property "SprinklerProtection" is set to TRUE.</Definition>
+      <Definition>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE). It should only be given, if the property "SprinklerProtection" is set to TRUE.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -127,7 +126,7 @@ It should only be given, if the property "SprinklerProtection" is set to TRUE.</
     </PropertyDef>
     <PropertyDef ifdguid="9b2cea00d1c511e1800000215ad4efdf">
       <Name>LoadBearingCapacity</Name>
-      <Definition>Maximum load bearing capacity of a supporting structure ( e.g. as applied to the floor structure of a storey, or the supporting capacity of a frame assembly).</Definition>
+      <Definition>Maximum load bearing capacity of the floor structure throughtout the storey as designed.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPlanarForceMeasure" />
@@ -144,9 +143,9 @@ It should only be given, if the property "SprinklerProtection" is set to TRUE.</
         <DefinitionAlias lang="fr-FR">Indique la force maximale pouvant être acceptée par le sol.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="a08a3480d1c511e1800000215ad4efdf">
+    <PropertyDef ifdguid="1510a380d1c511e1800000215ad4efdf">
       <Name>GrossPlannedArea</Name>
-      <Definition>Total planned area for the building storey. Used for programming the building storey.</Definition>
+      <Definition>Total planned gross area of the spatial structure element. Used for programming the spatial structure element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure" />
@@ -160,16 +159,16 @@ It should only be given, if the property "SprinklerProtection" is set to TRUE.</
         <NameAlias lang="ko-KR">계획 그로스 면적</NameAlias>
       </NameAliases>
       <DefinitionAliases>
-        <DefinitionAlias lang="de-DE">Geforderte Bruttofläche des Geschosses laut Raumprogramm.</DefinitionAlias>
+        <DefinitionAlias lang="de-DE">Geforderte Bruttofläche des Gebäudes laut Raumprogramm.</DefinitionAlias>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="fr-FR">Surface programmée brute totale de l'étage. Telle que définie lors de la programmation.</DefinitionAlias>
-        <DefinitionAlias lang="ja-JP">計画された建物階のグロス面積。建物計画に際に使用。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">계획된 건물 층 그로스 면적. 건물 계획시 사용됩니다.</DefinitionAlias>
+        <DefinitionAlias lang="fr-FR">Surface programmée brute totale du bâtiment. Telle que définie lors de la programmation.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">計画されたグロス面積。建物計画に際に使用。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">계획된 그로스 면적. 건물 계획시 사용됩니다.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="a5e77f00d1c511e1800000215ad4efdf">
+    <PropertyDef ifdguid="193cc100d1c511e1800000215ad4efdf">
       <Name>NetPlannedArea</Name>
-      <Definition>Total planned net area for the building storey. Used for programming the building storey.</Definition>
+      <Definition>Total planned net area of the object. Used for programming the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure" />
@@ -180,14 +179,12 @@ It should only be given, if the property "SprinklerProtection" is set to TRUE.</
         <NameAlias lang="en">Net Planned Area</NameAlias>
         <NameAlias lang="fr-FR">Surface programmée nette</NameAlias>
         <NameAlias lang="ja-JP">計画ネット面積</NameAlias>
-        <NameAlias lang="ko-KR">계획 인터넷 면적</NameAlias>
       </NameAliases>
       <DefinitionAliases>
-        <DefinitionAlias lang="de-DE">Geforderte Nettofläche des Geschosses laut Raumprogramm.</DefinitionAlias>
+        <DefinitionAlias lang="de-DE">Geforderte Nettofläche des Gebäudes laut Raumprogramm.</DefinitionAlias>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="fr-FR">Surface programmée nette totale de l'étage. Telle que définie lors de la programmation.</DefinitionAlias>
-        <DefinitionAlias lang="ja-JP">計画された建物階のネット面積。建物計画の際に使用。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">계획된 건물 층 인터넷 공간이 있습니다. 건물 계획시 사용됩니다.</DefinitionAlias>
+        <DefinitionAlias lang="fr-FR">Surface programmée nette totale du bâtiment. Telle que définie lors de la programmation.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">計画されたネット面積。建物計画に際に使用。（通常は、柱型等を抜いた面積となる）</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="fb1597367c174c9ca9e83f9b22c8312d">

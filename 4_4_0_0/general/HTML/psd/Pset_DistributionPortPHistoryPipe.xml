@@ -9,11 +9,13 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcDistributionPort/PIPE</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="36d77e7919364513b229f61c7632a638">
+    <PropertyDef ifdguid="b6cb7483a65d4bd5ac6551b080116323">
       <Name>Temperature</Name>
-      <Definition>The temperature of the fuel.</Definition>
+      <Definition>Temperature of the fluid.</Definition>
       <PropertyType>
-        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertyBoundedValue>
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Temperature</NameAlias>
@@ -21,27 +23,27 @@
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">燃料の温度。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">流体の温度。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="d31964c0ab4f444aa3a526a72084e705">
+    <PropertyDef ifdguid="7583cd7c5ea74d109e2b6ad6d0dafa4b">
       <Name>Pressure</Name>
-      <Definition>The pressure of the fuel.</Definition>
+      <Definition>The pressure of the fluid.</Definition>
       <PropertyType>
-        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertyBoundedValue>
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Pressure</NameAlias>
-        <NameAlias lang="ja-JP">圧力</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">燃料の圧力。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="7a3f6bee58104037a997d1c2cbd68a4d">
       <Name>Flowrate</Name>
-      <Definition>The flowrate of the fuel.</Definition>
+      <Definition>The flowrate of the fluid.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

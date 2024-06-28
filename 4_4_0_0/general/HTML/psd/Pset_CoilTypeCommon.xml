@@ -121,7 +121,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="ad108c00d1c911e1800000215ad4efdf">
       <Name>OperationalTemperatureRange</Name>
-      <Definition>Allowable operational air temperature range.</Definition>
+      <Definition>The temperature range in which the device operates normally.
+
+Allowable operational air temperature range.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />
@@ -137,8 +139,10 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="b4d03080d1c911e1800000215ad4efdf">
-      <Name>AirflowRateRange</Name>
-      <Definition>Possible range of airflow that can be delivered.  For cases where there is no airflow across the coil (e.g. electric coil in a floor slab), then the value is zero.</Definition>
+      <Name>AirFlowRateRange</Name>
+      <Definition>Possible range of airflow that can be delivered.
+
+For cases where there is no airflow across the coil (e.g. electric coil in a floor slab), then the value is zero.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcVolumetricFlowRateMeasure" />
@@ -205,11 +209,8 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="c9acc400d1c911e1800000215ad4efdf">
-      <Name>PlacementType</Name>
-      <Definition>Indicates the placement of the coil.  
-FLOOR indicates an under floor heater (if coil type is WATERHEATINGCOIL or ELECTRICHEATINGCOIL); 
-CEILING indicates a cooling ceiling (if coil type is WATERCOOLINGCOIL);
-UNIT indicates that the coil is part of a cooling or heating unit, like cooled beam, etc.</Definition>
+      <Name>CoilPlacement</Name>
+      <Definition>Indicates the placement of the coil. FLOOR indicates an under floor heater (if coil type is WATERHEATINGCOIL or ELECTRICHEATINGCOIL); CEILING indicates a cooling ceiling (if coil type is WATERCOOLINGCOIL); UNIT indicates that the coil is part of a cooling or heating unit, like cooled beam, etc.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_CoilPlacementType">

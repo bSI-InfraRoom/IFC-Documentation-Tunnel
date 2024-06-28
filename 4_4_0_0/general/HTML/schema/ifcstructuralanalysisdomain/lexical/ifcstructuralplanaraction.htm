@@ -66,9 +66,9 @@
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>SuitableLoadType</td><td>A planar action shall place either a planar force or a temperature load.
-</td></tr>
 <tr><td>ConstPredefinedType</td><td>This surface action subtype is restricted to constant load distribution over its domain.
+</td></tr>
+<tr><td>SuitableLoadType</td><td>A planar action shall place either a planar force or a temperature load.
 </td></tr>
 </table>
 
@@ -254,7 +254,7 @@ Type of action according to its distribution of load values.
 <span class="keyword">ENTITY</span> IfcStructuralPlanarAction<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceaction.htm">IfcStructuralSurfaceAction</a>)<b>;</b><br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;SuitableLoadType : SIZEOF([&#39;IFCSTRUCTURALLOADRESOURCE.<a href="../../ifcstructuralloadresource/lexical/ifcstructuralloadplanarforce.htm">IfcStructuralLoadPlanarForce</a>&#39;, &#39;IFCSTRUCTURALLOADRESOURCE.<a href="../../ifcstructuralloadresource/lexical/ifcstructuralloadtemperature.htm">IfcStructuralLoadTemperature</a>&#39;] * TYPEOF(SELF\<a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralactivity.htm">IfcStructuralActivity</a>.AppliedLoad)) = 1;<br/>&nbsp;&nbsp;ConstPredefinedType : SELF\<a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceaction.htm">IfcStructuralSurfaceAction</a>.PredefinedType = <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceactivitytypeenum.htm">IfcStructuralSurfaceActivityTypeEnum</a>.CONST;<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;ConstPredefinedType : SELF\<a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceaction.htm">IfcStructuralSurfaceAction</a>.PredefinedType = <a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceactivitytypeenum.htm">IfcStructuralSurfaceActivityTypeEnum</a>.CONST;<br/>&nbsp;&nbsp;SuitableLoadType : SIZEOF([&#39;IFCSTRUCTURALLOADRESOURCE.<a href="../../ifcstructuralloadresource/lexical/ifcstructuralloadplanarforce.htm">IfcStructuralLoadPlanarForce</a>&#39;, &#39;IFCSTRUCTURALLOADRESOURCE.<a href="../../ifcstructuralloadresource/lexical/ifcstructuralloadtemperature.htm">IfcStructuralLoadTemperature</a>&#39;] * TYPEOF(SELF\<a href="../../ifcstructuralanalysisdomain/lexical/ifcstructuralactivity.htm">IfcStructuralActivity</a>.AppliedLoad)) = 1;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcstructuralanalysisdomain/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

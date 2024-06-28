@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="433790bb8374481c81793378d5f863f9" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_SpatialGeoObsFieldOutcrop</Name>
+  <Definition>Common properties for field outcrop observations.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcSpatialZone/MAPPEDZONE</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSpatialZone/MAPPEDZONE</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="881da9e77da046e8898ace7955887f9a">
+      <Name>AzimuthExposure</Name>
+      <Definition>The azimuth of a slope orientation describes a horizontal line perpendicular to dip direction of the slope. The azimuth is given in degrees in the range 0 to 360 degrees counted clockwise from true north and expressed as a three-digit number, e.g. 240 or 015. 
+&gt;NOTE Definition according to ISO14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="68f86dd45ae04bc981e6a661163f0a3c">
+      <Name>SlopeAngle</Name>
+      <Definition>Inclination of a natural or excavated surface where the observations were made. Angle is measured relative to horizontal (90° is a vertical slope).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

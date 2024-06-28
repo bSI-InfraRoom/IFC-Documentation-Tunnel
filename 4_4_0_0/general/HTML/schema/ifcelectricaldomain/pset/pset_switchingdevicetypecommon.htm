@@ -72,10 +72,11 @@
 <tr><td>NumberOfGangs</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Gangs</b></td><td>Number of gangs/buttons on this switch.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Gangs</b></td><td>Number of gangs in the object.
+Number of gangs/buttons on this switch.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>ボタン数</b></td><td>スイッチのボタン数
 </td></tr>
@@ -138,12 +139,13 @@
 <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Set Point</b></td><td>Indicates the setpoint and label.  For toggle switches, there are two positions, 0 for off and 1 for on.  For dimmer switches, the values may indicate the fully-off and full-on positions, where missing integer values in between are interpolated.   For selector switches, the range indicates the available positions.<br>
-An IfcTable may be attached (using IfcMetric and IfcPropertyConstraintRelationship) containing columns of the specified header names and types:
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Set Point</b></td><td>Indicates the setpoint and label.
+For toggle switches, there are two positions, 0 for off and 1 for on.  For dimmer switches, the values may indicate the fully-off and full-on positions, where missing integer values in between are interpolated.   For selector switches, the range indicates the available positions.
+An IfcTable may be attached (using IfcMetric and IfcResourceConstraintRelationship) containing columns of the specified header names and types:
 'Position' (IfcInteger): The discrete setpoint level.
 'Sink' (IfcLabel): The Name of the switched input port (IfcDistributionPort with FlowDirection=SINK).
 'Source' (IfcLabel): The Name of the switched output port (IfcDistributionPort with FlowDirection=SOURCE).
-'Ratio' (IfcNormalizedRatioMeasure): The ratio of power at the setpoint where 0.0 is off and 1.0 is fully on.
+'Ratio' (IfcNormalisedRatioMeasure): The ratio of power at the setpoint where 0.0 is off and 1.0 is fully on.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>設定ポイント</b></td><td>設定ポイントと範囲を示す。トグルスイッチは2つのポジションがある：0 は オフ(OFF)、1 は オン(ON)。ディマースイッチは、全閉(fully-off) または　全開(fully-on) の他に、その間で取得可能な値をオプションで示す。選択型スイッチは選択可能なポジションの範囲を示す。
 </td></tr>

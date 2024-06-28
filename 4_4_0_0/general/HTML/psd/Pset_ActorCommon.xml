@@ -28,24 +28,16 @@
         <DefinitionAlias lang="zh-CN">该组参与者的总数。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="06be8980d1bd11e1800000215ad4efdf">
-      <Name>Category</Name>
+    <PropertyDef ifdguid="7854436a58f34b0aba8b4fc19f548bc2">
+      <Name>ActorCategory</Name>
       <Definition>Designation of the category into which the actors in the population belong.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
         </TypePropertySingleValue>
       </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Category</NameAlias>
-        <NameAlias lang="ja-JP">部門</NameAlias>
-        <NameAlias lang="zh-CN">类别</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">母集団の中の関与者のカテゴリー（部門・分野）の指定。</DefinitionAlias>
-        <DefinitionAlias lang="zh-CN">该组参与者所属的类别。</DefinitionAlias>
-      </DefinitionAliases>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="0c1bd400d1bd11e1800000215ad4efdf">
       <Name>SkillLevel</Name>

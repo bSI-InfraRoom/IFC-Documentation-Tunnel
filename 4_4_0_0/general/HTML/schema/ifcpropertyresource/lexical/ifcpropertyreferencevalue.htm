@@ -42,9 +42,10 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyreferencevalue.htm">IfcPropertyReferenceValue</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasConstraints</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasApprovals</td><td></td><td></td><td>ADDED</td><td></td></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyreferencevalue.htm">IfcPropertyReferenceValue</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specification</td><td></td><td>X</td><td>MODIFIED</td><td>Name changed from <i>Description</i> to <i>Specification</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>PartOfMaterialOrProfileProperties</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -113,6 +114,8 @@ IFC4 CHANGE  The cardinality has changed to 0..n to allow reuse of instances of
 <tr><td></td><td><i>HasConstraints</i></td><td><a href="../../ifcconstraintresource/lexical/ifcresourceconstraintrelationship.htm">IfcResourceConstraintRelationship</a><br/>@RelatedResourceObjects</td><td>? S[0:?]</td><td>User-defined constraints for the property.
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasApprovals</i></td><td><a href="../../ifcapprovalresource/lexical/ifcresourceapprovalrelationship.htm">IfcResourceApprovalRelationship</a><br/>@RelatedResourceObjects</td><td>? S[0:?]</td><td>User-defined approvals for the property.
+</td><td>X</td></tr>
+<tr><td></td><td><i>PartOfMaterialOrProfileProperties</i></td><td><a href="../../ifcpropertyresource/lexical/ifcextendedproperties.htm">IfcExtendedProperties</a><br/>@Properties</td><td>S[0:?]</td><td>Reference to the <a href="../../ifcmaterialresource/lexical/ifcmaterialproperties.htm">IfcMaterialProperties</a> by which the <span class="self-ref">IfcProperty</span> is referenced.
 </td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.htm">IfcSimpleProperty</a></i></td></tr>
 <tr><td colspan="6"><a href="../../ifcpropertyresource/lexical/ifcpropertyreferencevalue.htm">IfcPropertyReferenceValue</a></td></tr>

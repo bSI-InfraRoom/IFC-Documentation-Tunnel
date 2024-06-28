@@ -11,7 +11,9 @@
   <PropertyDefs>
     <PropertyDef ifdguid="72f2ba80d1c811e1800000215ad4efdf">
       <Name>OverallDiameter</Name>
-      <Definition>The overall diameter of a core (maximun space used).</Definition>
+      <Definition>The overall diameter of a object.
+
+The overall diameter of a core (maximum space used).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -49,7 +51,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="7f771300d1c811e1800000215ad4efdf">
       <Name>RatedTemperature</Name>
-      <Definition>The range of allowed temerature that a device is certified to handle. The upper bound of this value is the maximum.</Definition>
+      <Definition>The range of allowed temperature that a device is certified to handle. The upper bound of this value is the maximum.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />
@@ -64,25 +66,6 @@
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="ja-JP">機器を使用できる保障された温度。上限値は最大値。</DefinitionAlias>
         <DefinitionAlias lang="ko-KR">장치를 사용할 보장된 온도 상한은 최대.</DefinitionAlias>
-      </DefinitionAliases>
-    </PropertyDef>
-    <PropertyDef ifdguid="869e2100d1c811e1800000215ad4efdf">
-      <Name>ScreenDiameter</Name>
-      <Definition>The diameter of the screen around a core segment (if present).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveLengthMeasure" />
-        </TypePropertySingleValue>
-      </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Screen Diameter</NameAlias>
-        <NameAlias lang="ja-JP">シールド径</NameAlias>
-        <NameAlias lang="ko-KR">실드 직경</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">コア部分（存在する場合）の面の直径。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">코어 부분 (있는 경우)의 측면에 지름.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="8c940200d1c811e1800000215ad4efdf">
@@ -104,8 +87,27 @@
         <DefinitionAlias lang="ko-KR">코어 식별 색 (블랙, 브라운, 그레이) 또는 번호 (1,2,3) 또는 IEC의 위상 기준 (L1, L2, L3)를 사용.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
+    <PropertyDef ifdguid="4ab68c00d1c711e1800000215ad4efdf">
+      <Name>ScreenDiameter</Name>
+      <Definition>The diameter of the screen around an object (if present).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Screen Diameter</NameAlias>
+        <NameAlias lang="ja-JP">スクリーン径</NameAlias>
+        <NameAlias lang="ko-KR">스크린 지름</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">遮へい層の径、厚さ。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">차폐 층의 직경, 두께.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
     <PropertyDef ifdguid="9289e300d1c811e1800000215ad4efdf">
-      <Name>SheathColors</Name>
+      <Name>SheathColours</Name>
       <Definition>Colour of the core (derived from IEC 60757). Note that the combined color 'GreenAndYellow' shall be used only as Protective Earth (PE) conductors according to the requirements of IEC 60446.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
@@ -281,7 +283,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="b1887500d1c811e1800000215ad4efdf">
       <Name>Weight</Name>
-      <Definition>Weight of core kg/km.</Definition>
+      <Definition>Total weight of object
+
+Weight of core kg/km.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure" />
@@ -349,7 +353,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="c107be00d1c811e1800000215ad4efdf">
       <Name>HalogenProof</Name>
-      <Definition>Produces small amount of smoke and irritating deaerator/gas.</Definition>
+      <Definition>Produces small amount of smoke and irritating Deaerator/Gas.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -366,9 +370,9 @@
         <DefinitionAlias lang="ko-KR">소량의 연기와 자극 탈기 / 가스를 생성합니다.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="c6fd9f00d1c811e1800000215ad4efdf">
+    <PropertyDef ifdguid="a54fe800d1c711e1800000215ad4efdf">
       <Name>FunctionReliable</Name>
-      <Definition>Core maintain given properties/functions over a given (tested) time and conditions. According to (IEC) standard.</Definition>
+      <Definition>Element (such as cable, bus, core) maintain given properties/functions over a given (tested) time and conditions. According to IEC standard.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -376,18 +380,18 @@
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Function Reliable</NameAlias>
-        <NameAlias lang="ja-JP">機能信頼性</NameAlias>
-        <NameAlias lang="ko-KR">기능 신뢰성</NameAlias>
+        <NameAlias lang="ja-JP">信頼性のある機能</NameAlias>
+        <NameAlias lang="ko-KR">신뢰할 수있는 기능</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">コアの維持は特定（テスト）の時間と条件でプロパティ/関数を指定する。標準会議（IEC）規格に準拠。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">핵심 정비는 특정 (테스트) 시간과 조건의 속성 / 함수를 지정한다. 표준 회의 (IEC) 규격을 준수합니다.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">ケーブルや母線が与えられた時間と条件の中で規定される機能、性質を維持すること。これはIEC基準による。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">케이블 및 모선 주어진 시간과 조건에서 규정하는 기능, 성질을 유지한다. 이것은 IEC 기준에 의한다.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="cc5ae980d1c811e1800000215ad4efdf">
+    <PropertyDef ifdguid="2b1f6380d1c711e1800000215ad4efdf">
       <Name>Standard</Name>
-      <Definition>The designation of the standard applicable for the definition of the core used.</Definition>
+      <Definition>The designation of the standard applicable for the definition of the object used.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -395,13 +399,13 @@
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Standard</NameAlias>
-        <NameAlias lang="ja-JP">基準</NameAlias>
-        <NameAlias lang="ko-KR">기준</NameAlias>
+        <NameAlias lang="ja-JP">標準</NameAlias>
+        <NameAlias lang="ko-KR">표준</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">使用するコアの定義に適用される基準の指定。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">사용하는 코어의 정의에 적용되는 기준 지정</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">使用されるケーブル、busbarの定義のために使用される標準仕様。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">사용되는 케이블, busbar의 정의를 위해 사용되는 표준.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="8b290080d1ed11e1800000215ad4efdf">

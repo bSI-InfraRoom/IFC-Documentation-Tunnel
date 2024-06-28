@@ -11,7 +11,9 @@
   <PropertyDefs>
     <PropertyDef ifdguid="b6f7b680d1ec11e1800000215ad4efdf">
       <Name>SpecificHeatCapacity</Name>
-      <Definition>Specific heat of the products of combustion: heat energy absorbed per temperature unit.</Definition>
+      <Definition>Defines the specific heat capacity of a material.
+
+Specific heat of the products of combustion: heat energy absorbed per temperature unit.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcSpecificHeatCapacityMeasure" />

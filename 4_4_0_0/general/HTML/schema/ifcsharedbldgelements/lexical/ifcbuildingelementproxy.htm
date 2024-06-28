@@ -80,11 +80,11 @@ IFC4 CHANGE  The attribute <i>CompositionType</i> has been replaced by <i>Prede
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>HasObjectName</td><td>A Name attribute should be asserted for a building element proxy.
-</td></tr>
 <tr><td>CorrectPredefinedType</td><td>Either the <i>PredefinedType</i> attribute is unset (e.g. because an <a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytype.htm">IfcBuildingElementProxyType</a> is associated), or the inherited attribute <i>ObjectType</i> shall be provided, if the <i>PredefinedType</i> is set to USERDEFINED.
 </td></tr>
 <tr><td>CorrectTypeAssigned</td><td>Either there is no building element proxy type object associated, i.e. the <i>IsTypedBy</i> inverse relationship is not provided, or the associated type object has to be of type <a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytype.htm">IfcBuildingElementProxyType</a>.
+</td></tr>
+<tr><td>HasObjectName</td><td>A Name attribute should be asserted for a building element proxy.
 </td></tr>
 </table>
 
@@ -486,10 +486,10 @@ IFC4 CHANGE  The attribute <i>CompositionType</i> has been replaced by <i>Prede
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcbuiltelement.htm">IfcBuiltElement</a>)<b>;</b><br/>
 &nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytypeenum.htm">IfcBuildingElementProxyTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasObjectName : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
+&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
  (PredefinedType &lt;&gt; <a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytypeenum.htm">IfcBuildingElementProxyTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
  ((PredefinedType = <a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytypeenum.htm">IfcBuildingElementProxyTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS (SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/>&nbsp;&nbsp;CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR<br/>
-  (&#39;IFCSHAREDBLDGELEMENTS.<a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytype.htm">IfcBuildingElementProxyType</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));<br/><span class="keyword">END_ENTITY;</span><br/>
+  (&#39;IFCSHAREDBLDGELEMENTS.<a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytype.htm">IfcBuildingElementProxyType</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));<br/>&nbsp;&nbsp;HasObjectName : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a>.Name);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedbldgelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

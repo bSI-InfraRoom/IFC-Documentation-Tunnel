@@ -10,7 +10,7 @@
   <ApplicableTypeValue>IfcUnitaryControlElement/INDICATORPANEL</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="a214298bc8bc4c2d91e02d20124d29f8">
-      <Name>Application</Name>
+      <Name>UnitaryApplication</Name>
       <Definition>The application of the unitary control element.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>

@@ -11,8 +11,9 @@
   <PropertyDefs>
     <PropertyDef ifdguid="e365ff80d1f911e1800000215ad4efdf">
       <Name>PerformanceClasses</Name>
-      <Definition>A set of designations of performance classes for the breaker unit for which the data of this instance is valid. A breaker unit being a motor protection device may be
-constructed for different levels of breaking capacities. A maximum of 7 different
+      <Definition>A set of designations of performance classes for the breaker unit for which the data of this instance is valid.
+
+A set of designations of performance classes for the breaker unit for which the data of this instance is valid. A breaker unit being a motor protection device may be constructed for different levels of breaking capacities. A maximum of 7 different
 performance classes may be provided. Examples of performance classes that may be specified include B, C, N, S, H, L, V.</Definition>
       <PropertyType>
         <TypePropertyListValue>
@@ -135,9 +136,9 @@ performance classes may be provided. Examples of performance classes that may be
         <DefinitionAlias lang="ko-KR">전압 레벨을 선택합니다.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="098b9f80d1fa11e1800000215ad4efdf">
+    <PropertyDef ifdguid="b6b1e800d1f911e1800000215ad4efdf">
       <Name>ICU60947</Name>
-      <Definition>The ultimate breaking capacity in [A] for a circuit breaker or motor protection device tested in accordance with the IEC 60947 series.</Definition>
+      <Definition>The ultimate breaking capacity in [A] for an object tested in accordance with the IEC 60947 series.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure" />
@@ -145,18 +146,18 @@ performance classes may be provided. Examples of performance classes that may be
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">ICU60947</NameAlias>
-        <NameAlias lang="ja-JP">ICU60947</NameAlias>
-        <NameAlias lang="ko-KR">ICU60947</NameAlias>
+        <NameAlias lang="ja-JP">定格限界短絡遮断容量</NameAlias>
+        <NameAlias lang="ko-KR">정격 한계 단락 차단 용량</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">IECの60947シリーズに基づいてテスト配線用遮断機またはモータ保護装置のための遮断容量を[A]で設定。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">IEC의 60947 시리즈를 기반으로 테스트 배선용 차단기 또는 모터 보호 장치를위한 차단 용량 [A]로 설정.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">IECの60947シリーズに基づいてテストされたMCBの定格限界短絡遮断容量を[A]で設定。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">IEC의 60948 시리즈를 기반으로 시험한 MCB의 정격 한계 단락 차단 용량 [A]로 설정.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="0f818080d1fa11e1800000215ad4efdf">
+    <PropertyDef ifdguid="c0d3e680d1f911e1800000215ad4efdf">
       <Name>ICS60947</Name>
-      <Definition>The service breaking capacity in [A] for a circuit breaker or motor protection device tested in accordance with the IEC 60947 series.</Definition>
+      <Definition>The service breaking capacity in [A] for an object tested in accordance with the IEC 60947 series.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure" />
@@ -164,13 +165,13 @@ performance classes may be provided. Examples of performance classes that may be
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">ICS60947</NameAlias>
-        <NameAlias lang="ja-JP">ICS60947</NameAlias>
-        <NameAlias lang="ko-KR">ICS60947</NameAlias>
+        <NameAlias lang="ja-JP">定格使用短絡遮断容量</NameAlias>
+        <NameAlias lang="ko-KR">정격 사용 단락 차단 용량</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">IECの60947シリーズに基づいてテスト配線用遮断機またはモータ保護装置のための遮断容量サービスを[A]で設定。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">IEC의 60947 시리즈를 기반으로 테스트 배선용 차단기 또는 모터 보호 장치를위한 차단 용량 서비스를 [A]로 설정.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">IECの60947シリーズに基づいてテストされたMCBの定格使用短絡遮断容量を[A]で設定。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">IEC의 60947 시리즈를 기반으로 시험한 MCB의 정격 사용 단락 차단 용량 [A]로 설정.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="14decb00d1fa11e1800000215ad4efdf">

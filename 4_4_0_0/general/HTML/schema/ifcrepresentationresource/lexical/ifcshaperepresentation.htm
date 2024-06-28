@@ -36,7 +36,7 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcShapeRepresentation</span> represents the concept of a particular geometric representation of a product or a product component within a specific geometric representation context. The inherited attribute <i>RepresentationType</i> is used to define the geometric model used for the shape representation (e.g. 'SweptSolid', or 'Brep'), the inherited attribute <i>RepresentationIdentifier</i> is used to denote the kind of the representation captured by the <span class="self-ref">IfcShapeRepresentation</span> (e.g. 'Axis', 'Body', etc.).</p>
-<p>Several representation identifiers for shape representation are included as predefined values for <i>RepresentationIdentifier</i>. Table 742 indicates the defined list of values for <i>RepresentationIdentifier</i>.</p>
+<p>Several representation identifiers for shape representation are included as predefined values for <i>RepresentationIdentifier</i>. Table 743 indicates the defined list of values for <i>RepresentationIdentifier</i>.</p>
 <table>
 <tr>
 <td>
@@ -98,11 +98,11 @@
 </tr>
 <tr>
 <td>
-<p class="table">Table 742 &mdash; Representation identifiers</p>
+<p class="table">Table 743 &mdash; Representation identifiers</p>
 </td>
 </tr>
 </table>
-<p>Several representation types for shape representation are included as predefined values for <i>RepresentationType</i>. Table 743 indicates the defined list of values for <i>RepresentationType</i>.</p>
+<p>Several representation types for shape representation are included as predefined values for <i>RepresentationType</i>. Table 744 indicates the defined list of values for <i>RepresentationType</i>.</p>
 <table>
 <tr>
 <td>
@@ -263,7 +263,7 @@ some additional representation types are provided:</td>
 </tr>
 <tr>
 <td>
-<p class="table">Table 743 &mdash; Representation types</p>
+<p class="table">Table 744 &mdash; Representation types</p>
 </td>
 </tr>
 </table>
@@ -281,13 +281,13 @@ some additional representation types are provided:</td>
 <tr><th>Rule</th><th>Description</th></tr>
 <tr><td>CorrectContext</td><td>The context to which the IfcShapeRepresentation is assign, shall be of type IfcGeometricRepresentationContext.
 </td></tr>
-<tr><td>NoTopologicalItem</td><td>No topological representation item shall be directly used for shape representations, with the exception of IfcVertexPoint, IfcEdgeCurve, IfcFaceSurface.
-</td></tr>
-<tr><td>HasRepresentationType</td><td>A representation type should be provided for the shape representation.
+<tr><td>CorrectItemsForType</td><td>Checks the proper use of <i>Items</i> according to the <i>RepresentationType</i>.
 </td></tr>
 <tr><td>HasRepresentationIdentifier</td><td>A representation identifier should be provided for the shape representation.
 </td></tr>
-<tr><td>CorrectItemsForType</td><td>Checks the proper use of <i>Items</i> according to the <i>RepresentationType</i>.
+<tr><td>HasRepresentationType</td><td>A representation type should be provided for the shape representation.
+</td></tr>
+<tr><td>NoTopologicalItem</td><td>No topological representation item shall be directly used for shape representations, with the exception of IfcVertexPoint, IfcEdgeCurve, IfcFaceSurface.
 </td></tr>
 </table>
 
@@ -357,13 +357,13 @@ IFC4 CHANGE Inverse relationship cardinality relaxed to be 0:N.
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcrepresentationresource/lexical/ifcshapemodel.htm">IfcShapeModel</a>)<b>;</b><br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
 &nbsp;&nbsp;CorrectContext : &#39;IFCREPRESENTATIONRESOURCE.<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>&#39; <br/>
-IN TYPEOF(SELF\<a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a>.ContextOfItems);<br/>&nbsp;&nbsp;NoTopologicalItem : SIZEOF(QUERY(temp &lt;* Items | <br/>
+IN TYPEOF(SELF\<a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a>.ContextOfItems);<br/>&nbsp;&nbsp;CorrectItemsForType : <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentationtypes.htm">IfcShapeRepresentationTypes</a>(SELF\<a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a>.RepresentationType, SELF\<a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a>.Items);<br/>&nbsp;&nbsp;HasRepresentationIdentifier : EXISTS(SELF\<a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a>.RepresentationIdentifier);<br/>&nbsp;&nbsp;HasRepresentationType : EXISTS(SELF\<a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a>.RepresentationType);<br/>&nbsp;&nbsp;NoTopologicalItem : SIZEOF(QUERY(temp &lt;* Items | <br/>
   (&#39;IFCTOPOLOGYRESOURCE.<a href="../../ifctopologyresource/lexical/ifctopologicalrepresentationitem.htm">IfcTopologicalRepresentationItem</a>&#39; IN TYPEOF(temp))<br/>
     AND (NOT(SIZEOF(<br/>
       [&#39;IFCTOPOLOGYRESOURCE.<a href="../../ifctopologyresource/lexical/ifcvertexpoint.htm">IfcVertexPoint</a>&#39;,<br/>
        &#39;IFCTOPOLOGYRESOURCE.<a href="../../ifctopologyresource/lexical/ifcedgecurve.htm">IfcEdgeCurve</a>&#39;,<br/>
        &#39;IFCTOPOLOGYRESOURCE.<a href="../../ifctopologyresource/lexical/ifcfacesurface.htm">IfcFaceSurface</a>&#39;] * TYPEOF(temp)) = 1))<br/>
-)) = 0;<br/>&nbsp;&nbsp;HasRepresentationType : EXISTS(SELF\<a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a>.RepresentationType);<br/>&nbsp;&nbsp;HasRepresentationIdentifier : EXISTS(SELF\<a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a>.RepresentationIdentifier);<br/>&nbsp;&nbsp;CorrectItemsForType : <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentationtypes.htm">IfcShapeRepresentationTypes</a>(SELF\<a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a>.RepresentationType, SELF\<a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a>.Items);<br/><span class="keyword">END_ENTITY;</span><br/>
+)) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcrepresentationresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

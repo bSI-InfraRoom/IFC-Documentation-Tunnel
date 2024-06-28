@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="49d9bd12b3fe4ee69b96b6e63631ee61" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ElementAssemblyTypeRing</Name>
+  <Definition>Enumeration of the different types of rings.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcElementAssembly/(.RING.)</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcElementAssembly/(.RING.)</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="49c18de557fa48b5b7db66161bdf7ffb">
+      <Name>RingType</Name>
+      <Definition>Type of ring.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_RingType">
+            <EnumItem>UNIVERSAL</EnumItem>
+            <EnumItem>CONICAL</EnumItem>
+            <EnumItem>PARALLEL</EnumItem>
+            <EnumItem>PARALLEL_WITH_CORRECTIVE_RINGS</EnumItem>
+            <EnumItem>SWISS_TÜBBING</EnumItem>
+            <EnumItem>INVERT_SEGMENT_WITH_SHOTCRETE</EnumItem>
+            <EnumItem>HEXAGONAL</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>UNIVERSAL</Name>
+              <Definition>Ring segment of type Universal.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CONICAL</Name>
+              <Definition>Ring segment of type Conical.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PARALLEL</Name>
+              <Definition>Ring segment of type Parallel.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PARALLEL_WITH_CORRECTIVE_RINGS</Name>
+              <Definition>Ring segment of type Parallel with corrective geometry.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SWISS_TÜBBING</Name>
+              <Definition>Ring segment of type Swiss-Tubbing.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INVERT_SEGMENT_WITH_SHOTCRETE</Name>
+              <Definition>Shortcrete-made invert segment.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>HEXAGONAL</Name>
+              <Definition>Ring segment of type Hexagonal.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

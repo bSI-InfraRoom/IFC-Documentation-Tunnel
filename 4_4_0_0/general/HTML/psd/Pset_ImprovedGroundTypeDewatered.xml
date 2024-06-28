@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="2a144149a9144054a4e6f67a75c2869f" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ImprovedGroundTypeDewatered</Name>
+  <Definition>Properties describing improved ground of type dewatered.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcImprovedGround/(.DEWATERED.)</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcImprovedGround/(.DEWATERED.)</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="b23f81cbab8441139eca08d8404d7361">
+      <Name>DewateringMethod</Name>
+      <Definition>Active dewatering of the ground through pumping.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_DewateringMethod">
+            <EnumItem>SUMPPUMP</EnumItem>
+            <EnumItem>WELLPOINT</EnumItem>
+            <EnumItem>DEEPWELL</EnumItem>
+            <EnumItem>VACUUMWELLPOINTS</EnumItem>
+            <EnumItem>EDUCTORWELLS</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>SUMPPUMP</Name>
+              <Definition>Utilization of pumps to remove water collected in a sump or low point.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WELLPOINT</Name>
+              <Definition>System of closely spaced wells connected to a common header.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DEEPWELL</Name>
+              <Definition>Utilization of drilled wells to lower the water table in deeper soil layers.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VACUUMWELLPOINTS</Name>
+              <Definition>Wellpoint system augmented by vacuum technology for increased dewatering efficiency.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EDUCTORWELLS</Name>
+              <Definition>Usage of eductor pumps to induce flow and lift water for dewatering.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="717babbf60b745609cea34124f94f370">
+      <Name>StaticSuctionLift</Name>
+      <Definition>Measurement of the vertical distance between the water table and the suction point.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0bd4ac55468d47b99ab90b161eb07ca5">
+      <Name>StaticDischargeHead</Name>
+      <Definition>Measurement of the vertical distance from the discharge point to a reference elevation.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="639c0067eb444ed8b9d177247c1f1cc2">
+      <Name>VolumetricFlowRate</Name>
+      <Definition>The volumetric flow rate of the fluid.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcVolumetricFlowRateMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Volumetric Flow Rate</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="4d2e8b36bd404c969759c5943ddce089">
+      <Name>BoreholeCount</Name>
+      <Definition>Number of boreholes.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d758666ccdd74ff39d1c9ed23092a60f">
+      <Name>AverageBoreholeDepth</Name>
+      <Definition>Average depth of boreholes used for dewatering.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="fd46323db3be407d92ba9251a2b91657">
+      <Name>BoreholeSpacing</Name>
+      <Definition>Spacing of boreholes used for dewatering.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

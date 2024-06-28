@@ -89,7 +89,7 @@ Note that the associated actors are captured by the IfcOccupant class.</Definiti
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="46569700d1f811e1800000215ad4efdf">
-      <Name>Identifier</Name>
+      <Name>TrackingIdentifier</Name>
       <Definition>The identifier assigned to the agreement for the purposes of tracking.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -104,7 +104,7 @@ Note that the associated actors are captured by the IfcOccupant class.</Definiti
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="50789580d1f811e1800000215ad4efdf">
-      <Name>Version</Name>
+      <Name>AgreementVersion</Name>
       <Definition>The version number of the agreement that is identified.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -119,7 +119,7 @@ Note that the associated actors are captured by the IfcOccupant class.</Definiti
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="5b332a80d1f811e1800000215ad4efdf">
-      <Name>VersionDate</Name>
+      <Name>AgreementDate</Name>
       <Definition>The date on which the version of the agreement became applicable.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -180,7 +180,9 @@ Note that the associated actors are captured by the IfcOccupant class.</Definiti
     </PropertyDef>
     <PropertyDef ifdguid="80279d80d1f811e1800000215ad4efdf">
       <Name>Duration</Name>
-      <Definition>The period of time for the lease.</Definition>
+      <Definition>Duration.
+
+The period of time for the lease.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcDuration" />

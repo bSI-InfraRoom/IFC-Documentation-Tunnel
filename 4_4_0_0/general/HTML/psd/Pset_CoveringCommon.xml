@@ -127,8 +127,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="2e6b1d00d1d011e1800000215ad4efdf">
       <Name>AcousticRating</Name>
-      <Definition>Acoustic rating for this object.
-It is giving according to the national building code. It indicates the sound transmission resistance of this object by an index ration (instead of providing full sound absorbtion values).</Definition>
+      <Definition>Acoustic rating for this object. It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorption values).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -153,8 +152,7 @@ It is giving according to the national building code. It indicates the sound tra
     </PropertyDef>
     <PropertyDef ifdguid="3460fe00d1d011e1800000215ad4efdf">
       <Name>FlammabilityRating</Name>
-      <Definition>Flammability Rating for this object.
-It is given according to the national building code that governs the rating of flammability for materials.</Definition>
+      <Definition>Flammability Rating for this object. It is given according to the national building code that governs the rating of flammability for materials.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -219,8 +217,7 @@ It is given according to the national building code that governs the rating of f
     </PropertyDef>
     <PropertyDef ifdguid="3f1b9300d1d011e1800000215ad4efdf">
       <Name>SurfaceSpreadOfFlame</Name>
-      <Definition>Indication on how the flames spread around the surface,
-It is given according to the national building code that governs the fire behaviour for materials.</Definition>
+      <Definition>Indication on how the flames spread around the surface, It is given according to the national building code that governs the fire behaviour for materials.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -241,8 +238,7 @@ It is given according to the national building code that governs the fire behavi
     </PropertyDef>
     <PropertyDef ifdguid="565a8080d1d011e1800000215ad4efdf">
       <Name>Finish</Name>
-      <Definition>Finish selection for this object.
-Here specification of the surface finish for informational purposes.</Definition>
+      <Definition>Description of the (surface) finish of the object for informational purposes.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText" />
@@ -286,10 +282,9 @@ Here specification of the surface finish for informational purposes.</Definition
         <DefinitionAlias lang="zh-CN">表示该构件是否设计为外部构件。若是，则该构件为外部构件，朝向建筑物的外侧。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="50fd3600d1d011e1800000215ad4efdf">
+    <PropertyDef ifdguid="61f67900d1c911e1800000215ad4efdf">
       <Name>ThermalTransmittance</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of an element. 
-Here the total thermal transmittance coefficient through the covering (including all materials).</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />
@@ -304,18 +299,17 @@ Here the total thermal transmittance coefficient through the covering (including
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="de-DE">Wärmedurchgangskoeffizient (U-Wert) der Materialschichten.
-Hier der Gesamtwärmedurchgangskoeffizient der Bekleidung (für alle Schichten).</DefinitionAlias>
+Hier der Gesamtwärmedurchgangskoeffizient des Schornsteins (in Richtung des Wärmeflusses), angegeben ohne den inneren und äußeren Wärmeübergangswiderstand.</DefinitionAlias>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="fr-FR">Coefficient de transmission thermique surfacique (U). C'est le coefficient global de transmission thermique à travers le revêtement dans la direction du flux thermique (tous matériaux inclus). Nouvelle propriété de la version 2x4.</DefinitionAlias>
-        <DefinitionAlias lang="ja-JP">熱貫流率U値。ここではカバリングを通した熱移動の方向における全体の熱還流率を示す。</DefinitionAlias>
+        <DefinitionAlias lang="fr-FR">Coefficient de transmission thermique surfacique (U). C'est le coefficient global de transmission thermique à travers la cheminée dans la direction du flux thermique (tous matériaux inclus). Nouvelle propriété de la version 2x4.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">材料の熱貫流率（U値）。ここでは、煙突全体の熱の流れる方向の熱貫流率（全ての材料を含む）。</DefinitionAlias>
         <DefinitionAlias lang="zh-CN">材料的导热系数（U值）。
-表示穿过该覆盖层的整体导热系数（包括所有材料）。</DefinitionAlias>
+表示该烟囱在传热方向上的整体导热系数（包括所有材料）。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="28753c00d1d011e1800000215ad4efdf">
+    <PropertyDef ifdguid="13b49a80d20811e1800000215ad4efdf">
       <Name>FireRating</Name>
-      <Definition>Fire rating for this object.
-It is given according to the national fire safety classification.</Definition>
+      <Definition>Fire rating for this object. It is given according to the national fire safety classification.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -324,15 +318,15 @@ It is given according to the national fire safety classification.</Definition>
       <NameAliases>
         <NameAlias lang="de-DE">Feuerwiderstandsklasse</NameAlias>
         <NameAlias lang="en">Fire Rating</NameAlias>
-        <NameAlias lang="fr-FR">Résistance au feu</NameAlias>
+        <NameAlias lang="fr-FR">ResistanceAuFeu</NameAlias>
         <NameAlias lang="ja-JP">耐火等級</NameAlias>
         <NameAlias lang="zh-CN">防火等级</NameAlias>
       </NameAliases>
       <DefinitionAliases>
-        <DefinitionAlias lang="de-DE">Feuerwiderstandsklasse gemäß der nationalen oder regionalen Brandschutzverordnung.</DefinitionAlias>
+        <DefinitionAlias lang="de-DE">Feuerwiderstandasklasse gemäß der nationalen oder regionalen Brandschutzverordnung.</DefinitionAlias>
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="fr-FR">Classement au feu de l'élément donné selon la classification nationale de sécurité incendie.</DefinitionAlias>
-        <DefinitionAlias lang="ja-JP">耐火等級。当該国の建築法規による。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">主要な耐火等級。関連する建築基準法、消防法などの国家基準を参照。</DefinitionAlias>
         <DefinitionAlias lang="zh-CN">该构件的防火等级。
 该属性的依据为国家防火安全分级。</DefinitionAlias>
       </DefinitionAliases>

@@ -5,9 +5,9 @@
   <Definition>Shape properties specific to connecting accessories in truss form with diagonal cross-bars.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcDiscreteAccessory/Diagonal truss connector</ClassName>
+    <ClassName>IfcDiscreteAccessory</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcDiscreteAccessory/Diagonal truss connector</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcDiscreteAccessory</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="67a48c80d1d211e1800000215ad4efdf">
       <Name>DiagonalTrussHeight</Name>

@@ -40,7 +40,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="52cdf600d1de11e1800000215ad4efdf">
-      <Name>LeakageCurve</Name>
+      <Name>LeakageCurveHistory</Name>
       <Definition>Leakage per unit length curve versus working pressure. If a scalar is expressed then it represents LeakageClass which is flowrate per unit area at a specified pressure rating (e.g., ASHRAE Fundamentals 2001 34.16.).</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />

@@ -25,7 +25,7 @@
       <Definition>The number of wires used in the element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -44,7 +44,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="94a71fe8b1844edeb934016e43c86dc4">
       <Name>TensileStrength</Name>
-      <Definition>Measurement of the ability to withstand breakage under applied force.</Definition>
+      <Definition>Indicates the ability to withstand breakage apart under applied force.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcForceMeasure" />

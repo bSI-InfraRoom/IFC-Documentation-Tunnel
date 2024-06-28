@@ -19,7 +19,7 @@
             <EnumItem>AUDIOVIDEO</EnumItem>
             <EnumItem>OTHER</EnumItem>
             <EnumItem>NOTKNOWN</EnumItem>
-            <EnumItem>UNSET.</EnumItem>
+            <EnumItem>UNSET</EnumItem>
           </EnumList>
           <ConstantList>
             <ConstantDef>
@@ -57,11 +57,14 @@
               </DefinitionAliases>
             </ConstantDef>
             <ConstantDef>
-              <Name>UNSET.</Name>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
               <NameAliases>
-                <NameAlias lang="en">Unset.</NameAlias>
+                <NameAlias lang="en">(unset)</NameAlias>
               </NameAliases>
-              <DefinitionAliases />
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
             </ConstantDef>
           </ConstantList>
         </TypePropertyEnumeratedValue>

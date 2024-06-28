@@ -117,7 +117,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="43b9731226b04190b668d0c68f6ce88c">
       <Name>LoadBearing</Name>
-      <Definition>Indicates whether the object is intended to carry loads (TRUE) or not (FALSE)</Definition>
+      <Definition>Indicates whether the object is intended to carry loads (TRUE) or not (FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

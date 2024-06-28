@@ -3,7 +3,7 @@
   <IfcVersion version="IFC4X4" />
   <Name>Pset_BoilerPHistory</Name>
   <Definition>Boiler performance history common attributes.
-WaterQuality attribute deleted in IFC2x2 Pset Addendum: Use IfcWaterProperties instead. CombustionProductsMaximulLoad and CombustionProductsPartialLoad attributes deleted in IFC2x2 Pset Addendum: Use IfcProductsOfCombustionProperties instead.</Definition>
+WaterQuality attribute deleted in IFC2x2 Pset Addendum: Use IfcMaterialProperties instead. CombustionProductsMaximulLoad and CombustionProductsPartialLoad attributes deleted in IFC2x2 Pset Addendum: Use IfcMaterialProperties instead.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcBoiler</ClassName>
@@ -63,7 +63,7 @@ WaterQuality attribute deleted in IFC2x2 Pset Addendum: Use IfcWaterProperties i
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="4dfc4880d1c411e1800000215ad4efdf">
-      <Name>WorkingPressure</Name>
+      <Name>WorkingPressureHistory</Name>
       <Definition>Boiler working pressure.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -80,7 +80,7 @@ WaterQuality attribute deleted in IFC2x2 Pset Addendum: Use IfcWaterProperties i
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="50f73900d1c411e1800000215ad4efdf">
-      <Name>CombustionTemperature</Name>
+      <Name>CombustionChamberTemperature</Name>
       <Definition>Average combustion chamber temperature.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />

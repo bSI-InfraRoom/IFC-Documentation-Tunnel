@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -31,30 +31,30 @@ TYPE IfcKerbTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcRoadPartTypeEnum = ENUMERATION OF
-	(ROADSIDEPART
+	(BICYCLECROSSING
 	,BUS_STOP
+	,CARRIAGEWAY
+	,CENTRALISLAND
+	,CENTRALRESERVE
 	,HARDSHOULDER
 	,INTERSECTION
-	,PASSINGBAY
-	,ROADWAYPLATEAU
-	,ROADSIDE
-	,REFUGEISLAND
-	,TOLLPLAZA
-	,CENTRALRESERVE
-	,SIDEWALK
-	,PARKINGBAY
-	,RAILWAYCROSSING
-	,PEDESTRIAN_CROSSING
-	,SOFTSHOULDER
-	,BICYCLECROSSING
-	,CENTRALISLAND
-	,SHOULDER
-	,TRAFFICLANE
-	,ROADSEGMENT
-	,ROUNDABOUT
 	,LAYBY
-	,CARRIAGEWAY
+	,PARKINGBAY
+	,PASSINGBAY
+	,PEDESTRIAN_CROSSING
+	,RAILWAYCROSSING
+	,REFUGEISLAND
+	,ROADSEGMENT
+	,ROADSIDE
+	,ROADSIDEPART
+	,ROADWAYPLATEAU
+	,ROUNDABOUT
+	,SHOULDER
+	,SIDEWALK
+	,SOFTSHOULDER
+	,TOLLPLAZA
 	,TRAFFICISLAND
+	,TRAFFICLANE
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -85,18 +85,20 @@ END_ENTITY;
 
 ENTITY IfcRoad
  SUBTYPE OF (IfcFacility);
-	PredefinedType : IfcRoadTypeEnum;
+	PredefinedType : OPTIONAL IfcRoadTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <> IfcRoadTypeEnum.USERDEFINED) OR 
-
-EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcRoadTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcRoadTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcRoadPart
  SUBTYPE OF (IfcFacilityPart);
-	PredefinedType : IfcRoadPartTypeEnum;
+	PredefinedType : OPTIONAL IfcRoadPartTypeEnum;
  WHERE
-	HasObjectType : (PredefinedType <>IfcRoadPartTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcRoadPartTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcRoadPartTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 END_SCHEMA;

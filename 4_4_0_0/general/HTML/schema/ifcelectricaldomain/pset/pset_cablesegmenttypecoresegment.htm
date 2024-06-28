@@ -48,7 +48,8 @@
 <a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Overall Diameter</b></td><td>The overall diameter of a core (maximun space used).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Overall Diameter</b></td><td>The overall diameter of a object.
+The overall diameter of a core (maximum space used).
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>全径</b></td><td>全体の直径（最大スペース）。
 </td></tr>
@@ -60,7 +61,7 @@
 <a href="../../ifcmeasureresource/lexical/ifcelectricvoltagemeasure.htm">IfcElectricVoltageMeasure</a>
 *</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Rated Voltage</b></td><td>The voltage that a device is designed to handle.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Rated Voltage</b></td><td>The range of allowed voltage that a device is certified to handle. The upper bound of this value is the maximum.
 </td></tr>
 </table>
 </td></tr>
@@ -70,21 +71,9 @@
 <a href="../../ifcmeasureresource/lexical/ifcthermodynamictemperaturemeasure.htm">IfcThermodynamicTemperatureMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Rated Temperature</b></td><td>The range of allowed temerature that a device is certified to handle. The upper bound of this value is the maximum.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Rated Temperature</b></td><td>The range of allowed temperature that a device is certified to handle. The upper bound of this value is the maximum.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>定格温度</b></td><td>機器を使用できる保障された温度。上限値は最大値。
-</td></tr>
-</table>
-</td></tr>
-<tr><td>ScreenDiameter</td><td>
-<span class="self-ref">P_SINGLEVALUE</span>
-/
-<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
-</td><td>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Screen Diameter</b></td><td>The diameter of the screen around a core segment (if present).
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>シールド径</b></td><td>コア部分（存在する場合）の面の直径。
 </td></tr>
 </table>
 </td></tr>
@@ -100,7 +89,19 @@
 </td></tr>
 </table>
 </td></tr>
-<tr><td>SheathColors</td><td>
+<tr><td>ScreenDiameter</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Screen Diameter</b></td><td>The diameter of the screen around an object (if present).
+</td></tr>
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>スクリーン径</b></td><td>遮へい層の径、厚さ。
+</td></tr>
+</table>
+</td></tr>
+<tr><td>SheathColours</td><td>
 <span class="self-ref">P_ENUMERATEDVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
@@ -119,7 +120,8 @@
 <a href="../../ifcmeasureresource/lexical/ifcmassmeasure.htm">IfcMassMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Weight</b></td><td>Weight of core kg/km.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Weight</b></td><td>Total weight of object
+Weight of core kg/km.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>重量</b></td><td>コアkg/kmの重量。
 </td></tr>
@@ -163,7 +165,7 @@ Indicates the maximum stress that a material or element can withstand before bre
 <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Halogen Proof</b></td><td>Produces small amount of smoke and irritating deaerator/gas.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Halogen Proof</b></td><td>Produces small amount of smoke and irritating Deaerator/Gas.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>ハロゲン証明</b></td><td>少量の煙および刺激する脱気/ガスを生成。
 </td></tr>
@@ -175,9 +177,9 @@ Indicates the maximum stress that a material or element can withstand before bre
 <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Function Reliable</b></td><td>Core maintain given properties/functions over a given (tested) time and conditions. According to (IEC) standard.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Function Reliable</b></td><td>Element (such as cable, bus, core) maintain given properties/functions over a given (tested) time and conditions. According to IEC standard.
 </td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>機能信頼性</b></td><td>コアの維持は特定（テスト）の時間と条件でプロパティ/関数を指定する。標準会議（IEC）規格に準拠。
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>信頼性のある機能</b></td><td>ケーブルや母線が与えられた時間と条件の中で規定される機能、性質を維持すること。これはIEC基準による。
 </td></tr>
 </table>
 </td></tr>
@@ -187,9 +189,9 @@ Indicates the maximum stress that a material or element can withstand before bre
 <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Standard</b></td><td>The designation of the standard applicable for the definition of the core used.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Standard</b></td><td>The designation of the standard applicable for the definition of the object used.
 </td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>基準</b></td><td>使用するコアの定義に適用される基準の指定。
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>標準</b></td><td>使用されるケーブル、busbarの定義のために使用される標準仕様。
 </td></tr>
 </table>
 </td></tr>

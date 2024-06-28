@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="9208e1b32ded487c89ffa1ffd1622edb" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_Address</Name>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcActor</ClassName>
+    <ClassName>IfcBuilding</ClassName>
+    <ClassName>IfcSite</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcActor,IfcBuilding,IfcSite</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="206cbec29fdf46c88eccea89b10cd5ac">
+      <Name>Purpose</Name>
+      <Definition>Indication of the purpose of this object</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AddressType">
+            <EnumItem>DISTRIBUTIONPOINT</EnumItem>
+            <EnumItem>HOME</EnumItem>
+            <EnumItem>OFFICE</EnumItem>
+            <EnumItem>SITE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>DISTRIBUTIONPOINT</Name>
+              <Definition>A postal distribution point address.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>HOME</Name>
+              <Definition>A home address.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OFFICE</Name>
+              <Definition>An office address.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SITE</Name>
+              <Definition>A site address.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="e3d7420421a149beb71653c6faf42cf2">
+      <Name>Description</Name>
+      <Definition>The Description of the object.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="12335d912fc54704b11bb08932b20978">
+      <Name>UserDefinedPurpose</Name>
+      <Definition>Allows for specification of user specific purpose of the address beyond the enumeration values provided by Purpose attribute of type IfcAddressTypeEnum. When a value is provided for attribute UserDefinedPurpose, in parallel the attribute Purpose shall have enumeration value USERDEFINED.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b1ba3265ad5a4f638c383187d90a4bf6">
+      <Name>InternalLocation</Name>
+      <Definition>An organization defined address for internal mail delivery.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0acae6b91fad4dc0a4ef2eebd8502c70">
+      <Name>AddressLines</Name>
+      <Definition>The postal address.
+
+&gt; NOTE&amp;nbsp; A postal address may occupy several lines (or elements) when recorded. It is expected that normal usage will incorporate relevant elements of the following address concepts: A location within a building (e.g. 3rd Floor) Building name (e.g. Interoperability House) Street number (e.g. 6400) Street name (e.g. Alliance Boulevard). Typical content of address lines may vary in different countries.</Definition>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel" />
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="37792debb2be4e79b03884582ff257e2">
+      <Name>PostalBox</Name>
+      <Definition>An address that is implied by an identifiable mail drop.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4c777a1f133d4a2ba5f5840383151c6a">
+      <Name>Town</Name>
+      <Definition>The name of a town.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="13902bc665f646efb2557d230ef53f24">
+      <Name>Region</Name>
+      <Definition>The name of a region.
+
+&gt; EXAMPLE&amp;nbsp; The counties of the United Kingdom and the states of North America are examples of regions.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="31753e4bd0324d37bc0ecbd712e966c6">
+      <Name>PostalCode</Name>
+      <Definition>The code that is used by the country's postal service.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ae1065cd026b46aeb7e76f6fe0330aef">
+      <Name>Country</Name>
+      <Definition>The two letter country code (from ISO 3166).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d2779bd53efa4f199ef31b13857e225f">
+      <Name>TelephoneNumbers</Name>
+      <Definition>The list of telephone numbers at which telephone messages may be received.</Definition>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel" />
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5539fe2cef6845bcb8d543c770af870a">
+      <Name>FacsimileNumbers</Name>
+      <Definition>The list of fax numbers at which fax messages may be received.</Definition>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel" />
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="136248a58d16491eb6146fd009e37f69">
+      <Name>PagerNumber</Name>
+      <Definition>The pager number at which paging messages may be received.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4f942e4ee7f74e80944b703695869962">
+      <Name>ElectronicMailAddresses</Name>
+      <Definition>The list of Email addresses at which Email messages may be received.</Definition>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel" />
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0f9da8e72f9e44f5a121257b59d3d31d">
+      <Name>WWWHomepageURL</Name>
+      <Definition>The world wide web address at which the preliminary page of information for the person or organization can be located.
+
+&gt; NOTE&amp;nbsp; Information on the world wide web for a person or organization may be separated into a number of pages and across a number of host sites, all of which may be linked together. It is assumed that all such information may be referenced from a single page that is termed the home page for that person or organization.
+
+&gt; NOTE&amp;nbsp; Should be of type IfcURIReference when this has been merged.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="fa91d81624e943689e969e7f3e6127cb">
+      <Name>MessagingIDs</Name>
+      <Definition>IDs or addresses for any other means of telecommunication, for example instant messaging, voice-over-IP, or file transfer protocols. The communication protocol is indicated by the URI value with scheme designations such as irc:, sip:, or ftp:.
+
+&gt; NOTE&amp;nbsp; Should be of type IfcURIReference when this has been merged.</Definition>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel" />
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

@@ -120,7 +120,7 @@
       <Definition>Number of tube rows in the tube bundle assembly.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -168,10 +168,12 @@
     </PropertyDef>
     <PropertyDef ifdguid="701cb780d21211e1800000215ad4efdf">
       <Name>NumberOfCircuits</Name>
-      <Definition>Number of parallel fluid tube circuits.</Definition>
+      <Definition>Number of circuits.
+
+Number of parallel fluid tube circuits.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -202,7 +204,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="7ad74c80d21211e1800000215ad4efdf">
       <Name>ThermalConductivity</Name>
-      <Definition>The thermal conductivity of the tube.</Definition>
+      <Definition>The thermal conductivity of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalConductivityMeasure" />
@@ -219,7 +221,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="80349700d21211e1800000215ad4efdf">
       <Name>Length</Name>
-      <Definition>Length of the tubes in the tube bundle.</Definition>
+      <Definition>The length of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -236,7 +238,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="89256880d21211e1800000215ad4efdf">
       <Name>Volume</Name>
-      <Definition>Total volume of fluid in the tubes and their headers.</Definition>
+      <Definition>Volume of the element.
+
+Total volume of fluid in the tubes and their headers.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumeMeasure" />
@@ -253,7 +257,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="8e82b300d21211e1800000215ad4efdf">
       <Name>NominalDiameter</Name>
-      <Definition>Nominal diameter or width of the tubes in the tube bundle.</Definition>
+      <Definition>Nominal diameter or width of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

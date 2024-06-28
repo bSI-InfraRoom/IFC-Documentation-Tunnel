@@ -5,11 +5,11 @@
   <Definition>Properties related to fire protection of spaces that apply to the occurrences of IfcSpace or IfcZone.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcSpace</ClassName>
-    <ClassName> IfcSpatialZone</ClassName>
-    <ClassName> IfcZone</ClassName>
+    <ClassName>IfcSpatialElement</ClassName>
+    <ClassName>IfcSpatialZone</ClassName>
+    <ClassName>IfcZone</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcSpace, IfcSpatialZone, IfcZone</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcSpatialElement,IfcSpatialZone,IfcZone</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="33988e00d20911e1800000215ad4efdf">
       <Name>FireRiskFactor</Name>
@@ -61,6 +61,7 @@
     <PropertyDef ifdguid="76f2fc80d20911e1800000215ad4efdf">
       <Name>FireExit</Name>
       <Definition>Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE).
+
 Here whether the space (in case of e.g., a corridor) is designed to serve as an exit space, e.g., for fire escape purposes.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -85,7 +86,7 @@ Here whether the space (in case of e.g., a corridor) is designed to serve as an 
     </PropertyDef>
     <PropertyDef ifdguid="7e1a0a80d20911e1800000215ad4efdf">
       <Name>SprinklerProtection</Name>
-      <Definition>Indication whether the space is sprinkler protected (TRUE) or not (FALSE).</Definition>
+      <Definition>Indication whether this object is sprinkler protected (TRUE) or not (FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -108,7 +109,7 @@ Here whether the space (in case of e.g., a corridor) is designed to serve as an 
     </PropertyDef>
     <PropertyDef ifdguid="840feb80d20911e1800000215ad4efdf">
       <Name>SprinklerProtectionAutomatic</Name>
-      <Definition>Indication whether the space has an automatic sprinkler protection (TRUE) or not (FALSE).
+      <Definition>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE).
 It should only be given, if the property "SprinklerProtection" is set to TRUE.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

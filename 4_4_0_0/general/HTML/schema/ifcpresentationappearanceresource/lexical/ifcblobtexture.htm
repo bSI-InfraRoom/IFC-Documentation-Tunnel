@@ -75,9 +75,9 @@ Blob, given as a single binary, to capture the texture within one popular file (
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>SupportedRasterFormat</td><td>Currently the formats of bmp, jpg, gif and pgn, shall be supported.
-</td></tr>
 <tr><td>RasterCodeByteStream</td><td>The size of the raster code shall be a multiple of 8 bits.
+</td></tr>
+<tr><td>SupportedRasterFormat</td><td>Currently the formats of bmp, jpg, gif and pgn, shall be supported.
 </td></tr>
 </table>
 
@@ -160,7 +160,7 @@ Blob, given as a single binary, to capture the texture within one popular file (
 &nbsp;&nbsp;RasterFormat : <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>;<br/>
 &nbsp;&nbsp;RasterCode : <a href="../../ifcmeasureresource/lexical/ifcbinary.htm">IfcBinary</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;SupportedRasterFormat : SELF.RasterFormat IN [&#39;BMP&#39;, &#39;JPG&#39;, &#39;GIF&#39;, &#39;PNG&#39;];<br/>&nbsp;&nbsp;RasterCodeByteStream : BLENGTH(RasterCode) MOD 8 = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;RasterCodeByteStream : BLENGTH(RasterCode) MOD 8 = 0;<br/>&nbsp;&nbsp;SupportedRasterFormat : SELF.RasterFormat IN [&#39;BMP&#39;, &#39;JPG&#39;, &#39;GIF&#39;, &#39;PNG&#39;];<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcpresentationappearanceresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

@@ -67,6 +67,8 @@ IFC4 CHANGE  The cardinality has changed to 0..n to allow reuse of instances of
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasApprovals</i></td><td><a href="../../ifcapprovalresource/lexical/ifcresourceapprovalrelationship.htm">IfcResourceApprovalRelationship</a><br/>@RelatedResourceObjects</td><td>? S[0:?]</td><td>User-defined approvals for the property.
 </td><td>X</td></tr>
+<tr><td></td><td><i>PartOfMaterialOrProfileProperties</i></td><td><a href="../../ifcpropertyresource/lexical/ifcextendedproperties.htm">IfcExtendedProperties</a><br/>@Properties</td><td>S[0:?]</td><td>Reference to the <a href="../../ifcmaterialresource/lexical/ifcmaterialproperties.htm">IfcMaterialProperties</a> by which the <span class="self-ref">IfcProperty</span> is referenced.
+</td><td>X</td></tr>
 </table>
 </details>
 </section>
@@ -112,6 +114,8 @@ IFC4 CHANGE  The cardinality has changed to 0..n to allow reuse of instances of
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasApprovals</i></td><td><a href="../../ifcapprovalresource/lexical/ifcresourceapprovalrelationship.htm">IfcResourceApprovalRelationship</a><br/>@RelatedResourceObjects</td><td>? S[0:?]</td><td>User-defined approvals for the property.
 </td><td>X</td></tr>
+<tr><td></td><td><i>PartOfMaterialOrProfileProperties</i></td><td><a href="../../ifcpropertyresource/lexical/ifcextendedproperties.htm">IfcExtendedProperties</a><br/>@Properties</td><td>S[0:?]</td><td>Reference to the <a href="../../ifcmaterialresource/lexical/ifcmaterialproperties.htm">IfcMaterialProperties</a> by which the <span class="self-ref">IfcProperty</span> is referenced.
+</td><td>X</td></tr>
 </table>
 </details>
 </section>
@@ -141,6 +145,7 @@ IFC4 CHANGE  The cardinality has changed to 0..n to allow reuse of instances of
 &nbsp;&nbsp;PartOfComplex : <span class="keyword">SET</span> [0:?] OF <a href="../../ifcpropertyresource/lexical/ifccomplexproperty.htm">IfcComplexProperty</a> <span class="keyword">FOR</span> HasProperties;<br/>
 &nbsp;&nbsp;HasConstraints : <span class="keyword">SET</span> [0:?] OF <a href="../../ifcconstraintresource/lexical/ifcresourceconstraintrelationship.htm">IfcResourceConstraintRelationship</a> <span class="keyword">FOR</span> RelatedResourceObjects;<br/>
 &nbsp;&nbsp;HasApprovals : <span class="keyword">SET</span> [0:?] OF <a href="../../ifcapprovalresource/lexical/ifcresourceapprovalrelationship.htm">IfcResourceApprovalRelationship</a> <span class="keyword">FOR</span> RelatedResourceObjects;<br/>
+&nbsp;&nbsp;PartOfMaterialOrProfileProperties : <span class="keyword">SET</span> [0:?] OF <a href="../../ifcpropertyresource/lexical/ifcextendedproperties.htm">IfcExtendedProperties</a> <span class="keyword">FOR</span> Properties;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcpropertyresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

@@ -11,7 +11,9 @@
   <PropertyDefs>
     <PropertyDef ifdguid="ca038a00d1de11e1800000215ad4efdf">
       <Name>AirFlowRate</Name>
-      <Definition>Volumetric air flow rate.</Definition>
+      <Definition>Air flow rate.
+
+Volumetric air flow rate.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

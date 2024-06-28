@@ -1,0 +1,113 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_GeoObsDiscontinuityFault</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 5 index3 4 index4 16 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.5.4.17");
+//-->
+</script>
+
+<h4 class="std">6.5.4.17 Pset_GeoObsDiscontinuityFault</h4>
+<p><span class="self-ref">PSET_OCCURRENCEDRIVEN</span>
+/
+<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm">IfcGeoScienceObservation</a>
+ / <span class="self-ref">MAPPEDFEATURE,IfcGeoScienceObservation</span>
+ / <span class="self-ref">LOCALINFORMATION</span>
+</p>Properties for geological fault observations.
+
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geoobsdiscontinuityfault.htm">Pset_GeoObsDiscontinuityFault</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/05jI9UzJrFPPDO5hHKCniW/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_GeoObsDiscontinuityFault.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>FaultType</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Type of the fault classified with the dip and the direction of slip.
+
+</td></tr>
+<tr><td>FaultThickness</td><td>
+<span class="self-ref">P_BOUNDEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>
+</td><td>
+Thickness range of the fault zone, which can range from millimeters to kilometers.
+
+</td></tr>
+<tr><td>FaultLength</td><td>
+<span class="self-ref">P_BOUNDEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+Length range of the exposed fault trace.
+
+</td></tr>
+<tr><td>DeformationPhase</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Name or label for a geologic event such as a basin formation, compressional tectonic phase, orogeny etc.
+
+</td></tr>
+<tr><td>FaultSlipDirection</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Observed relative displacement direction of the hanging wall (top) to the footwall, e.g. up. down, left, right or combinations (like top down - left) when looking from one block across the fault to the other block.
+<table><tr><td style="width: 600px"><img src="......%5Cfigures%5CFaultSlipDirection.png" alt="FaultSlipDirection" title="Figure 1"></td></tr><tr><td><p class="figure">Figure 1</p></td></tr></table>
+
+</td></tr>
+<tr><td>Displacement</td><td>
+<span class="self-ref">P_BOUNDEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+True displacement range or total slip on the fault.
+
+</td></tr>
+<tr><td>FaultPitchAngle</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>
+</td><td>
+Angle between the strike of the slip surface and the slip vector (striation).
+<blockquote class="note">
+NOTE  In geology, &quot;pitch&quot; and &quot;rake&quot; are terms used to describe the orientation and inclination of geological features, such as folds and faults, with respect to a horizontal plane. Pitch refers to the angle of inclination of a geological feature from the horizontal plane, measured perpendicular to the strike of the feature. It is commonly expressed in degrees or as a ratio of vertical to horizontal distance. For example, if a geological feature has a pitch of 45 degrees, it means that it is inclined at an angle of 45 degrees from the horizontal. Rake, on the other hand, refers to the angle of inclination of a geological feature measured parallel to the strike of the feature. It is also commonly expressed in degrees or as a ratio of vertical to horizontal distance. Rake is often used to describe the orientation of faults, where it represents the angle between the fault plane and a horizontal plane. Both pitch and rake are important parameters in geology as they can provide information about the deformation history and the mechanical behavior of rocks in response to tectonic forces.
+</blockquote>
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_geoobsdiscontinuityfault.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

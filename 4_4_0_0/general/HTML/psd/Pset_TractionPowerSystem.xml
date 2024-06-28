@@ -143,7 +143,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="a802249c01c648a6976bc860a2b8b715">
       <Name>RatedFrequency</Name>
-      <Definition>Frequency at which an AC electric power system reaches its optimum operating condition.</Definition>
+      <Definition>Frequency of the AC electric power supply when the device or system reaches its optimum operating condition.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcFrequencyMeasure" />

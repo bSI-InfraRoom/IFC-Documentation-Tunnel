@@ -496,7 +496,9 @@ References to the orientation of grain or lay-up correspond to material orientat
           </PropertyDef>
           <PropertyDef ifdguid="308b1604fa7f4b11ba71175ab14f7ffb">
             <Name>BendingStrength</Name>
-            <Definition>Bending strength.</Definition>
+            <Definition>Bending strength.
+
+Defining values: α; defined values: bending strength.</Definition>
             <PropertyType>
               <TypePropertySingleValue>
                 <DataType type="IfcPressureMeasure" />

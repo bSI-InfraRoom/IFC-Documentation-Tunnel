@@ -544,7 +544,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="4c854d00d1d111e1800000215ad4efdf">
       <Name>TemperatureRange</Name>
-      <Definition>Temperature range.</Definition>
+      <Definition>Allowable maximum and minimum temperature.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />
@@ -559,7 +559,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="53ac5b00d1d111e1800000215ad4efdf">
       <Name>MaximumWorkingPressure</Name>
-      <Definition>Maximum working pressure.</Definition>
+      <Definition>Maximum pressure that the object is manufactured to withstand.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure" />
@@ -712,7 +712,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="8b1b0780d1d111e1800000215ad4efdf">
       <Name>FrameDepth</Name>
-      <Definition>The length (or depth) of the damper frame.</Definition>
+      <Definition>The length (or depth) of the frame.
+
+For a damper, it is the length (or depth) of the damper frame.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -727,7 +729,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="93734280d1d111e1800000215ad4efdf">
       <Name>FrameThickness</Name>
-      <Definition>The thickness of the damper frame material.</Definition>
+      <Definition>The thickness of the frame.
+
+For a damper, it is the thickness of the damper frame material.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

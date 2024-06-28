@@ -84,9 +84,11 @@
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="93327180d1e811e1800000215ad4efdf">
+    <PropertyDef ifdguid="5c5c5b80d1e811e1800000215ad4efdf">
       <Name>ConnectionSize</Name>
-      <Definition>Defines the size of inlet and outlet pipe connections to the meter.</Definition>
+      <Definition>The connection size of the object.
+
+Inlet and outlet pipe connections to the meter.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

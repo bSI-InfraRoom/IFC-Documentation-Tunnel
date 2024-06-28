@@ -7,9 +7,9 @@
 Pset renamed from Pset_TankTypePreformedTank to Pset_TankTypePreformed in IFC2x2 Pset Addendum.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcTank/PREFORMED</ClassName>
+    <ClassName>IfcTank</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcTank/PREFORMED</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcTank</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="6b570400d21011e1800000215ad4efdf">
       <Name>PatternType</Name>

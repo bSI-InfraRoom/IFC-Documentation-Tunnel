@@ -39,21 +39,6 @@
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="14542d80d21611e1800000215ad4efdf">
-      <Name>WarrantyEndDate</Name>
-      <Definition>The date on which the warranty expires.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcDate" />
-        </TypePropertySingleValue>
-      </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Warranty End Date</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-      </DefinitionAliases>
-    </PropertyDef>
     <PropertyDef ifdguid="19b17800d21611e1800000215ad4efdf">
       <Name>IsExtendedWarranty</Name>
       <Definition>Indication of whether this is an extended warranty whose duration is greater than that normally assigned to an artefact (=TRUE) or not (= FALSE).</Definition>

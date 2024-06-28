@@ -87,7 +87,7 @@
       <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="e63a1a3884e64e38bcda8a508392395f">
-      <Name>EnergyAbsorption </Name>
+      <Name>EnergyAbsorption</Name>
       <Definition>Energy absorption capacity of the element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

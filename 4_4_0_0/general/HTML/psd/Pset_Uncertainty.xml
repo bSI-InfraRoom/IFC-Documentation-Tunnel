@@ -18,7 +18,7 @@
             <EnumItem>MEASUREMENT</EnumItem>
             <EnumItem>OBSERVATION</EnumItem>
             <EnumItem>ASSESSMENT</EnumItem>
-            <EnumItem>INTERPRITATION</EnumItem>
+            <EnumItem>INTERPRETATION</EnumItem>
             <EnumItem>ESTIMATE</EnumItem>
             <EnumItem>USERDEFINED</EnumItem>
             <EnumItem>NOTKNOWN</EnumItem>
@@ -41,7 +41,7 @@
               <DefinitionAliases />
             </ConstantDef>
             <ConstantDef>
-              <Name>INTERPRITATION</Name>
+              <Name>INTERPRETATION</Name>
               <NameAliases />
               <DefinitionAliases />
             </ConstantDef>

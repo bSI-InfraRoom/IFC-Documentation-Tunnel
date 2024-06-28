@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="b5bbfb39e9da4bcd8a3588fdbe441ac9" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoObsDiscontinuityCommon</Name>
+  <Definition>Properties of discontinuities or discontinuity sets in rock according to ISO EN 14689.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/MAPPEDFEATURE</ClassName>
+    <ClassName>IfcGeoScienceObservation/LOCALINFORMATION</ClassName>
+    <ClassName>IfcGeoScienceFeature/DISCRETEDISCONTINUITY</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/MAPPEDFEATURE,IfcGeoScienceObservation/LOCALINFORMATION,IfcGeoScienceFeature/DISCRETEDISCONTINUITY</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="53649d66b4f84a6cb16b2e7aee1ceecf">
+      <Name>DiscontinuityType</Name>
+      <Definition>Pattern of bedding, folds, faults and discontinuities in rock masses, which subdivide the mass into individual domains or rock blocks.
+&gt;NOTE&amp;nbsp; Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8e32583398b349aa9624df1fa7c3d0bf">
+      <Name>DipDirection</Name>
+      <Definition>The azimuth of the dip (dip direction) shall be measured in degrees in the range 0 to 360 degrees counted clockwise from true north. 
+&gt;NOTE&amp;nbsp; Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8ae9e8d87e12490a877872276da28d55">
+      <Name>DipAngle</Name>
+      <Definition>The maximum declination (dip) of the mean plane of the discontinuity from the horizontal shall be measured with the clinometer in the range 0 to 90 degrees and should be expressed in degrees as a two-digit number, e.g. 50. 
+&gt;NOTE Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="17a801e65bc64cf0983835956d9f0e42">
+      <Name>DiscontinuitySpacing</Name>
+      <Definition>The term "spacing" refers to the mean or modal spacing of a set of discontinuities and is the perpendicular distance between adjacent discontinuities. The number of discontinuity sets, the differences in spacing and the angles between the sets shall be reported as these determine the block shape. The discontinuity spacing should be measured in millimetres and can be classified using the terms in Table 8. 
+&gt;NOTE&amp;nbsp;Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="035045ee5af5471d86b554e48d2866a1">
+      <Name>DiscontinuityPersistence</Name>
+      <Definition>The linear extent of discontinuities from their inception to their termination in solid rock mass or against other discontinuities or outside the exposure shall be reported. The size of the exposure shall also be recorded. If possible and appropriate, measurements should be made in two or preferably three orthogonal directions. 
+&gt;NOTE&amp;nbsp;Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="11a4612bbc024a2083f758a04903f79d">
+      <Name>DiscontinuityRoughness</Name>
+      <Definition>The surface condition and the shape of discontinuities shall be described on the basis of three scales of observation, respectively, and using the terms given in ISO EN 14689 - Table 9 and illustrated in Figure 2: 
+a) small scale (several millimetres) - smooth or rough 
+b) medium scale (several centimetres) - planar, stepped or undulating 
+c) large scale (several metres) - straight, curved or wavy. 
+
+&gt;NOTE&amp;nbsp;Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5d319f010cc242f59e0c60eb78fedca7">
+      <Name>DiscontinuityAperture</Name>
+      <Definition>The perpendicular distance between the two surfaces of a discontinuity is referred to as the aperture. 
+&gt;NOTE&amp;nbsp;Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="a554ab9e62e24551998790387cefd9a0">
+      <Name>DiscontinuityInFilling</Name>
+      <Definition>The infilling material between discontinuity surfaces shall be identified and described (e.g. soil,minerals such as calcite, quartz, epidote, chlorite, anhydrite, clay gouge, rock gouge or breccia). 
+&gt;NOTE&amp;nbsp;Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c794d411dc13454a86e3daf33e45c0d3">
+      <Name>DiscontinuityWaterSeepage</Name>
+      <Definition>Free moisture or water flow visible at individual spots or from discontinuities.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="690cc66974d644fab809347ba72dd165">
+      <Name>DiscontinuityCohesion</Name>
+      <Definition>Cohesive shear strength of a rock or soil that is independent of interparticle friction.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5a48e79af7db4605ae4e8d5114d22c0b">
+      <Name>DiscontinuityFrictionAngle</Name>
+      <Definition>Derived from the Mohr-Coulomb failure criterion and used to describe the friction shear resistance of ground materials, together with the normal effective stress.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

@@ -114,10 +114,9 @@
         <DefinitionAlias lang="ja-JP">要素からの接続口サイズ。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="980f1980d21811e1800000215ad4efdf">
+    <PropertyDef ifdguid="c4299b00d21611e1800000215ad4efdf">
       <Name>InletConnectionSize</Name>
-      <Definition>Size of the inlet connection(s), where used, of the inlet connections.
-
+      <Definition>Size of the inlet connection.
 Note that all inlet connections are assumed to be the same size.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -126,13 +125,13 @@ Note that all inlet connections are assumed to be the same size.</Definition>
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Inlet Connection Size</NameAlias>
-        <NameAlias lang="ja-JP">吸気口接続口サイズ</NameAlias>
+        <NameAlias lang="ja-JP">吸気口サイズ</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">吸気口接続口のサイズ。
+        <DefinitionAlias lang="ja-JP">吸気口接続口のサイズ
 
-注意：同サイズの吸気口接続口がないものとします。</DefinitionAlias>
+注意：同サイズの吸気口接続口がないものとする。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
   </PropertyDefs>

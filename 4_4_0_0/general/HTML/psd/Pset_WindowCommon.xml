@@ -128,7 +128,7 @@
     <PropertyDef ifdguid="b9700580d21811e1800000215ad4efdf">
       <Name>AcousticRating</Name>
       <Definition>Acoustic rating for this object.
-It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorbtion values).</Definition>
+It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorption values).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -152,8 +152,7 @@ It is provided according to the national building code. It indicates the sound t
     </PropertyDef>
     <PropertyDef ifdguid="bffe7d00d21811e1800000215ad4efdf">
       <Name>FireRating</Name>
-      <Definition>Fire rating for this object.
-It is given according to the national fire safety classification.</Definition>
+      <Definition>Fire rating for this object. It is given according to the national fire safety classification.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -248,8 +247,7 @@ It is giving according to the national building code.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="d86e9780d21811e1800000215ad4efdf">
       <Name>ThermalTransmittance</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of a material.
-It applies to the total door construction.</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />
@@ -274,7 +272,7 @@ Hier der Gesamtwärmedurchgangskoeffizient des Fensters.</DefinitionAlias>
     </PropertyDef>
     <PropertyDef ifdguid="dd334b80d21811e1800000215ad4efdf">
       <Name>GlazingAreaFraction</Name>
-      <Definition>Fraction of the glazing area relative to the total area of the filling element. 
+      <Definition>Fraction of the glazing area relative to the total area of the filling element.
 It shall be used, if the glazing area is not given separately for all panels within the filling element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -373,7 +371,9 @@ It shall be used, if the glazing area is not given separately for all panels wit
     </PropertyDef>
     <PropertyDef ifdguid="005dfb00d21911e1800000215ad4efdf">
       <Name>FireExit</Name>
-      <Definition>Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE). Here it defines an exit window in accordance to the national building code.</Definition>
+      <Definition>Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE).
+
+Here it defines an exit window in accordance to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

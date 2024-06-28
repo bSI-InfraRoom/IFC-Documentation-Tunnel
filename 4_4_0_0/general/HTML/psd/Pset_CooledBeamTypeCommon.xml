@@ -162,6 +162,7 @@ SoundLevel and SoundAttenuation attributes deleted in IFC2x2 Pset Addendum: Use 
             </ConstantDef>
             <ConstantDef>
               <Name>LEFT</Name>
+              <Definition>Left</Definition>
               <NameAliases>
                 <NameAlias lang="en">Left</NameAlias>
               </NameAliases>
@@ -567,8 +568,8 @@ SoundLevel and SoundAttenuation attributes deleted in IFC2x2 Pset Addendum: Use 
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="34acc980d1cf11e1800000215ad4efdf">
-      <Name>FinishColor</Name>
-      <Definition>Finish color for cooled beam.</Definition>
+      <Name>FinishColour</Name>
+      <Definition>The finish colour of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

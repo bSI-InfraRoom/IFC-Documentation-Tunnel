@@ -11,10 +11,10 @@
   <PropertyDefs>
     <PropertyDef ifdguid="f2bc503cd29f488cae452b3780e73c85">
       <Name>NumberOfSlots</Name>
-      <Definition>Indicates the number of device slots.</Definition>
+      <Definition>Indicates the number of slots.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -25,7 +25,7 @@
       <Definition>Indicates the number of vertical units.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -36,7 +36,7 @@
       <Definition>Indicates the number of vertical units occupied by the equipment.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

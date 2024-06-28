@@ -49,13 +49,13 @@
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
-</td><td>
+*</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Referenz ID</b></td><td>Identifikator der projektinternen Referenz für dieses Gebäude, z.B. nach der Gebäudelassifizierung des Bauherrn. Wird verwendet, wenn keine allgemein anerkanntes Klassifizierungssystem angewandt wird.
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Raumtyp</b></td><td>Bezeichnung zur Zusammenfassung gleichartiger Räume zu einem Raumtyp (auch Funktionstyp genannt). Alternativ zum Namen des &quot;Typobjekts&quot;, insbesondere wenn die Software keine Raumtypen als Typobjekte unterstützt.
 </td></tr>
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'). Used to store the non-classification driven internal project type.
 </td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Reference</b></td><td>Référence à l'identifiant d'un type spécifié dans le contexte de ce projet (exemple : &quot;type A1&quot;). A fournir s'il n'y a pas de référence à une classification en usage.
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Reference</b></td><td>Référence à l'identifiant d'un type spécifié dans le contexte du projet (exemple : &quot;type A1&quot;). Utilisé pour enregistrer un type sans recourir à une classification.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照記号</b></td><td>このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。
 </td></tr>
@@ -85,7 +85,7 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Gebäudekennzeichen permanent</b></td><td>Angabe, on das angegebene Gebäudekennzeichen permanent ist (TRUE), oder eine temporäre Antragsnummer (FALSE).
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Is Permanent ID</b></td><td>Indicates whether the identity assigned to a building is permanent (= TRUE) or temporary (=FALSE).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Is Permanent ID</b></td><td>Indicates whether the identity assigned to the object is permanent (= TRUE) or temporary (=FALSE).
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>IdPermanent</b></td><td>Indique si l'identifiant attribuée au bâtiment est permanent (=VRAI) ou temporaire (=FAUX).
 </td></tr>
@@ -101,7 +101,7 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Art der Ausführung</b></td><td>Wesentliche Art der Projektausführung (Neubau, Umbau, Ertüchtigung, etc.)
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Construction Method</b></td><td>The type of construction action to the building, the project deals with, e.g. new construction, renovation, refurbishment, etc.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Construction Method</b></td><td>The type of construction action to the object, e.g. new construction, renovation, refurbishment, etc.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>RisqueIncendieUsagePrincipal</b></td><td>Le type d'intervention sur le bâtiment : construction neuve, rénovation, réhabilitation, etc.
 </td></tr>
@@ -149,7 +149,7 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Sprinklerschutz automatisch</b></td><td>Angabe, ob das Gebäude durch eine automatische Sprinkleranlage geschützt wird (WAHR) oder nicht (FALSCH).
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Sprinkler Protection Automatic</b></td><td>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Sprinkler Protection Automatic</b></td><td>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE). It should only be given, if the property &quot;SprinklerProtection&quot; is set to TRUE.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>ProtectionAutomatiqueParSprinkler</b></td><td>Indication selon laquelle ce bâtiment bénéficie d'une protection automatique par sprinkler (VRAI) ou non (FAUX).
 </td></tr>
@@ -165,8 +165,7 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Nutzungsart</b></td><td>Hauptnutzungsart des Gebäudes (Schulbau. Kaufhaus, etc.). Wird verwendet, wenn keine allgemein anerkanntes Klassifizierungssystem angewandt wird.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Occupancy Type</b></td><td>Occupancy type for this object.
-It is defined according to the presiding national building code.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Occupancy Type</b></td><td>Occupancy type for this object. It is defined according to the presiding national building code.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>TypeOccupation</b></td><td>Type d'occupation. Est défini selon le Code National en vigueur.
 </td></tr>
@@ -178,13 +177,11 @@ It is defined according to the presiding national building code.
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcareameasure.htm">IfcAreaMeasure</a>
-</td><td>
+*</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Bruttofläche nach Raumprogramm</b></td><td>Geforderte Bruttofläche des Gebäudes laut Raumprogramm.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Planned Area</b></td><td>Total planned gross area of the spatial structure element. Used for programming the spatial structure element.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Planned Area</b></td><td>Total planned gross area for the building  Used for programming the building.
-</td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Surface programmée brute</b></td><td>Surface programmée brute totale du bâtiment. Telle que définie lors de la programmation.
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Surface programmée brute</b></td><td>Surface programmée brute totale de la pièce. Telle que définie lors de la programmation.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>計画グロス面積</b></td><td>計画されたグロス面積。建物計画に際に使用。
 </td></tr>
@@ -194,13 +191,11 @@ It is defined according to the presiding national building code.
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcareameasure.htm">IfcAreaMeasure</a>
-</td><td>
+*</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Nettofläche nach Raumprogramm</b></td><td>Geforderte Nettofläche des Gebäudes laut Raumprogramm.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Planned Area</b></td><td>Total planned net area of the object. Used for programming the object.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Planned Area</b></td><td>Total planned net area for the building  Used for programming the building.
-</td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Surface programmée nette</b></td><td>Surface programmée nette totale du bâtiment. Telle que définie lors de la programmation.
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Surface programmée nette</b></td><td>Surface programmée nette totale de la pièce. Telle que définie lors de la programmation.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>計画ネット面積</b></td><td>計画されたネット面積。建物計画に際に使用。（通常は、柱型等を抜いた面積となる）
 </td></tr>
@@ -209,14 +204,13 @@ It is defined according to the presiding national building code.
 <tr><td>NumberOfStoreys</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
 </td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Geschossanzahl</b></td><td>Anzahl der Vollgeschosse des Gebäudes.
 Dieses Attribute soll nur dann eingefügt werden, wenn keine Geschosse als Objekte, IfcBuildingStorey, beinhaltet sind. Bei Unstimmigkeiten hat die Anzahl der IfcBuildingStorey Objekte Priorität.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Storeys</b></td><td>The number of storeys within a building.
-Captured for those cases where the IfcBuildingStorey entity is not used. Note that if IfcBuilingStorey is asserted and the number of storeys in a building can be determined from it, then this approach should be used in preference to setting a property for the number of storeys.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Storeys</b></td><td>The number of storeys within a building. Captured for those cases where the IfcBuildingStorey entity is not used. Note that if IfcBuildingStorey is asserted and the number of storeys in a building can be determined from it, then this approach should be used in preference to setting a property for the number of storeys.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>NombreNiveaux</b></td><td>Le nombre de niveaux dans un bâtiment, à indiquer lorsque la classe IfcBuildingStorey n'est pas  utilisée. Il est préférable de créer des instances d'IfcBuildingStorey et d'en déduire le nombre de niveaux plutôt que de saisir cette propriété.
 </td></tr>
@@ -269,6 +263,22 @@ Captured for those cases where the IfcBuildingStorey entity is not used. Note th
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>ランドマーク区分</b></td><td>この建物は歴史的な建物かどうかを示すブーリアン値。
 </td></tr>
 </table>
+</td></tr>
+<tr><td>ElevationOfRefHeight</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a>
+</td><td>
+Elevation above sea level of the reference height used for all storey elevation measures, equals to height 0.0. It is usually the ground floor level.
+
+</td></tr>
+<tr><td>ElevationOfTerrain</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a>
+</td><td>
+Elevation above the minimal terrain level around the foot print of the building, given in elevation above sea level.
+
 </td></tr>
 </table>
 </details>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="694f7250c5fb46648c4b0c595c3a2a3c" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoObsCommon</Name>
+  <Definition>Common properties for geoscience observations.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation</ClassName>
+    <ClassName>IfcBorehole</ClassName>
+    <ClassName>IfcSensor</ClassName>
+    <ClassName>IfcSpatialZone/MAPPEDZONE</ClassName>
+    <ClassName>IfcSpatialZone/TESTEDZONE</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation,IfcBorehole,IfcSensor,IfcSpatialZone/MAPPEDZONE,IfcSpatialZone/TESTEDZONE</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="1779311ae1a64dce8af7d72372c9f474">
+      <Name>ObservationStartDate</Name>
+      <Definition>Start date when the observation was made.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDate" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="690fc3142652421d96534891b8944075">
+      <Name>ObservationEndDate</Name>
+      <Definition>End date when the observation was made.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDate" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="159ce726701349c9bf1a48fba1443f2c">
+      <Name>Lithology</Name>
+      <Definition>Defines all natural materials resulting from the combination of minerals, particles or biogenic elements.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

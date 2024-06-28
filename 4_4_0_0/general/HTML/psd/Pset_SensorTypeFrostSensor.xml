@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="ed4d60c768af41b492ca2a098e034cc4" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_SensorTypeFrostSensor</Name>
-  <Definition>A device that senses or detects the presense of frost.</Definition>
+  <Definition>A device that senses or detects the presence of frost.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcSensor/FROSTSENSOR</ClassName>

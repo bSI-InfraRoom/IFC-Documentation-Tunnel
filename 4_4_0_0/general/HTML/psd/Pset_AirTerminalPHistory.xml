@@ -10,7 +10,7 @@
   <ApplicableTypeValue>IfcAirTerminal</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="2b1b6580d1bf11e1800000215ad4efdf">
-      <Name>AirFlowRate</Name>
+      <Name>AirFlowRateHistory</Name>
       <Definition>Volumetric flow rate.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -79,7 +79,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="3a9aae80d1bf11e1800000215ad4efdf">
       <Name>PressureDrop</Name>
-      <Definition>Drop in total pressure between inlet and outlet at nominal air-flow rate.</Definition>
+      <Definition>Pressure drop.
+
+Drop in total pressure between inlet and outlet at nominal air-flow rate.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

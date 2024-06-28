@@ -29,7 +29,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="bcadc600d20511e1800000215ad4efdf">
-      <Name>SetPointConcentration</Name>
+      <Name>SetPointIonConcentration</Name>
       <Definition>The ion concentration value to be sensed. Use IfcPropertyBoundedValue.SetPointValue to set the set point value.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>

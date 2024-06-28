@@ -4,7 +4,7 @@
   <Name>Pset_LinearReferencingMethod</Name>
   <Definition>Describes the manner in which measurements are made along (and optionally offset from) a linear element.
 
-&gt; NOTE Definition according to ISO 19148:2021</Definition>
+&gt; NOTE&amp;nbsp; Definition according to ISO 19148:2021</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcAlignment</ClassName>

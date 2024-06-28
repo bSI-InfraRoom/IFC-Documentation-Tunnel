@@ -28,6 +28,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="1a989eee042c4402833bb2453e382388">
       <Name>Status</Name>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">
@@ -178,7 +179,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="9132d780d21511e1800000215ad4efdf">
       <Name>NominalHeight</Name>
-      <Definition>Height of the vibration isolator before the application of load.</Definition>
+      <Definition>The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
+
+Height of the vibration isolator before the application of load.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

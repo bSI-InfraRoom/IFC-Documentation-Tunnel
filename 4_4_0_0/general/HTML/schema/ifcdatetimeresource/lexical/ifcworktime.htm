@@ -56,11 +56,11 @@ Recurrence pattern that defines a time period, which, if given, is
 valid within the time period defined by
 <i>IfcWorkTime.Start</i> and <i>IfcWorkTime.Finish</i>.
 </td><td>X</td></tr>
-<tr><td>5</td><td>Start</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a></td><td>? </td><td>
+<tr><td>5</td><td>StartDate</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a></td><td>? </td><td>
 Start date of the work time (0:00), that might be further
 restricted by a recurrence pattern.
 </td><td>X</td></tr>
-<tr><td>6</td><td>Finish</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a></td><td>? </td><td>
+<tr><td>6</td><td>FinishDate</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a></td><td>? </td><td>
 End date of the work time (24:00), that might be further
 restricted by a recurrence pattern.
 </td><td>X</td></tr>
@@ -93,11 +93,11 @@ Recurrence pattern that defines a time period, which, if given, is
 valid within the time period defined by
 <i>IfcWorkTime.Start</i> and <i>IfcWorkTime.Finish</i>.
 </td><td>X</td></tr>
-<tr><td>5</td><td>Start</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a></td><td>? </td><td>
+<tr><td>5</td><td>StartDate</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a></td><td>? </td><td>
 Start date of the work time (0:00), that might be further
 restricted by a recurrence pattern.
 </td><td>X</td></tr>
-<tr><td>6</td><td>Finish</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a></td><td>? </td><td>
+<tr><td>6</td><td>FinishDate</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a></td><td>? </td><td>
 End date of the work time (24:00), that might be further
 restricted by a recurrence pattern.
 </td><td>X</td></tr>
@@ -114,8 +114,8 @@ restricted by a recurrence pattern.
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;RecurrencePattern&quot; type=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifcrecurrencepattern.htm">IfcRecurrencePattern</a>&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Start&quot; type=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Finish&quot; type=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;StartDate&quot; type=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;FinishDate&quot; type=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
@@ -124,8 +124,8 @@ restricted by a recurrence pattern.
 <span class="keyword">ENTITY</span> IfcWorkTime<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcdatetimeresource/lexical/ifcschedulingtime.htm">IfcSchedulingTime</a>)<b>;</b><br/>
 &nbsp;&nbsp;RecurrencePattern : <span class="keyword">OPTIONAL</span> <a href="../../ifcdatetimeresource/lexical/ifcrecurrencepattern.htm">IfcRecurrencePattern</a>;<br/>
-&nbsp;&nbsp;Start : <span class="keyword">OPTIONAL</span> <a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>;<br/>
-&nbsp;&nbsp;Finish : <span class="keyword">OPTIONAL</span> <a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>;<br/>
+&nbsp;&nbsp;StartDate : <span class="keyword">OPTIONAL</span> <a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>;<br/>
+&nbsp;&nbsp;FinishDate : <span class="keyword">OPTIONAL</span> <a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcdatetimeresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

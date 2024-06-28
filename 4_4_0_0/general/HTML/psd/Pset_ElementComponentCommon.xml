@@ -191,6 +191,8 @@
             <EnumItem>EPOXYCOATED</EnumItem>
             <EnumItem>GALVANISED</EnumItem>
             <EnumItem>STAINLESS</EnumItem>
+            <EnumItem>POWDERCOATED</EnumItem>
+            <EnumItem>GALVANIZEDANDPOWDERCOATED</EnumItem>
             <EnumItem>NONE</EnumItem>
             <EnumItem>NOTDEFINED</EnumItem>
           </EnumList>
@@ -221,6 +223,16 @@
               <NameAliases>
                 <NameAlias lang="en">Stainless</NameAlias>
               </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>POWDERCOATED</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GALVANIZEDANDPOWDERCOATED</Name>
+              <NameAliases />
               <DefinitionAliases />
             </ConstantDef>
             <ConstantDef>

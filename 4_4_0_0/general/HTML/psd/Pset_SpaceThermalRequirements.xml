@@ -306,7 +306,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="8d4e8780d20c11e1800000215ad4efdf">
       <Name>NaturalVentilation</Name>
-      <Definition>Indication whether the space is required to have natural ventilation (TRUE) or mechanical ventilation (FALSE).</Definition>
+      <Definition>Indication whether the space is required to have natural ventilation (TRUE), or not (FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

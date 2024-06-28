@@ -5,9 +5,9 @@
   <Definition>Properties appliable to _IfcFacilityPart_ with PredefinedType set to LEVELCROSSING.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcFacilityPart/IfcFacilityPartCommonTypeEnum(.LEVELCROSSING.)</ClassName>
+    <ClassName>IfcFacilityPartCommon/LEVELCROSSING</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcFacilityPart/IfcFacilityPartCommonTypeEnum(.LEVELCROSSING.)</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcFacilityPartCommon/LEVELCROSSING</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="db1571054e0b497b8c1ce3ea5e52883d">
       <Name>IsAccessibleByVehicle</Name>

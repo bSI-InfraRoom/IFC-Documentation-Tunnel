@@ -26,7 +26,7 @@ Sound attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="87838280d1c911e1800000215ad4efdf">
-      <Name>AirPressureDropCurve</Name>
+      <Name>AirPressureDropCurveHistory</Name>
       <Definition>Air pressure drop curve, pressure drop – flow rate curve, AirPressureDrop = f (AirflowRate).</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -41,7 +41,7 @@ Sound attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="8b170980d1c911e1800000215ad4efdf">
-      <Name>SoundCurve</Name>
+      <Name>SoundCurveHistory</Name>
       <Definition>Regenerated sound versus air-flow rate.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />

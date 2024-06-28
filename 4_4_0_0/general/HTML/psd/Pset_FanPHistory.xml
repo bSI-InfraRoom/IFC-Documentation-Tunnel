@@ -3,7 +3,7 @@
   <IfcVersion version="IFC4X4" />
   <Name>Pset_FanPHistory</Name>
   <Definition>Fan performance history attributes.
-Sound attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.</Definition>
+&gt; IFC2X2 CHANGE&amp;nbsp; Sound attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcFan</ClassName>
@@ -58,7 +58,7 @@ Sound attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.
     </PropertyDef>
     <PropertyDef ifdguid="29b06400d1e411e1800000215ad4efdf">
       <Name>OverallEfficiency</Name>
-      <Definition>Total efficiency of motor and fan.</Definition>
+      <Definition>Total efficiency of object.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

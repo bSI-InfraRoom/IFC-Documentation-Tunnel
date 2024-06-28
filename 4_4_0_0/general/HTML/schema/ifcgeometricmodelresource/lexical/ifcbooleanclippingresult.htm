@@ -45,9 +45,9 @@
 <tr><th>Rule</th><th>Description</th></tr>
 <tr><td>FirstOperandType</td><td>The first operand of the Boolean clipping operation shall be either an IfcSweptAreaSolid or (in case of more than one clipping) an IfcBooleanResult.
 </td></tr>
-<tr><td>SecondOperandType</td><td>The second operand of the Boolean clipping operation shall be an IfcHalfSpaceSolid.
-</td></tr>
 <tr><td>OperatorType</td><td>The Boolean operator for clipping is always &quot;Difference&quot;.
+</td></tr>
+<tr><td>SecondOperandType</td><td>The second operand of the Boolean clipping operation shall be an IfcHalfSpaceSolid.
 </td></tr>
 </table>
 
@@ -111,8 +111,8 @@ The second operand specified for the operation.
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcgeometricmodelresource/lexical/ifcbooleanresult.htm">IfcBooleanResult</a>)<b>;</b><br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
 &nbsp;&nbsp;FirstOperandType : (&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifcsweptareasolid.htm">IfcSweptAreaSolid</a>&#39; IN TYPEOF(FirstOperand)) OR <br/>
-(&#39;IFCGEOMETRICMODELRESOURCE.IFCSWEPTDISCSOLID&#39; IN TYPEOF(FirstOperand)) OR <br/>
-(&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a>&#39; IN TYPEOF(FirstOperand));<br/>&nbsp;&nbsp;SecondOperandType : (&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a>&#39; IN TYPEOF(SecondOperand));<br/>&nbsp;&nbsp;OperatorType : Operator = DIFFERENCE;<br/><span class="keyword">END_ENTITY;</span><br/>
+(&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifcsweptdisksolid.htm">IfcSweptDiskSolid</a>&#39; IN TYPEOF(FirstOperand)) OR <br/>
+(&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a>&#39; IN TYPEOF(FirstOperand));<br/>&nbsp;&nbsp;OperatorType : Operator = DIFFERENCE;<br/>&nbsp;&nbsp;SecondOperandType : (&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a>&#39; IN TYPEOF(SecondOperand));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometricmodelresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

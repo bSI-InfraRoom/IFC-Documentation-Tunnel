@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="73de7766c0db28aafa36f084c270d01e" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_CableCarrierSegmentTypeDropper</Name>
-  <Definition>Properties that are applicable to a type or an occurence of dropper.</Definition>
+  <Definition>Properties that are applicable to a type or an occurrence of dropper.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcCableCarrierSegment/DROPPER</ClassName>
@@ -46,7 +46,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="f4494d80d1c611e1800000215ad4efdf">
       <Name>IsRigid</Name>
-      <Definition>Indication of whether the segment is rigid (= TRUE) or flexible (= FALSE).</Definition>
+      <Definition>Indication of whether the conduit is rigid (= TRUE) or flexible (= FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

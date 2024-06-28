@@ -10,28 +10,9 @@ HISTORY: IFC4 - NominalLength deleted. To be handled as a quantity measure.</Def
   </ApplicableClasses>
   <ApplicableTypeValue>IfcCableCarrierSegment/CONDUITSEGMENT</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="a28e9f226e204a909976810e633a45f4">
-      <Name>NominalWidth</Name>
-      <Definition>The nominal width of the object.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcNonNegativeLengthMeasure" />
-        </TypePropertySingleValue>
-      </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Nominal Width</NameAlias>
-        <NameAlias lang="ja-JP">公称幅</NameAlias>
-        <NameAlias lang="ko-KR">공칭 폭</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">呼び幅寸法。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">폭 치수</DefinitionAlias>
-      </DefinitionAliases>
-    </PropertyDef>
     <PropertyDef ifdguid="df6cba00d1c611e1800000215ad4efdf">
       <Name>NominalHeight</Name>
-      <Definition>The nominal height of the segment.</Definition>
+      <Definition>The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -122,7 +103,7 @@ HISTORY: IFC4 - NominalLength deleted. To be handled as a quantity measure.</Def
     </PropertyDef>
     <PropertyDef ifdguid="f4494d80d1c611e1800000215ad4efdf">
       <Name>IsRigid</Name>
-      <Definition>Indication of whether the segment is rigid (= TRUE) or flexible (= FALSE).</Definition>
+      <Definition>Indication of whether the conduit is rigid (= TRUE) or flexible (= FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -141,7 +122,7 @@ HISTORY: IFC4 - NominalLength deleted. To be handled as a quantity measure.</Def
     </PropertyDef>
     <PropertyDef ifdguid="8e82b300d21211e1800000215ad4efdf">
       <Name>NominalDiameter</Name>
-      <Definition>Nominal diameter or width of the tubes in the tube bundle.</Definition>
+      <Definition>Nominal diameter or width of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -154,6 +135,25 @@ HISTORY: IFC4 - NominalLength deleted. To be handled as a quantity measure.</Def
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="ja-JP">チューブ束内のチューブ公称直径又は幅</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a28e9f226e204a909976810e633a45f4">
+      <Name>NominalWidth</Name>
+      <Definition>The nominal overall width of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Width</NameAlias>
+        <NameAlias lang="ja-JP">公称幅</NameAlias>
+        <NameAlias lang="ko-KR">공칭 폭</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">呼び幅寸法。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">폭 치수</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
   </PropertyDefs>

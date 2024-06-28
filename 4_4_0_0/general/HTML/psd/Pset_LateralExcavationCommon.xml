@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="260b143904014ac8880c293b60eb5445" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_LateralExcavationCommon</Name>
+  <Definition>Common properties for lateral excavation elements.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcRadialExcavation</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcRadialExcavation</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="c63358a9fa494b69ab21defb96578cc4">
+      <Name>RadialExcavationType</Name>
+      <Definition>Type of radial excavation.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_RadialExcavationType">
+            <EnumItem>PROFILEENLARGEMENT</EnumItem>
+            <EnumItem>REPROFILING</EnumItem>
+            <EnumItem>NICHE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>PROFILEENLARGEMENT</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>REPROFILING</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NICHE</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="dbdaa5ba95d642baba5a875be81d0593">
+      <Name>RadialExcavationTypeOther</Name>
+      <Definition>A user defined type of radial excavation when RadialExcavationType = OTHER.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1983c95a3769477f8561935cf76b4017">
+      <Name>RadialExcavationDirection</Name>
+      <Definition>Direction of radial excavation relative to the main tunnel drive.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_RadialExcavationDirection">
+            <EnumItem>LATERAL</EnumItem>
+            <EnumItem>VERTICAL</EnumItem>
+            <EnumItem>RADIAL</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>LATERAL</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VERTICAL</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>RADIAL</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="6b988822179643aaa069cbbac3e35a03">
+      <Name>RadialExcavationDepth</Name>
+      <Definition>Depth of radial excavation.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

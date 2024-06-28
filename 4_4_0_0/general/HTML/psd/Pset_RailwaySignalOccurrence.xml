@@ -47,7 +47,7 @@
       <Definition>Number of lamps which are not needed and blanked out (sealed).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

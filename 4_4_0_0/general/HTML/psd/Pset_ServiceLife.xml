@@ -11,9 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="eadfd580d20611e1800000215ad4efdf">
       <Name>ServiceLifeDuration</Name>
-      <Definition>The length or duration of a service life.  
-
-The lower bound indicates pessimistic service life, the upper bound indicates optimistic service life, and the setpoint indicates the typical service life.</Definition>
+      <Definition>The length or duration of a service life.The lower bound indicates pessimistic service life, the upper bound indicates optimistic service life, and the setpoint indicates the typical service life.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcDuration" />

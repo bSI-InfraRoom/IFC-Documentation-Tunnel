@@ -9,9 +9,9 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcWasteTerminal/FLOORWASTE</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="e8857780d21611e1800000215ad4efdf">
+    <PropertyDef ifdguid="5aa98c80d21611e1800000215ad4efdf">
       <Name>NominalBodyLength</Name>
-      <Definition>Nominal or quoted length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the waste.</Definition>
+      <Definition>Nominal or quoted length measured along the x-axis of the local coordinate system of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -23,12 +23,12 @@
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">廃棄物の区画の半径か局所座標系のＸ軸に沿って測定された呼称もしくは積算された長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">防臭弁の区画の半径か局所座標系のＸ軸に沿って測定された呼称もしくは積算された長さ。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="f20edf80d21611e1800000215ad4efdf">
+    <PropertyDef ifdguid="639a5e00d21611e1800000215ad4efdf">
       <Name>NominalBodyWidth</Name>
-      <Definition>Nominal or quoted length measured along the y-axis in the local coordinate system of the waste.</Definition>
+      <Definition>Nominal or quoted length, measured along the y-axis of the local coordinate system of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -40,12 +40,12 @@
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">廃棄物の半径か局所座標系のＹ軸に沿って測定された呼称もしくは積算された長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">防臭弁の区画の半径か局所座標系のＹ軸に沿って測定された呼称もしくは積算された長さ。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="faffb100d21611e1800000215ad4efdf">
+    <PropertyDef ifdguid="6bf29900d21611e1800000215ad4efdf">
       <Name>NominalBodyDepth</Name>
-      <Definition>Nominal or quoted length measured along the z-axis in the local coordinate system of the waste.</Definition>
+      <Definition>Nominal or quoted length measured along the z-axis of the local coordinate system of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -57,7 +57,7 @@
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">廃棄物の半径か局所座標系のZ軸に沿って測定された呼称もしくは積算された長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">防臭弁の区画の半径か局所座標系のZ軸に沿って測定された呼称もしくは積算された長さ。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="03f08280d21711e1800000215ad4efdf">
@@ -77,9 +77,9 @@
         <DefinitionAlias lang="ja-JP">要素からの排気口サイズ。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="0d79ea80d21711e1800000215ad4efdf">
+    <PropertyDef ifdguid="cdb30300d21611e1800000215ad4efdf">
       <Name>CoverLength</Name>
-      <Definition>The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the waste.</Definition>
+      <Definition>The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -94,9 +94,9 @@
         <DefinitionAlias lang="ja-JP">局所座標系のX軸に沿うか、半径（円状の形の場合）で測定された防臭弁カバーの長さ。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="17035280d21711e1800000215ad4efdf">
+    <PropertyDef ifdguid="d6a3d480d21611e1800000215ad4efdf">
       <Name>CoverWidth</Name>
-      <Definition>The length measured along the y-axis in the local coordinate system of the cover of the  waste.</Definition>
+      <Definition>The length measured along the y-axis in the local coordinate system of the cover of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Thursday, 14 March 2024
+Friday, 28 June 2024
 
 *)
 
@@ -60,13 +60,13 @@ REFERENCE FROM IFCPRODUCTEXTENSION
 );
 
 TYPE IfcFurnitureTypeEnum = ENUMERATION OF
-	(CHAIR
-	,TABLE
+	(BED
+	,CHAIR
 	,DESK
-	,BED
 	,FILECABINET
 	,SHELF
 	,SOFA
+	,TABLE
 	,TECHNICALCABINET
 	,USERDEFINED
 	,NOTDEFINED);
@@ -74,8 +74,8 @@ END_TYPE;
 
 TYPE IfcInventoryTypeEnum = ENUMERATION OF
 	(ASSETINVENTORY
-	,SPACEINVENTORY
 	,FURNITUREINVENTORY
+	,SPACEINVENTORY
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -94,8 +94,8 @@ END_TYPE;
 
 TYPE IfcSystemFurnitureElementTypeEnum = ENUMERATION OF
 	(PANEL
-	,WORKSURFACE
 	,SUBRACK
+	,WORKSURFACE
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -129,8 +129,9 @@ ENTITY IfcFurnitureType
 	AssemblyPlace : IfcAssemblyPlaceEnum;
 	PredefinedType : OPTIONAL IfcFurnitureTypeEnum;
  WHERE
-	CorrectPredefinedType : (PredefinedType <> IfcFurnitureTypeEnum.USERDEFINED) OR
-((PredefinedType = IfcFurnitureTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcFurnitureTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcFurnitureTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcInventory
@@ -166,8 +167,9 @@ ENTITY IfcSystemFurnitureElementType
  SUBTYPE OF (IfcFurnishingElementType);
 	PredefinedType : OPTIONAL IfcSystemFurnitureElementTypeEnum;
  WHERE
-	CorrectPredefinedType : (PredefinedType <> IfcSystemFurnitureElementTypeEnum.USERDEFINED) OR
-((PredefinedType = IfcSystemFurnitureElementTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+  (PredefinedType <> IfcSystemFurnitureElementTypeEnum.USERDEFINED) OR
+  ((PredefinedType = IfcSystemFurnitureElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 END_SCHEMA;

@@ -117,7 +117,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="ccb5ad80d1e511e1800000215ad4efdf">
       <Name>Weight</Name>
-      <Definition>Weight of filter.</Definition>
+      <Definition>Total weight of object</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure" />
@@ -162,7 +162,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="dd662380d1e511e1800000215ad4efdf">
       <Name>OperationTemperatureRange</Name>
-      <Definition>Allowable operation ambient fluid temperature range.</Definition>
+      <Definition>Allowable operation ambient air temperature range.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />
@@ -177,7 +177,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="e3f49b00d1e511e1800000215ad4efdf">
       <Name>FlowRateRange</Name>
-      <Definition>Possible range of fluid flowrate that can be delivered.</Definition>
+      <Definition>Allowable range of volume of fluid being pumped against the resistance specified.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcVolumetricFlowRateMeasure" />

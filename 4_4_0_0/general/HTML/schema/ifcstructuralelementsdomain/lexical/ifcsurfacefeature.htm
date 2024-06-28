@@ -90,8 +90,7 @@ Indicates the kind of surface feature.
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>HasObjectType</td><td>The attribute ObjectType shall be given if the predefined type is set to USERDEFINED.
-</td></tr>
+<tr><td>CorrectPredefinedType</td><td></td></tr>
 </table>
 
 </details>
@@ -251,19 +250,19 @@ Indicates the kind of surface feature.
 <summary>Concept usage</summary>
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 712.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 713.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 712 &mdash; IfcSurfaceFeature Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 713 &mdash; IfcSurfaceFeature Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="product-local-placement" />
 <p class="use-head">Placement</p>
-<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 713.<table>
+<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 714.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 713 &mdash; IfcSurfaceFeature Product Local Placement</td></tr></table>
+<tr><td><p class="table">Table 714 &mdash; IfcSurfaceFeature Product Local Placement</td></tr></table>
 
 <p>The local placement for <i>IfcSurfaceFeatureElement</i> is defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines the local coordinate system that is referenced by all geometric representations.</p>
 <ul>
@@ -275,7 +274,7 @@ Indicates the kind of surface feature.
 
 <a id="body-geometry" />
 <p class="use-head">Body Geometry</p>
-<p>The <a href="../../templates/body-geometry.htm">Body Geometry</a> concept template applies to this entity as shown in Table 714.<table>
+<p>The <a href="../../templates/body-geometry.htm">Body Geometry</a> concept template applies to this entity as shown in Table 715.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Description</b></th></tr>
@@ -283,7 +282,7 @@ Indicates the kind of surface feature.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 714 &mdash; IfcSurfaceFeature Body Geometry</td></tr></table>
+<tr><td><p class="table">Table 715 &mdash; IfcSurfaceFeature Body Geometry</td></tr></table>
 
 <br/><br/>
 
@@ -396,7 +395,9 @@ Indicates the kind of surface feature.
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;AdheresToElement : <a href="../../ifcproductextension/lexical/ifcreladherestoelement.htm">IfcRelAdheresToElement</a> <span class="keyword">FOR</span> RelatedSurfaceFeatures;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasObjectType : NOT EXISTS(PredefinedType) OR (PredefinedType &lt;&gt; <a href="../../ifcstructuralelementsdomain/lexical/ifcsurfacefeaturetypeenum.htm">IfcSurfaceFeatureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
+  (PredefinedType &lt;&gt; <a href="../../ifcstructuralelementsdomain/lexical/ifcsurfacefeaturetypeenum.htm">IfcSurfaceFeatureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
+  ((PredefinedType = <a href="../../ifcstructuralelementsdomain/lexical/ifcsurfacefeaturetypeenum.htm">IfcSurfaceFeatureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS (SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcstructuralelementsdomain/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

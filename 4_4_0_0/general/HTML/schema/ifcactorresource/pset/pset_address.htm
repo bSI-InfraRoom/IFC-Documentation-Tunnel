@@ -1,0 +1,188 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_Address</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 1 index3 4 index4 0 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.1.4.1");
+//-->
+</script>
+
+<h4 class="std">8.1.4.1 Pset_Address</h4>
+<p><span class="self-ref">PSET_OCCURRENCEDRIVEN</span>
+/
+<span class="self-ref">IfcActor,IfcBuilding,IfcSite</span>
+</p>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/2I2E6pBUr8V8d$eV$HOYxR/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_Address.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>Purpose</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+/
+ <a href="../../../penum/penum_addresstype.htm">PEnum_AddressType</a></td><td>
+Indication of the purpose of this object
+
+</td></tr>
+<tr><td>Description</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>
+</td><td>
+The Description of the object.
+
+</td></tr>
+<tr><td>UserDefinedPurpose</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Allows for specification of user specific purpose of the address beyond the enumeration values provided by Purpose attribute of type IfcAddressTypeEnum. When a value is provided for attribute UserDefinedPurpose, in parallel the attribute Purpose shall have enumeration value USERDEFINED.
+
+</td></tr>
+<tr><td>InternalLocation</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+An organization defined address for internal mail delivery.
+
+</td></tr>
+<tr><td>AddressLines</td><td>
+<span class="self-ref">P_LISTVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The postal address.
+<blockquote class="note">
+NOTE  A postal address may occupy several lines (or elements) when recorded. It is expected that normal usage will incorporate relevant elements of the following address concepts: A location within a building (e.g. 3rd Floor) Building name (e.g. Interoperability House) Street number (e.g. 6400) Street name (e.g. Alliance Boulevard). Typical content of address lines may vary in different countries.
+</blockquote>
+
+</td></tr>
+<tr><td>PostalBox</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+An address that is implied by an identifiable mail drop.
+
+</td></tr>
+<tr><td>Town</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The name of a town.
+
+</td></tr>
+<tr><td>Region</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The name of a region.
+<blockquote class="example">
+EXAMPLE  The counties of the United Kingdom and the states of North America are examples of regions.
+</blockquote>
+
+</td></tr>
+<tr><td>PostalCode</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The code that is used by the country's postal service.
+
+</td></tr>
+<tr><td>Country</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The two letter country code (from ISO 3166).
+
+</td></tr>
+<tr><td>TelephoneNumbers</td><td>
+<span class="self-ref">P_LISTVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The list of telephone numbers at which telephone messages may be received.
+
+</td></tr>
+<tr><td>FacsimileNumbers</td><td>
+<span class="self-ref">P_LISTVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The list of fax numbers at which fax messages may be received.
+
+</td></tr>
+<tr><td>PagerNumber</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The pager number at which paging messages may be received.
+
+</td></tr>
+<tr><td>ElectronicMailAddresses</td><td>
+<span class="self-ref">P_LISTVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The list of Email addresses at which Email messages may be received.
+
+</td></tr>
+<tr><td>WWWHomepageURL</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The world wide web address at which the preliminary page of information for the person or organization can be located.
+<blockquote class="note">
+NOTE  Information on the world wide web for a person or organization may be separated into a number of pages and across a number of host sites, all of which may be linked together. It is assumed that all such information may be referenced from a single page that is termed the home page for that person or organization.
+</blockquote>
+<blockquote class="note">
+NOTE  Should be of type IfcURIReference when this has been merged.
+</blockquote>
+
+</td></tr>
+<tr><td>MessagingIDs</td><td>
+<span class="self-ref">P_LISTVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+IDs or addresses for any other means of telecommunication, for example instant messaging, voice-over-IP, or file transfer protocols. The communication protocol is indicated by the URI value with scheme designations such as irc:, sip:, or ftp:.
+<blockquote class="note">
+NOTE  Should be of type IfcURIReference when this has been merged.
+</blockquote>
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_address.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

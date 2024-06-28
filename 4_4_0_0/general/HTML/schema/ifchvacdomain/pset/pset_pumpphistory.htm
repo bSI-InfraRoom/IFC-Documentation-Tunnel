@@ -11,7 +11,7 @@
     <title>Pset_PumpPHistory</title>
 
     <style type="text/css">
-      body { counter-reset: index1 7 index2 5 index3 4 index4 80 index5 0; }
+      body { counter-reset: index1 7 index2 5 index3 4 index4 84 index5 0; }
     </style>
   </head>
 
@@ -20,11 +20,11 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-7.htm#7.5.4.81");
+    parent.index.location.replace("../../toc-7.htm#7.5.4.85");
 //-->
 </script>
 
-<h4 class="std">7.5.4.81 Pset_PumpPHistory</h4>
+<h4 class="std">7.5.4.85 Pset_PumpPHistory</h4>
 <p><span class="self-ref">PSET_PERFORMANCEDRIVEN</span>
 /
 <a href="../../ifchvacdomain/lexical/ifcpump.htm">IfcPump</a>
@@ -47,7 +47,7 @@
 <a href="../../ifcmeasureresource/lexical/ifcnormalisedratiomeasure.htm">IfcNormalisedRatioMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Mechanical Efficiency</b></td><td>The pumps operational mechanical efficiency.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Mechanical Efficiency</b></td><td>The objects operational mechanical efficiency.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>機械効率</b></td><td>ポンプの稼動時の機械効率
 </td></tr>
@@ -61,7 +61,8 @@
 <a href="../../ifcmeasureresource/lexical/ifcnormalisedratiomeasure.htm">IfcNormalisedRatioMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Overall Efficiency</b></td><td>The pump and motor overall operational efficiency.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Overall Efficiency</b></td><td>Total efficiency of object.
+The pump and motor overall operational efficiency.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>全効率</b></td><td>ポンプとモーターの運用全効率
 </td></tr>
@@ -103,21 +104,23 @@
 <a href="../../ifcmeasureresource/lexical/ifcvolumetricflowratemeasure.htm">IfcVolumetricFlowRateMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Flowrate</b></td><td>The actual operational fluid flowrate.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Flowrate</b></td><td>The flowrate of the fluid.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>流量</b></td><td>実際の運用流量
 </td></tr>
 </table>
 </td></tr>
-<tr><td>Power</td><td>
-<span class="self-ref">P_BOUNDEDVALUE</span>
+<tr><td>PowerHistory</td><td>
+<span class="self-ref">P_REFERENCEVALUE</span>
+/
+<a href="../../ifcdatetimeresource/lexical/ifctimeseries.htm">IfcTimeSeries</a>
 /
 <a href="../../ifcmeasureresource/lexical/ifcpowermeasure.htm">IfcPowerMeasure</a>
-*</td><td>
+</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Power</b></td><td>The actual power and operable range.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Power</b></td><td>The actual power consumption of the pump.
 </td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>電力</b></td><td>実電力と動作可能範囲。
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>動力</b></td><td>ポンプの実動力消費
 </td></tr>
 </table>
 </td></tr>

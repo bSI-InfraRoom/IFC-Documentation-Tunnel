@@ -5,10 +5,10 @@
   <Definition>Properties common to the definition of all occurrences of _IfcImpactProtectionDevice_ and types of _IfcImpactProtectionDeviceType_ with the predefined type set to FENDER.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcImpactProtectionDevice/IfcImpactProtectionDeviceTypeEnum(.FENDER.)</ClassName>
-    <ClassName>IfcImpactProtectionDeviceType/IfcImpactProtectionDeviceTypeEnum(.FENDER.)</ClassName>
+    <ClassName>IfcImpactProtectionDevice/FENDER</ClassName>
+    <ClassName>IfcImpactProtectionDeviceType/FENDER</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcImpactProtectionDevice/IfcImpactProtectionDeviceTypeEnum(.FENDER.),IfcImpactProtectionDeviceType/IfcImpactProtectionDeviceTypeEnum(.FENDER.)</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcImpactProtectionDevice/FENDER,IfcImpactProtectionDeviceType/FENDER</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="f69231f2ea514dfcb362725c4c83405d">
       <Name>FenderType</Name>
@@ -137,7 +137,7 @@
       <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="e63a1a3884e64e38bcda8a508392395f">
-      <Name>EnergyAbsorption </Name>
+      <Name>EnergyAbsorption</Name>
       <Definition>Energy absorption capacity of the element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

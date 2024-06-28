@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="db18288ac7754064b77607727f01f377" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_SpatialGeoObsSensor</Name>
+  <Definition>Properties describing sensors used for geoscience observations.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcSensor</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSensor</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="cfec8a97a3924b9d819ab0e3432dd20f">
+      <Name>PlacementType</Name>
+      <Definition>Indicates the purpose of the sensor placement.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SensorPlacementType">
+            <EnumItem>MONITORING</EnumItem>
+            <EnumItem>SURVEY</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>MONITORING</Name>
+              <Definition>Permanently installed for an extended time period for monitoring purposes</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SURVEY</Name>
+              <Definition>Tentatively installed/placed for a short-time of period.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="68109d51feed45eeb5ff419c80523672">
+      <Name>MeasurementStartTime</Name>
+      <Definition>Measurement/Monitoring period or point in time - start.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDateTime" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ab01ddee2ffa44199a910e249dbefdc2">
+      <Name>MeasurementEndTime</Name>
+      <Definition>Measurement/Monitoring period or point in time - end.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDateTime" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="7fb23b07a587459c8ec038cf387002c0">
       <Name>StorageCapacity</Name>
-      <Definition>Indicates the storage capacity defined by bytes that can be handled by the appliance.</Definition>
+      <Definition>Indicates the total data storage capacity of the device. It is defined by bytes.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcInteger" />

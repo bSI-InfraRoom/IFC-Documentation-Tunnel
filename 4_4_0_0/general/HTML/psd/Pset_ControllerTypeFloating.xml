@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="2eb5e900d1cd11e1800000215ad4efdf">
       <Name>ControlType</Name>
-      <Definition>The type of signal modification effected and applicable ports: 
+      <Definition>The type controller, signal modification effected and applicable ports
 
 CONSTANT: No inputs; SignalOffset is written to the output value.
 MODIFIER: Single analog input is read, added to SignalOffset, multiplied by SignalFactor, and written to the output value.
@@ -326,7 +326,9 @@ VARIABLE: Controller element is an in-memory variable.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="56a54c80d1cd11e1800000215ad4efdf">
       <Name>Labels</Name>
-      <Definition>Table mapping values to labels, where such labels indicate transition points such as 'Hi', 'Lo', 'HiHi', or 'LoLo'.</Definition>
+      <Definition>Table mapping values to labels
+
+Labels indicate transition points such as 'Hi', 'Lo', 'HiHi', or 'LoLo'.</Definition>
       <PropertyType>
         <TypePropertyTableValue>
           <Expression />
@@ -362,7 +364,9 @@ VARIABLE: Controller element is an in-memory variable.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="63c23b80d1cd11e1800000215ad4efdf">
       <Name>Value</Name>
-      <Definition>The expected range and default value.  While the property data type is IfcReal (to support all cases including when the units are unknown), a unit may optionally be provided to indicate the measure and unit.  The LowerLimitValue and UpperLimitValue must fall within the physical Range and may be used to determine extents when charting Pset_ControllerPHistory.Value.</Definition>
+      <Definition>The expected range and default value.
+
+The expected range and default value. While the property data type is IfcReal (to support all cases including when the units are unknown), a unit may optionally be provided to indicate the measure and unit. The LowerLimitValue and UpperLimitValue must fall within the physical Range and may be used to determine extents when charting Pset_ControllerPHistory.Value.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcReal" />
@@ -377,7 +381,7 @@ VARIABLE: Controller element is an in-memory variable.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="69b81c80d1cd11e1800000215ad4efdf">
       <Name>SignalOffset</Name>
-      <Definition>Offset constant added to modfied signal.</Definition>
+      <Definition>Offset constant added to modified signal.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcReal" />

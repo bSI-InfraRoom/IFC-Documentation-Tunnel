@@ -5,9 +5,9 @@
   <Definition>Properties specific to corner fixing plates.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcDiscreteAccessory/Corner fixing plate</ClassName>
+    <ClassName>IfcDiscreteAccessory</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcDiscreteAccessory/Corner fixing plate</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcDiscreteAccessory</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="4ba0eb00d1d211e1800000215ad4efdf">
       <Name>CornerFixingPlateLength</Name>

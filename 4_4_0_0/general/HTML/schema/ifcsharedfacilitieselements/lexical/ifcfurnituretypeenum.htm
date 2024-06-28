@@ -50,13 +50,13 @@
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>CHAIR</td><td><p>Furniture for seating a single person.</p>
-</td></tr><tr><td>TABLE</td><td><p>Furniture with a countertop for multiple people.</p>
+<tr><td>BED</td><td><p>Furniture for sleeping.</p>
+</td></tr><tr><td>CHAIR</td><td><p>Furniture for seating a single person.</p>
 </td></tr><tr><td>DESK</td><td><p>Furniture with a countertop and optional drawers for a single person.</p>
-</td></tr><tr><td>BED</td><td><p>Furniture for sleeping.</p>
 </td></tr><tr><td>FILECABINET</td><td><p>Furniture with sliding drawers for storing files.</p>
 </td></tr><tr><td>SHELF</td><td><p>Furniture for storing books or other items.</p>
 </td></tr><tr><td>SOFA</td><td><p>Furniture for seating multiple people.</p>
+</td></tr><tr><td>TABLE</td><td><p>Furniture with a countertop for multiple people.</p>
 </td></tr><tr><td>TECHNICALCABINET</td><td><p>A technical cabinet is a piece of furniture for holding, displaying and protecting technical appliances, usually organized in shelves, drawers or racks.</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined type.</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined type.</p>
@@ -67,13 +67,13 @@
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcsharedfacilitieselements/lexical/ifcfurnituretypeenum.htm">IfcFurnitureTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;chair&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;table&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;desk&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;bed&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;chair&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;desk&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;filecabinet&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;shelf&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;sofa&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;table&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;technicalcabinet&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
@@ -82,7 +82,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcFurnitureTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;CHAIR, <br/>&nbsp;TABLE, <br/>&nbsp;DESK, <br/>&nbsp;BED, <br/>&nbsp;FILECABINET, <br/>&nbsp;SHELF, <br/>&nbsp;SOFA, <br/>&nbsp;TECHNICALCABINET, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;BED, <br/>&nbsp;CHAIR, <br/>&nbsp;DESK, <br/>&nbsp;FILECABINET, <br/>&nbsp;SHELF, <br/>&nbsp;SOFA, <br/>&nbsp;TABLE, <br/>&nbsp;TECHNICALCABINET, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedfacilitieselements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

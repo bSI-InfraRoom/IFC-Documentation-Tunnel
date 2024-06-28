@@ -10,7 +10,7 @@
   <ApplicableTypeValue>IfcController</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="09c17600d1cd11e1800000215ad4efdf">
-      <Name>Value</Name>
+      <Name>ValueHistory</Name>
       <Definition>Indicates values over time which may be recorded continuously or only when changed beyond a particular deadband.  The range of possible values is defined by the Value property on the corresponding occurrence property set (Pset_ControllerTypeFloating, Pset_ControllerTypeProportional, Pset_ControllerTypeMultiPosition, or Pset_ControllerTypeTwoPosition).</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
@@ -45,7 +45,9 @@ Pset_ControllerTypeValue.Valueに対応
     </PropertyDef>
     <PropertyDef ifdguid="0f1ec080d1cd11e1800000215ad4efdf">
       <Name>Status</Name>
-      <Definition>Indicates an error code or identifier, whose meaning is specific to the particular automation system.  Example values include: 'ConfigurationError', 'NotConnected', 'DeviceFailure', 'SensorFailure', 'LastKnown, 'CommunicationsFailure', 'OutOfService'.</Definition>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished, "Temporary" - element will exists only temporary (like a temporary support structure).
+
+Indicates an error code or identifier, whose meaning is specific to the particular automation system. Example values include: 'ConfigurationError', 'NotConnected', 'DeviceFailure', 'SensorFailure', 'LastKnown, 'CommunicationsFailure', 'OutOfService'.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="ea5affcdc15f4917b5fa5b91486d0301" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_WindowPanelProperties</Name>
+  <Definition>Properties of the window panel.
+
+&gt; HISTORY&amp;nbsp; New property set in IFC4.3.2.0 to replace the entity IfcWindowPanelProperties</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcPlate</ClassName>
+    <ClassName>IfcWindow</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcPlate,IfcWindow</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="c3695d85ba58402fbcf3da2f09224c5c">
+      <Name>OperationType</Name>
+      <Definition>Type of operations. Also used to assign standard symbolic presentations according to national building standards.
+
+For a window, it is the type of window panel operations. Also used to assign standard symbolic presentations according to national building standards.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_WindowPanelOperationEnum">
+            <EnumItem>SIDEHUNGRIGHTHAND</EnumItem>
+            <EnumItem>SIDEHUNGLEFTHAND</EnumItem>
+            <EnumItem>TILTANDTURNRIGHTHAND</EnumItem>
+            <EnumItem>TILTANDTURNLEFTHAND</EnumItem>
+            <EnumItem>TOPHUNG</EnumItem>
+            <EnumItem>BOTTOMHUNG</EnumItem>
+            <EnumItem>PIVOTHORIZONTAL</EnumItem>
+            <EnumItem>PIVOTVERTICAL</EnumItem>
+            <EnumItem>SLIDINGHORIZONTAL</EnumItem>
+            <EnumItem>SLIDINGVERTICAL</EnumItem>
+            <EnumItem>REMOVABLECASEMENT</EnumItem>
+            <EnumItem>FIXEDCASEMENT</EnumItem>
+            <EnumItem>OTHEROPERATION</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>SIDEHUNGRIGHTHAND</Name>
+              <Definition>Panel that opens to the right when viewed from the outside.
+
+![right hand](../../figures/ifcwindowpaneloperationenum-fig01.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SIDEHUNGLEFTHAND</Name>
+              <Definition>Panel that opens to the left when viewed from the outside.
+
+![left hand](../../figures/ifcwindowpaneloperationenum-fig02.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TILTANDTURNRIGHTHAND</Name>
+              <Definition>Panel that opens to the right and is bottom hung.
+
+![right hand tilt and turn](../../figures/ifcwindowpaneloperationenum-fig03.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TILTANDTURNLEFTHAND</Name>
+              <Definition>Panel that opens to the left and is bottom hung.
+
+![left turn and tilt](../../figures/ifcwindowpaneloperationenum-fig04.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TOPHUNG</Name>
+              <Definition>Panel is top hung.
+
+![top hung](../../figures/ifcwindowpaneloperationenum-fig05.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BOTTOMHUNG</Name>
+              <Definition>Panel is bottom hung.
+
+![bottom hung](../../figures/ifcwindowpaneloperationenum-fig06.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PIVOTHORIZONTAL</Name>
+              <Definition>Panel is swinging horizontally (hinges are in the middle).
+
+![swinging hori](../../figures/ifcwindowpaneloperationenum-fig07.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PIVOTVERTICAL</Name>
+              <Definition>Panel is swinging vertically (hinges are in the middle).
+
+![swinging verti](../../figures/ifcwindowpaneloperationenum-fig08.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SLIDINGHORIZONTAL</Name>
+              <Definition>Panel is sliding horizontally.
+
+![sliding hori](../../figures/ifcwindowpaneloperationenum-fig09.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SLIDINGVERTICAL</Name>
+              <Definition>Panel is sliding vertically.
+
+![sliding verti](../../figures/ifcwindowpaneloperationenum-fig10.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>REMOVABLECASEMENT</Name>
+              <Definition>Panel is removable.
+
+![removable](../../figures/ifcwindowpaneloperationenum-fig11.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FIXEDCASEMENT</Name>
+              <Definition>Panel is fixed.
+
+![fixed](../../figures/ifcwindowpaneloperationenum-fig12.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHEROPERATION</Name>
+              <Definition>Other.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Notdefined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <Definition>required category not on scale</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="101541dbe0e042f9bacc563560156644">
+      <Name>PanelPosition</Name>
+      <Definition>Position of the panel.
+
+For a window, it is the position of the panel within the overall window style.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_WindowPanelPositionEnum">
+            <EnumItem>BOTTOM</EnumItem>
+            <EnumItem>LEFT</EnumItem>
+            <EnumItem>MIDDLE</EnumItem>
+            <EnumItem>RIGHT</EnumItem>
+            <EnumItem>TOP</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>BOTTOM</Name>
+              <Definition>Bottom</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LEFT</Name>
+              <Definition>Left</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MIDDLE</Name>
+              <Definition>Middle</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>RIGHT</Name>
+              <Definition>Right</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TOP</Name>
+              <Definition>Top</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <Definition>required category not on scale</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8c3c8397dbd64076981cf6ae8c7a0833">
+      <Name>FrameDepth</Name>
+      <Definition>The length (or depth) of the frame.
+
+For a window, it is the depth of panel frame, measured from front face to back face horizontally (i.e. perpendicular to the window elevation plane).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="a0dca05cc73e4eef965c6fd3a8c3cafb">
+      <Name>FrameThickness</Name>
+      <Definition>The thickness of the frame.
+
+For a window, it is the width of panel frame, measured from inside of panel (at glazing) to outside of panel (at lining), i.e. parallel to the window (elevation) plane.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

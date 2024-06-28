@@ -138,7 +138,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="eddec400d20e11e1800000215ad4efdf">
       <Name>SwitchUsage</Name>
-      <Definition>A list of the available usages for toggle switches from which that required may be selected.</Definition>
+      <Definition>A list of the available usages for switches from which that required may be selected.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_SwitchUsage">
@@ -233,7 +233,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="fdf6a380d20e11e1800000215ad4efdf">
       <Name>SwitchActivation</Name>
-      <Definition>A list of the available activations for toggle switches from which that required may be selected.</Definition>
+      <Definition>A list of the available activations for switches from which that required may be selected.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_SwitchActivation">

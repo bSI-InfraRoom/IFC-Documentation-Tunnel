@@ -376,7 +376,7 @@ Note: Not required for a vertical cylindrical tank.</Definition>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="069ba980d21011e1800000215ad4efdf">
-      <Name>NominalCapacity</Name>
+      <Name>TankNominalCapacity</Name>
       <Definition>The total nominal or design volumetric capacity of the tank.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -632,12 +632,14 @@ Note: Not required for a vertical cylindrical tank.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="3cd92900d21011e1800000215ad4efdf">
       <Name>NumberOfSections</Name>
-      <Definition>Number of sections used in the construction of the tank. Default is 1.
+      <Definition>Number of sections.
+
+Number of sections used in the construction of the tank. Default is 1.
 
 Note: All sections assumed to be the same size.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>

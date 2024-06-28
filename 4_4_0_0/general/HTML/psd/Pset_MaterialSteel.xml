@@ -5,9 +5,9 @@
   <Definition>A set of extended mechanical properties related to steel (or other metallic and isotropic) materials.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcMaterial/Steel</ClassName>
+    <ClassName>IfcMaterial</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcMaterial/Steel</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcMaterial</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="d3e0b980d1ed11e1800000215ad4efdf">
       <Name>YieldStress</Name>
@@ -120,6 +120,17 @@ Relating values are the "RelaxationValue". Related values are the "InitialStress
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="9ef17e88386049fc89157a33540245e2">
+      <Name>StructuralGrade</Name>
+      <Definition>Classification label to define mechanical properties according to structural grades defined in published standards; designated by numbers, letters, or a combination of both.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases>

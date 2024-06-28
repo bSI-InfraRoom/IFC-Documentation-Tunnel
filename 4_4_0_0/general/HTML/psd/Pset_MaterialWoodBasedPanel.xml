@@ -281,7 +281,9 @@
           </PropertyDef>
           <PropertyDef ifdguid="2aec861c2b6a4d91b19592ab6f03296c">
             <Name>CompressiveStrength</Name>
-            <Definition>Defining values: α; defined values: compressive strength.</Definition>
+            <Definition>The compressive strength of the object or material.
+
+Defining values: α; defined values: compressive strength.</Definition>
             <PropertyType>
               <TypePropertyTableValue>
                 <Expression />

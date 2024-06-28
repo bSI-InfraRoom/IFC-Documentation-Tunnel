@@ -11,7 +11,8 @@
   <PropertyDefs>
     <PropertyDef ifdguid="bd2a6a80d1cd11e1800000215ad4efdf">
       <Name>ControlType</Name>
-      <Definition>The type of signal modification.
+      <Definition>The type controller, signal modification effected and applicable ports
+
 PROPORTIONAL: Output is proportional to the control error. The gain of a proportional control (Kp) will have the effect of reducing the rise time and reducing , but never eliminating, the steady-state error of the variable controlled. 
 PROPORTIONALINTEGRAL: Part of the output is proportional to the control error and part is proportional to the time integral of the control error. Adding the gain of an integral control (Ki) will have the effect of eliminating the steady-state error of the variable controlled, but it may make the transient response worse. 
 PROPORTIONALINTEGRALDERIVATIVE: Part of the output is proportional to the control error, part is proportional to the time integral of the control error and part is proportional to the time derivative of the control error. Adding the gain of a derivative control (Kd) will have the effect of increasing the stability of the system, reducing the overshoot, and improving the transient response of the variable controlled.</Definition>
@@ -95,9 +96,11 @@ PROPORTIONALINTEGRALDERIVATIVE: Part of the output is proportional to the contro
         <DefinitionAlias lang="ko-KR">신호 변경 유형   P (비례), I (적분), D (미분)의 조합 PROPORTIONAL :   P (비례) 제어 PROPORTIONALINTEGRAL :   PI (비례 적분) 제어 PROPORTIONALINTEGRALDERIVATIVE :   PID (비례 적분 미분) 제어</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="cc111d00d1cd11e1800000215ad4efdf">
+    <PropertyDef ifdguid="56a54c80d1cd11e1800000215ad4efdf">
       <Name>Labels</Name>
-      <Definition>Table mapping values to labels, where such labels indicate transition points such as 'Hi', 'Lo', 'HiHi', or 'LoLo'.</Definition>
+      <Definition>Table mapping values to labels
+
+Labels indicate transition points such as 'Hi', 'Lo', 'HiHi', or 'LoLo'.</Definition>
       <PropertyType>
         <TypePropertyTableValue>
           <Expression />
@@ -116,9 +119,9 @@ PROPORTIONALINTEGRALDERIVATIVE: Part of the output is proportional to the contro
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="d4695800d1cd11e1800000215ad4efdf">
+    <PropertyDef ifdguid="5efd8780d1cd11e1800000215ad4efdf">
       <Name>Range</Name>
-      <Definition>The physical range of values.</Definition>
+      <Definition>The physical range of values supported by the device.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcReal" />
@@ -133,7 +136,9 @@ PROPORTIONALINTEGRALDERIVATIVE: Part of the output is proportional to the contro
     </PropertyDef>
     <PropertyDef ifdguid="da5f3900d1cd11e1800000215ad4efdf">
       <Name>Value</Name>
-      <Definition>The expected range and default value.  While the property data type is IfcReal (to support all cases including when the units are unknown), a unit may optionally be provided to indicate the measure and unit.</Definition>
+      <Definition>The expected range and default value.
+
+The expected range and default value. While the property data type is IfcReal (to support all cases including when the units are unknown), a unit may optionally be provided to indicate the measure and unit.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcReal" />

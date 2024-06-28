@@ -11,7 +11,7 @@
     <title>Pset_SpaceHeaterTypeCommon</title>
 
     <style type="text/css">
-      body { counter-reset: index1 7 index2 5 index3 4 index4 84 index5 0; }
+      body { counter-reset: index1 7 index2 5 index3 4 index4 88 index5 0; }
     </style>
   </head>
 
@@ -20,17 +20,17 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-7.htm#7.5.4.85");
+    parent.index.location.replace("../../toc-7.htm#7.5.4.89");
 //-->
 </script>
 
-<h4 class="std">7.5.4.85 Pset_SpaceHeaterTypeCommon</h4>
+<h4 class="std">7.5.4.89 Pset_SpaceHeaterTypeCommon</h4>
 <p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
 /
 <a href="../../ifchvacdomain/lexical/ifcspaceheater.htm">IfcSpaceHeater</a>
 </p><table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Space Heater Type Common</b></td><td>Space heater type common attributes.
-SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.  Properties added in IFC4.
+SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.  Properties added in IFC4
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b></b></td><td>暖房用ヒーター共通属性　　　　　　　　　　　　　　　　　　　　　　　SoundLevel属性はIFC2x2付録で削除された。： IfcSoundPropertiesを代わりに使う　特性はIFC4を加えました
 </td></tr>
@@ -69,7 +69,7 @@ SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties ins
 </td></tr>
 </table>
 </td></tr>
-<tr><td>PlacementType</td><td>
+<tr><td>SpaceHeaterPlacement</td><td>
 <span class="self-ref">P_ENUMERATEDVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
@@ -130,7 +130,8 @@ high temperature - surface temperature is relatively high, usually heated by gas
 /
  <a href="../../../penum/penum_energysource.htm">PEnum_EnergySource</a></td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Energy Source</b></td><td>Enumeration defining the energy source or fuel combusted to generate heat if applicable.  Note: hydronic heaters shall use UNSET; dual-use hydronic/electric heaters shall use ELECTRICITY.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Energy Source</b></td><td>Enumeration defining the energy source or fuel cumbusted.
+Note: hydronic heaters shall use UNSET; dual-use hydronic/electric heaters shall use ELECTRICITY.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>エネルギー源</b></td><td>列挙型はエネルギー源や燃料該当する場合は熱を発生させる燃焼定義します。注：温水循環式のヒーターはunsetを使用してはならない。デュアル使用すると、温水循環式の電気ヒーターは電気を使用しなければならない。
 </td></tr>
@@ -187,7 +188,7 @@ high temperature - surface temperature is relatively high, usually heated by gas
 <tr><td>NumberOfPanels</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
 </td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Panels</b></td><td>Number of panels.
@@ -199,10 +200,11 @@ high temperature - surface temperature is relatively high, usually heated by gas
 <tr><td>NumberOfSections</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Sections</b></td><td>Number of vertical sections, measured in the direction of flow.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Sections</b></td><td>Number of sections.
+Number of vertical sections, measured in the direction of flow.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>セクションの数</b></td><td>流れ方向で測定した垂直方向のセクションの数
 </td></tr>

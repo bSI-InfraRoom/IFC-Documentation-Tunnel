@@ -1,0 +1,142 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_GeoObsBoreholeGeophysicalInterval</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 5 index3 4 index4 11 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.5.4.12");
+//-->
+</script>
+
+<h4 class="std">6.5.4.12 Pset_GeoObsBoreholeGeophysicalInterval</h4>
+<p><span class="self-ref">PSET_OCCURRENCEDRIVEN</span>
+/
+<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm">IfcGeoScienceObservation</a>
+ / <span class="self-ref">BOREHOLELOG</span>
+</p>Properties for describing geophysical intervals.
+
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geoobsboreholegeophysicalinterval.htm">Pset_GeoObsBoreholeGeophysicalInterval</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/2zbApGzEHES9A$1GkkC$pf/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_GeoObsBoreholeGeophysicalInterval.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>PwaveVelocity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclinearvelocitymeasure.htm">IfcLinearVelocityMeasure</a>
+</td><td>
+P-wave velocity of a rock or soil.
+
+</td></tr>
+<tr><td>SwaveVelocity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclinearvelocitymeasure.htm">IfcLinearVelocityMeasure</a>
+</td><td>
+S-wave velocity of a rock or soil.
+
+</td></tr>
+<tr><td>YoungModulus</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcmodulusofelasticitymeasure.htm">IfcModulusOfElasticityMeasure</a>
+</td><td>
+Elastic modulus, mean value, α=0°.
+
+</td></tr>
+<tr><td>PoissonRatio</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Poisson Ratio</b></td><td>A measure of the lateral deformations in the elastic range.
+</td></tr>
+</table>
+</td></tr>
+<tr><td>DryBulkDensity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcmassdensitymeasure.htm">IfcMassDensityMeasure</a>
+</td><td>
+Ratio of the mass of the solid to the unit total volume (dry material).
+
+</td></tr>
+<tr><td>WetBulkDensity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Ratio of the total mass to the unit total volume (material at its natural moisture content).
+
+</td></tr>
+<tr><td>Resistivity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcelectricresistancemeasure.htm">IfcElectricResistanceMeasure</a>
+</td><td>
+Electrical resistivity of a rock or soil (Ohm-m).
+
+</td></tr>
+<tr><td>SpontaneousPotential</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcelectricvoltagemeasure.htm">IfcElectricVoltageMeasure</a>
+</td><td>
+Naturally occurring (static) electrical potential in the Earth. Spontaneous potentials (SP) are usually caused by charge separation in clay or other minerals, by the presence of a semipermeable interface impeding the diffusion of ions through the pore space of rocks, or by natural flow of a conducting fluid (salty water) through the rocks. Variations in SP can be measured in the field and in wellbores to determine variations of ionic concentration in pore fluids of rocks.
+
+</td></tr>
+<tr><td>GroundwaterTemperature</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcthermodynamictemperaturemeasure.htm">IfcThermodynamicTemperatureMeasure</a>
+</td><td>
+Groundwater temperature observed at specific location or expected in the subject section.
+
+</td></tr>
+<tr><td>HoleDiameter</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+Drilled Borehole diameter. Also referred to as &quot;Caliper&quot;, continuous measurement of the as-drilled diameter inside the borehole.
+
+</td></tr>
+<tr><td>GammaRay</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+Naturally occurring gamma radiation which characterizes the rock or sediment in a borehole or drill hole, measured by a gamma ray logging.
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_geoobsboreholegeophysicalinterval.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

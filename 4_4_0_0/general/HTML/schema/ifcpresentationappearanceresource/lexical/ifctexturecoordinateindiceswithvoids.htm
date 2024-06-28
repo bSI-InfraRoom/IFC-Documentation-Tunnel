@@ -42,7 +42,7 @@
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>G</th></tr>
-<tr><td>3</td><td>InnerTexCoordIndicies</td><td><a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a></td><td>L[1:?] L[3:?]</td><td>
+<tr><td>3</td><td>InnerTexCoordIndices</td><td><a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a></td><td>L[1:?] L[3:?]</td><td>
 </td><td>X</td></tr>
 </table>
 </details>
@@ -65,7 +65,7 @@ The <i>IndexedPolygonalFace</i> for which the texture coordinates are provided.
 </td><td>X</td></tr>
 <tr><td></td><td><i>ToTexMap</i></td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcindexedpolygonaltexturemap.htm">IfcIndexedPolygonalTextureMap</a><br/>@TexCoordIndices</td><td></td><td></td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcpresentationappearanceresource/lexical/ifctexturecoordinateindiceswithvoids.htm">IfcTextureCoordinateIndicesWithVoids</a></td></tr>
-<tr><td>3</td><td>InnerTexCoordIndicies</td><td><a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a></td><td>L[1:?] L[3:?]</td><td>
+<tr><td>3</td><td>InnerTexCoordIndices</td><td><a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a></td><td>L[1:?] L[3:?]</td><td>
 </td><td>X</td></tr>
 </table>
 </details>
@@ -77,7 +77,7 @@ The <i>IndexedPolygonalFace</i> for which the texture coordinates are provided.
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../ifcpresentationappearanceresource/lexical/ifctexturecoordinateindiceswithvoids.htm">IfcTextureCoordinateIndicesWithVoids</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcpresentationappearanceresource/lexical/ifctexturecoordinateindices.htm">IfcTextureCoordinateIndices</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;InnerTexCoordIndicies&quot; use=&quot;optional&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;InnerTexCoordIndices&quot; use=&quot;optional&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:restriction&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:simpleType&gt;<br/>
@@ -94,7 +94,7 @@ The <i>IndexedPolygonalFace</i> for which the texture coordinates are provided.
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcTextureCoordinateIndicesWithVoids<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcpresentationappearanceresource/lexical/ifctexturecoordinateindices.htm">IfcTextureCoordinateIndices</a>)<b>;</b><br/>
-&nbsp;&nbsp;InnerTexCoordIndicies : <span class="keyword">LIST</span> [1:?] <span class="keyword">OF</span> <span class="keyword">UNIQUE</span> <span class="keyword">LIST</span> [3:?] <span class="keyword">OF</span> <span class="keyword">UNIQUE</span> <a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a>;<br/>
+&nbsp;&nbsp;InnerTexCoordIndices : <span class="keyword">LIST</span> [1:?] <span class="keyword">OF</span> <span class="keyword">LIST</span> [3:?] <span class="keyword">OF</span> <span class="keyword">UNIQUE</span> <a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcpresentationappearanceresource/diagram_0001.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

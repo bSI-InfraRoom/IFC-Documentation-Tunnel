@@ -10,7 +10,7 @@
   <ApplicableTypeValue>IfcSensor/CO2SENSOR</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="e4ab0c98841748269c10ddef20bb5aa9">
-      <Name>SetPointConcentration</Name>
+      <Name>SetPointCO2Concentration</Name>
       <Definition>The carbon dioxide concentration to be sensed. Use IfcPropertyBoundedValue.SetPointValue to set the set point value.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>

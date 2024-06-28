@@ -47,7 +47,7 @@
 /
  <a href="../../../penum/penum_controllerproportionaltype.htm">PEnum_ControllerProportionalType</a></td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Control Type</b></td><td>The type of signal modification.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Control Type</b></td><td>The type controller, signal modification effected and applicable ports
 PROPORTIONAL: Output is proportional to the control error. The gain of a proportional control (Kp) will have the effect of reducing the rise time and reducing , but never eliminating, the steady-state error of the variable controlled.
 PROPORTIONALINTEGRAL: Part of the output is proportional to the control error and part is proportional to the time integral of the control error. Adding the gain of an integral control (Ki) will have the effect of eliminating the steady-state error of the variable controlled, but it may make the transient response worse.
 PROPORTIONALINTEGRALDERIVATIVE: Part of the output is proportional to the control error, part is proportional to the time integral of the control error and part is proportional to the time derivative of the control error. Adding the gain of a derivative control (Kd) will have the effect of increasing the stability of the system, reducing the overshoot, and improving the transient response of the variable controlled.
@@ -62,7 +62,8 @@ PROPORTIONALINTEGRALDERIVATIVE: Part of the output is proportional to the contro
 <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Labels</b></td><td>Table mapping values to labels, where such labels indicate transition points such as 'Hi', 'Lo', 'HiHi', or 'LoLo'.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Labels</b></td><td>Table mapping values to labels
+Labels indicate transition points such as 'Hi', 'Lo', 'HiHi', or 'LoLo'.
 </td></tr>
 </table>
 </td></tr>
@@ -72,7 +73,7 @@ PROPORTIONALINTEGRALDERIVATIVE: Part of the output is proportional to the contro
 <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Range</b></td><td>The physical range of values.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Range</b></td><td>The physical range of values supported by the device.
 </td></tr>
 </table>
 </td></tr>
@@ -82,7 +83,8 @@ PROPORTIONALINTEGRALDERIVATIVE: Part of the output is proportional to the contro
 <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Value</b></td><td>The expected range and default value.  While the property data type is IfcReal (to support all cases including when the units are unknown), a unit may optionally be provided to indicate the measure and unit.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Value</b></td><td>The expected range and default value.
+The expected range and default value. While the property data type is IfcReal (to support all cases including when the units are unknown), a unit may optionally be provided to indicate the measure and unit.
 </td></tr>
 </table>
 </td></tr>

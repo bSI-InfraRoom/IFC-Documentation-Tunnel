@@ -175,8 +175,7 @@ Required maximum slope for the passageway according to the applicable building c
     </PropertyDef>
     <PropertyDef ifdguid="60e03e80d1ff11e1800000215ad4efdf">
       <Name>HandicapAccessible</Name>
-      <Definition>Indication that this object is designed to be accessible by the handicapped. 
-Set to (TRUE) if this ramp is rated as handicap accessible  according the local building codes, otherwise (FALSE).</Definition>
+      <Definition>Indication that this object is designed to be accessible by the handicapped. Set to (TRUE) if this object is rated as handicap accessible according to the local building codes, otherwise (FALSE). It is giving according to the requirements of the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -224,6 +223,7 @@ Set to (TRUE) if this ramp is rated as handicap accessible  according the local 
     <PropertyDef ifdguid="5b82f400d1ff11e1800000215ad4efdf">
       <Name>FireExit</Name>
       <Definition>Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE).
+
 Here it defines an exit ramp in accordance to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -271,6 +271,7 @@ Here it defines an exit ramp in accordance to the national building code.</Defin
     </PropertyDef>
     <PropertyDef ifdguid="d656025ed2cd424598c8b1b57aa9e3a0">
       <Name>ThermalTransmittance</Name>
+      <Definition>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />
@@ -281,6 +282,7 @@ Here it defines an exit ramp in accordance to the national building code.</Defin
     </PropertyDef>
     <PropertyDef ifdguid="761e9ee4c87544849c2a57a17935596e">
       <Name>LoadBearing</Name>
+      <Definition>Indicates whether the object is intended to carry loads (TRUE) or not (FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -291,8 +293,7 @@ Here it defines an exit ramp in accordance to the national building code.</Defin
     </PropertyDef>
     <PropertyDef ifdguid="558d1300d1ff11e1800000215ad4efdf">
       <Name>FireRating</Name>
-      <Definition>Fire rating for this object.
-It is given according to the national fire safety classification.</Definition>
+      <Definition>Fire rating for this object. It is given according to the national fire safety classification.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

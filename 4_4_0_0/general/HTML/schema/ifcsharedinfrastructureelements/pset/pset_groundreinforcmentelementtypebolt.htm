@@ -1,0 +1,203 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_GroundReinforcmentElementTypeBolt</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 5 index3 4 index4 29 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.5.4.30");
+//-->
+</script>
+
+<h4 class="std">6.5.4.30 Pset_GroundReinforcmentElementTypeBolt</h4>
+<p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
+/
+<a href="../../ifcsharedinfrastructureelements/lexical/ifcgroundreinforcementelement.htm">IfcGroundReinforcementElement</a>
+ / <span class="self-ref">BOLT</span>
+</p>Properties for <em>IfcGroundReinforcementElement</em> of type BOLT.
+
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_groundreinforcmentelementtypebolt.htm">Pset_GroundReinforcmentElementTypeBolt</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/2YM1_O9ub3QvmOfh_SHhAK/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_GroundReinforcmentElementTypeBolt.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>BoltCrossSection</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+/
+ <a href="../../../penum/penum_boltcrosssection.htm">PEnum_BoltCrossSection</a></td><td>
+Type of bolt cross section.
+
+</td></tr>
+<tr><td>UserDefinedBoltCrossSection</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Bolt cross section when <em>BoltCrossSection</em> is set to USERDEFINED.
+
+</td></tr>
+<tr><td>BoltType</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+/
+ <a href="../../../penum/penum_bolttype.htm">PEnum_BoltType</a></td><td>
+Specifies the type of bolts used for the steel rib.
+
+</td></tr>
+<tr><td>UserDefinedBoltType</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Bolt type when <em>BoltType</em> is set to USERDEFINED.
+
+</td></tr>
+<tr><td>BoltDiameter</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+Diameter of the bolt. When there is a solid geometry from which the diameter can be derived, the geometric representation takes precedence.
+
+</td></tr>
+<tr><td>BoltLength</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+Length of the bolt. When there is a solid geometry from which the length can be derived, the geometric representation takes precedence.
+
+</td></tr>
+<tr><td>GroutingType</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+/
+ <a href="../../../penum/penum_groutingtype.htm">PEnum_GroutingType</a></td><td>
+Type of grouting used.
+
+</td></tr>
+<tr><td>UserDefinedGroutingType</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+A user defined grouting type for when <em>GroutingType</em> is set to USERDEFINED.
+
+</td></tr>
+<tr><td>PlateType</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Type of bolt plate used.
+
+</td></tr>
+<tr><td>HoleDiameter</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+The diameter of the bolt hole.
+
+</td></tr>
+<tr><td>HoleLength</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+The length of the bolt hole.
+
+</td></tr>
+<tr><td>LongitudinalInclination</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>
+</td><td>
+Incination measured vs the cross section plane.
+
+</td></tr>
+<tr><td>RadialInclination</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>
+</td><td>
+Inclination measured vs the vertical cross section plane.
+
+</td></tr>
+<tr><td>MechanicalTension</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcforcemeasure.htm">IfcForceMeasure</a>
+</td><td>
+Nominal value of mechanical force applied to the element.
+
+</td></tr>
+<tr><td>LockingForce</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcforcemeasure.htm">IfcForceMeasure</a>
+</td><td>
+Locking force of the element.
+
+</td></tr>
+<tr><td>CorrosionTreatment</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+/
+ <a href="../../../penum/penum_elementcomponentcorrosiontreatment.htm">PEnum_ElementComponentCorrosionTreatment</a></td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Corrosion Treatment</b></td><td>Determines corrosion treatment for metal components. This property is provided if the requirement needs to be expressed (a) independently of a material specification and (b) as a mere requirements statement rather than a workshop design/ processing feature.
+</td></tr>
+</table>
+</td></tr>
+<tr><td>Deformability</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+
+</td></tr>
+<tr><td>MassPerLength</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcmassperlengthmeasure.htm">IfcMassPerLengthMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Mass Per Length</b></td><td>Mass per length, i.e. mass of a beam with a unit length of extrusion. For example measured in kg/m.
+</td></tr>
+</table>
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_groundreinforcmentelementtypebolt.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

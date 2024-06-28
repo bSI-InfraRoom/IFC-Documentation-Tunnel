@@ -32,7 +32,7 @@
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x2-to-ifc4x3_rc1/index.htm">IFC4x2 to IFC4x3_RC1</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcearthworkscuttypeenum.htm">IfcEarthworksCutTypeEnum</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3-to-ifc4x4/index.htm">IFC4X3 to IFC4X4</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcearthworkscuttypeenum.htm">IfcEarthworksCutTypeEnum</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONFINEDOPENEXCAVATION</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ANCHOREDOPENEXCAVATION</td><td></td><td></td><td>ADDED</td><td></td></tr>
@@ -45,18 +45,18 @@
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>TRENCH</td><td><p>Excavation whose length greatly exceeds the depth and width. Trench is typically excavated for strip foundations or for buried services such as drainage or cabling.</p>
+<tr><td>ANCHOREDOPENEXCAVATION</td><td><p>A confined open excavation where the vertical walls are anchored.</p>
+</td></tr><tr><td>BASE_EXCAVATION</td><td><p>Excavation for basements of buildings, abutments of bridges or similar structures either partially or completely below ground level.</p>
+</td></tr><tr><td>BRACEDOPENEXCAVATION</td><td><p>A confined open excavation where the vertical walls are braced.</p>
+</td></tr><tr><td>CONFINEDOPENEXCAVATION</td><td><p>An open slope excavation where the sides are vertical or near vertical.</p>
+</td></tr><tr><td>CUT</td><td><p>Excavation where soil or rock below topsoil is cut to the depth required for the construction of facilities such as roads and railways. The removed material can be used as fill (<a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkselement.htm">IfcEarthworksElement</a>) for embankments or to form a level surface on which to build.</p>
 </td></tr><tr><td>DREDGING</td><td><p>Underwater excavation to recover material or to create a greater depth of water.</p>
 </td></tr><tr><td>EXCAVATION</td><td><p>General type of excavation when more accurate type is not specified.</p>
 </td></tr><tr><td>OVEREXCAVATION</td><td><p>Excavation that goes beyond the depth required for construction, in order to replace unsuitable material.</p>
-</td></tr><tr><td>TOPSOILREMOVAL</td><td><p>Excavation where the topmost layer of soil containing organic material is cut or stripped. The removed topsoil can be used as fill (<i>EarthworksElement</i>) e.g. where planting is planned.</p>
-</td></tr><tr><td>STEPEXCAVATION</td><td><p>Removal of the soft part of the existing road slope, where it is dug into steps, when widening a road.</p>
 </td></tr><tr><td>PAVEMENTMILLING</td><td><p>Removal of expired material from top of pavement to be replaced by new material.</p>
-</td></tr><tr><td>CUT</td><td><p>Excavation where soil or rock below topsoil is cut to the depth required for the construction of facilities such as roads and railways. The removed material can be used as fill (<a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkselement.htm">IfcEarthworksElement</a>) for embankments or to form a level surface on which to build.</p>
-</td></tr><tr><td>BASE_EXCAVATION</td><td><p>Excavation for basements of buildings, abutments of bridges or similar structures either partially or completely below ground level.</p>
-</td></tr><tr><td>CONFINEDOPENEXCAVATION</td><td><p>An open slope excavation where the sides are vertical or near vertical.</p>
-</td></tr><tr><td>ANCHOREDOPENEXCAVATION</td><td><p>A confined open excavation where the vertical walls are anchored.</p>
-</td></tr><tr><td>BRACEDOPENEXCAVATION</td><td><p>A confined open excavation where the vertical walls are braced.</p>
+</td></tr><tr><td>STEPEXCAVATION</td><td><p>Removal of the soft part of the existing road slope, where it is dug into steps, when widening a road.</p>
+</td></tr><tr><td>TOPSOILREMOVAL</td><td><p>Excavation where the topmost layer of soil containing organic material is cut or stripped. The removed topsoil can be used as fill (<i>EarthworksElement</i>) e.g. where planting is planned.</p>
+</td></tr><tr><td>TRENCH</td><td><p>Excavation whose length greatly exceeds the depth and width. Trench is typically excavated for strip foundations or for buried services such as drainage or cabling.</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined type</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined type.</p>
 </td></tr></table>
@@ -66,18 +66,18 @@
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcsharedinfrastructureelements/lexical/ifcearthworkscuttypeenum.htm">IfcEarthworksCutTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;trench&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;anchoredopenexcavation&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;base_excavation&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;bracedopenexcavation&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;confinedopenexcavation&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;cut&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;dredging&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;excavation&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;overexcavation&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;topsoilremoval&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;stepexcavation&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pavementmilling&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;cut&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;base_excavation&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;confinedopenexcavation&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;anchoredopenexcavation&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;bracedopenexcavation&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;stepexcavation&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;topsoilremoval&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;trench&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -85,7 +85,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcEarthworksCutTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;TRENCH, <br/>&nbsp;DREDGING, <br/>&nbsp;EXCAVATION, <br/>&nbsp;OVEREXCAVATION, <br/>&nbsp;TOPSOILREMOVAL, <br/>&nbsp;STEPEXCAVATION, <br/>&nbsp;PAVEMENTMILLING, <br/>&nbsp;CUT, <br/>&nbsp;BASE_EXCAVATION, <br/>&nbsp;CONFINEDOPENEXCAVATION, <br/>&nbsp;ANCHOREDOPENEXCAVATION, <br/>&nbsp;BRACEDOPENEXCAVATION, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;ANCHOREDOPENEXCAVATION, <br/>&nbsp;BASE_EXCAVATION, <br/>&nbsp;BRACEDOPENEXCAVATION, <br/>&nbsp;CONFINEDOPENEXCAVATION, <br/>&nbsp;CUT, <br/>&nbsp;DREDGING, <br/>&nbsp;EXCAVATION, <br/>&nbsp;OVEREXCAVATION, <br/>&nbsp;PAVEMENTMILLING, <br/>&nbsp;STEPEXCAVATION, <br/>&nbsp;TOPSOILREMOVAL, <br/>&nbsp;TRENCH, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedinfrastructureelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

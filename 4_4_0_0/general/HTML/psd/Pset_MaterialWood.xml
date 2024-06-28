@@ -5,9 +5,9 @@
   <Definition>This is a collection of properties applicable to wood-based materials that specify kind and grade of material as well as moisture related parameters.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcMaterial/Wood</ClassName>
+    <ClassName>IfcMaterial</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcMaterial/Wood</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcMaterial</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="494c8a00d1ee11e1800000215ad4efdf">
       <Name>Species</Name>

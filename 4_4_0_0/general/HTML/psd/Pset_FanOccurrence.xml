@@ -12,7 +12,6 @@
     <PropertyDef ifdguid="beff2880d1e311e1800000215ad4efdf">
       <Name>DischargeType</Name>
       <Definition>Defines the type of connection at the fan discharge.
-
 Duct: Discharge into ductwork.
 Screen: Discharge into screen outlet.
 Louver: Discharge into a louver.
@@ -105,10 +104,9 @@ Louver:ルーバーへの吐き出し</DefinitionAlias>
     <PropertyDef ifdguid="cfaf9e80d1e311e1800000215ad4efdf">
       <Name>ApplicationOfFan</Name>
       <Definition>The functional application of the fan.
-
-SupplyAir: Supply air fan. 
-ReturnAir: Return air fan. 
-ExhaustAir: Exhaust air fan. 
+SupplyAir: Supply air fan.
+ReturnAir: Return air fan.
+ExhaustAir: Exhaust air fan.
 Other: Other type of application not defined above.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
@@ -196,7 +194,6 @@ SUPPLYAIR, RETURNAIR, EXHAUSTAIR, COOLINGTOWER, OTHER</DefinitionAlias>
     <PropertyDef ifdguid="e0601480d1e311e1800000215ad4efdf">
       <Name>CoilPosition</Name>
       <Definition>Defines the relationship between a fan and a coil.
-
 DrawThrough: Fan located downstream of the coil.
 BlowThrough: Fan located upstream of the coil.</Definition>
       <PropertyType>
@@ -270,7 +267,6 @@ BlowThrough:ファンはコイルの上流に位置</DefinitionAlias>
     <PropertyDef ifdguid="ece46d00d1e311e1800000215ad4efdf">
       <Name>MotorPosition</Name>
       <Definition>Defines the location of the motor relative to the air stream.
-
 InAirStream: Fan motor is in the air stream.
 OutOfAirStream: Fan motor is out of the air stream.</Definition>
       <PropertyType>
@@ -461,7 +457,7 @@ MANUFACTUREDCURB, FIELDERECTEDCURB, CONCRETEPAD, SUSPENDED, WALLMOUNTED, DUCTMOU
     </PropertyDef>
     <PropertyDef ifdguid="12717680d1e411e1800000215ad4efdf">
       <Name>ImpellerDiameter</Name>
-      <Definition>Diameter of fan wheel - used to scale performance of geometrically similar fans.</Definition>
+      <Definition>Diameter of object - used to scale performance of geometrically similar objects.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

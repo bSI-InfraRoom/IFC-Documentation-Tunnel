@@ -69,6 +69,16 @@
 </td><td>X</td></tr>
 </table>
 </details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>CorrectLinearPlacement</td><td>A linear placement is always relative to a local placement which sets the georeferencing context i. e. provide the indirect reference to <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a> with assigned Project Global Positioning.
+<blockquote class="history">
+HISTORY: New in IFC4.4.
+</blockquote>
+</td></tr>
+</table>
+
+</details>
 </section>
 <section>
 <h5 class="num">Inherited definitions from supertypes</h5>
@@ -125,7 +135,8 @@ IFC4 CHANGE  The cardinality has changed to 0..n to allow reuse of instances of
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a>)<b>;</b><br/>
 &nbsp;&nbsp;RelativePlacement : <a href="../../ifcgeometryresource/lexical/ifcaxis2placementlinear.htm">IfcAxis2PlacementLinear</a>;<br/>
 &nbsp;&nbsp;CartesianPosition : <span class="keyword">OPTIONAL</span> <a href="../../ifcgeometryresource/lexical/ifcaxis2placement3d.htm">IfcAxis2Placement3D</a>;<br/>
-<span class="keyword">END_ENTITY;</span><br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;CorrectLinearPlacement : EXISTS(SELF\<a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a>.PlacementRelTo) AND (&#39;IFCGEOMETRICCONSTRAINTRESOURCE.<a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>&#39; IN TYPEOF(SELF\<a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a>.PlacementRelTo));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometricconstraintresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="3571664250b94f3b996a3d047e687331" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_SpatialGeoObsSample</Name>
+  <Definition>Common properties for samples.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/INSITUTESTRESULT</ClassName>
+    <ClassName>IfcGeoScienceObservation/LABTESTRESULT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/INSITUTESTRESULT,IfcGeoScienceObservation/LABTESTRESULT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="205bd023344e4ebfa0f7bce70f1e1208">
+      <Name>SampleType</Name>
+      <Definition>Type of a sample with respect to sampling method and material, with e.g. enumerations as defined in AGS.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="465c01b46d1a405d8bb170323dce0eec">
+      <Name>SampleBoreholeDepthRange</Name>
+      <Definition>Relative top and bottom depths of a borehole where a sample was retrieved.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="412d34ef50104fd4815bd4f57a60bdec">
+      <Name>SampleProcedure</Name>
+      <Definition>Description of steps performed by a Sampler in order to extract a Sample from its sampledFeature in the frame of a Sampling.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ac2b73082ede4b3abdb305e216cd61a2">
+      <Name>SamplePurpose</Name>
+      <Definition>Provides the reason why the sample was collected, planed methods for testingand analysis.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="f6c4e1a4bddf480b9b27d321532fcfaf">
+      <Name>SamplingPointType</Name>
+      <Definition>Specifies the location from where the material sample was obtained, e.g. outcrop point, tunnel chainage, any other local reference.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

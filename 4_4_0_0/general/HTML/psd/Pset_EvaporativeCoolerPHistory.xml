@@ -26,7 +26,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="5c595d00d1e211e1800000215ad4efdf">
       <Name>Effectiveness</Name>
-      <Definition>Ratio of the change in dry bulb temperature of the (primary) air stream to the difference between the entering dry bulb temperature of the (primary) air and the wet-bulb temperature of the (secondary) air.</Definition>
+      <Definition>Effectiveness, represented as ratio.
+
+Ratio of the change in dry bulb temperature of the (primary) air stream to the difference between the entering dry bulb temperature of the (primary) air and the wet-bulb temperature of the (secondary) air.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
@@ -41,7 +43,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="5f544d80d1e211e1800000215ad4efdf">
       <Name>SensibleHeatTransferRate</Name>
-      <Definition>Sensible heat transfer rate to primary air flow.</Definition>
+      <Definition>Sensible heat transfer rate.
+
+Sensible heat transfer rate to primary air flow.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
@@ -56,7 +60,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="62e7d480d1e211e1800000215ad4efdf">
       <Name>LatentHeatTransferRate</Name>
-      <Definition>Latent heat transfer rate to primary air flow.</Definition>
+      <Definition>Latent heat transfer rate.
+
+To primary air flow.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
@@ -71,7 +77,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="65e2c500d1e211e1800000215ad4efdf">
       <Name>TotalHeatTransferRate</Name>
-      <Definition>Total heat transfer rate to primary air flow.</Definition>
+      <Definition>Total heat transfer rate.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

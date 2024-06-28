@@ -12,7 +12,7 @@ This property set represent the ground fault protection (G-curve) of an electron
   <PropertyDefs>
     <PropertyDef ifdguid="42c40f80d1fa11e1800000215ad4efdf">
       <Name>IsSelectable</Name>
-      <Definition>Indication whether the S-function can be switched off or not.</Definition>
+      <Definition>Indication whether something can be switched off or not.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -265,7 +265,9 @@ This property set represent the ground fault protection (G-curve) of an electron
     </PropertyDef>
     <PropertyDef ifdguid="9171a980d1fa11e1800000215ad4efdf">
       <Name>ReleaseCurrentI2tStart</Name>
-      <Definition>The release current in [x In] for the start point of the I2t tripping curve of the G-function, if any.</Definition>
+      <Definition>The release current in [x In].
+
+For the start point of the I2t tripping curve of the G-function, if any.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure" />
@@ -284,7 +286,9 @@ This property set represent the ground fault protection (G-curve) of an electron
     </PropertyDef>
     <PropertyDef ifdguid="96cef400d1fa11e1800000215ad4efdf">
       <Name>ReleaseTimeI2tStart</Name>
-      <Definition>The release time in [s] for the start point of the I2t tripping curve of the G-function, if any.</Definition>
+      <Definition>The release time in [s].
+
+For the start point of the I2t tripping curve of the G-function, if any.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcTimeMeasure" />
@@ -303,7 +307,9 @@ This property set represent the ground fault protection (G-curve) of an electron
     </PropertyDef>
     <PropertyDef ifdguid="9c2c3e80d1fa11e1800000215ad4efdf">
       <Name>ReleaseCurrentI2tEnd</Name>
-      <Definition>The release current in [x In] for the end point of the I2t tripping curve of the G-function, if any. The value of ReleaseCurrentI2tEnd shall be larger than ReleaseCurrentI2tStart.</Definition>
+      <Definition>The release current in [x In].
+
+For the end point of the I2t tripping curve of the G-function, if any. The value of ReleaseCurrentI2tEnd shall be larger than ReleaseCurrentI2tStart.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure" />
@@ -323,7 +329,9 @@ This property set represent the ground fault protection (G-curve) of an electron
     </PropertyDef>
     <PropertyDef ifdguid="a2221f80d1fa11e1800000215ad4efdf">
       <Name>ReleaseTimeI2tEnd</Name>
-      <Definition>The release time in [s] for the end point of the I2 tripping curve of the G-function, if any. The value of ReleaseTimeI2tEnd shall be lower than ReleaseTimeI2tStart.</Definition>
+      <Definition>The release time in [s].
+
+For the end point of the I2 tripping curve of the G-function, if any. The value of ReleaseTimeI2tEnd shall be lower than ReleaseTimeI2tStart.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcTimeMeasure" />

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="fe3ddd58107341268493157f5e434cb2" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_DoorLiningProperties</Name>
+  <Definition>Properties of the door lining.
+
+&gt; HISTORY&amp;nbsp; New property set in IFC4.3.2.0 to replace the entity IfcDoorLiningProperties</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcDoor</ClassName>
+    <ClassName>IfcMember</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcDoor,IfcMember</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="50f9c6b7804b45cfb535d5dd9e5624c5">
+      <Name>LiningDepth</Name>
+      <Definition>The depth of the lining.
+
+For a door, it is the depth of the door lining, measured perpendicular to the plane of the door lining. If omitted (and with a given value to lining thickness) it indicates an adjustable depth (i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8b88a98f3b8b4a54b3192f56ce6edbfb">
+      <Name>LiningThickness</Name>
+      <Definition>Thickness of the lining.
+
+For a door, it is the thickness of the door lining as explained in the figure above. If LiningThickness value is 0. (zero) it denotes a door without a lining (all other lining parameters shall be set to NIL in this case). If the LiningThickness is NIL it denotes that the value is not available.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="227553589b924556b35caa2c0d4cbffa">
+      <Name>ThresholdDepth</Name>
+      <Definition>Depth (dimension in plane perpendicular to door leaf) of the door threshold. Only given if the door lining includes a threshold. If omitted (and with a given value to threshold thickness) it indicates an adjustable depth (i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d78f22f7e40b4f2c8136f35facd4ee7c">
+      <Name>ThresholdThickness</Name>
+      <Definition>Thickness of the door threshold as explained in the figure above. If ThresholdThickness value is 0. (zero) it denotes a door without a threshold (ThresholdDepth shall be set to NIL in this case). If the ThresholdThickness is NIL it denotes that the information about a threshold is not available.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="18df83d083224457a558a4fc7ef308bf">
+      <Name>TransomThickness</Name>
+      <Definition>Thickness of the transom.
+
+For a door, it is the thickness (width in plane parallel to door leaf) of the transom (if provided - that is, if the TransomOffset attribute is set), which divides the door leaf from a glazing (or window) above. If the TransomThickness is set to zero (and the TransomOffset set to a positive length), then the door is divided vertically into a leaf and transom window area without a physical frame.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2d34d01642cd45b0a40d91b348f037e8">
+      <Name>TransomOffset</Name>
+      <Definition>Offset of the transom (if given) which divides the door leaf from a glazing (or window) above. The offset is given from the bottom of the door opening.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="66ab3af4b7cc48b6ae0b705c9343395f">
+      <Name>LiningOffset</Name>
+      <Definition>Offset of the lining.
+
+For a door, it is the offset (dimension in plane perpendicular to door leaf) of the door lining. The offset is given as distance to the x axis of the local placement.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b93963a7ff824990bfe4d4e196186b9f">
+      <Name>ThresholdOffset</Name>
+      <Definition>Offset (dimension in plane perpendicular to door leaf) of the door threshold. The offset is given as distance to the x axis of the local placement. Only given if the door lining includes a threshold and the parameter is known.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="048db044d7e24cfb955cceb518bb9532">
+      <Name>CasingThickness</Name>
+      <Definition>Thickness of the casing.
+
+For a door, it is the dimension in plane of the door leaf. If given it is applied equally to all four sides of the adjacent wall.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2ac1f06b7e5c485fac6b5eaf2fcf6088">
+      <Name>CasingDepth</Name>
+      <Definition>Depth of the casing.
+
+For a door, it is the dimension in the plane perpendicular to door leaf. If given it is applied equally to all four sides of the adjacent wall.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2b9dfc5df49b43a5ba2606a02842b502">
+      <Name>LiningToPanelOffsetX</Name>
+      <Definition>Offset between the lining and the panel, measured along the x-axis of the local placement.
+
+For a door, it is the offset between the lining and the window panel.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7374338e2b5f4913bf475b5f4ebf6c6c">
+      <Name>LiningToPanelOffsetY</Name>
+      <Definition>Offset between the lining and the panel, measured along the y-axis of the local placement.
+
+For a door, it is the offset between the lining and the door panel.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

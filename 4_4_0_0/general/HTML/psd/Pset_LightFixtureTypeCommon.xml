@@ -121,7 +121,7 @@ History: IFC4 - Article number and manufacturer specific information deleted. Us
       <Definition>Number of sources .</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>

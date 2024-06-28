@@ -47,7 +47,7 @@ y = ∫sin &amp;Theta dl</p>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>G</th></tr>
-<tr><td>1</td><td>Position</td><td><a href="../../ifcgeometryresource/lexical/ifcaxis2placement.htm">IfcAxis2Placement</a></td><td>? </td><td>
+<tr><td>1</td><td>Position</td><td><a href="../../ifcgeometryresource/lexical/ifcaxis2placement.htm">IfcAxis2Placement</a></td><td></td><td>
 </td><td>X</td></tr>
 </table>
 </details>
@@ -89,7 +89,7 @@ IFC2x3 CHANGE  The inverse attribute <i>StyledByItem</i> has been added.
 </td>
 <td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcspiral.htm">IfcSpiral</a></i></td></tr>
-<tr><td>1</td><td>Position</td><td><a href="../../ifcgeometryresource/lexical/ifcaxis2placement.htm">IfcAxis2Placement</a></td><td>? </td><td>
+<tr><td>1</td><td>Position</td><td><a href="../../ifcgeometryresource/lexical/ifcaxis2placement.htm">IfcAxis2Placement</a></td><td></td><td>
 </td><td>X</td></tr>
 </table>
 </details>
@@ -102,7 +102,7 @@ IFC2x3 CHANGE  The inverse attribute <i>StyledByItem</i> has been added.
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;Position&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;Position&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:group ref=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifcaxis2placement.htm">IfcAxis2Placement</a>&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
@@ -116,7 +116,7 @@ IFC2x3 CHANGE  The inverse attribute <i>StyledByItem</i> has been added.
 <span class="keyword">ENTITY</span> IfcSpiral<br/>
 &nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcgeometryresource/lexical/ifcclothoid.htm">IfcClothoid</a>, <a href="../../ifcgeometryresource/lexical/ifccosinespiral.htm">IfcCosineSpiral</a>, <a href="../../ifcgeometryresource/lexical/ifcsecondorderpolynomialspiral.htm">IfcSecondOrderPolynomialSpiral</a>, <a href="../../ifcgeometryresource/lexical/ifcseventhorderpolynomialspiral.htm">IfcSeventhOrderPolynomialSpiral</a>, <a href="../../ifcgeometryresource/lexical/ifcsinespiral.htm">IfcSineSpiral</a>, <a href="../../ifcgeometryresource/lexical/ifcthirdorderpolynomialspiral.htm">IfcThirdOrderPolynomialSpiral</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a>)<b>;</b><br/>
-&nbsp;&nbsp;Position : <span class="keyword">OPTIONAL</span> <a href="../../ifcgeometryresource/lexical/ifcaxis2placement.htm">IfcAxis2Placement</a>;<br/>
+&nbsp;&nbsp;Position : <a href="../../ifcgeometryresource/lexical/ifcaxis2placement.htm">IfcAxis2Placement</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

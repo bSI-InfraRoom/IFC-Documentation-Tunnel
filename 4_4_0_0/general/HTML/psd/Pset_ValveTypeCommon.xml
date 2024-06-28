@@ -28,6 +28,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="103808cf5fe64d589e7317c7493147b5">
       <Name>Status</Name>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">
@@ -228,8 +229,8 @@ LEVER: A valve that is opened and closed by the action of a lever rotating the g
 LOCKSHIELD: A valve that requires the use of a special lockshield key for opening and closing, the operating mechanism being protected by a shroud during normal operation.
 MOTORIZED: A valve that is opened and closed by the action of an electric motor on an actuator
 PNEUMATIC: A valve that is opened and closed by pneumatic actuation
-SOLENOID: A valve that is normally held open by a magnetic field in a coil acting on the gate but that is closed immediately if the electrical current generating the magnetic field is removed. 
-SPRING: A valve that is normally held in position by the pressure of a spring on a plate but that may be caused to open if the pressure of the fluid is sufficient to overcome the spring pressure. 
+SOLENOID: A valve that is normally held open by a magnetic field in a coil acting on the gate but that is closed immediately if the electrical current generating the magnetic field is removed.
+SPRING: A valve that is normally held in position by the pressure of a spring on a plate but that may be caused to open if the pressure of the fluid is sufficient to overcome the spring pressure.
 THERMOSTATIC: A valve in which the ports are opened or closed to maintain a required predetermined temperature.
 WHEEL: A valve that is opened and closed by the action of a wheel moving the gate within the valve.</Definition>
       <PropertyType>
@@ -594,7 +595,9 @@ WEDGEGATE: Screwdown valve that has a wedge shaped plate fitting into tapered gu
     </PropertyDef>
     <PropertyDef ifdguid="7e6bd300d21411e1800000215ad4efdf">
       <Name>WorkingPressure</Name>
-      <Definition>The normally expected maximum working pressure of the valve.</Definition>
+      <Definition>Working pressure.
+
+The normally expected maximum working pressure of the valve.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure" />

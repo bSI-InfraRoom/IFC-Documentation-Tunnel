@@ -1,0 +1,169 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_GeoObsDiscontinuityCommon</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 5 index3 4 index4 15 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.5.4.16");
+//-->
+</script>
+
+<h4 class="std">6.5.4.16 Pset_GeoObsDiscontinuityCommon</h4>
+<p><span class="self-ref">PSET_OCCURRENCEDRIVEN</span>
+/
+<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm">IfcGeoScienceObservation</a>
+ / <span class="self-ref">MAPPEDFEATURE,IfcGeoScienceObservation</span>
+ / <span class="self-ref">LOCALINFORMATION,IfcGeoScienceFeature</span>
+ / <span class="self-ref">DISCRETEDISCONTINUITY</span>
+</p>Properties of discontinuities or discontinuity sets in rock according to ISO EN 14689.
+
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geoobsdiscontinuitycommon.htm">Pset_GeoObsDiscontinuityCommon</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/2rk$ivwTfBpOerYFs_H1h9/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_GeoObsDiscontinuityCommon.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>DiscontinuityType</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Pattern of bedding, folds, faults and discontinuities in rock masses, which subdivide the mass into individual domains or rock blocks.
+<blockquote class="note">
+NOTE  Definition according to ISO EN 14689.
+</blockquote>
+
+</td></tr>
+<tr><td>DipDirection</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>
+</td><td>
+The azimuth of the dip (dip direction) shall be measured in degrees in the range 0 to 360 degrees counted clockwise from true north.
+<blockquote class="note">
+NOTE  Definition according to ISO EN 14689.
+</blockquote>
+
+</td></tr>
+<tr><td>DipAngle</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>
+</td><td>
+The maximum declination (dip) of the mean plane of the discontinuity from the horizontal shall be measured with the clinometer in the range 0 to 90 degrees and should be expressed in degrees as a two-digit number, e.g. 50.
+<blockquote class="note">
+NOTE Definition according to ISO EN 14689.
+</blockquote>
+
+</td></tr>
+<tr><td>DiscontinuitySpacing</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The term &quot;spacing&quot; refers to the mean or modal spacing of a set of discontinuities and is the perpendicular distance between adjacent discontinuities. The number of discontinuity sets, the differences in spacing and the angles between the sets shall be reported as these determine the block shape. The discontinuity spacing should be measured in millimetres and can be classified using the terms in Table 8.
+<blockquote class="note">
+NOTE Definition according to ISO EN 14689.
+</blockquote>
+
+</td></tr>
+<tr><td>DiscontinuityPersistence</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The linear extent of discontinuities from their inception to their termination in solid rock mass or against other discontinuities or outside the exposure shall be reported. The size of the exposure shall also be recorded. If possible and appropriate, measurements should be made in two or preferably three orthogonal directions.
+<blockquote class="note">
+NOTE Definition according to ISO EN 14689.
+</blockquote>
+
+</td></tr>
+<tr><td>DiscontinuityRoughness</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The surface condition and the shape of discontinuities shall be described on the basis of three scales of observation, respectively, and using the terms given in ISO EN 14689 - Table 9 and illustrated in Figure 2:
+a) small scale (several millimetres) - smooth or rough
+b) medium scale (several centimetres) - planar, stepped or undulating
+c) large scale (several metres) - straight, curved or wavy.
+<blockquote class="note">
+NOTE Definition according to ISO EN 14689.
+</blockquote>
+
+</td></tr>
+<tr><td>DiscontinuityAperture</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The perpendicular distance between the two surfaces of a discontinuity is referred to as the aperture.
+<blockquote class="note">
+NOTE Definition according to ISO EN 14689.
+</blockquote>
+
+</td></tr>
+<tr><td>DiscontinuityInFilling</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The infilling material between discontinuity surfaces shall be identified and described (e.g. soil,minerals such as calcite, quartz, epidote, chlorite, anhydrite, clay gouge, rock gouge or breccia).
+<blockquote class="note">
+NOTE Definition according to ISO EN 14689.
+</blockquote>
+
+</td></tr>
+<tr><td>DiscontinuityWaterSeepage</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Free moisture or water flow visible at individual spots or from discontinuities.
+
+</td></tr>
+<tr><td>DiscontinuityCohesion</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
+</td><td>
+Cohesive shear strength of a rock or soil that is independent of interparticle friction.
+
+</td></tr>
+<tr><td>DiscontinuityFrictionAngle</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>
+</td><td>
+Derived from the Mohr-Coulomb failure criterion and used to describe the friction shear resistance of ground materials, together with the normal effective stress.
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_geoobsdiscontinuitycommon.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

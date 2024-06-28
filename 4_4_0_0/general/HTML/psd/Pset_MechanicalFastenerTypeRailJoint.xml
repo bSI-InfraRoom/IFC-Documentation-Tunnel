@@ -108,7 +108,7 @@
       <Definition>Number of screws/bolts/connections.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger" />
+          <DataType type="IfcCountMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -136,20 +136,78 @@
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
-    <PropertyDef ifdguid="64af56b30b4540c2b43d74b49a28b9db">
-      <Name>ConstructionMethod</Name>
-      <Definition>Designator for whether the element is constructed/welded on site or prefabricated. Example of allowed values : 'On-site' vs 'Prefabricated'.</Definition>
+    <PropertyDef ifdguid="62543b80d1ec11e1800000215ad4efdf">
+      <Name>AssemblyPlace</Name>
+      <Definition>Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.</Definition>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel" />
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AssemblyPlace">
+            <EnumItem>FACTORY</EnumItem>
+            <EnumItem>OFFSITE</EnumItem>
+            <EnumItem>SITE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>FACTORY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Factory</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OFFSITE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Offsite</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SITE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Site</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <Definition>required category not on scale</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
       <NameAliases>
-        <NameAlias lang="de-DE">Ausführung</NameAlias>
-        <NameAlias lang="en">Construction Method</NameAlias>
+        <NameAlias lang="en">Assembly Place</NameAlias>
       </NameAliases>
       <DefinitionAliases>
-        <DefinitionAlias lang="de-DE">Angabe, ob dieses Betonbauteil als Ortbeton ("In-Situ") oder als Fertigteil ("Precast") ausgeführt werden soll.</DefinitionAlias>
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
     </PropertyDef>

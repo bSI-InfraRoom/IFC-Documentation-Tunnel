@@ -48,8 +48,8 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="d813d380d1fb11e1800000215ad4efdf">
-      <Name>AdjustmentRange</Name>
-      <Definition>Upper and lower time adjustment limits for an AdjustmentValueType = RANGE. Note that this property should not have a value for an  AdjustmentValueType = LIST.</Definition>
+      <Name>TimeAdjustmentRange</Name>
+      <Definition>Upper and lower time adjustment limits for an AdjustmentValueType = RANGE. Note that this property should not have a value for an AdjustmentValueType = LIST.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcTimeMeasure" />
@@ -67,8 +67,8 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="dfd37800d1fb11e1800000215ad4efdf">
-      <Name>AdjustmentRangeStepValue</Name>
-      <Definition>Step value of time adjustment for an AdjustmentValueType = RANGE. Note that this property should not have a value for an  AdjustmentValueType = LIST.</Definition>
+      <Name>TimeAdjustmentRangeStepValue</Name>
+      <Definition>Step value of time adjustment for an AdjustmentValueType = RANGE. Note that this property should not have a value for an AdjustmentValueType = LIST.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcTimeMeasure" />
@@ -86,8 +86,8 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="e530c280d1fb11e1800000215ad4efdf">
-      <Name>AdjustmentValues</Name>
-      <Definition>A list of time adjustment values that may be applied to a tripping unit for an AdjustmentValueType = LIST. A minimum of 1 and a maximum of 16 adjustment values may be specified. Note that this property should not have a value for an  AdjustmentValueType = RANGE.</Definition>
+      <Name>TimeAdjustmentValues</Name>
+      <Definition>A list of time adjustment values that may be applied to a tripping unit for an AdjustmentValueType = LIST. A minimum of 1 and a maximum of 16 adjustment values may be specified. Note that this property should not have a value for an AdjustmentValueType = RANGE.</Definition>
       <PropertyType>
         <TypePropertyListValue>
           <ListValue>

@@ -32,7 +32,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="28fecb30be2a40c69fb0703be83c5e9f">
       <Name>IsExternal</Name>
-      <Definition>Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external zone at the outside of the building.</Definition>
+      <Definition>Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -51,7 +51,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="e46e79127254467fab1435fce14121bf">
       <Name>GrossPlannedArea</Name>
-      <Definition>Total planned gross area for the zone. Used for programming the zone.</Definition>
+      <Definition>Total planned gross area of the spatial structure element. Used for programming the spatial structure element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure" />
@@ -70,7 +70,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="c0ec9d3bf8f649b9be1a1a3ea965d058">
       <Name>NetPlannedArea</Name>
-      <Definition>Total planned net area for the zone. Used for programming the zone.</Definition>
+      <Definition>Total planned net area of the object. Used for programming the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure" />
@@ -110,7 +110,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="516def00d21911e1800000215ad4efdf">
       <Name>HandicapAccessible</Name>
-      <Definition>Indication whether this space (in case of e.g., a toilet) is designed to serve as an accessible space for handicapped people, e.g., for a public toilet (TRUE) or not (FALSE). This information is often used to declare the need for access for the disabled and for special design requirements of this space.</Definition>
+      <Definition>Indication that this object is designed to be accessible by the handicapped. Set to (TRUE) if this object is rated as handicap accessible according to the local building codes, otherwise (FALSE). It is giving according to the requirements of the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

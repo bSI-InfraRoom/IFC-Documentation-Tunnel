@@ -11,7 +11,7 @@
     <title>IfcWindowPanelPositionEnum</title>
 
     <style type="text/css">
-      body { counter-reset: index1 7 index2 1 index3 2 index4 6 index5 0; }
+      body { counter-reset: index1 7 index2 1 index3 2 index4 4 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-7.htm#7.1.2.7");
+    parent.index.location.replace("../../toc-7.htm#7.1.2.5");
 //-->
 </script>
 
@@ -40,12 +40,12 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the type</h5>
-<details open="open"><summary>Type definition</summary><p>This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels (including fixed panels) as shown in Figure 399. It corresponds to the <i>OperationType</i> of the <a href="../../ifcarchitecturedomain/lexical/ifcwindowstyle.htm">IfcWindowStyle</a> definition, which references the <a href="../../ifcarchitecturedomain/lexical/ifcwindowpanelproperties.htm">IfcWindowPanelProperties</a>.</p>
-<p>Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an <i>IfcWindowType.OperationType</i> = USERDEFINED or NOTDEFINED (see <a href="../../ifcarchitecturedomain/lexical/ifcwindowstyleoperationenum.htm">IfcWindowStyleOperationEnum</a> for details).</p>
+<details open="open"><summary>Type definition</summary><p>This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels (including fixed panels) as shown in Figure 398. It corresponds to the <i>OperationType</i> of the <i>IfcWindowStyle</i> definition, which references the <a href="../../ifcarchitecturedomain/lexical/ifcwindowpanelproperties.htm">IfcWindowPanelProperties</a>.</p>
+<p>Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an <i>IfcWindowType.OperationType</i> = USERDEFINED or NOTDEFINED (see <i>IfcWindowStyleOperationEnum</i> for details).</p>
 <table><tr><td>
  <table class="gridtable"> 
 	<tr valign="top"> 
-	  <th width="30%" valign="top" align="left"><i>Enumerator from IfcWindowStyleOperationEnum</i></th> 
+	  <th width="30%" valign="top" align="left"><i>Enumerator from IfcWindowTypePartitioningEnum</i></th> 
 	  <th width="30%" valign="top" align="left"><i>Use of enumerators from IfcWindowPanelPositionEnum</i></th> 
 	  <th width="23%" valign="top" align="left"><i>Figure</i></th> 
 	</tr> 
@@ -113,7 +113,7 @@
 	</tr> 
  </table> 
 </td></tr>
-<tr><td><p class="figure">Figure 399 &mdash; Window panel positions</p></td></tr>
+<tr><td><p class="figure">Figure 398 &mdash; Window panel positions</p></td></tr>
 </table>
 <blockquote class="history">
 <p>HISTORY  New enumeration in IFC2.0.</p>
@@ -126,17 +126,17 @@
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>LEFT</td><td></td></tr><tr><td>MIDDLE</td><td></td></tr><tr><td>RIGHT</td><td></td></tr><tr><td>BOTTOM</td><td></td></tr><tr><td>TOP</td><td></td></tr><tr><td>NOTDEFINED</td><td></td></tr></table>
+<tr><td>BOTTOM</td><td></td></tr><tr><td>LEFT</td><td></td></tr><tr><td>MIDDLE</td><td></td></tr><tr><td>RIGHT</td><td></td></tr><tr><td>TOP</td><td></td></tr><tr><td>NOTDEFINED</td><td></td></tr></table>
 </details>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcarchitecturedomain/lexical/ifcwindowpanelpositionenum.htm">IfcWindowPanelPositionEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;bottom&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;left&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;middle&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;right&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;bottom&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;top&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -144,7 +144,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcWindowPanelPositionEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;LEFT, <br/>&nbsp;MIDDLE, <br/>&nbsp;RIGHT, <br/>&nbsp;BOTTOM, <br/>&nbsp;TOP, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;BOTTOM, <br/>&nbsp;LEFT, <br/>&nbsp;MIDDLE, <br/>&nbsp;RIGHT, <br/>&nbsp;TOP, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcarchitecturedomain/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
