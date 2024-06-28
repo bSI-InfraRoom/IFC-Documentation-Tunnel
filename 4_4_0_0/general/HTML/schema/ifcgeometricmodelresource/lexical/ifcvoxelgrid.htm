@@ -30,7 +30,7 @@
 </details>
 <details open="open"><summary>Change log</summary><table class="gridtable">
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
-<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4-draft/index.htm">IFC4X3_ADD2 to IFC4X4 draft</a></b></td>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4/index.htm">IFC4X3_ADD2 to IFC4X4</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
@@ -70,7 +70,7 @@ along X, then Y and finally Z.
 <h5 class="num">Inherited definitions from supertypes</h5>
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcvoxelgrid.png" usemap="#f"/>
 <map name="f">
-<area shape="rect" coords="30,54,242,66" href="../../../schema/ifcgeometricmodelresource/lexical/ifcsolidmodel.htm" alt="IfcSolidModel" />
+<area shape="rect" coords="30,54,242,66" href="../../../schema/ifcgeometricmodelresource/lexical/ifctessellateditem.htm" alt="IfcTessellatedItem" />
 <area shape="rect" coords="18,30,254,42" href="../../../schema/ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm" alt="IfcGeometricRepresentationItem" />
 <area shape="rect" coords="6,6,266,18" href="../../../schema/ifcgeometryresource/lexical/ifcrepresentationitem.htm" alt="IfcRepresentationItem" />
 </map>
@@ -92,10 +92,9 @@ IFC2x3 CHANGE  The inverse attribute <i>StyledByItem</i> has been added.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a></i></td></tr>
-<tr><td colspan="6"><i><a href="../../ifcgeometricmodelresource/lexical/ifcsolidmodel.htm">IfcSolidModel</a></i></td></tr>
-<tr><td></td><td>Dim<br/>:=3</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td></td><td>The space dimensionality of this class, it is always 3.
-</td>
-<td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a></i></td></tr>
+<tr><td></td><td><i>HasColours</i></td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcindexedcolourmap.htm">IfcIndexedColourMap</a><br/>@MappedTo</td><td>S[0:1]</td><td>Reference to the indexed colour map providing the corresponding colour RGB values to the faces of the subtypes of <a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a>.
+</td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a></td></tr>
 <tr><td>1</td><td>VoxelSizeX</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td></td><td>
 Size of voxels in the X axis.
@@ -125,10 +124,10 @@ along X, then Y and finally Z.
 </section>
 <section>
 <h5 class="num">Formal representations</h5>
-<details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&quot; type=&quot;ifc:<a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcgeometricmodelresource/lexical/ifcsolidmodel.htm">IfcSolidModel</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+<details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&quot; type=&quot;ifc:<a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcgeometricmodelresource/lexical/ifcsolidmodel.htm">IfcSolidModel</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;VoxelSizeX&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;VoxelSizeY&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;VoxelSizeZ&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>&quot; use=&quot;optional&quot;/&gt;<br/>
@@ -151,7 +150,7 @@ along X, then Y and finally Z.
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcVoxelGrid<br/>
-&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcgeometricmodelresource/lexical/ifcsolidmodel.htm">IfcSolidModel</a>)<b>;</b><br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a>)<b>;</b><br/>
 &nbsp;&nbsp;VoxelSizeX : <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>;<br/>
 &nbsp;&nbsp;VoxelSizeY : <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>;<br/>
 &nbsp;&nbsp;VoxelSizeZ : <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>;<br/>

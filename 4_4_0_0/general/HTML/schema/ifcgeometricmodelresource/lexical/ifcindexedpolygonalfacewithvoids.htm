@@ -35,6 +35,9 @@
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4-addendum-2-4_0_2_0/index.htm">IFC4 Addendum 2 4.0.2.0</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcindexedpolygonalfacewithvoids.htm">IfcIndexedPolygonalFaceWithVoids</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4/index.htm">IFC4X3_ADD2 to IFC4X4</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcindexedpolygonalfacewithvoids.htm">IfcIndexedPolygonalFaceWithVoids</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>HasColours</i></td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
 <section>
@@ -84,6 +87,8 @@ IFC2x3 CHANGE  The inverse attribute <i>StyledByItem</i> has been added.
 </td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a></i></td></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a></i></td></tr>
+<tr><td></td><td><i>HasColours</i></td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcindexedcolourmap.htm">IfcIndexedColourMap</a><br/>@MappedTo</td><td>S[0:1]</td><td>Reference to the indexed colour map providing the corresponding colour RGB values to the faces of the subtypes of <a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a>.
+</td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcgeometricmodelresource/lexical/ifcindexedpolygonalface.htm">IfcIndexedPolygonalFace</a></td></tr>
 <tr><td>1</td><td>CoordIndex</td><td><a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a></td><td>L[3:?]</td><td>
 One-dimensional list with the indices for the three or more points, that define the vertices of the outer loop. If the tessellated face set is closed, indicated by <i>SELF\IfcTessellatedFaceSet.Closed</i>, then the points, defining the outer loop, shall connect counter clockwise, as seen from the outside of the body, so that the resulting normal will point outwards.

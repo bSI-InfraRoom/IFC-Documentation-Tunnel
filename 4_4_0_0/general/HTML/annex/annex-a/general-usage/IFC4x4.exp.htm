@@ -8184,7 +8184,7 @@ IN TYPEOF(SELF\<a href="#ifcrepresentation">IfcRepresentation</a>.ContextOfItems
 <br/>
 <a name="ifcsolidmodel" />
 <span class="keyword">ENTITY</span> IfcSolidModel<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifccsgsolid">IfcCsgSolid</a>, <a href="#ifcmanifoldsolidbrep">IfcManifoldSolidBrep</a>, <a href="#ifcsectionedsolid">IfcSectionedSolid</a>, <a href="#ifcsweptareasolid">IfcSweptAreaSolid</a>, <a href="#ifcsweptdisksolid">IfcSweptDiskSolid</a>, <a href="#ifcvoxelgrid">IfcVoxelGrid</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifccsgsolid">IfcCsgSolid</a>, <a href="#ifcmanifoldsolidbrep">IfcManifoldSolidBrep</a>, <a href="#ifcsectionedsolid">IfcSectionedSolid</a>, <a href="#ifcsweptareasolid">IfcSweptAreaSolid</a>, <a href="#ifcsweptdisksolid">IfcSweptDiskSolid</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcgeometricrepresentationitem">IfcGeometricRepresentationItem</a>)<b>;</b><br/>
 &nbsp;<span class="keyword">DERIVE</span><br/>
 &nbsp;&nbsp;Dim : <a href="#ifcdimensioncount">IfcDimensionCount</a> := 3;<br/>
@@ -9144,7 +9144,6 @@ EXISTS (MessagingIDs);<br/><span class="keyword">END_ENTITY;</span><br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifctessellateditem">IfcTessellatedItem</a>)<b>;</b><br/>
 &nbsp;&nbsp;Coordinates : <a href="#ifccartesianpointlist3d">IfcCartesianPointList3D</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
-&nbsp;&nbsp;HasColours : <span class="keyword">SET</span> [0:1] OF <a href="#ifcindexedcolourmap">IfcIndexedColourMap</a> <span class="keyword">FOR</span> MappedTo;<br/>
 &nbsp;&nbsp;HasTextures : <span class="keyword">SET</span> [0:?] <span class="keyword">OF</span> <a href="#ifcindexedtexturemap">IfcIndexedTextureMap</a> <span class="keyword">FOR</span> MappedTo;<br/>
 &nbsp;<span class="keyword">DERIVE</span><br/>
 &nbsp;&nbsp;Dim : <a href="#ifcdimensioncount">IfcDimensionCount</a> := 3;<br/>
@@ -9152,8 +9151,10 @@ EXISTS (MessagingIDs);<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifctessellateditem" />
 <span class="keyword">ENTITY</span> IfcTessellatedItem<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcindexedpolygonalface">IfcIndexedPolygonalFace</a>, <a href="#ifctessellatedfaceset">IfcTessellatedFaceSet</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcindexedpolygonalface">IfcIndexedPolygonalFace</a>, <a href="#ifctessellatedfaceset">IfcTessellatedFaceSet</a>, <a href="#ifcvoxelgrid">IfcVoxelGrid</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcgeometricrepresentationitem">IfcGeometricRepresentationItem</a>)<b>;</b><br/>
+&nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;&nbsp;HasColours : <span class="keyword">SET</span> [0:1] OF <a href="#ifcindexedcolourmap">IfcIndexedColourMap</a> <span class="keyword">FOR</span> MappedTo;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifctextliteral" />
@@ -9733,7 +9734,7 @@ AND<br/>
 <br/>
 <a name="ifcvoxelgrid" />
 <span class="keyword">ENTITY</span> IfcVoxelGrid<br/>
-&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcsolidmodel">IfcSolidModel</a>)<b>;</b><br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifctessellateditem">IfcTessellatedItem</a>)<b>;</b><br/>
 &nbsp;&nbsp;VoxelSizeX : <a href="#ifcnonnegativelengthmeasure">IfcNonNegativeLengthMeasure</a>;<br/>
 &nbsp;&nbsp;VoxelSizeY : <a href="#ifcnonnegativelengthmeasure">IfcNonNegativeLengthMeasure</a>;<br/>
 &nbsp;&nbsp;VoxelSizeZ : <a href="#ifcnonnegativelengthmeasure">IfcNonNegativeLengthMeasure</a>;<br/>

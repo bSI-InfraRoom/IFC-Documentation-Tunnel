@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" uuid="47e23168-57ea-4c64-b090-95044e4a082f" name="mvd">
+<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" uuid="f3071dc9-79ce-4406-bcd3-61df201ebb1e" name="mvd">
 	<Templates>
 		<ConceptTemplate uuid="a322fdd7-cd28-4ea7-8797-f6cf124ab3d6" name="Partial Templates" applicableSchema="IFC4">
 			<Definitions>
@@ -16404,7 +16404,7 @@ For work-based resources such as labor and equipment, quantities are based on ti
 		</ConceptTemplate>
 	</Templates>
 	<Views>
-		<ModelView uuid="f7c8d778-350f-434b-9195-f183bed35911" name="General Usage" code="IFC4x4" version="4.4.0.0" status="draft" owner="bSI" copyright="&amp;copy; 1996-2021 buildingSMART International Ltd." applicableSchema="IFC4X4">
+		<ModelView uuid="f7c8d778-350f-434b-9195-f183bed35911" name="General Usage" code="IFC4x4" version="4.4.0.0" status="draft" owner="bSI" copyright="&amp;copy; 1996-2024 buildingSMART International Ltd." applicableSchema="IFC4X4">
 			<Definitions>
 				<Definition>
 					<Body><![CDATA[{ .std}

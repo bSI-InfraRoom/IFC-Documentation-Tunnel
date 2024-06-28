@@ -9852,7 +9852,6 @@ of the material. The information contained in this document is subject to change
 			<xs:extension base="ifc:IfcTessellatedItem">
 				<xs:sequence>
 					<xs:element name="Coordinates" type="ifc:IfcCartesianPointList3D" nillable="true"/>
-					<xs:element name="HasColours" type="ifc:IfcIndexedColourMap" nillable="true" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="HasTextures" nillable="true" minOccurs="0">
 						<xs:complexType>
 							<xs:sequence>
@@ -9870,7 +9869,11 @@ of the material. The information contained in this document is subject to change
 	<xs:element name="IfcTessellatedItem" type="ifc:IfcTessellatedItem" abstract="true" substitutionGroup="ifc:IfcGeometricRepresentationItem" nillable="true"/>
 	<xs:complexType name="IfcTessellatedItem" abstract="true">
 		<xs:complexContent>
-			<xs:extension base="ifc:IfcGeometricRepresentationItem"/>
+			<xs:extension base="ifc:IfcGeometricRepresentationItem">
+				<xs:sequence>
+					<xs:element name="HasColours" type="ifc:IfcIndexedColourMap" nillable="true" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="IfcTextLiteral" type="ifc:IfcTextLiteral" substitutionGroup="ifc:IfcGeometricRepresentationItem" nillable="true"/>
@@ -10702,10 +10705,10 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="IfcVoxelGrid" type="ifc:IfcVoxelGrid" substitutionGroup="ifc:IfcSolidModel" nillable="true"/>
+	<xs:element name="IfcVoxelGrid" type="ifc:IfcVoxelGrid" substitutionGroup="ifc:IfcTessellatedItem" nillable="true"/>
 	<xs:complexType name="IfcVoxelGrid">
 		<xs:complexContent>
-			<xs:extension base="ifc:IfcSolidModel">
+			<xs:extension base="ifc:IfcTessellatedItem">
 				<xs:attribute name="VoxelSizeX" type="ifc:IfcNonNegativeLengthMeasure" use="optional"/>
 				<xs:attribute name="VoxelSizeY" type="ifc:IfcNonNegativeLengthMeasure" use="optional"/>
 				<xs:attribute name="VoxelSizeZ" type="ifc:IfcNonNegativeLengthMeasure" use="optional"/>

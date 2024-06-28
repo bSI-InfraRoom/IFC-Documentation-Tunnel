@@ -650,8 +650,10 @@
   </cnf:entity>
   <cnf:entity select="IfcTessellatedFaceSet">
     <cnf:attribute select="Coordinates" exp-attribute="attribute-tag" />
-    <cnf:inverse select="HasColours" exp-attribute="attribute-tag" />
     <cnf:inverse select="HasTextures" exp-attribute="double-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcTessellatedItem">
+    <cnf:inverse select="HasColours" exp-attribute="attribute-tag" />
   </cnf:entity>
   <cnf:entity select="IfcTextLiteralWithExtent">
     <cnf:attribute select="Extent" exp-attribute="attribute-tag" />

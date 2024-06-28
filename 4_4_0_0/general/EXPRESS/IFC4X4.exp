@@ -11047,8 +11047,7 @@ ENTITY IfcSolidModel
     ,IfcManifoldSolidBrep
     ,IfcSectionedSolid
     ,IfcSweptAreaSolid
-    ,IfcSweptDiskSolid
-    ,IfcVoxelGrid))
+    ,IfcSweptDiskSolid))
  SUBTYPE OF (IfcGeometricRepresentationItem);
  DERIVE
 	Dim : IfcDimensionCount := 3;
@@ -12071,15 +12070,17 @@ ENTITY IfcTessellatedFaceSet
  DERIVE
 	Dim : IfcDimensionCount := 3;
  INVERSE
-	HasColours : SET [0:1] OF IfcIndexedColourMap FOR MappedTo;
 	HasTextures : SET [0:?] OF IfcIndexedTextureMap FOR MappedTo;
 END_ENTITY;
 
 ENTITY IfcTessellatedItem
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcIndexedPolygonalFace
-    ,IfcTessellatedFaceSet))
+    ,IfcTessellatedFaceSet
+    ,IfcVoxelGrid))
  SUBTYPE OF (IfcGeometricRepresentationItem);
+ INVERSE
+	HasColours : SET [0:1] OF IfcIndexedColourMap FOR MappedTo;
 END_ENTITY;
 
 ENTITY IfcTextLiteral
@@ -12682,7 +12683,7 @@ AND
 END_ENTITY;
 
 ENTITY IfcVoxelGrid
- SUBTYPE OF (IfcSolidModel);
+ SUBTYPE OF (IfcTessellatedItem);
 	VoxelSizeX : IfcNonNegativeLengthMeasure;
 	VoxelSizeY : IfcNonNegativeLengthMeasure;
 	VoxelSizeZ : IfcNonNegativeLengthMeasure;

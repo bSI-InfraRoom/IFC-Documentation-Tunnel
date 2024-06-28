@@ -65,7 +65,6 @@ A solid model is a complete representation of the nominal shape of a product suc
 <area shape="rect" coords="42,126,230,138" href="../../../schema/ifcgeometricmodelresource/lexical/ifcsectionedsolid.htm" alt="IfcSectionedSolid" />
 <area shape="rect" coords="42,150,230,162" href="../../../schema/ifcgeometricmodelresource/lexical/ifcsweptareasolid.htm" alt="IfcSweptAreaSolid" />
 <area shape="rect" coords="42,174,230,186" href="../../../schema/ifcgeometricmodelresource/lexical/ifcsweptdisksolid.htm" alt="IfcSweptDiskSolid" />
-<area shape="rect" coords="42,198,230,210" href="../../../schema/ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm" alt="IfcVoxelGrid" />
 <area shape="rect" coords="18,30,254,42" href="../../../schema/ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm" alt="IfcGeometricRepresentationItem" />
 <area shape="rect" coords="6,6,266,18" href="../../../schema/ifcgeometryresource/lexical/ifcrepresentationitem.htm" alt="IfcRepresentationItem" />
 </map>
@@ -106,7 +105,7 @@ IFC2x3 CHANGE  The inverse attribute <i>StyledByItem</i> has been added.
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcSolidModel<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcgeometricmodelresource/lexical/ifccsgsolid.htm">IfcCsgSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcmanifoldsolidbrep.htm">IfcManifoldSolidBrep</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcsectionedsolid.htm">IfcSectionedSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcsweptareasolid.htm">IfcSweptAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcsweptdisksolid.htm">IfcSweptDiskSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcgeometricmodelresource/lexical/ifccsgsolid.htm">IfcCsgSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcmanifoldsolidbrep.htm">IfcManifoldSolidBrep</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcsectionedsolid.htm">IfcSectionedSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcsweptareasolid.htm">IfcSweptAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcsweptdisksolid.htm">IfcSweptDiskSolid</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a>)<b>;</b><br/>
 &nbsp;<span class="keyword">DERIVE</span><br/>
 &nbsp;&nbsp;Dim : <a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a> := 3;<br/>

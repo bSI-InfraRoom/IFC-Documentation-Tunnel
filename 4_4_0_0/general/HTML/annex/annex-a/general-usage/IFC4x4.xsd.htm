@@ -9871,7 +9871,6 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;Coordinates&quot; type=&quot;ifc:<a href="../../../schema/ifcgeometricmodelresource/lexical/ifccartesianpointlist3d.htm">IfcCartesianPointList3D</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;HasColours&quot; type=&quot;ifc:<a href="../../../schema/ifcpresentationappearanceresource/lexical/ifcindexedcolourmap.htm">IfcIndexedColourMap</a>&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;HasTextures&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
@@ -9889,7 +9888,11 @@ of the material. The information contained in this document is subject to change
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a>&quot; abstract=&quot;true&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;HasColours&quot; type=&quot;ifc:<a href="../../../schema/ifcpresentationappearanceresource/lexical/ifcindexedcolourmap.htm">IfcIndexedColourMap</a>&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcpresentationdefinitionresource/lexical/ifctextliteral.htm">IfcTextLiteral</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcpresentationdefinitionresource/lexical/ifctextliteral.htm">IfcTextLiteral</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
@@ -10721,10 +10724,10 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcsolidmodel.htm">IfcSolidModel</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcgeometricmodelresource/lexical/ifcsolidmodel.htm">IfcSolidModel</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;VoxelSizeX&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;VoxelSizeY&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;VoxelSizeZ&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>&quot; use=&quot;optional&quot;/&gt;<br/>
