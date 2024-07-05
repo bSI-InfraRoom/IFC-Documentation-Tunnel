@@ -30,7 +30,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="c79c3280d1d411e1800000215ad4efdf">
       <Name>ColourCode</Name>
-      <Definition>Name of a color for identifying the connector, if applicable.</Definition>
+      <Definition>Name of a colour for identifying the connector, if applicable.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

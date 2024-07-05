@@ -114,6 +114,120 @@
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
     </PropertyDef>
+    <PropertyDef ifdguid="1360fca64593416fba71d301578499a4">
+      <Name>ElectricalConductivity</Name>
+      <Definition>Electrical conductivity. Measured under specified conditions, between the opposite faces of a unit cube of defined dimensions of an aqueous solution. For water quality examination, this is often expressed as "electrical conductivity" and may be used as a measure of the concentration of ionizable solutes present in the sample.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricConductanceMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1072dc00d21311e1800000215ad4efdf">
+      <Name>Temperature</Name>
+      <Definition>Temperature of the fluid.
+
+Indicates the current measured temperature.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Temperature</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="4af38bfd570947bab1164b1beb30a398">
+      <Name>Cl-</Name>
+      <Definition>Content of Cl- in the water sample.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b0cad3ee4a3a406ea3676f52b0d8ae50">
+      <Name>NO3-</Name>
+      <Definition>Content of NO3- in the water sample.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1e14f29cfa794479b5038e902259335b">
+      <Name>SO42-</Name>
+      <Definition>Content of SO4 2- in the water sample.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="58e417cdbd0a40eba448feaeaf3e4b02">
+      <Name>HCO3-</Name>
+      <Definition>Content of HCO3- in the water sample.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7ca2da32921b41a8ad9592b5f120fe41">
+      <Name>Na+</Name>
+      <Definition>Content of Na+ in the water sample.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="adc0575b78974faf89e878c4a594cc0e">
+      <Name>K+</Name>
+      <Definition>Content of K+ in the water sample.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="125268fbcbbc454eba9595a8c80e096f">
+      <Name>Mg2+</Name>
+      <Definition>Content of Mg2+ in the water sample.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="40eb0a6d9c564b17be3445a2d89ecdb3">
+      <Name>Ca2+</Name>
+      <Definition>Content of Ca2+ in the water sample.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases>
     <PsetDefinitionAlias lang="en" />

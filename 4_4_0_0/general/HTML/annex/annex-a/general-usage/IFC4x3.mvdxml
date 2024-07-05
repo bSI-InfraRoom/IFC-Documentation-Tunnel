@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" uuid="03500f85-4fd0-4fb4-977f-f91e633368f6" name="mvd">
+<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" uuid="3f4c69c1-45e2-43b4-a0f4-b019d2e20795" name="mvd">
 	<Templates>
 		<ConceptTemplate uuid="a322fdd7-cd28-4ea7-8797-f6cf124ab3d6" name="Partial Templates" applicableSchema="IFC4">
 			<Definitions>
@@ -5175,7 +5175,7 @@ The main attributes to be provided for a _Classification Association_ are:
 																				<EntityRule EntityName="IfcText" />
 																			</EntityRules>
 																		</AttributeRule>
-																		<AttributeRule AttributeName="Location">
+																		<AttributeRule AttributeName="Specification">
 																			<EntityRules>
 																				<EntityRule EntityName="IfcURIReference" />
 																			</EntityRules>
@@ -21593,6 +21593,7 @@ Representation identifier and type are the same as in single mapped representati
 							<Template ref="5ebffd94-c51e-4e58-ba79-1b6e9f3542d8" />
 							<TemplateRules operator="and">
 								<TemplateRule />
+								<TemplateRule />
 							</TemplateRules>
 						</Concept>
 						<Concept uuid="dd6bfbbc-8431-4512-8e9f-b232cc5fff1b" name="Body Tessellation Geometry">
@@ -21603,6 +21604,9 @@ Representation identifier and type are the same as in single mapped representati
 								</Definition>
 							</Definitions>
 							<Template ref="5cfd4403-6545-4c6d-bc27-0a95a3d09950" />
+							<TemplateRules operator="and">
+								<TemplateRule />
+							</TemplateRules>
 						</Concept>
 					</Concepts>
 				</ConceptRoot>
@@ -22207,6 +22211,7 @@ The material is attached by the _RelatingMaterial_ attribute on the [IfcRelAssoc
 							</Definitions>
 							<Template ref="7dadae9c-0026-44d3-ade7-9a843fe2ef0b" />
 							<TemplateRules operator="and">
+								<TemplateRule />
 								<TemplateRule />
 							</TemplateRules>
 						</Concept>

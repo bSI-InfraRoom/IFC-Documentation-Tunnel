@@ -180,11 +180,9 @@ The max voltage for normal insulation operation.</Definition>
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
-    <PropertyDef ifdguid="308b1604fa7f4b11ba71175ab14f7ffb">
+    <PropertyDef ifdguid="704e6f1e14fb4ee59bd15f094601cb4f">
       <Name>BendingStrength</Name>
-      <Definition>Bending strength.
-
-Defining values: α; defined values: bending strength.</Definition>
+      <Definition>Bending strength.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure" />

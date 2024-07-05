@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="6d2b1aa369214a13a9f41b5f28f4792c" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoScienceFeatureTypeFault</Name>
+  <Definition>Properties for faults.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceFeature/FAULT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceFeature/FAULT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="513a92155d99458ca7be394cbc4ab4e4">
+      <Name>FaultMovementType</Name>
+      <Definition>Contains a human readable summary of the type of movement (e.g. dip-slip, strike-slip) on the object. To report an identifier from a controlled vocabulary, movementType_uri shall be used.
+
+&gt; NOTE: Definition according to OGC Geoscience Markup Language 4.1 (GeoSciML) (8.9.8.6 movementType) 
+
+&gt; NOTE: A controlled vocabulary may be found at  http://resource.geosciml.org/classifier/cgi/faultmovementtype</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="6f89043bf81b4c33b39e8e6a3f9199ce">
+      <Name>FaultDeformationStyle</Name>
+      <Definition>A human readable description of the style of deformation (e.g. brittle, ductile etc.) for the object. To report an identifier from a controlled vocabulary, deformationStyle_uri shall be used.
+
+&gt; NOTE: Definition according to OGC Geoscience Markup Language 4.1 (GeoSciML) (8.9.8.7 deformationStyle) 
+&gt; NOTE: A controlled vocabulary may be found at  http://resource.geosciml.org/classifier/cgi/deformationstyle</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5cd284c7eafd4352b847ace0384b6b43">
+      <Name>FaultDisplacement</Name>
+      <Definition>Human readable summary describing the displacement across the object.
+
+&gt; NOTE: Definition according to OGC Geoscience Markup Language 4.1 (GeoSciML) (8.9.8.8 displacement)</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="9fd38dad77cf476fae4480e9201a1378">
+      <Name>FaultGeologicHistory</Name>
+      <Definition>Description of the age of the object, possibly formatted with formal syntax, (where age is a sequence of events and may include process and environment information).
+
+&gt; NOTE: Definition according to OGC Geoscience Markup Language 4.1 (GeoSciML) (8.9.8.9 geologicHistory)</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8e32583398b349aa9624df1fa7c3d0bf">
+      <Name>DipDirection</Name>
+      <Definition>The azimuth of the dip (dip direction) shall be measured in degrees in the range 0 to 360 degrees counted clockwise from true north. 
+&gt;NOTE&amp;nbsp; Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="937a8989c87d402b97cb6c76781051ea">
+      <Name>FaultActivity</Name>
+      <Definition>Qualitative rating of the fault activitity (active/inactive/...). E.g. an acttive fault is a fault that has slipped in historic time and which is likely to slip again in the future.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="e4a5a28bef0b4c3c966ca982154c2ee5">
+      <Name>FaultLength</Name>
+      <Definition>Fault length (L) is the longest horizontal or subhorizontal dimension along the fault plane.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="938e992b9c4f46f3b31090815c9256da">
+      <Name>FaultInfilling</Name>
+      <Definition>Substance dispersed between the wall surfaces of a discontinuity (JGS) generally, the material occupying the space between joint surfaces, faults, and other rock discontinuities. The filling material may be clay, gouge, various natural cementing agents, or alteration products of the adjacent rock.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4bc89f69c1984b9a9fc1c57bc3d987fd">
+      <Name>FaultSlipDirection</Name>
+      <Definition>Observed relative displacement direction of the hanging wall (top) to the foot wall, e.g. up, down, left, right or combinations (like top down - left).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

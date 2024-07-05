@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="7e94b000d1cd11e1800000215ad4efdf">
       <Name>ControlType</Name>
-      <Definition>The type of signal modification effected and applicable ports:
+      <Definition>The type controller, signal modification effected and applicable ports
 
 INPUT: Controller element is a dedicated input.
 OUTPUT: Controller element is a dedicated output.
@@ -136,7 +136,7 @@ Each entry corresponds to an integer within the ValueRange.</Definition>
       <Name>Value</Name>
       <Definition>The expected range and default value.
 
-The expected range and default value. The LowerLimitValue and UpperLimitValue must fall within the physical Range.</Definition>
+The expected range and default value.  The LowerLimitValue and UpperLimitValue must fall within the physical Range.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcInteger" />

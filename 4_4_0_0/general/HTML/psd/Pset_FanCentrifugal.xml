@@ -5,13 +5,12 @@
   <Definition>Centrifugal fan occurrence attributes attached to an instance of IfcFan.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcFan/CENTRIFUGAL</ClassName>
     <ClassName>IfcFan/CENTRIFUGALAIRFOIL</ClassName>
     <ClassName>IfcFan/CENTRIFUGALBACKWARDINCLINEDCURVED</ClassName>
     <ClassName>IfcFan/CENTRIFUGALFORWARDCURVED</ClassName>
     <ClassName>IfcFan/CENTRIFUGALRADIAL</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcFan/CENTRIFUGAL,IfcFan/CENTRIFUGALAIRFOIL,IfcFan/CENTRIFUGALBACKWARDINCLINEDCURVED,IfcFan/CENTRIFUGALFORWARDCURVED,IfcFan/CENTRIFUGALRADIAL</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcFan/CENTRIFUGALAIRFOIL,IfcFan/CENTRIFUGALBACKWARDINCLINEDCURVED,IfcFan/CENTRIFUGALFORWARDCURVED,IfcFan/CENTRIFUGALRADIAL</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="7cd5e700d1e311e1800000215ad4efdf">
       <Name>DischargePosition</Name>

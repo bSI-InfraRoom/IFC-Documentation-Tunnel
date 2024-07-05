@@ -496,13 +496,17 @@ References to the orientation of grain or lay-up correspond to material orientat
           </PropertyDef>
           <PropertyDef ifdguid="308b1604fa7f4b11ba71175ab14f7ffb">
             <Name>BendingStrength</Name>
-            <Definition>Bending strength.
-
-Defining values: α; defined values: bending strength.</Definition>
+            <Definition>Bending strength.</Definition>
             <PropertyType>
-              <TypePropertySingleValue>
-                <DataType type="IfcPressureMeasure" />
-              </TypePropertySingleValue>
+              <TypePropertyTableValue>
+                <Expression />
+                <DefiningValue>
+                  <DataType type="IfcPressureMeasure" />
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcReal" />
+                </DefinedValue>
+              </TypePropertyTableValue>
             </PropertyType>
             <NameAliases />
             <DefinitionAliases />
@@ -511,9 +515,15 @@ Defining values: α; defined values: bending strength.</Definition>
             <Name>TensileStrength</Name>
             <Definition>Indicates the ability to withstand breakage apart under applied force.</Definition>
             <PropertyType>
-              <TypePropertySingleValue>
-                <DataType type="IfcPressureMeasure" />
-              </TypePropertySingleValue>
+              <TypePropertyTableValue>
+                <Expression />
+                <DefiningValue>
+                  <DataType type="IfcPressureMeasure" />
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcReal" />
+                </DefinedValue>
+              </TypePropertyTableValue>
             </PropertyType>
             <NameAliases />
             <DefinitionAliases />

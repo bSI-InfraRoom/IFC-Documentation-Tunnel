@@ -68,7 +68,7 @@ NOTE: It is assumed that chamber walls will be constructed of a single material.
     </PropertyDef>
     <PropertyDef ifdguid="7e97ae80d1d311e1800000215ad4efdf">
       <Name>WallThickness</Name>
-      <Definition>The thickness of the wall construction. 
+      <Definition>The thickness of the wall construction.
 NOTE: It is assumed that walls will be constructed at a single thickness.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

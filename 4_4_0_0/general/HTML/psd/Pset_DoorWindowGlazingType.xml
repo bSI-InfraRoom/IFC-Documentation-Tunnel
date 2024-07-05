@@ -404,7 +404,8 @@ Der g-Wert dieses Zweischeiben-Normalglasfensters wird als Konstante mit 80 % an
     </PropertyDef>
     <PropertyDef ifdguid="9a07b700d1dd11e1800000215ad4efdf">
       <Name>ThermalTransmittanceSummer</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of a material. Summer thermal transmittance coefficient of the glazing only, often referred to as (U-value).</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of a material.
+Summer thermal transmittance coefficient of the glazing only, often referred to as (U-value).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />
@@ -428,7 +429,8 @@ Der g-Wert dieses Zweischeiben-Normalglasfensters wird als Konstante mit 80 % an
     </PropertyDef>
     <PropertyDef ifdguid="9e33d480d1dd11e1800000215ad4efdf">
       <Name>ThermalTransmittanceWinter</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of a material. Winter thermal transmittance coefficient of the glazing only, often referred to as (U-value).</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of a material.
+Winter thermal transmittance coefficient of the glazing only, often referred to as (U-value).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />

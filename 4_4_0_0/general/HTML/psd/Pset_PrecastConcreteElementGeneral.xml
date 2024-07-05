@@ -222,7 +222,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="f0342480d1f411e1800000215ad4efdf">
       <Name>HollowCorePlugging</Name>
-      <Definition>A descriptive label for how the hollow core ends are treated: they may be left open, closed with a plug, or sealed with cast concrete. Values would be, for example: 'Unplugged', 'Plugged', 'SealedWithConcrete'. This property applies to  hollow core slabs only.</Definition>
+      <Definition>A descriptive label for how the hollow core ends are treated: they may be left open, closed with a plug, or sealed with cast concrete. Values would be, for example: 'Unplugged', 'Plugged', 'SealedWithConcrete'. This property applies to hollow core slabs only.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

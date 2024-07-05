@@ -9,23 +9,31 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcDistributionChamberElement</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="54de8780d1d311e1800000215ad4efdf">
+    <PropertyDef ifdguid="02fa2980d1f411e1800000215ad4efdf">
       <Name>Reference</Name>
-      <Definition>Reference ID for this specific instance (e.g.  'WWS/VS1/400/001', which indicates the occurrence belongs to system WWS, subsystems VSI/400, and has the component number 001).</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types and no classification reference to a recognized classification system used.
+
+&gt; IFC4.3.0.0 DEPRECATION&amp;nbsp;  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.
+
+E.g.  'WWS/VS1/400/001', which indicates the occurrence belongs to system WWS, subsystems VSI/400, and has the component number 001.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
+        <NameAlias lang="de-DE">Bauteiltyp</NameAlias>
         <NameAlias lang="en">Reference</NameAlias>
+        <NameAlias lang="fr-FR">Reference</NameAlias>
         <NameAlias lang="ja-JP">参照記号</NameAlias>
-        <NameAlias lang="ko-KR">참조 기호</NameAlias>
+        <NameAlias lang="zh-CN">参考号</NameAlias>
       </NameAliases>
       <DefinitionAliases>
+        <DefinitionAlias lang="de-DE">Bezeichnung zur Zusammenfassung gleichartiger Bauteile zu einem Bauteiltyp (auch Konstruktionstyp genannt). Alternativ zum Namen des "Typobjekts", insbesondere wenn die Software keine Typen unterstützt.</DefinitionAlias>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">具体的な参照ID（例えば、“WWS/VS1/400/001”はWWS系統、VS1/400サブシステム001番部品）。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">구체적인 참조 ID (예 : "WWS/VS1/400/001"는 WWS 계통, VS1/400 서브 시스템 001 번 부품)</DefinitionAlias>
+        <DefinitionAlias lang="fr-FR">Référence à l'identifiant d'un type spécifié dans le contexte du projet (exemple : "type A1") pour désigner un "type de construction". Une alternative au nom d'un objet type lorsque les objets types ne sont pas gérés par le logiciel.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">認識された分類体系で参照する分類がない場合にこのプロジェクト固有の参照記号（例：タイプ'A-1'）が与えられる。</DefinitionAlias>
+        <DefinitionAlias lang="zh-CN">若未采用已知的分类系统，则该属性为该项目中该类型构件的参考编号（例如，类型A-1）。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="5e67ef80d1d311e1800000215ad4efdf">

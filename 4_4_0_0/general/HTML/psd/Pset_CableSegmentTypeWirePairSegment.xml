@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="836e0a7580b5d43b0ccd892ddace6c3b" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_CableSegmentTypeWirePairSegment</Name>
-  <Definition>Properties of wire pair segments. This property set is applicable to a type or occurence of _IfcCableSegment_ with predefined type WIREPAIRSEGMENT.</Definition>
+  <Definition>Properties of wire pair segments. This property set is applicable to a type or occurrence of _IfcCableSegment_ with predefined type WIREPAIRSEGMENT.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcCableSegment/WIREPAIRSEGMENT</ClassName>
@@ -11,7 +11,11 @@
   <PropertyDefs>
     <PropertyDef ifdguid="40c2a797c51a417e92aa1faf950f25ac">
       <Name>CharacteristicImpedance</Name>
-      <Definition>A quantity defined for a mode of propagation at a given frequency in a specific uniform transmission line or uniform waveguide by one of the three following relations: Z1 = S/ |I|2 Z2 = |U|2 / S Z3 = U / I where Z is the complex characteristic impedance, S the complex power and U and I are the values, usually complex, respectively of a voltage and a current conventionally defined for each type of mode by analogy with transmission line equations.</Definition>
+      <Definition>A quantity defined for a mode of propagation at a given frequency in a specific uniform transmission line or uniform waveguide by one of the three following relations:
+Z1 = S/ |I|2
+Z2 = |U|2 / S
+Z3 = U / I
+where Z is the complex characteristic impedance, S the complex power and U and I are the values, usually complex, respectively of a voltage and a current conventionally defined for each type of mode by analogy with transmission line equations</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricResistanceMeasure" />

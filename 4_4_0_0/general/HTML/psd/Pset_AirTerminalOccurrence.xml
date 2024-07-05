@@ -9,6 +9,76 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcAirTerminal</ApplicableTypeValue>
   <PropertyDefs>
+    <PropertyDef ifdguid="825c30b085bb4dc8909a001d333d2df9">
+      <Name>AirFlowType</Name>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AirTerminalAirFlowType">
+            <EnumItem>SUPPLYAIR</EnumItem>
+            <EnumItem>RETURNAIR</EnumItem>
+            <EnumItem>EXHAUSTAIR</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>SUPPLYAIR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Supply Air</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>RETURNAIR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Return Air</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXHAUSTAIR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Exhaust Air</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <Definition>required category not on scale</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
     <PropertyDef ifdguid="89dd48d1b3184f2599c12f06ce904666">
       <Name>AirFlowRate</Name>
       <Definition>Air flow rate.
@@ -28,7 +98,7 @@ The actual airflow rate as designed.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="0fb05a80d1bf11e1800000215ad4efdf">
       <Name>AirTerminalLocation</Name>
-      <Definition>Location (a single type of diffuser can be used for multiple locations); high means close to ceiling.</Definition>
+      <Definition>Location  (a single type of diffuser can be used for multiple locations); high means close to ceiling.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_AirTerminalLocation">

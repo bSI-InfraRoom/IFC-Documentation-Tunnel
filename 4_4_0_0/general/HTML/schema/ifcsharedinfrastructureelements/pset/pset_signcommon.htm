@@ -11,7 +11,7 @@
     <title>Pset_SignCommon</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 5 index3 4 index4 37 index5 0; }
+      body { counter-reset: index1 6 index2 5 index3 4 index4 45 index5 0; }
     </style>
   </head>
 
@@ -20,34 +20,31 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.5.4.38");
+    parent.index.location.replace("../../toc-6.htm#6.5.4.46");
 //-->
 </script>
 
-<h4 class="std">6.5.4.38 Pset_SignCommon</h4>
+<h4 class="std">6.5.4.46 Pset_SignCommon</h4>
 <p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
 /
 <a href="../../ifcsharedinfrastructureelements/lexical/ifcsign.htm">IfcSign</a>
 </p>Common properties for Signs.
 
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/1hYjDwJwf46xFo6mGj9bhm/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_SignCommon.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>Reference</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
-*</td><td>
+</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.
+<blockquote>
+IFC4.3.0.0 DEPRECATION   The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.
+</blockquote>
 </td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Reference</b></td><td>Référence à l'identifiant d'un type spécifié dans le contexte de ce projet.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照記号</b></td><td>このプロジェクトのための参照記号。
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照</b></td><td>当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。
 </td></tr>
 </table>
 </td></tr>

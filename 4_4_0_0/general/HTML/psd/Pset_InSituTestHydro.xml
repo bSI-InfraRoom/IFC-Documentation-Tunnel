@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="81eb345ee2ee4e69a500d7d9678dd3b6" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_InSituTestHydro</Name>
+  <Definition>Properties for the results of in-situ pumping tests in soil or rock.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/INSITUTESTRESULT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/INSITUTESTRESULT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="ec92adcddba24d76a794428441953b2f">
+      <Name>HydraulicPermeability</Name>
+      <Definition>A measurement of the ability of a fluid to flow through a rock. Represented by the variable "k". The quality of the soil that enables water to move through the profile. Permeability is measured as the number of metres per sec that water moves through the saturated soil.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLinearVelocityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="3116bf07e8a24c4286f5e3d2aea9f290">
+      <Name>HydraulicConductivity</Name>
+      <Definition>Hydraulic Conductivity (permeability) of soil for water, given with the K or Kf value in m/s</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLinearVelocityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ac63369edcf9496d837d0946310e31aa">
+      <Name>Transmissivity</Name>
+      <Definition>Rate of flow of groundwater under a unit hydraulic gradient through an aquifer of unit width and unit thickness. That is, transmissivity is the product of hydraulic conductivity and thickness of the aquifer. The unit is in m2/second.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="f5121a1a7e1e4a18a37eb0948a6ea4d7">
+      <Name>Storativity</Name>
+      <Definition>Volume of water released from storage per unit surface area of a confined aquifer per unit decline in hydraulic head. It is dimensionless.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5fd3fb3bbf3d4f3a95512fd2568b9703">
+      <Name>LugeonValue</Name>
+      <Definition>Lugeon Value = (q / L) x (P0 / P), where: 
+- q: flow rate [lit/min] 
+- L: Length of the borehole test interval [m] 
+- P0: reference pressure of 1 MPa [MPa] 
+- P: Test pressure [MPa]</Definition>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel" />
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

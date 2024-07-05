@@ -4,7 +4,7 @@
   <Name>Pset_AirSideSystemInformation</Name>
   <Definition>Attributes that apply to an air side HVAC system.
 
-&amp;gt; HISTORY: New property set in IFC Release 1.0.</Definition>
+&gt; HISTORY: New property set in IFC Release 1.0.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcZone</ClassName>
@@ -242,6 +242,16 @@
         <DefinitionAlias lang="ko-KR">기본적인 공조 방식 (단일 덕트, 이중 덕트, 멀티존 등)</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
+    <PropertyDef ifdguid="7a6fd1d392164eea99de5c59508e0a56">
+      <Name>TotalAirFlow</Name>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumetricFlowRateMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
     <PropertyDef ifdguid="08d51800d1be11e1800000215ad4efdf">
       <Name>EnergyGainTotal</Name>
       <Definition>The total amount of energy gains for the spaces served by the system during the peak cooling conditions, plus any system-level total energy gains.</Definition>
@@ -260,6 +270,16 @@
         <DefinitionAlias lang="ja-JP">居室の最大冷房負荷と空調システム（機器等）の再熱負荷による最大熱負荷。</DefinitionAlias>
         <DefinitionAlias lang="ko-KR">거실 최대 냉방 부하 및 공조 시스템 (장비 등) 재열 부하에 의한 최대 열부하.</DefinitionAlias>
       </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="b395b2a6de774eecae62e713f6a9f2f3">
+      <Name>AirFlowSensible</Name>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumetricFlowRateMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="14284380d1be11e1800000215ad4efdf">
       <Name>EnergyGainSensible</Name>

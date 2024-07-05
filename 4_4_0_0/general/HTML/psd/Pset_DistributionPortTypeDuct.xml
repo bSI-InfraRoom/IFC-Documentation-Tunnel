@@ -13,21 +13,7 @@
       <Name>ConnectionType</Name>
       <Definition>The end-style treatment of the duct port:
 
-BEADEDSLEEVE: Beaded Sleeve. 
-COMPRESSION: Compression. 
-CRIMP: Crimp. 
-DRAWBAND: Drawband. 
-DRIVESLIP: Drive slip. 
-FLANGED: Flanged. 
-OUTSIDESLEEVE: Outside Sleeve. 
-SLIPON: Slipon. 
-SOLDERED: Soldered. 
-SSLIP: S-Slip. 
-STANDINGSEAM: Standing seam. 
-SWEDGE: Swedge. 
-WELDED: Welded. 
-OTHER: Another type of end-style has been applied.
-NONE: No end-style has been applied.</Definition>
+BEADEDSLEEVE: Beaded Sleeve. COMPRESSION: Compression. CRIMP: Crimp. DRAWBAND: Drawband. DRIVESLIP: Drive slip. FLANGED: Flanged. OUTSIDESLEEVE: Outside Sleeve. SLIPON: Slipon. SOLDERED: Soldered. SSLIP: S-Slip. STANDINGSEAM: Standing seam. SWEDGE: Swedge. WELDED: Welded. OTHER: Another type of end-style has been applied. NONE: No end-style has been applied.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_DuctConnectionType">
@@ -212,8 +198,18 @@ NONE: No end-style has been applied.</Definition>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="15d916dd1d7340bc81481576f81d2a08">
-      <Name>ConnectionSubType</Name>
-      <Definition>The physical port connection subtype that further qualifies the ConnectionType.</Definition>
+      <Name>ConnectionSubtype</Name>
+      <Definition>The physical port connection subtype that further qualifies the ConnectionType. The following values are recommended:
+
+ACPLUG: A, B, C, D, E, F, EF, G, H, I, J, K, L, M
+DIN: Mini3P, Mini4P, Mini5P, Mini6P, Mini7P, Mini8P, Mini9P
+DSub: DA15, DB25, DC37, DD50, DE9, DE15
+EIAJ: RC5720
+HDMI: A, B, C
+RADIO: IEEE802.11g, IEEE802.11n
+RJ: 4P4C, 6P2C, 8P8C
+SOCKET: E-11, E-12, E-14, E-17, E-26, E-27, E-39, E-40
+TRS: TS_Mini, TS_SubMini, TRS_Mini, TRS_SubMini</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -335,7 +331,7 @@ Indicates dry bulb temperature of the air.</Definition>
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="7583cd7c5ea74d109e2b6ad6d0dafa4b">
+    <PropertyDef ifdguid="cc4abc86f21d4ee3a86d3815019c5ab3">
       <Name>Pressure</Name>
       <Definition>The pressure of the fluid.</Definition>
       <PropertyType>
@@ -345,9 +341,11 @@ Indicates dry bulb temperature of the air.</Definition>
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Pressure</NameAlias>
+        <NameAlias lang="ja-JP">圧力</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">流体の圧力。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
   </PropertyDefs>

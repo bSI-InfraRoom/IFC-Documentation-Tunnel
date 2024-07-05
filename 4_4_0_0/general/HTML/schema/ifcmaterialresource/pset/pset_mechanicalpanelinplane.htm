@@ -11,7 +11,7 @@
     <title>Pset_MechanicalPanelInPlane</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 10 index3 5 index4 18 index5 0; }
+      body { counter-reset: index1 8 index2 10 index3 5 index4 19 index5 0; }
     </style>
   </head>
 
@@ -20,21 +20,17 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.htm#8.10.5.19");
+    parent.index.location.replace("../../toc-8.htm#8.10.5.20");
 //-->
 </script>
 
-<h4 class="std">8.10.5.19 Pset_MechanicalPanelInPlane</h4>
+<h4 class="std">8.10.5.20 Pset_MechanicalPanelInPlane</h4>
 <p><span class="self-ref"></span>
 /
 <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a>
 </p>Properties for Mechanical Panels In Plane.
 
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/0Y$x1ChRf5zOo95PhOPodS/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_MechanicalPanelInPlane.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>YoungModulusBending</td><td>
@@ -76,7 +72,9 @@ Elastic modulus in compression.
 </table>
 </td></tr>
 <tr><td>BendingStrength</td><td>
-<span class="self-ref">P_SINGLEVALUE</span>
+<span class="self-ref">P_TABLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveplaneanglemeasure.htm">IfcPositivePlaneAngleMeasure</a>
 /
 <a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
 </td><td>
@@ -96,7 +94,9 @@ Defining values: α; defined values: compressive strength.
 
 </td></tr>
 <tr><td>TensileStrength</td><td>
-<span class="self-ref">P_SINGLEVALUE</span>
+<span class="self-ref">P_TABLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveplaneanglemeasure.htm">IfcPositivePlaneAngleMeasure</a>
 /
 <a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
 </td><td>

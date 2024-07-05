@@ -65,7 +65,7 @@
       <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="b50ba0126eab428d966346bbf1c8a35e">
-      <Name>LoadBearingCapacityArea</Name>
+      <Name>LoadBearingCapacity</Name>
       <Definition>Estimate or design maximum load bearing capacity of the defined surface/structure (e.g. soil stratum or planar slab). Represented as a force per unit area measurement.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

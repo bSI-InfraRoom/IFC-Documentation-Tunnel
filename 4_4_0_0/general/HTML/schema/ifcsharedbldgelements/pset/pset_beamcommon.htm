@@ -38,24 +38,21 @@
 <tr><td><img src="../../../img/locale-zh.png" /></td><td><b></b></td><td>所有IfcBeam实例的定义中通用的属性。
 </td></tr>
 </table>
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/3vyMG0qSCHuO00025QrE$V/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_BeamCommon.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>Reference</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
-*</td><td>
+</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.
+<blockquote>
+IFC4.3.0.0 DEPRECATION   The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.
+</blockquote>
 </td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Reference</b></td><td>Référence à l'identifiant d'un type spécifié dans le contexte de ce projet.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照記号</b></td><td>このプロジェクトのための参照記号。
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照</b></td><td>当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。
 </td></tr>
 </table>
 </td></tr>
@@ -107,7 +104,7 @@ Dieser Parameter wird zusätzlich zur geometrischen Repräsentation bereitgestel
 Dieser Parameter wird zusätzlich zur geometrischen Repräsentation bereitgestellt. Im Fall der Inkonsistenz zwischen dem Parameter und der Geometrie hat die geometrische Repräsention Priorität. Dieser Parameter ist für CAD Software write-only.
 </td></tr>
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Slope</b></td><td>Slope angle - relative to horizontal (0.0 degrees).
-The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence. For geometry editing applications, like CAD: this value should be write-only.
+The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.  For geometry editing applications, like CAD: this value should be write-only.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Inclinaison</b></td><td>Angle d'inclinaison avec l'horizontale (0 degrés). Cette propriété  est donnée en complément de la représentation de la forme et des paramètres géométriques qui la déterminent. En cas d'incohérence entre ces paramètres géométriques et cette propriété, ce sont les paramètres géométriques qui priment. Les applications qui déterminent la géométrie comme les logiciels de CAO ne doivent pas autoriser la modification de cette propriété
 </td></tr>
@@ -128,8 +125,8 @@ The shape information is provided in addition to the shape representation and th
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Kippwinkel</b></td><td>Kippwinkel des Balkens relative zur Vertikalen (O Grad).
 Dieser Parameter wird zusätzlich zur geometrischen Repräsentation bereitgestellt. Im Fall der Inkonsistenz zwischen dem Parameter und der Geometrie hat die geometrische Repräsention Priorität. Dieser Parameter ist für CAD Software write-only.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Roll</b></td><td>Rotation against the longitudinal axis - relative to the global Z direction for all beams that are non-vertical in regard to the global coordinate system (Profile direction equals global Z is Roll = 0.)
-The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.  For geometry editing applications, like CAD: this value should be write-only.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Roll</b></td><td>Rotation against the longitudinal axis.
+Relative to the global Z direction for all beams that are non-vertical in regard to the global coordinate system (Profile direction equals global Z is Roll = 0.)The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.  For geometry editing applications, like CAD: this value should be write-only.
 Note: new property in IFC4
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>RotationAutourAxeLongitudinal</b></td><td>Rotation autour de l'axe longitudinal - relativement à l'axe Z pour toutes les poutres qui ne sont pas verticales relativement au repère absolu (la direction du profil est celle de l'axe Z si la valeur de la propriété est 0). Cette propriété est donnée en complément de la représentation de la forme de l'élément et des paramètres géométriques qui la déterminent. En cas d'incohérence entre ces paramètres géométriques et cette propriété, ce sont les paramètres géométriques qui priment. Les applications qui déterminent la géométrie comme les logiciels de CAO ne doivent pas autoriser la modification de cette propriété. Note : nouvelle propriété de la version IFC2x4.
@@ -172,8 +169,7 @@ Note: new property in IFC4
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>U-Wert</b></td><td>Wärmedurchgangskoeffizient (U-Wert) der Materialschichten.
 Hier der Gesamtwärmedurchgangskoeffizient des Balkens (in Richtung des Wärmeflusses), angegeben ohne den inneren und äußeren Wärmeübergangswiderstand.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Thermal Transmittance</b></td><td>Thermal transmittance coefficient (U-Value) of the element. Here the total thermal transmittance coefficient through the beam within the direction of the thermal flow (including all materials).
-Note: new property in IFC4
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Thermal Transmittance</b></td><td>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>TransmissionThermique</b></td><td>Coefficient de transmission thermique surfacique (U). C'est le coefficient global de transmission thermique à travers la poutre dans la direction du flux thermique (tous matériaux inclus). Nouvelle propriété de la version 2x4.
 </td></tr>

@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="b61f4e80d20511e1800000215ad4efdf">
       <Name>SubstanceDetected</Name>
-      <Definition>Identification of the substance that is being detected according to chemical formula.  For example, calcium carbonate is 'CaCO3'</Definition>
+      <Definition>Identification of the substance that is being detected according to chemical formula. For example, calcium carbonate is 'CaCO3'</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

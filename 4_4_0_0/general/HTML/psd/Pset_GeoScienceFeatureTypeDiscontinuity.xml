@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="58361541637042f08e3e08ce48f450be" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoScienceFeatureTypeDiscontinuity</Name>
+  <Definition>Properties of discontinuities or discontinuity sets in rock.
+&gt;NOTE according to ISO EN 14689</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceFeature/GEOTECHNICALUNIT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceFeature/GEOTECHNICALUNIT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="b20c22dd0e3844958ffa205f7fd63085">
+      <Name>RockQualityDesignation</Name>
+      <Definition>Quotient of the cumulative length of cores with a length greater than 10 cm, by the total length of the core pass with a length greater than or equal to 1m.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="98a956b2e03f4d35802e8b6a6d3a7f68">
+      <Name>StrikeDirection</Name>
+      <Definition>The geographic direction of a line created by the intersection of a plane and the horizontal plane. If non specific convention is used, this angular value is in the range 0 to 180 degrees. A strike value is generally completed with an indication of the dip direction.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8e32583398b349aa9624df1fa7c3d0bf">
+      <Name>DipDirection</Name>
+      <Definition>The azimuth of the dip (dip direction) shall be measured in degrees in the range 0 to 360 degrees counted clockwise from true north. 
+&gt;NOTE&amp;nbsp; Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8ae9e8d87e12490a877872276da28d55">
+      <Name>DipAngle</Name>
+      <Definition>The maximum declination (dip) of the mean plane of the discontinuity from the horizontal shall be measured with the clinometer in the range 0 to 90 degrees and should be expressed in degrees as a two-digit number, e.g. 50. 
+&gt;NOTE Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="17a801e65bc64cf0983835956d9f0e42">
+      <Name>DiscontinuitySpacing</Name>
+      <Definition>The term "spacing" refers to the mean or modal spacing of a set of discontinuities and is the perpendicular distance between adjacent discontinuities. The number of discontinuity sets, the differences in spacing and the angles between the sets shall be reported as these determine the block shape. The discontinuity spacing should be measured in millimetres and can be classified using the terms in Table 8. 
+&gt;NOTE&amp;nbsp;Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="035045ee5af5471d86b554e48d2866a1">
+      <Name>DiscontinuityPersistence</Name>
+      <Definition>The linear extent of discontinuities from their inception to their termination in solid rock mass or against other discontinuities or outside the exposure shall be reported. The size of the exposure shall also be recorded. If possible and appropriate, measurements should be made in two or preferably three orthogonal directions. 
+&gt;NOTE&amp;nbsp;Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7f68a19b2f4d496ca6cd1b74a2a4965c">
+      <Name>DiscontinuityAperture</Name>
+      <Definition>The perpendicular distance between the two surfaces of a discontinuity is referred to as the aperture.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="325d8d6e203841d18f2180f3f0ef6183">
+      <Name>DiscontinuityFilling</Name>
+      <Definition>The infilling material between discontinuity surfaces shall be identified and described (e.g. soil,minerals such as calcite, quartz, epidote, chlorite, anhydrite, clay gouge, rock gouge or breccia).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="11a4612bbc024a2083f758a04903f79d">
+      <Name>DiscontinuityRoughness</Name>
+      <Definition>The surface condition and the shape of discontinuities shall be described on the basis of three scales of observation, respectively, and using the terms given in ISO EN 14689 - Table 9 and illustrated in Figure 2: 
+a) small scale (several millimetres) - smooth or rough 
+b) medium scale (several centimetres) - planar, stepped or undulating 
+c) large scale (several metres) - straight, curved or wavy. 
+
+&gt;NOTE&amp;nbsp;Definition according to ISO EN 14689.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="43ec14ffb33c4c28a293f1df805973c4">
+      <Name>DiscontinuityWaterPresence</Name>
+      <Definition>Description of estimated water inflow in excavation, to be used to define Jw(Barton), or RMR groundwater inflow rating.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1ddcd8eeff464ae7a7764681c24acbba">
+      <Name>Cohesion</Name>
+      <Definition>Cohesive shear strength of a rock or soil that is independent of interparticle friction.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5a48e79af7db4605ae4e8d5114d22c0b">
+      <Name>DiscontinuityFrictionAngle</Name>
+      <Definition>Derived from the Mohr-Coulomb failure criterion and used to describe the friction shear resistance of ground materials, together with the normal effective stress.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

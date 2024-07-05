@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="da116e80d1ca11e1800000215ad4efdf">
       <Name>CompressorCapacity</Name>
-      <Definition>The product of the  ideal capacity and the overall volumetric efficiency of the compressor.</Definition>
+      <Definition>The product of the ideal capacity and the overall volumetric efficiency of the compressor.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
@@ -41,7 +41,10 @@
     </PropertyDef>
     <PropertyDef ifdguid="e0065000d1c811e1800000215ad4efdf">
       <Name>CoefficientOfPerformance</Name>
-      <Definition>The Coefficient of performance (COP) is the ratio of heat removed to energy input. The energy input may be obtained by multiplying Pset_DistributionPortPHistoryGas.FlowRate on the 'Fuel' port of the IfcChiller by Pset_MaterialFuel.LowerHeatingValue. The IfcDistributionPort for fuel has an associated IfcMaterial with fuel properties and is assigned to an IfcPerformanceHistory object nested within this IfcPerformanceHistory object.</Definition>
+      <Definition>The Coefficient of performance (COP) is the ratio of heat removed to energy input.
+The energy input may be obtained by multiplying
+Pset_DistributionPortPHistoryGas.FlowRate on the 'Fuel' port of the IfcChiller by Pset_MaterialFuel.LowerHeatingValue.
+The IfcDistributionPort for fuel has an associated IfcMaterial with fuel properties and is assigned to an IfcPerformanceHistory object nested within this IfcPerformanceHistory object.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

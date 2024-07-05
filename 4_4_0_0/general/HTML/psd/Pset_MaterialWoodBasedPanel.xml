@@ -140,15 +140,9 @@
             <Name>ShearStrength</Name>
             <Definition>Defining values: α; defined values: shear strength.</Definition>
             <PropertyType>
-              <TypePropertyTableValue>
-                <Expression />
-                <DefiningValue>
-                  <DataType type="IfcPositivePlaneAngleMeasure" />
-                </DefiningValue>
-                <DefinedValue>
-                  <DataType type="IfcPressureMeasure" />
-                </DefinedValue>
-              </TypePropertyTableValue>
+              <TypePropertySingleValue>
+                <DataType type="IfcPositivePlaneAngleMeasure" />
+              </TypePropertySingleValue>
             </PropertyType>
             <NameAliases />
             <DefinitionAliases />
@@ -443,7 +437,9 @@ Defining values: α; defined values: compressive strength.</Definition>
           </PropertyDef>
           <PropertyDef ifdguid="724f6921b3154083935f315208f9274b">
             <Name>BendingStrength</Name>
-            <Definition>Defining values: α; defined values: bending strength.</Definition>
+            <Definition>Bending strength.
+
+Defining values: α; defined values: bending strength.</Definition>
             <PropertyType>
               <TypePropertyTableValue>
                 <Expression />

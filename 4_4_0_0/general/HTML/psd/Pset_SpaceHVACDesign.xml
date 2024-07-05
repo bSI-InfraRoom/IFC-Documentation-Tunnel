@@ -15,9 +15,9 @@
       <Name>TemperatureSetPoint</Name>
       <Definition>The temperature setpoint range and default setpoint.</Definition>
       <PropertyType>
-        <TypePropertyBoundedValue>
+        <TypePropertySingleValue>
           <DataType type="IfcThermodynamicTemperatureMeasure" />
-        </TypePropertyBoundedValue>
+        </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Temperature Set Point</NameAlias>
@@ -198,7 +198,7 @@
       <Definition>Indication of the requirement of a particular natural air ventilation rate, given in air changes per hour.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcCountMeasure" />
+          <DataType type="IfcNumericMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -232,7 +232,7 @@
       <Definition>Indication of the requirement of a particular mechanical air ventilation rate, given in air changes per hour.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcCountMeasure" />
+          <DataType type="IfcNumericMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -275,7 +275,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="a5bea200d20c11e1800000215ad4efdf">
       <Name>AirConditioningCentral</Name>
-      <Definition>Indication whether the space  requires a central air conditioning provided (TRUE) or not (FALSE).
+      <Definition>Indication whether the space requires a central air conditioning provided (TRUE) or not (FALSE).
 It should only be given, if the property "AirConditioning" is set to TRUE.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

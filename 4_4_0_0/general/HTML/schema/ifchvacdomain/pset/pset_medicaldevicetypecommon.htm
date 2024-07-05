@@ -34,24 +34,21 @@
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b></b></td><td>医療機器に関する共通プロパティ属性設定。
 </td></tr>
 </table>
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/0bFdW0qV4HuO00025QrE$V/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_MedicalDeviceTypeCommon.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>Reference</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
-*</td><td>
+</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.
+<blockquote>
+IFC4.3.0.0 DEPRECATION   The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.
+</blockquote>
 </td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Reference</b></td><td>Référence à l'identifiant d'un type spécifié dans le contexte de ce projet.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照記号</b></td><td>このプロジェクトのための参照記号。
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照</b></td><td>当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。
 </td></tr>
 </table>
 </td></tr>

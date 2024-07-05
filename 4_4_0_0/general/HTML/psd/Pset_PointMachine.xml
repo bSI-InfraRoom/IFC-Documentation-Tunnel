@@ -58,7 +58,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="793ee7d1519b4ae79edeecfbc0820e47">
       <Name>HasLockInside</Name>
-      <Definition>Indicates whether the locking is inside  (TRUE) or outside (FALSE) of the point machine.</Definition>
+      <Definition>Indicates whether the locking is inside (TRUE) or outside (FALSE) of the point machine.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

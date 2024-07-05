@@ -9,9 +9,11 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcInterceptor</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="2ae48f80d1ea11e1800000215ad4efdf">
+    <PropertyDef ifdguid="00cda600d1c711e1800000215ad4efdf">
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), provided, if there is no classification reference to a recognized classification system used.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types and no classification reference to a recognized classification system used.
+
+&gt; IFC4.3.0.0 DEPRECATION&amp;nbsp;  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier" />
@@ -19,11 +21,13 @@
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Reference</NameAlias>
-        <NameAlias lang="ja-JP">参照記号</NameAlias>
+        <NameAlias lang="ja-JP">参照</NameAlias>
+        <NameAlias lang="ko-KR">참조</NameAlias>
       </NameAliases>
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">使用される認識分類システムで分類基準がない場合、プロジェクトで指定された型（タイプ'Ａ-1'など）で提供されるレファレンスID。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">해당 프로젝트에 정의된 형식의 참조 ID (예 : A-1) 승인된 분류에 존재하지 않을 때 사용된다.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="320b9d80d1ea11e1800000215ad4efdf">

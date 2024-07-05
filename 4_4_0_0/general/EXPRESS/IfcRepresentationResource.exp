@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 28 June 2024
+Friday, 5 July 2024
 
 *)
 
@@ -278,13 +278,7 @@ ENTITY IfcRigidOperation
 	SecondCoordinate : IfcMeasureValue;
 	Height : OPTIONAL IfcLengthMeasure;
  WHERE
-	CoordinateType : (('IFCMEASURERESOURCE.IFCLENGTHMEASURE' IN TYPEOF(FirstCoordinate))
-AND
-('IFCMEASURERESOURCE.IFCLENGTHMEASURE' IN TYPEOF(SecondCoordinate)))
-OR
-(('IFCMEASURERESOURCE.IFCPLANEANGLEMEASURE' IN TYPEOF(FirstCoordinate))
-AND
-('IFCMEASURERESOURCE.IFCPLANEANGLEMEASURE' IN TYPEOF(SecondCoordinate)));
+	CoordinateType : (('IFCMEASURERESOURCE.IFCLENGTHMEASURE' IN TYPEOF(FirstCoordinate)) AND ('IFCMEASURERESOURCE.IFCLENGTHMEASURE' IN TYPEOF(SecondCoordinate))) OR (('IFCMEASURERESOURCE.IFCPLANEANGLEMEASURE' IN TYPEOF(FirstCoordinate)) AND ('IFCMEASURERESOURCE.IFCPLANEANGLEMEASURE' IN TYPEOF(SecondCoordinate)));
 END_ENTITY;
 
 ENTITY IfcShapeAspect;

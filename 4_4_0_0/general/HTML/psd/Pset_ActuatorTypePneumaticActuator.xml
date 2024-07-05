@@ -12,6 +12,7 @@
     <PropertyDef ifdguid="9c5a1900d1bd11e1800000215ad4efdf">
       <Name>InputPressure</Name>
       <Definition>Maximum input or design pressure for the object.
+
 Control air pressure.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -32,6 +33,7 @@ Control air pressure.</Definition>
     <PropertyDef ifdguid="a24ffa00d1bd11e1800000215ad4efdf">
       <Name>InputFlowrate</Name>
       <Definition>Maximum input flowrate requirement.
+
 Control air flowrate.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

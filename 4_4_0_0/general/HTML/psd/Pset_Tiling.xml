@@ -35,7 +35,7 @@ The ration can be used to indicate an open ceiling (that enables identification 
     </PropertyDef>
     <PropertyDef ifdguid="04195f80d1d011e1800000215ad4efdf">
       <Name>TileLength</Name>
-      <Definition>Length of ceiling tiles. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <Definition>Length of tiles. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -57,7 +57,7 @@ The ration can be used to indicate an open ceiling (that enables identification 
     </PropertyDef>
     <PropertyDef ifdguid="0976aa00d1d011e1800000215ad4efdf">
       <Name>TileWidth</Name>
-      <Definition>Width of ceiling tiles. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <Definition>Width of tiles. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

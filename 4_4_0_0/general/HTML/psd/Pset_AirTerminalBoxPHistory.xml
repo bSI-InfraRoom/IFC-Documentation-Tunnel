@@ -60,6 +60,14 @@
         <DefinitionAlias lang="ja-JP">騒音性能</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
+    <PropertyDef ifdguid="e1f79381501544d2b49631b038f45a30">
+      <Name>AirFlowCurve</Name>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases>
     <PsetDefinitionAlias lang="en" />

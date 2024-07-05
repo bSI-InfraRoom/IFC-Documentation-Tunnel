@@ -9,27 +9,25 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcBeam</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="04abf900d1c411e1800000215ad4efdf">
+    <PropertyDef ifdguid="00cda600d1c711e1800000215ad4efdf">
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types and no classification reference to a recognized classification system used.
+
+&gt; IFC4.3.0.0 DEPRECATION&amp;nbsp;  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
-        <NameAlias lang="de-DE">Bauteiltyp</NameAlias>
         <NameAlias lang="en">Reference</NameAlias>
-        <NameAlias lang="fr-FR">Reference</NameAlias>
-        <NameAlias lang="ja-JP">参照記号</NameAlias>
-        <NameAlias lang="zh-CN">参考号</NameAlias>
+        <NameAlias lang="ja-JP">参照</NameAlias>
+        <NameAlias lang="ko-KR">참조</NameAlias>
       </NameAliases>
       <DefinitionAliases>
-        <DefinitionAlias lang="de-DE">Bezeichnung zur Zusammenfassung gleichartiger Bauteile zu einem Bauteiltyp (auch Konstruktionstyp genannt). Alternativ zum Namen des "Typobjekts", insbesondere wenn die Software keine Typen unterstützt.</DefinitionAlias>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="fr-FR">Référence à l'identifiant d'un type spécifié dans le contexte du projet (exemple : "type A1") pour désigner un "type de construction". Une alternative au nom d'un objet type lorsque les objets types ne sont pas gérés par le logiciel.</DefinitionAlias>
-        <DefinitionAlias lang="ja-JP">このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。</DefinitionAlias>
-        <DefinitionAlias lang="zh-CN">若未采用已知的分类系统，则该属性为该项目中该类型构件的参考编号（例如，类型A-1）。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">해당 프로젝트에 정의된 형식의 참조 ID (예 : A-1) 승인된 분류에 존재하지 않을 때 사용된다.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="0970ad00d1c411e1800000215ad4efdf">
@@ -157,7 +155,7 @@ Dieser Parameter wird zusätzlich zur geometrischen Repräsentation bereitgestel
       <Name>Slope</Name>
       <Definition>Slope angle - relative to horizontal (0.0 degrees).
 
-The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence. For geometry editing applications, like CAD: this value should be write-only.</Definition>
+The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.  For geometry editing applications, like CAD: this value should be write-only.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPlaneAngleMeasure" />
@@ -185,9 +183,9 @@ Dieser Parameter wird zusätzlich zur geometrischen Repräsentation bereitgestel
     </PropertyDef>
     <PropertyDef ifdguid="23aa8b00d1c411e1800000215ad4efdf">
       <Name>Roll</Name>
-      <Definition>Rotation against the longitudinal axis - relative to the global Z direction for all beams that are non-vertical in regard to the global coordinate system (Profile direction equals global Z is Roll = 0.)
+      <Definition>Rotation against the longitudinal axis.
 
-The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.  For geometry editing applications, like CAD: this value should be write-only.
+Relative to the global Z direction for all beams that are non-vertical in regard to the global coordinate system (Profile direction equals global Z is Roll = 0.)The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.  For geometry editing applications, like CAD: this value should be write-only. 
 
 Note: new property in IFC4</Definition>
       <PropertyType>
@@ -244,9 +242,7 @@ Dieser Parameter wird zusätzlich zur geometrischen Repräsentation bereitgestel
     </PropertyDef>
     <PropertyDef ifdguid="2f964d00d1c411e1800000215ad4efdf">
       <Name>ThermalTransmittance</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of the element. Here the total thermal transmittance coefficient through the beam within the direction of the thermal flow (including all materials).
-
-Note: new property in IFC4</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure" />

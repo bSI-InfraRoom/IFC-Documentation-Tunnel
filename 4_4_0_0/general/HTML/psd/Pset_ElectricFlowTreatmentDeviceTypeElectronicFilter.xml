@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="c6fe50881847ec20e204c37a0d269a0d" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_ElectricFlowTreatmentDeviceTypeElectronicFilter</Name>
-  <Definition>Properties associated to electronic filter. 
+  <Definition>Properties associated to electronic filter.
 An electronic filter is a device designed to transmit spectral components of signals according to a specified law, generally in order to pass the components in certain frequency bands and to attenuate those in other bands (IEC702-09-17)</Definition>
   <Applicability />
   <ApplicableClasses>

@@ -167,7 +167,7 @@ This property set represent the ground fault protection (G-curve) of an electron
     </PropertyDef>
     <PropertyDef ifdguid="73a44480d1fa11e1800000215ad4efdf">
       <Name>IsCurrentTolerancePositiveOnly</Name>
-      <Definition>Indication whether the value of  CurrentTolerance1 is provided as a positive tolereance only  or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
+      <Definition>Indication whether the value of CurrentTolerance1 is provided as a positive tolereance only or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -245,7 +245,7 @@ This property set represent the ground fault protection (G-curve) of an electron
     </PropertyDef>
     <PropertyDef ifdguid="8ae33200d1fa11e1800000215ad4efdf">
       <Name>IsTimeTolerancePositiveOnly</Name>
-      <Definition>Indication whether the value of  TimeTolerance1 is provided as a positive tolereance only  or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
+      <Definition>Indication whether the value of TimeTolerance1 is provided as a positive tolereance only or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

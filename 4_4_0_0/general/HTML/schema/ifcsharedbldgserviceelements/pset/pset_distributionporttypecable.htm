@@ -41,11 +41,7 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgserviceelements/pset/pset_distributionporttypecable.htm">Pset_DistributionPortTypeCable</a></td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed from <i>IfcDistributionPort/ELECTRICAL</i> to <i>IfcDistributionPort/CABLE</i>. <br/></td></tr>
 </table>
 </details>
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/0K3BsSu295WAJIS$O2CC8E/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_DistributionPortTypeCable.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>ElectricalConnectionType</td><td>
@@ -56,9 +52,7 @@
  <a href="../../../penum/penum_distributionportelectricaltype.htm">PEnum_DistributionPortElectricalType</a></td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Connection Type</b></td><td>The physical port connection:
-ACPLUG: AC plug
-DCPLUG: DC plug
-CRIMP: bare wire
+ACPLUG: AC plug DCPLUG: DC plug CRIMP: bare wire
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>接続タイプ</b></td><td>物理ポート接続：
 <ul>
@@ -76,17 +70,15 @@ CRIMP: bare wire
 </td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Connection Subtype</b></td><td>The physical port connection subtype that further qualifies the ConnectionType. The following values are recommended:
-<ul>
-<li>ACPLUG: A, B, C, D, E, F, EF, G, H, I, J, K, L, M</li>
-<li>DIN: Mini3P, Mini4P, Mini5P, Mini6P, Mini7P, Mini8P, Mini9P</li>
-<li>DSub: DA15, DB25, DC37, DD50, DE9, DE15</li>
-<li>EIAJ: RC5720</li>
-<li>HDMI: A, B, C</li>
-<li>RADIO: IEEE802.11g, IEEE802.11n</li>
-<li>RJ: 4P4C, 6P2C, 8P8C</li>
-<li>SOCKET: E-11, E-12, E-14, E-17, E-26, E-27, E-39, E-40</li>
-<li>TRS: TS_Mini, TS_SubMini, TRS_Mini, TRS_SubMini</li>
-</ul>
+ACPLUG: A, B, C, D, E, F, EF, G, H, I, J, K, L, M
+DIN: Mini3P, Mini4P, Mini5P, Mini6P, Mini7P, Mini8P, Mini9P
+DSub: DA15, DB25, DC37, DD50, DE9, DE15
+EIAJ: RC5720
+HDMI: A, B, C
+RADIO: IEEE802.11g, IEEE802.11n
+RJ: 4P4C, 6P2C, 8P8C
+SOCKET: E-11, E-12, E-14, E-17, E-26, E-27, E-39, E-40
+TRS: TS_Mini, TS_SubMini, TRS_Mini, TRS_SubMini
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>接続サブタイプ</b></td><td>物理ポート接続のサブタイプ。接続タイプ以外の情報を設定する場合に使用。下記の値を設定：
 <ul>

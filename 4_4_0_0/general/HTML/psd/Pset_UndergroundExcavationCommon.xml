@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="32466eb7e6c94572b52e71844c99e15c" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_UndergroundExcavationCommon</Name>
+  <Definition>Common properties for underground excavation elements.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcUndergroundExcavation</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcUndergroundExcavation</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="3a3be26e18e74fcf81fced5b89a87862">
+      <Name>UndergroundExcavationMethod</Name>
+      <Definition>Method of excavation.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_UndergroundExcavationMethod">
+            <EnumItem>HAND</EnumItem>
+            <EnumItem>EXCAVATOR</EnumItem>
+            <EnumItem>JACKHAMMER</EnumItem>
+            <EnumItem>RIPPER</EnumItem>
+            <EnumItem>DRILLANDBLAST</EnumItem>
+            <EnumItem>ROADHEADER</EnumItem>
+            <EnumItem>TBMOPENWITHGRIPPERS</EnumItem>
+            <EnumItem>TBMCLOSEDWITHGRIPPERS</EnumItem>
+            <EnumItem>TBMEARTHPRESSUREFACESUPPORT</EnumItem>
+            <EnumItem>TBMSLURRYPRESSUREFACESUPPORT</EnumItem>
+            <EnumItem>TBMAIRPRESSUREFACESUPPORT</EnumItem>
+            <EnumItem>TBMMIXSHIELD</EnumItem>
+            <EnumItem>SHAFTBORINGMACHINE</EnumItem>
+            <EnumItem>RAISEDRILL</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>HAND</Name>
+              <Definition>Manual excavation method using hand tools.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXCAVATOR</Name>
+              <Definition>Mechanized method utilizing excavator machinery for efficient large-scale underground earthmoving.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>JACKHAMMER</Name>
+              <Definition>Pneumatic or hydraulic percussion tool breaking rock or concrete.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>RIPPER</Name>
+              <Definition>Equipment with a toothed tool to break and loosen hard soil.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DRILLANDBLAST</Name>
+              <Definition>A method of desintegrating rock by drilling small diameter holes on a planned layout, packing these with explosives and then firing to a fixed program to shatter the rock in a desired form.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ROADHEADER</Name>
+              <Definition>Machine with rotating cutter head specifically designed for the excavation of roadways, tunnels, and underground chambers.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TBMOPENWITHGRIPPERS</Name>
+              <Definition>An open rock tunnel boring machine which generally utilizes roller disc cutters as excavation tools and which moves forward by reacting  against the tunnel walls through a hydraulic gripper reaction system.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TBMCLOSEDWITHGRIPPERS</Name>
+              <Definition>A closed-face shield which generally utilizes roller disc cutters as excavation tools and which moves forward by reacting against the tunnel walls through a hydraulic gripper reaction system.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TBMEARTHPRESSUREFACESUPPORT</Name>
+              <Definition>A closed-face shield designed for tunnelling in fine-grained soils by trapping excavated materials against the face and removing them at a rate slow enough to maintain pressures that counterbalance earth pressures exerted against the cutterhead and prevent ingress of water; which moves forward by reacting against an installed lining.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TBMSLURRYPRESSUREFACESUPPORT</Name>
+              <Definition>A closed-face shield designed for tunnelling in very soft, wet, or running ground by use of circulating, pressurized clay slurry against the face to counterbalance earth pressures exerted against the cutterhead, prevent ingress of water and also to carry away the excavated material; which moves forward by reacting against an installed lining.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TBMAIRPRESSUREFACESUPPORT</Name>
+              <Definition>A closed-face shield designed for tunnelling in unstable soils with the presence of water where compressed air is used to counterbalance earth pressures exerted against the cutterhead; which moves forward by reacting against an installed lining.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TBMMIXSHIELD</Name>
+              <Definition>A closed-face shield  with a mixed face support system that combines various methods to counterbalance earth pressures exerted against the cutterhead; which moves forward by reacting against an installed lining.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SHAFTBORINGMACHINE</Name>
+              <Definition>Specialized machine for boring vertical or inclined shafts.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>RAISEDRILL</Name>
+              <Definition>Type of shaft boring machine that enlarges a pilot hole by reaming to the full shaft diameter from the bottom to the top of the shaft.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="a057d774b5a844b2a53969dace498e23">
+      <Name>SupportDescription</Name>
+      <Definition>Description of Support.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0957d6469e6c4660a9d25cbb9eeced1c">
+      <Name>SupportClass</Name>
+      <Definition>Specifies a class defining the support measures for underground excavation.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="16fe7488645743488fef757f95bdff11">
+      <Name>ExcavationClass</Name>
+      <Definition>Specifies an excavation class used in underground excavation.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="99ec740a394d49c9961fb04ad2acb361">
+      <Name>RoundLength</Name>
+      <Definition>Length of individual round or drive.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

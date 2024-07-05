@@ -37,11 +37,7 @@
 温度、湿度、空調についての設計上の設定を含む。
 </td></tr>
 </table>
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/0yroe0qWmHuO00025QrE$V/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_SpaceThermalRequirements.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>SpaceTemperature</td><td>
@@ -271,7 +267,7 @@
 <tr><td>NaturalVentilationRate</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
+<a href="../../ifcmeasureresource/lexical/ifcnumericmeasure.htm">IfcNumericMeasure</a>
 </td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Natürliche Luftwechselzahl</b></td><td>Geforderte Luftwechselzahl (in Wechsel per Stunde) im Fall der natürlichen Lüftung.
@@ -287,7 +283,7 @@
 <tr><td>MechanicalVentilationRate</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
+<a href="../../ifcmeasureresource/lexical/ifcnumericmeasure.htm">IfcNumericMeasure</a>
 </td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Künstliche Luftwechselzahl</b></td><td>Geforderte Luftwechselzahl (in Wechsel per Stunde) im Fall der künstlichen Lüftung.
@@ -324,7 +320,7 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Klimaanlage zentral</b></td><td>Anforderung, ob die Klimaanlage zentral gesteuert werden soll (WAHR), oder nicht (FALSCH). Soll nur angegeben werden, wenn die Eigenschaft &quot;Klimaanlage&quot; mit WAHR gegeben ist.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Air Conditioning Central</b></td><td>Indication whether the space  requires a central air conditioning provided (TRUE) or not (FALSE).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Air Conditioning Central</b></td><td>Indication whether the space requires a central air conditioning provided (TRUE) or not (FALSE).
 It should only be given, if the property &quot;AirConditioning&quot; is set to TRUE.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Conditionnement d'air centralisé</b></td><td>Indique si l'espace requiert un conditionnement d'air centralisé (VRAI) ou non (FAUX). A fournir si la propriété &quot;Conditionnement d'air&quot; est VRAI.

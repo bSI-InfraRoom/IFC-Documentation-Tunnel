@@ -101,7 +101,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="c1d8b4f5077244d98bb7d96e3b9a3282">
       <Name>DataTransmitted</Name>
-      <Definition>For data ports, captures log of data transmitted.  The LIST at IfcTimeSeriesValue.Values may split out data according to Pset_DistributionPortTypeCable.Protocols.</Definition>
+      <Definition>For data ports, captures log of data transmitted. The LIST at IfcTimeSeriesValue.Values may split out data according to Pset_DistributionPortTypeCable.Protocols.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

@@ -13,7 +13,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="b53ceb80d20a11e1800000215ad4efdf">
       <Name>ArtificialLighting</Name>
-      <Definition>Indication whether this space  requires artificial lighting (as natural lighting would be not sufficient). (TRUE) indicates yes (FALSE) otherwise.</Definition>
+      <Definition>Indication whether this space requires artificial lighting (as natural lighting would be not sufficient). (TRUE) indicates yes (FALSE) otherwise.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

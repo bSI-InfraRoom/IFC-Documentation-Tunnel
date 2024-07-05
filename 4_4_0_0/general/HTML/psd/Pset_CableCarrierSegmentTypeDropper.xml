@@ -24,7 +24,7 @@
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="7561e794915842b6a10e7015c0cbcd6c">
+    <PropertyDef ifdguid="63e139d512664b6385603bd50c7c5504">
       <Name>TensileStrength</Name>
       <Definition>Indicates the ability to withstand breakage apart under applied force.</Definition>
       <PropertyType>

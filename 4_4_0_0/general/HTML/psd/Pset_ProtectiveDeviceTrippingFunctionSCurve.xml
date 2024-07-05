@@ -148,7 +148,7 @@ This property set represent the short time protection (S-curve) of an electronic
     </PropertyDef>
     <PropertyDef ifdguid="6d629800d1fb11e1800000215ad4efdf">
       <Name>IsCurrentTolerancePositiveOnly</Name>
-      <Definition>Indication whether the value of  CurrentTolerance1 is provided as a positive tolereance only  or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
+      <Definition>Indication whether the value of CurrentTolerance1 is provided as a positive tolereance only or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -226,7 +226,7 @@ This property set represent the short time protection (S-curve) of an electronic
     </PropertyDef>
     <PropertyDef ifdguid="85d2b280d1fb11e1800000215ad4efdf">
       <Name>IsTimeTolerancePositiveOnly</Name>
-      <Definition>Indication whether the value of  TimeTolerance1 is provided as a positive tolereance only  or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
+      <Definition>Indication whether the value of TimeTolerance1 is provided as a positive tolereance only or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

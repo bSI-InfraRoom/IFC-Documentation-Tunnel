@@ -122,7 +122,9 @@ HISTORY: IFC4 - NominalLength deleted. To be handled as a quantity measure.</Def
     </PropertyDef>
     <PropertyDef ifdguid="8e82b300d21211e1800000215ad4efdf">
       <Name>NominalDiameter</Name>
-      <Definition>Nominal diameter or width of the object.</Definition>
+      <Definition>Nominal diameter or width of the object.
+
+Nominal diameter or width of the tubes in the tube bundle.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

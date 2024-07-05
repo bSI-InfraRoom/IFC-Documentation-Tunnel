@@ -34,11 +34,7 @@
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b></b></td><td>搬送システムIfcDistributionSystemの関連属性。
 </td></tr>
 </table>
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/1kpvY0qTeHuO00025QrE$V/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_DistributionSystemCommon.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>Reference</td><td>
@@ -47,7 +43,11 @@
 <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specific instance of a distribution system, or sub-system (e.g. 'WWS/VS1', which indicates the system to be WWS, subsystems VSI/400). The reference values depend on the local code of practice.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.
+<blockquote>
+IFC4.3.0.0 DEPRECATION   The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.
+</blockquote>
+E.g. 'WWS/VS1', which indicates the system to be WWS, subsystems VSI/400.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照記号</b></td><td>空調システム、或いはサブシステムの参照ID（例えば、'WWS/VS1'はWWS系統のVSI/400サブ系統）。IDは当該地域技術基準より決められる。
 </td></tr>

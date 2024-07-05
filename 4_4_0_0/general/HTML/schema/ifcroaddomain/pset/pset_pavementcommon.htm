@@ -41,26 +41,16 @@ The nominal thickness of the pavement remains constant with the value from Nomin
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NominalLength</td><td></td><td></td><td>MODIFIED</td><td>Type changed from <i>IfcPositiveLengthMeasure</i> to <i>IfcNonNegativeLengthMeasure</i>. <br/></td></tr>
 </table>
 </details>
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/1RfJvfzsXFFelpZT_RNKUl/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_PavementCommon.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
-<tr><td>Reference</td><td>
+<tr><td>NominalThicknessEnd</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
-<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
-*</td><td>
-<table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project
-</td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Reference</b></td><td>Référence à l'identifiant d'un type spécifié dans le contexte de ce projet.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照記号</b></td><td>このプロジェクトのための参照記号。
-</td></tr>
-</table>
+<a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>
+</td><td>
+The nominal thickness of the object after a transition from its original value. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
+
 </td></tr>
 <tr><td>Status</td><td>
 <span class="self-ref">P_ENUMERATEDVALUE</span>
@@ -79,20 +69,12 @@ The nominal thickness of the pavement remains constant with the value from Nomin
 </td></tr>
 </table>
 </td></tr>
-<tr><td>NominalThicknessEnd</td><td>
-<span class="self-ref">P_SINGLEVALUE</span>
-/
-<a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>
-</td><td>
-The nominal thickness of the object after a transition from its original value. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
-
-</td></tr>
 <tr><td>StructuralSlope</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
 </td><td>
-The nominal side slope (allowable steepness) of the pavement structure (not including side slope fill) as a positive ratio measure. The slope  information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters take precedence. Value is typically less than 1.0 (1:1) but may be greater than that for steeper slopes.
+The nominal side slope (allowable steepness) of the pavement structure (not including side slope fill) as a positive ratio measure. The slope information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters take precedence. Value is typically less than 1.0 (1:1) but may be greater than that for steeper slopes.
 
 </td></tr>
 <tr><td>StructuralSlopeType</td><td>
@@ -132,6 +114,21 @@ User defined description on the type of slope used for the pavement structure (n
 </td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Nominal Thickness</b></td><td>The nominal wall thickness of the duct at the connection point.
+</td></tr>
+</table>
+</td></tr>
+<tr><td>Reference</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.
+<blockquote>
+IFC4.3.0.0 DEPRECATION   The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.
+</blockquote>
+</td></tr>
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照</b></td><td>当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。
 </td></tr>
 </table>
 </td></tr>

@@ -43,6 +43,9 @@
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4-addendum-2-4_0_2_0/index.htm">IFC4 Addendum 2 4.0.2.0</a></b></td>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcpresentationappearanceresource/lexical/ifcindexedcolourmap.htm">IfcIndexedColourMap</a></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opacity</td><td></td><td>X</td><td>MODIFIED</td><td>Xsdformat changed from <i>Attribute</i> to <i>Content</i>. <br/></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4_draft/index.htm">IFC4X3_ADD2 to IFC4X4_draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcpresentationappearanceresource/lexical/ifcindexedcolourmap.htm">IfcIndexedColourMap</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MappedTo</td><td>X</td><td>X</td><td>MODIFIED</td><td>Type changed from <i>IfcTessellatedFaceSet</i> to <i>IfcTessellatedItem</i>. <br/></td></tr>
 </table>
 </details>
 <section>
@@ -77,7 +80,7 @@
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>G</th></tr>
-<tr><td>1</td><td>MappedTo</td><td><a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a></td><td></td><td>
+<tr><td>1</td><td>MappedTo</td><td><a href="../../ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a></td><td></td><td>
 Reference to the <a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a> to which it applies the colours and alpha channel.
 </td><td>X</td></tr>
 <tr><td>2</td><td>Opacity</td><td><a href="../../ifcmeasureresource/lexical/ifcnormalisedratiomeasure.htm">IfcNormalisedRatioMeasure</a></td><td>? </td><td>
@@ -106,7 +109,7 @@ Index into the <a href="../../ifcpresentationappearanceresource/lexical/ifccolou
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcpresentationdefinitionresource/lexical/ifcpresentationitem.htm">IfcPresentationItem</a></i></td></tr>
 <tr><td colspan="6"><a href="../../ifcpresentationappearanceresource/lexical/ifcindexedcolourmap.htm">IfcIndexedColourMap</a></td></tr>
-<tr><td>1</td><td>MappedTo</td><td><a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a></td><td></td><td>
+<tr><td>1</td><td>MappedTo</td><td><a href="../../ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a></td><td></td><td>
 Reference to the <a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a> to which it applies the colours and alpha channel.
 </td><td>X</td></tr>
 <tr><td>2</td><td>Opacity</td><td><a href="../../ifcmeasureresource/lexical/ifcnormalisedratiomeasure.htm">IfcNormalisedRatioMeasure</a></td><td>? </td><td>
@@ -151,7 +154,7 @@ Index into the <a href="../../ifcpresentationappearanceresource/lexical/ifccolou
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcIndexedColourMap<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcpresentationdefinitionresource/lexical/ifcpresentationitem.htm">IfcPresentationItem</a>)<b>;</b><br/>
-&nbsp;&nbsp;MappedTo : <a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a>;<br/>
+&nbsp;&nbsp;MappedTo : <a href="../../ifcgeometricmodelresource/lexical/ifctessellateditem.htm">IfcTessellatedItem</a>;<br/>
 &nbsp;&nbsp;Opacity : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcnormalisedratiomeasure.htm">IfcNormalisedRatioMeasure</a>;<br/>
 &nbsp;&nbsp;Colours : <a href="../../ifcpresentationappearanceresource/lexical/ifccolourrgblist.htm">IfcColourRgbList</a>;<br/>
 &nbsp;&nbsp;ColourIndex : <span class="keyword">LIST</span> [1:?] <span class="keyword">OF</span> <a href="../../ifcmeasureresource/lexical/ifcpositiveinteger.htm">IfcPositiveInteger</a>;<br/>

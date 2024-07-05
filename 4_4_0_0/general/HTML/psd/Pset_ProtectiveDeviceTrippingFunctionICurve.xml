@@ -148,7 +148,7 @@ This property set represent the instantaneous time protection (I-curve) of an el
     </PropertyDef>
     <PropertyDef ifdguid="e2819d80d1fa11e1800000215ad4efdf">
       <Name>IsCurrentTolerancePositiveOnly</Name>
-      <Definition>Indication whether the value of  CurrentTolerance1 is provided as a positive tolereance only  or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
+      <Definition>Indication whether the value of CurrentTolerance1 is provided as a positive tolereance only or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -226,7 +226,7 @@ This property set represent the instantaneous time protection (I-curve) of an el
     </PropertyDef>
     <PropertyDef ifdguid="f9c08b00d1fa11e1800000215ad4efdf">
       <Name>IsTimeTolerancePositiveOnly</Name>
-      <Definition>Indication whether the value of  TimeTolerance1 is provided as a positive tolereance only  or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
+      <Definition>Indication whether the value of TimeTolerance1 is provided as a positive tolereance only or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />

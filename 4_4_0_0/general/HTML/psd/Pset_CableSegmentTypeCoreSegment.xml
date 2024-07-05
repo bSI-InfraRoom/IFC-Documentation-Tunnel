@@ -70,7 +70,7 @@ The overall diameter of a core (maximum space used).</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="8c940200d1c811e1800000215ad4efdf">
       <Name>CoreIdentifier</Name>
-      <Definition>The core identification used  Identifiers may be used such as by color (Black, Brown, Grey) or by number (1, 2, 3) or by IEC phase reference (L1, L2, L3) etc.</Definition>
+      <Definition>The core identification used Identifiers may be used such as by color (Black, Brown, Grey) or by number (1, 2, 3) or by IEC phase reference (L1, L2, L3) etc.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier" />
@@ -111,7 +111,7 @@ The overall diameter of a core (maximum space used).</Definition>
       <Definition>Colour of the core (derived from IEC 60757). Note that the combined color 'GreenAndYellow' shall be used only as Protective Earth (PE) conductors according to the requirements of IEC 60446.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
-          <EnumList name="PEnum_CoreColorsEnum">
+          <EnumList name="PEnum_CoreColoursEnum">
             <EnumItem>BLACK</EnumItem>
             <EnumItem>BLUE</EnumItem>
             <EnumItem>BROWN</EnumItem>
@@ -475,7 +475,7 @@ Weight of core kg/km.</Definition>
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="7561e794915842b6a10e7015c0cbcd6c">
+    <PropertyDef ifdguid="63e139d512664b6385603bd50c7c5504">
       <Name>TensileStrength</Name>
       <Definition>Indicates the ability to withstand breakage apart under applied force.</Definition>
       <PropertyType>

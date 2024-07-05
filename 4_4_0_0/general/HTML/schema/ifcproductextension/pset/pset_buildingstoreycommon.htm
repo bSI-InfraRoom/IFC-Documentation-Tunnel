@@ -38,26 +38,21 @@
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b></b></td><td>IfcBuildinStorey(建物階)に関するプロパティセット定義。建物階ナンバーはIfcBuildingStorey.Name、建物階名称はIfcBuildingStorey.LongName、建物階に関する記述はIfcBuildingStorey.Descriptionで設定する。実際の建物階に関する数量、例えば建物階周囲長、建物階面積、建物階体積等はIfcElementQuantitiesで設定する。また、建築基準法の建物階分類に関しては、IfcClassificationReferenceで設定する。
 </td></tr>
 </table>
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/1tQQG0qSKHuO00025QrE$V/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_BuildingStoreyCommon.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>Reference</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
-*</td><td>
+</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Raumtyp</b></td><td>Bezeichnung zur Zusammenfassung gleichartiger Räume zu einem Raumtyp (auch Funktionstyp genannt). Alternativ zum Namen des &quot;Typobjekts&quot;, insbesondere wenn die Software keine Raumtypen als Typobjekte unterstützt.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.
+<blockquote>
+IFC4.3.0.0 DEPRECATION   The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.
+</blockquote>
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'). Used to store the non-classification driven internal project type.
-</td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Reference</b></td><td>Référence à l'identifiant d'un type spécifié dans le contexte du projet (exemple : &quot;type A1&quot;). Utilisé pour enregistrer un type sans recourir à une classification.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照記号</b></td><td>このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照</b></td><td>当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。
 </td></tr>
 </table>
 </td></tr>
@@ -115,11 +110,12 @@
 <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Sprinklerschutz automatisch</b></td><td>Angabe, ob das Geschoss durch eine automatische Sprinkleranlage geschützt wird (WAHR) oder nicht (FALSCH).
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Sprinklerschutz automatisch</b></td><td>Angabe, ob das Gebäude durch eine automatische Sprinkleranlage geschützt wird (WAHR) oder nicht (FALSCH).
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Sprinkler Protection Automatic</b></td><td>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE). It should only be given, if the property &quot;SprinklerProtection&quot; is set to TRUE.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Sprinkler Protection Automatic</b></td><td>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE).
+It should only be given, if the property &quot;SprinklerProtection&quot; is set to TRUE.
 </td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>ProtectionAutomatiqueParSprinkler</b></td><td>Indication selon laquelle ce bâtiment bénéficie d'une protection automatique par sprinkler (VRAI) ou non (FAUX). Indication à ne fournir que si la propriété &quot;SprinklerProtection&quot; est cochée &quot;VRAI&quot;.
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>ProtectionAutomatiqueParSprinkler</b></td><td>Indication selon laquelle ce bâtiment bénéficie d'une protection automatique par sprinkler (VRAI) ou non (FAUX).
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>スプリンクラー防御自動区分</b></td><td>スプリンクラー設備が自動かどうか示すブーリアン値。
 </td></tr>

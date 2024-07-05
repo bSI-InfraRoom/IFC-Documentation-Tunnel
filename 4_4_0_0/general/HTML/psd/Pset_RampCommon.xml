@@ -9,27 +9,25 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcRamp</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="33939080d1ff11e1800000215ad4efdf">
+    <PropertyDef ifdguid="00cda600d1c711e1800000215ad4efdf">
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types and no classification reference to a recognized classification system used.
+
+&gt; IFC4.3.0.0 DEPRECATION&amp;nbsp;  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
-        <NameAlias lang="de-DE">Bauteiltyp</NameAlias>
         <NameAlias lang="en">Reference</NameAlias>
-        <NameAlias lang="fr-FR">Reference</NameAlias>
-        <NameAlias lang="ja-JP">参照記号</NameAlias>
-        <NameAlias lang="zh-CN">参考号</NameAlias>
+        <NameAlias lang="ja-JP">参照</NameAlias>
+        <NameAlias lang="ko-KR">참조</NameAlias>
       </NameAliases>
       <DefinitionAliases>
-        <DefinitionAlias lang="de-DE">Bezeichnung zur Zusammenfassung gleichartiger Bauteile zu einem Bauteiltyp (auch Konstruktionstyp genannt). Alternativ zum Namen des "Typobjekts", insbesondere wenn die Software keine Typen unterstützt.</DefinitionAlias>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="fr-FR">Référence à l'identifiant d'un type spécifié dans le contexte du projet (exemple : "type A1") pour désigner un "type de construction". Une alternative au nom d'un objet type lorsque les objets types ne sont pas gérés par le logiciel.</DefinitionAlias>
-        <DefinitionAlias lang="ja-JP">このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。</DefinitionAlias>
-        <DefinitionAlias lang="zh-CN">若未采用已知的分类系统，则该属性为该项目中该类型构件的参考编号（例如，类型A-1）。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">해당 프로젝트에 정의된 형식의 참조 ID (예 : A-1) 승인된 분류에 존재하지 않을 때 사용된다.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="38f0db00d1ff11e1800000215ad4efdf">
@@ -150,7 +148,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="4c03ab00d1ff11e1800000215ad4efdf">
       <Name>RequiredSlope</Name>
-      <Definition>Required sloping angle of the object  - relative to horizontal (0.0 degrees).
+      <Definition>Required sloping angle of the object - relative to horizontal (0.0 degrees).
 Required maximum slope for the passageway according to the applicable building code or additional requirements.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

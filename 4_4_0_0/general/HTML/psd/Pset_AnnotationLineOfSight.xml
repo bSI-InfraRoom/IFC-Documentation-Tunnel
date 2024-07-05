@@ -5,9 +5,9 @@
   <Definition>Specifies the properties of the line of sight. For example, it can be used to define the line of sight visibility at the junction between two roads (particularly between an access road and a public road); or in the design of a stadium or theatre.</Definition>
   <Applicability />
   <ApplicableClasses>
-    <ClassName>IfcAnnotation/LINEOFSIGHT</ClassName>
+    <ClassName>IfcAnnotation</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcAnnotation/LINEOFSIGHT</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcAnnotation</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="41c2bc00d1c111e1800000215ad4efdf">
       <Name>SetbackDistance</Name>

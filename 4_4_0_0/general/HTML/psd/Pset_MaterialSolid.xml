@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="f5e361a5695b445aa32ca8cbd10864e9" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_MaterialSolid</Name>
+  <Definition>A set of extended material properties of solid (natural) materials typically used within the context of geology and geotechnics.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcMaterial</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcMaterial</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="02c5f4e223f14dc2a9b2a89151e78556">
+      <Name>ZnContent</Name>
+      <Definition>Content of Zink. The unit must be defined in _'IfcPropertySingleValue_._Unit'_.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="24d6aa35f9d24b488718545392f02e07">
+      <Name>CuContent</Name>
+      <Definition>Content of Copper. The unit must be defined in _'IfcPropertySingleValue_._Unit'_.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4c8e7236c32746899ad1f06c8c334226">
+      <Name>PbContent</Name>
+      <Definition>Content of Lead. The unit must be defined in _'IfcPropertySingleValue_._Unit'_.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2cb6cde10b044aa29db11b7b2ad3c883">
+      <Name>CrContent</Name>
+      <Definition>Content of Chromium. The unit must be defined in _'IfcPropertySingleValue_._Unit'_.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4ffa1774b0b3499da5d7bccde14cf963">
+      <Name>HgContent</Name>
+      <Definition>Content of Mercury. The unit must be defined in _'IfcPropertySingleValue_._Unit'_.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="67c70d3fadf44fb093be7c6dbb238ca9">
+      <Name>NiContent</Name>
+      <Definition>Content of Nickel. The unit must be defined in _'IfcPropertySingleValue_._Unit'_.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="eab472d2e7a748708e08d90e644522e5">
+      <Name>AsContent</Name>
+      <Definition>Content of Arsenic. The unit must be defined in _'IfcPropertySingleValue_._Unit'_.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="34c6c754ffae42179da1e0a8a0a66909">
+      <Name>CdContent</Name>
+      <Definition>Content of Cadmium. The unit must be defined in _'IfcPropertySingleValue_._Unit'_.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="32216aefba314379a8bf28e2133e014b">
+      <Name>MnContent</Name>
+      <Definition>Content of Manganese. The unit must be defined in _'IfcPropertySingleValue_._Unit'_.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0c5a2fb16d674f1f9d7f72947c852c75">
+      <Name>OrganicMatterContent</Name>
+      <Definition>The total carbon content in soil (test method after dry combustion, the organic carbon content is calculated from this content after correcting for carbonates present in the sample). The unit must be defined in _'IfcPropertySingleValue_._Unit'_.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="dd4b57b458ff4e47bbc51a5b5f87cee6">
+      <Name>TS</Name>
+      <Definition>The total sulfur content. The unit must be defined in _'IfcPropertySingleValue_._Unit'_.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

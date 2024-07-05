@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="c541d480d1e411e1800000215ad4efdf">
       <Name>Type1</Name>
-      <Definition>Type of weld seam according to ISO 2553.  Note, combined welds are given by two corresponding symbols in the direction of the normal axis of the coordinate system.  For example, an X weld is specified by Type1 = 'V' and Type2 = 'V'.</Definition>
+      <Definition>Type of weld seam according to ISO 2553. Note, combined welds are given by two corresponding symbols in the direction of the normal axis of the coordinate system. For example, an X weld is specified by Type1 = 'V' and Type2 = 'V'.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -41,7 +41,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="d25ec380d1e411e1800000215ad4efdf">
       <Name>Surface1</Name>
-      <Definition>Aspect of weld seam surface, i.e. 'plane', 'curved' or 'hollow'.  Combined welds are given by two corresponding symbols analogous to Type1 and Type2.</Definition>
+      <Definition>Aspect of weld seam surface, i.e. 'plane', 'curved' or 'hollow'. Combined welds are given by two corresponding symbols analogous to Type1 and Type2.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -86,7 +86,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="e4d8fd00d1e411e1800000215ad4efdf">
       <Name>ProcessName</Name>
-      <Definition>Name of the welding process.  Alternative to the numeric Process property.</Definition>
+      <Definition>Name of the welding process. Alternative to the numeric Process property.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

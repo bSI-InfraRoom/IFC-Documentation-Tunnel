@@ -9,9 +9,11 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcCableSegment</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="af71e680d1c711e1800000215ad4efdf">
+    <PropertyDef ifdguid="00cda600d1c711e1800000215ad4efdf">
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), provided, if there is no classification reference to a recognized classification system used.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types and no classification reference to a recognized classification system used.
+
+&gt; IFC4.3.0.0 DEPRECATION&amp;nbsp;  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier" />
@@ -25,7 +27,7 @@
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="ja-JP">当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">해당프로젝트에 정의도니 형식의 참조ID (예 : A-1) 승인된 분류에 존재하지 않을 때 사용된다.</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">해당 프로젝트에 정의된 형식의 참조 ID (예 : A-1) 승인된 분류에 존재하지 않을 때 사용된다.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="b4cf3100d1c711e1800000215ad4efdf">

@@ -9,9 +9,11 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcElectricFlowStorageDevice</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="10a5b400d1e011e1800000215ad4efdf">
+    <PropertyDef ifdguid="00cda600d1c711e1800000215ad4efdf">
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), provided, if there is no classification reference to a recognized classification system used.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types and no classification reference to a recognized classification system used.
+
+&gt; IFC4.3.0.0 DEPRECATION&amp;nbsp;  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier" />
@@ -450,7 +452,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="932e7380d1e011e1800000215ad4efdf">
       <Name>EarthFault1PolePowerFactorMaximumState</Name>
-      <Definition>Power factor of the maximum 1 pole earth fault  current provided at the point of supply i.e. the fault between 1 phase and PE/PEN.</Definition>
+      <Definition>Power factor of the maximum 1 pole earth fault current provided at the point of supply i.e. the fault between 1 phase and PE/PEN.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcReal" />

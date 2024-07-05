@@ -20,70 +20,43 @@ For a window, it is the type of window panel operations. Also used to assign sta
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_WindowPanelOperationEnum">
-            <EnumItem>SIDEHUNGRIGHTHAND</EnumItem>
-            <EnumItem>SIDEHUNGLEFTHAND</EnumItem>
-            <EnumItem>TILTANDTURNRIGHTHAND</EnumItem>
-            <EnumItem>TILTANDTURNLEFTHAND</EnumItem>
-            <EnumItem>TOPHUNG</EnumItem>
             <EnumItem>BOTTOMHUNG</EnumItem>
-            <EnumItem>PIVOTHORIZONTAL</EnumItem>
-            <EnumItem>PIVOTVERTICAL</EnumItem>
-            <EnumItem>SLIDINGHORIZONTAL</EnumItem>
-            <EnumItem>SLIDINGVERTICAL</EnumItem>
-            <EnumItem>REMOVABLECASEMENT</EnumItem>
             <EnumItem>FIXEDCASEMENT</EnumItem>
             <EnumItem>OTHEROPERATION</EnumItem>
-            <EnumItem>NOTDEFINED</EnumItem>
+            <EnumItem>PIVOTHORIZONTAL</EnumItem>
+            <EnumItem>PIVOTVERTICAL</EnumItem>
+            <EnumItem>REMOVABLECASEMENT</EnumItem>
+            <EnumItem>SIDEHUNGLEFTHAND</EnumItem>
+            <EnumItem>SIDEHUNGRIGHTHAND</EnumItem>
+            <EnumItem>SLIDINGHORIZONTAL</EnumItem>
+            <EnumItem>SLIDINGVERTICAL</EnumItem>
+            <EnumItem>TILTANDTURNLEFTHAND</EnumItem>
+            <EnumItem>TILTANDTURNRIGHTHAND</EnumItem>
+            <EnumItem>TOPHUNG</EnumItem>
             <EnumItem>OTHER</EnumItem>
             <EnumItem>NOTKNOWN</EnumItem>
             <EnumItem>UNSET</EnumItem>
           </EnumList>
           <ConstantList>
             <ConstantDef>
-              <Name>SIDEHUNGRIGHTHAND</Name>
-              <Definition>Panel that opens to the right when viewed from the outside.
-
-![right hand](../../figures/ifcwindowpaneloperationenum-fig01.gif)</Definition>
-              <NameAliases />
-              <DefinitionAliases />
-            </ConstantDef>
-            <ConstantDef>
-              <Name>SIDEHUNGLEFTHAND</Name>
-              <Definition>Panel that opens to the left when viewed from the outside.
-
-![left hand](../../figures/ifcwindowpaneloperationenum-fig02.gif)</Definition>
-              <NameAliases />
-              <DefinitionAliases />
-            </ConstantDef>
-            <ConstantDef>
-              <Name>TILTANDTURNRIGHTHAND</Name>
-              <Definition>Panel that opens to the right and is bottom hung.
-
-![right hand tilt and turn](../../figures/ifcwindowpaneloperationenum-fig03.gif)</Definition>
-              <NameAliases />
-              <DefinitionAliases />
-            </ConstantDef>
-            <ConstantDef>
-              <Name>TILTANDTURNLEFTHAND</Name>
-              <Definition>Panel that opens to the left and is bottom hung.
-
-![left turn and tilt](../../figures/ifcwindowpaneloperationenum-fig04.gif)</Definition>
-              <NameAliases />
-              <DefinitionAliases />
-            </ConstantDef>
-            <ConstantDef>
-              <Name>TOPHUNG</Name>
-              <Definition>Panel is top hung.
-
-![top hung](../../figures/ifcwindowpaneloperationenum-fig05.gif)</Definition>
-              <NameAliases />
-              <DefinitionAliases />
-            </ConstantDef>
-            <ConstantDef>
               <Name>BOTTOMHUNG</Name>
               <Definition>Panel is bottom hung.
 
 ![bottom hung](../../figures/ifcwindowpaneloperationenum-fig06.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FIXEDCASEMENT</Name>
+              <Definition>Panel is fixed.
+
+![fixed](../../figures/ifcwindowpaneloperationenum-fig12.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHEROPERATION</Name>
+              <Definition>Other.</Definition>
               <NameAliases />
               <DefinitionAliases />
             </ConstantDef>
@@ -104,6 +77,30 @@ For a window, it is the type of window panel operations. Also used to assign sta
               <DefinitionAliases />
             </ConstantDef>
             <ConstantDef>
+              <Name>REMOVABLECASEMENT</Name>
+              <Definition>Panel is removable.
+
+![removable](../../figures/ifcwindowpaneloperationenum-fig11.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SIDEHUNGLEFTHAND</Name>
+              <Definition>Panel that opens to the left when viewed from the outside.
+
+![left hand](../../figures/ifcwindowpaneloperationenum-fig02.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SIDEHUNGRIGHTHAND</Name>
+              <Definition>Panel that opens to the right when viewed from the outside.
+
+![right hand](../../figures/ifcwindowpaneloperationenum-fig01.gif)</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
               <Name>SLIDINGHORIZONTAL</Name>
               <Definition>Panel is sliding horizontally.
 
@@ -120,32 +117,27 @@ For a window, it is the type of window panel operations. Also used to assign sta
               <DefinitionAliases />
             </ConstantDef>
             <ConstantDef>
-              <Name>REMOVABLECASEMENT</Name>
-              <Definition>Panel is removable.
+              <Name>TILTANDTURNLEFTHAND</Name>
+              <Definition>Panel that opens to the left and is bottom hung.
 
-![removable](../../figures/ifcwindowpaneloperationenum-fig11.gif)</Definition>
+![left turn and tilt](../../figures/ifcwindowpaneloperationenum-fig04.gif)</Definition>
               <NameAliases />
               <DefinitionAliases />
             </ConstantDef>
             <ConstantDef>
-              <Name>FIXEDCASEMENT</Name>
-              <Definition>Panel is fixed.
+              <Name>TILTANDTURNRIGHTHAND</Name>
+              <Definition>Panel that opens to the right and is bottom hung.
 
-![fixed](../../figures/ifcwindowpaneloperationenum-fig12.gif)</Definition>
+![right hand tilt and turn](../../figures/ifcwindowpaneloperationenum-fig03.gif)</Definition>
               <NameAliases />
               <DefinitionAliases />
             </ConstantDef>
             <ConstantDef>
-              <Name>OTHEROPERATION</Name>
-              <Definition>Other.</Definition>
+              <Name>TOPHUNG</Name>
+              <Definition>Panel is top hung.
+
+![top hung](../../figures/ifcwindowpaneloperationenum-fig05.gif)</Definition>
               <NameAliases />
-              <DefinitionAliases />
-            </ConstantDef>
-            <ConstantDef>
-              <Name>NOTDEFINED</Name>
-              <NameAliases>
-                <NameAlias lang="en">Notdefined</NameAlias>
-              </NameAliases>
               <DefinitionAliases />
             </ConstantDef>
             <ConstantDef>

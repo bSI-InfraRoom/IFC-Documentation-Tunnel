@@ -39,11 +39,7 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgserviceelements/pset/pset_distributionporttypeduct.htm">Pset_DistributionPortTypeDuct</a></td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed from <i>IfcDistributionPort/AIRCONDITIONING</i> to <i>IfcDistributionPort/DUCT</i>. <br/></td></tr>
 </table>
 </details>
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/3ZeFVthabE2BgZHqqO5lhz/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_DistributionPortTypeDuct.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>ConnectionType</td><td>
@@ -54,31 +50,26 @@
  <a href="../../../penum/penum_ductconnectiontype.htm">PEnum_DuctConnectionType</a></td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Connection Type</b></td><td>The end-style treatment of the duct port:
-BEADEDSLEEVE: Beaded Sleeve.
-COMPRESSION: Compression.
-CRIMP: Crimp.
-DRAWBAND: Drawband.
-DRIVESLIP: Drive slip.
-FLANGED: Flanged.
-OUTSIDESLEEVE: Outside Sleeve.
-SLIPON: Slipon.
-SOLDERED: Soldered.
-SSLIP: S-Slip.
-STANDINGSEAM: Standing seam.
-SWEDGE: Swedge.
-WELDED: Welded.
-OTHER: Another type of end-style has been applied.
-NONE: No end-style has been applied.
+BEADEDSLEEVE: Beaded Sleeve. COMPRESSION: Compression. CRIMP: Crimp. DRAWBAND: Drawband. DRIVESLIP: Drive slip. FLANGED: Flanged. OUTSIDESLEEVE: Outside Sleeve. SLIPON: Slipon. SOLDERED: Soldered. SSLIP: S-Slip. STANDINGSEAM: Standing seam. SWEDGE: Swedge. WELDED: Welded. OTHER: Another type of end-style has been applied. NONE: No end-style has been applied.
 </td></tr>
 </table>
 </td></tr>
-<tr><td>ConnectionSubType</td><td>
+<tr><td>ConnectionSubtype</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Connection Sub Type</b></td><td>The physical port connection subtype that further qualifies the ConnectionType.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Connection Sub Type</b></td><td>The physical port connection subtype that further qualifies the ConnectionType. The following values are recommended:
+ACPLUG: A, B, C, D, E, F, EF, G, H, I, J, K, L, M
+DIN: Mini3P, Mini4P, Mini5P, Mini6P, Mini7P, Mini8P, Mini9P
+DSub: DA15, DB25, DC37, DD50, DE9, DE15
+EIAJ: RC5720
+HDMI: A, B, C
+RADIO: IEEE802.11g, IEEE802.11n
+RJ: 4P4C, 6P2C, 8P8C
+SOCKET: E-11, E-12, E-14, E-17, E-26, E-27, E-39, E-40
+TRS: TS_Mini, TS_SubMini, TRS_Mini, TRS_SubMini
 </td></tr>
 </table>
 </td></tr>
@@ -161,6 +152,8 @@ Indicates dry bulb temperature of the air.
 </td><td>
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Pressure</b></td><td>The pressure of the fluid.
+</td></tr>
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>圧力</b></td><td>流体の圧力。
 </td></tr>
 </table>
 </td></tr>

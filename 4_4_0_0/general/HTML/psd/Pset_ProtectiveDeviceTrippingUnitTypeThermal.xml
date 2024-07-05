@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="e3b3ca00d1fc11e1800000215ad4efdf">
       <Name>ThermalTrippingUnitType</Name>
-      <Definition>A list of the available types of thermal tripping unit  from which that required may be selected.</Definition>
+      <Definition>A list of the available types of thermal tripping unit from which that required may be selected.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ThermalTrippingUnitType">

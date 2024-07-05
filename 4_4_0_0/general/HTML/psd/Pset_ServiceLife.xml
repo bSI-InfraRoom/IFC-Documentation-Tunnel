@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="bd932780d20611e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_ServiceLife</Name>
-  <Definition>Captures the period of time that an artifact will last.  HISTORY: Introduced in IFC2X4 as replacement for IfcServiceLife.</Definition>
+  <Definition>Captures the period of time that an artifact will last. HISTORY: Introduced in IFC2X4 as replacement for IfcServiceLife.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcElement</ClassName>

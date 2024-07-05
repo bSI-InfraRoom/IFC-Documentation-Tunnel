@@ -69,15 +69,21 @@
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="308b1604fa7f4b11ba71175ab14f7ffb">
+    <PropertyDef ifdguid="724f6921b3154083935f315208f9274b">
       <Name>BendingStrength</Name>
       <Definition>Bending strength.
 
 Defining values: α; defined values: bending strength.</Definition>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure" />
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression />
+          <DefiningValue>
+            <DataType type="IfcPositivePlaneAngleMeasure" />
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcPressureMeasure" />
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
       <NameAliases />
       <DefinitionAliases />
@@ -101,18 +107,24 @@ Defining values: α; defined values: compressive strength.</Definition>
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
-    <PropertyDef ifdguid="7561e794915842b6a10e7015c0cbcd6c">
+    <PropertyDef ifdguid="2b56258bcfe84d04974158bbd4f05717">
       <Name>TensileStrength</Name>
       <Definition>Indicates the ability to withstand breakage apart under applied force.</Definition>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure" />
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression />
+          <DefiningValue>
+            <DataType type="IfcPositivePlaneAngleMeasure" />
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcPressureMeasure" />
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
-    <PropertyDef ifdguid="370ad6a14f8348dda7f7c1d8902fb274">
+    <PropertyDef ifdguid="4a403dcf501d4e78b5cee728c2b6a0b6">
       <Name>ShearStrength</Name>
       <Definition>Defining values: α; defined values: shear strength.</Definition>
       <PropertyType>

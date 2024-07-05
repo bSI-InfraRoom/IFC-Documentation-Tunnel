@@ -13,8 +13,8 @@
       <Name>ControlType</Name>
       <Definition>The type controller, signal modification effected and applicable ports
 
-PROPORTIONAL: Output is proportional to the control error. The gain of a proportional control (Kp) will have the effect of reducing the rise time and reducing , but never eliminating, the steady-state error of the variable controlled. 
-PROPORTIONALINTEGRAL: Part of the output is proportional to the control error and part is proportional to the time integral of the control error. Adding the gain of an integral control (Ki) will have the effect of eliminating the steady-state error of the variable controlled, but it may make the transient response worse. 
+PROPORTIONAL: Output is proportional to the control error. The gain of a proportional control (Kp) will have the effect of reducing the rise time and reducing , but never eliminating, the steady-state error of the variable controlled.
+PROPORTIONALINTEGRAL: Part of the output is proportional to the control error and part is proportional to the time integral of the control error. Adding the gain of an integral control (Ki) will have the effect of eliminating the steady-state error of the variable controlled, but it may make the transient response worse.
 PROPORTIONALINTEGRALDERIVATIVE: Part of the output is proportional to the control error, part is proportional to the time integral of the control error and part is proportional to the time derivative of the control error. Adding the gain of a derivative control (Kd) will have the effect of increasing the stability of the system, reducing the overshoot, and improving the transient response of the variable controlled.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
@@ -138,7 +138,7 @@ Labels indicate transition points such as 'Hi', 'Lo', 'HiHi', or 'LoLo'.</Defini
       <Name>Value</Name>
       <Definition>The expected range and default value.
 
-The expected range and default value. While the property data type is IfcReal (to support all cases including when the units are unknown), a unit may optionally be provided to indicate the measure and unit.</Definition>
+The expected range and default value.  While the property data type is IfcReal (to support all cases including when the units are unknown), a unit may optionally be provided to indicate the measure and unit.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcReal" />
@@ -170,7 +170,7 @@ The expected range and default value. While the property data type is IfcReal (t
     </PropertyDef>
     <PropertyDef ifdguid="e6e39180d1cd11e1800000215ad4efdf">
       <Name>IntegralConstant</Name>
-      <Definition>The integral gain factor of the controller (usually referred to as Ki).  Asserted where ControlType is PROPORTIONALINTEGRAL or PROPORTIONALINTEGRALDERIVATIVE.</Definition>
+      <Definition>The integral gain factor of the controller (usually referred to as Ki). Asserted where ControlType is PROPORTIONALINTEGRAL or PROPORTIONALINTEGRALDERIVATIVE.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcReal" />
@@ -187,7 +187,7 @@ The expected range and default value. While the property data type is IfcReal (t
     </PropertyDef>
     <PropertyDef ifdguid="eba84580d1cd11e1800000215ad4efdf">
       <Name>DerivativeConstant</Name>
-      <Definition>The derivative gain factor of the controller (usually referred to as Kd).  Asserted where ControlType is PROPORTIONALINTEGRALDERIVATIVE.</Definition>
+      <Definition>The derivative gain factor of the controller (usually referred to as Kd). Asserted where ControlType is PROPORTIONALINTEGRALDERIVATIVE.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcReal" />

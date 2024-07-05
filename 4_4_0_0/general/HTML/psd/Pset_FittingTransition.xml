@@ -12,7 +12,7 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcCableFitting/TRANSITION,IfcDuctFitting/TRANSITION,IfcPipeFitting/TRANSITION,IfcCableCarrierFitting/TRANSITION</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="17701219053141b9b3f1b110eb14c495">
+    <PropertyDef ifdguid="d8cab2f4ad8d47d28f95511dcd3b5508">
       <Name>NominalLength</Name>
       <Definition>The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
       <PropertyType>

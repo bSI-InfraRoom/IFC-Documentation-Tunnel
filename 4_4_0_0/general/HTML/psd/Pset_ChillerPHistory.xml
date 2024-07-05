@@ -30,7 +30,8 @@ The product of the ideal capacity and the overall volumetric efficiency of the c
       <Name>EnergyEfficiencyRatio</Name>
       <Definition>Energy efficiency ratio (EER).
 
-Ratio of net cooling capacity to the total input rate of electric power applied. By definition, the units are BTU/hour per Watt. The input electric power may be obtained from Pset_DistributionPortPHistoryElectrical.RealPower on the 'Power' port of the IfcChiller.</Definition>
+Ratio of net cooling capacity to the total input rate of electric power applied.  By definition, the units are BTU/hour per Watt.
+The input electric power may be obtained from Pset_DistributionPortPHistoryElectrical.RealPower on the 'Power' port of the IfcChiller.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
@@ -47,7 +48,10 @@ La puissance électrique fournie peut être obtenue depuis Pset_DistributionPort
     </PropertyDef>
     <PropertyDef ifdguid="e0065000d1c811e1800000215ad4efdf">
       <Name>CoefficientOfPerformance</Name>
-      <Definition>The Coefficient of performance (COP) is the ratio of heat removed to energy input. The energy input may be obtained by multiplying Pset_DistributionPortPHistoryGas.FlowRate on the 'Fuel' port of the IfcChiller by Pset_MaterialFuel.LowerHeatingValue. The IfcDistributionPort for fuel has an associated IfcMaterial with fuel properties and is assigned to an IfcPerformanceHistory object nested within this IfcPerformanceHistory object.</Definition>
+      <Definition>The Coefficient of performance (COP) is the ratio of heat removed to energy input.
+The energy input may be obtained by multiplying
+Pset_DistributionPortPHistoryGas.FlowRate on the 'Fuel' port of the IfcChiller by Pset_MaterialFuel.LowerHeatingValue.
+The IfcDistributionPort for fuel has an associated IfcMaterial with fuel properties and is assigned to an IfcPerformanceHistory object nested within this IfcPerformanceHistory object.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>

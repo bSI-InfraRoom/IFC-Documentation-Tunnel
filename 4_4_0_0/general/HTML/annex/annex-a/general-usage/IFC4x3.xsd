@@ -1417,7 +1417,7 @@ of the material. The information contained in this document is subject to change
 				<xs:attribute name="EditionDate" type="ifc:IfcDate" use="optional"/>
 				<xs:attribute name="Name" type="ifc:IfcLabel" use="optional"/>
 				<xs:attribute name="Description" type="ifc:IfcText" use="optional"/>
-				<xs:attribute name="Location" type="ifc:IfcURIReference" use="optional"/>
+				<xs:attribute name="Specification" type="ifc:IfcURIReference" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -2351,7 +2351,7 @@ of the material. The information contained in this document is subject to change
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcPresentationItem">
 				<xs:sequence>
-					<xs:element name="CurveFont">
+					<xs:element name="CurveStyleFont">
 						<xs:complexType>
 							<xs:group ref="ifc:IfcCurveStyleFontSelect"/>
 						</xs:complexType>
@@ -2753,17 +2753,6 @@ of the material. The information contained in this document is subject to change
 				<xs:attribute name="PanelOperation" type="ifc:IfcDoorPanelOperationEnum" use="optional"/>
 				<xs:attribute name="PanelWidth" type="ifc:IfcNormalisedRatioMeasure" use="optional"/>
 				<xs:attribute name="PanelPosition" type="ifc:IfcDoorPanelPositionEnum" use="optional"/>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="IfcDoorStyle" type="ifc:IfcDoorStyle" substitutionGroup="ifc:IfcTypeProduct" nillable="true"/>
-	<xs:complexType name="IfcDoorStyle">
-		<xs:complexContent>
-			<xs:extension base="ifc:IfcTypeProduct">
-				<xs:attribute name="OperationType" type="ifc:IfcDoorStyleOperationEnum" use="optional"/>
-				<xs:attribute name="ConstructionType" type="ifc:IfcDoorStyleConstructionEnum" use="optional"/>
-				<xs:attribute name="ParameterTakesPrecedence" type="ifc:IfcBoolean" use="optional"/>
-				<xs:attribute name="Sizeable" type="ifc:IfcBoolean" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -3421,6 +3410,14 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:element name="IfcFaceExcavation" type="ifc:IfcFaceExcavation" substitutionGroup="ifc:IfcUndergroundExcavation" nillable="true"/>
+	<xs:complexType name="IfcFaceExcavation">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcUndergroundExcavation">
+				<xs:attribute name="PredefinedType" type="ifc:IfcFaceExcavationTypeEnum" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="IfcFaceOuterBound" type="ifc:IfcFaceOuterBound" substitutionGroup="ifc:IfcFaceBound" nillable="true"/>
 	<xs:complexType name="IfcFaceOuterBound">
 		<xs:complexContent>
@@ -3853,10 +3850,10 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="IfcGeoScienceFeatureType" type="ifc:IfcGeoScienceFeatureType" substitutionGroup="ifc:Entity" nillable="true"/>
+	<xs:element name="IfcGeoScienceFeatureType" type="ifc:IfcGeoScienceFeatureType" substitutionGroup="ifc:IfcGeoScienceElementType" nillable="true"/>
 	<xs:complexType name="IfcGeoScienceFeatureType">
 		<xs:complexContent>
-			<xs:extension base="ifc:Entity">
+			<xs:extension base="ifc:IfcGeoScienceElementType">
 				<xs:attribute name="PredefinedType" type="ifc:IfcGeoScienceFeatureTypeEnum" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
@@ -3869,10 +3866,10 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="IfcGeoScienceModelType" type="ifc:IfcGeoScienceModelType" substitutionGroup="ifc:Entity" nillable="true"/>
+	<xs:element name="IfcGeoScienceModelType" type="ifc:IfcGeoScienceModelType" substitutionGroup="ifc:IfcGeoScienceElementType" nillable="true"/>
 	<xs:complexType name="IfcGeoScienceModelType">
 		<xs:complexContent>
-			<xs:extension base="ifc:Entity">
+			<xs:extension base="ifc:IfcGeoScienceElementType">
 				<xs:attribute name="PredefinedType" type="ifc:IfcGeoScienceModelTypeEnum" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
@@ -4337,13 +4334,12 @@ of the material. The information contained in this document is subject to change
 						</xs:complexType>
 					</xs:element>
 				</xs:sequence>
-				<xs:attribute name="Values" use="optional">
+				<xs:attribute name="ValueData" use="optional">
 					<xs:simpleType>
 						<xs:restriction>
 							<xs:simpleType>
 								<xs:list itemType="ifc:IfcInteger"/>
 							</xs:simpleType>
-							<xs:minLength value="0"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:attribute>
@@ -4486,13 +4482,12 @@ of the material. The information contained in this document is subject to change
 	<xs:complexType name="IfcLabelVoxelData">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcVoxelData">
-				<xs:attribute name="Values" use="optional">
+				<xs:attribute name="ValueData" use="optional">
 					<xs:simpleType>
 						<xs:restriction>
 							<xs:simpleType>
 								<xs:list itemType="ifc:IfcLabel"/>
 							</xs:simpleType>
-							<xs:minLength value="0"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:attribute>
@@ -4788,13 +4783,12 @@ of the material. The information contained in this document is subject to change
 	<xs:complexType name="IfcLogicalVoxelData">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcVoxelData">
-				<xs:attribute name="Values" use="optional">
+				<xs:attribute name="ValueData" use="optional">
 					<xs:simpleType>
 						<xs:restriction>
 							<xs:simpleType>
 								<xs:list itemType="ifc:IfcLogical"/>
 							</xs:simpleType>
-							<xs:minLength value="0"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:attribute>
@@ -4834,9 +4828,9 @@ of the material. The information contained in this document is subject to change
 	<xs:complexType name="IfcMapConversionScaled">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcMapConversion">
-				<xs:attribute name="ScaleX" type="ifc:IfcReal" use="optional"/>
-				<xs:attribute name="ScaleY" type="ifc:IfcReal" use="optional"/>
-				<xs:attribute name="ScaleZ" type="ifc:IfcReal" use="optional"/>
+				<xs:attribute name="FactorX" type="ifc:IfcReal" use="optional"/>
+				<xs:attribute name="FactorY" type="ifc:IfcReal" use="optional"/>
+				<xs:attribute name="FactorZ" type="ifc:IfcReal" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -5148,7 +5142,7 @@ of the material. The information contained in this document is subject to change
 						</xs:complexType>
 					</xs:element>
 				</xs:sequence>
-				<xs:attribute name="Expression" type="ifc:IfcLabel" use="optional"/>
+				<xs:attribute name="MaterialExpression" type="ifc:IfcLabel" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -6761,6 +6755,15 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:element name="IfcQuantityNumber" type="ifc:IfcQuantityNumber" substitutionGroup="ifc:IfcPhysicalSimpleQuantity" nillable="true"/>
+	<xs:complexType name="IfcQuantityNumber">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcPhysicalSimpleQuantity">
+				<xs:attribute name="NumberValue" type="ifc:IfcNumericMeasure" use="optional"/>
+				<xs:attribute name="Formula" type="ifc:IfcLabel" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="IfcQuantitySet" type="ifc:IfcQuantitySet" abstract="true" substitutionGroup="ifc:IfcPropertySetDefinition" nillable="true"/>
 	<xs:complexType name="IfcQuantitySet" abstract="true">
 		<xs:complexContent>
@@ -6791,6 +6794,14 @@ of the material. The information contained in this document is subject to change
 			<xs:extension base="ifc:IfcPhysicalSimpleQuantity">
 				<xs:attribute name="WeightValue" type="ifc:IfcMassMeasure" use="optional"/>
 				<xs:attribute name="Formula" type="ifc:IfcLabel" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcRadialExcavation" type="ifc:IfcRadialExcavation" substitutionGroup="ifc:IfcUndergroundExcavation" nillable="true"/>
+	<xs:complexType name="IfcRadialExcavation">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcUndergroundExcavation">
+				<xs:attribute name="PredefinedType" type="ifc:IfcRadialExcavationTypeEnum" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -6921,13 +6932,12 @@ of the material. The information contained in this document is subject to change
 						</xs:complexType>
 					</xs:element>
 				</xs:sequence>
-				<xs:attribute name="Values" use="optional">
+				<xs:attribute name="ValueData" use="optional">
 					<xs:simpleType>
 						<xs:restriction>
 							<xs:simpleType>
 								<xs:list itemType="ifc:IfcReal"/>
 							</xs:simpleType>
-							<xs:minLength value="0"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:attribute>
@@ -7076,6 +7086,14 @@ of the material. The information contained in this document is subject to change
 					</xs:element>
 				</xs:sequence>
 				<xs:attribute name="TimeStep" type="ifc:IfcTimeMeasure" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcReinforcedSoil" type="ifc:IfcReinforcedSoil" substitutionGroup="ifc:IfcEarthworksElement" nillable="true"/>
+	<xs:complexType name="IfcReinforcedSoil">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcEarthworksElement">
+				<xs:attribute name="PredefinedType" type="ifc:IfcReinforcedSoilTypeEnum" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -8771,7 +8789,7 @@ of the material. The information contained in this document is subject to change
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcCurve">
 				<xs:sequence>
-					<xs:element name="Position" nillable="true" minOccurs="0">
+					<xs:element name="Position">
 						<xs:complexType>
 							<xs:group ref="ifc:IfcAxis2Placement"/>
 						</xs:complexType>
@@ -8915,7 +8933,7 @@ of the material. The information contained in this document is subject to change
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcStructuralConnection">
 				<xs:sequence>
-					<xs:element name="Axis" type="ifc:IfcDirection" nillable="true"/>
+					<xs:element name="AxisDirection" type="ifc:IfcDirection" nillable="true"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -9516,7 +9534,7 @@ of the material. The information contained in this document is subject to change
 	<xs:complexType name="IfcSweptDiskSolidPolygonal">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcSweptDiskSolid">
-				<xs:attribute name="FilletRadius" type="ifc:IfcPositiveLengthMeasure" use="optional"/>
+				<xs:attribute name="FilletRadius" type="ifc:IfcNonNegativeLengthMeasure" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -9834,7 +9852,6 @@ of the material. The information contained in this document is subject to change
 			<xs:extension base="ifc:IfcTessellatedItem">
 				<xs:sequence>
 					<xs:element name="Coordinates" type="ifc:IfcCartesianPointList3D" nillable="true"/>
-					<xs:element name="HasColours" type="ifc:IfcIndexedColourMap" nillable="true" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="HasTextures" nillable="true" minOccurs="0">
 						<xs:complexType>
 							<xs:sequence>
@@ -9852,7 +9869,11 @@ of the material. The information contained in this document is subject to change
 	<xs:element name="IfcTessellatedItem" type="ifc:IfcTessellatedItem" abstract="true" substitutionGroup="ifc:IfcGeometricRepresentationItem" nillable="true"/>
 	<xs:complexType name="IfcTessellatedItem" abstract="true">
 		<xs:complexContent>
-			<xs:extension base="ifc:IfcGeometricRepresentationItem"/>
+			<xs:extension base="ifc:IfcGeometricRepresentationItem">
+				<xs:sequence>
+					<xs:element name="HasColours" type="ifc:IfcIndexedColourMap" nillable="true" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="IfcTextLiteral" type="ifc:IfcTextLiteral" substitutionGroup="ifc:IfcGeometricRepresentationItem" nillable="true"/>
@@ -10037,7 +10058,7 @@ of the material. The information contained in this document is subject to change
 	<xs:complexType name="IfcTextureCoordinateIndicesWithVoids">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcTextureCoordinateIndices">
-				<xs:attribute name="InnerTexCoordIndicies" use="optional">
+				<xs:attribute name="InnerTexCoordIndices" use="optional">
 					<xs:simpleType>
 						<xs:restriction>
 							<xs:simpleType>
@@ -10224,10 +10245,10 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="IfcTransportElementType" type="ifc:IfcTransportElementType" substitutionGroup="ifc:IfcElementType" nillable="true"/>
+	<xs:element name="IfcTransportElementType" type="ifc:IfcTransportElementType" substitutionGroup="ifc:IfcTransportationDeviceType" nillable="true"/>
 	<xs:complexType name="IfcTransportElementType">
 		<xs:complexContent>
-			<xs:extension base="ifc:IfcElementType">
+			<xs:extension base="ifc:IfcTransportationDeviceType">
 				<xs:attribute name="PredefinedType" type="ifc:IfcTransportElementTypeEnum" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
@@ -10450,12 +10471,10 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="IfcUndergroundExcavation" type="ifc:IfcUndergroundExcavation" substitutionGroup="ifc:IfcExcavation" nillable="true"/>
-	<xs:complexType name="IfcUndergroundExcavation">
+	<xs:element name="IfcUndergroundExcavation" type="ifc:IfcUndergroundExcavation" abstract="true" substitutionGroup="ifc:IfcExcavation" nillable="true"/>
+	<xs:complexType name="IfcUndergroundExcavation" abstract="true">
 		<xs:complexContent>
-			<xs:extension base="ifc:IfcExcavation">
-				<xs:attribute name="PredefinedType" type="ifc:IfcUndergroundExcavationTypeEnum" use="optional"/>
-			</xs:extension>
+			<xs:extension base="ifc:IfcExcavation"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="IfcUnitAssignment" type="ifc:IfcUnitAssignment" substitutionGroup="ifc:Entity" nillable="true"/>
@@ -10539,13 +10558,13 @@ of the material. The information contained in this document is subject to change
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcVoxelData">
 				<xs:sequence>
-					<xs:element name="Values">
+					<xs:element name="ValueData">
 						<xs:complexType>
 							<xs:sequence>
 								<xs:element ref="ifc:IfcVector" maxOccurs="unbounded"/>
 							</xs:sequence>
 							<xs:attribute ref="ifc:itemType" fixed="ifc:IfcVector"/>
-							<xs:attribute ref="ifc:cType" fixed="array"/>
+							<xs:attribute ref="ifc:cType" fixed="list"/>
 							<xs:attribute ref="ifc:arraySize" use="optional"/>
 						</xs:complexType>
 					</xs:element>
@@ -10686,22 +10705,23 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="IfcVoxelGrid" type="ifc:IfcVoxelGrid" substitutionGroup="ifc:IfcSolidModel" nillable="true"/>
+	<xs:element name="IfcVoxelGrid" type="ifc:IfcVoxelGrid" substitutionGroup="ifc:IfcTessellatedItem" nillable="true"/>
 	<xs:complexType name="IfcVoxelGrid">
 		<xs:complexContent>
-			<xs:extension base="ifc:IfcSolidModel">
+			<xs:extension base="ifc:IfcTessellatedItem">
 				<xs:attribute name="VoxelSizeX" type="ifc:IfcNonNegativeLengthMeasure" use="optional"/>
 				<xs:attribute name="VoxelSizeY" type="ifc:IfcNonNegativeLengthMeasure" use="optional"/>
 				<xs:attribute name="VoxelSizeZ" type="ifc:IfcNonNegativeLengthMeasure" use="optional"/>
-				<xs:attribute name="NumberOfVoxelsX" type="ifc:IfcInteger" use="optional"/>
-				<xs:attribute name="NumberOfVoxelsY" type="ifc:IfcInteger" use="optional"/>
-				<xs:attribute name="NumberOfVoxelsZ" type="ifc:IfcInteger" use="optional"/>
+				<xs:attribute name="NumberOfVoxelsX" type="ifc:IfcPositiveInteger" use="optional"/>
+				<xs:attribute name="NumberOfVoxelsY" type="ifc:IfcPositiveInteger" use="optional"/>
+				<xs:attribute name="NumberOfVoxelsZ" type="ifc:IfcPositiveInteger" use="optional"/>
 				<xs:attribute name="Voxels" use="optional">
 					<xs:simpleType>
 						<xs:restriction>
 							<xs:simpleType>
 								<xs:list itemType="ifc:IfcBoolean"/>
 							</xs:simpleType>
+							<xs:minLength value="0"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:attribute>
@@ -10746,12 +10766,12 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="IfcWellKnownText" type="ifc:IfcWellKnownText" substitutionGroup="ifc:IfcGeometricRepresentationItem" nillable="true"/>
+	<xs:element name="IfcWellKnownText" type="ifc:IfcWellKnownText" substitutionGroup="ifc:Entity" nillable="true"/>
 	<xs:complexType name="IfcWellKnownText">
 		<xs:complexContent>
-			<xs:extension base="ifc:IfcGeometricRepresentationItem">
+			<xs:extension base="ifc:Entity">
 				<xs:sequence>
-					<xs:element name="CoordinateReferenceSystem" type="ifc:IfcCoordinateReferenceSystem" nillable="true" minOccurs="0"/>
+					<xs:element name="CoordinateReferenceSystem" type="ifc:IfcCoordinateReferenceSystem" nillable="true"/>
 				</xs:sequence>
 				<xs:attribute name="WellKnownText" type="ifc:IfcWellKnownTextLiteral" use="optional"/>
 			</xs:extension>
@@ -10801,17 +10821,6 @@ of the material. The information contained in this document is subject to change
 				<xs:attribute name="PanelPosition" type="ifc:IfcWindowPanelPositionEnum" use="optional"/>
 				<xs:attribute name="FrameDepth" type="ifc:IfcPositiveLengthMeasure" use="optional"/>
 				<xs:attribute name="FrameThickness" type="ifc:IfcPositiveLengthMeasure" use="optional"/>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="IfcWindowStyle" type="ifc:IfcWindowStyle" substitutionGroup="ifc:IfcTypeProduct" nillable="true"/>
-	<xs:complexType name="IfcWindowStyle">
-		<xs:complexContent>
-			<xs:extension base="ifc:IfcTypeProduct">
-				<xs:attribute name="ConstructionType" type="ifc:IfcWindowStyleConstructionEnum" use="optional"/>
-				<xs:attribute name="OperationType" type="ifc:IfcWindowStyleOperationEnum" use="optional"/>
-				<xs:attribute name="ParameterTakesPrecedence" type="ifc:IfcBoolean" use="optional"/>
-				<xs:attribute name="Sizeable" type="ifc:IfcBoolean" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -10904,8 +10913,8 @@ of the material. The information contained in this document is subject to change
 				<xs:sequence>
 					<xs:element name="RecurrencePattern" type="ifc:IfcRecurrencePattern" nillable="true" minOccurs="0"/>
 				</xs:sequence>
-				<xs:attribute name="Start" type="ifc:IfcDate" use="optional"/>
-				<xs:attribute name="Finish" type="ifc:IfcDate" use="optional"/>
+				<xs:attribute name="StartDate" type="ifc:IfcDate" use="optional"/>
+				<xs:attribute name="FinishDate" type="ifc:IfcDate" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -11119,7 +11128,7 @@ of the material. The information contained in this document is subject to change
 	</xs:group>
 	<xs:group name="IfcCurveMeasureSelect">
 		<xs:choice>
-			<xs:element ref="ifc:IfcNonNegativeLengthMeasure-wrapper"/>
+			<xs:element ref="ifc:IfcLengthMeasure-wrapper"/>
 			<xs:element ref="ifc:IfcParameterValue-wrapper"/>
 		</xs:choice>
 	</xs:group>
@@ -11790,40 +11799,40 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcActionSourceTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="dead_load_g"/>
-			<xs:enumeration value="completion_g1"/>
-			<xs:enumeration value="live_load_q"/>
-			<xs:enumeration value="snow_s"/>
-			<xs:enumeration value="wind_w"/>
-			<xs:enumeration value="prestressing_p"/>
-			<xs:enumeration value="settlement_u"/>
-			<xs:enumeration value="temperature_t"/>
-			<xs:enumeration value="earthquake_e"/>
-			<xs:enumeration value="fire"/>
-			<xs:enumeration value="impulse"/>
-			<xs:enumeration value="impact"/>
-			<xs:enumeration value="transport"/>
-			<xs:enumeration value="erection"/>
-			<xs:enumeration value="propping"/>
-			<xs:enumeration value="system_imperfection"/>
-			<xs:enumeration value="shrinkage"/>
-			<xs:enumeration value="creep"/>
-			<xs:enumeration value="lack_of_fit"/>
-			<xs:enumeration value="buoyancy"/>
-			<xs:enumeration value="ice"/>
-			<xs:enumeration value="current"/>
-			<xs:enumeration value="wave"/>
-			<xs:enumeration value="rain"/>
 			<xs:enumeration value="brakes"/>
+			<xs:enumeration value="buoyancy"/>
+			<xs:enumeration value="completion_g1"/>
+			<xs:enumeration value="creep"/>
+			<xs:enumeration value="current"/>
+			<xs:enumeration value="dead_load_g"/>
+			<xs:enumeration value="earthquake_e"/>
+			<xs:enumeration value="erection"/>
+			<xs:enumeration value="fire"/>
+			<xs:enumeration value="ice"/>
+			<xs:enumeration value="impact"/>
+			<xs:enumeration value="impulse"/>
+			<xs:enumeration value="lack_of_fit"/>
+			<xs:enumeration value="live_load_q"/>
+			<xs:enumeration value="prestressing_p"/>
+			<xs:enumeration value="propping"/>
+			<xs:enumeration value="rain"/>
+			<xs:enumeration value="settlement_u"/>
+			<xs:enumeration value="shrinkage"/>
+			<xs:enumeration value="snow_s"/>
+			<xs:enumeration value="system_imperfection"/>
+			<xs:enumeration value="temperature_t"/>
+			<xs:enumeration value="transport"/>
+			<xs:enumeration value="wave"/>
+			<xs:enumeration value="wind_w"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcActionTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="extraordinary_a"/>
 			<xs:enumeration value="permanent_g"/>
 			<xs:enumeration value="variable_q"/>
-			<xs:enumeration value="extraordinary_a"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -11841,10 +11850,10 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcAddressTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="distributionpoint"/>
+			<xs:enumeration value="home"/>
 			<xs:enumeration value="office"/>
 			<xs:enumeration value="site"/>
-			<xs:enumeration value="home"/>
-			<xs:enumeration value="distributionpoint"/>
 			<xs:enumeration value="userdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
@@ -11872,12 +11881,12 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="fixedplatecounterflowexchanger"/>
 			<xs:enumeration value="fixedplatecrossflowexchanger"/>
 			<xs:enumeration value="fixedplateparallelflowexchanger"/>
+			<xs:enumeration value="heatpipe"/>
 			<xs:enumeration value="rotarywheel"/>
 			<xs:enumeration value="runaroundcoilloop"/>
-			<xs:enumeration value="heatpipe"/>
-			<xs:enumeration value="twintowerenthalpyrecoveryloops"/>
-			<xs:enumeration value="thermosiphonsealedtubeheatexchangers"/>
 			<xs:enumeration value="thermosiphoncoiltypeheatexchangers"/>
+			<xs:enumeration value="thermosiphonsealedtubeheatexchangers"/>
+			<xs:enumeration value="twintowerenthalpyrecoveryloops"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -11888,10 +11897,10 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="breakglassbutton"/>
 			<xs:enumeration value="light"/>
 			<xs:enumeration value="manualpullbox"/>
-			<xs:enumeration value="siren"/>
-			<xs:enumeration value="whistle"/>
 			<xs:enumeration value="railwaycrocodile"/>
 			<xs:enumeration value="railwaydetonator"/>
+			<xs:enumeration value="siren"/>
+			<xs:enumeration value="whistle"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -11909,13 +11918,13 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcAlignmentHorizontalSegmentTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="line"/>
+			<xs:enumeration value="blosscurve"/>
 			<xs:enumeration value="circulararc"/>
 			<xs:enumeration value="clothoid"/>
+			<xs:enumeration value="cosinecurve"/>
 			<xs:enumeration value="cubic"/>
 			<xs:enumeration value="helmertcurve"/>
-			<xs:enumeration value="blosscurve"/>
-			<xs:enumeration value="cosinecurve"/>
+			<xs:enumeration value="line"/>
 			<xs:enumeration value="sinecurve"/>
 			<xs:enumeration value="viennesebend"/>
 		</xs:restriction>
@@ -11928,17 +11937,17 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcAlignmentVerticalSegmentTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="constantgradient"/>
 			<xs:enumeration value="circulararc"/>
-			<xs:enumeration value="parabolicarc"/>
 			<xs:enumeration value="clothoid"/>
+			<xs:enumeration value="constantgradient"/>
+			<xs:enumeration value="parabolicarc"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcAnalysisModelTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="in_plane_loading_2d"/>
-			<xs:enumeration value="out_plane_loading_2d"/>
 			<xs:enumeration value="loading_3d"/>
+			<xs:enumeration value="out_plane_loading_2d"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -11946,32 +11955,33 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcAnalysisTheoryTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="first_order_theory"/>
+			<xs:enumeration value="full_nonlinear_theory"/>
 			<xs:enumeration value="second_order_theory"/>
 			<xs:enumeration value="third_order_theory"/>
-			<xs:enumeration value="full_nonlinear_theory"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcAnnotationTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="assumedpoint"/>
-			<xs:enumeration value="asbuiltarea"/>
-			<xs:enumeration value="asbuiltline"/>
-			<xs:enumeration value="non_physical_signal"/>
-			<xs:enumeration value="assumedline"/>
-			<xs:enumeration value="widthevent"/>
-			<xs:enumeration value="assumedarea"/>
-			<xs:enumeration value="superelevationevent"/>
-			<xs:enumeration value="asbuiltpoint"/>
+			<xs:enumeration value="contourline"/>
+			<xs:enumeration value="dimension"/>
+			<xs:enumeration value="isobar"/>
+			<xs:enumeration value="isolux"/>
+			<xs:enumeration value="isotherm"/>
+			<xs:enumeration value="leader"/>
+			<xs:enumeration value="survey"/>
+			<xs:enumeration value="symbol"/>
+			<xs:enumeration value="text"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcArchElementTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="segment"/>
 			<xs:enumeration value="lining"/>
+			<xs:enumeration value="segment"/>
+			<xs:enumeration value="steelrib"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -11980,77 +11990,78 @@ of the material. The information contained in this document is subject to change
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="add"/>
 			<xs:enumeration value="divide"/>
+			<xs:enumeration value="modulo"/>
 			<xs:enumeration value="multiply"/>
 			<xs:enumeration value="subtract"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcAssemblyPlaceEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="site"/>
 			<xs:enumeration value="factory"/>
+			<xs:enumeration value="site"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcAudioVisualApplianceTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="amplifier"/>
+			<xs:enumeration value="beacon"/>
 			<xs:enumeration value="camera"/>
+			<xs:enumeration value="communicationterminal"/>
 			<xs:enumeration value="display"/>
 			<xs:enumeration value="microphone"/>
 			<xs:enumeration value="player"/>
 			<xs:enumeration value="projector"/>
 			<xs:enumeration value="receiver"/>
+			<xs:enumeration value="recordingequipment"/>
+			<xs:enumeration value="siren"/>
 			<xs:enumeration value="speaker"/>
 			<xs:enumeration value="switcher"/>
 			<xs:enumeration value="telephone"/>
 			<xs:enumeration value="tuner"/>
-			<xs:enumeration value="communicationterminal"/>
-			<xs:enumeration value="recordingequipment"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
-			<xs:enumeration value="siren"/>
-			<xs:enumeration value="beacon"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcBSplineCurveForm">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="polyline_form"/>
 			<xs:enumeration value="circular_arc"/>
 			<xs:enumeration value="elliptic_arc"/>
-			<xs:enumeration value="parabolic_arc"/>
 			<xs:enumeration value="hyperbolic_arc"/>
+			<xs:enumeration value="parabolic_arc"/>
+			<xs:enumeration value="polyline_form"/>
 			<xs:enumeration value="unspecified"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcBSplineSurfaceForm">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="plane_surf"/>
-			<xs:enumeration value="cylindrical_surf"/>
 			<xs:enumeration value="conical_surf"/>
-			<xs:enumeration value="spherical_surf"/>
-			<xs:enumeration value="toroidal_surf"/>
-			<xs:enumeration value="surf_of_revolution"/>
-			<xs:enumeration value="ruled_surf"/>
+			<xs:enumeration value="cylindrical_surf"/>
 			<xs:enumeration value="generalised_cone"/>
+			<xs:enumeration value="plane_surf"/>
 			<xs:enumeration value="quadric_surf"/>
+			<xs:enumeration value="ruled_surf"/>
+			<xs:enumeration value="spherical_surf"/>
 			<xs:enumeration value="surf_of_linear_extrusion"/>
+			<xs:enumeration value="surf_of_revolution"/>
+			<xs:enumeration value="toroidal_surf"/>
 			<xs:enumeration value="unspecified"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcBeamTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="beam"/>
-			<xs:enumeration value="joist"/>
+			<xs:enumeration value="cornice"/>
+			<xs:enumeration value="diaphragm"/>
+			<xs:enumeration value="edgebeam"/>
+			<xs:enumeration value="girder_segment"/>
+			<xs:enumeration value="hatstone"/>
 			<xs:enumeration value="hollowcore"/>
+			<xs:enumeration value="joist"/>
 			<xs:enumeration value="lintel"/>
+			<xs:enumeration value="piercap"/>
 			<xs:enumeration value="spandrel"/>
 			<xs:enumeration value="t_beam"/>
-			<xs:enumeration value="girder_segment"/>
-			<xs:enumeration value="diaphragm"/>
-			<xs:enumeration value="piercap"/>
-			<xs:enumeration value="hatstone"/>
-			<xs:enumeration value="cornice"/>
-			<xs:enumeration value="edgebeam"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12058,44 +12069,44 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcBearingTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="cylindrical"/>
-			<xs:enumeration value="spherical"/>
+			<xs:enumeration value="disk"/>
 			<xs:enumeration value="elastomeric"/>
-			<xs:enumeration value="pot"/>
 			<xs:enumeration value="guide"/>
+			<xs:enumeration value="pot"/>
 			<xs:enumeration value="rocker"/>
 			<xs:enumeration value="roller"/>
-			<xs:enumeration value="disk"/>
+			<xs:enumeration value="spherical"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcBenchmarkEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="equalto"/>
 			<xs:enumeration value="greaterthan"/>
 			<xs:enumeration value="greaterthanorequalto"/>
+			<xs:enumeration value="includedin"/>
+			<xs:enumeration value="includes"/>
 			<xs:enumeration value="lessthan"/>
 			<xs:enumeration value="lessthanorequalto"/>
-			<xs:enumeration value="equalto"/>
 			<xs:enumeration value="notequalto"/>
-			<xs:enumeration value="includes"/>
-			<xs:enumeration value="notincludes"/>
-			<xs:enumeration value="includedin"/>
 			<xs:enumeration value="notincludedin"/>
+			<xs:enumeration value="notincludes"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcBoilerTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="water"/>
 			<xs:enumeration value="steam"/>
+			<xs:enumeration value="water"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcBooleanOperator">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="union"/>
-			<xs:enumeration value="intersection"/>
 			<xs:enumeration value="difference"/>
+			<xs:enumeration value="intersection"/>
+			<xs:enumeration value="union"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcBoreholeTypeEnum">
@@ -12139,10 +12150,10 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcBuildingElementPartTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="insulation"/>
-			<xs:enumeration value="precastpanel"/>
 			<xs:enumeration value="apron"/>
 			<xs:enumeration value="armourunit"/>
+			<xs:enumeration value="insulation"/>
+			<xs:enumeration value="precastpanel"/>
 			<xs:enumeration value="safetycage"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -12153,8 +12164,8 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="complex"/>
 			<xs:enumeration value="element"/>
 			<xs:enumeration value="partial"/>
-			<xs:enumeration value="provisionforvoid"/>
 			<xs:enumeration value="provisionforspace"/>
+			<xs:enumeration value="provisionforvoid"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12173,24 +12184,24 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcBuiltSystemTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="reinforcing"/>
-			<xs:enumeration value="mooring"/>
-			<xs:enumeration value="outershell"/>
-			<xs:enumeration value="trackcircuit"/>
 			<xs:enumeration value="erosionprevention"/>
+			<xs:enumeration value="fenestration"/>
+			<xs:enumeration value="fireprotection"/>
 			<xs:enumeration value="foundation"/>
 			<xs:enumeration value="loadbearing"/>
-			<xs:enumeration value="shading"/>
-			<xs:enumeration value="fenestration"/>
-			<xs:enumeration value="transport"/>
+			<xs:enumeration value="mooring"/>
+			<xs:enumeration value="outershell"/>
 			<xs:enumeration value="prestressing"/>
 			<xs:enumeration value="railwayline"/>
 			<xs:enumeration value="railwaytrack"/>
+			<xs:enumeration value="reinforcing"/>
+			<xs:enumeration value="shading"/>
+			<xs:enumeration value="trackcircuit"/>
+			<xs:enumeration value="transport"/>
+			<xs:enumeration value="tunnel_lining"/>
 			<xs:enumeration value="tunnel_presupport"/>
 			<xs:enumeration value="tunnel_support"/>
-			<xs:enumeration value="tunnel_lining"/>
 			<xs:enumeration value="waterproofing"/>
-			<xs:enumeration value="fireprotection"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12206,8 +12217,8 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="bend"/>
 			<xs:enumeration value="connector"/>
 			<xs:enumeration value="cross"/>
-			<xs:enumeration value="reducer"/>
 			<xs:enumeration value="junction"/>
+			<xs:enumeration value="reducer"/>
 			<xs:enumeration value="tee"/>
 			<xs:enumeration value="transition"/>
 			<xs:enumeration value="userdefined"/>
@@ -12216,12 +12227,12 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcCableCarrierSegmentTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="cablebracket"/>
 			<xs:enumeration value="cableladdersegment"/>
 			<xs:enumeration value="cabletraysegment"/>
 			<xs:enumeration value="cabletrunkingsegment"/>
-			<xs:enumeration value="conduitsegment"/>
-			<xs:enumeration value="cablebracket"/>
 			<xs:enumeration value="catenarywire"/>
+			<xs:enumeration value="conduitsegment"/>
 			<xs:enumeration value="dropper"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -12232,9 +12243,9 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="connector"/>
 			<xs:enumeration value="entry"/>
 			<xs:enumeration value="exit"/>
+			<xs:enumeration value="fanout"/>
 			<xs:enumeration value="junction"/>
 			<xs:enumeration value="transition"/>
-			<xs:enumeration value="fanout"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12244,8 +12255,8 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="busbarsegment"/>
 			<xs:enumeration value="cablesegment"/>
 			<xs:enumeration value="conductorsegment"/>
-			<xs:enumeration value="coresegment"/>
 			<xs:enumeration value="contactwiresegment"/>
+			<xs:enumeration value="coresegment"/>
 			<xs:enumeration value="fibersegment"/>
 			<xs:enumeration value="fibertube"/>
 			<xs:enumeration value="opticalcablesegment"/>
@@ -12257,26 +12268,26 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcCaissonFoundationTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="well"/>
 			<xs:enumeration value="caisson"/>
+			<xs:enumeration value="well"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcChangeActionEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="nochange"/>
-			<xs:enumeration value="modified"/>
 			<xs:enumeration value="added"/>
 			<xs:enumeration value="deleted"/>
+			<xs:enumeration value="modified"/>
+			<xs:enumeration value="nochange"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcChillerTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="aircooled"/>
-			<xs:enumeration value="watercooled"/>
 			<xs:enumeration value="heatrecovery"/>
+			<xs:enumeration value="watercooled"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12303,9 +12314,9 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcColumnTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="column"/>
-			<xs:enumeration value="pilaster"/>
 			<xs:enumeration value="pierstem"/>
 			<xs:enumeration value="pierstem_segment"/>
+			<xs:enumeration value="pilaster"/>
 			<xs:enumeration value="standcolumn"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -12314,29 +12325,29 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcCommunicationsApplianceTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="antenna"/>
+			<xs:enumeration value="automaton"/>
 			<xs:enumeration value="computer"/>
 			<xs:enumeration value="fax"/>
 			<xs:enumeration value="gateway"/>
+			<xs:enumeration value="intelligentperipheral"/>
+			<xs:enumeration value="ipnetworkequipment"/>
+			<xs:enumeration value="linesideelectronicunit"/>
 			<xs:enumeration value="modem"/>
 			<xs:enumeration value="networkappliance"/>
 			<xs:enumeration value="networkbridge"/>
 			<xs:enumeration value="networkhub"/>
+			<xs:enumeration value="opticallineterminal"/>
+			<xs:enumeration value="opticalnetworkunit"/>
 			<xs:enumeration value="printer"/>
+			<xs:enumeration value="radioblockcenter"/>
 			<xs:enumeration value="repeater"/>
 			<xs:enumeration value="router"/>
 			<xs:enumeration value="scanner"/>
-			<xs:enumeration value="automaton"/>
-			<xs:enumeration value="intelligentperipheral"/>
-			<xs:enumeration value="ipnetworkequipment"/>
-			<xs:enumeration value="opticalnetworkunit"/>
 			<xs:enumeration value="telecommand"/>
 			<xs:enumeration value="telephonyexchange"/>
 			<xs:enumeration value="transitioncomponent"/>
 			<xs:enumeration value="transponder"/>
 			<xs:enumeration value="transportequipment"/>
-			<xs:enumeration value="opticallineterminal"/>
-			<xs:enumeration value="linesideelectronicunit"/>
-			<xs:enumeration value="radioblockcenter"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12349,21 +12360,21 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcCompressorTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="dynamic"/>
-			<xs:enumeration value="reciprocating"/>
-			<xs:enumeration value="rotary"/>
-			<xs:enumeration value="scroll"/>
-			<xs:enumeration value="trochoidal"/>
-			<xs:enumeration value="singlestage"/>
 			<xs:enumeration value="booster"/>
-			<xs:enumeration value="opentype"/>
+			<xs:enumeration value="dynamic"/>
 			<xs:enumeration value="hermetic"/>
-			<xs:enumeration value="semihermetic"/>
-			<xs:enumeration value="weldedshellhermetic"/>
+			<xs:enumeration value="opentype"/>
+			<xs:enumeration value="reciprocating"/>
 			<xs:enumeration value="rollingpiston"/>
+			<xs:enumeration value="rotary"/>
 			<xs:enumeration value="rotaryvane"/>
+			<xs:enumeration value="scroll"/>
+			<xs:enumeration value="semihermetic"/>
 			<xs:enumeration value="singlescrew"/>
+			<xs:enumeration value="singlestage"/>
+			<xs:enumeration value="trochoidal"/>
 			<xs:enumeration value="twinscrew"/>
+			<xs:enumeration value="weldedshellhermetic"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12383,17 +12394,17 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcConnectionTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="atend"/>
 			<xs:enumeration value="atpath"/>
 			<xs:enumeration value="atstart"/>
-			<xs:enumeration value="atend"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcConstraintEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="advisory"/>
 			<xs:enumeration value="hard"/>
 			<xs:enumeration value="soft"/>
-			<xs:enumeration value="advisory"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12423,8 +12434,8 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="metal"/>
 			<xs:enumeration value="plastic"/>
 			<xs:enumeration value="wood"/>
-			<xs:enumeration value="notdefined"/>
 			<xs:enumeration value="userdefined"/>
+			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcConstructionProductResourceTypeEnum">
@@ -12438,9 +12449,9 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcControllerTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="floating"/>
+			<xs:enumeration value="multiposition"/>
 			<xs:enumeration value="programmable"/>
 			<xs:enumeration value="proportional"/>
-			<xs:enumeration value="multiposition"/>
 			<xs:enumeration value="twoposition"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -12448,10 +12459,10 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcConveyorSegmentTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="chuteconveyor"/>
 			<xs:enumeration value="beltconveyor"/>
-			<xs:enumeration value="screwconveyor"/>
 			<xs:enumeration value="bucketconveyor"/>
+			<xs:enumeration value="chuteconveyor"/>
+			<xs:enumeration value="screwconveyor"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12466,9 +12477,9 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcCoolingTowerTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="naturaldraft"/>
-			<xs:enumeration value="mechanicalinduceddraft"/>
 			<xs:enumeration value="mechanicalforceddraft"/>
+			<xs:enumeration value="mechanicalinduceddraft"/>
+			<xs:enumeration value="naturaldraft"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12484,10 +12495,10 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="budget"/>
 			<xs:enumeration value="costplan"/>
 			<xs:enumeration value="estimate"/>
-			<xs:enumeration value="tender"/>
 			<xs:enumeration value="pricedbillofquantities"/>
-			<xs:enumeration value="unpricedbillofquantities"/>
 			<xs:enumeration value="scheduleofrates"/>
+			<xs:enumeration value="tender"/>
+			<xs:enumeration value="unpricedbillofquantities"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12495,9 +12506,9 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcCourseTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="armour"/>
-			<xs:enumeration value="filter"/>
 			<xs:enumeration value="ballastbed"/>
 			<xs:enumeration value="core"/>
+			<xs:enumeration value="filter"/>
 			<xs:enumeration value="pavement"/>
 			<xs:enumeration value="protection"/>
 			<xs:enumeration value="userdefined"/>
@@ -12507,17 +12518,17 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcCoveringTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="ceiling"/>
-			<xs:enumeration value="flooring"/>
 			<xs:enumeration value="cladding"/>
-			<xs:enumeration value="roofing"/>
-			<xs:enumeration value="molding"/>
-			<xs:enumeration value="skirtingboard"/>
+			<xs:enumeration value="coping"/>
+			<xs:enumeration value="flooring"/>
 			<xs:enumeration value="insulation"/>
 			<xs:enumeration value="membrane"/>
+			<xs:enumeration value="molding"/>
+			<xs:enumeration value="roofing"/>
+			<xs:enumeration value="skirtingboard"/>
 			<xs:enumeration value="sleeving"/>
 			<xs:enumeration value="topping"/>
 			<xs:enumeration value="wrapping"/>
-			<xs:enumeration value="coping"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12572,56 +12583,56 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcDerivedUnitEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="accelerationunit"/>
 			<xs:enumeration value="angularvelocityunit"/>
 			<xs:enumeration value="areadensityunit"/>
 			<xs:enumeration value="compoundplaneangleunit"/>
+			<xs:enumeration value="curvatureunit"/>
 			<xs:enumeration value="dynamicviscosityunit"/>
 			<xs:enumeration value="heatfluxdensityunit"/>
+			<xs:enumeration value="heatingvalueunit"/>
 			<xs:enumeration value="integercountrateunit"/>
+			<xs:enumeration value="ionconcentrationunit"/>
 			<xs:enumeration value="isothermalmoisturecapacityunit"/>
 			<xs:enumeration value="kinematicviscosityunit"/>
+			<xs:enumeration value="linearforceunit"/>
+			<xs:enumeration value="linearmomentunit"/>
+			<xs:enumeration value="linearstiffnessunit"/>
 			<xs:enumeration value="linearvelocityunit"/>
+			<xs:enumeration value="luminousintensitydistributionunit"/>
 			<xs:enumeration value="massdensityunit"/>
 			<xs:enumeration value="massflowrateunit"/>
-			<xs:enumeration value="moisturediffusivityunit"/>
-			<xs:enumeration value="molecularweightunit"/>
-			<xs:enumeration value="specificheatcapacityunit"/>
-			<xs:enumeration value="thermaladmittanceunit"/>
-			<xs:enumeration value="thermalconductanceunit"/>
-			<xs:enumeration value="thermalresistanceunit"/>
-			<xs:enumeration value="thermaltransmittanceunit"/>
-			<xs:enumeration value="vaporpermeabilityunit"/>
-			<xs:enumeration value="volumetricflowrateunit"/>
-			<xs:enumeration value="rotationalfrequencyunit"/>
-			<xs:enumeration value="torqueunit"/>
-			<xs:enumeration value="momentofinertiaunit"/>
-			<xs:enumeration value="linearmomentunit"/>
-			<xs:enumeration value="linearforceunit"/>
-			<xs:enumeration value="planarforceunit"/>
-			<xs:enumeration value="modulusofelasticityunit"/>
-			<xs:enumeration value="shearmodulusunit"/>
-			<xs:enumeration value="linearstiffnessunit"/>
-			<xs:enumeration value="rotationalstiffnessunit"/>
-			<xs:enumeration value="modulusofsubgradereactionunit"/>
-			<xs:enumeration value="accelerationunit"/>
-			<xs:enumeration value="curvatureunit"/>
-			<xs:enumeration value="heatingvalueunit"/>
-			<xs:enumeration value="ionconcentrationunit"/>
-			<xs:enumeration value="luminousintensitydistributionunit"/>
 			<xs:enumeration value="massperlengthunit"/>
+			<xs:enumeration value="modulusofelasticityunit"/>
 			<xs:enumeration value="modulusoflinearsubgradereactionunit"/>
 			<xs:enumeration value="modulusofrotationalsubgradereactionunit"/>
+			<xs:enumeration value="modulusofsubgradereactionunit"/>
+			<xs:enumeration value="moisturediffusivityunit"/>
+			<xs:enumeration value="molecularweightunit"/>
+			<xs:enumeration value="momentofinertiaunit"/>
 			<xs:enumeration value="phunit"/>
+			<xs:enumeration value="planarforceunit"/>
+			<xs:enumeration value="rotationalfrequencyunit"/>
 			<xs:enumeration value="rotationalmassunit"/>
+			<xs:enumeration value="rotationalstiffnessunit"/>
 			<xs:enumeration value="sectionareaintegralunit"/>
 			<xs:enumeration value="sectionmodulusunit"/>
+			<xs:enumeration value="shearmodulusunit"/>
 			<xs:enumeration value="soundpowerlevelunit"/>
 			<xs:enumeration value="soundpowerunit"/>
 			<xs:enumeration value="soundpressurelevelunit"/>
 			<xs:enumeration value="soundpressureunit"/>
+			<xs:enumeration value="specificheatcapacityunit"/>
 			<xs:enumeration value="temperaturegradientunit"/>
 			<xs:enumeration value="temperaturerateofchangeunit"/>
+			<xs:enumeration value="thermaladmittanceunit"/>
+			<xs:enumeration value="thermalconductanceunit"/>
 			<xs:enumeration value="thermalexpansioncoefficientunit"/>
+			<xs:enumeration value="thermalresistanceunit"/>
+			<xs:enumeration value="thermaltransmittanceunit"/>
+			<xs:enumeration value="torqueunit"/>
+			<xs:enumeration value="vaporpermeabilityunit"/>
+			<xs:enumeration value="volumetricflowrateunit"/>
 			<xs:enumeration value="warpingconstantunit"/>
 			<xs:enumeration value="warpingmomentunit"/>
 			<xs:enumeration value="userdefined"/>
@@ -12629,47 +12640,47 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcDirectionSenseEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="positive"/>
 			<xs:enumeration value="negative"/>
+			<xs:enumeration value="positive"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcDiscreteAccessoryTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="anchorplate"/>
+			<xs:enumeration value="birdprotection"/>
 			<xs:enumeration value="bracket"/>
-			<xs:enumeration value="shoe"/>
-			<xs:enumeration value="expansion_joint_device"/>
 			<xs:enumeration value="cablearranger"/>
+			<xs:enumeration value="elastic_cushion"/>
+			<xs:enumeration value="expansion_joint_device"/>
 			<xs:enumeration value="filler"/>
 			<xs:enumeration value="flashing"/>
 			<xs:enumeration value="insulator"/>
 			<xs:enumeration value="lock"/>
-			<xs:enumeration value="tensioningequipment"/>
-			<xs:enumeration value="railpad"/>
-			<xs:enumeration value="slidingchair"/>
-			<xs:enumeration value="rail_lubrication"/>
 			<xs:enumeration value="panel_strengthening"/>
-			<xs:enumeration value="railbrace"/>
-			<xs:enumeration value="elastic_cushion"/>
-			<xs:enumeration value="soundabsorption"/>
 			<xs:enumeration value="pointmachinemountingdevice"/>
 			<xs:enumeration value="point_machine_locking_device"/>
+			<xs:enumeration value="railbrace"/>
+			<xs:enumeration value="railpad"/>
+			<xs:enumeration value="rail_lubrication"/>
 			<xs:enumeration value="rail_mechanical_equipment"/>
-			<xs:enumeration value="birdprotection"/>
-			<xs:enumeration value="water_barrier"/>
+			<xs:enumeration value="shoe"/>
+			<xs:enumeration value="slidingchair"/>
+			<xs:enumeration value="soundabsorption"/>
 			<xs:enumeration value="structural_sealing"/>
+			<xs:enumeration value="tensioningequipment"/>
+			<xs:enumeration value="water_barrier"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcDistributionBoardTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="switchboard"/>
 			<xs:enumeration value="consumerunit"/>
-			<xs:enumeration value="motorcontrolcentre"/>
-			<xs:enumeration value="distributionframe"/>
-			<xs:enumeration value="distributionboard"/>
 			<xs:enumeration value="dispatchingboard"/>
+			<xs:enumeration value="distributionboard"/>
+			<xs:enumeration value="distributionframe"/>
+			<xs:enumeration value="motorcontrolcentre"/>
+			<xs:enumeration value="switchboard"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12703,6 +12714,7 @@ of the material. The information contained in this document is subject to change
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="airconditioning"/>
 			<xs:enumeration value="audiovisual"/>
+			<xs:enumeration value="catenary_system"/>
 			<xs:enumeration value="chemical"/>
 			<xs:enumeration value="chilledwater"/>
 			<xs:enumeration value="communication"/>
@@ -12720,18 +12732,25 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="electroacoustic"/>
 			<xs:enumeration value="exhaust"/>
 			<xs:enumeration value="fireprotection"/>
+			<xs:enumeration value="fixedtransmissionnetwork"/>
 			<xs:enumeration value="fuel"/>
 			<xs:enumeration value="gas"/>
 			<xs:enumeration value="hazardous"/>
 			<xs:enumeration value="heating"/>
 			<xs:enumeration value="lighting"/>
 			<xs:enumeration value="lightningprotection"/>
+			<xs:enumeration value="mobilenetwork"/>
+			<xs:enumeration value="monitoringsystem"/>
 			<xs:enumeration value="municipalsolidwaste"/>
 			<xs:enumeration value="oil"/>
 			<xs:enumeration value="operational"/>
+			<xs:enumeration value="operationaltelephonysystem"/>
+			<xs:enumeration value="overhead_contactline_system"/>
 			<xs:enumeration value="powergeneration"/>
 			<xs:enumeration value="rainwater"/>
 			<xs:enumeration value="refrigeration"/>
+			<xs:enumeration value="return_circuit"/>
+			<xs:enumeration value="safety"/>
 			<xs:enumeration value="security"/>
 			<xs:enumeration value="sewage"/>
 			<xs:enumeration value="signal"/>
@@ -12743,24 +12762,16 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="ventilation"/>
 			<xs:enumeration value="wastewater"/>
 			<xs:enumeration value="watersupply"/>
-			<xs:enumeration value="catenary_system"/>
-			<xs:enumeration value="overhead_contactline_system"/>
-			<xs:enumeration value="return_circuit"/>
-			<xs:enumeration value="fixedtransmissionnetwork"/>
-			<xs:enumeration value="operationaltelephonysystem"/>
-			<xs:enumeration value="mobilenetwork"/>
-			<xs:enumeration value="monitoringsystem"/>
-			<xs:enumeration value="safety"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcDocumentConfidentialityEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="public"/>
-			<xs:enumeration value="restricted"/>
 			<xs:enumeration value="confidential"/>
 			<xs:enumeration value="personal"/>
+			<xs:enumeration value="public"/>
+			<xs:enumeration value="restricted"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12768,21 +12779,21 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcDocumentStatusEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="draft"/>
-			<xs:enumeration value="finaldraft"/>
 			<xs:enumeration value="final"/>
+			<xs:enumeration value="finaldraft"/>
 			<xs:enumeration value="revision"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcDoorPanelOperationEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="swinging"/>
 			<xs:enumeration value="double_acting"/>
-			<xs:enumeration value="sliding"/>
+			<xs:enumeration value="fixedpanel"/>
 			<xs:enumeration value="folding"/>
 			<xs:enumeration value="revolving"/>
 			<xs:enumeration value="rollingup"/>
-			<xs:enumeration value="fixedpanel"/>
+			<xs:enumeration value="sliding"/>
+			<xs:enumeration value="swinging"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12795,47 +12806,12 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="IfcDoorStyleConstructionEnum">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="aluminium"/>
-			<xs:enumeration value="high_grade_steel"/>
-			<xs:enumeration value="steel"/>
-			<xs:enumeration value="wood"/>
-			<xs:enumeration value="aluminium_wood"/>
-			<xs:enumeration value="aluminium_plastic"/>
-			<xs:enumeration value="plastic"/>
-			<xs:enumeration value="userdefined"/>
-			<xs:enumeration value="notdefined"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="IfcDoorStyleOperationEnum">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="single_swing_left"/>
-			<xs:enumeration value="single_swing_right"/>
-			<xs:enumeration value="double_door_single_swing"/>
-			<xs:enumeration value="double_door_single_swing_opposite_left"/>
-			<xs:enumeration value="double_door_single_swing_opposite_right"/>
-			<xs:enumeration value="double_swing_left"/>
-			<xs:enumeration value="double_swing_right"/>
-			<xs:enumeration value="double_door_double_swing"/>
-			<xs:enumeration value="sliding_to_left"/>
-			<xs:enumeration value="sliding_to_right"/>
-			<xs:enumeration value="double_door_sliding"/>
-			<xs:enumeration value="folding_to_left"/>
-			<xs:enumeration value="folding_to_right"/>
-			<xs:enumeration value="double_door_folding"/>
-			<xs:enumeration value="revolving"/>
-			<xs:enumeration value="rollingup"/>
-			<xs:enumeration value="userdefined"/>
-			<xs:enumeration value="notdefined"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:simpleType name="IfcDoorTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="boom_barrier"/>
 			<xs:enumeration value="door"/>
 			<xs:enumeration value="gate"/>
 			<xs:enumeration value="trapdoor"/>
-			<xs:enumeration value="boom_barrier"/>
 			<xs:enumeration value="turnstile"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -12843,29 +12819,29 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcDoorTypeOperationEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="single_swing_left"/>
-			<xs:enumeration value="single_swing_right"/>
-			<xs:enumeration value="double_panel_single_swing"/>
-			<xs:enumeration value="double_panel_single_swing_opposite_left"/>
-			<xs:enumeration value="double_panel_single_swing_opposite_right"/>
+			<xs:enumeration value="double_door_double_swing"/>
+			<xs:enumeration value="double_door_folding"/>
+			<xs:enumeration value="double_door_lifting_vertical"/>
+			<xs:enumeration value="double_door_single_swing"/>
+			<xs:enumeration value="double_door_single_swing_opposite_left"/>
+			<xs:enumeration value="double_door_single_swing_opposite_right"/>
+			<xs:enumeration value="double_door_sliding"/>
 			<xs:enumeration value="double_swing_left"/>
 			<xs:enumeration value="double_swing_right"/>
-			<xs:enumeration value="double_panel_double_swing"/>
-			<xs:enumeration value="sliding_to_left"/>
-			<xs:enumeration value="sliding_to_right"/>
-			<xs:enumeration value="double_panel_sliding"/>
 			<xs:enumeration value="folding_to_left"/>
 			<xs:enumeration value="folding_to_right"/>
-			<xs:enumeration value="double_panel_folding"/>
-			<xs:enumeration value="revolving_horizontal"/>
-			<xs:enumeration value="rollingup"/>
-			<xs:enumeration value="swing_fixed_left"/>
-			<xs:enumeration value="swing_fixed_right"/>
-			<xs:enumeration value="double_panel_lifting_vertical"/>
 			<xs:enumeration value="lifting_horizontal"/>
 			<xs:enumeration value="lifting_vertical_left"/>
 			<xs:enumeration value="lifting_vertical_right"/>
+			<xs:enumeration value="revolving"/>
 			<xs:enumeration value="revolving_vertical"/>
+			<xs:enumeration value="rollingup"/>
+			<xs:enumeration value="single_swing_left"/>
+			<xs:enumeration value="single_swing_right"/>
+			<xs:enumeration value="sliding_to_left"/>
+			<xs:enumeration value="sliding_to_right"/>
+			<xs:enumeration value="swing_fixed_left"/>
+			<xs:enumeration value="swing_fixed_right"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12885,8 +12861,8 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcDuctSegmentTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="rigidsegment"/>
 			<xs:enumeration value="flexiblesegment"/>
+			<xs:enumeration value="rigidsegment"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12903,28 +12879,28 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcEarthingElementTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="earthingstrip"/>
-			<xs:enumeration value="groundingplate"/>
-			<xs:enumeration value="groundingrod"/>
 			<xs:enumeration value="fixedterminal"/>
 			<xs:enumeration value="groundingmesh"/>
-			<xs:enumeration value="notdefined"/>
+			<xs:enumeration value="groundingplate"/>
+			<xs:enumeration value="groundingrod"/>
 			<xs:enumeration value="userdefined"/>
+			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcEarthworksCutTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="trench"/>
+			<xs:enumeration value="anchoredopenexcavation"/>
+			<xs:enumeration value="base_excavation"/>
+			<xs:enumeration value="bracedopenexcavation"/>
+			<xs:enumeration value="confinedopenexcavation"/>
+			<xs:enumeration value="cut"/>
 			<xs:enumeration value="dredging"/>
 			<xs:enumeration value="excavation"/>
 			<xs:enumeration value="overexcavation"/>
-			<xs:enumeration value="topsoilremoval"/>
-			<xs:enumeration value="stepexcavation"/>
 			<xs:enumeration value="pavementmilling"/>
-			<xs:enumeration value="cut"/>
-			<xs:enumeration value="base_excavation"/>
-			<xs:enumeration value="confinedopenexcavation"/>
-			<xs:enumeration value="anchoredopenexcavation"/>
-			<xs:enumeration value="bracedopenexcavation"/>
+			<xs:enumeration value="stepexcavation"/>
+			<xs:enumeration value="topsoilremoval"/>
+			<xs:enumeration value="trench"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12933,11 +12909,11 @@ of the material. The information contained in this document is subject to change
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="backfill"/>
 			<xs:enumeration value="counterweight"/>
-			<xs:enumeration value="subgrade"/>
 			<xs:enumeration value="embankment"/>
-			<xs:enumeration value="transitionsection"/>
-			<xs:enumeration value="subgradebed"/>
 			<xs:enumeration value="slopefill"/>
+			<xs:enumeration value="subgrade"/>
+			<xs:enumeration value="subgradebed"/>
+			<xs:enumeration value="transitionsection"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -12948,8 +12924,8 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="electriccooker"/>
 			<xs:enumeration value="freestandingelectricheater"/>
 			<xs:enumeration value="freestandingfan"/>
-			<xs:enumeration value="freestandingwaterheater"/>
 			<xs:enumeration value="freestandingwatercooler"/>
+			<xs:enumeration value="freestandingwaterheater"/>
 			<xs:enumeration value="freezer"/>
 			<xs:enumeration value="fridge_freezer"/>
 			<xs:enumeration value="handdryer"/>
@@ -12977,14 +12953,14 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcElectricFlowStorageDeviceTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="battery"/>
-			<xs:enumeration value="capacitorbank"/>
-			<xs:enumeration value="harmonicfilter"/>
-			<xs:enumeration value="inductorbank"/>
-			<xs:enumeration value="ups"/>
 			<xs:enumeration value="capacitor"/>
+			<xs:enumeration value="capacitorbank"/>
 			<xs:enumeration value="compensator"/>
+			<xs:enumeration value="harmonicfilter"/>
 			<xs:enumeration value="inductor"/>
+			<xs:enumeration value="inductorbank"/>
 			<xs:enumeration value="recharger"/>
+			<xs:enumeration value="ups"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13018,46 +12994,47 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcElectricTimeControlTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="relay"/>
 			<xs:enumeration value="timeclock"/>
 			<xs:enumeration value="timedelay"/>
-			<xs:enumeration value="relay"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcElementAssemblyTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="abutment"/>
 			<xs:enumeration value="accessory_assembly"/>
 			<xs:enumeration value="arch"/>
 			<xs:enumeration value="beam_grid"/>
 			<xs:enumeration value="braced_frame"/>
-			<xs:enumeration value="girder"/>
-			<xs:enumeration value="reinforcement_unit"/>
-			<xs:enumeration value="rigid_frame"/>
-			<xs:enumeration value="slab_field"/>
-			<xs:enumeration value="truss"/>
-			<xs:enumeration value="abutment"/>
-			<xs:enumeration value="pier"/>
-			<xs:enumeration value="pylon"/>
 			<xs:enumeration value="cross_bracing"/>
 			<xs:enumeration value="deck"/>
-			<xs:enumeration value="mast"/>
-			<xs:enumeration value="signalassembly"/>
+			<xs:enumeration value="dilatationpanel"/>
+			<xs:enumeration value="ductbank"/>
+			<xs:enumeration value="entranceworks"/>
+			<xs:enumeration value="girder"/>
 			<xs:enumeration value="grid"/>
+			<xs:enumeration value="mast"/>
+			<xs:enumeration value="pier"/>
+			<xs:enumeration value="presupportface"/>
+			<xs:enumeration value="presupportvault"/>
+			<xs:enumeration value="pylon"/>
+			<xs:enumeration value="rail_mechanical_equipment_assembly"/>
+			<xs:enumeration value="reinforcement_unit"/>
+			<xs:enumeration value="rigid_frame"/>
+			<xs:enumeration value="ring"/>
 			<xs:enumeration value="shelter"/>
+			<xs:enumeration value="signalassembly"/>
+			<xs:enumeration value="slab_field"/>
+			<xs:enumeration value="sumpbuster"/>
 			<xs:enumeration value="supportingassembly"/>
 			<xs:enumeration value="suspensionassembly"/>
-			<xs:enumeration value="traction_switching_assembly"/>
 			<xs:enumeration value="trackpanel"/>
-			<xs:enumeration value="turnoutpanel"/>
-			<xs:enumeration value="dilatationpanel"/>
-			<xs:enumeration value="rail_mechanical_equipment_assembly"/>
-			<xs:enumeration value="entranceworks"/>
-			<xs:enumeration value="sumpbuster"/>
+			<xs:enumeration value="traction_switching_assembly"/>
 			<xs:enumeration value="traffic_calming_device"/>
-			<xs:enumeration value="ductbank"/>
-			<xs:enumeration value="presupportvault"/>
-			<xs:enumeration value="presupportface"/>
+			<xs:enumeration value="truss"/>
+			<xs:enumeration value="turnoutpanel"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13079,15 +13056,15 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcEvaporativeCoolerTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="directevaporativeairwasher"/>
+			<xs:enumeration value="directevaporativepackagedrotaryaircooler"/>
 			<xs:enumeration value="directevaporativerandommediaaircooler"/>
 			<xs:enumeration value="directevaporativerigidmediaaircooler"/>
 			<xs:enumeration value="directevaporativeslingerspackagedaircooler"/>
-			<xs:enumeration value="directevaporativepackagedrotaryaircooler"/>
-			<xs:enumeration value="directevaporativeairwasher"/>
+			<xs:enumeration value="indirectdirectcombination"/>
+			<xs:enumeration value="indirectevaporativecoolingtowerorcoilcooler"/>
 			<xs:enumeration value="indirectevaporativepackageaircooler"/>
 			<xs:enumeration value="indirectevaporativewetcoil"/>
-			<xs:enumeration value="indirectevaporativecoolingtowerorcoilcooler"/>
-			<xs:enumeration value="indirectdirectcombination"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13095,9 +13072,9 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcEvaporatorTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="directexpansion"/>
+			<xs:enumeration value="directexpansionbrazedplate"/>
 			<xs:enumeration value="directexpansionshellandtube"/>
 			<xs:enumeration value="directexpansiontubeintube"/>
-			<xs:enumeration value="directexpansionbrazedplate"/>
 			<xs:enumeration value="floodedshellandtube"/>
 			<xs:enumeration value="shellandcoil"/>
 			<xs:enumeration value="userdefined"/>
@@ -13106,19 +13083,19 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcEventTriggerTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="eventrule"/>
-			<xs:enumeration value="eventmessage"/>
-			<xs:enumeration value="eventtime"/>
 			<xs:enumeration value="eventcomplex"/>
+			<xs:enumeration value="eventmessage"/>
+			<xs:enumeration value="eventrule"/>
+			<xs:enumeration value="eventtime"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcEventTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="startevent"/>
 			<xs:enumeration value="endevent"/>
 			<xs:enumeration value="intermediateevent"/>
+			<xs:enumeration value="startevent"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13127,22 +13104,34 @@ of the material. The information contained in this document is subject to change
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="external"/>
 			<xs:enumeration value="external_earth"/>
-			<xs:enumeration value="external_water"/>
 			<xs:enumeration value="external_fire"/>
+			<xs:enumeration value="external_water"/>
+			<xs:enumeration value="userdefined"/>
+			<xs:enumeration value="notdefined"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IfcFaceExcavationTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="crossconnection"/>
+			<xs:enumeration value="fullface"/>
+			<xs:enumeration value="pilotbore"/>
+			<xs:enumeration value="reaming"/>
+			<xs:enumeration value="shaft"/>
+			<xs:enumeration value="staged"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcFacilityPartCommonTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="segment"/>
 			<xs:enumeration value="aboveground"/>
+			<xs:enumeration value="belowground"/>
 			<xs:enumeration value="junction"/>
 			<xs:enumeration value="levelcrossing"/>
-			<xs:enumeration value="belowground"/>
+			<xs:enumeration value="segment"/>
 			<xs:enumeration value="substructure"/>
-			<xs:enumeration value="terminal"/>
 			<xs:enumeration value="superstructure"/>
+			<xs:enumeration value="terminal"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13150,25 +13139,25 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcFacilityUsageEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="lateral"/>
+			<xs:enumeration value="longitudinal"/>
 			<xs:enumeration value="region"/>
 			<xs:enumeration value="vertical"/>
-			<xs:enumeration value="longitudinal"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcFanTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="centrifugalairfoil"/>
+			<xs:enumeration value="centrifugalbackwardinclinedcurved"/>
 			<xs:enumeration value="centrifugalforwardcurved"/>
 			<xs:enumeration value="centrifugalradial"/>
-			<xs:enumeration value="centrifugalbackwardinclinedcurved"/>
-			<xs:enumeration value="centrifugalairfoil"/>
+			<xs:enumeration value="jet"/>
+			<xs:enumeration value="propelloraxial"/>
 			<xs:enumeration value="tubeaxial"/>
 			<xs:enumeration value="vaneaxial"/>
-			<xs:enumeration value="propelloraxial"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
-			<xs:enumeration value="jet"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcFastenerTypeEnum">
@@ -13182,10 +13171,10 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcFillElementTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="invertfill"/>
 			<xs:enumeration value="annulargapfill"/>
-			<xs:enumeration value="notdefined"/>
+			<xs:enumeration value="invertfill"/>
 			<xs:enumeration value="userdefined"/>
+			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcFilterTypeEnum">
@@ -13204,34 +13193,34 @@ of the material. The information contained in this document is subject to change
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="breechinginlet"/>
 			<xs:enumeration value="firehydrant"/>
+			<xs:enumeration value="firemonitor"/>
 			<xs:enumeration value="hosereel"/>
 			<xs:enumeration value="sprinkler"/>
 			<xs:enumeration value="sprinklerdeflector"/>
-			<xs:enumeration value="firemonitor"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcFlowDirectionEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="source"/>
 			<xs:enumeration value="sink"/>
+			<xs:enumeration value="source"/>
 			<xs:enumeration value="sourceandsink"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcFlowInstrumentTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="ammeter"/>
+			<xs:enumeration value="combined"/>
+			<xs:enumeration value="frequencymeter"/>
+			<xs:enumeration value="phaseanglemeter"/>
+			<xs:enumeration value="powerfactormeter"/>
 			<xs:enumeration value="pressuregauge"/>
 			<xs:enumeration value="thermometer"/>
-			<xs:enumeration value="ammeter"/>
-			<xs:enumeration value="frequencymeter"/>
-			<xs:enumeration value="powerfactormeter"/>
-			<xs:enumeration value="phaseanglemeter"/>
+			<xs:enumeration value="voltmeter"/>
 			<xs:enumeration value="voltmeter_peak"/>
 			<xs:enumeration value="voltmeter_rms"/>
-			<xs:enumeration value="combined"/>
-			<xs:enumeration value="voltmeter"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13259,13 +13248,13 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcFurnitureTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="chair"/>
-			<xs:enumeration value="table"/>
-			<xs:enumeration value="desk"/>
 			<xs:enumeration value="bed"/>
+			<xs:enumeration value="chair"/>
+			<xs:enumeration value="desk"/>
 			<xs:enumeration value="filecabinet"/>
 			<xs:enumeration value="shelf"/>
 			<xs:enumeration value="sofa"/>
+			<xs:enumeration value="table"/>
 			<xs:enumeration value="technicalcabinet"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -13273,50 +13262,50 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcGeoScienceFeatureTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="contact"/>
 			<xs:enumeration value="discretediscontinuity"/>
-			<xs:enumeration value="fold"/>
+			<xs:enumeration value="fault"/>
 			<xs:enumeration value="fluidbody"/>
-			<xs:enumeration value="piezometricwaterlevel"/>
-			<xs:enumeration value="voidbody"/>
+			<xs:enumeration value="fold"/>
 			<xs:enumeration value="geologicunit"/>
 			<xs:enumeration value="geotechnicalunit"/>
 			<xs:enumeration value="hazardarea"/>
 			<xs:enumeration value="hydrogeounit"/>
-			<xs:enumeration value="fault"/>
-			<xs:enumeration value="contact"/>
 			<xs:enumeration value="physicalpropertydistribution"/>
+			<xs:enumeration value="piezometricwaterlevel"/>
+			<xs:enumeration value="voidbody"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcGeoScienceModelTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="geotechmodel"/>
-			<xs:enumeration value="hydrogeomodel"/>
-			<xs:enumeration value="geologymodel"/>
-			<xs:enumeration value="geotechsynthesismodel"/>
-			<xs:enumeration value="physicalpropertydistibutionmodel"/>
 			<xs:enumeration value="geohazardmodel"/>
+			<xs:enumeration value="geologymodel"/>
+			<xs:enumeration value="geotechmodel"/>
+			<xs:enumeration value="geotechsynthesismodel"/>
+			<xs:enumeration value="hydrogeomodel"/>
+			<xs:enumeration value="physicalpropertydistibutionmodel"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcGeoScienceObservationTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="boreholelog"/>
+			<xs:enumeration value="geophysicalsurveyresult"/>
 			<xs:enumeration value="insitutestresult"/>
 			<xs:enumeration value="labtestresult"/>
-			<xs:enumeration value="boreholelog"/>
-			<xs:enumeration value="mappedfeature"/>
 			<xs:enumeration value="localinformation"/>
-			<xs:enumeration value="geophysicalsurveyresult"/>
-			<xs:enumeration value="notdefined"/>
+			<xs:enumeration value="mappedfeature"/>
 			<xs:enumeration value="userdefined"/>
+			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcGeographicElementTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="terrain"/>
 			<xs:enumeration value="soil_boring_point"/>
+			<xs:enumeration value="terrain"/>
 			<xs:enumeration value="vegetation"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -13324,13 +13313,13 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcGeometricProjectionEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="elevation_view"/>
 			<xs:enumeration value="graph_view"/>
-			<xs:enumeration value="sketch_view"/>
 			<xs:enumeration value="model_view"/>
 			<xs:enumeration value="plan_view"/>
 			<xs:enumeration value="reflected_plan_view"/>
 			<xs:enumeration value="section_view"/>
-			<xs:enumeration value="elevation_view"/>
+			<xs:enumeration value="sketch_view"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13352,25 +13341,25 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcGridTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="rectangular"/>
-			<xs:enumeration value="radial"/>
-			<xs:enumeration value="triangular"/>
 			<xs:enumeration value="irregular"/>
+			<xs:enumeration value="radial"/>
+			<xs:enumeration value="rectangular"/>
+			<xs:enumeration value="triangular"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcGroundReinforcementElementTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="pile"/>
-			<xs:enumeration value="tube"/>
 			<xs:enumeration value="bar"/>
-			<xs:enumeration value="plate"/>
 			<xs:enumeration value="bolt"/>
-			<xs:enumeration value="tendon"/>
 			<xs:enumeration value="fabric"/>
-			<xs:enumeration value="notdefined"/>
+			<xs:enumeration value="pile"/>
+			<xs:enumeration value="plate"/>
+			<xs:enumeration value="tendon"/>
+			<xs:enumeration value="tube"/>
 			<xs:enumeration value="userdefined"/>
+			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcHeatExchangerTypeEnum">
@@ -13384,44 +13373,46 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcHumidifierTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="steaminjection"/>
 			<xs:enumeration value="adiabaticairwasher"/>
-			<xs:enumeration value="adiabaticpan"/>
-			<xs:enumeration value="adiabaticwettedelement"/>
 			<xs:enumeration value="adiabaticatomizing"/>
-			<xs:enumeration value="adiabaticultrasonic"/>
-			<xs:enumeration value="adiabaticrigidmedia"/>
 			<xs:enumeration value="adiabaticcompressedairnozzle"/>
+			<xs:enumeration value="adiabaticpan"/>
+			<xs:enumeration value="adiabaticrigidmedia"/>
+			<xs:enumeration value="adiabaticultrasonic"/>
+			<xs:enumeration value="adiabaticwettedelement"/>
+			<xs:enumeration value="assistedbutane"/>
 			<xs:enumeration value="assistedelectric"/>
 			<xs:enumeration value="assistednaturalgas"/>
 			<xs:enumeration value="assistedpropane"/>
-			<xs:enumeration value="assistedbutane"/>
 			<xs:enumeration value="assistedsteam"/>
+			<xs:enumeration value="steaminjection"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcImpactProtectionDeviceTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="bumper"/>
 			<xs:enumeration value="crashcushion"/>
 			<xs:enumeration value="dampingsystem"/>
 			<xs:enumeration value="fender"/>
-			<xs:enumeration value="bumper"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcImprovedGroundTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="surchargepreloaded"/>
-			<xs:enumeration value="verticallydrained"/>
+			<xs:enumeration value="deepmixed"/>
+			<xs:enumeration value="dewatered"/>
 			<xs:enumeration value="dynamicallycompacted"/>
+			<xs:enumeration value="frozen"/>
+			<xs:enumeration value="injectiongrouted"/>
+			<xs:enumeration value="jetgrouted"/>
+			<xs:enumeration value="laterallydrained"/>
 			<xs:enumeration value="replaced"/>
 			<xs:enumeration value="rollercompacted"/>
-			<xs:enumeration value="grouted"/>
-			<xs:enumeration value="deepmixed"/>
-			<xs:enumeration value="laterallydrained"/>
-			<xs:enumeration value="frozen"/>
+			<xs:enumeration value="surchargepreloaded"/>
+			<xs:enumeration value="verticallydrained"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13438,19 +13429,19 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcInternalOrExternalEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="internal"/>
 			<xs:enumeration value="external"/>
 			<xs:enumeration value="external_earth"/>
-			<xs:enumeration value="external_water"/>
 			<xs:enumeration value="external_fire"/>
+			<xs:enumeration value="external_water"/>
+			<xs:enumeration value="internal"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcInventoryTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="assetinventory"/>
-			<xs:enumeration value="spaceinventory"/>
 			<xs:enumeration value="furnitureinventory"/>
+			<xs:enumeration value="spaceinventory"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13471,9 +13462,9 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcKnotType">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="uniform_knots"/>
-			<xs:enumeration value="quasi_uniform_knots"/>
 			<xs:enumeration value="piecewise_bezier_knots"/>
+			<xs:enumeration value="quasi_uniform_knots"/>
+			<xs:enumeration value="uniform_knots"/>
 			<xs:enumeration value="unspecified"/>
 		</xs:restriction>
 	</xs:simpleType>
@@ -13549,8 +13540,8 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcLightFixtureTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="pointsource"/>
 			<xs:enumeration value="directionsource"/>
+			<xs:enumeration value="pointsource"/>
 			<xs:enumeration value="securitylighting"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -13558,17 +13549,17 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcLiquidTerminalTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="loadingarm"/>
 			<xs:enumeration value="hosereel"/>
+			<xs:enumeration value="loadingarm"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcLoadGroupTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="load_group"/>
 			<xs:enumeration value="load_case"/>
 			<xs:enumeration value="load_combination"/>
+			<xs:enumeration value="load_group"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13576,63 +13567,63 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcLogicalOperatorEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="logicaland"/>
-			<xs:enumeration value="logicalor"/>
-			<xs:enumeration value="logicalxor"/>
 			<xs:enumeration value="logicalnotand"/>
 			<xs:enumeration value="logicalnotor"/>
+			<xs:enumeration value="logicalor"/>
+			<xs:enumeration value="logicalxor"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcMarineFacilityTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="barrierbeach"/>
+			<xs:enumeration value="breakwater"/>
 			<xs:enumeration value="canal"/>
-			<xs:enumeration value="waterwayshiplift"/>
-			<xs:enumeration value="revetment"/>
+			<xs:enumeration value="drydock"/>
+			<xs:enumeration value="floatingdock"/>
+			<xs:enumeration value="hydrolift"/>
+			<xs:enumeration value="jetty"/>
 			<xs:enumeration value="launchrecovery"/>
 			<xs:enumeration value="marinedefence"/>
-			<xs:enumeration value="hydrolift"/>
-			<xs:enumeration value="shipyard"/>
-			<xs:enumeration value="shiplift"/>
+			<xs:enumeration value="navigationalchannel"/>
 			<xs:enumeration value="port"/>
 			<xs:enumeration value="quay"/>
-			<xs:enumeration value="floatingdock"/>
-			<xs:enumeration value="navigationalchannel"/>
-			<xs:enumeration value="breakwater"/>
-			<xs:enumeration value="drydock"/>
-			<xs:enumeration value="jetty"/>
+			<xs:enumeration value="revetment"/>
+			<xs:enumeration value="shiplift"/>
 			<xs:enumeration value="shiplock"/>
-			<xs:enumeration value="barrierbeach"/>
+			<xs:enumeration value="shipyard"/>
 			<xs:enumeration value="slipway"/>
 			<xs:enumeration value="waterway"/>
+			<xs:enumeration value="waterwayshiplift"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcMarinePartTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="crest"/>
-			<xs:enumeration value="manufacturing"/>
-			<xs:enumeration value="lowwaterline"/>
-			<xs:enumeration value="core"/>
-			<xs:enumeration value="waterfield"/>
-			<xs:enumeration value="cill_level"/>
-			<xs:enumeration value="berthingstructure"/>
-			<xs:enumeration value="copelevel"/>
-			<xs:enumeration value="chamber"/>
-			<xs:enumeration value="storagearea"/>
-			<xs:enumeration value="approachchannel"/>
-			<xs:enumeration value="vehicleservicing"/>
-			<xs:enumeration value="shiptransfer"/>
-			<xs:enumeration value="gatehead"/>
-			<xs:enumeration value="gudingstructure"/>
-			<xs:enumeration value="belowwaterline"/>
-			<xs:enumeration value="weatherside"/>
-			<xs:enumeration value="landfield"/>
-			<xs:enumeration value="protection"/>
-			<xs:enumeration value="leewardside"/>
 			<xs:enumeration value="abovewaterline"/>
 			<xs:enumeration value="anchorage"/>
-			<xs:enumeration value="navigationalarea"/>
+			<xs:enumeration value="approachchannel"/>
+			<xs:enumeration value="belowwaterline"/>
+			<xs:enumeration value="berthingstructure"/>
+			<xs:enumeration value="chamber"/>
+			<xs:enumeration value="cill_level"/>
+			<xs:enumeration value="copelevel"/>
+			<xs:enumeration value="core"/>
+			<xs:enumeration value="crest"/>
+			<xs:enumeration value="gatehead"/>
+			<xs:enumeration value="gudingstructure"/>
 			<xs:enumeration value="highwaterline"/>
+			<xs:enumeration value="landfield"/>
+			<xs:enumeration value="leewardside"/>
+			<xs:enumeration value="lowwaterline"/>
+			<xs:enumeration value="manufacturing"/>
+			<xs:enumeration value="navigationalarea"/>
+			<xs:enumeration value="protection"/>
+			<xs:enumeration value="shiptransfer"/>
+			<xs:enumeration value="storagearea"/>
+			<xs:enumeration value="vehicleservicing"/>
+			<xs:enumeration value="waterfield"/>
+			<xs:enumeration value="weatherside"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13641,19 +13632,19 @@ of the material. The information contained in this document is subject to change
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="anchorbolt"/>
 			<xs:enumeration value="bolt"/>
+			<xs:enumeration value="chain"/>
+			<xs:enumeration value="coupler"/>
 			<xs:enumeration value="dowel"/>
 			<xs:enumeration value="nail"/>
 			<xs:enumeration value="nailplate"/>
+			<xs:enumeration value="railfastening"/>
+			<xs:enumeration value="railjoint"/>
 			<xs:enumeration value="rivet"/>
+			<xs:enumeration value="rope"/>
 			<xs:enumeration value="screw"/>
 			<xs:enumeration value="shearconnector"/>
 			<xs:enumeration value="staple"/>
 			<xs:enumeration value="studshearconnector"/>
-			<xs:enumeration value="coupler"/>
-			<xs:enumeration value="railjoint"/>
-			<xs:enumeration value="railfastening"/>
-			<xs:enumeration value="chain"/>
-			<xs:enumeration value="rope"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13671,6 +13662,7 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcMemberTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="arch_segment"/>
 			<xs:enumeration value="brace"/>
 			<xs:enumeration value="chord"/>
 			<xs:enumeration value="collar"/>
@@ -13680,15 +13672,14 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="post"/>
 			<xs:enumeration value="purlin"/>
 			<xs:enumeration value="rafter"/>
+			<xs:enumeration value="stay_cable"/>
+			<xs:enumeration value="stiffening_rib"/>
 			<xs:enumeration value="stringer"/>
+			<xs:enumeration value="structuralcable"/>
 			<xs:enumeration value="strut"/>
 			<xs:enumeration value="stud"/>
-			<xs:enumeration value="stiffening_rib"/>
-			<xs:enumeration value="arch_segment"/>
-			<xs:enumeration value="suspension_cable"/>
 			<xs:enumeration value="suspender"/>
-			<xs:enumeration value="stay_cable"/>
-			<xs:enumeration value="structuralcable"/>
+			<xs:enumeration value="suspension_cable"/>
 			<xs:enumeration value="tiebar"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -13696,30 +13687,30 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcMobileTelecommunicationsApplianceTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="e_utran_node_b"/>
-			<xs:enumeration value="remoteradiounit"/>
 			<xs:enumeration value="accesspoint"/>
-			<xs:enumeration value="basetransceiverstation"/>
-			<xs:enumeration value="remoteunit"/>
 			<xs:enumeration value="basebandunit"/>
-			<xs:enumeration value="masterunit"/>
+			<xs:enumeration value="basetransceiverstation"/>
+			<xs:enumeration value="e_utran_node_b"/>
 			<xs:enumeration value="gateway_gprs_support_node"/>
-			<xs:enumeration value="subscriberserver"/>
+			<xs:enumeration value="masterunit"/>
 			<xs:enumeration value="mobileswitchingcenter"/>
 			<xs:enumeration value="mscserver"/>
 			<xs:enumeration value="packetcontrolunit"/>
+			<xs:enumeration value="remoteradiounit"/>
+			<xs:enumeration value="remoteunit"/>
 			<xs:enumeration value="service_gprs_support_node"/>
+			<xs:enumeration value="subscriberserver"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcMooringDeviceTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="bollard"/>
 			<xs:enumeration value="linetensioner"/>
 			<xs:enumeration value="magneticdevice"/>
 			<xs:enumeration value="mooringhooks"/>
 			<xs:enumeration value="vacuumdevice"/>
-			<xs:enumeration value="bollard"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13783,8 +13774,8 @@ of the material. The information contained in this document is subject to change
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="audiovisualoutlet"/>
 			<xs:enumeration value="communicationsoutlet"/>
-			<xs:enumeration value="poweroutlet"/>
 			<xs:enumeration value="dataoutlet"/>
+			<xs:enumeration value="poweroutlet"/>
 			<xs:enumeration value="telephoneoutlet"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -13842,10 +13833,10 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcPileTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="bored"/>
-			<xs:enumeration value="driven"/>
-			<xs:enumeration value="jetgrouting"/>
 			<xs:enumeration value="cohesion"/>
+			<xs:enumeration value="driven"/>
 			<xs:enumeration value="friction"/>
+			<xs:enumeration value="jetgrouting"/>
 			<xs:enumeration value="support"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -13868,8 +13859,8 @@ of the material. The information contained in this document is subject to change
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="culvert"/>
 			<xs:enumeration value="flexiblesegment"/>
-			<xs:enumeration value="rigidsegment"/>
 			<xs:enumeration value="gutter"/>
+			<xs:enumeration value="rigidsegment"/>
 			<xs:enumeration value="spool"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -13877,16 +13868,16 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcPlateTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="curtain_panel"/>
-			<xs:enumeration value="sheet"/>
-			<xs:enumeration value="flange_plate"/>
-			<xs:enumeration value="web_plate"/>
-			<xs:enumeration value="stiffener_plate"/>
-			<xs:enumeration value="gusset_plate"/>
-			<xs:enumeration value="cover_plate"/>
-			<xs:enumeration value="splice_plate"/>
 			<xs:enumeration value="base_plate"/>
+			<xs:enumeration value="cover_plate"/>
+			<xs:enumeration value="curtain_panel"/>
+			<xs:enumeration value="flange_plate"/>
+			<xs:enumeration value="gusset_plate"/>
 			<xs:enumeration value="lagging"/>
+			<xs:enumeration value="sheet"/>
+			<xs:enumeration value="splice_plate"/>
+			<xs:enumeration value="stiffener_plate"/>
+			<xs:enumeration value="web_plate"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13913,8 +13904,8 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcProfileTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="curve"/>
 			<xs:enumeration value="area"/>
+			<xs:enumeration value="curve"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcProjectOrderTypeEnum">
@@ -13945,21 +13936,21 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcPropertySetTemplateTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="pset_materialdriven"/>
-			<xs:enumeration value="pset_typedrivenonly"/>
-			<xs:enumeration value="pset_typedrivenoverride"/>
 			<xs:enumeration value="pset_occurrencedriven"/>
 			<xs:enumeration value="pset_performancedriven"/>
 			<xs:enumeration value="pset_profiledriven"/>
+			<xs:enumeration value="pset_typedrivenonly"/>
+			<xs:enumeration value="pset_typedrivenoverride"/>
+			<xs:enumeration value="qto_occurrencedriven"/>
 			<xs:enumeration value="qto_typedrivenonly"/>
 			<xs:enumeration value="qto_typedrivenoverride"/>
-			<xs:enumeration value="qto_occurrencedriven"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcProtectiveDeviceTrippingUnitTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="electronic"/>
 			<xs:enumeration value="electromagnetic"/>
+			<xs:enumeration value="electronic"/>
 			<xs:enumeration value="residualcurrent"/>
 			<xs:enumeration value="thermal"/>
 			<xs:enumeration value="userdefined"/>
@@ -13968,15 +13959,15 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcProtectiveDeviceTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="anti_arcing_device"/>
 			<xs:enumeration value="circuitbreaker"/>
-			<xs:enumeration value="earthleakagecircuitbreaker"/>
 			<xs:enumeration value="earthingswitch"/>
+			<xs:enumeration value="earthleakagecircuitbreaker"/>
 			<xs:enumeration value="fusedisconnector"/>
 			<xs:enumeration value="residualcurrentcircuitbreaker"/>
 			<xs:enumeration value="residualcurrentswitch"/>
-			<xs:enumeration value="varistor"/>
-			<xs:enumeration value="anti_arcing_device"/>
 			<xs:enumeration value="sparkgap"/>
+			<xs:enumeration value="varistor"/>
 			<xs:enumeration value="voltagelimiter"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -13995,38 +13986,48 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="IfcRadialExcavationTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="niche"/>
+			<xs:enumeration value="profileenlargement"/>
+			<xs:enumeration value="reprofiling"/>
+			<xs:enumeration value="userdefined"/>
+			<xs:enumeration value="notdefined"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="IfcRailTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="rackrail"/>
 			<xs:enumeration value="blade"/>
-			<xs:enumeration value="guardrail"/>
-			<xs:enumeration value="stockrail"/>
 			<xs:enumeration value="checkrail"/>
+			<xs:enumeration value="guardrail"/>
+			<xs:enumeration value="rackrail"/>
 			<xs:enumeration value="rail"/>
+			<xs:enumeration value="stockrail"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcRailingTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="handrail"/>
-			<xs:enumeration value="guardrail"/>
 			<xs:enumeration value="balustrade"/>
 			<xs:enumeration value="fence"/>
+			<xs:enumeration value="guardrail"/>
+			<xs:enumeration value="handrail"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcRailwayPartTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="trackstructure"/>
-			<xs:enumeration value="trackstructurepart"/>
-			<xs:enumeration value="linesidestructurepart"/>
-			<xs:enumeration value="dilatationsuperstructure"/>
-			<xs:enumeration value="plaintracksuperstructure"/>
-			<xs:enumeration value="linesidestructure"/>
-			<xs:enumeration value="superstructure"/>
-			<xs:enumeration value="turnoutsuperstructure"/>
+			<xs:enumeration value="abovetrack"/>
+			<xs:enumeration value="dilationtrack"/>
+			<xs:enumeration value="lineside"/>
+			<xs:enumeration value="linesidepart"/>
+			<xs:enumeration value="plaintrack"/>
+			<xs:enumeration value="substructure"/>
+			<xs:enumeration value="track"/>
+			<xs:enumeration value="trackpart"/>
+			<xs:enumeration value="turnouttrack"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14039,44 +14040,48 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcRampFlightTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="straight"/>
 			<xs:enumeration value="spiral"/>
+			<xs:enumeration value="straight"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcRampTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="straight_run_ramp"/>
-			<xs:enumeration value="two_straight_run_ramp"/>
-			<xs:enumeration value="quarter_turn_ramp"/>
-			<xs:enumeration value="two_quarter_turn_ramp"/>
 			<xs:enumeration value="half_turn_ramp"/>
+			<xs:enumeration value="quarter_turn_ramp"/>
 			<xs:enumeration value="spiral_ramp"/>
+			<xs:enumeration value="straight_run_ramp"/>
+			<xs:enumeration value="two_quarter_turn_ramp"/>
+			<xs:enumeration value="two_straight_run_ramp"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcRecurrenceTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="daily"/>
-			<xs:enumeration value="weekly"/>
-			<xs:enumeration value="monthly_by_day_of_month"/>
-			<xs:enumeration value="monthly_by_position"/>
 			<xs:enumeration value="by_day_count"/>
 			<xs:enumeration value="by_weekday_count"/>
+			<xs:enumeration value="daily"/>
+			<xs:enumeration value="monthly_by_day_of_month"/>
+			<xs:enumeration value="monthly_by_position"/>
+			<xs:enumeration value="weekly"/>
 			<xs:enumeration value="yearly_by_day_of_month"/>
 			<xs:enumeration value="yearly_by_position"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcReferentTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="station"/>
-			<xs:enumeration value="referencemarker"/>
-			<xs:enumeration value="landmark"/>
 			<xs:enumeration value="boundary"/>
 			<xs:enumeration value="intersection"/>
+			<xs:enumeration value="kilopoint"/>
+			<xs:enumeration value="landmark"/>
+			<xs:enumeration value="milepoint"/>
 			<xs:enumeration value="position"/>
+			<xs:enumeration value="referencemarker"/>
+			<xs:enumeration value="station"/>
+			<xs:enumeration value="superelevationevent"/>
+			<xs:enumeration value="widthevent"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14096,16 +14101,28 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="IfcReinforcedSoilTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="dynamicallycompacted"/>
+			<xs:enumeration value="grouted"/>
+			<xs:enumeration value="replaced"/>
+			<xs:enumeration value="rollercompacted"/>
+			<xs:enumeration value="surchargepreloaded"/>
+			<xs:enumeration value="verticallydrained"/>
+			<xs:enumeration value="userdefined"/>
+			<xs:enumeration value="notdefined"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="IfcReinforcingBarRoleEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="main"/>
-			<xs:enumeration value="shear"/>
-			<xs:enumeration value="ligature"/>
-			<xs:enumeration value="stud"/>
-			<xs:enumeration value="punching"/>
-			<xs:enumeration value="edge"/>
-			<xs:enumeration value="ring"/>
 			<xs:enumeration value="anchoring"/>
+			<xs:enumeration value="edge"/>
+			<xs:enumeration value="ligature"/>
+			<xs:enumeration value="main"/>
+			<xs:enumeration value="punching"/>
+			<xs:enumeration value="ring"/>
+			<xs:enumeration value="shear"/>
+			<xs:enumeration value="stud"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14125,44 +14142,45 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="punching"/>
 			<xs:enumeration value="ring"/>
 			<xs:enumeration value="shear"/>
-			<xs:enumeration value="stud"/>
 			<xs:enumeration value="spacebar"/>
+			<xs:enumeration value="stud"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcReinforcingMeshTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="steelstraps"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcRoadPartTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="roadsidepart"/>
+			<xs:enumeration value="bicyclecrossing"/>
 			<xs:enumeration value="bus_stop"/>
+			<xs:enumeration value="carriageway"/>
+			<xs:enumeration value="centralisland"/>
+			<xs:enumeration value="centralreserve"/>
 			<xs:enumeration value="hardshoulder"/>
 			<xs:enumeration value="intersection"/>
-			<xs:enumeration value="passingbay"/>
-			<xs:enumeration value="roadwayplateau"/>
-			<xs:enumeration value="roadside"/>
-			<xs:enumeration value="refugeisland"/>
-			<xs:enumeration value="tollplaza"/>
-			<xs:enumeration value="centralreserve"/>
-			<xs:enumeration value="sidewalk"/>
-			<xs:enumeration value="parkingbay"/>
-			<xs:enumeration value="railwaycrossing"/>
-			<xs:enumeration value="pedestrian_crossing"/>
-			<xs:enumeration value="softshoulder"/>
-			<xs:enumeration value="bicyclecrossing"/>
-			<xs:enumeration value="centralisland"/>
-			<xs:enumeration value="shoulder"/>
-			<xs:enumeration value="trafficlane"/>
-			<xs:enumeration value="roadsegment"/>
-			<xs:enumeration value="roundabout"/>
 			<xs:enumeration value="layby"/>
-			<xs:enumeration value="carriageway"/>
+			<xs:enumeration value="parkingbay"/>
+			<xs:enumeration value="passingbay"/>
+			<xs:enumeration value="pedestrian_crossing"/>
+			<xs:enumeration value="railwaycrossing"/>
+			<xs:enumeration value="refugeisland"/>
+			<xs:enumeration value="roadsegment"/>
+			<xs:enumeration value="roadside"/>
+			<xs:enumeration value="roadsidepart"/>
+			<xs:enumeration value="roadwayplateau"/>
+			<xs:enumeration value="roundabout"/>
+			<xs:enumeration value="shoulder"/>
+			<xs:enumeration value="sidewalk"/>
+			<xs:enumeration value="softshoulder"/>
+			<xs:enumeration value="tollplaza"/>
 			<xs:enumeration value="trafficisland"/>
+			<xs:enumeration value="trafficlane"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14175,68 +14193,68 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcRoleEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="supplier"/>
-			<xs:enumeration value="manufacturer"/>
-			<xs:enumeration value="contractor"/>
-			<xs:enumeration value="subcontractor"/>
 			<xs:enumeration value="architect"/>
-			<xs:enumeration value="structuralengineer"/>
-			<xs:enumeration value="costengineer"/>
-			<xs:enumeration value="client"/>
-			<xs:enumeration value="buildingowner"/>
 			<xs:enumeration value="buildingoperator"/>
-			<xs:enumeration value="mechanicalengineer"/>
-			<xs:enumeration value="electricalengineer"/>
-			<xs:enumeration value="projectmanager"/>
-			<xs:enumeration value="facilitiesmanager"/>
+			<xs:enumeration value="buildingowner"/>
 			<xs:enumeration value="civilengineer"/>
+			<xs:enumeration value="client"/>
 			<xs:enumeration value="commissioningengineer"/>
-			<xs:enumeration value="engineer"/>
-			<xs:enumeration value="owner"/>
-			<xs:enumeration value="consultant"/>
 			<xs:enumeration value="constructionmanager"/>
+			<xs:enumeration value="consultant"/>
+			<xs:enumeration value="contractor"/>
+			<xs:enumeration value="costengineer"/>
+			<xs:enumeration value="electricalengineer"/>
+			<xs:enumeration value="engineer"/>
+			<xs:enumeration value="facilitiesmanager"/>
 			<xs:enumeration value="fieldconstructionmanager"/>
+			<xs:enumeration value="manufacturer"/>
+			<xs:enumeration value="mechanicalengineer"/>
+			<xs:enumeration value="owner"/>
+			<xs:enumeration value="projectmanager"/>
 			<xs:enumeration value="reseller"/>
+			<xs:enumeration value="structuralengineer"/>
+			<xs:enumeration value="subcontractor"/>
+			<xs:enumeration value="supplier"/>
 			<xs:enumeration value="userdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcRoofTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="flat_roof"/>
-			<xs:enumeration value="shed_roof"/>
-			<xs:enumeration value="gable_roof"/>
-			<xs:enumeration value="hip_roof"/>
-			<xs:enumeration value="hipped_gable_roof"/>
-			<xs:enumeration value="gambrel_roof"/>
-			<xs:enumeration value="mansard_roof"/>
 			<xs:enumeration value="barrel_roof"/>
-			<xs:enumeration value="rainbow_roof"/>
 			<xs:enumeration value="butterfly_roof"/>
-			<xs:enumeration value="pavilion_roof"/>
 			<xs:enumeration value="dome_roof"/>
+			<xs:enumeration value="flat_roof"/>
 			<xs:enumeration value="freeform"/>
+			<xs:enumeration value="gable_roof"/>
+			<xs:enumeration value="gambrel_roof"/>
+			<xs:enumeration value="hipped_gable_roof"/>
+			<xs:enumeration value="hip_roof"/>
+			<xs:enumeration value="mansard_roof"/>
+			<xs:enumeration value="pavilion_roof"/>
+			<xs:enumeration value="rainbow_roof"/>
+			<xs:enumeration value="shed_roof"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcSIPrefix">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="exa"/>
-			<xs:enumeration value="peta"/>
-			<xs:enumeration value="tera"/>
-			<xs:enumeration value="giga"/>
-			<xs:enumeration value="mega"/>
-			<xs:enumeration value="kilo"/>
-			<xs:enumeration value="hecto"/>
+			<xs:enumeration value="atto"/>
+			<xs:enumeration value="centi"/>
 			<xs:enumeration value="deca"/>
 			<xs:enumeration value="deci"/>
-			<xs:enumeration value="centi"/>
-			<xs:enumeration value="milli"/>
-			<xs:enumeration value="micro"/>
-			<xs:enumeration value="nano"/>
-			<xs:enumeration value="pico"/>
+			<xs:enumeration value="exa"/>
 			<xs:enumeration value="femto"/>
-			<xs:enumeration value="atto"/>
+			<xs:enumeration value="giga"/>
+			<xs:enumeration value="hecto"/>
+			<xs:enumeration value="kilo"/>
+			<xs:enumeration value="mega"/>
+			<xs:enumeration value="micro"/>
+			<xs:enumeration value="milli"/>
+			<xs:enumeration value="nano"/>
+			<xs:enumeration value="peta"/>
+			<xs:enumeration value="pico"/>
+			<xs:enumeration value="tera"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcSIUnitName">
@@ -14278,9 +14296,9 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="bath"/>
 			<xs:enumeration value="bidet"/>
 			<xs:enumeration value="cistern"/>
+			<xs:enumeration value="sanitaryfountain"/>
 			<xs:enumeration value="shower"/>
 			<xs:enumeration value="sink"/>
-			<xs:enumeration value="sanitaryfountain"/>
 			<xs:enumeration value="toiletpan"/>
 			<xs:enumeration value="urinal"/>
 			<xs:enumeration value="washhandbasin"/>
@@ -14291,18 +14309,20 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcSectionTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="uniform"/>
 			<xs:enumeration value="tapered"/>
+			<xs:enumeration value="uniform"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcSensorTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="cosensor"/>
 			<xs:enumeration value="co2sensor"/>
 			<xs:enumeration value="conductancesensor"/>
 			<xs:enumeration value="contactsensor"/>
+			<xs:enumeration value="cosensor"/>
+			<xs:enumeration value="earthquakesensor"/>
 			<xs:enumeration value="firesensor"/>
 			<xs:enumeration value="flowsensor"/>
+			<xs:enumeration value="foreignobjectdetectionsensor"/>
 			<xs:enumeration value="frostsensor"/>
 			<xs:enumeration value="gassensor"/>
 			<xs:enumeration value="heatsensor"/>
@@ -14313,41 +14333,39 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="lightsensor"/>
 			<xs:enumeration value="moisturesensor"/>
 			<xs:enumeration value="movementsensor"/>
+			<xs:enumeration value="obstaclesensor"/>
 			<xs:enumeration value="phsensor"/>
 			<xs:enumeration value="pressuresensor"/>
 			<xs:enumeration value="radiationsensor"/>
 			<xs:enumeration value="radioactivitysensor"/>
+			<xs:enumeration value="rainsensor"/>
 			<xs:enumeration value="smokesensor"/>
+			<xs:enumeration value="snowdepthsensor"/>
 			<xs:enumeration value="soundsensor"/>
 			<xs:enumeration value="temperaturesensor"/>
-			<xs:enumeration value="windsensor"/>
-			<xs:enumeration value="earthquakesensor"/>
-			<xs:enumeration value="foreignobjectdetectionsensor"/>
-			<xs:enumeration value="obstaclesensor"/>
-			<xs:enumeration value="rainsensor"/>
-			<xs:enumeration value="snowdepthsensor"/>
 			<xs:enumeration value="trainsensor"/>
 			<xs:enumeration value="turnoutclosuresensor"/>
 			<xs:enumeration value="wheelsensor"/>
+			<xs:enumeration value="windsensor"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcSequenceEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="start_start"/>
-			<xs:enumeration value="start_finish"/>
-			<xs:enumeration value="finish_start"/>
 			<xs:enumeration value="finish_finish"/>
+			<xs:enumeration value="finish_start"/>
+			<xs:enumeration value="start_finish"/>
+			<xs:enumeration value="start_start"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcShadingDeviceTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="awning"/>
 			<xs:enumeration value="jalousie"/>
 			<xs:enumeration value="shutter"/>
-			<xs:enumeration value="awning"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14355,48 +14373,49 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcSignTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="marker"/>
-			<xs:enumeration value="pictoral"/>
 			<xs:enumeration value="mirror"/>
+			<xs:enumeration value="pictoral"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcSignalTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="visual"/>
 			<xs:enumeration value="audio"/>
 			<xs:enumeration value="mixed"/>
+			<xs:enumeration value="visual"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcSimplePropertyTemplateTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="p_singlevalue"/>
-			<xs:enumeration value="p_enumeratedvalue"/>
 			<xs:enumeration value="p_boundedvalue"/>
+			<xs:enumeration value="p_enumeratedvalue"/>
 			<xs:enumeration value="p_listvalue"/>
-			<xs:enumeration value="p_tablevalue"/>
 			<xs:enumeration value="p_referencevalue"/>
-			<xs:enumeration value="q_length"/>
+			<xs:enumeration value="p_singlevalue"/>
+			<xs:enumeration value="p_tablevalue"/>
 			<xs:enumeration value="q_area"/>
-			<xs:enumeration value="q_volume"/>
 			<xs:enumeration value="q_count"/>
-			<xs:enumeration value="q_weight"/>
+			<xs:enumeration value="q_length"/>
+			<xs:enumeration value="q_number"/>
 			<xs:enumeration value="q_time"/>
+			<xs:enumeration value="q_volume"/>
+			<xs:enumeration value="q_weight"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcSlabTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="floor"/>
-			<xs:enumeration value="roof"/>
-			<xs:enumeration value="landing"/>
-			<xs:enumeration value="baseslab"/>
 			<xs:enumeration value="approach_slab"/>
+			<xs:enumeration value="baseslab"/>
+			<xs:enumeration value="floor"/>
+			<xs:enumeration value="landing"/>
 			<xs:enumeration value="paving"/>
-			<xs:enumeration value="wearing"/>
+			<xs:enumeration value="roof"/>
 			<xs:enumeration value="sidewalk"/>
 			<xs:enumeration value="trackslab"/>
+			<xs:enumeration value="wearing"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14419,38 +14438,38 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcSpaceTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="space"/>
-			<xs:enumeration value="parking"/>
+			<xs:enumeration value="berth"/>
+			<xs:enumeration value="external"/>
 			<xs:enumeration value="gfa"/>
 			<xs:enumeration value="internal"/>
-			<xs:enumeration value="external"/>
-			<xs:enumeration value="berth"/>
+			<xs:enumeration value="parking"/>
+			<xs:enumeration value="space"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcSpatialZoneTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="annulargap"/>
+			<xs:enumeration value="clearance"/>
+			<xs:enumeration value="compartment"/>
 			<xs:enumeration value="construction"/>
 			<xs:enumeration value="firesafety"/>
+			<xs:enumeration value="installation"/>
+			<xs:enumeration value="interference"/>
+			<xs:enumeration value="interior"/>
+			<xs:enumeration value="invert"/>
 			<xs:enumeration value="lighting"/>
+			<xs:enumeration value="lining"/>
+			<xs:enumeration value="mappedzone"/>
 			<xs:enumeration value="occupancy"/>
+			<xs:enumeration value="reservation"/>
 			<xs:enumeration value="security"/>
+			<xs:enumeration value="service"/>
+			<xs:enumeration value="testedzone"/>
 			<xs:enumeration value="thermal"/>
 			<xs:enumeration value="transport"/>
 			<xs:enumeration value="ventilation"/>
-			<xs:enumeration value="reservation"/>
-			<xs:enumeration value="interference"/>
-			<xs:enumeration value="mappedzone"/>
-			<xs:enumeration value="testedzone"/>
-			<xs:enumeration value="compartment"/>
-			<xs:enumeration value="annulargap"/>
-			<xs:enumeration value="clearance"/>
-			<xs:enumeration value="installation"/>
-			<xs:enumeration value="interior"/>
-			<xs:enumeration value="invert"/>
-			<xs:enumeration value="lining"/>
-			<xs:enumeration value="service"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14466,73 +14485,73 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcStairFlightTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="straight"/>
-			<xs:enumeration value="winder"/>
-			<xs:enumeration value="spiral"/>
 			<xs:enumeration value="curved"/>
 			<xs:enumeration value="freeform"/>
+			<xs:enumeration value="spiral"/>
+			<xs:enumeration value="straight"/>
+			<xs:enumeration value="winder"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcStairTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="straight_run_stair"/>
-			<xs:enumeration value="two_straight_run_stair"/>
-			<xs:enumeration value="quarter_winding_stair"/>
-			<xs:enumeration value="quarter_turn_stair"/>
-			<xs:enumeration value="half_winding_stair"/>
-			<xs:enumeration value="half_turn_stair"/>
-			<xs:enumeration value="two_quarter_winding_stair"/>
-			<xs:enumeration value="two_quarter_turn_stair"/>
-			<xs:enumeration value="three_quarter_winding_stair"/>
-			<xs:enumeration value="three_quarter_turn_stair"/>
-			<xs:enumeration value="spiral_stair"/>
-			<xs:enumeration value="double_return_stair"/>
 			<xs:enumeration value="curved_run_stair"/>
-			<xs:enumeration value="two_curved_run_stair"/>
+			<xs:enumeration value="double_return_stair"/>
+			<xs:enumeration value="half_turn_stair"/>
+			<xs:enumeration value="half_winding_stair"/>
 			<xs:enumeration value="ladder"/>
+			<xs:enumeration value="quarter_turn_stair"/>
+			<xs:enumeration value="quarter_winding_stair"/>
+			<xs:enumeration value="spiral_stair"/>
+			<xs:enumeration value="straight_run_stair"/>
+			<xs:enumeration value="three_quarter_turn_stair"/>
+			<xs:enumeration value="three_quarter_winding_stair"/>
+			<xs:enumeration value="two_curved_run_stair"/>
+			<xs:enumeration value="two_quarter_turn_stair"/>
+			<xs:enumeration value="two_quarter_winding_stair"/>
+			<xs:enumeration value="two_straight_run_stair"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcStateEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="readwrite"/>
-			<xs:enumeration value="readonly"/>
 			<xs:enumeration value="locked"/>
-			<xs:enumeration value="readwritelocked"/>
+			<xs:enumeration value="readonly"/>
 			<xs:enumeration value="readonlylocked"/>
+			<xs:enumeration value="readwrite"/>
+			<xs:enumeration value="readwritelocked"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcStructuralCurveActivityTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="const"/>
-			<xs:enumeration value="linear"/>
-			<xs:enumeration value="polygonal"/>
-			<xs:enumeration value="equidistant"/>
-			<xs:enumeration value="sinus"/>
-			<xs:enumeration value="parabola"/>
 			<xs:enumeration value="discrete"/>
+			<xs:enumeration value="equidistant"/>
+			<xs:enumeration value="linear"/>
+			<xs:enumeration value="parabola"/>
+			<xs:enumeration value="polygonal"/>
+			<xs:enumeration value="sinus"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcStructuralCurveMemberTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="rigid_joined_member"/>
-			<xs:enumeration value="pin_joined_member"/>
 			<xs:enumeration value="cable"/>
-			<xs:enumeration value="tension_member"/>
 			<xs:enumeration value="compression_member"/>
+			<xs:enumeration value="pin_joined_member"/>
+			<xs:enumeration value="rigid_joined_member"/>
+			<xs:enumeration value="tension_member"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcStructuralSurfaceActivityTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="const"/>
 			<xs:enumeration value="bilinear"/>
+			<xs:enumeration value="const"/>
 			<xs:enumeration value="discrete"/>
 			<xs:enumeration value="isocontour"/>
 			<xs:enumeration value="userdefined"/>
@@ -14558,26 +14577,26 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcSurfaceFeatureTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="mark"/>
-			<xs:enumeration value="tag"/>
-			<xs:enumeration value="treatment"/>
 			<xs:enumeration value="defect"/>
 			<xs:enumeration value="hatchmarking"/>
 			<xs:enumeration value="linemarking"/>
-			<xs:enumeration value="pavementsurfacemarking"/>
-			<xs:enumeration value="symbolmarking"/>
+			<xs:enumeration value="mark"/>
 			<xs:enumeration value="nonskidsurfacing"/>
+			<xs:enumeration value="pavementsurfacemarking"/>
 			<xs:enumeration value="rumblestrip"/>
+			<xs:enumeration value="symbolmarking"/>
+			<xs:enumeration value="tag"/>
 			<xs:enumeration value="transverserumblestrip"/>
+			<xs:enumeration value="treatment"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcSurfaceSide">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="positive"/>
-			<xs:enumeration value="negative"/>
 			<xs:enumeration value="both"/>
+			<xs:enumeration value="negative"/>
+			<xs:enumeration value="positive"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcSwitchingDeviceTypeEnum">
@@ -14587,12 +14606,12 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="emergencystop"/>
 			<xs:enumeration value="keypad"/>
 			<xs:enumeration value="momentaryswitch"/>
+			<xs:enumeration value="relay"/>
 			<xs:enumeration value="selectorswitch"/>
 			<xs:enumeration value="starter"/>
+			<xs:enumeration value="start_and_stop_equipment"/>
 			<xs:enumeration value="switchdisconnector"/>
 			<xs:enumeration value="toggleswitch"/>
-			<xs:enumeration value="relay"/>
-			<xs:enumeration value="start_and_stop_equipment"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14600,8 +14619,8 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcSystemFurnitureElementTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="panel"/>
-			<xs:enumeration value="worksurface"/>
 			<xs:enumeration value="subrack"/>
+			<xs:enumeration value="worksurface"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14612,10 +14631,10 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="breakpressure"/>
 			<xs:enumeration value="expansion"/>
 			<xs:enumeration value="feedandexpansion"/>
+			<xs:enumeration value="oilretentiontray"/>
 			<xs:enumeration value="pressurevessel"/>
 			<xs:enumeration value="storage"/>
 			<xs:enumeration value="vessel"/>
-			<xs:enumeration value="oilretentiontray"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14665,11 +14684,11 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcTendonConduitTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="duct"/>
 			<xs:enumeration value="coupler"/>
+			<xs:enumeration value="diabolo"/>
+			<xs:enumeration value="duct"/>
 			<xs:enumeration value="grouting_duct"/>
 			<xs:enumeration value="trumpet"/>
-			<xs:enumeration value="diabolo"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14686,10 +14705,10 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcTextPath">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="down"/>
 			<xs:enumeration value="left"/>
 			<xs:enumeration value="right"/>
 			<xs:enumeration value="up"/>
-			<xs:enumeration value="down"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcTimeSeriesDataTypeEnum">
@@ -14705,47 +14724,47 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcTrackElementTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="trackendofalignment"/>
 			<xs:enumeration value="blockingdevice"/>
-			<xs:enumeration value="vehiclestop"/>
-			<xs:enumeration value="sleeper"/>
-			<xs:enumeration value="half_set_of_blades"/>
-			<xs:enumeration value="speedregulator"/>
 			<xs:enumeration value="derailer"/>
 			<xs:enumeration value="frog"/>
+			<xs:enumeration value="half_set_of_blades"/>
+			<xs:enumeration value="sleeper"/>
+			<xs:enumeration value="speedregulator"/>
+			<xs:enumeration value="trackendofalignment"/>
+			<xs:enumeration value="vehiclestop"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcTransformerTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="chopper"/>
+			<xs:enumeration value="combined"/>
 			<xs:enumeration value="current"/>
 			<xs:enumeration value="frequency"/>
 			<xs:enumeration value="inverter"/>
 			<xs:enumeration value="rectifier"/>
 			<xs:enumeration value="voltage"/>
-			<xs:enumeration value="chopper"/>
-			<xs:enumeration value="combined"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcTransitionCode">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="discontinuous"/>
 			<xs:enumeration value="continuous"/>
 			<xs:enumeration value="contsamegradient"/>
 			<xs:enumeration value="contsamegradientsamecurvature"/>
+			<xs:enumeration value="discontinuous"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcTransportElementTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="craneway"/>
 			<xs:enumeration value="elevator"/>
 			<xs:enumeration value="escalator"/>
-			<xs:enumeration value="movingwalkway"/>
-			<xs:enumeration value="craneway"/>
-			<xs:enumeration value="liftinggear"/>
 			<xs:enumeration value="haulinggear"/>
+			<xs:enumeration value="liftinggear"/>
+			<xs:enumeration value="movingwalkway"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14766,45 +14785,37 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcTunnelPartTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="tunnelsection"/>
 			<xs:enumeration value="crossway"/>
-			<xs:enumeration value="ringsection"/>
 			<xs:enumeration value="portal"/>
-			<xs:enumeration value="notdefined"/>
+			<xs:enumeration value="ringsection"/>
+			<xs:enumeration value="tunnelsection"/>
 			<xs:enumeration value="userdefined"/>
+			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcTunnelTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="accesstunnel"/>
-			<xs:enumeration value="shaft"/>
-			<xs:enumeration value="utilities"/>
-			<xs:enumeration value="railway"/>
-			<xs:enumeration value="road"/>
-			<xs:enumeration value="pedestrian"/>
-			<xs:enumeration value="metro"/>
 			<xs:enumeration value="bicycle"/>
 			<xs:enumeration value="bypass"/>
 			<xs:enumeration value="maintenance"/>
-			<xs:enumeration value="underground_facilities"/>
+			<xs:enumeration value="metro"/>
+			<xs:enumeration value="pedestrian"/>
+			<xs:enumeration value="railway"/>
 			<xs:enumeration value="ramp"/>
-			<xs:enumeration value="notdefined"/>
+			<xs:enumeration value="road"/>
+			<xs:enumeration value="shaft"/>
+			<xs:enumeration value="underground_facilities"/>
+			<xs:enumeration value="utilities"/>
 			<xs:enumeration value="userdefined"/>
+			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcTunnelTypicalSectionTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="geotech"/>
 			<xs:enumeration value="excavationsupport"/>
+			<xs:enumeration value="geotech"/>
 			<xs:enumeration value="risk"/>
-			<xs:enumeration value="notdefined"/>
-			<xs:enumeration value="userdefined"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="IfcUndergroundExcavationTypeEnum">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="faceexcavation"/>
-			<xs:enumeration value="radialexcavation"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14846,26 +14857,26 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcUnitaryControlElementTypeEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="alarmpanel"/>
+			<xs:enumeration value="basestationcontroller"/>
+			<xs:enumeration value="combined"/>
 			<xs:enumeration value="controlpanel"/>
 			<xs:enumeration value="gasdetectionpanel"/>
+			<xs:enumeration value="humidistat"/>
 			<xs:enumeration value="indicatorpanel"/>
 			<xs:enumeration value="mimicpanel"/>
-			<xs:enumeration value="humidistat"/>
 			<xs:enumeration value="thermostat"/>
 			<xs:enumeration value="weatherstation"/>
-			<xs:enumeration value="combined"/>
-			<xs:enumeration value="basestationcontroller"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcUnitaryEquipmentTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="airhandler"/>
 			<xs:enumeration value="airconditioningunit"/>
+			<xs:enumeration value="airhandler"/>
 			<xs:enumeration value="dehumidifier"/>
-			<xs:enumeration value="splitsystem"/>
 			<xs:enumeration value="rooftopunit"/>
+			<xs:enumeration value="splitsystem"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14878,9 +14889,9 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="check"/>
 			<xs:enumeration value="commissioning"/>
 			<xs:enumeration value="diverting"/>
-			<xs:enumeration value="drawoffcock"/>
 			<xs:enumeration value="doublecheck"/>
 			<xs:enumeration value="doubleregulating"/>
+			<xs:enumeration value="drawoffcock"/>
 			<xs:enumeration value="faucet"/>
 			<xs:enumeration value="flushing"/>
 			<xs:enumeration value="gascock"/>
@@ -14899,34 +14910,34 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcVehicleTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="vehicle"/>
-			<xs:enumeration value="vehicletracked"/>
-			<xs:enumeration value="rollingstock"/>
-			<xs:enumeration value="vehiclewheeled"/>
-			<xs:enumeration value="vehicleair"/>
 			<xs:enumeration value="cargo"/>
+			<xs:enumeration value="rollingstock"/>
+			<xs:enumeration value="vehicle"/>
+			<xs:enumeration value="vehicleair"/>
 			<xs:enumeration value="vehiclemarine"/>
+			<xs:enumeration value="vehicletracked"/>
+			<xs:enumeration value="vehiclewheeled"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcVibrationDamperTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="bending_yield"/>
-			<xs:enumeration value="shear_yield"/>
 			<xs:enumeration value="axial_yield"/>
+			<xs:enumeration value="bending_yield"/>
 			<xs:enumeration value="friction"/>
-			<xs:enumeration value="viscous"/>
 			<xs:enumeration value="rubber"/>
+			<xs:enumeration value="shear_yield"/>
+			<xs:enumeration value="viscous"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcVibrationIsolatorTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="base"/>
 			<xs:enumeration value="compression"/>
 			<xs:enumeration value="spring"/>
-			<xs:enumeration value="base"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -14942,28 +14953,28 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcVoidingFeatureTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="chamfer"/>
 			<xs:enumeration value="cutout"/>
-			<xs:enumeration value="notch"/>
+			<xs:enumeration value="edge"/>
 			<xs:enumeration value="hole"/>
 			<xs:enumeration value="miter"/>
-			<xs:enumeration value="chamfer"/>
-			<xs:enumeration value="edge"/>
+			<xs:enumeration value="notch"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcWallTypeEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="elementedwall"/>
 			<xs:enumeration value="movable"/>
 			<xs:enumeration value="parapet"/>
 			<xs:enumeration value="partitioning"/>
 			<xs:enumeration value="plumbingwall"/>
+			<xs:enumeration value="polygonal"/>
+			<xs:enumeration value="retainingwall"/>
 			<xs:enumeration value="shear"/>
 			<xs:enumeration value="solidwall"/>
 			<xs:enumeration value="standard"/>
-			<xs:enumeration value="polygonal"/>
-			<xs:enumeration value="elementedwall"/>
-			<xs:enumeration value="retainingwall"/>
 			<xs:enumeration value="wavewall"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
@@ -14984,79 +14995,52 @@ of the material. The information contained in this document is subject to change
 	</xs:simpleType>
 	<xs:simpleType name="IfcWindowPanelOperationEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="sidehungrighthand"/>
-			<xs:enumeration value="sidehunglefthand"/>
-			<xs:enumeration value="tiltandturnrighthand"/>
-			<xs:enumeration value="tiltandturnlefthand"/>
-			<xs:enumeration value="tophung"/>
 			<xs:enumeration value="bottomhung"/>
-			<xs:enumeration value="pivothorizontal"/>
-			<xs:enumeration value="pivotvertical"/>
-			<xs:enumeration value="slidinghorizontal"/>
-			<xs:enumeration value="slidingvertical"/>
-			<xs:enumeration value="removablecasement"/>
 			<xs:enumeration value="fixedcasement"/>
 			<xs:enumeration value="otheroperation"/>
+			<xs:enumeration value="pivothorizontal"/>
+			<xs:enumeration value="pivotvertical"/>
+			<xs:enumeration value="removablecasement"/>
+			<xs:enumeration value="sidehunglefthand"/>
+			<xs:enumeration value="sidehungrighthand"/>
+			<xs:enumeration value="slidinghorizontal"/>
+			<xs:enumeration value="slidingvertical"/>
+			<xs:enumeration value="tiltandturnlefthand"/>
+			<xs:enumeration value="tiltandturnrighthand"/>
+			<xs:enumeration value="tophung"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcWindowPanelPositionEnum">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="bottom"/>
 			<xs:enumeration value="left"/>
 			<xs:enumeration value="middle"/>
 			<xs:enumeration value="right"/>
-			<xs:enumeration value="bottom"/>
 			<xs:enumeration value="top"/>
-			<xs:enumeration value="notdefined"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="IfcWindowStyleConstructionEnum">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="aluminium"/>
-			<xs:enumeration value="high_grade_steel"/>
-			<xs:enumeration value="steel"/>
-			<xs:enumeration value="wood"/>
-			<xs:enumeration value="aluminium_wood"/>
-			<xs:enumeration value="plastic"/>
-			<xs:enumeration value="other_construction"/>
-			<xs:enumeration value="notdefined"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="IfcWindowStyleOperationEnum">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="single_panel"/>
-			<xs:enumeration value="double_panel_vertical"/>
-			<xs:enumeration value="double_panel_horizontal"/>
-			<xs:enumeration value="triple_panel_vertical"/>
-			<xs:enumeration value="triple_panel_bottom"/>
-			<xs:enumeration value="triple_panel_top"/>
-			<xs:enumeration value="triple_panel_left"/>
-			<xs:enumeration value="triple_panel_right"/>
-			<xs:enumeration value="triple_panel_horizontal"/>
-			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcWindowTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="window"/>
-			<xs:enumeration value="skylight"/>
 			<xs:enumeration value="lightdome"/>
+			<xs:enumeration value="skylight"/>
+			<xs:enumeration value="window"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IfcWindowTypePartitioningEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="single_panel"/>
-			<xs:enumeration value="double_panel_vertical"/>
 			<xs:enumeration value="double_panel_horizontal"/>
-			<xs:enumeration value="triple_panel_vertical"/>
+			<xs:enumeration value="double_panel_vertical"/>
+			<xs:enumeration value="single_panel"/>
 			<xs:enumeration value="triple_panel_bottom"/>
-			<xs:enumeration value="triple_panel_top"/>
+			<xs:enumeration value="triple_panel_horizontal"/>
 			<xs:enumeration value="triple_panel_left"/>
 			<xs:enumeration value="triple_panel_right"/>
-			<xs:enumeration value="triple_panel_horizontal"/>
+			<xs:enumeration value="triple_panel_top"/>
+			<xs:enumeration value="triple_panel_vertical"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -15180,7 +15164,7 @@ of the material. The information contained in this document is subject to change
 		<xs:restriction base="xs:double"/>
 	</xs:simpleType>
 	<xs:simpleType name="IfcCountMeasure">
-		<xs:restriction base="xs:double"/>
+		<xs:restriction base="xs:long"/>
 	</xs:simpleType>
 	<xs:simpleType name="IfcCurvatureMeasure">
 		<xs:restriction base="xs:double"/>

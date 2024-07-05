@@ -23,8 +23,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="28753c00d1d011e1800000215ad4efdf">
       <Name>FireRating</Name>
-      <Definition>Fire rating for this object. 
-It is given according to the national fire safety classification.</Definition>
+      <Definition>Fire rating for this object. It is given according to the national fire safety classification.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

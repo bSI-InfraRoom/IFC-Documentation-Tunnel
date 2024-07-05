@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="812050bcd54342ab84d046188ce7c2c6" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_Tolerance</Name>
-  <Definition>Properties expressing the tolerance relating to locating and shaping of an intended element or feature. Range diameters are non-negative describing a linear, rectangular or  boxed region  .</Definition>
+  <Definition>Properties expressing the tolerance relating to locating and shaping of an intended element or feature. Range diameters are non-negative describing a linear, rectangular or boxed region  .</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcProduct</ClassName>
@@ -255,7 +255,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="3ad45c3853904dd19d82748dddde63db">
       <Name>HorizontalStraightness</Name>
-      <Definition>Indicative (95%-100%) range straightness  associated to the horizontal shape in X, if different to the overall straightness.</Definition>
+      <Definition>Indicative (95%-100%) range straightness associated to the horizontal shape in X, if different to the overall straightness.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />
@@ -266,7 +266,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="72fe683ccc424d3f9a23b4702ff44a4a">
       <Name>OrthogonalStraightness</Name>
-      <Definition>Indicative (95%-100%) range straightness  associated to the horizontal shape  in Y, if different to the overall straightness.</Definition>
+      <Definition>Indicative (95%-100%) range straightness associated to the horizontal shape  in Y, if different to the overall straightness.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure" />

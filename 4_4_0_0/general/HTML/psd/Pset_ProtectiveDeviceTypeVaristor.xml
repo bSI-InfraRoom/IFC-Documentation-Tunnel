@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="6b4e0880d1fe11e1800000215ad4efdf">
       <Name>VaristorType</Name>
-      <Definition>A list of the available types of varistor  from which that required may be selected.</Definition>
+      <Definition>A list of the available types of varistor from which that required may be selected.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_VaristorType">

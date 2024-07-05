@@ -1,0 +1,160 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_LabTestResult</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 5 index3 4 index4 41 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.5.4.42");
+//-->
+</script>
+
+<h4 class="std">6.5.4.42 Pset_LabTestResult</h4>
+<p><span class="self-ref">PSET_OCCURRENCEDRIVEN</span>
+/
+<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm">IfcGeoScienceObservation</a>
+ / <span class="self-ref">LABTESTRESULT</span>
+</p>Properties resulting from commonly conducted laboratory tests on soil, rock or fluid specimens.
+
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4_draft/index.htm">IFC4X3_ADD2 to IFC4X4_draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_labtestresult.htm">Pset_LabTestResult</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary>
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>TestedMaterial</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Description of the tested material, e.g. according to existing rock and soil classification systems.
+
+</td></tr>
+<tr><td>UnconfinedCompressiveStrength</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
+</td><td>
+The unconfined compressive strength (UCS) is the maximum axial compressive stress that a right-cylindrical sample of material can withstand under unconfined conditions.
+
+</td></tr>
+<tr><td>YoungModulus</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcmodulusofelasticitymeasure.htm">IfcModulusOfElasticityMeasure</a>
+</td><td>
+Elastic modulus, mean value, α=0°.
+
+</td></tr>
+<tr><td>MassDensity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcmassdensitymeasure.htm">IfcMassDensityMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Mass Density</b></td><td>Material mass density.
+</td></tr>
+</table>
+</td></tr>
+<tr><td>WaterContent</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+The ratio of weight of water Ww to the weight of solids (Ws or Wd) in a given mass of soil or rock.
+
+</td></tr>
+<tr><td>Porosity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+The volumetric fraction of pores in the material.
+
+</td></tr>
+<tr><td>CohesionBehaviour</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
+</td><td>
+Cohesive shear strength of a rock or soil that is independent of interparticle friction.
+
+</td></tr>
+<tr><td>FrictionAngle</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>
+</td><td>
+Derived from the Mohr-Coulomb failure criterion and used to describe the friction shear resistance of ground materials, together with the normal effective stress.
+
+</td></tr>
+<tr><td>LiquidLimits</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+The water content in percent where the soil starts to behave as a liquid.
+<blockquote class="note">
+NOTE  Definition according to ISO17892.
+</blockquote>
+
+</td></tr>
+<tr><td>PlasticLimit</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+The water content in percent where the soil starts  to behave as a semi-solid state.
+<blockquote class="note">
+NOTE  Definition according to ISO17892.
+</blockquote>
+
+</td></tr>
+<tr><td>PlasticityIndex</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+The plasticity index Ip is the numerical difference between the liquid limit and plastic limit of a fine soil.  IP = wL - wP.
+
+</td></tr>
+<tr><td>Slaking</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+The crumbling and disintegration of rock or hard soil upon exposure to air or water.
+
+</td></tr>
+<tr><td>HydraulicConductivity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclinearvelocitymeasure.htm">IfcLinearVelocityMeasure</a>
+</td><td>
+Hydraulic Conductivity (permeability) of soil for water, given with the K or Kf value in m/s.
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_labtestresult.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

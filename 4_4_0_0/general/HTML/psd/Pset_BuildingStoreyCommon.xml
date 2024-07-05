@@ -9,27 +9,25 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcBuildingStorey</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="7d5f8500d1c511e1800000215ad4efdf">
+    <PropertyDef ifdguid="00cda600d1c711e1800000215ad4efdf">
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'). Used to store the non-classification driven internal project type.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types and no classification reference to a recognized classification system used.
+
+&gt; IFC4.3.0.0 DEPRECATION&amp;nbsp;  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
-        <NameAlias lang="de-DE">Referenz ID</NameAlias>
         <NameAlias lang="en">Reference</NameAlias>
-        <NameAlias lang="fr-FR">Reference</NameAlias>
-        <NameAlias lang="ja-JP">参照記号</NameAlias>
-        <NameAlias lang="ko-KR">참조 ID</NameAlias>
+        <NameAlias lang="ja-JP">参照</NameAlias>
+        <NameAlias lang="ko-KR">참조</NameAlias>
       </NameAliases>
       <DefinitionAliases>
-        <DefinitionAlias lang="de-DE">Identifikator der projektinternen Referenz für dieses Geschoss, z.B. nach der Geschossklassifizierung des Bauherrn. Wird verwendet, wenn keine allgemein anerkanntes Klassifizierungssystem angewandt wird.</DefinitionAlias>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="fr-FR">Référence à l'identifiant d'un type spécifié dans le contexte du projet (exemple : "type A1"). Utilisé pour enregistrer un type sans recourir à une classification.</DefinitionAlias>
-        <DefinitionAlias lang="ja-JP">このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。</DefinitionAlias>
-        <DefinitionAlias lang="ko-KR">이 프로젝트의 참조 ID (예 : A-1). 분류 코드가 아닌 내부에서 사용되는 프로젝트 형식으로 사용됩니다.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">해당 프로젝트에 정의된 형식의 참조 ID (예 : A-1) 승인된 분류에 존재하지 않을 때 사용된다.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="82bccf80d1c511e1800000215ad4efdf">
@@ -101,9 +99,10 @@
         <DefinitionAlias lang="ko-KR">스프링 클러 설비의 유무를 나타내는 값</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="95cf9f80d1c511e1800000215ad4efdf">
+    <PropertyDef ifdguid="0c1fd200d1c511e1800000215ad4efdf">
       <Name>SprinklerProtectionAutomatic</Name>
-      <Definition>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE). It should only be given, if the property "SprinklerProtection" is set to TRUE.</Definition>
+      <Definition>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE).
+It should only be given, if the property "SprinklerProtection" is set to TRUE.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean" />
@@ -117,9 +116,9 @@
         <NameAlias lang="ko-KR">스프링 클러 방어 자동 구분</NameAlias>
       </NameAliases>
       <DefinitionAliases>
-        <DefinitionAlias lang="de-DE">Angabe, ob das Geschoss durch eine automatische Sprinkleranlage geschützt wird (WAHR) oder nicht (FALSCH).</DefinitionAlias>
+        <DefinitionAlias lang="de-DE">Angabe, ob das Gebäude durch eine automatische Sprinkleranlage geschützt wird (WAHR) oder nicht (FALSCH).</DefinitionAlias>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="fr-FR">Indication selon laquelle ce bâtiment bénéficie d'une protection automatique par sprinkler (VRAI) ou non (FAUX). Indication à ne fournir que si la propriété "SprinklerProtection" est cochée "VRAI".</DefinitionAlias>
+        <DefinitionAlias lang="fr-FR">Indication selon laquelle ce bâtiment bénéficie d'une protection automatique par sprinkler (VRAI) ou non (FAUX).</DefinitionAlias>
         <DefinitionAlias lang="ja-JP">スプリンクラー設備が自動かどうか示すブーリアン値。</DefinitionAlias>
         <DefinitionAlias lang="ko-KR">스프링 클러 설비가 자동 여부를 나타내는 값</DefinitionAlias>
       </DefinitionAliases>

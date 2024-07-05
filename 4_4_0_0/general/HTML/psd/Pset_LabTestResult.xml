@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="f805079126164a9cb877c2589104dc04" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_LabTestResult</Name>
+  <Definition>Properties resulting from commonly conducted laboratory tests on soil, rock or fluid specimens.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/LABTESTRESULT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/LABTESTRESULT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="709d1fb0db8a4cfb8ef22653589df19f">
+      <Name>TestedMaterial</Name>
+      <Definition>Description of the tested material, e.g. according to existing rock and soil classification systems.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="a3333167c77b440cbe603fe9ef2eb1d2">
+      <Name>UnconfinedCompressiveStrength</Name>
+      <Definition>The unconfined compressive strength (UCS) is the maximum axial compressive stress that a right-cylindrical sample of material can withstand under unconfined conditions.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="51595aaa4ef9451f922cb3f3919f8ed6">
+      <Name>YoungModulus</Name>
+      <Definition>Elastic modulus, mean value, α=0°.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcModulusOfElasticityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ddb5ed00d1ec11e1800000215ad4efdf">
+      <Name>MassDensity</Name>
+      <Definition>Material mass density.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassDensityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Mass Density</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7b8cf769df8f4751842078a8a901b531">
+      <Name>WaterContent</Name>
+      <Definition>The ratio of weight of water Ww to the weight of solids (Ws or Wd) in a given mass of soil or rock.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ace3e32c499b487a8ce1658a6d5daa7a">
+      <Name>Porosity</Name>
+      <Definition>The volumetric fraction of pores in the material.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5dd8398c1141421caffb328019a34b1f">
+      <Name>CohesionBehaviour</Name>
+      <Definition>Cohesive shear strength of a rock or soil that is independent of interparticle friction.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7635f4576dd14f21815825d7e762a605">
+      <Name>FrictionAngle</Name>
+      <Definition>Derived from the Mohr-Coulomb failure criterion and used to describe the friction shear resistance of ground materials, together with the normal effective stress.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8a454189d1d74b06bdfbf36f49a25daf">
+      <Name>LiquidLimits</Name>
+      <Definition>The water content in percent where the soil starts to behave as a liquid.
+&gt; NOTE&amp;nbsp; Definition according to ISO17892.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="9a6d4a8690604fdc9d55fc4f8168740d">
+      <Name>PlasticLimit</Name>
+      <Definition>The water content in percent where the soil starts  to behave as a semi-solid state.
+&gt; NOTE&amp;nbsp; Definition according to ISO17892.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="3ff69a7eb3044d5a8dee68e0c5298c3d">
+      <Name>PlasticityIndex</Name>
+      <Definition>The plasticity index Ip is the numerical difference between the liquid limit and plastic limit of a fine soil.  IP = wL - wP.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="50752f34c2924ee08990aa2980fdd3f3">
+      <Name>Slaking</Name>
+      <Definition>The crumbling and disintegration of rock or hard soil upon exposure to air or water.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="49bb38f1f77c417da3f89b9c1778c246">
+      <Name>HydraulicConductivity</Name>
+      <Definition>Hydraulic Conductivity (permeability) of soil for water, given with the K or Kf value in m/s.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLinearVelocityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

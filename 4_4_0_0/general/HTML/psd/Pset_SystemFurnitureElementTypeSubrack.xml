@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="f2bc503cd29f488cae452b3780e73c85">
       <Name>NumberOfSlots</Name>
-      <Definition>Indicates the number of slots.</Definition>
+      <Definition>Indicates the number of  slots.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcCountMeasure" />

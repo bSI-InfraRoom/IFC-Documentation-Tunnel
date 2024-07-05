@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="d2b8a277e00147dc832a44539e9b297a" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_FaceExcavationCommon</Name>
+  <Definition>Common properties for face excavation elements.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcUndergroundExcavation/FACEEXCAVATION</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcUndergroundExcavation/FACEEXCAVATION</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="a5cfc2a9559341519e6a925fc951df5d">
+      <Name>FaceExcavationType</Name>
+      <Definition>Face excavation type.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FaceExcavationType">
+            <EnumItem>FULLFACE</EnumItem>
+            <EnumItem>STAGED</EnumItem>
+            <EnumItem>PILOTBORE</EnumItem>
+            <EnumItem>SHAFT</EnumItem>
+            <EnumItem>CROSSCONNECTION</EnumItem>
+            <EnumItem>REAMING</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>FULLFACE</Name>
+              <Definition>Excavation method where the entire tunnel face is worked simultaneously.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>STAGED</Name>
+              <Definition>Progressive excavation of parts of the tunnel face in sequential steps or stages.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PILOTBORE</Name>
+              <Definition>Initial excavation along the axis of the tunnel with a smaller cross-section than the final tunnel, which is later enlarged to the full cross-section.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SHAFT</Name>
+              <Definition>Excavation method used for vertical or inclined openings, such as access shafts.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CROSSCONNECTION</Name>
+              <Definition>Excavation linking two existing tunnels or openings.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>REAMING</Name>
+              <Definition>Enlargement of an existing tunnel opening through face excavation.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="f57ef8dc148b4d2ba25987be67a90a18">
+      <Name>IsDriveDirectedAlongChainage</Name>
+      <Definition>Specifies whether the tunnel drive direction agrees with the positive chainage direction (true) or if the tunnel drive direction is reversed (false).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="bf7ee40739cc43d5a0a04dcbe8a9e2d7">
+      <Name>TunnelInclination</Name>
+      <Definition>Specifies the tunnel inclination relative to the drive direction as specified by IsDriveDirectedAlongChainage.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_TunnelInclination">
+            <EnumItem>RISING</EnumItem>
+            <EnumItem>FALLING</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>RISING</Name>
+              <Definition>Tunnel has a rising inclination in the direction of the drive.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FALLING</Name>
+              <Definition>Tunnel has a falling inclination in the direction of the drive.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="fa32132c076d4d1496ed2094b8a88fa8">
+      <Name>DriveInclination</Name>
+      <Definition>Specifies the tunnel drive inclination.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_DriveInclination">
+            <EnumItem>HORIZONTAL</EnumItem>
+            <EnumItem>VERTICAL</EnumItem>
+            <EnumItem>INCLINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>HORIZONTAL</Name>
+              <Definition>Tunnel drive is horizontal (±15°).</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VERTICAL</Name>
+              <Definition>Tunnel drive is vertical (±85°).</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INCLINED</Name>
+              <Definition>Tunnel drive is inclined (±15° to ±85°).</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="14997c5b7f2e47e48bc30f8ee1629c74">
+      <Name>ExcavationFaceInclination</Name>
+      <Definition>Specifies the inclination of the tunnel face.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ExcavationFaceInclination">
+            <EnumItem>VERTICAL</EnumItem>
+            <EnumItem>INCLINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>VERTICAL</Name>
+              <Definition>The tunnel face is perpendicular to the tunnel axis.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INCLINED</Name>
+              <Definition>The tunnel face is inclined to the tunnel axis.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="66c90acc69014681b6bce1d9ca3c27ea">
+      <Name>MaxUnsupportedExcavationLength</Name>
+      <Definition>Maximum unsupported length of excavation at the tunnel face.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

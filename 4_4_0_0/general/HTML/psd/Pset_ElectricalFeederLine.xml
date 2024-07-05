@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="c0069a2b47a06e24d63a4a79eb1ce135" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_ElectricalFeederLine</Name>
-  <Definition>Properties of conductors used as feeder line. This property set is applicable to a type or occurence of _IfcCableSegment_ with predefined type CONDUCTORSEGMENT.</Definition>
+  <Definition>Properties of conductors used as feeder line. This property set is applicable to a type or occurrence of _IfcCableSegment_ with predefined type CONDUCTORSEGMENT.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcCableSegment/CONDUCTORSEGMENT</ClassName>

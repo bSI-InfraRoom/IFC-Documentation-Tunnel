@@ -11,7 +11,7 @@
     <title>Pset_MaterialWoodBasedPanel</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 10 index3 5 index4 13 index5 0; }
+      body { counter-reset: index1 8 index2 10 index3 5 index4 14 index5 0; }
     </style>
   </head>
 
@@ -20,11 +20,11 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.htm#8.10.5.14");
+    parent.index.location.replace("../../toc-8.htm#8.10.5.15");
 //-->
 </script>
 
-<h4 class="std">8.10.5.14 Pset_MaterialWoodBasedPanel</h4>
+<h4 class="std">8.10.5.15 Pset_MaterialWoodBasedPanel</h4>
 <p><span class="self-ref">PSET_MATERIALDRIVEN</span>
 /
 <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a>
@@ -33,11 +33,7 @@
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Material Wood Based Panel</b></td><td>This is a collection of mechanical properties related to wood-based materials for panel-like products like plywood or OSB. The propositions given above for wood-based beam materials with respect to anisotropy, strength graduation according to element sizes (especially panel thickness) apply accordingly.
 </td></tr>
 </table>
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/1okUM0qUyHuO00025QrE$V/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_MaterialWoodBasedPanel.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>ApplicableStructuralDesignMethod</td><td>
@@ -128,11 +124,9 @@ Defining values: α; defined values: tensile strength.
 
 </td></tr>
 <tr><td>ShearStrength</td><td>
-<span class="self-ref">P_TABLEVALUE</span>
+<span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcpositiveplaneanglemeasure.htm">IfcPositivePlaneAngleMeasure</a>
-/
-<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
 </td><td>
 Defining values: α; defined values: shear strength.
 
@@ -335,6 +329,7 @@ Shear modulus.
 /
 <a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
 </td><td>
+Bending strength.
 Defining values: α; defined values: bending strength.
 
 </td></tr>

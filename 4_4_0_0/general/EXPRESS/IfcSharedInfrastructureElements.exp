@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 28 June 2024
+Friday, 5 July 2024
 
 *)
 
@@ -457,9 +457,8 @@ ENTITY IfcReinforcedSoil
 	PredefinedType : OPTIONAL IfcReinforcedSoilTypeEnum;
  WHERE
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
- (PredefinedType <> IfcReinforcedSoilTypeEnum.USERDEFINED) OR
- ((PredefinedType = IfcReinforcedSoilTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType))
-;
+(PredefinedType <> IfcReinforcedSoilTypeEnum.USERDEFINED) OR
+((PredefinedType = IfcReinforcedSoilTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcSign

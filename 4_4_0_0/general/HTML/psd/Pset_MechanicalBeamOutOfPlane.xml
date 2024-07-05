@@ -83,11 +83,9 @@
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
-    <PropertyDef ifdguid="308b1604fa7f4b11ba71175ab14f7ffb">
+    <PropertyDef ifdguid="704e6f1e14fb4ee59bd15f094601cb4f">
       <Name>BendingStrength</Name>
-      <Definition>Bending strength.
-
-Defining values: α; defined values: bending strength.</Definition>
+      <Definition>Bending strength.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure" />
@@ -96,7 +94,7 @@ Defining values: α; defined values: bending strength.</Definition>
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
-    <PropertyDef ifdguid="7561e794915842b6a10e7015c0cbcd6c">
+    <PropertyDef ifdguid="63e139d512664b6385603bd50c7c5504">
       <Name>TensileStrength</Name>
       <Definition>Indicates the ability to withstand breakage apart under applied force.</Definition>
       <PropertyType>
@@ -151,19 +149,13 @@ Defining values: α; defined values: bending strength.</Definition>
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
-    <PropertyDef ifdguid="370ad6a14f8348dda7f7c1d8902fb274">
+    <PropertyDef ifdguid="2eb6ae33f3e2479394af5a347eb0b344">
       <Name>ShearStrength</Name>
-      <Definition>Defining values: α; defined values: shear strength.</Definition>
+      <Definition>Shear strength.</Definition>
       <PropertyType>
-        <TypePropertyTableValue>
-          <Expression />
-          <DefiningValue>
-            <DataType type="IfcPositivePlaneAngleMeasure" />
-          </DefiningValue>
-          <DefinedValue>
-            <DataType type="IfcPressureMeasure" />
-          </DefinedValue>
-        </TypePropertyTableValue>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
       <DefinitionAliases />

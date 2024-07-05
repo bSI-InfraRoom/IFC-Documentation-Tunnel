@@ -174,8 +174,18 @@ NOTDEFINED: Undefined port connection type.</Definition>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="df1d39774bb44a8d96c833058af039e0">
-      <Name>ConnectionSubType</Name>
-      <Definition>The physical port connection subtype that further qualifies the ConnectionType.</Definition>
+      <Name>ConnectionSubtype</Name>
+      <Definition>The physical port connection subtype that further qualifies the ConnectionType. The following values are recommended:
+
+ACPLUG: A, B, C, D, E, F, EF, G, H, I, J, K, L, M
+DIN: Mini3P, Mini4P, Mini5P, Mini6P, Mini7P, Mini8P, Mini9P
+DSub: DA15, DB25, DC37, DD50, DE9, DE15
+EIAJ: RC5720
+HDMI: A, B, C
+RADIO: IEEE802.11g, IEEE802.11n
+RJ: 4P4C, 6P2C, 8P8C
+SOCKET: E-11, E-12, E-14, E-17, E-26, E-27, E-39, E-40
+TRS: TS_Mini, TS_SubMini, TRS_Mini, TRS_SubMini</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -248,7 +258,7 @@ The nominal diameter of the pipe connection.</Definition>
         <DefinitionAlias lang="ja-JP">配管の実外径。</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
-    <PropertyDef ifdguid="b6cb7483a65d4bd5ac6551b080116323">
+    <PropertyDef ifdguid="a111af94bc044038b6c180d8e223a5ff">
       <Name>Temperature</Name>
       <Definition>Temperature of the fluid.</Definition>
       <PropertyType>
@@ -256,14 +266,8 @@ The nominal diameter of the pipe connection.</Definition>
           <DataType type="IfcThermodynamicTemperatureMeasure" />
         </TypePropertyBoundedValue>
       </PropertyType>
-      <NameAliases>
-        <NameAlias lang="en">Temperature</NameAlias>
-        <NameAlias lang="ja-JP">温度</NameAlias>
-      </NameAliases>
-      <DefinitionAliases>
-        <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="ja-JP">流体の温度。</DefinitionAlias>
-      </DefinitionAliases>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
     <PropertyDef ifdguid="b4252ef25858465d840e3539db7eed5e">
       <Name>VolumetricFlowRate</Name>

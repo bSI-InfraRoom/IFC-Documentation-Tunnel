@@ -38,26 +38,21 @@
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b></b></td><td>IfcBuildingオブジェクトに関する共通プロパティセット定義。建物ナンバーはIfcBuilding.Name、建物名称はIfcBuilding.LondName、そして記述またはコメントはIfcBuilding.Descriptionで設定する。実際の建物に関する数量、例えば建物周囲長、建物面積、建物体積等はIfcElementQuantityで設定する。また、建築基準法の建物分類に関しては、IfcClassificationReferenceで設定する。
 </td></tr>
 </table>
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/3hy1C0qSGHuO00025QrE$V/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_BuildingCommon.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>Reference</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
-*</td><td>
+</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Raumtyp</b></td><td>Bezeichnung zur Zusammenfassung gleichartiger Räume zu einem Raumtyp (auch Funktionstyp genannt). Alternativ zum Namen des &quot;Typobjekts&quot;, insbesondere wenn die Software keine Raumtypen als Typobjekte unterstützt.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.
+<blockquote>
+IFC4.3.0.0 DEPRECATION   The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.
+</blockquote>
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'). Used to store the non-classification driven internal project type.
-</td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Reference</b></td><td>Référence à l'identifiant d'un type spécifié dans le contexte du projet (exemple : &quot;type A1&quot;). Utilisé pour enregistrer un type sans recourir à une classification.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照記号</b></td><td>このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照</b></td><td>当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。
 </td></tr>
 </table>
 </td></tr>
@@ -149,7 +144,8 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Sprinklerschutz automatisch</b></td><td>Angabe, ob das Gebäude durch eine automatische Sprinkleranlage geschützt wird (WAHR) oder nicht (FALSCH).
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Sprinkler Protection Automatic</b></td><td>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE). It should only be given, if the property &quot;SprinklerProtection&quot; is set to TRUE.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Sprinkler Protection Automatic</b></td><td>Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE).
+It should only be given, if the property &quot;SprinklerProtection&quot; is set to TRUE.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>ProtectionAutomatiqueParSprinkler</b></td><td>Indication selon laquelle ce bâtiment bénéficie d'une protection automatique par sprinkler (VRAI) ou non (FAUX).
 </td></tr>
@@ -165,7 +161,8 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Nutzungsart</b></td><td>Hauptnutzungsart des Gebäudes (Schulbau. Kaufhaus, etc.). Wird verwendet, wenn keine allgemein anerkanntes Klassifizierungssystem angewandt wird.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Occupancy Type</b></td><td>Occupancy type for this object. It is defined according to the presiding national building code.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Occupancy Type</b></td><td>Occupancy type for this object.
+It is defined according to the presiding national building code.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>TypeOccupation</b></td><td>Type d'occupation. Est défini selon le Code National en vigueur.
 </td></tr>
@@ -210,7 +207,8 @@
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Geschossanzahl</b></td><td>Anzahl der Vollgeschosse des Gebäudes.
 Dieses Attribute soll nur dann eingefügt werden, wenn keine Geschosse als Objekte, IfcBuildingStorey, beinhaltet sind. Bei Unstimmigkeiten hat die Anzahl der IfcBuildingStorey Objekte Priorität.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Storeys</b></td><td>The number of storeys within a building. Captured for those cases where the IfcBuildingStorey entity is not used. Note that if IfcBuildingStorey is asserted and the number of storeys in a building can be determined from it, then this approach should be used in preference to setting a property for the number of storeys.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Number Of Storeys</b></td><td>The number of storeys within a building.
+Captured for those cases where the IfcBuildingStorey entity is not used. Note that if IfcBuildingStorey is asserted and the number of storeys in a building can be determined from it, then this approach should be used in preference to setting a property for the number of storeys.
 </td></tr>
 <tr><td><img src="../../../img/locale-fr.png" /></td><td><b>NombreNiveaux</b></td><td>Le nombre de niveaux dans un bâtiment, à indiquer lorsque la classe IfcBuildingStorey n'est pas  utilisée. Il est préférable de créer des instances d'IfcBuildingStorey et d'en déduire le nombre de niveaux plutôt que de saisir cette propriété.
 </td></tr>

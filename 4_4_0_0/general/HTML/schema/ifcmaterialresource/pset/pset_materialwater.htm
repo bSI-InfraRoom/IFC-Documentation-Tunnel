@@ -11,7 +11,7 @@
     <title>Pset_MaterialWater</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 10 index3 5 index4 10 index5 0; }
+      body { counter-reset: index1 8 index2 10 index3 5 index4 11 index5 0; }
     </style>
   </head>
 
@@ -20,11 +20,11 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.htm#8.10.5.11");
+    parent.index.location.replace("../../toc-8.htm#8.10.5.12");
 //-->
 </script>
 
-<h4 class="std">8.10.5.11 Pset_MaterialWater</h4>
+<h4 class="std">8.10.5.12 Pset_MaterialWater</h4>
 <p><span class="self-ref">PSET_MATERIALDRIVEN</span>
 /
 <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a>
@@ -32,11 +32,23 @@
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Material Water</b></td><td>A set of extended material properties for of water typically used within the context of building services and flow distribution systems.
 </td></tr>
 </table>
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/0ToP_0qUuHuO00025QrE$V/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_MaterialWater.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4_draft/index.htm">IFC4X3_ADD2 to IFC4X4_draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcmaterialresource/pset/pset_materialwater.htm">Pset_MaterialWater</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ElectricalConductivity</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Temperature</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cl-</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO3-</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SO42-</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HCO3-</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Na+</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K+</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mg2+</td><td></td><td></td><td>ADDED</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ca2+</td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>IsPotable</td><td>
@@ -108,6 +120,91 @@
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>PHLevel</b></td><td>Maximum water PH in a range from 0-14.
 </td></tr>
 </table>
+</td></tr>
+<tr><td>ElectricalConductivity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcelectricconductancemeasure.htm">IfcElectricConductanceMeasure</a>
+</td><td>
+Electrical conductivity. Measured under specified conditions, between the opposite faces of a unit cube of defined dimensions of an aqueous solution. For water quality examination, this is often expressed as &quot;electrical conductivity&quot; and may be used as a measure of the concentration of ionizable solutes present in the sample.
+
+</td></tr>
+<tr><td>Temperature</td><td>
+<span class="self-ref">P_REFERENCEVALUE</span>
+/
+<a href="../../ifcdatetimeresource/lexical/ifctimeseries.htm">IfcTimeSeries</a>
+/
+<a href="../../ifcmeasureresource/lexical/ifcthermodynamictemperaturemeasure.htm">IfcThermodynamicTemperatureMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Temperature</b></td><td>Temperature of the fluid.
+Indicates the current measured temperature.
+</td></tr>
+</table>
+</td></tr>
+<tr><td>Cl-</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+Content of Cl- in the water sample.
+
+</td></tr>
+<tr><td>NO3-</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+Content of NO3- in the water sample.
+
+</td></tr>
+<tr><td>SO42-</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+Content of SO4 2- in the water sample.
+
+</td></tr>
+<tr><td>HCO3-</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+Content of HCO3- in the water sample.
+
+</td></tr>
+<tr><td>Na+</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+Content of Na+ in the water sample.
+
+</td></tr>
+<tr><td>K+</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+Content of K+ in the water sample.
+
+</td></tr>
+<tr><td>Mg2+</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+Content of Mg2+ in the water sample.
+
+</td></tr>
+<tr><td>Ca2+</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+Content of Ca2+ in the water sample.
+
 </td></tr>
 </table>
 </details>

@@ -2,6 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="9208e1b32ded487c89ffa1ffd1622edb" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_Address</Name>
+  <Definition>This Property Set represents an address for delivery of paper based mail and other postal deliveries.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcActor</ClassName>
@@ -235,16 +236,14 @@
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
-    <PropertyDef ifdguid="0f9da8e72f9e44f5a121257b59d3d31d">
-      <Name>WWWHomepageURL</Name>
+    <PropertyDef ifdguid="9cfa8f6d502348879c2884b4c50d0bcf">
+      <Name>WWWHomePageURL</Name>
       <Definition>The world wide web address at which the preliminary page of information for the person or organization can be located.
 
-&gt; NOTE&amp;nbsp; Information on the world wide web for a person or organization may be separated into a number of pages and across a number of host sites, all of which may be linked together. It is assumed that all such information may be referenced from a single page that is termed the home page for that person or organization.
-
-&gt; NOTE&amp;nbsp; Should be of type IfcURIReference when this has been merged.</Definition>
+&gt; NOTE&amp;nbsp; Information on the world wide web for a person or organization may be separated into a number of pages and across a number of host sites, all of which may be linked together. It is assumed that all such information may be referenced from a single page that is termed the home page for that person or organization.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel" />
+          <DataType type="IfcURIReference" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />
@@ -252,13 +251,11 @@
     </PropertyDef>
     <PropertyDef ifdguid="fa91d81624e943689e969e7f3e6127cb">
       <Name>MessagingIDs</Name>
-      <Definition>IDs or addresses for any other means of telecommunication, for example instant messaging, voice-over-IP, or file transfer protocols. The communication protocol is indicated by the URI value with scheme designations such as irc:, sip:, or ftp:.
-
-&gt; NOTE&amp;nbsp; Should be of type IfcURIReference when this has been merged.</Definition>
+      <Definition>IDs or addresses for any other means of telecommunication, for example instant messaging, voice-over-IP, or file transfer protocols. The communication protocol is indicated by the URI value with scheme designations such as irc:, sip:, or ftp:.</Definition>
       <PropertyType>
         <TypePropertyListValue>
           <ListValue>
-            <DataType type="IfcLabel" />
+            <DataType type="IfcURIReference" />
           </ListValue>
         </TypePropertyListValue>
       </PropertyType>

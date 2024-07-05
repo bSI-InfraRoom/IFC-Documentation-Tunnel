@@ -2,7 +2,7 @@
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="8a5754e7b4402d56380a78290fa513ee" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Pset_MechanicalFastenerTypeRailJoint</Name>
-  <Definition>Properties common to a rail joint of a railway track system.  The property set can be used by the predefined type RAILJOINT of IfcMechanicalFastener.</Definition>
+  <Definition>Properties common to a rail joint of a railway track system. The property set can be used by the predefined type RAILJOINT of IfcMechanicalFastener.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcMechanicalFastener/RAILJOINT</ClassName>

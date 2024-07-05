@@ -28,6 +28,25 @@
         <DefinitionAlias lang="ko-KR">실내 거주자의 재실 비율.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
+    <PropertyDef ifdguid="20ac9c00d1be11e1800000215ad4efdf">
+      <Name>LightingDiversity</Name>
+      <Definition>Lighting diversity.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Lighting Diversity</NameAlias>
+        <NameAlias lang="ja-JP">照明負荷係数</NameAlias>
+        <NameAlias lang="ko-KR">조명부하계수</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">照明負荷係数。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">조명 부하 계수</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
     <PropertyDef ifdguid="0059fd00d21111e1800000215ad4efdf">
       <Name>ApplianceDiversity</Name>
       <Definition>Diversity of appliance load.</Definition>
@@ -71,7 +90,7 @@
       <Definition>Average power use intensity of appliances and other non-HVAC equipment in the space per unit area.(PowerMeasure/IfcAreaMeasure).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcReal" />
+          <DataType type="IfcHeatFluxDensityMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -110,7 +129,7 @@
       <Definition>Average lighting load intensity in the space per unit area (PowerMeasure/IfcAreaMeasure).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcReal" />
+          <DataType type="IfcHeatFluxDensityMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
@@ -161,6 +180,25 @@
         <DefinitionAlias lang="en" />
         <DefinitionAlias lang="ja-JP">建物、ゾーン、部屋のピーク時の冷房負荷。</DefinitionAlias>
         <DefinitionAlias lang="ko-KR">건물 영역 방 피크 냉방 부하.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e4eef200d21011e1800000215ad4efdf">
+      <Name>TotalHeatingLoad</Name>
+      <Definition>The peak total heating load for the building, zone or space.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Total Heating Load</NameAlias>
+        <NameAlias lang="ja-JP">暖房負荷</NameAlias>
+        <NameAlias lang="ko-KR">난방 부하</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">建物、ゾーン、部屋のピーク時の暖房負荷。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">건물 영역 방 최대 난방 부하.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="2609e680d1be11e1800000215ad4efdf">

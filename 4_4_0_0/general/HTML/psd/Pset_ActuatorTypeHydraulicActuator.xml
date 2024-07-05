@@ -12,6 +12,7 @@
     <PropertyDef ifdguid="759be280d1bd11e1800000215ad4efdf">
       <Name>InputPressure</Name>
       <Definition>Maximum input or design pressure for the object.
+
 Maximum design pressure for the actuator.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -32,6 +33,7 @@ Maximum design pressure for the actuator.</Definition>
     <PropertyDef ifdguid="7af92d00d1bd11e1800000215ad4efdf">
       <Name>InputFlowrate</Name>
       <Definition>Maximum input flowrate requirement.
+
 Hydraulic flowrate.</Definition>
       <PropertyType>
         <TypePropertySingleValue>

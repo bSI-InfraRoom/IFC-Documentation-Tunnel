@@ -13,9 +13,7 @@
       <Name>Temperature</Name>
       <Definition>Temperature of the fluid.</Definition>
       <PropertyType>
-        <TypePropertyBoundedValue>
-          <DataType type="IfcThermodynamicTemperatureMeasure" />
-        </TypePropertyBoundedValue>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Temperature</NameAlias>
@@ -28,11 +26,9 @@
     </PropertyDef>
     <PropertyDef ifdguid="7583cd7c5ea74d109e2b6ad6d0dafa4b">
       <Name>Pressure</Name>
-      <Definition>The pressure of the fluid.</Definition>
+      <Definition>The pressure of fluid.</Definition>
       <PropertyType>
-        <TypePropertyBoundedValue>
-          <DataType type="IfcPressureMeasure" />
-        </TypePropertyBoundedValue>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
       </PropertyType>
       <NameAliases>
         <NameAlias lang="en">Pressure</NameAlias>

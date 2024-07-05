@@ -10,7 +10,7 @@
   <ApplicableTypeValue>IfcSpace</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="19f84600d20b11e1800000215ad4efdf">
-      <Name>CoolingDesignAirflow</Name>
+      <Name>CoolingDesignAirFlow</Name>
       <Definition>The air flowrate required during the peak cooling conditions.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -27,7 +27,7 @@
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="1fee2700d20b11e1800000215ad4efdf">
-      <Name>HeatingDesignAirflow</Name>
+      <Name>HeatingDesignAirFlow</Name>
       <Definition>The air flowrate required during the peak heating conditions, but could also be determined by minimum ventilation requirement or minimum air change requirements.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -62,7 +62,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="2c727f80d20b11e1800000215ad4efdf">
       <Name>TotalHeatGain</Name>
-      <Definition>The total amount of heat or energy gained by the space at the time of the space's peak cooling conditions.</Definition>
+      <Definition>The total (sensible+latent) amount of heat or energy gained by the space at the time of the space's peak cooling conditions.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPowerMeasure" />

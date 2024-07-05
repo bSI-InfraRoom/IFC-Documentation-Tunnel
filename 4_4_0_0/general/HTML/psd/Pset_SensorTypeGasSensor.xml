@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="490bb900d20511e1800000215ad4efdf">
       <Name>GasDetected</Name>
-      <Definition>Identification of the gas that is being detected, according to chemical formula.  For example, carbon monoxide is 'CO', carbon dioxide is 'CO2', oxygen is 'O2'.</Definition>
+      <Definition>Identification of the gas that is being detected, according to chemical formula. For example, carbon monoxide is 'CO', carbon dioxide is 'CO2', oxygen is 'O2'.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

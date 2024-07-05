@@ -32,24 +32,21 @@
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Chiller Type Common</b></td><td>Chiller type common attributes.
 </td></tr>
 </table>
-<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/3aCcs0qSWHuO00025QrE$V/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
-
-<p><a href="../../../psd/Pset_ChillerTypeCommon.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
-
-
+<details open="open"><summary>Properties</summary>
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>Reference</td><td>
 <span class="self-ref">P_SINGLEVALUE</span>
 /
 <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
-*</td><td>
+</td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reference</b></td><td>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.
+<blockquote>
+IFC4.3.0.0 DEPRECATION   The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.
+</blockquote>
 </td></tr>
-<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Reference</b></td><td>Référence à l'identifiant d'un type spécifié dans le contexte de ce projet.
-</td></tr>
-<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照記号</b></td><td>このプロジェクトのための参照記号。
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>参照</b></td><td>当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。
 </td></tr>
 </table>
 </td></tr>
@@ -148,7 +145,8 @@
 <a href="../../ifcmeasureresource/lexical/ifcpowermeasure.htm">IfcPowerMeasure</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Capacity Curve</b></td><td>Chiller cooling capacity is a function of condensing temperature and evaporating temperature, data is in table form, Capacity = f (TempCon, TempEvp), capacity = a1+b1<em>Tei+c1</em>Tei^2+d1<em>Tci+e1</em>Tci^2+f1<em>Tei</em>Tci. This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcResourceConstraintRelationship and IfcMetric. Columns are specified in the following order:
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Capacity Curve</b></td><td>Chiller cooling capacity is a function of condensing temperature and evaporating temperature, data is in table form, Capacity = f (TempCon, TempEvp), capacity = a1+b1<em>Tei+c1</em>Tei^2+d1<em>Tci+e1</em>Tci^2+f1<em>Tei</em>Tci.
+This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcResourceConstraintRelationship and IfcMetric.  Columns are specified in the following order:
 1.IfcPowerMeasure:Capacity
 2.IfcThermodynamicTemperatureMeasure:CondensingTemperature
 3.IfcThermodynamicTemperatureMeasure:EvaporatingTemperature
@@ -171,7 +169,9 @@ Ce tableau utilises plusieurs entrées variables; pour la  représenter, Definin
 <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
 </td><td>
 <table class="gridtable">
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Coefficient Of Performance Curve</b></td><td>Chiller coefficient of performance (COP) is function of condensing temperature and evaporating temperature, data is in table form, COP= f (TempCon, TempEvp), COP = a2+b2<em>Tei+c2</em>Tei^2+d2<em>Tci+e2</em>Tci^2+f2<em>Tei</em>Tci. This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcResourceConstraintRelationship and IfcMetric. Columns are specified in the following order: 1.IfcPositiveRatioMeasure:CoefficientOfPerformance
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Coefficient Of Performance Curve</b></td><td>Chiller coefficient of performance (COP) is function of condensing temperature and evaporating temperature, data is in table form, COP= f (TempCon, TempEvp), COP = a2+b2<em>Tei+c2</em>Tei^2+d2<em>Tci+e2</em>Tci^2+f2<em>Tei</em>Tci.
+This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcResourceConstraintRelationship and IfcMetric.  Columns are specified in the following order:
+1.IfcPositiveRatioMeasure:CoefficientOfPerformance
 2.IfcThermodynamicTemperatureMeasure:CondensingTemperature
 3.IfcThermodynamicTemperatureMeasure:EvaporatingTemperature
 </td></tr>

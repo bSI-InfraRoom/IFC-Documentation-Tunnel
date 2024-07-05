@@ -110,7 +110,7 @@ Outside dry bulb temperature</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="0e4c5580d1f211e1800000215ad4efdf">
       <Name>CoolingDesignDay</Name>
-      <Definition>The month, day  and time that has been selected for the cooling design calculations.</Definition>
+      <Definition>The month, day and time that has been selected for the cooling design calculations.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcDateTime" />

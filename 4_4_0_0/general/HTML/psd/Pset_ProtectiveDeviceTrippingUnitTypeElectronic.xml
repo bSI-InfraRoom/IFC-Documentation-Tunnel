@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="92a3d600d1fc11e1800000215ad4efdf">
       <Name>ElectronicTrippingUnitType</Name>
-      <Definition>A list of the available types of electronic tripping unit  from which that required may be selected.</Definition>
+      <Definition>A list of the available types of electronic tripping unit from which that required may be selected.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElectronicTrippingUnitType">

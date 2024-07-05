@@ -1,0 +1,139 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_GeoScienceFeatureTypeFault</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 5 index3 4 index4 28 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.5.4.29");
+//-->
+</script>
+
+<h4 class="std">6.5.4.29 Pset_GeoScienceFeatureTypeFault</h4>
+<p><span class="self-ref">PSET_OCCURRENCEDRIVEN</span>
+/
+<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeature.htm">IfcGeoScienceFeature</a>
+ / <span class="self-ref">FAULT</span>
+</p>Properties for faults.
+
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4_draft/index.htm">IFC4X3_ADD2 to IFC4X4_draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypefault.htm">Pset_GeoScienceFeatureTypeFault</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary>
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>FaultMovementType</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Contains a human readable summary of the type of movement (e.g. dip-slip, strike-slip) on the object. To report an identifier from a controlled vocabulary, movementType_uri shall be used.
+<blockquote class="note">
+NOTE: Definition according to OGC Geoscience Markup Language 4.1 (GeoSciML) (8.9.8.6 movementType)
+</blockquote>
+<blockquote class="note">
+NOTE: A controlled vocabulary may be found at  http://resource.geosciml.org/classifier/cgi/faultmovementtype
+</blockquote>
+
+</td></tr>
+<tr><td>FaultDeformationStyle</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>
+</td><td>
+A human readable description of the style of deformation (e.g. brittle, ductile etc.) for the object. To report an identifier from a controlled vocabulary, deformationStyle_uri shall be used.
+<blockquote class="note">
+NOTE: Definition according to OGC Geoscience Markup Language 4.1 (GeoSciML) (8.9.8.7 deformationStyle)
+NOTE: A controlled vocabulary may be found at  http://resource.geosciml.org/classifier/cgi/deformationstyle
+</blockquote>
+
+</td></tr>
+<tr><td>FaultDisplacement</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>
+</td><td>
+Human readable summary describing the displacement across the object.
+<blockquote class="note">
+NOTE: Definition according to OGC Geoscience Markup Language 4.1 (GeoSciML) (8.9.8.8 displacement)
+</blockquote>
+
+</td></tr>
+<tr><td>FaultGeologicHistory</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>
+</td><td>
+Description of the age of the object, possibly formatted with formal syntax, (where age is a sequence of events and may include process and environment information).
+<blockquote class="note">
+NOTE: Definition according to OGC Geoscience Markup Language 4.1 (GeoSciML) (8.9.8.9 geologicHistory)
+</blockquote>
+
+</td></tr>
+<tr><td>DipDirection</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>
+</td><td>
+The azimuth of the dip (dip direction) shall be measured in degrees in the range 0 to 360 degrees counted clockwise from true north.
+<blockquote class="note">
+NOTE  Definition according to ISO EN 14689.
+</blockquote>
+
+</td></tr>
+<tr><td>FaultActivity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Qualitative rating of the fault activitity (active/inactive/...). E.g. an acttive fault is a fault that has slipped in historic time and which is likely to slip again in the future.
+
+</td></tr>
+<tr><td>FaultLength</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+Fault length (L) is the longest horizontal or subhorizontal dimension along the fault plane.
+
+</td></tr>
+<tr><td>FaultInfilling</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Substance dispersed between the wall surfaces of a discontinuity (JGS) generally, the material occupying the space between joint surfaces, faults, and other rock discontinuities. The filling material may be clay, gouge, various natural cementing agents, or alteration products of the adjacent rock.
+
+</td></tr>
+<tr><td>FaultSlipDirection</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Observed relative displacement direction of the hanging wall (top) to the foot wall, e.g. up, down, left, right or combinations (like top down - left).
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_geosciencefeaturetypefault.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

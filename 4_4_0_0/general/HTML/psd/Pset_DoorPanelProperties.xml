@@ -34,7 +34,7 @@ For a door, it is the way of operation of the panel. The PanelOperation of the d
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_DoorPanelOperationEnum">
             <EnumItem>DOUBLE_ACTING</EnumItem>
-            <EnumItem>FIXED_PANEL</EnumItem>
+            <EnumItem>FIXEDPANEL</EnumItem>
             <EnumItem>FOLDING</EnumItem>
             <EnumItem>REVOLVING</EnumItem>
             <EnumItem>ROLLINGUP</EnumItem>
@@ -54,7 +54,7 @@ For a door, it is the way of operation of the panel. The PanelOperation of the d
               <DefinitionAliases />
             </ConstantDef>
             <ConstantDef>
-              <Name>FIXED_PANEL</Name>
+              <Name>FIXEDPANEL</Name>
               <Definition>Fixed panel:
 !["FIXEDPANEL"](../../../../../../figures/ifcdoorpaneloperationenum-fig07.gif "Figure 1")</Definition>
               <NameAliases />

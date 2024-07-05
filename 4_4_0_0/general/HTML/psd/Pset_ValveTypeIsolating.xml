@@ -3,7 +3,7 @@
   <IfcVersion version="IFC4X4" />
   <Name>Pset_ValveTypeIsolating</Name>
   <Definition>Valve that is used to isolate system components.
-Note that an isolating valve is constrained to have a 2 port  pattern.</Definition>
+Note that an isolating valve is constrained to have a 2 port pattern.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcValve/ISOLATING</ClassName>

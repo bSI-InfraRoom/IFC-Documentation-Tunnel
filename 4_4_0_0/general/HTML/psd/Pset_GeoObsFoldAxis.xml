@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="a1a46621630940f9ad4fdcf404186c4a" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoObsFoldAxis</Name>
+  <Definition>Properties for geological fold axis observations.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/MAPPEDFEATURE</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/MAPPEDFEATURE</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="4cb1d4b173c34de88995406143268297">
+      <Name>FoldType</Name>
+      <Definition>Types of Geological Folds, which can be classified according to various factors independently.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c4e4845fbc7345febb6f80f81a369b94">
+      <Name>DeformationPhase</Name>
+      <Definition>Name or label for a geologic event such as a basin formation, compressional tectonic phase, orogeny etc.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c978f79482aa44a982a1c2704d53c3a3">
+      <Name>AzimuthHingeLine</Name>
+      <Definition>The azimuth of the hinge line of the fold. The azimuth is given in degrees in the range 0 to 360 degrees counted clockwise from true north and expressed as a three-digit number, e.g. 240 or 015.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="65501ef4a0b147a3b30d2c46969901e3">
+      <Name>AzimuthHingeLineation</Name>
+      <Definition>The azimuth of the lineation. The azimuth is given in degrees in the range 0 to 360 degrees counted clockwise from true north and expressed as a three-digit number, e.g. 240 or 015.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2d2973b6d12b4d088d06cb09b5929995">
+      <Name>Plunge</Name>
+      <Definition>The angle of inclination of the fold axis with the horizontal as measured in a vertical plane.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

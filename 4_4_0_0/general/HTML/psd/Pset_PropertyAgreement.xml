@@ -227,7 +227,7 @@ The period of time for the lease.</Definition>
     </PropertyDef>
     <PropertyDef ifdguid="9a617b80d1f811e1800000215ad4efdf">
       <Name>Restrictions</Name>
-      <Definition>Restrictions that may be placed by a  competent authority.</Definition>
+      <Definition>Restrictions that may be placed by a competent authority.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText" />

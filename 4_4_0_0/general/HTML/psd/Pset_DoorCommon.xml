@@ -9,27 +9,25 @@
   </ApplicableClasses>
   <ApplicableTypeValue>IfcDoor</ApplicableTypeValue>
   <PropertyDefs>
-    <PropertyDef ifdguid="2795d780d1db11e1800000215ad4efdf">
+    <PropertyDef ifdguid="00cda600d1c711e1800000215ad4efdf">
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types and no classification reference to a recognized classification system used.
+
+&gt; IFC4.3.0.0 DEPRECATION&amp;nbsp;  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases>
-        <NameAlias lang="de-DE">Bauteiltyp</NameAlias>
         <NameAlias lang="en">Reference</NameAlias>
-        <NameAlias lang="fr-FR">Reference</NameAlias>
-        <NameAlias lang="ja-JP">参照記号</NameAlias>
-        <NameAlias lang="zh-CN">参考号</NameAlias>
+        <NameAlias lang="ja-JP">参照</NameAlias>
+        <NameAlias lang="ko-KR">참조</NameAlias>
       </NameAliases>
       <DefinitionAliases>
-        <DefinitionAlias lang="de-DE">Bezeichnung zur Zusammenfassung gleichartiger Bauteile zu einem Bauteiltyp (auch Konstruktionstyp genannt). Alternativ zum Namen des "Typobjekts", insbesondere wenn die Software keine Typen unterstützt.</DefinitionAlias>
         <DefinitionAlias lang="en" />
-        <DefinitionAlias lang="fr-FR">Référence à l'identifiant d'un type spécifié dans le contexte du projet (exemple : "type A1") pour désigner un "type de construction". Une alternative au nom d'un objet type lorsque les objets types ne sont pas gérés par le logiciel.</DefinitionAlias>
-        <DefinitionAlias lang="ja-JP">このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。</DefinitionAlias>
-        <DefinitionAlias lang="zh-CN">若未采用已知的分类系统，则该属性为该项目中该类型构件的参考编号（例如，类型A-1）。</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">해당 프로젝트에 정의된 형식의 참조 ID (예 : A-1) 승인된 분류에 존재하지 않을 때 사용된다.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
     <PropertyDef ifdguid="32e90300d1db11e1800000215ad4efdf">
@@ -151,7 +149,8 @@
     </PropertyDef>
     <PropertyDef ifdguid="95420380d1db11e1800000215ad4efdf">
       <Name>AcousticRating</Name>
-      <Definition>Acoustic rating for this object. It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorption values).</Definition>
+      <Definition>Acoustic rating for this object.
+It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorption values).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -175,7 +174,8 @@
     </PropertyDef>
     <PropertyDef ifdguid="b4409580d1db11e1800000215ad4efdf">
       <Name>SecurityRating</Name>
-      <Definition>Index based rating system indicating security level. It is giving according to the national building code.</Definition>
+      <Definition>Index based rating system indicating security level.
+It is giving according to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -237,7 +237,8 @@
     </PropertyDef>
     <PropertyDef ifdguid="5030f04224d94c74aba753294170b227">
       <Name>WaterTightnessRating</Name>
-      <Definition>Water tightness rating for this object. It is provided according to the national building code.</Definition>
+      <Definition>Water tightness rating for this object.
+It is provided according to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -248,7 +249,8 @@
     </PropertyDef>
     <PropertyDef ifdguid="da9b78dfa88b4538887d4c597a1059dd">
       <Name>MechanicalLoadRating</Name>
-      <Definition>Mechanical load rating for this object. It is provided according to the national building code.</Definition>
+      <Definition>Mechanical load rating for this object.
+It is provided according to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -259,7 +261,8 @@
     </PropertyDef>
     <PropertyDef ifdguid="9be0892ff9324135bdafcd98782a64ff">
       <Name>WindLoadRating</Name>
-      <Definition>Wind load resistance rating for this object. It is provided according to the national building code.</Definition>
+      <Definition>Wind load resistance rating for this object.
+It is provided according to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />
@@ -337,7 +340,8 @@ Hier der Gesamtwärmedurchgangskoeffizient der Tür.</DefinitionAlias>
     </PropertyDef>
     <PropertyDef ifdguid="5d878b80d1dc11e1800000215ad4efdf">
       <Name>GlazingAreaFraction</Name>
-      <Definition>Fraction of the glazing area relative to the total area of the filling element. It shall be used, if the glazing area is not given separately for all panels within the filling element.</Definition>
+      <Definition>Fraction of the glazing area relative to the total area of the filling element.
+It shall be used, if the glazing area is not given separately for all panels within the filling element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure" />

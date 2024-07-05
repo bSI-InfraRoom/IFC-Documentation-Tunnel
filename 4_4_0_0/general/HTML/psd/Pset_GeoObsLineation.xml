@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="cdeaab428af1495cb817e54437029ec0" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoObsLineation</Name>
+  <Definition>Properties for geological lineation observations.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceObservation/MAPPEDFEATURE</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceObservation/MAPPEDFEATURE</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="430d27c3107048a0b0b376fca2e042ce">
+      <Name>LineationType</Name>
+      <Definition>Flow lines, scratches, striae, slickenlines, linear arrangements of elongate components in sediments, elongate minerals, crinkles, and lines of intersection between penetrative planar structures.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="a3c1ef6c09504f669818e249c7c143d8">
+      <Name>DefiningElement</Name>
+      <Definition>Kinds of describable inhomogeneity in a rock body that may define a geologic structure. Examples include oriented particle.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4780ea795035493abe486e7c45294fa6">
+      <Name>DipDirection</Name>
+      <Definition>The geographic direction of a line created by the intersection of a plane and the horizontal plane. If non specific convention is used, this angular value is in the range 0 to 180 degrees. In this case, there is an ambiguity on the dip orientation. For example, a plane with an orientation of 90 degrees from the north could either have a dip direction to the North or to the South. Thus, to avoid this ambiguity, a strike value is generally completed with an indication of the dip orientation (Quadrant).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2d2973b6d12b4d088d06cb09b5929995">
+      <Name>Plunge</Name>
+      <Definition>The angle of inclination of the fold axis with the horizontal as measured in a vertical plane.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c4e4845fbc7345febb6f80f81a369b94">
+      <Name>DeformationPhase</Name>
+      <Definition>Name or label for a geologic event such as a basin formation, compressional tectonic phase, orogeny etc.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>
