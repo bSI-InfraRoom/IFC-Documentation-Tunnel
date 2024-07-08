@@ -68,9 +68,9 @@ declared as USERDEFINED.
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>CorrectEventTriggerType</td><td>The attribute UserDefinedEventTriggerType must be asserted when the value of EventTriggerType is set to USERDEFINED.
-</td></tr>
 <tr><td>CorrectPredefinedType</td><td>The attribute ProcessType must be asserted when the value of PredefinedType is set to USERDEFINED.
+</td></tr>
+<tr><td>CorrectEventTriggerType</td><td>The attribute UserDefinedEventTriggerType must be asserted when the value of EventTriggerType is set to USERDEFINED.
 </td></tr>
 </table>
 
@@ -151,6 +151,7 @@ EXAMPLE Refering to a furniture as applicable occurrence entity would be express
 </td><td>X</td></tr>
 <tr><td>6</td><td>HasPropertySets</td><td><a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a></td><td>? S[1:?]</td><td>
 Set <del>list</del> of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
+
 <blockquote>
 IFC2x3 CHANGE  The attribute aggregate type has been changed from LIST to SET.
 </blockquote>
@@ -232,7 +233,7 @@ declared as USERDEFINED.
 &nbsp;&nbsp;EventTriggerType : <a href="../../ifcprocessextension/lexical/ifceventtriggertypeenum.htm">IfcEventTriggerTypeEnum</a>;<br/>
 &nbsp;&nbsp;UserDefinedEventTriggerType : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;CorrectEventTriggerType : (EventTriggerType &lt;&gt; <a href="../../ifcprocessextension/lexical/ifceventtriggertypeenum.htm">IfcEventTriggerTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR ((EventTriggerType = <a href="../../ifcprocessextension/lexical/ifceventtriggertypeenum.htm">IfcEventTriggerTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(UserDefinedEventTriggerType)) ;<br/>&nbsp;&nbsp;CorrectPredefinedType : (PredefinedType &lt;&gt; <a href="../../ifcprocessextension/lexical/ifceventtypeenum.htm">IfcEventTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR ((PredefinedType = <a href="../../ifcprocessextension/lexical/ifceventtypeenum.htm">IfcEventTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="../../ifckernel/lexical/ifctypeprocess.htm">IfcTypeProcess</a>.ProcessType)) ;<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;CorrectPredefinedType : (PredefinedType &lt;&gt; <a href="../../ifcprocessextension/lexical/ifceventtypeenum.htm">IfcEventTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR ((PredefinedType = <a href="../../ifcprocessextension/lexical/ifceventtypeenum.htm">IfcEventTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="../../ifckernel/lexical/ifctypeprocess.htm">IfcTypeProcess</a>.ProcessType)) ;<br/>&nbsp;&nbsp;CorrectEventTriggerType : (EventTriggerType &lt;&gt; <a href="../../ifcprocessextension/lexical/ifceventtriggertypeenum.htm">IfcEventTriggerTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR ((EventTriggerType = <a href="../../ifcprocessextension/lexical/ifceventtriggertypeenum.htm">IfcEventTriggerTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(UserDefinedEventTriggerType)) ;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcprocessextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

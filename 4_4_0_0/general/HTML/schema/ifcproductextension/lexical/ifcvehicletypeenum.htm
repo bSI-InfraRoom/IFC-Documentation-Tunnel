@@ -34,13 +34,13 @@
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>CARGO</td><td><p>A mobile transport element that represents a discrete unit of cargo managed by a facility.</p>
-</td></tr><tr><td>ROLLINGSTOCK</td><td><p>Refers to railway vehicles, including both powered and unpowered vehicles, for example locomotives, railroad cars, coaches, private railroad cars and wagons.</p>
-</td></tr><tr><td>VEHICLE</td><td><p>a generalisation of a vehicle that interacts with a facility (e.g. as a user/customer) or as a specified operational asset within the facility.</p>
-</td></tr><tr><td>VEHICLEAIR</td><td><p>A specialisation of a vehicle that represents powered and unpowered flying vehicles, such as airplanes, helicopters, gliders etc.</p>
-</td></tr><tr><td>VEHICLEMARINE</td><td><p>A specialisation of a vehicle that operates on water as a marine vessel.</p>
+<tr><td>VEHICLE</td><td><p>a generalisation of a vehicle that interacts with a facility (e.g. as a user/customer) or as a specified operational asset within the facility.</p>
 </td></tr><tr><td>VEHICLETRACKED</td><td><p>A specialisation of a vehicle that operates on land tracked (Caterpillar) vehicle.</p>
+</td></tr><tr><td>ROLLINGSTOCK</td><td><p>Refers to railway vehicles, including both powered and unpowered vehicles, for example locomotives, railroad cars, coaches, private railroad cars and wagons.</p>
 </td></tr><tr><td>VEHICLEWHEELED</td><td><p>A specialisation of a vehicle that operates on land as a multi wheeled vehicle such as a car, lorry, forklift etc.</p>
+</td></tr><tr><td>VEHICLEAIR</td><td><p>A specialisation of a vehicle that represents powered and unpowered flying vehicles, such as airplanes, helicopters, gliders etc.</p>
+</td></tr><tr><td>CARGO</td><td><p>A mobile transport element that represents a discrete unit of cargo managed by a facility.</p>
+</td></tr><tr><td>VEHICLEMARINE</td><td><p>A specialisation of a vehicle that operates on water as a marine vessel.</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined type</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined type.</p>
 </td></tr></table>
@@ -50,13 +50,13 @@
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcproductextension/lexical/ifcvehicletypeenum.htm">IfcVehicleTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;cargo&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rollingstock&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;vehicle&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;vehicleair&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;vehiclemarine&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;vehicletracked&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rollingstock&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;vehiclewheeled&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;vehicleair&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;cargo&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;vehiclemarine&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -64,7 +64,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcVehicleTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;CARGO, <br/>&nbsp;ROLLINGSTOCK, <br/>&nbsp;VEHICLE, <br/>&nbsp;VEHICLEAIR, <br/>&nbsp;VEHICLEMARINE, <br/>&nbsp;VEHICLETRACKED, <br/>&nbsp;VEHICLEWHEELED, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;VEHICLE, <br/>&nbsp;VEHICLETRACKED, <br/>&nbsp;ROLLINGSTOCK, <br/>&nbsp;VEHICLEWHEELED, <br/>&nbsp;VEHICLEAIR, <br/>&nbsp;CARGO, <br/>&nbsp;VEHICLEMARINE, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

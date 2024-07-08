@@ -55,9 +55,9 @@
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
+<tr><td>ValidCoefficients</td><td></td></tr>
 <tr><td>CorrectPositionDim</td><td>Enforces same Dim of Position and curve Dim.
 </td></tr>
-<tr><td>ValidCoefficients</td><td></td></tr>
 </table>
 
 </details>
@@ -75,6 +75,7 @@
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>
@@ -156,7 +157,7 @@ IFC2x3 CHANGE  The inverse attribute <i>StyledByItem</i> has been added.
 &nbsp;&nbsp;CoefficientsY : <span class="keyword">OPTIONAL</span> <span class="keyword">LIST</span> [2:?] <span class="keyword">OF</span> <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
 &nbsp;&nbsp;CoefficientsZ : <span class="keyword">OPTIONAL</span> <span class="keyword">LIST</span> [2:?] <span class="keyword">OF</span> <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;CorrectPositionDim : ((Position.Dim=2) AND (NOT EXISTS(CoefficientsZ))) OR (Position.Dim=3);<br/>&nbsp;&nbsp;ValidCoefficients : (EXISTS(CoefficientsX) AND EXISTS(CoefficientsY)) OR (EXISTS(CoefficientsX) AND EXISTS(CoefficientsZ)) OR (EXISTS(CoefficientsY) AND EXISTS(CoefficientsZ)) OR (EXISTS(CoefficientsX) AND EXISTS(CoefficientsY) AND EXISTS(CoefficientsZ));<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;ValidCoefficients : (EXISTS(CoefficientsX) AND EXISTS(CoefficientsY)) OR (EXISTS(CoefficientsX) AND EXISTS(CoefficientsZ)) OR (EXISTS(CoefficientsY) AND EXISTS(CoefficientsZ)) OR (EXISTS(CoefficientsX) AND EXISTS(CoefficientsY) AND EXISTS(CoefficientsZ));<br/>&nbsp;&nbsp;CorrectPositionDim : ((Position.Dim=2) AND (NOT EXISTS(CoefficientsZ))) OR (Position.Dim=3);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

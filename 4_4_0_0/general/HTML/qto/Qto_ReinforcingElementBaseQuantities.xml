@@ -18,7 +18,7 @@
     </QtoDef>
     <QtoDef>
       <Name>Length</Name>
-      <Definition>Total length of reinforcing.</Definition>
+      <Definition>The length of the object.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases />
       <DefinitionAliases />

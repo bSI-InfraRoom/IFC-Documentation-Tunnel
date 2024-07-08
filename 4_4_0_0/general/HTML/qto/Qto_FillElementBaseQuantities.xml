@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QtoSetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.buildingsmart-tech.org/xml/qto/QTO_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Qto_FillElementBaseQuantities</Name>
+  <Definition>Base quantities that are common to the definition of all occurrences of fill elements.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcFillElement</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcFillElement</ApplicableTypeValue>
+  <QtoDefs>
+    <QtoDef>
+      <Name>Thickness</Name>
+      <Definition>The thickness of the fill element.</Definition>
+      <QtoType>Q_LENGTH</QtoType>
+      <NameAliases />
+      <DefinitionAliases />
+    </QtoDef>
+    <QtoDef>
+      <Name>Volume</Name>
+      <Definition>The volume of the fill element.</Definition>
+      <QtoType>Q_VOLUME</QtoType>
+      <NameAliases />
+      <DefinitionAliases />
+    </QtoDef>
+  </QtoDefs>
+  <QtoDefinitionAliases />
+</QtoSetDef>

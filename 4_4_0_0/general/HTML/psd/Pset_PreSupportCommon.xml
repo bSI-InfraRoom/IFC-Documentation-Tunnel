@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="b2f29fdb16bd438581aabf9583b4fc92" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_PreSupportCommon</Name>
+  <Definition>Properties describing the characteristcs of excavation pre-support measures.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcBuiltSystem/.TUNNEL_PRESUPPORT.</ClassName>
+    <ClassName>IfcTunnelTypicalSection/.EXCAVATIONSUPPORT.</ClassName>
+    <ClassName>IfcElementAssembly/.PRESUPPORTVAULT.</ClassName>
+    <ClassName>IfcElementAssembly/.PRESUPPORTFACE.</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcBuiltSystem/.TUNNEL_PRESUPPORT.,IfcTunnelTypicalSection/.EXCAVATIONSUPPORT.,IfcElementAssembly/.PRESUPPORTVAULT.,IfcElementAssembly/.PRESUPPORTFACE.</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="ac58542c774145218f0a986436b3b83d">
+      <Name>PreSupportLocation</Name>
+      <Definition>Specifies whether the pre-support is in face or around circumference.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_PreSupportLocation">
+            <EnumItem>TUNNELVAULT</EnumItem>
+            <EnumItem>TUNNELFACE</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>TUNNELVAULT</Name>
+              <Definition>The pre-support is around the circumference of the tunnel.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TUNNELFACE</Name>
+              <Definition>The pre-support is in the tunnel face.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Notdefined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c157ed7600a84f8587a5674b42983213">
+      <Name>UserDefinedPreSupportLocation</Name>
+      <Definition>Specifies a user defined pre-support location. Used when PreSupportLocation is set to USERDEFINED.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="9dadf80c91c84f318bda2ad43435c4a8">
+      <Name>PreSupportType</Name>
+      <Definition>Specifies the type of pre-support applied.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_PreSupportType">
+            <EnumItem>JETGROUTED</EnumItem>
+            <EnumItem>PIPEUMBRELLA</EnumItem>
+            <EnumItem>FREEZING</EnumItem>
+            <EnumItem>FOREPOLING</EnumItem>
+            <EnumItem>SPILING</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>JETGROUTED</Name>
+              <Definition>Pre-support using jet grouting.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PIPEUMBRELLA</Name>
+              <Definition>Pre-support using pipe umbrellas.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FREEZING</Name>
+              <Definition>Pre-support using freezing.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FOREPOLING</Name>
+              <Definition>Pre-support using forepoling.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SPILING</Name>
+              <Definition>Pre-support using spiling.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Notdefined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="985baef887e14a37a5e4248d4eb2e894">
+      <Name>UserDefinedPreSupportType</Name>
+      <Definition>Specifies a user defined type of pre-support applied. Used when PreSupporttype is set to USERDEFINED.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcLabel" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="844ad366659c4cceb0d51bf90d4b1547">
+      <Name>Arrangement</Name>
+      <Definition>Specifies whether the pre-support is simple or staggered.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_PreSupportArrangement">
+            <EnumItem>SIMPLE</EnumItem>
+            <EnumItem>STAGGERED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>SIMPLE</Name>
+              <Definition>A simple arrangement of pre-support.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>STAGGERED</Name>
+              <Definition>A staggered arrangement of the pre-support.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7ebab96df2da48f494eda39dd0950df5">
+      <Name>BoreholeLengthPlanned</Name>
+      <Definition>The planned length of a borehole e.g. in a site investigation program, in metres, as determined by the data provider.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="65769c5a53d048468eebb2070426043e">
+      <Name>BoreholeOverlap</Name>
+      <Definition>Overlap of staggered boreholes.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="cc443c94417d4084bc2bdbb96b908a9e">
+      <Name>UsefulLength</Name>
+      <Definition>Length that can be used, generally length less overlap.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8f986c76820d4c51b7f787aecefbe31c">
+      <Name>DrillingDiameter</Name>
+      <Definition>Property to be removed when Pset_BoreholeConstruction is merged and DrillingDiameter from there is reused.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d37ed216660a4985bac6d2213c6672b2">
+      <Name>IsBoreholeCased</Name>
+      <Definition>Specifies whether the boreholes are cased or not.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b7be374c4f26457c9ee6e3030fe27ed8">
+      <Name>DrillingMethod</Name>
+      <Definition>Type of drilling method used.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b33b1c5daa31473c830ff6bc4e1a4207">
+      <Name>AreHolesGrouted</Name>
+      <Definition>Specifies whether holes are grouted after insertion of pipes/bars.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

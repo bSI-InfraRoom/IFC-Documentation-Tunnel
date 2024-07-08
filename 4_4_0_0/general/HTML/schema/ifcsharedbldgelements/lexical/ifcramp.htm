@@ -163,21 +163,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -254,20 +258,20 @@ IFC4 CHANGE The attribute has been renamed from ShapeType and changed to be OPTI
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 189.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 190.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifcsharedbldgelements/lexical/ifcramptype.htm">IfcRampType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 189 &mdash; IfcRamp Object Typing</td></tr></table>
+<tr><td><p class="table">Table 190 &mdash; IfcRamp Object Typing</td></tr></table>
 
 <br/><br/>
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 190.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 191.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -328,7 +332,7 @@ IFC4 CHANGE The attribute has been renamed from ShapeType and changed to be OPTI
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 190 &mdash; IfcRamp Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 191 &mdash; IfcRamp Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
@@ -341,7 +345,7 @@ IFC4 CHANGE The attribute has been renamed from ShapeType and changed to be OPTI
 
 <a id="spatial-containment" />
 <p class="use-head">Spatial Containment</p>
-<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 191.<table>
+<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 192.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingStructure</b></th><th><b>Description</b></th></tr>
@@ -353,7 +357,7 @@ IFC4 CHANGE The attribute has been renamed from ShapeType and changed to be OPTI
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 191 &mdash; IfcRamp Spatial Containment</td></tr></table>
+<tr><td><p class="table">Table 192 &mdash; IfcRamp Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcRamp</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
 <ul>
@@ -365,7 +369,7 @@ IFC4 CHANGE The attribute has been renamed from ShapeType and changed to be OPTI
 
 <a id="element-decomposition" />
 <p class="use-head">Element Decomposition</p>
-<p>The <a href="../../templates/element-decomposition.htm">Element Decomposition</a> concept template applies to this entity as shown in Table 192.<table>
+<p>The <a href="../../templates/element-decomposition.htm">Element Decomposition</a> concept template applies to this entity as shown in Table 193.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>IsDecomposedBy</b></th><th><b>RelatedObjects</b></th><th><b>Description</b></th></tr>
@@ -377,7 +381,7 @@ IFC4 CHANGE The attribute has been renamed from ShapeType and changed to be OPTI
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 192 &mdash; IfcRamp Element Decomposition</td></tr></table>
+<tr><td><p class="table">Table 193 &mdash; IfcRamp Element Decomposition</td></tr></table>
 
 <p>If the <span class="self-ref">IfcRamp</span> has components (referenced by <i>SELF\IfcProduct.IsDecomposedBy</i>) then no independent 'Body' geometric representation shall be defined for the <span class="self-ref">IfcRamp</span>. The <span class="self-ref">IfcRamp</span> is then geometrically represented by the geometric representation of its components.</p>
 <p> </p>
@@ -385,11 +389,11 @@ IFC4 CHANGE The attribute has been renamed from ShapeType and changed to be OPTI
  
 <tr>
   <td><img src="../../../figures/ifcramp-layout1.gif" alt="ramp" width="393" height="299" border="0"></td>
-  <td><blockquote class="example">EXAMPLE&nbsp; Figure 352 illustrates <span class="self-ref">IfcRamp</span> defining the local placement for all components.</blockquote>
+  <td><blockquote class="example">EXAMPLE&nbsp; Figure 355 illustrates <span class="self-ref">IfcRamp</span> defining the local placement for all components.</blockquote>
  </td></tr>
  
 <tr>
-  <td><p class="figure">Figure 352 &mdash; Ramp placement</p></td>
+  <td><p class="figure">Figure 355 &mdash; Ramp placement</p></td>
   <td>&nbsp;</td>
  </tr>
 </table>
@@ -398,10 +402,10 @@ IFC4 CHANGE The attribute has been renamed from ShapeType and changed to be OPTI
 
 <a id="product-local-placement" />
 <p class="use-head">Placement</p>
-<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 193.<table>
+<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 194.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 193 &mdash; IfcRamp Product Local Placement</td></tr></table>
+<tr><td><p class="table">Table 194 &mdash; IfcRamp Product Local Placement</td></tr></table>
 
 <p>The following restriction may be imposed by view definitions or implementer agreements:</p>
 <ul>

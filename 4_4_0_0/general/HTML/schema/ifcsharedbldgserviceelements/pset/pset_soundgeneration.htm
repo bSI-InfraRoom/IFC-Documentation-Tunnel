@@ -34,7 +34,18 @@
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b></b></td><td>建物管理・空気の搬送システムに関連する設備の騒音性能指標。周波数バンド（帯域幅）１HZにおけるある音の強さの倍数で表示する。履歴：IFC4に新たに定義された。
 </td></tr>
 </table>
-<details open="open"><summary>Properties</summary>
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4_draft/index.htm">IFC4X3_ADD2 to IFC4X4_draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgserviceelements/pset/pset_soundgeneration.htm">Pset_SoundGeneration</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SoundPressureLevel</td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/2AKPW0qWWHuO00025QrE$V/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_SoundGeneration.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>SoundCurve</td><td>
@@ -51,6 +62,14 @@ Table of sound frequencies and sound power measured in decibels at a reference p
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>音響（騒音？）曲線</b></td><td>オクターブバンド1pW（10^(-12)の音の強さを基準とする音の周波数とデシベル単位で計測した音のエネルギーの一覧表。
 </td></tr>
 </table>
+</td></tr>
+<tr><td>SoundPressureLevel</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcsoundpressurelevelmeasure.htm">IfcSoundPressureLevelMeasure</a>
+</td><td>
+The sound pressure level measured at a specific location (e.g. 10m at 45 degrees).
+
 </td></tr>
 </table>
 </details>

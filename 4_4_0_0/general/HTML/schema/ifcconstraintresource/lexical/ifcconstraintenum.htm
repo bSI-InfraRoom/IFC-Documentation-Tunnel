@@ -41,9 +41,9 @@
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>ADVISORY</td><td><p>Qualifies a constraint such that it is advised that it is followed within or at the values set.</p>
-</td></tr><tr><td>HARD</td><td><p>Qualifies a constraint such that it must be followed rigidly within or at the values set.</p>
+<tr><td>HARD</td><td><p>Qualifies a constraint such that it must be followed rigidly within or at the values set.</p>
 </td></tr><tr><td>SOFT</td><td><p>Qualifies a constraint such that it should be followed within or at the values set.</p>
+</td></tr><tr><td>ADVISORY</td><td><p>Qualifies a constraint such that it is advised that it is followed within or at the values set.</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>A user-defined grade indicated by a separate attribute at the referencing entity.</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Grade has not been specified.</p>
 </td></tr></table>
@@ -53,9 +53,9 @@
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcconstraintresource/lexical/ifcconstraintenum.htm">IfcConstraintEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;advisory&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;hard&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;soft&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;advisory&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -63,7 +63,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcConstraintEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;ADVISORY, <br/>&nbsp;HARD, <br/>&nbsp;SOFT, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;HARD, <br/>&nbsp;SOFT, <br/>&nbsp;ADVISORY, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcconstraintresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

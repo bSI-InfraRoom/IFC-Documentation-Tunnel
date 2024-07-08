@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
     <script type="text/javascript" src="../../../details-shim.js"></script>
-
     <title>IFC4X3_ADD2 to IFC4X4_draft</title>
 
     <style type="text/css">
@@ -28,13 +27,19 @@
 <h4 class="std">F.13.2 Properties</h4>
 <table class="gridtable">
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th><td>Bucket</td></tr>
+<tr><td colspan="5"><b>PENUM_BARSECTIONTYPE</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_BOLTCROSSSECTION</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_BOLTTYPE</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_BOREHOLESTATUS</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_COMPACTIONMETHOD</b><td>B</td></td>
+<tr><td colspan="5"><b>PENUM_CONCRETECASTINGMETHOD</b><td>A</td></td>
+<tr><td>&nbsp;&nbsp;<b>SPRAYED_DRY</b></td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;<b>SPRAYED_WET</b></td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;<b>SLIPFORMED</b></td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
 <tr><td colspan="5"><b>PENUM_DEWATERINGMETHOD</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_DISCONTINUITYSPACING</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_DRIVEINCLINATION</b><td>C</td></td>
+<tr><td colspan="5"><b>PENUM_EARLYSTRENGTHDEVELOPMENT</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_EARTHWORKSCUTEXCAVATIONMETHOD</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_ELEMENTCOMPONENTCORROSIONTREATMENT</b></td>
 <tr><td>&nbsp;&nbsp;<b>POWDERCOATED</b></td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
@@ -46,13 +51,23 @@
 <tr><td colspan="5"><b>PENUM_FACEEXCAVATIONTYPE</b><td>C</td></td>
 <tr><td colspan="5"><b>PENUM_GEOPHYSICALSURVEYMETHOD</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_GROUTINGTYPE</b><td>B</td></td>
+<tr><td colspan="5"><b>PENUM_INJECTIONDISTRIBUTIONEQUIPMENT</b><td>B</td></td>
+<tr><td colspan="5"><b>PENUM_INJECTIONPACKERTYPE</b><td>B</td></td>
+<tr><td colspan="5"><b>PENUM_INJECTIONPHASE</b><td>B</td></td>
+<tr><td colspan="5"><b>PENUM_JETGROUTINGMETHOD</b><td>B</td></td>
+<tr><td colspan="5"><b>PENUM_PRESUPPORTARRANGEMENT</b><td>C</td></td>
+<tr><td colspan="5"><b>PENUM_PRESUPPORTLOCATION</b><td>C</td></td>
+<tr><td colspan="5"><b>PENUM_PRESUPPORTTYPE</b><td>C</td></td>
 <tr><td colspan="5"><b>PENUM_RADIALEXCAVATIONDIRECTION</b><td>C</td></td>
 <tr><td colspan="5"><b>PENUM_RADIALEXCAVATIONTYPE</b><td>C</td></td>
+<tr><td colspan="5"><b>PENUM_REINFORCEMENTTYPE</b><td>A</td></td>
+<tr><td colspan="5"><b>PENUM_RESIDUALSTRENGTHSTRUCTURALCLASS</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_RINGTYPE</b><td>C</td></td>
 <tr><td colspan="5"><b>PENUM_SEALTYPE</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_SEGMENTJOINTTYPE</b><td>C</td></td>
 <tr><td colspan="5"><b>PENUM_SENSORPLACEMENTTYPE</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_SOURCEOFFILL</b><td>B</td></td>
+<tr><td colspan="5"><b>PENUM_SPRAYEDCONCRETEFIBRETYPE</b><td>B</td></td>
 <tr><td colspan="5"><b>PENUM_TUNNELINCLINATION</b><td>C</td></td>
 <tr><td colspan="5"><b>PENUM_UNDERGROUNDEXCAVATIONMETHOD</b><td>C</td></td>
 <tr><td colspan="5"><b>PENUM_WATERPROOFINGSYSTEM</b><td>B</td></td>
@@ -62,8 +77,12 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcproductextension/pset/pset_elementassemblytypering.htm">Pset_ElementAssemblyTypeRing</a></td><td></td><td></td><td>ADDED</td><td></td><td>C</td></tr>
 <tr><td colspan="5"><b>SHARED ELEMENT DATA SCHEMAS</b></td>
 <tr><td>&nbsp;&nbsp;<b>IFCSHAREDBLDGELEMENTS</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgelements/pset/pset_archelementcommon.htm">Pset_ArchElementCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgelements/pset/pset_archelementtypesegment.htm">Pset_ArchElementTypeSegment</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgelements/pset/pset_archelementtypesteelrib.htm">Pset_ArchElementTypeSteelRib</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;<b>IFCSHAREDBLDGSERVICEELEMENTS</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedbldgserviceelements/pset/pset_soundgeneration.htm">Pset_SoundGeneration</a></td><td></td><td></td><td></td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SoundPressureLevel</td><td></td><td></td><td>ADDED</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;<b>IFCSHAREDCOMPONENTELEMENTS</b></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedcomponentelements/pset/pset_discreteaccessorytypewaterbarrier.htm">Pset_DiscreteAccessoryTypeWaterBarrier</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;<b>IFCSHAREDINFRASTRUCTUREELEMENTS</b></td><td></td><td></td><td></td><td></td></tr>
@@ -71,7 +90,10 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_boreholetestspt.htm">Pset_BoreholeTestSPT</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_builtsystemtypewaterproofing.htm">Pset_BuiltSystemTypeWaterproofing</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_earthworkscutcommon.htm">Pset_EarthworksCutCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_earthworkscuttypetrench.htm">Pset_EarthworksCutTypeTrench</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_earthworksfillcommon.htm">Pset_EarthworksFillCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_elementassemblytypepresupportface.htm">Pset_ElementAssemblyTypePreSupportFace</a></td><td></td><td></td><td>ADDED</td><td></td><td>C</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_elementassemblytypepresupportvault.htm">Pset_ElementAssemblyTypePreSupportVault</a></td><td></td><td></td><td>ADDED</td><td></td><td>C</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_excavationcommon.htm">Pset_ExcavationCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>C</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_faceexcavationcommon.htm">Pset_FaceExcavationCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>C</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geoaspects.htm">Pset_GeoAspects</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
@@ -95,17 +117,35 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypediscontinuity.htm">Pset_GeoScienceFeatureTypeDiscontinuity</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypefault.htm">Pset_GeoScienceFeatureTypeFault</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypefluidbody.htm">Pset_GeoScienceFeatureTypeFluidBody</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypefold.htm">Pset_GeoScienceFeatureTypeFold</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypegeohazard.htm">Pset_GeoScienceFeatureTypeGeoHazard</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypegeologicalunit.htm">Pset_GeoScienceFeatureTypeGeologicalUnit</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypehydrogeounit.htm">Pset_GeoScienceFeatureTypeHydroGeoUnit</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypeintactrock.htm">Pset_GeoScienceFeatureTypeIntactRock</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypepiezometricwaterlevel.htm">Pset_GeoScienceFeatureTypePiezometricWaterLevel</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetyperockmass.htm">Pset_GeoScienceFeatureTypeRockMass</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypesoillikematerial.htm">Pset_GeoScienceFeatureTypeSoilLikeMaterial</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencemodelcommon.htm">Pset_GeoScienceModelCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencepropertiescommon.htm">Pset_GeoSciencePropertiesCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_groundreinforcementelementtypebar.htm">Pset_GroundReinforcementElementTypeBar</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_groundreinforcementelementtypepile.htm">Pset_GroundReinforcementElementTypePile</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_groundreinforcementelementtypeplate.htm">Pset_GroundReinforcementElementTypePlate</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_groundreinforcementelementtypetendon.htm">Pset_GroundReinforcementElementTypeTendon</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_groundreinforcementelementtypetube.htm">Pset_GroundReinforcementElementTypeTube</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_groundreinforcmentelementtypebolt.htm">Pset_GroundReinforcmentElementTypeBolt</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_improvedgroundcommon.htm">Pset_ImprovedGroundCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_improvedgroundtypedewatered.htm">Pset_ImprovedGroundTypeDewatered</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_improvedgroundtypeinjectiongrouted.htm">Pset_ImprovedGroundTypeInjectionGrouted</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_improvedgroundtypejetgrouted.htm">Pset_ImprovedGroundTypeJetGrouted</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_insitutestcommon.htm">Pset_InSituTestCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_insitutestcpt.htm">Pset_InSituTestCPT</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_insitutesthydro.htm">Pset_InSituTestHydro</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_labtestcommon.htm">Pset_LabTestCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_labtestresult.htm">Pset_LabTestResult</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_lateralexcavationcommon.htm">Pset_LateralExcavationCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>C</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_presupportcommon.htm">Pset_PreSupportCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>C</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_solidstratumcapacity.htm">Pset_SolidStratumCapacity</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resistivity</td><td></td><td></td><td>MODIFIED</td><td>Type changed from <i>IfcElectricResistanceMeasure</i> to <i>IfcElectricalResistivityMeasure</i>. <br/></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_spatialgeoobsborehole.htm">Pset_SpatialGeoObsBorehole</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_spatialgeoobsexcavatedzone.htm">Pset_SpatialGeoObsExcavatedZone</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_spatialgeoobsfieldoutcrop.htm">Pset_SpatialGeoObsFieldOutcrop</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
@@ -118,11 +158,46 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_supportcommon.htm">Pset_SupportCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_undergroundexcavationcommon.htm">Pset_UndergroundExcavationCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>C</td></tr>
 <tr><td colspan="5"><b>DOMAIN SPECIFIC DATA SCHEMAS</b></td>
+<tr><td>&nbsp;&nbsp;<b>IFCELECTRICALDOMAIN</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcelectricaldomain/pset/pset_earthingelementcommon.htm">Pset_EarthingElementCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcelectricaldomain/pset/pset_electricaldevicecommon.htm">Pset_ElectricalDeviceCommon</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FireRating</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcelectricaldomain/pset/pset_electricflowstoragedevicetypecommon.htm">Pset_ElectricFlowStorageDeviceTypeCommon</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NumberOfPhases</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcelectricaldomain/pset/pset_protectivedevicetypecircuitbreaker.htm">Pset_ProtectiveDeviceTypeCircuitBreaker</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NumberOfPhases</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcelectricaldomain/pset/pset_protectivedevicetypeearthingswitch.htm">Pset_ProtectiveDeviceTypeEarthingSwitch</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcelectricaldomain/pset/pset_switchingdevicetypecommon.htm">Pset_SwitchingDeviceTypeCommon</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NumberOfPhases</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcelectricaldomain/pset/pset_transformertypecommon.htm">Pset_TransformerTypeCommon</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NumberOfPhases</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;<b>IFCHVACDOMAIN</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifchvacdomain/pset/pset_elementsize.htm">Pset_ElementSize</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NominalThickness</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NominalDiameter</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NominalWeight</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifchvacdomain/pset/pset_fantypecommon.htm">Pset_FanTypeCommon</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EfficiencyPoint</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StaticLoad</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DynamicLoad</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifchvacdomain/pset/pset_fantypejet.htm">Pset_FanTypeJet</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;<b>IFCRAILDOMAIN</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcraildomain/pset/pset_electricflowstoragedevicetypebattery.htm">Pset_ElectricFlowStorageDeviceTypeBattery</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RechargeTime</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RuntimeAtFullLoad</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MaximumShortCircuitCurrent</td><td></td><td></td><td>ADDED</td><td></td><td>A</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcraildomain/pset/pset_protectivedevicetypesparkgap.htm">Pset_ProtectiveDeviceTypeSparkGap</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resistivity</td><td></td><td></td><td>MODIFIED</td><td>Type changed from <i>IfcElectricResistanceMeasure</i> to <i>IfcElectricalResistivityMeasure</i>. <br/></td><td>A</td></tr>
 <tr><td>&nbsp;&nbsp;<b>IFCSTRUCTURALELEMENTSDOMAIN</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcstructuralelementsdomain/pset/pset_concreteelementgeneral.htm">Pset_ConcreteElementGeneral</a></td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed from <i>IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement</i> to <i>IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement,IfcArchElement</i>. <br/></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReinforcementType</td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcstructuralelementsdomain/pset/pset_reinforcingmeshcommon.htm">Pset_ReinforcingMeshCommon</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcstructuralelementsdomain/pset/pset_reinforcingmeshtypesteelstraps.htm">Pset_ReinforcingMeshTypeSteelStraps</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td colspan="5"><b>RESOURCE DEFINITION DATA SCHEMAS</b></td>
 <tr><td>&nbsp;&nbsp;<b>IFCMATERIALRESOURCE</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcmaterialresource/pset/pset_materialgranular.htm">Pset_MaterialGranular</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcmaterialresource/pset/pset_materialsolid.htm">Pset_MaterialSolid</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcmaterialresource/pset/pset_materialsprayedconcrete.htm">Pset_MaterialSprayedConcrete</a></td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcmaterialresource/pset/pset_materialwater.htm">Pset_MaterialWater</a></td><td></td><td></td><td></td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ElectricalConductivity</td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Temperature</td><td></td><td></td><td>ADDED</td><td></td><td>B</td></tr>

@@ -11,7 +11,7 @@
   <QtoDefs>
     <QtoDef>
       <Name>Width</Name>
-      <Definition>Nominal width (or thickness) of the plate. Only given, if the covering is prismatic (constant thickess).</Definition>
+      <Definition>The width of the object. Only given, if the object has constant thickness (prismatic).</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Dicke</NameAlias>
@@ -26,7 +26,9 @@
     </QtoDef>
     <QtoDef>
       <Name>GrossArea</Name>
-      <Definition>Sum of all gross areas of the covering facing the space. No opening that is included in the covering is subtracted.</Definition>
+      <Definition>Gross Area of the object. Openings, recesses, projections and cut-outs are not taken into account.
+
+Sum of all gross areas of the covering facing the space.</Definition>
       <QtoType>Q_AREA</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Bruttofläche</NameAlias>
@@ -41,7 +43,9 @@
     </QtoDef>
     <QtoDef>
       <Name>NetArea</Name>
-      <Definition>Sum of all net areas  of the covering facing the space. All openings that is included in the covering are subtracted.</Definition>
+      <Definition>Total net area of the object. Openings, recesses and cut-outs are taken into account by subtraction, projections by addition.
+
+Sum of all net areas of the covering facing the space.</Definition>
       <QtoType>Q_AREA</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Nettofläche</NameAlias>

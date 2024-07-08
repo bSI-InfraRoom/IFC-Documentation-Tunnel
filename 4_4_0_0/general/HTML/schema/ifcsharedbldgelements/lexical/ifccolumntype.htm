@@ -149,6 +149,7 @@ EXAMPLE Refering to a furniture as applicable occurrence entity would be express
 </td><td>X</td></tr>
 <tr><td>6</td><td>HasPropertySets</td><td><a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a></td><td>? S[1:?]</td><td>
 Set <del>list</del> of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
+
 <blockquote>
 IFC2x3 CHANGE  The attribute aggregate type has been changed from LIST to SET.
 </blockquote>
@@ -163,6 +164,7 @@ List of unique representation maps. Each representation map describes a block de
 The tag (or label) identifier at the particular type of a product, e.g. the article number (like the EAN). It is the identifier at the specific level.
 </td><td>X</td></tr>
 <tr><td></td><td><i>ReferencedBy</i></td><td><a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a><br/>@RelatingProduct</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a> relationship, by which other products, processes, controls, resources or actors (as subtypes of <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>) can be related to this product type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship.
 </blockquote>
@@ -199,7 +201,7 @@ Identifies the predefined types of a column element from which the type required
 
 <a id="type-body-geometry" />
 <p class="use-head">Body Geometry</p>
-<p>The <a href="../../templates/type-body-geometry.htm">Type Body Geometry</a> concept template applies to this entity as shown in Table 156.<table>
+<p>The <a href="../../templates/type-body-geometry.htm">Type Body Geometry</a> concept template applies to this entity as shown in Table 157.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RepresentationType</b></th><th><b>Geometry</b></th></tr>
@@ -207,7 +209,7 @@ Identifies the predefined types of a column element from which the type required
 <tr><td>Brep</td><td><a href="../../ifcgeometricmodelresource/lexical/ifcfacetedbrep.htm">IfcFacetedBrep</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 156 &mdash; IfcColumnType Type Body Geometry</td></tr></table>
+<tr><td><p class="table">Table 157 &mdash; IfcColumnType Type Body Geometry</td></tr></table>
 
 <p>The <span class="self-ref">IfcColumnType</span> may define the shared geometric representation for all column occurrences. The <i>RepresentationMaps</i> attribute refers to a list of <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a>'s, that allow for multiple geometric representations (e.g. with <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>'s having an <i>RepresentationIdentifier</i> 'Box', 'Axis', or 'Body'). It is only applicable if the <span class="self-ref">IfcColumnType</span> has only occurrences of type <a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm">IfcColumn</a> (See geometric use definition of <a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm">IfcColumn</a> for further information).</p>
 <blockquote class="note">

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QtoSetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.buildingsmart-tech.org/xml/qto/QTO_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Qto_ImprovedGroundBaseQuantities</Name>
+  <Definition>Quantity measures associated to improved ground.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcImprovedGround</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcImprovedGround</ApplicableTypeValue>
+  <QtoDefs>
+    <QtoDef>
+      <Name>LengthTreatedArea</Name>
+      <Definition>Length of treated area.</Definition>
+      <QtoType>Q_LENGTH</QtoType>
+      <NameAliases />
+      <DefinitionAliases />
+    </QtoDef>
+    <QtoDef>
+      <Name>WidthTreatedArea</Name>
+      <Definition>Width of treated area.</Definition>
+      <QtoType>0</QtoType>
+      <NameAliases />
+      <DefinitionAliases />
+    </QtoDef>
+    <QtoDef>
+      <Name>VolumeOfTreatedGround</Name>
+      <Definition>Volume of treated ground.</Definition>
+      <QtoType>Q_VOLUME</QtoType>
+      <NameAliases />
+      <DefinitionAliases />
+    </QtoDef>
+  </QtoDefs>
+  <QtoDefinitionAliases />
+</QtoSetDef>

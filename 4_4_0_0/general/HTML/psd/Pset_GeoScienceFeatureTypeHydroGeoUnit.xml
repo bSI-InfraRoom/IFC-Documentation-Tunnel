@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="0e3aa9adfc274e87a8e36d7c9e36bfce" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoScienceFeatureTypeHydroGeoUnit</Name>
+  <Definition>Properties for hydrogeo units.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceFeature/HYDROGEOUNIT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceFeature/HYDROGEOUNIT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="0cb6d888a90a4a99aa4a36a9cdb5a63d">
+      <Name>UnitRecharge</Name>
+      <Definition>Volumetric flow rate of water that enters an hydrogeologic unit, at potentially multiple locations.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumetricFlowRateMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ad25eb56bf5b4735ad0f3edec5890a41">
+      <Name>UnitDischarge</Name>
+      <Definition>Volumetric flow rate of water that goes out of an hydrogeologic unit, at potentially multiple locations.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumetricFlowRateMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="264100d7f3ba4e8691eae10924edebbb">
+      <Name>HydraulicPermeabilityHorizontal</Name>
+      <Definition>Value of horizontal permeability.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLinearVelocityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="64522b20a2a947b19873f049ada65622">
+      <Name>HydraulicPermeabilityVertical</Name>
+      <Definition>Value of vertical permeability.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLinearVelocityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ac63369edcf9496d837d0946310e31aa">
+      <Name>Transmissivity</Name>
+      <Definition>Rate of flow of groundwater under a unit hydraulic gradient through an aquifer of unit width and unit thickness. That is, transmissivity is the product of hydraulic conductivity and thickness of the aquifer. The unit is in m2/second.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c6ebc96207f84609be657cd92f78fc4e">
+      <Name>StorageCoefficient</Name>
+      <Definition>Ratio of the volume of water released or stored per unit area of an aquifer, to the corresponding charge in hydraulic head, without reference to time.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

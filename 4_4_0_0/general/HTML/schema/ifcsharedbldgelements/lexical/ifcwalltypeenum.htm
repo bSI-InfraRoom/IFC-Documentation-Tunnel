@@ -70,22 +70,24 @@ IFC4 DEPRECATION  The enumerators STANDARD, POLYGONAL and ELEMENTEDWALL are dep
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>ELEMENTEDWALL</td><td><p>A stud wall framed with studs and faced with sheetings, sidings, wallboard, or plasterwork.</p>
-<blockquote>
-<p>The value is deprecated, it is expressed by choosing the subtype <i>IfcWallElementedCase</i>.</p>
-</blockquote>
-</td></tr><tr><td>MOVABLE</td><td><p>A movable wall that is either movable, such as folding wall or a sliding wall, or can be easily removed as a removable partitioning or mounting wall. Movable walls do normally not define space boundaries and often belong to the furnishing system.</p>
+<tr><td>MOVABLE</td><td><p>A movable wall that is either movable, such as folding wall or a sliding wall, or can be easily removed as a removable partitioning or mounting wall. Movable walls do normally not define space boundaries and often belong to the furnishing system.</p>
 </td></tr><tr><td>PARAPET</td><td><p>A wall-like barrier to protect human or vehicle from falling, or to prevent the spread of fires. Often designed at the edge of balconies, terraces or roofs, or along edges of bridges.</p>
 </td></tr><tr><td>PARTITIONING</td><td><p>A wall designed to partition spaces that often has a light-weight, sandwich-like construction (e.g. using gypsum board). Partitioning walls are normally non load bearing.</p>
 </td></tr><tr><td>PLUMBINGWALL</td><td><p>A pier, or enclosure, or encasement, normally used to enclose plumbing in sanitary rooms. Such walls often do not extent to the ceiling.</p>
-</td></tr><tr><td>POLYGONAL</td><td><p>A polygonal wall, extruded vertically, where the wall thickness varies along the wall path.</p>
-</td></tr><tr><td>RETAININGWALL</td><td><p>A supporting wall used to protect against soil layers behind. Special types of a retaining wall may be e.g. Gabion wall and Grib wall. Examples of retaining walls are wing wall, headwall, stem wall, pierwall and protecting wall.</p>
 </td></tr><tr><td>SHEAR</td><td><p>A wall designed to withstand shear loads. Examples of shear wall are diaphragms inside a box girder, typically on a pier, to resist lateral forces and transfer them to the support.</p>
 </td></tr><tr><td>SOLIDWALL</td><td><p>A massive wall construction for the wall core being the single layer or having multiple layers attached. Such walls are often masonry or concrete walls (both cast in-situ or precast) that are load bearing and fire protecting.</p>
-</td></tr><tr><td>STANDARD</td><td><p>A standard wall, extruded vertically with a constant thickness along the wall path.</p>
+</td></tr><tr><td>STANDARD</td><td><p>A standard wall, extruded vertically with a constant thickness along the wall path.
+</p>
 <blockquote>
 <p>The value is deprecated, it is expressed by choosing the subtype <a href="../../ifcsharedbldgelements/lexical/ifcwallstandardcase.htm">IfcWallStandardCase</a>.</p>
 </blockquote>
+</td></tr><tr><td>POLYGONAL</td><td><p>A polygonal wall, extruded vertically, where the wall thickness varies along the wall path.</p>
+</td></tr><tr><td>ELEMENTEDWALL</td><td><p>A stud wall framed with studs and faced with sheetings, sidings, wallboard, or plasterwork.
+</p>
+<blockquote>
+<p>The value is deprecated, it is expressed by choosing the subtype <i>IfcWallElementedCase</i>.</p>
+</blockquote>
+</td></tr><tr><td>RETAININGWALL</td><td><p>A supporting wall used to protect against soil layers behind. Special types of a retaining wall may be e.g. Gabion wall and Grib wall. Examples of retaining walls are wing wall, headwall, stem wall, pierwall and protecting wall.</p>
 </td></tr><tr><td>WAVEWALL</td><td><p>Protective wall or screen to block overtopping and impact of waves across a breakwater</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined wall element.</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined wall element.</p>
@@ -96,16 +98,16 @@ IFC4 DEPRECATION  The enumerators STANDARD, POLYGONAL and ELEMENTEDWALL are dep
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcsharedbldgelements/lexical/ifcwalltypeenum.htm">IfcWallTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;elementedwall&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;movable&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;parapet&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;partitioning&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;plumbingwall&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;polygonal&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;retainingwall&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;shear&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;solidwall&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;standard&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;polygonal&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;elementedwall&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;retainingwall&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;wavewall&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
@@ -114,7 +116,7 @@ IFC4 DEPRECATION  The enumerators STANDARD, POLYGONAL and ELEMENTEDWALL are dep
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcWallTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;ELEMENTEDWALL, <br/>&nbsp;MOVABLE, <br/>&nbsp;PARAPET, <br/>&nbsp;PARTITIONING, <br/>&nbsp;PLUMBINGWALL, <br/>&nbsp;POLYGONAL, <br/>&nbsp;RETAININGWALL, <br/>&nbsp;SHEAR, <br/>&nbsp;SOLIDWALL, <br/>&nbsp;STANDARD, <br/>&nbsp;WAVEWALL, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;MOVABLE, <br/>&nbsp;PARAPET, <br/>&nbsp;PARTITIONING, <br/>&nbsp;PLUMBINGWALL, <br/>&nbsp;SHEAR, <br/>&nbsp;SOLIDWALL, <br/>&nbsp;STANDARD, <br/>&nbsp;POLYGONAL, <br/>&nbsp;ELEMENTEDWALL, <br/>&nbsp;RETAININGWALL, <br/>&nbsp;WAVEWALL, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedbldgelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

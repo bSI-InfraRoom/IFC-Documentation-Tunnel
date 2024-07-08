@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="a3ad9c700ceb4e74b7cf479e0cbfa6f7" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoSciencePropertiesCommon</Name>
+  <Definition>Properties common for geological and geotechnical units.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceFeature/GEOLOGICALUNIT</ClassName>
+    <ClassName>IfcGeoScienceFeature/GEOTECHNICALUNIT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceFeature/GEOLOGICALUNIT,IfcGeoScienceFeature/GEOTECHNICALUNIT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="d95f6282a6a44804a928f07b9cfdd358">
+      <Name>PwaveVelocity</Name>
+      <Definition>Value of S wave (Shear wave (S)) measured through the unit.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLinearVelocityValue" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="55e5321da35344878c72bcad32f38213">
+      <Name>SwaveVelocity</Name>
+      <Definition>Value of P wave (pressure or primary elastic body wave (P)) measured through the unit.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLinearVelocityValue" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0c341fe4f64b4cb68507081d0db3363d">
+      <Name>Resistivity</Name>
+      <Definition>Electrical resistivity (Ohm-m).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricalResistivityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="3df303cce1b14c77b13abbbc0f830677">
+      <Name>WetBulkDensity</Name>
+      <Definition>Ratio of the total mass to the unit total volume (material at its natural moisture content).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassDensityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d25bc76088ab407387202160d37ba6e7">
+      <Name>GroundwaterTemperature</Name>
+      <Definition>Groundwater temperature observed at specific location or expected in the subject section.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="a39ffbf21cf549a190c9fbd768375fdb">
+      <Name>DryBulkDensity</Name>
+      <Definition>Ratio of the mass of solid to the unit total volume (dry material).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassDensityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

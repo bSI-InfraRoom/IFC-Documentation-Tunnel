@@ -2,6 +2,7 @@
 <QtoSetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.buildingsmart-tech.org/xml/qto/QTO_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Qto_EarthworksFillBaseQuantities</Name>
+  <Definition>Quantity set for Earthworks Fill Base.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcEarthworksFill</ClassName>
@@ -10,22 +11,24 @@
   <QtoDefs>
     <QtoDef>
       <Name>Length</Name>
-      <Definition>Characteristic length</Definition>
+      <Definition>The length of the object.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases />
       <DefinitionAliases />
     </QtoDef>
     <QtoDef>
       <Name>Width</Name>
-      <Definition>Characteristic width</Definition>
+      <Definition>The width of the object. Only given, if the object has constant thickness (prismatic).</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases />
       <DefinitionAliases />
     </QtoDef>
     <QtoDef>
       <Name>Depth</Name>
-      <Definition>Depth (one direction of the non-projected foot print area) of the slab. It shall only be provided, if the slab is rectangular.
-&gt; NOTE&amp;nbsp; Also refered to as width, but not to be confused with the "Width" quantity, that denotes the thickness in the context of the slab.</Definition>
+      <Definition>The depth of the object.
+
+Depth (one direction of the non-projected foot print area) of the slab. It shall only be provided, if the slab is rectangular.
+&gt;NOTE&amp;nbsp; Also referred to as width, but not to be confused with the "Width" quantity, that denotes the thickness in the context of the slab.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Breite</NameAlias>

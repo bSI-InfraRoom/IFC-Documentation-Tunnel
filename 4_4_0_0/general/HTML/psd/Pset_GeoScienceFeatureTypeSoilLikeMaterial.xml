@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="6475dc6e5c4f4326af165e19b772bcb7" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoScienceFeatureTypeSoilLikeMaterial</Name>
+  <Definition>Properties for soil like material.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceFeature/GEOTECHNICALUNIT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceFeature/GEOTECHNICALUNIT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="d2949ea28ef448d79594a2e6d0762b24">
+      <Name>Lithology</Name>
+      <Definition>Defines all natural materials resulting from the combination of minerals, particles or biogenic elements.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ba8d50cac7b24394b66ec3b1ca9bbb67">
+      <Name>WaterContent</Name>
+      <Definition>Ratio of the mass of water to the mass of solids.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ecf21fa88ccd495aa84b8474b367f457">
+      <Name>VoidRatio</Name>
+      <Definition>Ratio of the volume of void to the volume of solid.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="9226ed5c2201447a8f76fb0c8d6608a9">
+      <Name>WetBulkDensity</Name>
+      <Definition>Ratio of the total mass to the unit total volume (material at its natural moisture content).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="313bafa6c1a6491abdb136e46e1e4c70">
+      <Name>DryBulkDensity</Name>
+      <Definition>Ratio of the mass of the solid to the unit total volume (dry material).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassDensityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="51595aaa4ef9451f922cb3f3919f8ed6">
+      <Name>YoungModulus</Name>
+      <Definition>Elastic modulus, mean value, α=0°.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcModulusOfElasticityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4c82e979af274d9098ae74ff72d6cd37">
+      <Name>MenardLimitPressure</Name>
+      <Definition>Limit pressure, resulting from interpretation of Menard's pressuremeter test.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="377ed004a5cf49f3998ad4aaea986c41">
+      <Name>CPTconeResistance</Name>
+      <Definition>Cone penetration resistance measured during the CPT test.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c585a5ee52844480886e91ba6abce4d8">
+      <Name>SPTBlowCount</Name>
+      <Definition>Number of blows required to drive the sampler for a test drive of 300 mm following the seating drive.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcCountMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="956df50f8aee4758b2ccf8e9dca2e158">
+      <Name>PlasticityIndex</Name>
+      <Definition>The plasticity index Ip is the numerical difference between the liquid limit and plastic limit of a fine soil.  IP = wL - wP.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b2273a0588834eb1b0cd394fe0b2b420">
+      <Name>ConsistencyIndex</Name>
+      <Definition>The consistency index (Ic) indicates the consistency (firmness) of a soil. It is the numerical difference between the liquid limit and the natural water content expressed as a percentage ratio of the plasticity index. Ic = (LL-W)/Ip.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5d7e6036ce6043c98f384badb82dcb1e">
+      <Name>PeakCohesion</Name>
+      <Definition>Cohesion is a shear strength parameter of soils. Its definition is derived from the Mohr-Coulomb failure criterion and is used to describe the shear resistance of soils that is independent from the normal effective stress. The peak value correspond to the maximum shear measured during the test.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="817456fcdd0f44f3972999a37f347cc2">
+      <Name>ResidualCohesion</Name>
+      <Definition>Cohesion is a shear strength parameter of soils. Its definition is derived from the Mohr-Coulomb failure criterion and is used to describe the shear resistance of soils that is independent from the normal effective stress. The residual value correspond to the shear strength measured at large strain values during the test.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="3d06b12210ee4bc28a4f0bd61e6f339a">
+      <Name>PeakFrictionAngle</Name>
+      <Definition>Soil effective stress friction angle is a shear strength parameter of soils. Its definition is derived from the Mohr-Coulomb failure criterion and is used to describe the friction shear resistance of soils with the normal effective stress. The peak value correspond to the maximum shear strength measured during the test.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="df78618095b44e95a981dc90862ca8e5">
+      <Name>ResidualFrictionAngle</Name>
+      <Definition>Soil effective stress friction angle is a shear strength parameter of soils. Its definition is derived from the Mohr-Coulomb failure criterion and it is used to describe the friction shear resistance of soils with the normal effective stress. The residual value correspond to the shear strength measured at large strain values during the test.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="310c8e96d6c046d886bb31d9cb076abe">
+      <Name>UndrainedShearStrength</Name>
+      <Definition>Shear strength of a soil under undrained condition or constant volume conditions. It is relevant for conditions where the rate of loading is very much greater than the rate at which pore water pressure - generated due to the action of shearing of the soil - dissipates.  Its calculation depends on the laboratory test performed.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="85331f80d1ed11e1800000215ad4efdf">
+      <Name>PoissonRatio</Name>
+      <Definition>A measure of the lateral deformations in the elastic range.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Poisson Ratio</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="6e329162f3d940c2a228bd24ea4773f8">
+      <Name>CompressionIndex</Name>
+      <Definition>Compression index is determined with the oedometer tests, and used to compute settlements.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="aa9bf5b43a9747c896cc59c69b38dfcb">
+      <Name>SwellingIndex</Name>
+      <Definition>Swelling index is determined with the oedometer test, and used to compute swelling.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d321e6d490d940ae941f5fbaed8d40b3">
+      <Name>OCR</Name>
+      <Definition>Ratio between pre-consolidation pressure and overburden pressure.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="498258be7ea44b3fa11de4877683cb11">
+      <Name>K0</Name>
+      <Definition>The coefficient of lateral earth pressure, K, is defined as the ratio of the horizontal effective stress, σ’h, to the vertical effective stress, σ’v. For a level ground deposit with zero lateral strain in the soil, the "at-rest" coefficient of lateral earth pressure, K0 is obtained.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="dc2c33d48f854351b8b0370a4bd9ae65">
+      <Name>RelativeDensity</Name>
+      <Definition>Relative density or density index is the ratio of the difference between the void ratios of a cohesionless soil in its loosest state and existing natural state to the difference between its void ratio in the loosest and densest states. (emax - e) /(emax-emin).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

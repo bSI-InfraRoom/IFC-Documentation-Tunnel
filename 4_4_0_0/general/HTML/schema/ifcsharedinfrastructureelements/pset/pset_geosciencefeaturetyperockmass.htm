@@ -1,0 +1,123 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_GeoScienceFeatureTypeRockMass</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 5 index3 4 index4 39 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.5.4.40");
+//-->
+</script>
+
+<h4 class="std">6.5.4.40 Pset_GeoScienceFeatureTypeRockMass</h4>
+<p><span class="self-ref">PSET_OCCURRENCEDRIVEN</span>
+/
+<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeature.htm">IfcGeoScienceFeature</a>
+ / <span class="self-ref">GEOTECHNICALUNIT</span>
+</p>Properties for rock mass.
+
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4_draft/index.htm">IFC4X3_ADD2 to IFC4X4_draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetyperockmass.htm">Pset_GeoScienceFeatureTypeRockMass</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/3H0MlShVPD3wZI1Az$eApM/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_GeoScienceFeatureTypeRockMass.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>RockQualityDesignation</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+Quotient of the cumulative length of drill cores with a length greater than 10 cm, by the total length of the drill core pass with a length greater than or equal to 1m.
+
+</td></tr>
+<tr><td>RockMassRating</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+</td><td>
+The rock mass rating (RMR) is a geomechanical classification system for rocks, developed by Z. T. Bieniawski.
+
+</td></tr>
+<tr><td>QValue</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+The rock mass quality (Q) is a very sensitive index and its value varies from 0.001 to 1000. Use of the Q-system is specifically recommended for tunnels and caverns with an arched roof.
+The Q-value is determined with:
+$$
+Q = \frac<em>\frac</em>\frac
+$$
+The first term RQD (Rock Quality Designation) divided by Jn (joint set number) is related to the size of the intact rock blocks in the rock mass. The second term Jr (joint roughness number) divided by Ja (joint alteration number) is related to the shear strength along the discontinuity planes and the third term Jw (joint water parameter) divided by SRF (stress reduction factor) is related to the stress environment on the intact rock blocks and discontinuities around the underground excavation.
+A multiplication of the three terms results in the Q parameter, which can range between 0.001 for an exceptionally poor to 1000 for an exceptionally good rock mass. The numerical values of the class boundaries for the different rock mass qualities are subdivisions of the Q range on a logarithmic scale.
+
+</td></tr>
+<tr><td>GeologicalStrengthIndex</td><td>
+<span class="self-ref">P_BOUNDEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+</td><td>
+The Geological Strength Index (GSI): A characterization tool for assessing engineering properties for rock masses.
+See also <a href="https://static.rocscience.cloud/assets/resources/learning/hoek/2019-The-Hoek-Brown-failure-criterion-and-GSI-2018-edition-1.pdf">GSI</a>.
+
+</td></tr>
+<tr><td>YoungModulus</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcmodulusofelasticitymeasure.htm">IfcModulusOfElasticityMeasure</a>
+</td><td>
+Elastic modulus, mean value, α=0°.
+
+</td></tr>
+<tr><td>Cohesion</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
+</td><td>
+Cohesive shear strength of a rock or soil that is independent of interparticle friction.
+
+</td></tr>
+<tr><td>FrictionAngle</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>
+</td><td>
+Derived from the Mohr-Coulomb failure criterion and used to describe the friction shear resistance of ground materials, together with the normal effective stress.
+
+</td></tr>
+<tr><td>K0</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+Lateral Earth Pressure Coefficient.
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_geosciencefeaturetyperockmass.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

@@ -52,7 +52,7 @@
 <blockquote class="change-ifc2x4">
 <p>IFC4 CHANGE  Type of <i>FilletRadius</i> relaxed to allow for zero radius. Attributes <i>FlangeEdgeRadius</i> and <i>FlangeSlope</i> added.</p>
 </blockquote>
-<p>Figure 549 illustrates parameters of the I-shape profile definition.</p>
+<p>Figure 552 illustrates parameters of the I-shape profile definition.</p>
 <table>
 <tr><td>
 <table border="1" cellpadding="2" cellspacing="2" frame="border" width="100%">
@@ -109,7 +109,7 @@ and flanges.</p>
   </tbody>
 </table>
 </td></tr>
-<tr><td><p class="figure">Figure 549 &mdash; I-shape profile</p></td></tr>
+<tr><td><p class="figure">Figure 552 &mdash; I-shape profile</p></td></tr>
 </table>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
@@ -140,11 +140,11 @@ Slope of the lower faces of the top flange and of the upper faces of the bottom 
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>ValidFilletRadius</td><td>The FilletRadius, if given, shall be within the range of allowed values.
-</td></tr>
 <tr><td>ValidFlangeThickness</td><td>The sum of flange thicknesses shall be less than the overall depth.
 </td></tr>
 <tr><td>ValidWebThickness</td><td>The web thickness shall be less then the flange width.
+</td></tr>
+<tr><td>ValidFilletRadius</td><td>The FilletRadius, if given, shall be within the range of allowed values.
 </td></tr>
 </table>
 
@@ -168,11 +168,13 @@ Defines the type of geometry into which this profile definition shall be resolve
 Human-readable name of the profile, for example according to a standard profile table. As noted above, machine-readable standardized profile designations should be provided in <i>IfcExternalReference.ItemReference</i>.
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasExternalReference</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.htm">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to external information, e.g. library, classification, or document information, which is associated with the profile.
+
 <blockquote>
 IFC4 CHANGE New inverse attribute
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasProperties</i></td><td><a href="../../ifcprofileresource/lexical/ifcprofileproperties.htm">IfcProfileProperties</a><br/>@ProfileDefinition</td><td>S[0:?]</td><td>Additional properties of the profile, for example mechanical properties.
+
 <blockquote>
 IFC4 CHANGE New inverse attribute
 </blockquote>
@@ -248,9 +250,9 @@ Slope of the lower faces of the top flange and of the upper faces of the bottom 
 &nbsp;&nbsp;FlangeEdgeRadius : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>;<br/>
 &nbsp;&nbsp;FlangeSlope : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;ValidFilletRadius : NOT(EXISTS(FilletRadius)) OR<br/>
+&nbsp;&nbsp;ValidFlangeThickness : (2. * FlangeThickness) &lt; OverallDepth;<br/>&nbsp;&nbsp;ValidWebThickness : WebThickness &lt; OverallWidth;<br/>&nbsp;&nbsp;ValidFilletRadius : NOT(EXISTS(FilletRadius)) OR<br/>
 ((FilletRadius &lt;= (OverallWidth - WebThickness)/2.) AND <br/>
- (FilletRadius &lt;= (OverallDepth - (2. * FlangeThickness))/2.));<br/>&nbsp;&nbsp;ValidFlangeThickness : (2. * FlangeThickness) &lt; OverallDepth;<br/>&nbsp;&nbsp;ValidWebThickness : WebThickness &lt; OverallWidth;<br/><span class="keyword">END_ENTITY;</span><br/>
+ (FilletRadius &lt;= (OverallDepth - (2. * FlangeThickness))/2.));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcprofileresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

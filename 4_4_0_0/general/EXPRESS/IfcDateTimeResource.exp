@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 5 July 2024
+Monday, 8 July 2024
 
 *)
 
@@ -82,12 +82,12 @@ TYPE IfcDataOriginEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcRecurrenceTypeEnum = ENUMERATION OF
-	(BY_DAY_COUNT
-	,BY_WEEKDAY_COUNT
-	,DAILY
+	(DAILY
+	,WEEKLY
 	,MONTHLY_BY_DAY_OF_MONTH
 	,MONTHLY_BY_POSITION
-	,WEEKLY
+	,BY_DAY_COUNT
+	,BY_WEEKDAY_COUNT
 	,YEARLY_BY_DAY_OF_MONTH
 	,YEARLY_BY_POSITION);
 END_TYPE;

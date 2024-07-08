@@ -210,21 +210,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -309,7 +313,7 @@ Designator for the user defined operation type, shall only be provided, if the v
 <summary>Concept usage</summary>
 <a id="door-attributes" />
 <p class="use-head">Door Attributes</p>
-<p>The <a href="../../templates/door-attributes.htm">Door Attributes</a> concept applies to this entity.</p><p>The opening direction is determined by the local placement of <span class="self-ref">IfcDoor</span> and the <i>OperationType</i> of the <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a> as shown in Figure 348.</p>
+<p>The <a href="../../templates/door-attributes.htm">Door Attributes</a> concept applies to this entity.</p><p>The opening direction is determined by the local placement of <span class="self-ref">IfcDoor</span> and the <i>OperationType</i> of the <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a> as shown in Figure 351.</p>
 <blockquote class="note">
 <p>NOTE  There are different definitions in various countries on what a left opening or left hung or left swing door is (same for right). Therefore the IFC definition may derivate from the local standard and need to be mapped appropriately.</p>
 </blockquote>
@@ -400,7 +404,7 @@ pictures).</small></td>
  </tr>
 </tfoot>
 </table>
-</td></tr><tr><td><p class="figure">Figure 348 &mdash; Door swing</p></td></tr></table>
+</td></tr><tr><td><p class="figure">Figure 351 &mdash; Door swing</p></td></tr></table>
 <blockquote class="note">
 <p>NOTE  The <i>OverallWidth</i> and <i>OverallHeight</i> parameters are for informational purpose only.</p>
 </blockquote>
@@ -409,7 +413,7 @@ pictures).</small></td>
 
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 167.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 168.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th><th><b>Description</b></th></tr>
@@ -420,13 +424,13 @@ NOTE This type is deprecated
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 167 &mdash; IfcDoor Object Typing</td></tr></table>
+<tr><td><p class="table">Table 168 &mdash; IfcDoor Object Typing</td></tr></table>
 
 <br/><br/>
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 168.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 169.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -474,26 +478,26 @@ NOTE This type is deprecated
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 168 &mdash; IfcDoor Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 169 &mdash; IfcDoor Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="quantity-sets" />
 <p class="use-head">Quantity Sets</p>
-<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 169.<table>
+<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 170.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>QsetName</b></th><th><b>Quantities</b></th></tr>
 <tr><td><a href="../../ifcsharedbldgelements/qset/qto_doorbasequantities.htm">Qto_DoorBaseQuantities</a></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 169 &mdash; IfcDoor Quantity Sets</td></tr></table>
+<tr><td><p class="table">Table 170 &mdash; IfcDoor Quantity Sets</td></tr></table>
 
 <br/><br/>
 
 <a id="material-constituent-set" />
 <p class="use-head">Material Constituent Set</p>
-<p>The <a href="../../templates/material-constituent-set.htm">Material Constituent Set</a> concept template applies to this entity as shown in Table 170.<table>
+<p>The <a href="../../templates/material-constituent-set.htm">Material Constituent Set</a> concept template applies to this entity as shown in Table 171.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Description</b></th></tr>
@@ -501,7 +505,7 @@ NOTE This type is deprecated
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 170 &mdash; IfcDoor Material Constituent Set</td></tr></table>
+<tr><td><p class="table">Table 171 &mdash; IfcDoor Material Constituent Set</td></tr></table>
 
 <p>The material of the <span class="self-ref">IfcDoor</span> is defined by the <a href="../../ifcmaterialresource/lexical/ifcmaterialconstituentset.htm">IfcMaterialConstituentSet</a> or as fall back by <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a> and attached by the <a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.htm">IfcRelAssociatesMaterial</a> relationship.</p>
 
@@ -509,10 +513,10 @@ NOTE This type is deprecated
 
 <a id="product-local-placement" />
 <p class="use-head">Product Local Placement</p>
-<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 171.<table>
+<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 172.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 171 &mdash; IfcDoor Product Local Placement</td></tr></table>
+<tr><td><p class="table">Table 172 &mdash; IfcDoor Product Local Placement</td></tr></table>
 
 <p>The following restriction is imposed:</p>
 <ol>
@@ -535,7 +539,7 @@ NOTE This type is deprecated
 
 <a id="spatial-containment" />
 <p class="use-head">Spatial Containment</p>
-<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 172.<table>
+<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 173.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingStructure</b></th><th><b>Description</b></th></tr>
@@ -549,14 +553,14 @@ NOTE This type is deprecated
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 172 &mdash; IfcDoor Spatial Containment</td></tr></table>
+<tr><td><p class="table">Table 173 &mdash; IfcDoor Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcDoor</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
 <ul>
 <li>the <i>Spatial Containment</i> (defined here), or</li>
 <li>the <i>Element Composition</i>.</li>
 </ul>
-<p>The <span class="self-ref">IfcDoor</span> may also be connected to the <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> in which it is placed as a filler. In this case, the spatial containment relationship shall be provided, see Figure 349.</p>
+<p>The <span class="self-ref">IfcDoor</span> may also be connected to the <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> in which it is placed as a filler. In this case, the spatial containment relationship shall be provided, see Figure 352.</p>
 <table>
  
 <tr valign="bottom">
@@ -575,7 +579,7 @@ structure by
  <tr>
   
 <td>
-<p class="figure">Figure 349 &mdash; Door spatial containment</p>
+<p class="figure">Figure 352 &mdash; Door spatial containment</p>
 </td>
   <td>&nbsp;</td>
  

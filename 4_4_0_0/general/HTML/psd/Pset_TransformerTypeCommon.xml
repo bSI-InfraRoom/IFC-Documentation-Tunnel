@@ -600,6 +600,17 @@ The connectivity is only relevant for three-phase transformers.</Definition>
         <DefinitionAlias lang="ko-KR">2 차 코일의 중성점 터미널의 경우 (= TRUE), 다른 경우는 (= FALSE)로 표시</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
+    <PropertyDef ifdguid="4b4b3bfcecb54fa78c2f014e518c1f02">
+      <Name>NumberOfPhases</Name>
+      <Definition>Number of phases that the equipment operates on.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcCountMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases>
     <PsetDefinitionAlias lang="en" />

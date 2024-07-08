@@ -49,7 +49,7 @@
         </td>
         <td style="vertical-align:bottom">
           <blockquote class="note">
-            Figure 493 illustrates the definition of the
+            Figure 496 illustrates the definition of the
             <span class="self-ref">IfcAxis2Placement2D</span> within the two-dimensional
             coordinate system.
           </blockquote>
@@ -57,7 +57,7 @@
       </tr>
       <tr>
         <td>
-          <p class="figure">Figure 493 &mdash; Axis2 placement 2D</p>
+          <p class="figure">Figure 496 &mdash; Axis2 placement 2D</p>
         </td>
         <td>
           &nbsp;
@@ -101,6 +101,7 @@ The direction used to determine the direction of the local X axis. If a value is
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>
@@ -153,7 +154,7 @@ The direction used to determine the direction of the local X axis. If a value is
 &nbsp;<span class="keyword">DERIVE</span><br/>
 &nbsp;&nbsp;P : <span class="keyword">LIST</span> [2:2] OF <a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a> := IfcBuild2Axes(RefDirection);<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;LocationIs2D : SELF\<a href="../../ifcgeometryresource/lexical/ifcplacement.htm">IfcPlacement</a>.Location.Dim = 2;<br/>&nbsp;&nbsp;LocationIsCP : &#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifccartesianpoint.htm">IfcCartesianPoint</a>&#39; IN TYPEOF(SELF\<a href="../../ifcgeometryresource/lexical/ifcplacement.htm">IfcPlacement</a>.Location);<br/>&nbsp;&nbsp;RefDirIs2D : (NOT (EXISTS (RefDirection))) OR (RefDirection.Dim = 2);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;RefDirIs2D : (NOT (EXISTS (RefDirection))) OR (RefDirection.Dim = 2);<br/>&nbsp;&nbsp;LocationIs2D : SELF\<a href="../../ifcgeometryresource/lexical/ifcplacement.htm">IfcPlacement</a>.Location.Dim = 2;<br/>&nbsp;&nbsp;LocationIsCP : &#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifccartesianpoint.htm">IfcCartesianPoint</a>&#39; IN TYPEOF(SELF\<a href="../../ifcgeometryresource/lexical/ifcplacement.htm">IfcPlacement</a>.Location);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

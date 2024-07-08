@@ -1,0 +1,128 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_GroundReinforcementElementTypeTendon</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 5 index3 4 index4 48 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.5.4.49");
+//-->
+</script>
+
+<h4 class="std">6.5.4.49 Pset_GroundReinforcementElementTypeTendon</h4>
+<p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
+/
+<a href="../../ifcsharedinfrastructureelements/lexical/ifcgroundreinforcementelement.htm">IfcGroundReinforcementElement</a>
+ / <span class="self-ref">TENDON</span>
+</p>Properties for <em>IfcGroundReinforcementElement</em> of type TENDON.
+
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4_draft/index.htm">IFC4X3_ADD2 to IFC4X4_draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_groundreinforcementelementtypetendon.htm">Pset_GroundReinforcementElementTypeTendon</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/1WyjOOZzP8neYHCDlUxqgP/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_GroundReinforcementElementTypeTendon.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>NominalDiameter</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Nominal Diameter</b></td><td>Nominal diameter or width of the object.
+</td></tr>
+<tr><td><img src="../../../img/locale-ja.png" /></td><td><b>呼び径</b></td><td>配管部の呼び径、リストに一つの数字しかないとき、この呼び径が全ての管端に当てはまる。一つ以上の数字があるとき、呼び径はリストの表示に対応する管端にあてはまる。
+</td></tr>
+</table>
+</td></tr>
+<tr><td>CrossSectionArea</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcareameasure.htm">IfcAreaMeasure</a>
+</td><td>
+The effective cross-section area of the prestressed part of the tendon.
+
+</td></tr>
+<tr><td>SheathDiameter</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+Diameter of the sheeth (duct) around the tendon, if there is one with this type of tendon.
+
+</td></tr>
+<tr><td>TensionForce</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcforcemeasure.htm">IfcForceMeasure</a>
+</td><td>
+The maximum allowed tension force that can be applied on the tendon.
+
+</td></tr>
+<tr><td>PreStress</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
+</td><td>
+The prestress to be applied on the tendon.
+
+</td></tr>
+<tr><td>FrictionCoefficient</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcnormalisedratiomeasure.htm">IfcNormalisedRatioMeasure</a>
+</td><td>
+The friction coefficient between tendon and tendon sheet while the tendon is unbonded.
+
+</td></tr>
+<tr><td>AnchorageSlip</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+The deformation of an anchor or slippage of tendons when the prestressing device is released.
+
+</td></tr>
+<tr><td>FreeAnchorLength</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+Length of the anchor that is not grouted.
+
+</td></tr>
+<tr><td>FixedAnchorLength</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+Length of the anchor that is  grouted.
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_groundreinforcementelementtypetendon.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

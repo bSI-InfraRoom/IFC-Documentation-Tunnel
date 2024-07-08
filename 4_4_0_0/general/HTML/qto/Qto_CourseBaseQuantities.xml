@@ -10,14 +10,14 @@
   <QtoDefs>
     <QtoDef>
       <Name>Length</Name>
-      <Definition>Characteristic length</Definition>
+      <Definition>The length of the object.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases />
       <DefinitionAliases />
     </QtoDef>
     <QtoDef>
       <Name>Width</Name>
-      <Definition>Characteristic width</Definition>
+      <Definition>The width of the object. Only given, if the object has constant thickness (prismatic).</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases />
       <DefinitionAliases />
@@ -31,14 +31,14 @@
     </QtoDef>
     <QtoDef>
       <Name>Volume</Name>
-      <Definition>Measured volume</Definition>
+      <Definition>Volume of the element.</Definition>
       <QtoType>Q_VOLUME</QtoType>
       <NameAliases />
       <DefinitionAliases />
     </QtoDef>
     <QtoDef>
       <Name>GrossVolume</Name>
-      <Definition>Total gross volume of the slab. Openings, recesses, and projections are not taken into account.</Definition>
+      <Definition>Total gross volume of the object. Openings, recesses, enclosed objects and projections are not taken into account.</Definition>
       <QtoType>Q_VOLUME</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Bruttovolumen</NameAlias>

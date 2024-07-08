@@ -11,7 +11,9 @@
   <QtoDefs>
     <QtoDef>
       <Name>Length</Name>
-      <Definition>Total nominal length of the railing, not taking into account any cut-out's or other processing features.</Definition>
+      <Definition>The length of the object.
+
+Not taking into account any cut-out's or other processing features.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Länge</NameAlias>

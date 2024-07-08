@@ -11,14 +11,14 @@
   <QtoDefs>
     <QtoDef>
       <Name>Length</Name>
-      <Definition>Characteristic length</Definition>
+      <Definition>The length of the object.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases />
       <DefinitionAliases />
     </QtoDef>
     <QtoDef>
       <Name>Volume</Name>
-      <Definition>Measured volume</Definition>
+      <Definition>Volume of the element.</Definition>
       <QtoType>Q_VOLUME</QtoType>
       <NameAliases />
       <DefinitionAliases />

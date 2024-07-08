@@ -393,6 +393,30 @@ The number of live lines that is intended to be handled by the device.</Definiti
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
+    <PropertyDef ifdguid="28753c00d1d011e1800000215ad4efdf">
+      <Name>FireRating</Name>
+      <Definition>Fire rating for this object. It is given according to the national fire safety classification.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="de-DE">Feuerwiderstandsklasse</NameAlias>
+        <NameAlias lang="en">Fire Rating</NameAlias>
+        <NameAlias lang="fr-FR">Résistance au feu</NameAlias>
+        <NameAlias lang="ja-JP">耐火等級</NameAlias>
+        <NameAlias lang="zh-CN">防火等级</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="de-DE">Feuerwiderstandsklasse gemäß der nationalen oder regionalen Brandschutzverordnung.</DefinitionAlias>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Classement au feu de l'élément donné selon la classification nationale de sécurité incendie.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">耐火等級。当該国の建築法規による。</DefinitionAlias>
+        <DefinitionAlias lang="zh-CN">该构件的防火等级。
+该属性的依据为国家防火安全分级。</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases>
     <PsetDefinitionAlias lang="en" />

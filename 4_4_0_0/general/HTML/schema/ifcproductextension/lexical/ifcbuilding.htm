@@ -64,13 +64,13 @@ Construction work that has the provision of shelter for its occupants or content
 <li><strong>ELEMENT</strong>: building</li>
 <li><strong>PARTIAL</strong>: building section</li>
 </ul>
-<p>The <span class="self-ref">IfcBuilding</span> is used to build the spatial structure of a building (that serves as the primary project breakdown and is required to be hierarchical). The spatial structure elements are linked together by using the objectified relationship <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>. Figure 289 shows the <span class="self-ref">IfcBuilding</span> as part of the spatial structure. It also serves as the spatial container for building and other elements.</p>
+<p>The <span class="self-ref">IfcBuilding</span> is used to build the spatial structure of a building (that serves as the primary project breakdown and is required to be hierarchical). The spatial structure elements are linked together by using the objectified relationship <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>. Figure 292 shows the <span class="self-ref">IfcBuilding</span> as part of the spatial structure. It also serves as the spatial container for building and other elements.</p>
 <blockquote class="note">
 <p>NOTE  Detailed requirements on mandatory element containment and placement structure relationships are given in view definitions and implementer agreements.</p>
 </blockquote>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcbuilding-spatialstructure.png" alt="&quot;IfcBuildingStorey as part of a spatial structure&quot;" title="Figure 289 &mdash; Building composition"></td></tr><tr><td><p class="figure">Figure 289 &mdash; Building composition</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcbuilding-spatialstructure.png" alt="&quot;IfcBuildingStorey as part of a spatial structure&quot;" title="Figure 292 &mdash; Building composition"></td></tr><tr><td><p class="figure">Figure 292 &mdash; Building composition</p></td></tr></table></p>
 <p>Systems, such as building service or electrical distribution systems, zonal systems, or structural analysis systems, relate to <span class="self-ref">IfcBuilding</span> by using the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>.</p>
-<p>Figure 290 describes the heights and elevations of the <span class="self-ref">IfcBuilding</span>. It is used to provide the height above sea level of the project height datum for this building, that is, the internal height 0.00. The height 0.00 is often used as a building internal reference height and equal to the floor finish level of the ground floor.</p>
+<p>Figure 293 describes the heights and elevations of the <span class="self-ref">IfcBuilding</span>. It is used to provide the height above sea level of the project height datum for this building, that is, the internal height 0.00. The height 0.00 is often used as a building internal reference height and equal to the floor finish level of the ground floor.</p>
 <ul>
 <li>base elevation of building provided by: <i>IfcBuilding.ElevationOfRefHeight</i>, it is usually the top of construction slab</li>
 <li>base elevation of terrain at the perimeter of the building provided by: <i>IfcBuilding.ElevationOfTerrain</i>, it is usually the minimum elevation is sloped terrain</li>
@@ -86,7 +86,7 @@ Construction work that has the provision of shelter for its occupants or content
         </tr>
         <tr>
           <td>
-            <p class="figure">Figure 290 &mdash; Building elevations
+            <p class="figure">Figure 293 &mdash; Building elevations
             </p>
           </td>
         </tr>
@@ -179,21 +179,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -222,11 +226,13 @@ NOTE  The spatial containment relationship, established by <a href="../../ifcpr
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>ServicedBySystems</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatedBuildings</td><td>S[0:?]</td><td>Set of relationships to systems, that provides a certain service to the spatial element for which it is defined. The relationship is handled by the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>.
+
 <blockquote>
 IFC4 CHANGE  The inverse attribute has been promoted to the new supertype <span class="self-ref">IfcSpatialElement</span> with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>ReferencesElements</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatingStructure</td><td>S[0:?]</td><td>Set of spatial reference relationships, that holds those elements, which are referenced, but not contained, within this element of the project spatial structure.
+
 <blockquote class="note">
 NOTE  The spatial reference relationship, established by <a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a>, is not required to be an hierarchical relationship, i.e. each element can be assigned to 0, 1 or many spatial structure elements.
 </blockquote>

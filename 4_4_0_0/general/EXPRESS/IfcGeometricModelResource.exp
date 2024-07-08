@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 5 July 2024
+Monday, 8 July 2024
 
 *)
 
@@ -93,9 +93,9 @@ REFERENCE FROM IFCTOPOLOGYRESOURCE
 );
 
 TYPE IfcBooleanOperator = ENUMERATION OF
-	(DIFFERENCE
+	(UNION
 	,INTERSECTION
-	,UNION);
+	,DIFFERENCE);
 END_TYPE;
 
 TYPE IfcBooleanOperand = SELECT
@@ -151,8 +151,8 @@ ENTITY IfcBooleanClippingResult
 	FirstOperandType : ('IFCGEOMETRICMODELRESOURCE.IFCSWEPTAREASOLID' IN TYPEOF(FirstOperand)) OR 
 ('IFCGEOMETRICMODELRESOURCE.IFCSWEPTDISKSOLID' IN TYPEOF(FirstOperand)) OR 
 ('IFCGEOMETRICMODELRESOURCE.IFCBOOLEANCLIPPINGRESULT' IN TYPEOF(FirstOperand));
-	OperatorType : Operator = DIFFERENCE;
 	SecondOperandType : ('IFCGEOMETRICMODELRESOURCE.IFCHALFSPACESOLID' IN TYPEOF(SecondOperand));
+	OperatorType : Operator = DIFFERENCE;
 END_ENTITY;
 
 ENTITY IfcBooleanResult
@@ -165,8 +165,8 @@ ENTITY IfcBooleanResult
  DERIVE
 	Dim : IfcDimensionCount := FirstOperand.Dim;
  WHERE
-	FirstOperandClosed : NOT('IFCGEOMETRICMODELRESOURCE.IFCTESSELLATEDFACESET' IN TYPEOF(FirstOperand)) OR (EXISTS(FirstOperand.Closed) AND FirstOperand.Closed);
 	SameDim : FirstOperand.Dim = SecondOperand.Dim;
+	FirstOperandClosed : NOT('IFCGEOMETRICMODELRESOURCE.IFCTESSELLATEDFACESET' IN TYPEOF(FirstOperand)) OR (EXISTS(FirstOperand.Closed) AND FirstOperand.Closed);
 	SecondOperandClosed : NOT('IFCGEOMETRICMODELRESOURCE.IFCTESSELLATEDFACESET' IN TYPEOF(SecondOperand)) OR (EXISTS(SecondOperand.Closed) AND SecondOperand.Closed);
 END_ENTITY;
 
@@ -363,8 +363,8 @@ ENTITY IfcRevolvedAreaSolid
 	AxisLine : IfcLine := IfcRepresentationItem() || IfcGeometricRepresentationItem () || IfcCurve() || IfcLine(Axis.Location, 
   IfcRepresentationItem() || IfcGeometricRepresentationItem () || IfcVector(Axis.Z,1.0));
  WHERE
-	AxisDirectionInXY : Axis.Z.DirectionRatios[3] = 0.0;
 	AxisStartInXY : ('IFCGEOMETRYRESOURCE.IFCCARTESIANPOINT' IN TYPEOF(Axis.Location)) AND (Axis.Location\IfcCartesianPoint.Coordinates[3] = 0.0);
+	AxisDirectionInXY : Axis.Z.DirectionRatios[3] = 0.0;
 END_ENTITY;
 
 ENTITY IfcRevolvedAreaSolidTapered
@@ -393,8 +393,8 @@ ENTITY IfcSectionedSolid
 	Directrix : IfcCurve;
 	CrossSections : LIST [2:?] OF IfcProfileDef;
  WHERE
-	ConsistentProfileTypes : SIZEOF(QUERY(temp <* CrossSections | CrossSections[1].ProfileType <> temp.ProfileType)) = 0;
 	DirectrixIs3D : Directrix.Dim = 3;
+	ConsistentProfileTypes : SIZEOF(QUERY(temp <* CrossSections | CrossSections[1].ProfileType <> temp.ProfileType)) = 0;
 	SectionsSameType : SIZEOF(QUERY(temp <* CrossSections | TYPEOF(CrossSections[1]) :<>: TYPEOF(temp))) = 0;
 END_ENTITY;
 
@@ -414,8 +414,8 @@ ENTITY IfcSectionedSpine
  DERIVE
 	Dim : IfcDimensionCount := 3;
  WHERE
-	ConsistentProfileTypes : SIZEOF(QUERY(temp <* CrossSections | CrossSections[1].ProfileType <> temp.ProfileType)) = 0;
 	CorrespondingSectionPositions : SIZEOF(CrossSections) = SIZEOF(CrossSectionPositions);
+	ConsistentProfileTypes : SIZEOF(QUERY(temp <* CrossSections | CrossSections[1].ProfileType <> temp.ProfileType)) = 0;
 	SpineCurveDim : SpineCurve.Dim = 3;
 END_ENTITY;
 
@@ -425,11 +425,11 @@ ENTITY IfcSectionedSurface
 	CrossSectionPositions : LIST [2:?] OF IfcAxis2PlacementLinear;
 	CrossSections : LIST [2:?] OF IfcProfileDef;
  WHERE
-	AreaProfileTypes : SIZEOF(QUERY(temp <* CrossSections | temp.ProfileType <> IfcProfileTypeEnum.CURVE)) = 0;
-	CorrespondingSectionPositions : SIZEOF(CrossSections) = SIZEOF(CrossSectionPositions);
 	DirectrixIs3D : Directrix.Dim = 3;
-	NoOffsets : SIZEOF(QUERY(temp <* CrossSectionPositions | EXISTS(temp.Location.OffsetLateral) OR EXISTS(temp.Location.OffsetVertical) OR EXISTS(temp.Location.OffsetLongitudinal))) = 0;
+	AreaProfileTypes : SIZEOF(QUERY(temp <* CrossSections | temp.ProfileType <> IfcProfileTypeEnum.CURVE)) = 0;
 	SectionsSameType : SIZEOF(QUERY(temp <* CrossSections | TYPEOF(CrossSections[1]) :<>: TYPEOF(temp))) = 0;
+	CorrespondingSectionPositions : SIZEOF(CrossSections) = SIZEOF(CrossSectionPositions);
+	NoOffsets : SIZEOF(QUERY(temp <* CrossSectionPositions | EXISTS(temp.Location.OffsetLateral) OR EXISTS(temp.Location.OffsetVertical) OR EXISTS(temp.Location.OffsetLongitudinal))) = 0;
 END_ENTITY;
 
 ENTITY IfcShellBasedSurfaceModel
@@ -483,10 +483,10 @@ ENTITY IfcSweptDiskSolid
 	StartParam : OPTIONAL IfcParameterValue;
 	EndParam : OPTIONAL IfcParameterValue;
  WHERE
-	DirectrixBounded : (EXISTS(StartParam) AND EXISTS(EndParam)) OR 
-(SIZEOF(['IFCGEOMETRYRESOURCE.IFCCONIC', 'IFCGEOMETRYRESOURCE.IFCBOUNDEDCURVE'] * TYPEOF(Directrix)) = 1);
 	DirectrixDim : Directrix.Dim = 3;
 	InnerRadiusSize : (NOT EXISTS(InnerRadius)) OR (Radius > InnerRadius);
+	DirectrixBounded : (EXISTS(StartParam) AND EXISTS(EndParam)) OR 
+(SIZEOF(['IFCGEOMETRYRESOURCE.IFCCONIC', 'IFCGEOMETRYRESOURCE.IFCBOUNDEDCURVE'] * TYPEOF(Directrix)) = 1);
 END_ENTITY;
 
 ENTITY IfcSweptDiskSolidPolygonal

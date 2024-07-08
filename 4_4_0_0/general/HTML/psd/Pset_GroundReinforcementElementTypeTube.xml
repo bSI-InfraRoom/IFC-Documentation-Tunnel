@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="323a1620477941919bdc4c1f26f60df6" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GroundReinforcementElementTypeTube</Name>
+  <Definition>Properties for ground reinforcement elements of type TUBE.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGroundReinforcementElement/.TUBE.</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGroundReinforcementElement/.TUBE.</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="4d18569df1264f3baceb2da495f1dfda">
+      <Name>OuterDiameter</Name>
+      <Definition>The actual outer diameter of the object.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Outer Diameter</NameAlias>
+        <NameAlias lang="ja-JP">外径</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">配管の実外径。</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="bf936b11000a4856ace0532e1d653c65">
+      <Name>TubeThickness</Name>
+      <Definition>Thickness of the tube.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="076d1500d1e911e1800000215ad4efdf">
+      <Name>NominalLength</Name>
+      <Definition>The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Length</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

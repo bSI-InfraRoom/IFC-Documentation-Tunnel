@@ -57,20 +57,20 @@
 <tr><th>Constant</th><th>Description</th></tr>
 <tr><td>ANCHORBOLT</td><td><p>A special bolt which is anchored into conrete, stone, or brickwork.</p>
 </td></tr><tr><td>BOLT</td><td><p>A threaded cylindrical rod that engages with a similarly threaded hole in a nut or any other part to form a fastener. The mechanical fastener often also includes one or more washers and one or more nuts.</p>
-</td></tr><tr><td>CHAIN</td><td><p>a series of linked metal rings used for fastening or securing something, or for pulling loads.</p>
-</td></tr><tr><td>COUPLER</td><td><p>A part connecting two rod or bars, such as reinforcement bars.</p>
 </td></tr><tr><td>DOWEL</td><td><p>A cylindrical rod that is driven into holes of the connected pieces.</p>
 </td></tr><tr><td>NAIL</td><td><p>A thin pointed piece of metal that is hammered into materials as a fastener.</p>
 </td></tr><tr><td>NAILPLATE</td><td><p>A piece of sheet metal with punched points that overlaps the connected pieces and is pressed into their material.</p>
-</td></tr><tr><td>RAILFASTENING</td><td><p>An assembly of components which secures a rail to the supporting structure and retains it in the required position whilst permitting any necessary vertical, lateral and longitudinal movement.
-Note: definition from EN 13481-1.</p>
-</td></tr><tr><td>RAILJOINT</td><td><p>A mechanical assembly with e.g. fishplates to join two rail ends with optional functions (insulation or expansion capacity).</p>
 </td></tr><tr><td>RIVET</td><td><p>A fastening part having a head at one end and the other end being hammered flat after being passed through holes in the pieces that are fastened together.</p>
-</td></tr><tr><td>ROPE</td><td><p>a length of thick strong cord made by twisting together strands of hemp, sisal, nylon, or similar material. used primarily for mooring vessels</p>
 </td></tr><tr><td>SCREW</td><td><p>A fastener with a tapered threaded shank and a slotted head.</p>
 </td></tr><tr><td>SHEARCONNECTOR</td><td><p>A ring connector that is accepted by ring keyways in the connected pieces; or a toothed circular or square connector that is pressed into the connected pieces.</p>
 </td></tr><tr><td>STAPLE</td><td><p>A doubly pointed piece of metal that is hammered into materials as a fastener.</p>
 </td></tr><tr><td>STUDSHEARCONNECTOR</td><td><p>Stud shear connectors are cylindrical fastening parts with a head on one side. On the other side they are welded on steel members for the use in composite steel and concrete structures.</p>
+</td></tr><tr><td>COUPLER</td><td><p>A part connecting two rod or bars, such as reinforcement bars.</p>
+</td></tr><tr><td>RAILJOINT</td><td><p>A mechanical assembly with e.g. fishplates to join two rail ends with optional functions (insulation or expansion capacity).</p>
+</td></tr><tr><td>RAILFASTENING</td><td><p>An assembly of components which secures a rail to the supporting structure and retains it in the required position whilst permitting any necessary vertical, lateral and longitudinal movement.
+Note: definition from EN 13481-1.</p>
+</td></tr><tr><td>CHAIN</td><td><p>a series of linked metal rings used for fastening or securing something, or for pulling loads.</p>
+</td></tr><tr><td>ROPE</td><td><p>a length of thick strong cord made by twisting together strands of hemp, sisal, nylon, or similar material. used primarily for mooring vessels</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined mechanical fastener.</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined mechanical fastener.</p>
 </td></tr></table>
@@ -82,19 +82,19 @@ Note: definition from EN 13481-1.</p>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;anchorbolt&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;bolt&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;chain&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;coupler&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;dowel&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;nail&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;nailplate&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;railfastening&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;railjoint&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rivet&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rope&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;screw&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;shearconnector&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;staple&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;studshearconnector&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;coupler&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;railjoint&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;railfastening&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;chain&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rope&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -102,7 +102,7 @@ Note: definition from EN 13481-1.</p>
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcMechanicalFastenerTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;ANCHORBOLT, <br/>&nbsp;BOLT, <br/>&nbsp;CHAIN, <br/>&nbsp;COUPLER, <br/>&nbsp;DOWEL, <br/>&nbsp;NAIL, <br/>&nbsp;NAILPLATE, <br/>&nbsp;RAILFASTENING, <br/>&nbsp;RAILJOINT, <br/>&nbsp;RIVET, <br/>&nbsp;ROPE, <br/>&nbsp;SCREW, <br/>&nbsp;SHEARCONNECTOR, <br/>&nbsp;STAPLE, <br/>&nbsp;STUDSHEARCONNECTOR, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;ANCHORBOLT, <br/>&nbsp;BOLT, <br/>&nbsp;DOWEL, <br/>&nbsp;NAIL, <br/>&nbsp;NAILPLATE, <br/>&nbsp;RIVET, <br/>&nbsp;SCREW, <br/>&nbsp;SHEARCONNECTOR, <br/>&nbsp;STAPLE, <br/>&nbsp;STUDSHEARCONNECTOR, <br/>&nbsp;COUPLER, <br/>&nbsp;RAILJOINT, <br/>&nbsp;RAILFASTENING, <br/>&nbsp;CHAIN, <br/>&nbsp;ROPE, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedcomponentelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

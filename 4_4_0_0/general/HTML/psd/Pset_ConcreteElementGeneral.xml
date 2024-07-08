@@ -22,8 +22,9 @@
     <ClassName>IfcStairFlight</ClassName>
     <ClassName>IfcWall</ClassName>
     <ClassName>IfcCivilElement</ClassName>
+    <ClassName>IfcArchElement</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement,IfcArchElement</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef ifdguid="62543b80d1ec11e1800000215ad4efdf">
       <Name>AssemblyPlace</Name>
@@ -110,6 +111,9 @@
             <EnumItem>MIXED</EnumItem>
             <EnumItem>PRECAST</EnumItem>
             <EnumItem>PRINTED</EnumItem>
+            <EnumItem>SPRAYED_DRY</EnumItem>
+            <EnumItem>SPRAYED_WET</EnumItem>
+            <EnumItem>SLIPFORMED</EnumItem>
             <EnumItem>OTHER</EnumItem>
             <EnumItem>NOTKNOWN</EnumItem>
             <EnumItem>UNSET</EnumItem>
@@ -136,6 +140,24 @@
             <ConstantDef>
               <Name>PRINTED</Name>
               <Definition>Concrete extruded into the designed form, either on-site or off-site.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SPRAYED_DRY</Name>
+              <Definition>A blend of cement and sand, without additional water. The water is added directly at the end of the lance to create the concrete spray. This dry-mix method meets certain spray distance restrictions. Dry-mix offers greater spraying distances than wet-mix. In certain cases, this method also helps manage the concrete preparation and deployment times.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SPRAYED_WET</Name>
+              <Definition>The concrete mix is watered and machine-mixed then pumped through a pipe to the application nozzle.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SLIPFORMED</Name>
+              <Definition>The slipform helps to conduct continuous pouring of the concrete to the moving formwork.</Definition>
               <NameAliases />
               <DefinitionAliases />
             </ConstantDef>
@@ -373,6 +395,78 @@
       <DefinitionAliases>
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="bf62943b521b43ec85d4f8129fcc354a">
+      <Name>ReinforcementType</Name>
+      <Definition>The type of reinforcement in the concrete element. May be used whenever reinforcement has not been explicitly modelled.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ReinforcementType">
+            <EnumItem>BAR</EnumItem>
+            <EnumItem>REINFORCEMENTCAGE</EnumItem>
+            <EnumItem>MESH</EnumItem>
+            <EnumItem>FIBRE</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>BAR</Name>
+              <Definition>Reinforcing bar.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>REINFORCEMENTCAGE</Name>
+              <Definition>Reinforcement cage.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MESH</Name>
+              <Definition>Reinforcing mesh.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FIBRE</Name>
+              <Definition>Fibre reinforcement.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
     </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases>

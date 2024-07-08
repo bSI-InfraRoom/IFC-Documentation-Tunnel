@@ -72,9 +72,9 @@ Informal Propositions:</p>
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>CorrectContext</td><td>If a <i>RepresentationContexts</i> relation is provided then there shall be no instance of <a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a> directly included in the set of <i>RepresentationContexts</i>.
-</td></tr>
 <tr><td>HasName</td><td>The <i>Name</i> attribute has to be provided for <span class="self-ref">IfcProject</span>. It is the short name for the project.
+</td></tr>
+<tr><td>CorrectContext</td><td>If a <i>RepresentationContexts</i> relation is provided then there shall be no instance of <a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a> directly included in the set of <i>RepresentationContexts</i>.
 </td></tr>
 <tr><td>NoDecomposition</td><td>The <span class="self-ref">IfcProject</span> represents the root of the any decomposition tree. It shall therefore not be used to decompose any other object definition.
 </td></tr>
@@ -157,17 +157,20 @@ Current project phase, or life-cycle phase of this project. Applicable values ha
 </td><td>X</td></tr>
 <tr><td>8</td><td>RepresentationContexts</td><td><a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a></td><td>? S[1:?]</td><td>
 Context of the representations used within the context. When the context is a project and it includes shape representations for its components, one or several geometric representation contexts need to be included that define e.g. the world coordinate system, the coordinate space dimensions, and/or the precision factor.
+
 <blockquote>
 IFC4 CHANGE  The attribute has been changed to be optional. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>9</td><td>UnitsInContext</td><td><a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a></td><td>? </td><td>
 Units globally assigned to measure types used within the context.
+
 <blockquote>
 IFC4 CHANGE  The attribute has been changed to be optional. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -284,8 +287,8 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 <blockquote class="note">
 <p>NOTE  The products and tasks can have direct linking relationships. For example the <a href="../../ifcsharedbldgelements/lexical/ifccurtainwall.htm">IfcCurtainWall</a> can be assigned to a <a href="../../ifcprocessextension/lexical/ifctask.htm">IfcTask</a> as an input or output for a construction schedule.</p>
 </blockquote>
-<p>Figure 271 illustrates the use of <span class="self-ref">IfcProject</span> as context for work plans or work schedules.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-1.png" alt="&quot;project relationships&quot;" title="Figure 271 &mdash; Project spatial and work plan structure"></td></tr><tr><td><p class="figure">Figure 271 &mdash; Project spatial and work plan structure</p></td></tr></table></p>
+<p>Figure 274 illustrates the use of <span class="self-ref">IfcProject</span> as context for work plans or work schedules.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-1.png" alt="&quot;project relationships&quot;" title="Figure 274 &mdash; Project spatial and work plan structure"></td></tr><tr><td><p class="figure">Figure 274 &mdash; Project spatial and work plan structure</p></td></tr></table></p>
 
 <br/><br/>
 
@@ -310,8 +313,8 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 <li><span class="self-ref">IfcProject</span>.Decomposes -- it shall be NIL, i.e. the <span class="self-ref">IfcProject</span> shall be on top of the root of the spatial structure tree.</li>
 <li><span class="self-ref">IfcProject</span>.IsDecomposedBy -- referencing (<a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a> || <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a> || <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a>) by using <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.RelatedObjects. The <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>, <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a>, or <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> being referenced shall be the root of the spatial structure.</li>
 </ul>
-<p>Figure 272 illustrates project relationships with spatial structures, elements, and element type libraries.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-2.png" alt="&quot;spatial decomposition relationships&quot;" title="Figure 272 &mdash; Project spatial structure, products and product type library"></td></tr><tr><td><p class="figure">Figure 272 &mdash; Project spatial structure, products and product type library</p></td></tr></table></p>
+<p>Figure 275 illustrates project relationships with spatial structures, elements, and element type libraries.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-2.png" alt="&quot;spatial decomposition relationships&quot;" title="Figure 275 &mdash; Project spatial structure, products and product type library"></td></tr><tr><td><p class="figure">Figure 275 &mdash; Project spatial structure, products and product type library</p></td></tr></table></p>
 
 <br/><br/>
 
@@ -508,10 +511,10 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 <span class="keyword">ENTITY</span> IfcProject<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>)<b>;</b><br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;CorrectContext : NOT(EXISTS(SELF\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.RepresentationContexts)) OR<br/>
+&nbsp;&nbsp;HasName : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;CorrectContext : NOT(EXISTS(SELF\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.RepresentationContexts)) OR<br/>
 (SIZEOF(QUERY(Temp &lt;* SELF\<a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.RepresentationContexts |<br/>
  &#39;IFCREPRESENTATIONRESOURCE.<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a>&#39; IN TYPEOF(Temp)<br/>
-  )) = 0);<br/>&nbsp;&nbsp;HasName : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;NoDecomposition : SIZEOF(SELF\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.Decomposes) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
+  )) = 0);<br/>&nbsp;&nbsp;NoDecomposition : SIZEOF(SELF\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.Decomposes) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

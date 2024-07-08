@@ -69,7 +69,7 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcAlignmentCant</span> is a lateral inclination profile defined along the horizontal alignment. All points defined in this profile have two coordinate values. The first value is the distance along the horizontal alignment, and the second value is the height relative to the projection of the point along vertical alignment.</p>
 <p><strong>Cant as a railway specificity</strong></p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmentcant_wojtczak_2018.png" alt="&quot;Why cant is applied&quot;" title="Figure 287 &mdash; Cant - compensation for lateral acceleration."></td></tr><tr><td><p class="figure">Figure 287 &mdash; Cant - compensation for lateral acceleration.</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmentcant_wojtczak_2018.png" alt="&quot;Why cant is applied&quot;" title="Figure 290 &mdash; Cant - compensation for lateral acceleration."></td></tr><tr><td><p class="figure">Figure 290 &mdash; Cant - compensation for lateral acceleration.</p></td></tr></table></p>
 <blockquote class="note">
 <p>NOTE figure was first published in (Basics of) Railway Curve Kinematics Presentation, (Wojtczak 2018)</p>
 </blockquote>
@@ -89,7 +89,7 @@
 <li>Relevant input for calculation of structural gauge space</li>
 <li>Correct calculation of horizontal coordinate values for the Viennese Bend® (high performance transition bend)</li>
 </ul>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmentcant_structural_gauge_and_cant.png" alt="&quot;Cant and structural gauge space&quot;" title="Figure 288 &mdash; Cant and structural gauge space"></td></tr><tr><td><p class="figure">Figure 288 &mdash; Cant and structural gauge space</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmentcant_structural_gauge_and_cant.png" alt="&quot;Cant and structural gauge space&quot;" title="Figure 291 &mdash; Cant and structural gauge space"></td></tr><tr><td><p class="figure">Figure 291 &mdash; Cant and structural gauge space</p></td></tr></table></p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -167,21 +167,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="e5471b43b60e41ad8d0a9c5d63c919ba" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ArchElementCommon</Name>
+  <Definition>Properties common to all types of _IfcArchElement_.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcArchElement</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcArchElement</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="0bf54d517fb84735b694e898d466bc50">
+      <Name>InnerRadius</Name>
+      <Definition>The inner radius of the element.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="fbe7825e3ef34ffb96c34462392dc07a">
+      <Name>OuterRadius</Name>
+      <Definition>The outer radius of the element.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="a7b28e49354240439938fbe695cbe9c5">
+      <Name>CentroidRadius</Name>
+      <Definition>The centroid radius of the element.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d1dd2180d21211e1800000215ad4efdf">
+      <Name>Thickness</Name>
+      <Definition>The geometric thickness of the object.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Thickness</NameAlias>
+        <NameAlias lang="ja-JP">厚さ</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">フィンの厚さ</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="63022d9991ca4e6fbca9dfae186c8e1a">
+      <Name>IsLoadBearing</Name>
+      <Definition>Specifies whether the element is load bearing (TRUE) or not (FALSE).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

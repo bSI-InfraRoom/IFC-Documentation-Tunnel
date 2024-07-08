@@ -27,7 +27,7 @@
 <h4 class="std">7.11.4.1 Pset_ConcreteElementGeneral</h4>
 <p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
 /
-<span class="self-ref">IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement</span>
+<span class="self-ref">IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement,IfcArchElement</span>
 </p><table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b></b></td><td>Generelle Eigenschaften die allen Betonbauteilen, einschließlich Stahlbetonbauteilen, gemeinsam sind. Dieser Eigenschaftssatz kann den verschiedenen Bauelementklassen (Subtypen von IfcBuildingElement) zugeordnet werden.
 </td></tr>
@@ -36,7 +36,18 @@
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b></b></td><td>コンクリート要素の異なるタイプに対する共通の一般的な属性。 Pset は IfcBuildingElement の多くのサブタイプによって使うことができる。
 </td></tr>
 </table>
-<details open="open"><summary>Properties</summary>
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4_draft/index.htm">IFC4X3_ADD2 to IFC4X4_draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcstructuralelementsdomain/pset/pset_concreteelementgeneral.htm">Pset_ConcreteElementGeneral</a></td><td></td><td></td><td>MODIFIED</td><td>Instantiation changed from <i>IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement</i> to <i>IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement,IfcArchElement</i>. <br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReinforcementType</td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/1$B4S0qSiHuO00025QrE$V/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_ConcreteElementGeneral.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>AssemblyPlace</td><td>
@@ -192,6 +203,15 @@ The method of casting the concrete into its designed form.
 <tr><td><img src="../../../img/locale-en.png" /></td><td><b>Reinforcement Strength Class</b></td><td>Classification of the reinforcement strength in accordance with the concrete design code which is applied in the project. The reinforcing strength class often combines strength and ductility.
 </td></tr>
 </table>
+</td></tr>
+<tr><td>ReinforcementType</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+/
+ <a href="../../../penum/penum_reinforcementtype.htm">PEnum_ReinforcementType</a></td><td>
+The type of reinforcement in the concrete element. May be used whenever reinforcement has not been explicitly modelled.
+
 </td></tr>
 </table>
 </details>

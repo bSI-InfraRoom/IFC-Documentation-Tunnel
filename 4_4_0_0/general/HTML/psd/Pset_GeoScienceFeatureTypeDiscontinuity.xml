@@ -12,7 +12,7 @@
   <PropertyDefs>
     <PropertyDef ifdguid="b20c22dd0e3844958ffa205f7fd63085">
       <Name>RockQualityDesignation</Name>
-      <Definition>Quotient of the cumulative length of cores with a length greater than 10 cm, by the total length of the core pass with a length greater than or equal to 1m.</Definition>
+      <Definition>Quotient of the cumulative length of drill cores with a length greater than 10 cm, by the total length of the drill core pass with a length greater than or equal to 1m.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure" />

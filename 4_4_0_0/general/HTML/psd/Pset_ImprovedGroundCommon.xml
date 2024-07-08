@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="a10ce020b2d04a0f89c67c53224e765d" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ImprovedGroundCommon</Name>
+  <Definition>Common properties for improved ground.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcImprovedGround</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcImprovedGround</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="e15c718c244542cf9506a797f7772647">
+      <Name>TreatmentHoleCount</Name>
+      <Definition>Number of boreholes used for treatment.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcCountMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8a776f4b1d6345d589ead70df1c42eac">
+      <Name>AvgTreatmentDepth</Name>
+      <Definition>Average depth of boreholes used for treatment.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d2e94951344442c3b6a9a7fb50a54603">
+      <Name>AvgTreatmentSpacing</Name>
+      <Definition>Average spacing of boreholes used for treatment.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="2e0717c7dee5458cbced63a85573acef">
+      <Name>AvgDepthToTreatment</Name>
+      <Definition>Average depth to treatment.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8f4ec51cffa94fc3a5a3785018ae1548">
+      <Name>AvgTreatmentThickness</Name>
+      <Definition>Average treatment thickness.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

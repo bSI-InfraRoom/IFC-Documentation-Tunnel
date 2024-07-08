@@ -124,21 +124,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -238,7 +242,6 @@ Specifies the type for which the value is selected from a predefined type enumer
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-surfaceorsolidmodel-geometry">Body SurfaceOrSolidModel Geometry</a></td><td><a href="../../templates/body-surfaceorsolidmodel-geometry.htm">Body SurfaceOrSolidModel Geometry</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-surfacemodel-geometry">Body SurfaceModel Geometry</a></td><td><a href="../../templates/body-surfacemodel-geometry.htm">Body SurfaceModel Geometry</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-tessellation-geometry">Body Tessellation Geometry</a></td><td><a href="../../templates/body-tessellation-geometry.htm">Body Tessellation Geometry</a></td><td>General Usage</td></tr>
-<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-brep-geometry">Body Brep Geometry</a></td><td><a href="../../templates/body-brep-geometry.htm">Body Brep Geometry</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-advancedbrep-geometry">Body AdvancedBrep Geometry</a></td><td><a href="../../templates/body-advancedbrep-geometry.htm">Body AdvancedBrep Geometry</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#body-csg-geometry">Body CSG Geometry</a></td><td><a href="../../templates/body-csg-geometry.htm">Body CSG Geometry</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#mapped-geometry">Mapped Geometry</a></td><td><a href="../../templates/mapped-geometry.htm">Mapped Geometry</a></td><td>General Usage</td></tr>
@@ -258,8 +261,14 @@ Specifies the type for which the value is selected from a predefined type enumer
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#footprint-annotation-geometry">FootPrint Annotation Geometry</a></td><td><a href="../../templates/footprint-annotation-geometry.htm">FootPrint Annotation Geometry</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#footprint-geomset-polycurve-geometry">FootPrint GeomSet PolyCurve Geometry</a></td><td><a href="../../templates/footprint-geomset-polycurve-geometry.htm">FootPrint GeomSet PolyCurve Geometry</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#surface-sectioned-geometry">Surface Sectioned Geometry</a></td><td><a href="../../templates/surface-sectioned-geometry.htm">Surface Sectioned Geometry</a></td><td>General Usage</td></tr>
-<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#surface-tessellation-geometry">Surface Tessellation Geometry</a></td><td><a href="../../templates/surface-tessellation-geometry.htm">Surface Tessellation Geometry</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#product-grid-placement">Product Grid Placement</a></td><td><a href="../../templates/product-grid-placement.htm">Product Grid Placement</a></td><td>General Usage</td></tr>
+
+<tr><td colspan="3"><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceelement.htm"><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceelement.htm">IfcGeoScienceElement</a></a></td></tr><tr><td> </td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceelement.htm#excavation-cuttings">Excavation Cuttings</a></td><td><a href="../../templates/excavation-cuttings.htm">Excavation Cuttings</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceelement.htm#document-association">Document Association</a></td><td><a href="../../templates/document-association.htm">Document Association</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceelement.htm#dataset-association">Dataset Association</a></td><td><a href="../../templates/dataset-association.htm">Dataset Association</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceelement.htm#body-brep-geometry">Body Brep Geometry</a></td><td><a href="../../templates/body-brep-geometry.htm">Body Brep Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceelement.htm#surface-tessellation-geometry">Surface Tessellation Geometry</a></td><td><a href="../../templates/surface-tessellation-geometry.htm">Surface Tessellation Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceelement.htm#voxel-geometry">Voxel Geometry</a></td><td><a href="../../templates/voxel-geometry.htm">Voxel Geometry</a></td><td>General Usage</td></tr>
 
 </table>
 </details>

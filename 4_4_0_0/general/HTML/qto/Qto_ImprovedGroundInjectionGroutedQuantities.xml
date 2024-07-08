@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QtoSetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.buildingsmart-tech.org/xml/qto/QTO_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Qto_ImprovedGroundInjectionGroutedQuantities</Name>
+  <Definition>Quantities associated with injection grouting.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcImprovedGround/INJECTIONGROUTED</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcImprovedGround/INJECTIONGROUTED</ApplicableTypeValue>
+  <QtoDefs>
+    <QtoDef>
+      <Name>QuantityDryMass</Name>
+      <Definition>The quantity of dry grouting material.</Definition>
+      <QtoType>Q_WEIGHT</QtoType>
+      <NameAliases />
+      <DefinitionAliases />
+    </QtoDef>
+    <QtoDef>
+      <Name>QuantityGroutedMaterial</Name>
+      <Definition>The quantity of injected material.</Definition>
+      <QtoType>Q_VOLUME</QtoType>
+      <NameAliases />
+      <DefinitionAliases />
+    </QtoDef>
+  </QtoDefs>
+  <QtoDefinitionAliases />
+</QtoSetDef>

@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 5 July 2024
+Monday, 8 July 2024
 
 *)
 
@@ -79,32 +79,32 @@ REFERENCE FROM IFCUTILITYRESOURCE
 );
 
 TYPE IfcBenchmarkEnum = ENUMERATION OF
-	(EQUALTO
-	,GREATERTHAN
+	(GREATERTHAN
 	,GREATERTHANOREQUALTO
-	,INCLUDEDIN
-	,INCLUDES
 	,LESSTHAN
 	,LESSTHANOREQUALTO
+	,EQUALTO
 	,NOTEQUALTO
-	,NOTINCLUDEDIN
-	,NOTINCLUDES);
+	,INCLUDES
+	,NOTINCLUDES
+	,INCLUDEDIN
+	,NOTINCLUDEDIN);
 END_TYPE;
 
 TYPE IfcConstraintEnum = ENUMERATION OF
-	(ADVISORY
-	,HARD
+	(HARD
 	,SOFT
+	,ADVISORY
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcLogicalOperatorEnum = ENUMERATION OF
 	(LOGICALAND
-	,LOGICALNOTAND
-	,LOGICALNOTOR
 	,LOGICALOR
-	,LOGICALXOR);
+	,LOGICALXOR
+	,LOGICALNOTAND
+	,LOGICALNOTOR);
 END_TYPE;
 
 TYPE IfcObjectiveEnum = ENUMERATION OF

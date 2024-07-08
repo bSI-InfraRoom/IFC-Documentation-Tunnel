@@ -57,11 +57,11 @@
 </blockquote>
 <p class="use-head">
 Relationship Use Definitions</p>
-<p>As shown in Figure 316, the attribute <i>ParentBoundary</i> with inverse <i>InnerBoundaries</i> is provided to link the space boundaries of doors, windows, and openings to the parent boundary, such as of a wall or slab.</p>
+<p>As shown in Figure 319, the attribute <i>ParentBoundary</i> with inverse <i>InnerBoundaries</i> is provided to link the space boundaries of doors, windows, and openings to the parent boundary, such as of a wall or slab.</p>
 <blockquote class="note">
 <p>NOTE  The space boundary of the parent is not cut by the inner boundary - both overlap.</p>
 </blockquote>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcrelspaceboundary1stlevel-fig1.png" alt="&quot;IfcRelSpaceBoundary1stLevel&quot;" title="Figure 316 &mdash; Space boundary first level relationships"></td></tr><tr><td><p class="figure">Figure 316 &mdash; Space boundary first level relationships</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcrelspaceboundary1stlevel-fig1.png" alt="&quot;IfcRelSpaceBoundary1stLevel&quot;" title="Figure 319 &mdash; Space boundary first level relationships"></td></tr><tr><td><p class="figure">Figure 319 &mdash; Space boundary first level relationships</p></td></tr></table></p>
 <p class="use-head">
 Geometry Use Definitions</p>
 <p>See the definition at the supertype IfcRelSpaceBoundary for guidance on using the connection geometry for first level space boundaries.</p>
@@ -117,6 +117,7 @@ Reference to one spaces that is delimited by this boundary.
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatedBuildingElement</td><td><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></td><td></td><td>
 Reference to <del>Building</del> Element, that defines the Space Boundaries.
+
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <i>IfcBuildingElement</i> to <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -126,6 +127,7 @@ IFC4 CHANGE  The attribute has been changed to be mandatory.
 </td><td>X</td></tr>
 <tr><td>7</td><td>ConnectionGeometry</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a></td><td>? </td><td>
 Physical representation of the space boundary. Provided as a <strong>curve or</strong> surface given within the LCS of the space.
+
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectionsurfacegeometry.htm">IfcConnectionSurfaceGeometry</a> to <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a> with upward compatibility for file based exchange.
 </blockquote>

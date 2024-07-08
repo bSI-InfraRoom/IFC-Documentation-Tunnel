@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="74245e3bfa7f47c8940ca775b6ef0ead" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoScienceFeatureTypePiezometricWaterLevel</Name>
+  <Definition>Properties for piezometric water levels.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceFeature/PIEZOMETRICWATERLEVEL</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceFeature/PIEZOMETRICWATERLEVEL</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="927b65fdcc994547bb178e71ce9f759d">
+      <Name>Elevation</Name>
+      <Definition>This property provides the numeric value of the (absolute) elevation of the groundwater surface (defined in the property SurfaceType).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

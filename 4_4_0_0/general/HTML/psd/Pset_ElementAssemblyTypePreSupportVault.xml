@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="00827817294648c69f57154cb692b330" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ElementAssemblyTypePreSupportVault</Name>
+  <Definition>Properties for element assemblies of type PRESUPPORTVAULT.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcElementAssembly/.PRESUPPORTVAULT.</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcElementAssembly/.PRESUPPORTVAULT.</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="8215b505d4bd4e2caea6a7f9f4eb53eb">
+      <Name>BoreholeGradient</Name>
+      <Definition>Angle of borehole to drive direction.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="85f7194d158243b9a21aeb62f4d41cb4">
+      <Name>RadialSpacing</Name>
+      <Definition>Radial spacing between boreholes.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="9e5391b5e41143219ae80c693dbaa818">
+      <Name>VaultOffset</Name>
+      <Definition>Distance between parallel vaults.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

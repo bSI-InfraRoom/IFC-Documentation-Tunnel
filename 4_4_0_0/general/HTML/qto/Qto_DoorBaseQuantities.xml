@@ -11,7 +11,9 @@
   <QtoDefs>
     <QtoDef>
       <Name>Width</Name>
-      <Definition>Total outer width of the door lining. It should only be provided, if it is a rectangular door.</Definition>
+      <Definition>The width of the object. Only given, if the object has constant thickness (prismatic).
+
+Total outer width of the door lining. It should only be provided, if it is a rectangular door.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Breite</NameAlias>
@@ -26,7 +28,9 @@
     </QtoDef>
     <QtoDef>
       <Name>Height</Name>
-      <Definition>Total outer heigth of the door lining. It should only be provided, if it is a rectangular door.</Definition>
+      <Definition>Characteristic height
+
+Total outer height of the door lining. It should only be provided, if it is a rectangular door.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Höhe</NameAlias>
@@ -41,7 +45,7 @@
     </QtoDef>
     <QtoDef>
       <Name>Perimeter</Name>
-      <Definition>Total perimeter of the outer lining of the door.</Definition>
+      <Definition>Perimeter of the object.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Umfang</NameAlias>
@@ -56,7 +60,9 @@
     </QtoDef>
     <QtoDef>
       <Name>Area</Name>
-      <Definition>Total area of the outer lining of the door.</Definition>
+      <Definition>Calculated area for the object.
+
+Total area of the outer lining of the door.</Definition>
       <QtoType>Q_AREA</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Fläche</NameAlias>

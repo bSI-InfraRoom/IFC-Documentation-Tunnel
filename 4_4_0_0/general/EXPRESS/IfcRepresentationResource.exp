@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 5 July 2024
+Monday, 8 July 2024
 
 *)
 
@@ -94,13 +94,13 @@ TYPE IfcWellKnownTextLiteral = STRING;
 END_TYPE;
 
 TYPE IfcGeometricProjectionEnum = ENUMERATION OF
-	(ELEVATION_VIEW
-	,GRAPH_VIEW
+	(GRAPH_VIEW
+	,SKETCH_VIEW
 	,MODEL_VIEW
 	,PLAN_VIEW
 	,REFLECTED_PLAN_VIEW
 	,SECTION_VIEW
-	,SKETCH_VIEW
+	,ELEVATION_VIEW
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -179,10 +179,10 @@ ENTITY IfcGeometricRepresentationSubContext
 	SELF\IfcGeometricRepresentationContext.TrueNorth : IfcDirection := NVL(ParentContext.TrueNorth, IfcConvertDirectionInto2D(SELF\IfcGeometricRepresentationContext.WorldCoordinateSystem.P[2]));
 	SELF\IfcGeometricRepresentationContext.Precision : IfcReal := NVL(ParentContext.Precision,1.E-5);
  WHERE
-	NoCoordOperation : SIZEOF(SELF\IfcGeometricRepresentationContext.HasCoordinateOperation) = 0;
 	ParentNoSub : NOT('IFCREPRESENTATIONRESOURCE.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(ParentContext));
 	UserTargetProvided :  (TargetView <> IfcGeometricProjectionEnum.USERDEFINED) OR 
 ((TargetView =  IfcGeometricProjectionEnum.USERDEFINED) AND EXISTS(UserDefinedTargetView)) ;
+	NoCoordOperation : SIZEOF(SELF\IfcGeometricRepresentationContext.HasCoordinateOperation) = 0;
 END_ENTITY;
 
 ENTITY IfcMapConversion
@@ -309,9 +309,6 @@ ENTITY IfcShapeRepresentation
  WHERE
 	CorrectContext : 'IFCREPRESENTATIONRESOURCE.IFCGEOMETRICREPRESENTATIONCONTEXT' 
 IN TYPEOF(SELF\IfcRepresentation.ContextOfItems);
-	CorrectItemsForType : IfcShapeRepresentationTypes(SELF\IfcRepresentation.RepresentationType, SELF\IfcRepresentation.Items);
-	HasRepresentationIdentifier : EXISTS(SELF\IfcRepresentation.RepresentationIdentifier);
-	HasRepresentationType : EXISTS(SELF\IfcRepresentation.RepresentationType);
 	NoTopologicalItem : SIZEOF(QUERY(temp <* Items | 
   ('IFCTOPOLOGYRESOURCE.IFCTOPOLOGICALREPRESENTATIONITEM' IN TYPEOF(temp))
     AND (NOT(SIZEOF(
@@ -319,6 +316,9 @@ IN TYPEOF(SELF\IfcRepresentation.ContextOfItems);
        'IFCTOPOLOGYRESOURCE.IFCEDGECURVE',
        'IFCTOPOLOGYRESOURCE.IFCFACESURFACE'] * TYPEOF(temp)) = 1))
 )) = 0;
+	HasRepresentationType : EXISTS(SELF\IfcRepresentation.RepresentationType);
+	HasRepresentationIdentifier : EXISTS(SELF\IfcRepresentation.RepresentationIdentifier);
+	CorrectItemsForType : IfcShapeRepresentationTypes(SELF\IfcRepresentation.RepresentationType, SELF\IfcRepresentation.Items);
 END_ENTITY;
 
 ENTITY IfcStyleModel
@@ -652,7 +652,7 @@ FUNCTION IfcTopologyRepresentationTypes
 END_FUNCTION;
 
 RULE IfcRepresentationContextSameWCS FOR
- (IfcGeometricRepresentationContext);
+	(IfcGeometricRepresentationContext);
 LOCAL
   IsDifferent  : LOGICAL := FALSE;
 END_LOCAL;

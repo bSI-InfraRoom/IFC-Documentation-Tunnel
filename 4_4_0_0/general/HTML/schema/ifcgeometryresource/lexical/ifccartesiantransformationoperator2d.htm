@@ -65,11 +65,11 @@ SELF\IfcCartesianTransformationOperator.Axis2,?)</td><td><a href="../../ifcgeome
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
+<tr><td>DimEqual2</td><td>The coordinate space dimensionality of this entity shall be 2.
+</td></tr>
 <tr><td>Axis1Is2D</td><td>The inherited Axis1 should have (if given) the dimensionality of 2.
 </td></tr>
 <tr><td>Axis2Is2D</td><td>The inherited Axis2 should have (if given) the dimensionality of 2.
-</td></tr>
-<tr><td>DimEqual2</td><td>The coordinate space dimensionality of this entity shall be 2.
 </td></tr>
 </table>
 
@@ -89,6 +89,7 @@ SELF\IfcCartesianTransformationOperator.Axis2,?)</td><td><a href="../../ifcgeome
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>
@@ -147,9 +148,9 @@ SELF\IfcCartesianTransformationOperator.Axis2,?)</td><td><a href="../../ifcgeome
 &nbsp;&nbsp;U : <span class="keyword">LIST</span> [2:2] OF <a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a> := IfcBaseAxis(2,SELF\IfcCartesianTransformationOperator.Axis1,
 SELF\IfcCartesianTransformationOperator.Axis2,?);<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;Axis1Is2D : NOT(EXISTS(SELF\<a href="../../ifcgeometryresource/lexical/ifccartesiantransformationoperator.htm">IfcCartesianTransformationOperator</a>.Axis1)) OR <br/>
+&nbsp;&nbsp;DimEqual2 : SELF\<a href="../../ifcgeometryresource/lexical/ifccartesiantransformationoperator.htm">IfcCartesianTransformationOperator</a>.Dim = 2;<br/>&nbsp;&nbsp;Axis1Is2D : NOT(EXISTS(SELF\<a href="../../ifcgeometryresource/lexical/ifccartesiantransformationoperator.htm">IfcCartesianTransformationOperator</a>.Axis1)) OR <br/>
 (SELF\<a href="../../ifcgeometryresource/lexical/ifccartesiantransformationoperator.htm">IfcCartesianTransformationOperator</a>.Axis1.Dim = 2);<br/>&nbsp;&nbsp;Axis2Is2D : NOT(EXISTS(SELF\<a href="../../ifcgeometryresource/lexical/ifccartesiantransformationoperator.htm">IfcCartesianTransformationOperator</a>.Axis2)) OR <br/>
-(SELF\<a href="../../ifcgeometryresource/lexical/ifccartesiantransformationoperator.htm">IfcCartesianTransformationOperator</a>.Axis2.Dim = 2);<br/>&nbsp;&nbsp;DimEqual2 : SELF\<a href="../../ifcgeometryresource/lexical/ifccartesiantransformationoperator.htm">IfcCartesianTransformationOperator</a>.Dim = 2;<br/><span class="keyword">END_ENTITY;</span><br/>
+(SELF\<a href="../../ifcgeometryresource/lexical/ifccartesiantransformationoperator.htm">IfcCartesianTransformationOperator</a>.Axis2.Dim = 2);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

@@ -48,19 +48,19 @@
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
 <tr><td>PSET_MATERIALDRIVEN</td><td><p>The property sets defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> are to be encoded in an <a href="../../ifcmaterialresource/lexical/ifcmaterialproperties.htm">IfcMaterialProperties</a> entity and assigned to an <a href="../../ifcmaterialresource/lexical/ifcmaterialdefinition.htm">IfcMaterialDefinition</a>.</p>
-</td></tr><tr><td>PSET_OCCURRENCEDRIVEN</td><td><p>The property sets defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> can only be assigned to subtypes of <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.</p>
-</td></tr><tr><td>PSET_PERFORMANCEDRIVEN</td><td><p>The property sets defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> can only be assigned to <a href="../../ifccontrolextension/lexical/ifcperformancehistory.htm">IfcPerformanceHistory</a>.</p>
-</td></tr><tr><td>PSET_PROFILEDRIVEN</td><td><p>The property sets defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> are to be encoded in an <a href="../../ifcprofileresource/lexical/ifcprofileproperties.htm">IfcProfileProperties</a> entity and assigned to an <a href="../../ifcprofileresource/lexical/ifcprofiledef.htm">IfcProfileDef</a>.</p>
 </td></tr><tr><td>PSET_TYPEDRIVENONLY</td><td><p>The property sets defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> can only be assigned to subtypes of <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>.</p>
 </td></tr><tr><td>PSET_TYPEDRIVENOVERRIDE</td><td><p>The property sets defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> can be assigned
 to subtypes of <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a> and can be overridden by a
 property set with same name at subtypes of <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.</p>
-</td></tr><tr><td>QTO_OCCURRENCEDRIVEN</td><td><p>The element quantity defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> can only be
-assigned to subtypes of <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.</p>
+</td></tr><tr><td>PSET_OCCURRENCEDRIVEN</td><td><p>The property sets defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> can only be assigned to subtypes of <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.</p>
+</td></tr><tr><td>PSET_PERFORMANCEDRIVEN</td><td><p>The property sets defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> can only be assigned to <a href="../../ifccontrolextension/lexical/ifcperformancehistory.htm">IfcPerformanceHistory</a>.</p>
+</td></tr><tr><td>PSET_PROFILEDRIVEN</td><td><p>The property sets defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> are to be encoded in an <a href="../../ifcprofileresource/lexical/ifcprofileproperties.htm">IfcProfileProperties</a> entity and assigned to an <a href="../../ifcprofileresource/lexical/ifcprofiledef.htm">IfcProfileDef</a>.</p>
 </td></tr><tr><td>QTO_TYPEDRIVENONLY</td><td><p>The element quantity defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> can only be assigned to subtypes of <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>.</p>
 </td></tr><tr><td>QTO_TYPEDRIVENOVERRIDE</td><td><p>The element quantity defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> can be
 assigned to subtypes of <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a> and can be overridden
 by an element quantity with same name at subtypes of <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.</p>
+</td></tr><tr><td>QTO_OCCURRENCEDRIVEN</td><td><p>The element quantity defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> can only be
+assigned to subtypes of <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>No restriction provided, the property sets defined by this <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> can be assigned to any entity, if not
 otherwise restricted by the <i>ApplicableEntity</i> attribute.</p>
 </td></tr></table>
@@ -71,21 +71,21 @@ otherwise restricted by the <i>ApplicableEntity</i> attribute.</p>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifckernel/lexical/ifcpropertysettemplatetypeenum.htm">IfcPropertySetTemplateTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pset_materialdriven&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pset_typedrivenonly&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pset_typedrivenoverride&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pset_occurrencedriven&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pset_performancedriven&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pset_profiledriven&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pset_typedrivenonly&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;pset_typedrivenoverride&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;qto_occurrencedriven&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;qto_typedrivenonly&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;qto_typedrivenoverride&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;qto_occurrencedriven&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
 &nbsp;&lt;/xs:simpleType&gt;<br/>
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcPropertySetTemplateTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;PSET_MATERIALDRIVEN, <br/>&nbsp;PSET_OCCURRENCEDRIVEN, <br/>&nbsp;PSET_PERFORMANCEDRIVEN, <br/>&nbsp;PSET_PROFILEDRIVEN, <br/>&nbsp;PSET_TYPEDRIVENONLY, <br/>&nbsp;PSET_TYPEDRIVENOVERRIDE, <br/>&nbsp;QTO_OCCURRENCEDRIVEN, <br/>&nbsp;QTO_TYPEDRIVENONLY, <br/>&nbsp;QTO_TYPEDRIVENOVERRIDE, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;PSET_MATERIALDRIVEN, <br/>&nbsp;PSET_TYPEDRIVENONLY, <br/>&nbsp;PSET_TYPEDRIVENOVERRIDE, <br/>&nbsp;PSET_OCCURRENCEDRIVEN, <br/>&nbsp;PSET_PERFORMANCEDRIVEN, <br/>&nbsp;PSET_PROFILEDRIVEN, <br/>&nbsp;QTO_TYPEDRIVENONLY, <br/>&nbsp;QTO_TYPEDRIVENOVERRIDE, <br/>&nbsp;QTO_OCCURRENCEDRIVEN, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

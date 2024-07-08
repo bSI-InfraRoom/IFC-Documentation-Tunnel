@@ -56,7 +56,7 @@
 Use definitions</p>
 <p><span class="self-ref">IfcProcedure</span> is used to capture information about stepped processes such as calibration, start/stop procedures for equipment items, designated actions to take in the event of an emergency etc. A procedure is not a task, but may describe a set of tasks and their order of occurrence in response to or to cause an event.</p>
 <p>As shown in Figure 11, <span class="self-ref">IfcProcedure</span> does not restrict anything but describes specific steps of how something should happen. While a procedure does control/restrict in the sense of indicating &quot;this is how the task should be performed&quot; by nature of describing inner detail, this is not different than parts of a product indicating &quot;this is how the parts should be assembled&quot;. Consequently, it doesn't restrict the outer item as a whole but provides inner detail of the item.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcprocedure_example.png" alt="&quot;procedure example&quot;" title="Figure 280 &mdash; Procedure relationships"></td></tr><tr><td><p class="figure">Figure 280 &mdash; Procedure relationships</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcprocedure_example.png" alt="&quot;procedure example&quot;" title="Figure 283 &mdash; Procedure relationships"></td></tr><tr><td><p class="figure">Figure 283 &mdash; Procedure relationships</p></td></tr></table></p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -69,9 +69,9 @@ the type required may be set.
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>CorrectPredefinedType</td><td>Either the <i>PredefinedType</i> attribute is unset, or the inherited attribute <i>ObjectType</i> must be asserted when the value of <i>PredefinedType</i> is set to <i>USERDEFINED</i>.
-</td></tr>
 <tr><td>HasName</td><td>The Name attribute should be inserted to describe the task name.
+</td></tr>
+<tr><td>CorrectPredefinedType</td><td>Either the <i>PredefinedType</i> attribute is unset, or the inherited attribute <i>ObjectType</i> must be asserted when the value of <i>PredefinedType</i> is set to <i>USERDEFINED</i>.
 </td></tr>
 </table>
 
@@ -143,21 +143,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -172,6 +176,7 @@ IFC4 CHANGE Attribute promoted from subtypes.
 </td><td>X</td></tr>
 <tr><td>7</td><td>LongDescription</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 An extended description or narrative that may be provided.
+
 <blockquote>
 IFC4 CHANGE  New attribute.
 </blockquote>
@@ -336,8 +341,8 @@ the type required may be set.
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcprocess.htm">IfcProcess</a>)<b>;</b><br/>
 &nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="../../ifcprocessextension/lexical/ifcproceduretypeenum.htm">IfcProcedureTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR (PredefinedType &lt;&gt; <a href="../../ifcprocessextension/lexical/ifcproceduretypeenum.htm">IfcProcedureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
-((PredefinedType = <a href="../../ifcprocessextension/lexical/ifcproceduretypeenum.htm">IfcProcedureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/>&nbsp;&nbsp;HasName : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a>.Name);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;HasName : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR (PredefinedType &lt;&gt; <a href="../../ifcprocessextension/lexical/ifcproceduretypeenum.htm">IfcProcedureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
+((PredefinedType = <a href="../../ifcprocessextension/lexical/ifcproceduretypeenum.htm">IfcProcedureTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcprocessextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

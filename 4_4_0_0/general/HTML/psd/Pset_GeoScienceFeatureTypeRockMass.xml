@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="d1016bdcadf64d0fa8d204af7fa0acd6" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GeoScienceFeatureTypeRockMass</Name>
+  <Definition>Properties for rock mass.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGeoScienceFeature/GEOTECHNICALUNIT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGeoScienceFeature/GEOTECHNICALUNIT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="b20c22dd0e3844958ffa205f7fd63085">
+      <Name>RockQualityDesignation</Name>
+      <Definition>Quotient of the cumulative length of drill cores with a length greater than 10 cm, by the total length of the drill core pass with a length greater than or equal to 1m.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b49d0297fc064b598158521bfabdebe1">
+      <Name>RockMassRating</Name>
+      <Definition>The rock mass rating (RMR) is a geomechanical classification system for rocks, developed by Z. T. Bieniawski.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="65ace49c82584cebbe08496cefff6831">
+      <Name>QValue</Name>
+      <Definition>The rock mass quality (Q) is a very sensitive index and its value varies from 0.001 to 1000. Use of the Q-system is specifically recommended for tunnels and caverns with an arched roof.
+The Q-value is determined with:
+$$
+Q = \frac{RQD}{Jn}*\frac{Jr}{Ja}*\frac{Jw}{SRF}
+$$
+The first term RQD (Rock Quality Designation) divided by Jn (joint set number) is related to the size of the intact rock blocks in the rock mass. The second term Jr (joint roughness number) divided by Ja (joint alteration number) is related to the shear strength along the discontinuity planes and the third term Jw (joint water parameter) divided by SRF (stress reduction factor) is related to the stress environment on the intact rock blocks and discontinuities around the underground excavation.
+
+A multiplication of the three terms results in the Q parameter, which can range between 0.001 for an exceptionally poor to 1000 for an exceptionally good rock mass. The numerical values of the class boundaries for the different rock mass qualities are subdivisions of the Q range on a logarithmic scale.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7052b0e1304e4ab8a8cd06df70eb7f54">
+      <Name>GeologicalStrengthIndex</Name>
+      <Definition>The Geological Strength Index (GSI): A characterization tool for assessing engineering properties for rock masses. 
+See also [GSI](https://static.rocscience.cloud/assets/resources/learning/hoek/2019-The-Hoek-Brown-failure-criterion-and-GSI-2018-edition-1.pdf).</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcInteger" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="51595aaa4ef9451f922cb3f3919f8ed6">
+      <Name>YoungModulus</Name>
+      <Definition>Elastic modulus, mean value, α=0°.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcModulusOfElasticityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1ddcd8eeff464ae7a7764681c24acbba">
+      <Name>Cohesion</Name>
+      <Definition>Cohesive shear strength of a rock or soil that is independent of interparticle friction.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="cd1f1a20907a44b2bfd4b61a24d24d18">
+      <Name>FrictionAngle</Name>
+      <Definition>Derived from the Mohr-Coulomb failure criterion and used to describe the friction shear resistance of ground materials, together with the normal effective stress.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d5460e1c984a44c8ac22627e10b5ec20">
+      <Name>K0</Name>
+      <Definition>Lateral Earth Pressure Coefficient.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

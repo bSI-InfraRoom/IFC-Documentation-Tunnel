@@ -212,6 +212,17 @@ performance classes may be provided. Examples of performance classes that may be
         <DefinitionAlias lang="ko-KR">IEC의 60947 시리즈를 기반으로 테스트 회로 차단 기나 모터 보호 장치의 능력 [A].</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
+    <PropertyDef ifdguid="4b4b3bfcecb54fa78c2f014e518c1f02">
+      <Name>NumberOfPhases</Name>
+      <Definition>Number of phases that the equipment operates on.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcCountMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases>
     <PsetDefinitionAlias lang="en" />

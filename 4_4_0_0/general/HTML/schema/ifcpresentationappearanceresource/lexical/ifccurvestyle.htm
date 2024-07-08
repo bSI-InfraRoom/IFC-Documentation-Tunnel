@@ -80,6 +80,7 @@ The colour of the visible part of the curve. If not given, then the colour shoul
 </td><td>X</td></tr>
 <tr><td>5</td><td>ModelOrDraughting</td><td><a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a></td><td>? </td><td>
 Indication whether the length measures provided for the presentation style are model based, or draughting based.
+
 <blockquote>
 IFC4 CHANGE  New attribute.
 </blockquote>
@@ -88,9 +89,9 @@ IFC4 CHANGE  New attribute.
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>IdentifiableCurveStyle</td><td>At minimum one of the three attribute values have to be provided, <i>CurveFont</i>, <i>CurveWidth</i>, <i>CurveColour</i>.
-</td></tr>
 <tr><td>MeasureOfWidth</td><td>The curve width, if provided, shall be given by an <a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a> representing the curve width in the default measure unit, or by an <a href="../../ifcmeasureresource/lexical/ifcdescriptivemeasure.htm">IfcDescriptiveMeasure</a> with the value 'by layer' representing the curve width by the default curve width at the associated layer.
+</td></tr>
+<tr><td>IdentifiableCurveStyle</td><td>At minimum one of the three attribute values have to be provided, <i>CurveFont</i>, <i>CurveWidth</i>, <i>CurveColour</i>.
 </td></tr>
 </table>
 
@@ -121,6 +122,7 @@ The colour of the visible part of the curve. If not given, then the colour shoul
 </td><td>X</td></tr>
 <tr><td>5</td><td>ModelOrDraughting</td><td><a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a></td><td>? </td><td>
 Indication whether the length measures provided for the presentation style are model based, or draughting based.
+
 <blockquote>
 IFC4 CHANGE  New attribute.
 </blockquote>
@@ -165,10 +167,10 @@ IFC4 CHANGE  New attribute.
 &nbsp;&nbsp;CurveColour : <span class="keyword">OPTIONAL</span> <a href="../../ifcpresentationappearanceresource/lexical/ifccolour.htm">IfcColour</a>;<br/>
 &nbsp;&nbsp;ModelOrDraughting : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;IdentifiableCurveStyle : EXISTS(CurveFont) OR EXISTS(CurveWidth) OR EXISTS(CurveColour);<br/>&nbsp;&nbsp;MeasureOfWidth : (NOT(EXISTS(CurveWidth))) OR<br/>
+&nbsp;&nbsp;MeasureOfWidth : (NOT(EXISTS(CurveWidth))) OR<br/>
 (&#39;IFCMEASURERESOURCE.<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>&#39; IN TYPEOF(CurveWidth)) OR <br/>
  ((&#39;IFCMEASURERESOURCE.<a href="../../ifcmeasureresource/lexical/ifcdescriptivemeasure.htm">IfcDescriptiveMeasure</a>&#39; IN TYPEOF(CurveWidth)) AND<br/>
- (CurveWidth = &#39;by layer&#39;));<br/><span class="keyword">END_ENTITY;</span><br/>
+ (CurveWidth = &#39;by layer&#39;));<br/>&nbsp;&nbsp;IdentifiableCurveStyle : EXISTS(CurveFont) OR EXISTS(CurveWidth) OR EXISTS(CurveColour);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcpresentationappearanceresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

@@ -11,7 +11,9 @@
   <QtoDefs>
     <QtoDef>
       <Name>Height</Name>
-      <Definition>Total height (from base slab without flooring to ceiling without suspended ceiling) for this space (measured from top of slab below to bottom of slab above). To be provided only if the space has a constant height.</Definition>
+      <Definition>Characteristic height
+
+Total height (from base slab without flooring to ceiling without suspended ceiling) for this space (measured from top of slab below to bottom of slab above). To be provided only if the space has a constant height.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Höhe</NameAlias>
@@ -56,7 +58,9 @@
     </QtoDef>
     <QtoDef>
       <Name>GrossPerimeter</Name>
-      <Definition>Gross perimeter at the floor level of this space. It all sides of the space, including those parts of the perimeter that are created by virtual boundaries and openings (like doors).</Definition>
+      <Definition>Gross perimeter at the outer contour of the object.
+
+Measured at floor level with all sides of the space, including those parts of the perimeter that are created by virtual boundaries and openings (like doors).</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Umfang Brutto</NameAlias>
@@ -71,7 +75,7 @@
     </QtoDef>
     <QtoDef>
       <Name>NetPerimeter</Name>
-      <Definition>Net perimeter at the floor level of this space. It excludes those parts of the perimeter that are created by by virtual boundaries and openings (like doors). It is the measurement used for skirting boards and may includes the perimeter of internal fixed objects like columns.</Definition>
+      <Definition>Net perimeter at the floor level of this space. It excludes those parts of the perimeter that are created by by virtual boundaries and openings (like doors). It is the measurement used for skirting boards and may include the perimeter of internal fixed objects like columns.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Umfang Netto</NameAlias>
@@ -86,7 +90,9 @@
     </QtoDef>
     <QtoDef>
       <Name>GrossFloorArea</Name>
-      <Definition>Sum of all floor areas covered by the space. It includes the area covered by elementsinside the space (columns, inner walls, etc.) and excludes the area covered by wall claddings.</Definition>
+      <Definition>Sum of all gross floor areas within the spatial structure element.
+
+Includes the area covered by elements inside the space (columns, inner walls, etc.) and excludes the area covered by wall claddings.</Definition>
       <QtoType>Q_AREA</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Bodenfläche Brutto</NameAlias>
@@ -101,7 +107,9 @@
     </QtoDef>
     <QtoDef>
       <Name>NetFloorArea</Name>
-      <Definition>Sum of all usable floor areas covered by the space. It excludes the area covered  by elements inside the space (columns, inner walls, built-in's etc.), slab openings, or other protruding elements. Varying heights are not taking into account (i.e. no reduction for areas under a minimum headroom).</Definition>
+      <Definition>Sum of all net usable floor areas.
+
+It excludes the area covered by elements inside the space (columns, inner walls, built-in's etc.), slab openings, or other protruding elements. Varying heights are not taking into account (i.e. no reduction for areas under a minimum headroom).</Definition>
       <QtoType>Q_AREA</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Bodenfläche Netto</NameAlias>
@@ -176,7 +184,7 @@
     </QtoDef>
     <QtoDef>
       <Name>GrossVolume</Name>
-      <Definition>Gross volume enclosed by the space, including the volume of construction elements inside the space.</Definition>
+      <Definition>Total gross volume of the object. Openings, recesses, enclosed objects and projections are not taken into account.</Definition>
       <QtoType>Q_VOLUME</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Bruttovolumen</NameAlias>
@@ -191,7 +199,9 @@
     </QtoDef>
     <QtoDef>
       <Name>NetVolume</Name>
-      <Definition>Net volume enclosed by the space, excluding the volume of construction elements inside the space.</Definition>
+      <Definition>Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses.
+
+Net volume enclosed by the space, excluding the volume of construction elements inside the space.</Definition>
       <QtoType>Q_VOLUME</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Nettovolumen</NameAlias>

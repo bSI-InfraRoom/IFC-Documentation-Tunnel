@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="e386ce44d74645b581dbbdf081cfcf98" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ReinforcingMeshCommon</Name>
+  <Definition>Common properties for reinforcing meshes.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcReinforcingMesh</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcReinforcingMesh</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="bd876fcb08bf42bbb7bab206bc501636">
+      <Name>AreaDensity</Name>
+      <Definition>Specifies a weight per area unit for the mesh.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcAreaDensityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="f7b199ec69184e05b9a8d4dc3a89f6d7">
+      <Name>CorrosionTreatment</Name>
+      <Definition>Determines corrosion treatment for metal components. This property is provided if the requirement needs to be expressed (a) independently of a material specification and (b) as a mere requirements statement rather than a workshop design/ processing feature.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementComponentCorrosionTreatment">
+            <EnumItem>PAINTED</EnumItem>
+            <EnumItem>EPOXYCOATED</EnumItem>
+            <EnumItem>GALVANISED</EnumItem>
+            <EnumItem>STAINLESS</EnumItem>
+            <EnumItem>POWDERCOATED</EnumItem>
+            <EnumItem>GALVANIZEDANDPOWDERCOATED</EnumItem>
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>PAINTED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Painted</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EPOXYCOATED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Epoxy Coated</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GALVANISED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Galvanised</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>STAINLESS</Name>
+              <NameAliases>
+                <NameAlias lang="en">Stainless</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>POWDERCOATED</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GALVANIZEDANDPOWDERCOATED</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NONE</Name>
+              <Definition>No waterproof.</Definition>
+              <NameAliases>
+                <NameAlias lang="en">None</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">None, empty or no additional action or function.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Notdefined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Corrosion Treatment</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7b5736fd2c00483abda4e35edd6c7323">
+      <Name>NumberOfMeshLayers</Name>
+      <Definition>Specifies the number of mesh layers.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcCountMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="39b8cdaa23964f69b6dd070e026ac549">
+      <Name>OverlapLength</Name>
+      <Definition>Specifies the length of the mesh overlap.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

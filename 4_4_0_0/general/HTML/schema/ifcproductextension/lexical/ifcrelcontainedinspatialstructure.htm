@@ -62,8 +62,8 @@
 <blockquote class="example">
 <p>EXAMPLE  A wall might be normally assigned to a storey, however the curtain wall might be assigned to the building and the retaining wall in the terrain might be assigned to the site.</p>
 </blockquote>
-<p>Figure 307 shows the use of <span class="self-ref">IfcRelContainedInSpatialStructure</span> to assign a stair and two walls to two different levels within the spatial structure.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcrelcontainedinspatialstructure-fig1.png" alt="&quot;fig1&quot;" title="Figure 307 &mdash; Relationship for spatial structure containment"></td></tr><tr><td><p class="figure">Figure 307 &mdash; Relationship for spatial structure containment</p></td></tr></table></p>
+<p>Figure 310 shows the use of <span class="self-ref">IfcRelContainedInSpatialStructure</span> to assign a stair and two walls to two different levels within the spatial structure.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcrelcontainedinspatialstructure-fig1.png" alt="&quot;fig1&quot;" title="Figure 310 &mdash; Relationship for spatial structure containment"></td></tr><tr><td><p class="figure">Figure 310 &mdash; Relationship for spatial structure containment</p></td></tr></table></p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x.</p>
 </blockquote>
@@ -76,12 +76,14 @@
 <th>G</th></tr>
 <tr><td>5</td><td>RelatedElements</td><td><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a></td><td>S[1:?]</td><td>
 Set of products, which are contained within this level of the spatial structure hierarchy.
+
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> to <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> with upward compatibility
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatingStructure</td><td><a href="../../ifcproductextension/lexical/ifcspatialelement.htm">IfcSpatialElement</a></td><td></td><td>
 Spatial structure element, within which the element is contained. Any element can only be contained within one element of the project spatial structure.
+
 <blockquote>
 IFC4 CHANGE  The attribute <i>RelatingStructure</i> as been promoted to the new supertype <a href="../../ifcproductextension/lexical/ifcspatialelement.htm">IfcSpatialElement</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -131,12 +133,14 @@ Optional description, provided for exchanging informative comments.
 <tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a></td></tr>
 <tr><td>5</td><td>RelatedElements</td><td><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a></td><td>S[1:?]</td><td>
 Set of products, which are contained within this level of the spatial structure hierarchy.
+
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> to <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> with upward compatibility
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatingStructure</td><td><a href="../../ifcproductextension/lexical/ifcspatialelement.htm">IfcSpatialElement</a></td><td></td><td>
 Spatial structure element, within which the element is contained. Any element can only be contained within one element of the project spatial structure.
+
 <blockquote>
 IFC4 CHANGE  The attribute <i>RelatingStructure</i> as been promoted to the new supertype <a href="../../ifcproductextension/lexical/ifcspatialelement.htm">IfcSpatialElement</a> with upward compatibility for file based exchange.
 </blockquote>

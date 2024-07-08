@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="1c6de2428ceb4f4691f8f072d6a50084" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ElementAssemblyTypePreSupportFace</Name>
+  <Definition>Properties for element assemblies of type PRESUPPORTFACE.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcElementAssembly/.PRESUPPORTFACE.</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcElementAssembly/.PRESUPPORTFACE.</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="79c6f20f4fce4cab834487413d4fd15a">
+      <Name>TransverseBoreholeSpacing</Name>
+      <Definition>Transverse spacing between boreholes.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="838bc164612a4f8facfab4562d1130f9">
+      <Name>VerticalBoreholeSpacing</Name>
+      <Definition>Vertical spacing between boreholes.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

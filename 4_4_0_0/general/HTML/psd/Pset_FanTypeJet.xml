@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="11d84704aa104514aa7f522b326565e1" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_FanTypeJet</Name>
+  <Definition>Properties for fans of type JET.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcFan/JET</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcFan/JET</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="041c34c1f7664ca69cee91f110a4a7df">
+      <Name>NominalThrust</Name>
+      <Definition>The nominal thrust of the fan.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcForceMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="68b90b234ca644c4bd8eb880dbbeb69d">
+      <Name>EffectiveThrust</Name>
+      <Definition>The effective thrust of the fan.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcForceMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

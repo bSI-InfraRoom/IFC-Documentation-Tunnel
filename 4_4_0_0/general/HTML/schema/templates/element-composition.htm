@@ -20,11 +20,11 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../toc-4.htm#4.5.1.1");
+    parent.index.location.replace("../toc-4.htm#4.5.1.3");
 //-->
 </script>
 
-<h4 class="std">4.5.1.1 Element Composition</h4>
+<h4 class="std">4.5.1.3 Element Composition</h4>
 <p>Provision of an aggregation structure where the element is part of another element representing the composite. The part then provides, if such concepts are in scope of the Model View Definition, exclusively the following:</p>
 <ul>
 <li><i>Body Geometry</i> — The partial body shape representation and its placement;</li>
@@ -39,8 +39,8 @@
 <blockquote class="example">
 <p>EXAMPLE  An <a href="../ifcsharedbldgelements/lexical/ifcbeam.htm">IfcBeam</a> may be aggregated into an element assembly using the objectified relationship <a href="../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>, refering to it by its inverse attribute SELF\IfcObjectDefinition.Decomposes. Any subtype of <a href="../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> can be an element assembly, with <a href="../ifcproductextension/lexical/ifcelementassembly.htm">IfcElementAssembly</a> as a special focus subtype. In this case it should not be additionally contained in the spatial hierarchy, i.e. <i>SELF\IfcElement.ContainedInStructure</i> should be NIL.</p>
 </blockquote>
-<p class="fig-ref">Figure 144 illustrates an instance diagram.</p>
-<table><tr><td><img alt="Element Composition" src="./diagrams/element-composition.png" usemap="#f144"><map name="f144"><area shape="rect" coords="8,8,176,428" href="../ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" /><area shape="rect" coords="208,8,376,92" href="../ifckernel/lexical/ifcrelaggregates.htm" alt="IfcRelAggregates" /><area shape="rect" coords="408,8,576,428" href="../ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" /><area shape="rect" coords="608,8,776,20" href="../ifcmeasureresource/lexical/ifclabel.htm" alt="IfcLabel" /></map></td></tr><tr><td><p class="figure">Figure 144 &mdash; Element Composition</p></td></tr></table>
+<p class="fig-ref">Figure 146 illustrates an instance diagram.</p>
+<table><tr><td><img alt="Element Composition" src="./diagrams/element-composition.png" usemap="#f146"><map name="f146"><area shape="rect" coords="8,8,176,428" href="../ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" /><area shape="rect" coords="208,8,376,92" href="../ifckernel/lexical/ifcrelaggregates.htm" alt="IfcRelAggregates" /><area shape="rect" coords="408,8,576,428" href="../ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" /><area shape="rect" coords="608,8,776,20" href="../ifcmeasureresource/lexical/ifclabel.htm" alt="IfcLabel" /></map></td></tr><tr><td><p class="figure">Figure 146 &mdash; Element Composition</p></td></tr></table>
 
 <details><summary>mvdXML Specification</summary><div class="xsd"><code class="xsd">
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;<br/>

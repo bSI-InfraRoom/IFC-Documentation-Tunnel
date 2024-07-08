@@ -95,9 +95,9 @@ Flag to indicate whether the direction of the second parameter of the trimmed su
 <tr><th>Rule</th><th>Description</th></tr>
 <tr><td>U1AndU2Different</td><td>U1 and U2 shall have different values.
 </td></tr>
-<tr><td>UsenseCompatible</td><td>With exception of those surfaces closed in the U parameter, direction Usense shall be compatible with the ordered parameter values for U.
-</td></tr>
 <tr><td>V1AndV2Different</td><td>V1 and V2 shall have different values.
+</td></tr>
+<tr><td>UsenseCompatible</td><td>With exception of those surfaces closed in the U parameter, direction Usense shall be compatible with the ordered parameter values for U.
 </td></tr>
 <tr><td>VsenseCompatible</td><td>Vsense shall be compatible with the ordered parameter values for V.
 </td></tr>
@@ -119,6 +119,7 @@ Flag to indicate whether the direction of the second parameter of the trimmed su
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>
@@ -134,6 +135,7 @@ IFC2x3 CHANGE  The inverse attribute <i>StyledByItem</i> has been added.
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a></i></td></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcsurface.htm">IfcSurface</a></i></td></tr>
 <tr><td></td><td>Dim<br/>:=3</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td></td><td>The space dimensionality of IfcSurface. It is always a three-dimensional geometric representation item.
+
 <blockquote>
 IFC4 CHANGE Derived attribute promoted from subtypes.
 </blockquote>
@@ -196,10 +198,10 @@ Flag to indicate whether the direction of the second parameter of the trimmed su
 &nbsp;&nbsp;Usense : <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>;<br/>
 &nbsp;&nbsp;Vsense : <a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;U1AndU2Different : U1 &lt;&gt; U2;<br/>&nbsp;&nbsp;UsenseCompatible : ((&#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifcelementarysurface.htm">IfcElementarySurface</a>&#39; IN TYPEOF(BasisSurface)) AND<br/>
+&nbsp;&nbsp;U1AndU2Different : U1 &lt;&gt; U2;<br/>&nbsp;&nbsp;V1AndV2Different : V1 &lt;&gt; V2;<br/>&nbsp;&nbsp;UsenseCompatible : ((&#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifcelementarysurface.htm">IfcElementarySurface</a>&#39; IN TYPEOF(BasisSurface)) AND<br/>
          (NOT (&#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifcplane.htm">IfcPlane</a>&#39; IN TYPEOF(BasisSurface)))) OR<br/>
          (&#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifcsurfaceofrevolution.htm">IfcSurfaceOfRevolution</a>&#39; IN TYPEOF(BasisSurface)) OR<br/>
-         (Usense = (U2 &gt; U1));<br/>&nbsp;&nbsp;V1AndV2Different : V1 &lt;&gt; V2;<br/>&nbsp;&nbsp;VsenseCompatible : Vsense = (V2 &gt; V1);<br/><span class="keyword">END_ENTITY;</span><br/>
+         (Usense = (U2 &gt; U1));<br/>&nbsp;&nbsp;VsenseCompatible : Vsense = (V2 &gt; V1);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

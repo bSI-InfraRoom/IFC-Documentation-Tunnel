@@ -1,0 +1,102 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Qto_BodyGeometryValidation</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 5 index2 2 index3 7 index4 0 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-5.htm#5.2.7.1");
+//-->
+</script>
+
+<h4 class="std">5.2.7.1 Qto_BodyGeometryValidation</h4>
+<p><span class="self-ref">QTO_TYPEDRIVENOVERRIDE</span>
+/
+<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>
+</p>Quantities supplied for validating the correct interpretation of the body shape representation at import. In case of multiple representation items, the quantities are summed for each of the items (irrespective of any overlap). Choosing a suitable tolerance value for comparing the supplied numbers to the numbers calculated from the reconstructed geometry is at the discretion of the importing application.
+
+<details open="open"><summary>Quantities</summary><p><a href="../../../qto/Qto_BodyGeometryValidation.xml"><img border="0" src="../../../img/diagram.png" title="Link to QTO-XML"/> QTO-XML</a></p>
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th>
+<tr><td>GrossSurfaceArea</td><td>
+<span class="self-ref">Q_AREA</span>
+</td><td>
+Total gross area of the object, normally generated as perimeter * length + 2 * cross section area. It is the sum of OuterSurfaceArea + (2 x CrossSectionArea) and shall only be given, if the OuterSurfaceArea and CrossSectionArea cannot be established separately.
+Total gross surface area of the element before applying product-level geometric features such as openings and projections.
+
+</td></tr>
+<tr><td>NetSurfaceArea</td><td>
+<span class="self-ref">0</span>
+</td><td>
+Net surface area of the object, normally generated as perimeter * length + 2 * cross section area taking into account possible processing features (cut-out's, etc.) or openings and recesses.
+Total net surface area of the element after applying product-level geometric features such as openings and projections.
+
+</td></tr>
+<tr><td>GrossVolume</td><td>
+<span class="self-ref">Q_VOLUME</span>
+</td><td>
+Total gross volume of the object. Openings, recesses, enclosed objects and projections are not taken into account.
+Total gross volume of the element before applying product-level geometric features such as openings and projections.
+
+</td></tr>
+<tr><td>NetVolume</td><td>
+<span class="self-ref">0</span>
+</td><td>
+Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses.
+Total net volume of the element before applying product-level geometric features such as openings and projections.
+
+</td></tr>
+<tr><td>SurfaceGenusBeforeFeatures</td><td>
+<span class="self-ref">Q_COUNT</span>
+</td><td>
+The Surface Genus of the evaluated representation items before applying product-level geometric features such as openings and projections.
+Surface Genus is a topological measure that represents the number of &quot;holes&quot; or &quot;handles&quot; on a surface. For example, a sphere has genus 0, and a torus has genus 1.
+Computed using the Euler characteristic:
+$$
+X=V−E+F
+$$
+With the numbers of vertices (V), edges (E) and faces (F)
+$$
+X=2−2g−b
+$$
+With surface genus (g) and the number of boundaries (b) the latter zero in case of an enclosed volume.
+
+</td></tr>
+<tr><td>SurfaceGenusAfterFeatures</td><td>
+<span class="self-ref">0</span>
+</td><td>
+The Surface Genus of the evaluated representation items after applying product-level geometric features such as openings and projections.
+Surface Genus is a topological measure that represents the number of &quot;holes&quot; or &quot;handles&quot; on a surface. For example, a sphere has genus 0, and a torus has genus 1.
+Computed using the Euler characteristic:
+$$
+X=V−E+F
+$$
+With the numbers of vertices (V), edges (E) and faces (F)
+$$
+X=2−2g−b
+$$
+With surface genus (g) and the number of boundaries (b) the latter zero in case of an enclosed volume.
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/qto_bodygeometryvalidation.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

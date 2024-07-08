@@ -70,7 +70,7 @@ The styled item is an assignment of style for presentation to a geometric repres
 </blockquote>
 <p class="use-head">
 Use Definition</p>
-<p>Figure 526 illustrates use of <span class="self-ref">IfcStyledItem</span> for the two usage examples:</p>
+<p>Figure 529 illustrates use of <span class="self-ref">IfcStyledItem</span> for the two usage examples:</p>
 <ul>
 <li><small>As a presentation for a geometric representation item</small></li>
 <li><small>As a presentation for a material definition</small></li>
@@ -78,7 +78,7 @@ Use Definition</p>
 <blockquote class="note">
 <p>NOTE  The new <i>IfcStyleAssignmentSelect</i> allows the direct assignment styles, such as <a href="../../ifcpresentationappearanceresource/lexical/ifccurvestyle.htm">IfcCurveStyle</a>, <a href="../../ifcpresentationappearanceresource/lexical/ifcsurfacestyle.htm">IfcSurfaceStyle</a> without using the intermediate <i>IfcPresentationStyleAssignment</i></p>
 </blockquote>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcstyleditem_fig-1.png" alt="&quot;2x4 example&quot;" title="Figure 526 &mdash; Styled item"></td></tr><tr><td><p class="figure">Figure 526 &mdash; Styled item</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcstyleditem_fig-1.png" alt="&quot;2x4 example&quot;" title="Figure 529 &mdash; Styled item"></td></tr><tr><td><p class="figure">Figure 529 &mdash; Styled item</p></td></tr></table></p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -91,6 +91,7 @@ IFC2x2 Add2 CHANGE The attribute <i>Item</i> has been made optional. Upward comp
 </td><td>X</td></tr>
 <tr><td>2</td><td>Styles</td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcpresentationstyle.htm">IfcPresentationStyle</a></td><td>S[1:?]</td><td>
 Representation styles which are assigned, either to an geometric representation item, or to a material definition.
+
 <blockquote>
 IFC4 CHANGE The data type has been changed to <i>IfcStyleAssignmentSelect</i> with upward compatibility for file based exchange.
 </blockquote>
@@ -122,6 +123,7 @@ The word, or group of words, by which the styled item is referred to.
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>
@@ -143,6 +145,7 @@ IFC2x2 Add2 CHANGE The attribute <i>Item</i> has been made optional. Upward comp
 </td><td>X</td></tr>
 <tr><td>2</td><td>Styles</td><td><a href="../../ifcpresentationappearanceresource/lexical/ifcpresentationstyle.htm">IfcPresentationStyle</a></td><td>S[1:?]</td><td>
 Representation styles which are assigned, either to an geometric representation item, or to a material definition.
+
 <blockquote>
 IFC4 CHANGE The data type has been changed to <i>IfcStyleAssignmentSelect</i> with upward compatibility for file based exchange.
 </blockquote>

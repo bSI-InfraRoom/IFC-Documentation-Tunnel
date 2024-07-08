@@ -46,12 +46,12 @@ Informal Propositions:</p>
 <li>No inner curve shall intersect with the outer curve or any other inner curve. That is, no two curves of the profile definition shall have a point or segment in common, taken into account the geometric precision factor of the geometric representation context. In other words, curves must neither cross nor touch each other.</li>
 <li>No inner curve may enclose another inner curve.</li>
 </ol>
-<p>Figure 541 illustrates the arbitrary closed profile definition with voids. The <i>OuterCurve</i>, defined at the supertype <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> and the inner curves are defined in the same underlying coordinate system. The common underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of:</p>
+<p>Figure 544 illustrates the arbitrary closed profile definition with voids. The <i>OuterCurve</i>, defined at the supertype <a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> and the inner curves are defined in the same underlying coordinate system. The common underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of:</p>
 <ul>
 <li><i>IfcSweptAreaSolid.Position</i></li>
 </ul>
 <p>or in case of sectioned spines the xy plane of each list member of <i>IfcSectionedSpine.CrossSectionPositions</i>. The <i>OuterCurve</i> attribute defines a two dimensional closed bounded curve, the <i>InnerCurves</i> define a set of two dimensional closed bounded curves.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcarbitraryprofiledef-layout2.gif" alt="&quot;arbitrary profile with inner boundaries&quot;" title="Figure 541 &mdash; Arbitrary profile with voids"></td></tr><tr><td><p class="figure">Figure 541 &mdash; Arbitrary profile with voids</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcarbitraryprofiledef-layout2.gif" alt="&quot;arbitrary profile with inner boundaries&quot;" title="Figure 544 &mdash; Arbitrary profile with voids"></td></tr><tr><td><p class="figure">Figure 544 &mdash; Arbitrary profile with voids</p></td></tr></table></p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -91,11 +91,13 @@ Defines the type of geometry into which this profile definition shall be resolve
 Human-readable name of the profile, for example according to a standard profile table. As noted above, machine-readable standardized profile designations should be provided in <i>IfcExternalReference.ItemReference</i>.
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasExternalReference</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.htm">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to external information, e.g. library, classification, or document information, which is associated with the profile.
+
 <blockquote>
 IFC4 CHANGE New inverse attribute
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasProperties</i></td><td><a href="../../ifcprofileresource/lexical/ifcprofileproperties.htm">IfcProfileProperties</a><br/>@ProfileDefinition</td><td>S[0:?]</td><td>Additional properties of the profile, for example mechanical properties.
+
 <blockquote>
 IFC4 CHANGE New inverse attribute
 </blockquote>

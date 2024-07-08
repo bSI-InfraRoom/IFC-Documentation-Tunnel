@@ -475,6 +475,39 @@ Nominal fan wheel speed.</Definition>
         <DefinitionAlias lang="en" />
       </DefinitionAliases>
     </PropertyDef>
+    <PropertyDef ifdguid="a696009d24c64eb892ff3a1433cc6c85">
+      <Name>EfficiencyPoint</Name>
+      <Definition>The point at which the fan operates, e.g. 0.5.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNormalisedRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c5b550c422954ee886b7b800512ccc1e">
+      <Name>StaticLoad</Name>
+      <Definition>The static load on the shell construction when the fan is in operation.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcForceMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="70eb6e689dc34117a23288b7df4c6916">
+      <Name>DynamicLoad</Name>
+      <Definition>The dynamic load on the shell construction when the fan is in operation.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcForceMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases>
     <PsetDefinitionAlias lang="en" />

@@ -45,14 +45,14 @@
 <tr>
 <td><img alt="block" src="../../../figures/ifcblock-layout1.png" border="0" height="300" width="400"></td>
 <td style="vertical-align:bottom;">
-<p class="small">Figure 453 illustrates geometric parameters of a block where the block positioned within its own placement
+<p class="small">Figure 456 illustrates geometric parameters of a block where the block positioned within its own placement
 coordinate system. The values for <i>XLength</i>, <i>YLength</i>, and <i>ZLength</i> are applied to the positive
 direction of the X, Y, and Z axis.</p>
 </td>
 </tr>
 <tr>
 <td>
-<p class="figure">Figure 453 &mdash; Block geometry</p>
+<p class="figure">Figure 456 &mdash; Block geometry</p>
 </td>
 <td>&nbsp;</td>
 </tr>
@@ -70,7 +70,7 @@ A block is a solid rectangular parallelepiped, defined with a location and place
 <p class="use-head">
 Texture definition</p>
 <p>On each side face, textures are aligned facing upright. On the top and bottom faces, textures are aligned facing front-to-back. Textures are stretched or repeated to the extent of each face according to <i>RepeatS</i> and <i>RepeatT</i>.</p>
-<p>Figure 454 illustrates default texture mapping with a clamped texture (RepeatS=False and RepeatT=False). The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up.</p>
+<p>Figure 457 illustrates default texture mapping with a clamped texture (RepeatS=False and RepeatT=False). The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up.</p>
 <p> </p>
 <table summary="block texture" class="gridtable">
 <tr>
@@ -147,7 +147,7 @@ Texture definition</p>
 </tr>
 <tr>
 <td>
-<p class="figure">Figure 454 &mdash; Block textures</p>
+<p class="figure">Figure 457 &mdash; Block textures</p>
 </td>
 </tr>
 </table>
@@ -180,6 +180,7 @@ The size of the block along the placement Z axis. It is provided by the inherite
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>

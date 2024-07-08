@@ -11,7 +11,7 @@
     <title>Pset_ElectricFlowStorageDeviceTypeCommon</title>
 
     <style type="text/css">
-      body { counter-reset: index1 7 index2 4 index3 4 index4 32 index5 0; }
+      body { counter-reset: index1 7 index2 4 index3 4 index4 33 index5 0; }
     </style>
   </head>
 
@@ -20,11 +20,11 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-7.htm#7.4.4.33");
+    parent.index.location.replace("../../toc-7.htm#7.4.4.34");
 //-->
 </script>
 
-<h4 class="std">7.4.4.33 Pset_ElectricFlowStorageDeviceTypeCommon</h4>
+<h4 class="std">7.4.4.34 Pset_ElectricFlowStorageDeviceTypeCommon</h4>
 <p><span class="self-ref">PSET_TYPEDRIVENOVERRIDE</span>
 /
 <a href="../../ifcelectricaldomain/lexical/ifcelectricflowstoragedevice.htm">IfcElectricFlowStorageDevice</a>
@@ -48,9 +48,16 @@
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ModuleCapacity</td><td></td><td></td><td>DELETED</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ModulesInParallel</td><td></td><td></td><td>DELETED</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ModulesInSeries</td><td></td><td></td><td>DELETED</td><td></td></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4_draft/index.htm">IFC4X3_ADD2 to IFC4X4_draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcelectricaldomain/pset/pset_electricflowstoragedevicetypecommon.htm">Pset_ElectricFlowStorageDeviceTypeCommon</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NumberOfPhases</td><td></td><td></td><td>ADDED</td><td></td></tr>
 </table>
 </details>
-<details open="open"><summary>Properties</summary>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/0BuG00qU0HuO00025QrE$V/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_ElectricFlowStorageDeviceTypeCommon.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 <tr><td>Reference</td><td>
@@ -296,6 +303,14 @@ Capacitance value determined under specified conditions and declared by the manu
 <a href="../../ifcmeasureresource/lexical/ifcelectricchargemeasure.htm">IfcElectricChargeMeasure</a>
 </td><td>
 Power capacity of the equipment
+
+</td></tr>
+<tr><td>NumberOfPhases</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
+</td><td>
+Number of phases that the equipment operates on.
 
 </td></tr>
 </table>

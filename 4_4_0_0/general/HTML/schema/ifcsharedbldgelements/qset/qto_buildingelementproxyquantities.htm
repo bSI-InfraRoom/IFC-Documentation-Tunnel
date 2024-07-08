@@ -11,7 +11,7 @@
     <title>Qto_BuildingElementProxyQuantities</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 1 index3 5 index4 1 index5 0; }
+      body { counter-reset: index1 6 index2 1 index3 5 index4 2 index5 0; }
     </style>
   </head>
 
@@ -20,15 +20,16 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.1.5.2");
+    parent.index.location.replace("../../toc-6.htm#6.1.5.3");
 //-->
 </script>
 
-<h4 class="std">6.1.5.2 Qto_BuildingElementProxyQuantities</h4>
+<h4 class="std">6.1.5.3 Qto_BuildingElementProxyQuantities</h4>
 <p><span class="self-ref">QTO_TYPEDRIVENOVERRIDE</span>
 /
 <a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxy.htm">IfcBuildingElementProxy</a>
-</p>
+</p>Quantity set for Building Element Proxies.
+
 <details open="open"><summary>Change log</summary><table class="gridtable">
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4-addendum-2-4_0_2_0/index.htm">IFC4 Addendum 2 4.0.2.0</a></b></td>
@@ -40,13 +41,15 @@
 <table class="gridtable">
 <tr><th>Name</th><th>Type</th><th>Description</th>
 <tr><td>NetSurfaceArea</td><td>
-<span class="self-ref">Q_COUNT</span>
+<span class="self-ref">Q_AREA</span>
 </td><td>
+Net surface area of the object, normally generated as perimeter * length + 2 * cross section area taking into account possible processing features (cut-out's, etc.) or openings and recesses.
 
 </td></tr>
 <tr><td>NetVolume</td><td>
-<span class="self-ref">Q_COUNT</span>
+<span class="self-ref">Q_VOLUME</span>
 </td><td>
+Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses.
 
 </td></tr>
 </table>

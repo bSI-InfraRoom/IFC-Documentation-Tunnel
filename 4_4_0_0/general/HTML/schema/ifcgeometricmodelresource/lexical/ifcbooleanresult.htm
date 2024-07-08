@@ -73,9 +73,9 @@ The second operand specified for the operation.
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>FirstOperandClosed</td><td>If the <i>FirstOperand</i> is of type <a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a> it has to be a closed tessellation.
-</td></tr>
 <tr><td>SameDim</td><td>The dimensionality of the first operand shall be the same as the dimensionality of the second operand.
+</td></tr>
+<tr><td>FirstOperandClosed</td><td>If the <i>FirstOperand</i> is of type <a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a> it has to be a closed tessellation.
 </td></tr>
 <tr><td>SecondOperandClosed</td><td>If the <i>SecondOperand</i> is of type <a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a> it has to be a closed tessellation.
 </td></tr>
@@ -96,6 +96,7 @@ The second operand specified for the operation.
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>
@@ -159,7 +160,7 @@ The second operand specified for the operation.
 &nbsp;<span class="keyword">DERIVE</span><br/>
 &nbsp;&nbsp;Dim : <a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a> := FirstOperand.Dim;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;FirstOperandClosed : NOT(&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a>&#39; IN TYPEOF(FirstOperand)) OR (EXISTS(FirstOperand.Closed) AND FirstOperand.Closed);<br/>&nbsp;&nbsp;SameDim : FirstOperand.Dim = SecondOperand.Dim;<br/>&nbsp;&nbsp;SecondOperandClosed : NOT(&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a>&#39; IN TYPEOF(SecondOperand)) OR (EXISTS(SecondOperand.Closed) AND SecondOperand.Closed);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;SameDim : FirstOperand.Dim = SecondOperand.Dim;<br/>&nbsp;&nbsp;FirstOperandClosed : NOT(&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a>&#39; IN TYPEOF(FirstOperand)) OR (EXISTS(FirstOperand.Closed) AND FirstOperand.Closed);<br/>&nbsp;&nbsp;SecondOperandClosed : NOT(&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifctessellatedfaceset.htm">IfcTessellatedFaceSet</a>&#39; IN TYPEOF(SecondOperand)) OR (EXISTS(SecondOperand.Closed) AND SecondOperand.Closed);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometricmodelresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

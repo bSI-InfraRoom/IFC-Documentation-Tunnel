@@ -11,7 +11,9 @@
   <QtoDefs>
     <QtoDef>
       <Name>Area</Name>
-      <Definition>Area of the projection as viewed by an elevation view (for wall projections or as viewed by a ground floor view (for slab projections).</Definition>
+      <Definition>Calculated area for the object.
+
+Area of the projection as viewed by an elevation view (for wall projections) or as viewed by a ground floor view (for slab projections).</Definition>
       <QtoType>Q_AREA</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Fläche</NameAlias>
@@ -24,7 +26,9 @@
     </QtoDef>
     <QtoDef>
       <Name>Volume</Name>
-      <Definition>Volume of the opening. It is the additional volume of the projection to the element (e.g. wall or slab).</Definition>
+      <Definition>Volume of the element.
+
+Volume of the projection. It is the additional volume of the projection to the element (e.g. wall or slab).</Definition>
       <QtoType>Q_VOLUME</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Volumen</NameAlias>

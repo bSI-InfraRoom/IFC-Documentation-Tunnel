@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="de4b049195f749df8b6589d918e51779" templatetype="PSET_MATERIALDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_MaterialSprayedConcrete</Name>
+  <Definition>A set of properties related to sprayed concrete materials.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcMaterial</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcMaterial</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="3b5a391ebd714e69b707d7855f651d67">
+      <Name>EarlyStrengthDevelopment</Name>
+      <Definition>Class of energy absorption according to EN 14487-1
+
+This is strongly dependent on the place of application of the sprayed concrete or mortar where different requirements for early strength development must be met</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_EarlyStrengthDevelopment">
+            <EnumItem>J1</EnumItem>
+            <EnumItem>J2</EnumItem>
+            <EnumItem>J3</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>J1</Name>
+              <Definition>Class J1.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>J2</Name>
+              <Definition>Class J2.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>J3</Name>
+              <Definition>Class J3.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="234a3ae6a8894f6aa928fa79840b030b">
+      <Name>FibreType</Name>
+      <Definition>The type of fibre used to reinforce the sprayed concrete.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SprayedConcreteFibreType">
+            <EnumItem>STEEL</EnumItem>
+            <EnumItem>MACRO_POLYPROPYLEN</EnumItem>
+            <EnumItem>MICRO_POLYPROPYLEN</EnumItem>
+            <EnumItem>GLASSFIBRE</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>STEEL</Name>
+              <Definition>Steel fibre.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MACRO_POLYPROPYLEN</Name>
+              <Definition>Macro polypropylen fibre.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MICRO_POLYPROPYLEN</Name>
+              <Definition>Micro polypropylen fibre.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GLASSFIBRE</Name>
+              <Definition>Glassfibre.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <Definition>Value is unkown</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="6f34cd7e52c44e8fb315e931a258cd42">
+      <Name>FibreVolumeRatio</Name>
+      <Definition>Quantity of fibres per cubic meter of shotcrete.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassDensityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="9ea2c4c945dc4a01b66fc0ddd8460434">
+      <Name>FibreLength</Name>
+      <Definition>Length of the fibre.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8ab18d9c2ac64e8ab2200b77550dffea">
+      <Name>FibreDiameter</Name>
+      <Definition>Diameter of the fibre.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="69c46163a6024379b8ef91f04d59cf0d">
+      <Name>AspectRatio</Name>
+      <Definition>Length/Diameter of fibre.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="b79f7a5a4dde4dabb6c2a74bf9090a56">
+      <Name>ResidualTensileStrengthfR1k</Name>
+      <Definition>fR1k to fib Model Code 2010, fibre reinforced concrete.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="e87f149a23684b8bb9434e5c62d039f8">
+      <Name>ResidualTensileStrengthfR3k</Name>
+      <Definition>fR3k to fib Model Code 2010, fibre reinforced concrete.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="f5afef19c5794c1db9de2b86cc5b146a">
+      <Name>ResidualTensileStrengthfLk</Name>
+      <Definition>fLk to fib Model Code 2010, fibre reinforced concrete.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="96136c445aee4dc99321926f02fbbe80">
+      <Name>ResidualStrengthStructualClass</Name>
+      <Definition>Residual Strength Ratio to fib Model Code 2010, fibre reinforced concrete.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ResidualStrengthStructuralClass">
+            <EnumItem>A</EnumItem>
+            <EnumItem>B</EnumItem>
+            <EnumItem>C</EnumItem>
+            <EnumItem>D</EnumItem>
+            <EnumItem>E</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>A</Name>
+              <Definition>Class A.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>B</Name>
+              <Definition>Class B.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>C</Name>
+              <Definition>Class C.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>D</Name>
+              <Definition>Class D.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>E</Name>
+              <Definition>Class E.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="fd3d8144b87f4efeb96895653527acbe">
+      <Name>CompressiveStrength24h</Name>
+      <Definition>Compressive strength of the concrete at 24h.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ba7e445bbe4e4fe887d05f76dbcdf4e4">
+      <Name>CompressiveStrength48h</Name>
+      <Definition>Compressive strength of the concrete at 48h.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="07305303ff9f46c9bb7f8f0a7d39ab40">
+      <Name>EnergyAbsportionCapacity7d</Name>
+      <Definition>Energy absorption capacity after 7 days according EN 14488-5 standard (only for fibre concrete).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcEnergyMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="dea2dbcf5c5c4741b91814b3b737188a">
+      <Name>EnergyAbsportionCapacity28d</Name>
+      <Definition>Energy absorption capacity after 28 days according EN 14488-5 standard (only for fibre concrete).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcEnergyMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

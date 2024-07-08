@@ -94,14 +94,14 @@ User defined target view, this attribute value shall be given, if the TargetView
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
+<tr><td>ParentNoSub</td><td>The parent context shall not be another geometric representation sub context.
+</td></tr>
+<tr><td>UserTargetProvided</td><td>The attribute <i>UserDefinedTargetView</i> shall be given, if the attribute <i>TargetView</i> is set to USERDEFINED.
+</td></tr>
 <tr><td>NoCoordOperation</td><td>An <a href="../../ifcrepresentationresource/lexical/ifccoordinateoperation.htm">IfcCoordinateOperation</a> shall not be provided to a geometric representation sub context, only to the parent geometric representation context.
 <blockquote class="note">
 NOTE  The coordinate operation is used to define the coordinate transformation of the project engineering coordinate system to a geographic coordinate reference system.
 </blockquote>
-</td></tr>
-<tr><td>ParentNoSub</td><td>The parent context shall not be another geometric representation sub context.
-</td></tr>
-<tr><td>UserTargetProvided</td><td>The attribute <i>UserDefinedTargetView</i> shall be given, if the attribute <i>TargetView</i> is set to USERDEFINED.
 </td></tr>
 </table>
 
@@ -197,8 +197,8 @@ User defined target view, this attribute value shall be given, if the TargetView
 &nbsp;&nbsp;<span class="keyword">SELF</span>\IfcGeometricRepresentationContext.TrueNorth : <a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a> := NVL(ParentContext.TrueNorth, IfcConvertDirectionInto2D(SELF\IfcGeometricRepresentationContext.WorldCoordinateSystem.P[2]));<br/>
 &nbsp;&nbsp;<span class="keyword">SELF</span>\IfcGeometricRepresentationContext.Precision : <a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a> := NVL(ParentContext.Precision,1.E-5);<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;NoCoordOperation : SIZEOF(SELF\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>.HasCoordinateOperation) = 0;<br/>&nbsp;&nbsp;ParentNoSub : NOT(&#39;IFCREPRESENTATIONRESOURCE.<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a>&#39; IN TYPEOF(ParentContext));<br/>&nbsp;&nbsp;UserTargetProvided :  (TargetView &lt;&gt; <a href="../../ifcrepresentationresource/lexical/ifcgeometricprojectionenum.htm">IfcGeometricProjectionEnum</a>.<span class="self-ref">USERDEFINED</span>) OR <br/>
-((TargetView =  <a href="../../ifcrepresentationresource/lexical/ifcgeometricprojectionenum.htm">IfcGeometricProjectionEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(UserDefinedTargetView)) ;<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;ParentNoSub : NOT(&#39;IFCREPRESENTATIONRESOURCE.<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a>&#39; IN TYPEOF(ParentContext));<br/>&nbsp;&nbsp;UserTargetProvided :  (TargetView &lt;&gt; <a href="../../ifcrepresentationresource/lexical/ifcgeometricprojectionenum.htm">IfcGeometricProjectionEnum</a>.<span class="self-ref">USERDEFINED</span>) OR <br/>
+((TargetView =  <a href="../../ifcrepresentationresource/lexical/ifcgeometricprojectionenum.htm">IfcGeometricProjectionEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(UserDefinedTargetView)) ;<br/>&nbsp;&nbsp;NoCoordOperation : SIZEOF(SELF\<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>.HasCoordinateOperation) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcrepresentationresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

@@ -2,6 +2,7 @@
 <QtoSetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.buildingsmart-tech.org/xml/qto/QTO_IFC4.xsd">
   <IfcVersion version="IFC4X4" />
   <Name>Qto_BuildingElementProxyQuantities</Name>
+  <Definition>Quantity set for Building Element Proxies.</Definition>
   <Applicability />
   <ApplicableClasses>
     <ClassName>IfcBuildingElementProxy</ClassName>
@@ -10,13 +11,15 @@
   <QtoDefs>
     <QtoDef>
       <Name>NetSurfaceArea</Name>
-      <QtoType>Q_COUNT</QtoType>
+      <Definition>Net surface area of the object, normally generated as perimeter * length + 2 * cross section area taking into account possible processing features (cut-out's, etc.) or openings and recesses.</Definition>
+      <QtoType>Q_AREA</QtoType>
       <NameAliases />
       <DefinitionAliases />
     </QtoDef>
     <QtoDef>
       <Name>NetVolume</Name>
-      <QtoType>Q_COUNT</QtoType>
+      <Definition>Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses.</Definition>
+      <QtoType>Q_VOLUME</QtoType>
       <NameAliases />
       <DefinitionAliases />
     </QtoDef>

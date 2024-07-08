@@ -1,0 +1,128 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_GeoScienceFeatureTypeIntactRock</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 5 index3 4 index4 37 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.5.4.38");
+//-->
+</script>
+
+<h4 class="std">6.5.4.38 Pset_GeoScienceFeatureTypeIntactRock</h4>
+<p><span class="self-ref">PSET_OCCURRENCEDRIVEN</span>
+/
+<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeature.htm">IfcGeoScienceFeature</a>
+ / <span class="self-ref">GEOTECHNICALUNIT</span>
+</p>Properties for intact rock.
+
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4_draft/index.htm">IFC4X3_ADD2 to IFC4X4_draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypeintactrock.htm">Pset_GeoScienceFeatureTypeIntactRock</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/1x6JuYXOD0owhT093yTTek/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_GeoScienceFeatureTypeIntactRock.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>Lithology</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
+</td><td>
+Defines all natural materials resulting from the combination of minerals, particles or biogenic elements.
+
+</td></tr>
+<tr><td>GeologicalFormation</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>
+</td><td>
+A geological formation, or simply formation, is a body of rock with a consistent set of physical characteristics (lithology) that distinguishes it from adjacent bodies of rock, and which occupies a particular position in the layers of rock exposed in a geographical region (the stratigraphic column).
+
+</td></tr>
+<tr><td>UnconfinedCompressiveStrength</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
+</td><td>
+The unconfined compressive strength (UCS) is the maximum axial compressive stress that a right-cylindrical sample of material can withstand under unconfined conditions.
+
+</td></tr>
+<tr><td>YoungModulus</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcmodulusofelasticitymeasure.htm">IfcModulusOfElasticityMeasure</a>
+</td><td>
+Elastic modulus, mean value, α=0°.
+
+</td></tr>
+<tr><td>PoissonRatio</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Poisson Ratio</b></td><td>A measure of the lateral deformations in the elastic range.
+</td></tr>
+</table>
+</td></tr>
+<tr><td>TensileStrength</td><td>
+<span class="self-ref">P_TABLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
+/
+<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>
+</td><td>
+Indicates the ability to withstand breakage apart under applied force.
+
+</td></tr>
+<tr><td>MineralComposition</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>
+</td><td>
+Description of the mineral composition according to ISO standard 14689:2017.
+
+</td></tr>
+<tr><td>VoidRatio</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+Ratio of the volume of void to the volume of solid.
+
+</td></tr>
+<tr><td>Weathering</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>
+</td><td>
+Description of the physical and chemical changes produced by atmospheric agents in rocks or other deposits at or near the earth's surface. These changes result in disintegration and de composition of the material.
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_geosciencefeaturetypeintactrock.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

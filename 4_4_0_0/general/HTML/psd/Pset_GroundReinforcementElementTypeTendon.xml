@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="60f2d6188fd648c6889130dbdeef4a99" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_GroundReinforcementElementTypeTendon</Name>
+  <Definition>Properties for _IfcGroundReinforcementElement_ of type TENDON.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcGroundReinforcementElement/TENDON</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcGroundReinforcementElement/TENDON</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="c0385180d1f311e1800000215ad4efdf">
+      <Name>NominalDiameter</Name>
+      <Definition>Nominal diameter or width of the object.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Diameter</NameAlias>
+        <NameAlias lang="ja-JP">呼び径</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">配管部の呼び径、リストに一つの数字しかないとき、この呼び径が全ての管端に当てはまる。一つ以上の数字があるとき、呼び径はリストの表示に対応する管端にあてはまる。</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="8c16b193b9e94ab38e33314a9aee1163">
+      <Name>CrossSectionArea</Name>
+      <Definition>The effective cross-section area of the prestressed part of the tendon.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcAreaMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="f239131138be4a219424046dcda32683">
+      <Name>SheathDiameter</Name>
+      <Definition>Diameter of the sheeth (duct) around the tendon, if there is one with this type of tendon.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="efc7d62243f8457cb514c0c63034cb12">
+      <Name>TensionForce</Name>
+      <Definition>The maximum allowed tension force that can be applied on the tendon.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcForceMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4aa1ffada8fa44bda1a6ccfef31bb532">
+      <Name>PreStress</Name>
+      <Definition>The prestress to be applied on the tendon.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4f46a4e3a1224a6b9c8f66688447048a">
+      <Name>FrictionCoefficient</Name>
+      <Definition>The friction coefficient between tendon and tendon sheet while the tendon is unbonded.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNormalisedRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="9ea8d279106b4eadb36dc64e5c5f4f5b">
+      <Name>AnchorageSlip</Name>
+      <Definition>The deformation of an anchor or slippage of tendons when the prestressing device is released.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1c08103275c449d0a11eb4e021414fb0">
+      <Name>FreeAnchorLength</Name>
+      <Definition>Length of the anchor that is not grouted.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="fc3a02015ef74a378ccbb129bc8703a4">
+      <Name>FixedAnchorLength</Name>
+      <Definition>Length of the anchor that is  grouted.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

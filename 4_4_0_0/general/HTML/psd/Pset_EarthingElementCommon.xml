@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="44fbb1eb850648dd96cfcda24593ad94" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_EarthingElementCommon</Name>
+  <Definition>Properties common to all types of earthing elements.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcEarthingElement</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcEarthingElement</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="0c341fe4f64b4cb68507081d0db3363d">
+      <Name>Resistivity</Name>
+      <Definition>Electrical resistivity (Ohm-m).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricalResistivityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="650ed204e6ca46119b567b8913b2bf68">
+      <Name>ShortCircuitCurrent</Name>
+      <Definition>Short circuit current of the earthing element.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricCurrentMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

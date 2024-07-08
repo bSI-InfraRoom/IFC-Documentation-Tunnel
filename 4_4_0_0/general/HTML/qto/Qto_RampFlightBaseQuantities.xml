@@ -11,7 +11,9 @@
   <QtoDefs>
     <QtoDef>
       <Name>Length</Name>
-      <Definition>Total length of the ramp flight along the walking line.</Definition>
+      <Definition>The length of the object.
+
+Measured along the walking line.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Länge</NameAlias>
@@ -24,7 +26,7 @@
     </QtoDef>
     <QtoDef>
       <Name>Width</Name>
-      <Definition>Thickness of the ramp flight. It should only be provided, if it is constant.</Definition>
+      <Definition>The width of the object. Only given, if the object has constant thickness (prismatic).</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Dicke</NameAlias>
@@ -37,7 +39,9 @@
     </QtoDef>
     <QtoDef>
       <Name>GrossArea</Name>
-      <Definition>Total area of the ramp flight (not the projected area). Openings, recesses and projections are not taken into account. Only given, if the ramp flight is prismatic.</Definition>
+      <Definition>Gross Area of the object. Openings, recesses, projections and cut-outs are not taken into account.
+
+Total area of the ramp flight (not the projected area). Only given, if the element is prismatic.</Definition>
       <QtoType>Q_AREA</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Bruttofläche</NameAlias>
@@ -50,7 +54,9 @@
     </QtoDef>
     <QtoDef>
       <Name>NetArea</Name>
-      <Definition>Total area of the ramp flight (not the projected area). Openings and recesses are taken into account by subtraction, projections by addition. Only given, if the ramp flight is prismatic.</Definition>
+      <Definition>Total net area of the object. Openings, recesses and cut-outs are taken into account by subtraction, projections by addition.
+
+Total area of the ramp flight (not the projected area). Only given when prismatic.</Definition>
       <QtoType>Q_AREA</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Nettofläche</NameAlias>
@@ -63,7 +69,7 @@
     </QtoDef>
     <QtoDef>
       <Name>GrossVolume</Name>
-      <Definition>Total gross volume of the ramp flight. Openings, recesses, and projections are not taken into account.</Definition>
+      <Definition>Total gross volume of the object. Openings, recesses, enclosed objects and projections are not taken into account.</Definition>
       <QtoType>Q_VOLUME</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Bruttovolumen</NameAlias>
@@ -76,7 +82,9 @@
     </QtoDef>
     <QtoDef>
       <Name>NetVolume</Name>
-      <Definition>Total net volume of the ramp flight. Openings and recesses are taken into account by subtraction, projections by addition.</Definition>
+      <Definition>Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses.
+
+Total net volume of the ramp flight. Openings and recesses are taken into account by subtraction, projections by addition.</Definition>
       <QtoType>Q_VOLUME</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Nettovolumen</NameAlias>

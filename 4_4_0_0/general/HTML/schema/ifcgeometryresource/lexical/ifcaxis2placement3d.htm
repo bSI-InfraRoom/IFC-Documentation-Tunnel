@@ -53,7 +53,7 @@
         </td>
         <td style="vertical-align:bottom">
           <blockquote class="note">
-            Figure 494 illustrates the definition of the
+            Figure 497 illustrates the definition of the
             <span class="self-ref">IfcAxis2Placement3D</span> within the three-dimensional
             coordinate system.
           </blockquote>
@@ -61,7 +61,7 @@
       </tr>
       <tr>
         <td>
-          <p class="figure">Figure 494 &mdash; Axis2 placement 3D</p>
+          <p class="figure">Figure 497 &mdash; Axis2 placement 3D</p>
         </td>
         <td>
           &nbsp;
@@ -95,17 +95,17 @@ The direction used to determine the direction of the local X Axis. If necessary 
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>AxisAndRefDirProvision</td><td>Either both, <i>Axis</i> and <i>RefDirection</i> are not given and therefore defaulted, or both shall be given.
+<tr><td>LocationIs3D</td><td>The dimensionality of the placement location shall be 3.
 </td></tr>
 <tr><td>AxisIs3D</td><td>The Axis when given should only reference a three-dimensional IfcDirection.
 </td></tr>
-<tr><td>AxisToRefDirPosition</td><td>The <i>Axis</i> and <i>RefDirection</i> shall not be parallel or anti-parallel.
-</td></tr>
-<tr><td>LocationIs3D</td><td>The dimensionality of the placement location shall be 3.
-</td></tr>
-<tr><td>LocationIsCP</td><td></td></tr>
 <tr><td>RefDirIs3D</td><td>The RefDirection when given should only reference a three-dimensional IfcDirection.
 </td></tr>
+<tr><td>AxisToRefDirPosition</td><td>The <i>Axis</i> and <i>RefDirection</i> shall not be parallel or anti-parallel.
+</td></tr>
+<tr><td>AxisAndRefDirProvision</td><td>Either both, <i>Axis</i> and <i>RefDirection</i> are not given and therefore defaulted, or both shall be given.
+</td></tr>
+<tr><td>LocationIsCP</td><td></td></tr>
 </table>
 
 </details>
@@ -123,6 +123,7 @@ The direction used to determine the direction of the local X Axis. If necessary 
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>
@@ -179,7 +180,7 @@ The direction used to determine the direction of the local X Axis. If necessary 
 &nbsp;<span class="keyword">DERIVE</span><br/>
 &nbsp;&nbsp;P : <span class="keyword">LIST</span> [3:3] OF <a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a> := IfcBuildAxes(Axis, RefDirection);<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;AxisAndRefDirProvision : NOT ((EXISTS (Axis)) XOR (EXISTS (RefDirection)));<br/>&nbsp;&nbsp;AxisIs3D : (NOT (EXISTS (Axis))) OR (Axis.Dim = 3);<br/>&nbsp;&nbsp;AxisToRefDirPosition : (NOT (EXISTS (Axis))) OR (NOT (EXISTS (RefDirection))) OR (<a href="../../ifcgeometryresource/lexical/ifccrossproduct.htm">IfcCrossProduct</a>(Axis,RefDirection).Magnitude &gt; 0.0);<br/>&nbsp;&nbsp;LocationIs3D : SELF\<a href="../../ifcgeometryresource/lexical/ifcplacement.htm">IfcPlacement</a>.Location.Dim = 3;<br/>&nbsp;&nbsp;LocationIsCP : &#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifccartesianpoint.htm">IfcCartesianPoint</a>&#39; IN TYPEOF(SELF\<a href="../../ifcgeometryresource/lexical/ifcplacement.htm">IfcPlacement</a>.Location);<br/>&nbsp;&nbsp;RefDirIs3D : (NOT (EXISTS (RefDirection))) OR (RefDirection.Dim = 3);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;LocationIs3D : SELF\<a href="../../ifcgeometryresource/lexical/ifcplacement.htm">IfcPlacement</a>.Location.Dim = 3;<br/>&nbsp;&nbsp;AxisIs3D : (NOT (EXISTS (Axis))) OR (Axis.Dim = 3);<br/>&nbsp;&nbsp;RefDirIs3D : (NOT (EXISTS (RefDirection))) OR (RefDirection.Dim = 3);<br/>&nbsp;&nbsp;AxisToRefDirPosition : (NOT (EXISTS (Axis))) OR (NOT (EXISTS (RefDirection))) OR (<a href="../../ifcgeometryresource/lexical/ifccrossproduct.htm">IfcCrossProduct</a>(Axis,RefDirection).Magnitude &gt; 0.0);<br/>&nbsp;&nbsp;AxisAndRefDirProvision : NOT ((EXISTS (Axis)) XOR (EXISTS (RefDirection)));<br/>&nbsp;&nbsp;LocationIsCP : &#39;IFCGEOMETRYRESOURCE.<a href="../../ifcgeometryresource/lexical/ifccartesianpoint.htm">IfcCartesianPoint</a>&#39; IN TYPEOF(SELF\<a href="../../ifcgeometryresource/lexical/ifcplacement.htm">IfcPlacement</a>.Location);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

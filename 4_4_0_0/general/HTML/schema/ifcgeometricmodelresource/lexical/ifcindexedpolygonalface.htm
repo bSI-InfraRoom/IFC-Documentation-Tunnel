@@ -43,12 +43,12 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcIndexedPolygonalFace</span> is a compact representation of a planar face being part of a face set. The vertices of the polygonal planar face are provided by 3 or more Cartesian points, defined by indices that point into an <a href="../../ifcgeometricmodelresource/lexical/ifccartesianpointlist3d.htm">IfcCartesianPointList3D</a>, either direcly, or via the <i>PnIndex</i>, if provided at <a href="../../ifcgeometricmodelresource/lexical/ifcpolygonalfaceset.htm">IfcPolygonalFaceSet</a>.</p>
-<p>Figure 463 shows an <span class="self-ref">IfcIndexedPolygonalFace</span> at an <a href="../../ifcgeometricmodelresource/lexical/ifcpolygonalfaceset.htm">IfcPolygonalFaceSet</a> not using <i>PnIndex</i> (the default).</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcindexedpolygonalface_01.png" alt="&quot;IfcIndexedPolygonalFace&quot;" title="Figure 463 &mdash; Polygonal face geometry provided by indices into a point list"></td></tr><tr><td><p class="figure">Figure 463 &mdash; Polygonal face geometry provided by indices into a point list</p></td></tr></table></p>
+<p>Figure 466 shows an <span class="self-ref">IfcIndexedPolygonalFace</span> at an <a href="../../ifcgeometricmodelresource/lexical/ifcpolygonalfaceset.htm">IfcPolygonalFaceSet</a> not using <i>PnIndex</i> (the default).</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcindexedpolygonalface_01.png" alt="&quot;IfcIndexedPolygonalFace&quot;" title="Figure 466 &mdash; Polygonal face geometry provided by indices into a point list"></td></tr><tr><td><p class="figure">Figure 466 &mdash; Polygonal face geometry provided by indices into a point list</p></td></tr></table></p>
 <p> </p>
-<p>Figure 464 shows an <span class="self-ref">IfcIndexedPolygonalFace</span> at an <a href="../../ifcgeometricmodelresource/lexical/ifcpolygonalfaceset.htm">IfcPolygonalFaceSet</a> using <i>PnIndex</i>.</p>
+<p>Figure 467 shows an <span class="self-ref">IfcIndexedPolygonalFace</span> at an <a href="../../ifcgeometricmodelresource/lexical/ifcpolygonalfaceset.htm">IfcPolygonalFaceSet</a> using <i>PnIndex</i>.</p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcindexedpolygonalface_02.png" alt="&quot;IfcIndexedPolygonalFace us
-ing PnIndex&quot;" title="Figure 464 &mdash; Polygonal face geometry provided by indices into a point list"></td></tr><tr><td><p class="figure">Figure 464 &mdash; Polygonal face geometry provided by indices into a point list</p></td></tr></table></p>
+ing PnIndex&quot;" title="Figure 467 &mdash; Polygonal face geometry provided by indices into a point list"></td></tr><tr><td><p class="figure">Figure 467 &mdash; Polygonal face geometry provided by indices into a point list</p></td></tr></table></p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC4 Addendum 2.</p>
 </blockquote>
@@ -82,6 +82,7 @@ NOTE  The coordinates of the vertices are provided by the indexed list of <i>SE
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>

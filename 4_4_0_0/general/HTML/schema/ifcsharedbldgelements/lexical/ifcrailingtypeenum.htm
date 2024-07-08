@@ -48,10 +48,10 @@
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>BALUSTRADE</td><td><p>Similar to the definitions of a guardrail except the location is at the edge of a floor, rather then a stair or ramp. Examples are balustrates at roof-tops or balconies, or along a bridge or on top of a retaining wall.</p>
-</td></tr><tr><td>FENCE</td><td><p>NOTE Definition from ISO6707-1: non-load bearing vertical construction, usually lightweight, which bounds or subdivides an external area.</p>
+<tr><td>HANDRAIL</td><td><p>A type of railing designed to serve as an optional structural support for loads applied by human occupants (at hand height). Generally located adjacent to ramps and stairs. Generally floor or wall mounted.</p>
 </td></tr><tr><td>GUARDRAIL</td><td><p>A type of railing designed to guard human or vehicle occupants from falling off a stair, ramp or landing where there is a vertical drop at the edge of such floors/landings, or to provide restraint to an errant road vehicle, installed on the central reserve of or alongside a road.</p>
-</td></tr><tr><td>HANDRAIL</td><td><p>A type of railing designed to serve as an optional structural support for loads applied by human occupants (at hand height). Generally located adjacent to ramps and stairs. Generally floor or wall mounted.</p>
+</td></tr><tr><td>BALUSTRADE</td><td><p>Similar to the definitions of a guardrail except the location is at the edge of a floor, rather then a stair or ramp. Examples are balustrates at roof-tops or balconies, or along a bridge or on top of a retaining wall.</p>
+</td></tr><tr><td>FENCE</td><td><p>NOTE Definition from ISO6707-1: non-load bearing vertical construction, usually lightweight, which bounds or subdivides an external area.</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined railing element, a term to identify the user type is given by the attribute <i>IfcRailing.ObjectType.</i></p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined railing element, no type information available.</p>
 </td></tr></table>
@@ -61,10 +61,10 @@
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcsharedbldgelements/lexical/ifcrailingtypeenum.htm">IfcRailingTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;handrail&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;guardrail&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;balustrade&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;fence&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;guardrail&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;handrail&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -72,7 +72,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcRailingTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;BALUSTRADE, <br/>&nbsp;FENCE, <br/>&nbsp;GUARDRAIL, <br/>&nbsp;HANDRAIL, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;HANDRAIL, <br/>&nbsp;GUARDRAIL, <br/>&nbsp;BALUSTRADE, <br/>&nbsp;FENCE, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedbldgelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

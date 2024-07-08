@@ -47,7 +47,7 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The property with a single value <span class="self-ref">IfcPropertySingleValue</span> defines a property object which has a single (numeric or descriptive) value assigned. It defines a property - single value combination for which the property <i>Name</i>, an optional <i>Description</i>, and an optional <i>NominalValue</i> with measure type is provided. In addition, the default unit as specified within the project unit context can be overriden by assigning an <i>Unit</i>.</p>
-<p>The unit is handled by the <i>Unit</i> attribute, see Table 741 for an example of various single value properties:</p>
+<p>The unit is handled by the <i>Unit</i> attribute, see Table 754 for an example of various single value properties:</p>
 <ul>
 <li>If the <i>Unit</i> attribute is not given, then the unit is already implied by the type of <a href="../../ifcmeasureresource/lexical/ifcmeasurevalue.htm">IfcMeasureValue</a> or <a href="../../ifcmeasureresource/lexical/ifcderivedmeasurevalue.htm">IfcDerivedMeasureValue</a>. The associated unit can be found at the <a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a> globally defined at the project level (<i>IfcProject.UnitsInContext</i>).</li>
 <li>If the <i>Unit</i> attribute is given, then the unit assigned by the <i>Unit</i> attribute overrides the globally assigned unit.</li>
@@ -85,7 +85,7 @@
   </td>
  </tr>
  <tr>
-  <td><p class="table">Table 741 &mdash; Single value properties with values, measure types and units</p></td>
+  <td><p class="table">Table 754 &mdash; Single value properties with values, measure types and units</p></td>
  </tr>
 </table>
 <blockquote class="history">
@@ -129,6 +129,7 @@ Unit for the nominal value, if not given, the default value for the measure type
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcpropertyresource/lexical/ifcpropertyabstraction.htm">IfcPropertyAbstraction</a></i></td></tr>
 <tr><td></td><td><i>HasExternalReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.htm">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to an external reference, e.g. library, classification, or document information, that is associated to the property definition.
+
 <blockquote>
 IFC4 CHANGE New inverse attribute.
 </blockquote>
@@ -141,6 +142,7 @@ Name for this property. This label is the significant name string that defines t
 Informative text to explain the property.
 </td><td>X</td></tr>
 <tr><td></td><td><i>PartOfPset</i></td><td><a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a><br/>@HasProperties</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> by which the <span class="self-ref">IfcProperty</span> is referenced.
+
 <blockquote>
 IFC4 CHANGE  New inverse attribute to navigate from <span class="self-ref">IfcProperty</span> to <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -150,6 +152,7 @@ IFC4 CHANGE  New inverse attribute to navigate from <span class="self-ref">IfcP
 <tr><td></td><td><i>PropertyDependsOn</i></td><td><a href="../../ifcpropertyresource/lexical/ifcpropertydependencyrelationship.htm">IfcPropertyDependencyRelationship</a><br/>@DependantProperty</td><td>S[0:?]</td><td>The relating property on which the value of the property depends.
 </td><td>X</td></tr>
 <tr><td></td><td><i>PartOfComplex</i></td><td><a href="../../ifcpropertyresource/lexical/ifccomplexproperty.htm">IfcComplexProperty</a><br/>@HasProperties</td><td>S[0:?]</td><td>Reference to the <a href="../../ifcpropertyresource/lexical/ifccomplexproperty.htm">IfcComplexProperty</a> in which the <span class="self-ref">IfcProperty</span> is contained.
+
 <blockquote>
 IFC4 CHANGE  The cardinality has changed to 0..n to allow reuse of instances of <span class="self-ref">IfcProperty</span> in several <a href="../../ifcpropertyresource/lexical/ifccomplexproperty.htm">IfcComplexProperty</a> with upward compatibility for file based exchange.
 </blockquote>

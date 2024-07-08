@@ -46,7 +46,7 @@
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x</p>
 </blockquote>
-<p>Figure 548 illustrates parameters for the ellipse profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either:</p>
+<p>Figure 551 illustrates parameters for the ellipse profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either:</p>
 <ul>
 <li><i>IfcSweptSurface.Position</i></li>
 <li><i>IfcSweptAreaSolid.Position</i></li>
@@ -55,7 +55,7 @@
 <blockquote class="note">
 <p>NOTE  The semi axes of the ellipse are rectangular to each other by definition.</p>
 </blockquote>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcellipseprofiledef-layout1.gif" alt="&quot;ellipse profile&quot;" title="Figure 548 &mdash; Ellipse profile"></td></tr><tr><td><p class="figure">Figure 548 &mdash; Ellipse profile</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcellipseprofiledef-layout1.gif" alt="&quot;ellipse profile&quot;" title="Figure 551 &mdash; Ellipse profile"></td></tr><tr><td><p class="figure">Figure 551 &mdash; Ellipse profile</p></td></tr></table></p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -87,11 +87,13 @@ Defines the type of geometry into which this profile definition shall be resolve
 Human-readable name of the profile, for example according to a standard profile table. As noted above, machine-readable standardized profile designations should be provided in <i>IfcExternalReference.ItemReference</i>.
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasExternalReference</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.htm">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to external information, e.g. library, classification, or document information, which is associated with the profile.
+
 <blockquote>
 IFC4 CHANGE New inverse attribute
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasProperties</i></td><td><a href="../../ifcprofileresource/lexical/ifcprofileproperties.htm">IfcProfileProperties</a><br/>@ProfileDefinition</td><td>S[0:?]</td><td>Additional properties of the profile, for example mechanical properties.
+
 <blockquote>
 IFC4 CHANGE New inverse attribute
 </blockquote>

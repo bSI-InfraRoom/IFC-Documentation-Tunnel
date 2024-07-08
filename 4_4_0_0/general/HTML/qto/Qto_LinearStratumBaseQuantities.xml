@@ -11,14 +11,16 @@
   <QtoDefs>
     <QtoDef>
       <Name>Diameter</Name>
-      <Definition>Actual diameter of sample or segment.</Definition>
+      <Definition>The Diameter of the object.</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases />
       <DefinitionAliases />
     </QtoDef>
     <QtoDef>
       <Name>Length</Name>
-      <Definition>Effective length sampled, if lower end of segment known</Definition>
+      <Definition>The length of the object.
+
+Effective length sampled, if lower end of segment known</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases />
       <DefinitionAliases />

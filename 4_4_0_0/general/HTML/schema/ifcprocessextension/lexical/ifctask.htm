@@ -127,9 +127,9 @@ IFC4 CHANGE Attribute added
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>CorrectPredefinedType</td><td>The attribute ObjectType must be asserted when the value of PredefinedType is set to USERDEFINED.
-</td></tr>
 <tr><td>HasName</td><td>The Name attribute should be inserted to describe the task name.
+</td></tr>
+<tr><td>CorrectPredefinedType</td><td>The attribute ObjectType must be asserted when the value of PredefinedType is set to USERDEFINED.
 </td></tr>
 </table>
 
@@ -201,21 +201,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -230,6 +234,7 @@ IFC4 CHANGE Attribute promoted from subtypes.
 </td><td>X</td></tr>
 <tr><td>7</td><td>LongDescription</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 An extended description or narrative that may be provided.
+
 <blockquote>
 IFC4 CHANGE  New attribute.
 </blockquote>
@@ -319,11 +324,11 @@ IFC4 CHANGE Attribute added
 <a id="object-nesting" />
 <p class="use-head">Nesting</p>
 <p>The <a href="../../templates/object-nesting.htm">Object Nesting</a> concept applies to this entity.</p><p><span class="self-ref">IfcTask</span> may be contained within an <span class="self-ref">IfcTask</span> using the <a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a> relationship. An <span class="self-ref">IfcTask</span> may in turn nest other <span class="self-ref">IfcTask</span>, <a href="../../ifcprocessextension/lexical/ifcprocedure.htm">IfcProcedure</a> or <a href="../../ifcprocessextension/lexical/ifcevent.htm">IfcEvent</a> entities. Such nesting indicates decomposed level of detail. From IFC4 onwards it is required to have a summary task (root of all tasks), which is used to define a link to the work plan or work schedule. All subtasks of the summary tasks are then implicitly linked to this work plan or work schedule. Please note that the summary task is used for data organization and not meant to store typical task information as defined by the user. It is therefore recommended that the summary task is hidden from the user to avoid confusion. Please also note that <a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a> is used to show the dependency between regular tasks and recurring task definitions (please see the section about time and duration use definitions).</p>
-<p>As shown in Figure 281, the installation of a number of items of equipment within a particular space may be the subject of a single task which is identified as 'fix equipment in space 123'. <span class="self-ref">IfcTask</span> represents the occurrence of a work performance of a type of process in a construction plan.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifctask_example.png" alt="&quot;task example&quot;" title="Figure 281 &mdash; Task visualization"></td></tr><tr><td><p class="figure">Figure 281 &mdash; Task visualization</p></td></tr></table></p>
-<p>A task may nest other tasks as sub-items; the nesting relationship is modeled by <a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a> as shown in Figure 282. For example, the construction of a stud wall may be designated as a nesting task named 'install wall #1' including other tasks such as 'install dry wall', 'install studs', 'wall taping', and 'erect wall' as sub-processes. A value that indicates the relative tree view position of the task (in comparison to the tree view position of other tasks and the task hierarchy defined by <a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a>).</p>
+<p>As shown in Figure 284, the installation of a number of items of equipment within a particular space may be the subject of a single task which is identified as 'fix equipment in space 123'. <span class="self-ref">IfcTask</span> represents the occurrence of a work performance of a type of process in a construction plan.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifctask_example.png" alt="&quot;task example&quot;" title="Figure 284 &mdash; Task visualization"></td></tr><tr><td><p class="figure">Figure 284 &mdash; Task visualization</p></td></tr></table></p>
+<p>A task may nest other tasks as sub-items; the nesting relationship is modeled by <a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a> as shown in Figure 285. For example, the construction of a stud wall may be designated as a nesting task named 'install wall #1' including other tasks such as 'install dry wall', 'install studs', 'wall taping', and 'erect wall' as sub-processes. A value that indicates the relative tree view position of the task (in comparison to the tree view position of other tasks and the task hierarchy defined by <a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a>).</p>
 <p>The task order information that is used for viewing purposes is derived from the order defined by the <a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a> relationship and thus is independent of the logical task order defined through <a href="../../ifcprocessextension/lexical/ifcrelsequence.htm">IfcRelSequence</a>. The hierarchy and order defined through <a href="../../ifckernel/lexical/ifcrelnests.htm">IfcRelNests</a> enables to order the tasks in a tree view or list view structure.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifctask_instantiation_diagram.png" alt="&quot;task instantiation diagram&quot;" title="Figure 282 &mdash; Task nesting relationships"></td></tr><tr><td><p class="figure">Figure 282 &mdash; Task nesting relationships</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifctask_instantiation_diagram.png" alt="&quot;task instantiation diagram&quot;" title="Figure 285 &mdash; Task nesting relationships"></td></tr><tr><td><p class="figure">Figure 285 &mdash; Task nesting relationships</p></td></tr></table></p>
 <p>A top-level task is declared within the <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a> using the <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a> relationship.</p>
 
 <br/><br/>
@@ -481,7 +486,7 @@ IFC4 CHANGE Attribute added
 &nbsp;&nbsp;TaskTime : <span class="keyword">OPTIONAL</span> <a href="../../ifcdatetimeresource/lexical/ifctasktime.htm">IfcTaskTime</a>;<br/>
 &nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="../../ifcprocessextension/lexical/ifctasktypeenum.htm">IfcTaskTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR (PredefinedType &lt;&gt; <a href="../../ifcprocessextension/lexical/ifctasktypeenum.htm">IfcTaskTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR ((PredefinedType = <a href="../../ifcprocessextension/lexical/ifctasktypeenum.htm">IfcTaskTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/>&nbsp;&nbsp;HasName : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a>.Name);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;HasName : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR (PredefinedType &lt;&gt; <a href="../../ifcprocessextension/lexical/ifctasktypeenum.htm">IfcTaskTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR ((PredefinedType = <a href="../../ifcprocessextension/lexical/ifctasktypeenum.htm">IfcTaskTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcprocessextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

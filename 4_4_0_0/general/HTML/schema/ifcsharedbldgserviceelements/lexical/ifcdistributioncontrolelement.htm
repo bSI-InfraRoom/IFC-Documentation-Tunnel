@@ -151,21 +151,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -240,20 +244,20 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 244.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 245.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributioncontrolelementtype.htm">IfcDistributionControlElementType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 244 &mdash; IfcDistributionControlElement Object Typing</td></tr></table>
+<tr><td><p class="table">Table 245 &mdash; IfcDistributionControlElement Object Typing</td></tr></table>
 
 <br/><br/>
 
 <a id="classification-association" />
 <p class="use-head">Object Classification</p>
-<p>The <a href="../../templates/classification-association.htm">Classification Association</a> concept template applies to this entity as shown in Table 245.<table>
+<p>The <a href="../../templates/classification-association.htm">Classification Association</a> concept template applies to this entity as shown in Table 246.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Name</b></th><th><b>Description</b></th></tr>
@@ -273,17 +277,17 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 245 &mdash; IfcDistributionControlElement Classification Association</td></tr></table>
+<tr><td><p class="table">Table 246 &mdash; IfcDistributionControlElement Classification Association</td></tr></table>
 
 <p>In addition to general product and project classification (UniFormat, etc.), classifications may also be applied to indicate a device address or addressing scheme according to system-based device instance classification.</p>
-<p>Figure 379 illustrates classification usage.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcdistributioncontrolelement-classification.png" alt="&quot;Classification Use Definition&quot;" title="Figure 379 &mdash; Distribution control classification"></td></tr><tr><td><p class="figure">Figure 379 &mdash; Distribution control classification</p></td></tr></table></p>
+<p>Figure 382 illustrates classification usage.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcdistributioncontrolelement-classification.png" alt="&quot;Classification Use Definition&quot;" title="Figure 382 &mdash; Distribution control classification"></td></tr><tr><td><p class="figure">Figure 382 &mdash; Distribution control classification</p></td></tr></table></p>
 
 <br/><br/>
 
 <a id="product-assignment" />
 <p class="use-head">Product Assignment</p>
-<p>The <a href="../../templates/product-assignment.htm">Product Assignment</a> concept template applies to this entity as shown in Table 246.<table>
+<p>The <a href="../../templates/product-assignment.htm">Product Assignment</a> concept template applies to this entity as shown in Table 247.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Type</b></th><th><b>Description</b></th></tr>
@@ -295,7 +299,7 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 246 &mdash; IfcDistributionControlElement Product Assignment</td></tr></table>
+<tr><td><p class="table">Table 247 &mdash; IfcDistributionControlElement Product Assignment</td></tr></table>
 
 <p>The <strong>IfcDistributionControlElement</strong> may be assigned to the following entities using relationships as indicated:</p>
 <ul>

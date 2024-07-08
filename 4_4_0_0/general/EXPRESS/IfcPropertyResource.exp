@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 5 July 2024
+Monday, 8 July 2024
 
 *)
 
@@ -180,12 +180,12 @@ ENTITY IfcPropertyBoundedValue
 	Unit : OPTIONAL IfcUnit;
 	SetPointValue : OPTIONAL IfcValue;
  WHERE
-	SameUnitLowerSet : NOT(EXISTS(LowerBoundValue)) OR NOT(EXISTS(SetPointValue)) OR
-(TYPEOF(LowerBoundValue) = TYPEOF(SetPointValue));
 	SameUnitUpperLower : NOT(EXISTS(UpperBoundValue)) OR NOT(EXISTS(LowerBoundValue)) OR
 (TYPEOF(UpperBoundValue) = TYPEOF(LowerBoundValue));
 	SameUnitUpperSet : NOT(EXISTS(UpperBoundValue)) OR NOT(EXISTS(SetPointValue)) OR
 (TYPEOF(UpperBoundValue) = TYPEOF(SetPointValue));
+	SameUnitLowerSet : NOT(EXISTS(LowerBoundValue)) OR NOT(EXISTS(SetPointValue)) OR
+(TYPEOF(LowerBoundValue) = TYPEOF(SetPointValue));
 END_ENTITY;
 
 ENTITY IfcPropertyDependencyRelationship

@@ -173,21 +173,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -369,11 +373,11 @@ IFC4 CHANGE New inverse relationship.
  <tr>
   <td><img src="../../../figures/ifcbuildingelement-boundingbox-layout1.gif" border="0" height="275" width="400" alt="bounding box"></td> 
   <td>
-<blockquote class="example">EXAMPLE&nbsp; Any <span class="self-ref">IfcElement</span> may be represented by a bounding box, which shows the maximum extend of the body within the object coordinate system established by the <a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a>. As shown in Figure 293, the bounding box representation is given by an <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> that includes a single item, an <a href="../../ifcgeometricmodelresource/lexical/ifcboundingbox.htm">IfcBoundingBox</a>.</blockquote>
+<blockquote class="example">EXAMPLE&nbsp; Any <span class="self-ref">IfcElement</span> may be represented by a bounding box, which shows the maximum extend of the body within the object coordinate system established by the <a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a>. As shown in Figure 296, the bounding box representation is given by an <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> that includes a single item, an <a href="../../ifcgeometricmodelresource/lexical/ifcboundingbox.htm">IfcBoundingBox</a>.</blockquote>
  </td>
  </tr>
  <tr>
-  <td><p class="figure">Figure 293 &mdash; Building element box representation</p></td>
+  <td><p class="figure">Figure 296 &mdash; Building element box representation</p></td>
   <td>&nbsp;</td>
  </tr>
 </table>
@@ -410,7 +414,7 @@ IFC4 CHANGE New inverse relationship.
  <tr>
   
 <td><img src="../../../figures/ifcbuildingelement-surfacemodel-layout1.gif" alt="surface model" border="0" height="275" width="400"></td>
-  <td><blockquote class="example">EXAMPLE&nbsp; As shown in Figure 294, the surface model representation is given 
+  <td><blockquote class="example">EXAMPLE&nbsp; As shown in Figure 297, the surface model representation is given 
 by an <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>, which includes a single item which is either an <a href="../../ifcgeometricmodelresource/lexical/ifcshellbasedsurfacemodel.htm">IfcShellBasedSurfaceModel</a>, or an <a href="../../ifcgeometricmodelresource/lexical/ifcfacebasedsurfacemodel.htm">IfcFaceBasedSurfaceModel</a>. In some cases it may also be useful to expose a simple 
 representation as a bounding box representation of the same complex 
 shape.</blockquote></td>
@@ -419,7 +423,7 @@ shape.</blockquote></td>
 <tr>
   
 <td>
-<p class="figure">Figure 294 &mdash; Element surface model
+<p class="figure">Figure 297 &mdash; Element surface model
 representation</p>
 </td>
   <td>&nbsp;</td>
@@ -444,7 +448,7 @@ representation</p>
 <tr>
   
 <td><img src="../../../figures/ifcbuildingelement-brep-layout1.gif" alt="Brep representation" border="0" height="275" width="400"></td>
-  <td><blockquote class="example">EXAMPLE&nbsp; As shown in Figure 295, the Brep representation is given by an
+  <td><blockquote class="example">EXAMPLE&nbsp; As shown in Figure 298, the Brep representation is given by an
  <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>, which includes one or more 
 items, all of type <a href="../../ifcgeometricmodelresource/lexical/ifcfacetedbrep.htm">IfcFacetedBrep</a>. In some cases it may be useful to also expose a simple 
 representation as a bounding box representation of the same complex 
@@ -453,7 +457,7 @@ shape.</blockquote> </td>
  <tr>
   
 <td>
-<p class="figure">Figure 295 &mdash; Building element body boundary
+<p class="figure">Figure 298 &mdash; Building element body boundary
 representation</p>
 </td>
   <td>&nbsp;</td>

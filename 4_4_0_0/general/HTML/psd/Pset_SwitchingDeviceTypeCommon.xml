@@ -308,6 +308,17 @@ An IfcTable may be attached (using IfcMetric and IfcResourceConstraintRelationsh
         <DefinitionAlias lang="ko-KR">입력 포트 이름 (IfcDistributionPort 및 FlowDirection = SINK), Maps SetPoint 위치. 회로가 어떤 경로를 추적할지를 나타낸다.</DefinitionAlias>
       </DefinitionAliases>
     </PropertyDef>
+    <PropertyDef ifdguid="4b4b3bfcecb54fa78c2f014e518c1f02">
+      <Name>NumberOfPhases</Name>
+      <Definition>Number of phases that the equipment operates on.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcCountMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases>
     <PsetDefinitionAlias lang="en" />

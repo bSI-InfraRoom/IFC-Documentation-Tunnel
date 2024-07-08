@@ -17,7 +17,7 @@
     </QtoDef>
     <QtoDef>
       <Name>Width</Name>
-      <Definition>Characteristic width</Definition>
+      <Definition>The width of the object. Only given, if the object has constant thickness (prismatic).</Definition>
       <QtoType>Q_LENGTH</QtoType>
       <NameAliases />
       <DefinitionAliases />

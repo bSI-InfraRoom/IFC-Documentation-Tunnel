@@ -1,0 +1,230 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_GeoScienceFeatureTypeSoilLikeMaterial</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 5 index3 4 index4 40 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.5.4.41");
+//-->
+</script>
+
+<h4 class="std">6.5.4.41 Pset_GeoScienceFeatureTypeSoilLikeMaterial</h4>
+<p><span class="self-ref">PSET_OCCURRENCEDRIVEN</span>
+/
+<a href="../../ifcsharedinfrastructureelements/lexical/ifcgeosciencefeature.htm">IfcGeoScienceFeature</a>
+ / <span class="self-ref">GEOTECHNICALUNIT</span>
+</p>Properties for soil like material.
+
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4_draft/index.htm">IFC4X3_ADD2 to IFC4X4_draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_geosciencefeaturetypesoillikematerial.htm">Pset_GeoScienceFeatureTypeSoilLikeMaterial</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/1aTTnkN4z39gyMNXctShot/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_GeoScienceFeatureTypeSoilLikeMaterial.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>Lithology</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
+</td><td>
+Defines all natural materials resulting from the combination of minerals, particles or biogenic elements.
+
+</td></tr>
+<tr><td>WaterContent</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+Ratio of the mass of water to the mass of solids.
+
+</td></tr>
+<tr><td>VoidRatio</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+Ratio of the volume of void to the volume of solid.
+
+</td></tr>
+<tr><td>WetBulkDensity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Ratio of the total mass to the unit total volume (material at its natural moisture content).
+
+</td></tr>
+<tr><td>DryBulkDensity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcmassdensitymeasure.htm">IfcMassDensityMeasure</a>
+</td><td>
+Ratio of the mass of the solid to the unit total volume (dry material).
+
+</td></tr>
+<tr><td>YoungModulus</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcmodulusofelasticitymeasure.htm">IfcModulusOfElasticityMeasure</a>
+</td><td>
+Elastic modulus, mean value, α=0°.
+
+</td></tr>
+<tr><td>MenardLimitPressure</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
+</td><td>
+Limit pressure, resulting from interpretation of Menard's pressuremeter test.
+
+</td></tr>
+<tr><td>CPTconeResistance</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
+</td><td>
+Cone penetration resistance measured during the CPT test.
+
+</td></tr>
+<tr><td>SPTBlowCount</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
+</td><td>
+Number of blows required to drive the sampler for a test drive of 300 mm following the seating drive.
+
+</td></tr>
+<tr><td>PlasticityIndex</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+The plasticity index Ip is the numerical difference between the liquid limit and plastic limit of a fine soil.  IP = wL - wP.
+
+</td></tr>
+<tr><td>ConsistencyIndex</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+The consistency index (Ic) indicates the consistency (firmness) of a soil. It is the numerical difference between the liquid limit and the natural water content expressed as a percentage ratio of the plasticity index. Ic = (LL-W)/Ip.
+
+</td></tr>
+<tr><td>PeakCohesion</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
+</td><td>
+Cohesion is a shear strength parameter of soils. Its definition is derived from the Mohr-Coulomb failure criterion and is used to describe the shear resistance of soils that is independent from the normal effective stress. The peak value correspond to the maximum shear measured during the test.
+
+</td></tr>
+<tr><td>ResidualCohesion</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
+</td><td>
+Cohesion is a shear strength parameter of soils. Its definition is derived from the Mohr-Coulomb failure criterion and is used to describe the shear resistance of soils that is independent from the normal effective stress. The residual value correspond to the shear strength measured at large strain values during the test.
+
+</td></tr>
+<tr><td>PeakFrictionAngle</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>
+</td><td>
+Soil effective stress friction angle is a shear strength parameter of soils. Its definition is derived from the Mohr-Coulomb failure criterion and is used to describe the friction shear resistance of soils with the normal effective stress. The peak value correspond to the maximum shear strength measured during the test.
+
+</td></tr>
+<tr><td>ResidualFrictionAngle</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>
+</td><td>
+Soil effective stress friction angle is a shear strength parameter of soils. Its definition is derived from the Mohr-Coulomb failure criterion and it is used to describe the friction shear resistance of soils with the normal effective stress. The residual value correspond to the shear strength measured at large strain values during the test.
+
+</td></tr>
+<tr><td>UndrainedShearStrength</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpressuremeasure.htm">IfcPressureMeasure</a>
+</td><td>
+Shear strength of a soil under undrained condition or constant volume conditions. It is relevant for conditions where the rate of loading is very much greater than the rate at which pore water pressure - generated due to the action of shearing of the soil - dissipates.  Its calculation depends on the laboratory test performed.
+
+</td></tr>
+<tr><td>PoissonRatio</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Poisson Ratio</b></td><td>A measure of the lateral deformations in the elastic range.
+</td></tr>
+</table>
+</td></tr>
+<tr><td>CompressionIndex</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcratiomeasure.htm">IfcRatioMeasure</a>
+</td><td>
+Compression index is determined with the oedometer tests, and used to compute settlements.
+
+</td></tr>
+<tr><td>SwellingIndex</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcratiomeasure.htm">IfcRatioMeasure</a>
+</td><td>
+Swelling index is determined with the oedometer test, and used to compute swelling.
+
+</td></tr>
+<tr><td>OCR</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+Ratio between pre-consolidation pressure and overburden pressure.
+
+</td></tr>
+<tr><td>K0</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+The coefficient of lateral earth pressure, K, is defined as the ratio of the horizontal effective stress, σ’h, to the vertical effective stress, σ’v. For a level ground deposit with zero lateral strain in the soil, the &quot;at-rest&quot; coefficient of lateral earth pressure, K0 is obtained.
+
+</td></tr>
+<tr><td>RelativeDensity</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>
+</td><td>
+Relative density or density index is the ratio of the difference between the void ratios of a cohesionless soil in its loosest state and existing natural state to the difference between its void ratio in the loosest and densest states. (emax - e) /(emax-emin).
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_geosciencefeaturetypesoillikematerial.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

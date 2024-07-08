@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="69f627a930cb42a8b0f592a0259ab9f8" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ImprovedGroundTypeInjectionGrouted</Name>
+  <Definition>Properties describing improved ground of type injection grouted.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcImprovedGround/INJECTIONGROUTED</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcImprovedGround/INJECTIONGROUTED</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="29746210add846638f89e96105ae2577">
+      <Name>InjectionPhase</Name>
+      <Definition>Specifies when injection is performed.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_InjectionPhase">
+            <EnumItem>PRE_INJECTION</EnumItem>
+            <EnumItem>POST_INJECTION</EnumItem>
+            <EnumItem>CONCURRENT_INJECTION</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>PRE_INJECTION</Name>
+              <Definition>Injection is performed before excavation.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>POST_INJECTION</Name>
+              <Definition>Injection is performed after excavation.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CONCURRENT_INJECTION</Name>
+              <Definition>Injection is performed during excavation.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <Definition>Value has not been specified</Definition>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="afc7b7c9c8fc4004ae65286ea8efd90d">
+      <Name>InjectionDistributionEquipment</Name>
+      <Definition>Equipment used for distributing the grout.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_InjectionDistributionEquipment">
+            <EnumItem>INJECTIONHOSE</EnumItem>
+            <EnumItem>INJECTIONTUBE</EnumItem>
+            <EnumItem>PETROLEUMPIPE</EnumItem>
+            <EnumItem>TUBESAMANCHETTE</EnumItem>
+            <EnumItem>PILLOW</EnumItem>
+            <EnumItem>BULLFLEX</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>INJECTIONHOSE</Name>
+              <Definition>Flexible conduit for conveying grout from the injection source to the targeted area, enabling precise and controlled grout placement.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INJECTIONTUBE</Name>
+              <Definition>Rigid or semi-rigid tube designed for delivering grout into specific locations, facilitating accurate injection, particularly in confined spaces.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PETROLEUMPIPE</Name>
+              <Definition>Pipe adapted for grouting purposes, resistant to substances in the grout, commonly used in scenarios requiring compatibility with petroleum-based grouting materials.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TUBESAMANCHETTE</Name>
+              <Definition>Grouting tube equipped with sleeves for controlled injections, providing a method for staged or zonal grouting, enhancing precision in treatment.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PILLOW</Name>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BULLFLEX</Name>
+              <Definition>Textile formwork system a closed textile countainer is filled with grout to form a barrier or seal an opening.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Notdefined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="df216e1b6e8949508e21caa0b85c49d1">
+      <Name>InsertedDeviceDiameter</Name>
+      <Definition>Diameter of the device inserted into the drillhole.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ae7c4cca58c746beaf5744852babc615">
+      <Name>ManchetteSpacing</Name>
+      <Definition>Spacing between the manchettes.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="e6d6f0e4b2c94440907e64cd4b870f00">
+      <Name>TAMTubesSpacing</Name>
+      <Definition>Spacing between the tubes Tubes á manchette (TAM).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="d79859eeada64f9cac636c57c5aa8841">
+      <Name>InjectionPackerType</Name>
+      <Definition>Equipment use to uphold pressure during injection.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_InjectionPackerType">
+            <EnumItem>SINGLE</EnumItem>
+            <EnumItem>DOUBLE</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>SINGLE</Name>
+              <Definition>Single seal to restrict the flow of grout in one direction, volume after packer is grouted.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DOUBLE</Name>
+              <Definition>Double seal to restrict the flow of grout in two directions, volume between packers is grouted.</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">User Defined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Notdefined</NameAlias>
+              </NameAliases>
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="bf717ef42f5044a595c2dd1ee444f9fb">
+      <Name>DrillholeCount</Name>
+      <Definition>Number of injection holes.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="0a8b2c4b99654489a6bc03f9ebe637a2">
+      <Name>DrillholeDiameter</Name>
+      <Definition>Diameter of the drillhole.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="605772fc395941018f9e4a7a1145f40d">
+      <Name>DrillholeLength</Name>
+      <Definition>Length of the drillhole.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="92f417aa02b44127a96cff620cdaff3f">
+      <Name>DrillholeAngle</Name>
+      <Definition>Angle of the drillholes relative to the tunnel axis. 
+
+&amp;gt;NOTE The angle is an absolute value and is measured in the direction of advance of the tunnel according to the figures below.
+
+!["DrillholeAngle - Overview"](../../figures/ifcimprovedgroundgrouted-drillholeangle-overview.png  "Figure 1 &amp;mdash; DrillholeAngle - overview.")
+
+!["DrillholeAngle - Detail"](../../figures/ifcimprovedgroundgrouted-drillholeangle-detail.png "Figure 2 &amp;mdash; DrillholeAngle - detail.")</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositivePlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ff57f16d086b4905906e681be043939b">
+      <Name>DrillholeDrifting</Name>
+      <Definition>Drifting in relation to the drillhole length.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="88eb2a3d92724cce9f1ca4e5110ae969">
+      <Name>LongitudinalOverlap</Name>
+      <Definition>The overlap between grout holes.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="5dd2a2879d8b441f9004241aea0e5c09">
+      <Name>RadialSpacing</Name>
+      <Definition>The distance between the end of the drillholes.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1fc5b15451404a5bb55451dc146ef9f4">
+      <Name>StopCriteria</Name>
+      <Definition>Description of the stop criteria.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="9904fcee69b74699bfdd52cd998bafab">
+      <Name>WorkflowProcess</Name>
+      <Definition>Reference to the designed/As-Built process for the grouting.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcDocumentReference" />
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="89a24ae81e0d499ba1951856f12334fa">
+      <Name>InjectionPressure</Name>
+      <Definition>Required pressure for injection.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7921b31425b34a3e84e753083f338c78">
+      <Name>AsBuiltInjectionDuration</Name>
+      <Definition>The time spent for the injection work.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcTimeMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

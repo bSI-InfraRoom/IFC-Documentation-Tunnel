@@ -55,8 +55,8 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcCompositeCurve</span> is a continuous curve composed of curve segments.</p>
-<p>Figure 497 illustrates an example of a composite curve.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifccompositecurve.png" alt="&quot;formula&quot;" title="Figure 497 &mdash; Composite curve"></td></tr><tr><td><p class="figure">Figure 497 &mdash; Composite curve</p></td></tr></table></p>
+<p>Figure 500 illustrates an example of a composite curve.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifccompositecurve.png" alt="&quot;formula&quot;" title="Figure 500 &mdash; Composite curve"></td></tr><tr><td><p class="figure">Figure 500 &mdash; Composite curve</p></td></tr></table></p>
 <p>Consider an <span class="self-ref">IfcCompositeCurve</span> having line segment and an arc segment. The line should be parameterized:</p>
 <ul>
 <li><a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a> with start= 0.,0. end= 0.,1., <i>SameSense</i>= TRUE, parametric length = 1.</li>
@@ -148,6 +148,7 @@ Indication of whether the curve intersects itself or not; this is for informatio
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>

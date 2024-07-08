@@ -11,7 +11,7 @@
     <title>Qto_PavementBaseQuantities</title>
 
     <style type="text/css">
-      body { counter-reset: index1 6 index2 5 index3 5 index4 8 index5 0; }
+      body { counter-reset: index1 6 index2 5 index3 5 index4 11 index5 0; }
     </style>
   </head>
 
@@ -20,15 +20,16 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-6.htm#6.5.5.9");
+    parent.index.location.replace("../../toc-6.htm#6.5.5.12");
 //-->
 </script>
 
-<h4 class="std">6.5.5.9 Qto_PavementBaseQuantities</h4>
+<h4 class="std">6.5.5.12 Qto_PavementBaseQuantities</h4>
 <p><span class="self-ref">QTO_TYPEDRIVENOVERRIDE</span>
 /
 <a href="../../ifcsharedinfrastructureelements/lexical/ifcpavement.htm">IfcPavement</a>
-</p>
+</p>Quantity set for Pavement.
+
 <details open="open"><summary>Change log</summary><table class="gridtable">
 <tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
 <td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_rc3-to-ifc4x3_rc4/index.htm">IFC4x3_RC3 to IFC4x3_RC4</a></b></td>
@@ -42,13 +43,13 @@
 <tr><td>Length</td><td>
 <span class="self-ref">Q_LENGTH</span>
 </td><td>
-Characteristic length
+The length of the object.
 
 </td></tr>
 <tr><td>Width</td><td>
 <span class="self-ref">Q_LENGTH</span>
 </td><td>
-Characteristic width
+The width of the object. Only given, if the object has constant thickness (prismatic).
 
 </td></tr>
 <tr><td>Depth</td><td>
@@ -57,9 +58,10 @@ Characteristic width
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Breite</b></td><td>Breite der Decke (einer der beiden Abmasse in der parallelen Draufsicht auf die Decke). Wird nur bei rechteckigen Decken angegeben.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Depth</b></td><td>Depth (one direction of the non-projected foot print area) of the slab. It shall only be provided, if the slab is rectangular.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Depth</b></td><td>The depth of the object.
+Depth (one direction of the non-projected foot print area) of the slab. It shall only be provided, if the slab is rectangular.
 <blockquote class="note">
-NOTE  Also refered to as width, but not to be confused with the &quot;Width&quot; quantity, that denotes the thickness in the context of the slab.
+NOTE  Also referred to as width, but not to be confused with the &quot;Width&quot; quantity, that denotes the thickness in the context of the slab.
 </blockquote>
 </td></tr>
 </table>
@@ -70,7 +72,8 @@ NOTE  Also refered to as width, but not to be confused with the &quot;Width&quo
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Bruttofläche</b></td><td>Fläche der Decke (Ansichtsfläche, nicht projizierte oder Mantelfläche). Alle Öffnungen werden übermessen. Der Wert wird nur angegeben, wenn die Decke eine kostante Dicke hat.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Area</b></td><td>Total area of the extruded area of the slab. Openings, recesses and projections are not taken into account. Only given, if the slab is prismatic.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Area</b></td><td>Gross Area of the object. Openings, recesses, projections and cut-outs are not taken into account.
+Indicates the extruded area of the element. Only given, if the element is prismatic.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>面積</b></td><td>スラブの面積。開口、へこみなどを考慮しない。
 </td></tr>
@@ -82,7 +85,8 @@ NOTE  Also refered to as width, but not to be confused with the &quot;Width&quo
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Nettofläche</b></td><td>Fläche der Decke (Ansichtsfläche, nicht projizierte oder Mantelfläche). Alle Öffnungen werden abgezogen. Der Wert wird nur angegeben, wenn die Decke eine kostante Dicke hat.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Area</b></td><td>Total area of the extruded area of the slab. Openings and recesses are taken into account by subtraction, projections by addition. Only given, if the slab is prismatic.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Area</b></td><td>Total net area of the object. Openings, recesses and cut-outs are taken into account by subtraction, projections by addition.
+Indicates the extruded area of the object. Only given when prismatic.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>正味面積</b></td><td>スラブの面積。開口、へこみなどを考慮する。
 </td></tr>
@@ -94,7 +98,7 @@ NOTE  Also refered to as width, but not to be confused with the &quot;Width&quo
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Bruttovolumen</b></td><td>Bruttovolumen der Decke. Alle Öffnungen werden übermessen.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Volume</b></td><td>Total gross volume of the slab. Openings, recesses, and projections are not taken into account.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Volume</b></td><td>Total gross volume of the object. Openings, recesses, enclosed objects and projections are not taken into account.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>体積</b></td><td>スラブの体積。開口、へこみなどを考慮しない。
 </td></tr>
@@ -106,7 +110,8 @@ NOTE  Also refered to as width, but not to be confused with the &quot;Width&quo
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Nettovolumen</b></td><td>Nettovolumen der Decke. Alle Öffnungen werden abgezogen.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Volume</b></td><td>Total net volume of the slab. Openings and recesses are taken into account by subtraction, projections by addition.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Volume</b></td><td>Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses.
+Total net volume of the slab. Openings and recesses are taken into account by subtraction, projections by addition.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>正味体積</b></td><td>スラブの体積。開口、へこみなどを考慮する。
 </td></tr>

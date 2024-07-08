@@ -53,9 +53,9 @@ An optional value type used for the values defined in one of the subtypes. Only 
 <tr><th>Rule</th><th>Description</th></tr>
 <tr><td>IsAssignedToProduct</td><td><span class="self-ref">IfcVoxelData</span> shall have exactly one assignment relationship of type <a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a> to a product.
 </td></tr>
-<tr><td>SameRepresentation</td><td>The assigned <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> shall have the same shape representation.
-</td></tr>
 <tr><td>VoxelGridRepresentation</td><td><span class="self-ref">IfcVoxelData</span> shall have a product definition shape and there shall be exactly one <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> in <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>.<i>Representations</i> that has exactly one geometric item <a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>.
+</td></tr>
+<tr><td>SameRepresentation</td><td>The assigned <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> shall have the same shape representation.
 </td></tr>
 </table>
 
@@ -133,21 +133,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -175,7 +179,33 @@ An optional value type used for the values defined in one of the subtypes. Only 
 </section>
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
-<hr />
+<p><a href="../../../annex/annex-d/general-usage/ifcvoxeldata.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
+<h5>IfcVoxelData</h5><details open="open">
+<summary>Concept usage</summary>
+<a id="body-voxel-geometry" />
+<p class="use-head">Body Voxel Geometry</p>
+<p>The <a href="../../templates/body-voxel-geometry.htm">Body Voxel Geometry</a> concept applies to this entity.</p><p>Body Voxel Geometry may be associated to any <span class="self-ref">IfcVoxelData</span>. The <span class="self-ref">IfcVoxelData</span> instance shall be assigned (<a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a>) to an object that is represented by the same <a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>.</p>
+
+<br/><br/>
+
+</details>
+<details><summary>mvdXML Specification</summary>
+<div class="xsd"><code class="xsd">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;<br/>
+&lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; uuid=&quot;3c7591fa-d060-4397-85f6-d97d2b2e45c3&quot; name=&quot;IfcVoxelData&quot; applicableRootEntity=&quot;IfcVoxelData&quot;&gt;<br/>
+&nbsp;&lt;Applicability&gt;<br/>
+&nbsp;&nbsp;&lt;Template ref=&quot;5d7d751e-2da0-4cb3-a434-ac432f89762f&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&lt;/Applicability&gt;<br/>
+&nbsp;&lt;Concepts&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;2a65ce22-5fb8-4640-b0af-a5a8f85734b4&quot; name=&quot;Body Voxel Geometry&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;b8142801-74a0-461d-a0ef-db72f813bd43&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&lt;/Concepts&gt;<br/>
+&lt;/ConceptRoot&gt;<br/>
+
+</code></div></details>
 <section>
 <details>
 <summary>Concept inheritance</summary>
@@ -200,6 +230,8 @@ An optional value type used for the values defined in one of the subtypes. Only 
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcproduct.htm#product-geometry-colour">Product Geometry Colour</a></td><td><a href="../../templates/product-geometry-colour.htm">Product Geometry Colour</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcproduct.htm#product-geometry-layer">Product Geometry Layer</a></td><td><a href="../../templates/product-geometry-layer.htm">Product Geometry Layer</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcproduct.htm#product-relative-placement">Product Relative Placement</a></td><td><a href="../../templates/product-relative-placement.htm">Product Relative Placement</a></td><td>General Usage</td></tr>
+
+<tr><td colspan="3"><a href="../../ifcproductextension/lexical/ifcvoxeldata.htm"><span class="self-ref">IfcVoxelData</span></a></td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcvoxeldata.htm#body-voxel-geometry">Body Voxel Geometry</a></td><td><a href="../../templates/body-voxel-geometry.htm">Body Voxel Geometry</a></td><td>General Usage</td></tr>
 
 </table>
 </details>
@@ -228,13 +260,13 @@ An optional value type used for the values defined in one of the subtypes. Only 
 AND<br/>
 (SIZEOF(SELF\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssignments) = 1)<br/>
 AND<br/>
-(&#39;IFCKERNEL.<a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssignments[1]));<br/>&nbsp;&nbsp;SameRepresentation : SIZEOF(QUERY(ShapeRep &lt;* SELF\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssignments[1]\<a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a>.RelatingProduct\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation.Representations |<br/>
-ShapeRep = SELF\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation.Representations[1])) = 1;<br/>&nbsp;&nbsp;VoxelGridRepresentation : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation)<br/>
+(&#39;IFCKERNEL.<a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssignments[1]));<br/>&nbsp;&nbsp;VoxelGridRepresentation : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation)<br/>
 AND<br/>
 (SIZEOF(QUERY(ShapeRep &lt;* SELF\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation.Representations | <br/>
     (SIZEOF(ShapeRep.Items) = 1)<br/>
     AND<br/>
-    (&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&#39; IN TYPEOF(ShapeRep.Items[1])))) = 1);<br/><span class="keyword">END_ENTITY;</span><br/>
+    (&#39;IFCGEOMETRICMODELRESOURCE.<a href="../../ifcgeometricmodelresource/lexical/ifcvoxelgrid.htm">IfcVoxelGrid</a>&#39; IN TYPEOF(ShapeRep.Items[1])))) = 1);<br/>&nbsp;&nbsp;SameRepresentation : SIZEOF(QUERY(ShapeRep &lt;* SELF\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssignments[1]\<a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a>.RelatingProduct\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation.Representations |<br/>
+ShapeRep = SELF\<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.Representation.Representations[1])) = 1;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

@@ -54,9 +54,9 @@ List of cross sections in sequential order along the <i>Directrix</i>.
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>ConsistentProfileTypes</td><td>The profile type (either AREA or CURVE) shall be consistent within the list of the profiles defining the cross sections.
-</td></tr>
 <tr><td>DirectrixIs3D</td><td>The curve entity which is the underlying directrix shall have the dimensionality of 3.
+</td></tr>
+<tr><td>ConsistentProfileTypes</td><td>The profile type (either AREA or CURVE) shall be consistent within the list of the profiles defining the cross sections.
 </td></tr>
 <tr><td>SectionsSameType</td><td>The entity type for each section must be the same.
 </td></tr>
@@ -78,6 +78,7 @@ List of cross sections in sequential order along the <i>Directrix</i>.
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>
@@ -136,7 +137,7 @@ List of cross sections in sequential order along the <i>Directrix</i>.
 &nbsp;&nbsp;Directrix : <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a>;<br/>
 &nbsp;&nbsp;CrossSections : <span class="keyword">LIST</span> [2:?] OF <a href="../../ifcprofileresource/lexical/ifcprofiledef.htm">IfcProfileDef</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;ConsistentProfileTypes : SIZEOF(QUERY(temp &lt;* CrossSections | CrossSections[1].ProfileType &lt;&gt; temp.ProfileType)) = 0;<br/>&nbsp;&nbsp;DirectrixIs3D : Directrix.Dim = 3;<br/>&nbsp;&nbsp;SectionsSameType : SIZEOF(QUERY(temp &lt;* CrossSections | TYPEOF(CrossSections[1]) :&lt;&gt;: TYPEOF(temp))) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;DirectrixIs3D : Directrix.Dim = 3;<br/>&nbsp;&nbsp;ConsistentProfileTypes : SIZEOF(QUERY(temp &lt;* CrossSections | CrossSections[1].ProfileType &lt;&gt; temp.ProfileType)) = 0;<br/>&nbsp;&nbsp;SectionsSameType : SIZEOF(QUERY(temp &lt;* CrossSections | TYPEOF(CrossSections[1]) :&lt;&gt;: TYPEOF(temp))) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometricmodelresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

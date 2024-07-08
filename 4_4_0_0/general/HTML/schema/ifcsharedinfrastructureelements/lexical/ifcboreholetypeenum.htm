@@ -43,6 +43,7 @@
 <tr><td>COREDRILLING</td><td><p>A drilling process in which borehole is performed by cutting out cylindrical rock or soil samples in the field, using a core barrel.</p>
 </td></tr><tr><td>DESTRUCTIVEDRILLING</td><td><p>A drilling process in which the boring is performed using destructive tools.</p>
 </td></tr><tr><td>TRIALPIT</td><td><p>An excavation made for the purpose of observing shallow subsurface conditions, performing field tests and obtaining soil samples.</p>
+</td></tr><tr><td>DEWATERING</td><td><p>A borehole made for the purpose of dewatering.</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined type.</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined type.</p>
 </td></tr></table>
@@ -55,6 +56,7 @@
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;coredrilling&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;destructivedrilling&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;trialpit&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;dewatering&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -62,7 +64,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcBoreholeTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;COREDRILLING, <br/>&nbsp;DESTRUCTIVEDRILLING, <br/>&nbsp;TRIALPIT, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;COREDRILLING, <br/>&nbsp;DESTRUCTIVEDRILLING, <br/>&nbsp;TRIALPIT, <br/>&nbsp;DEWATERING, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedinfrastructureelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

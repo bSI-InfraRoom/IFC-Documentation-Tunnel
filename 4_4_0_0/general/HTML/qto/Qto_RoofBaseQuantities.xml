@@ -11,7 +11,9 @@
   <QtoDefs>
     <QtoDef>
       <Name>GrossArea</Name>
-      <Definition>Total gross area of the outer surface of the roof. It is the sum of all roof slab gross areas. Roof openings, like sky windows and other openings and cut-outs are not taken into account.</Definition>
+      <Definition>Gross Area of the object. Openings, recesses, projections and cut-outs are not taken into account.
+
+Indicates the outer surface of the roof and the sum of all roof slab gross areas.</Definition>
       <QtoType>Q_AREA</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Bruttofläche</NameAlias>
@@ -24,7 +26,9 @@
     </QtoDef>
     <QtoDef>
       <Name>NetArea</Name>
-      <Definition>Total net area of the outer surface of the roof. It is the suma of all roof slab net areas. Roof openings, like sky windows and other openings and cut-outs are taken into account.</Definition>
+      <Definition>Total net area of the object. Openings, recesses and cut-outs are taken into account by subtraction, projections by addition.
+
+Total net area of the outer surface of the roof. It is the suma of all roof slab net areas.</Definition>
       <QtoType>Q_AREA</QtoType>
       <NameAliases>
         <NameAlias lang="de-DE">Nettofläche</NameAlias>

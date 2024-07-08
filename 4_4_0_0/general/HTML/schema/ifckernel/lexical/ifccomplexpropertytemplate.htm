@@ -60,9 +60,9 @@ Reference to a set of property templates. It should only be provided, if the <i>
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>NoSelfReference</td><td></td></tr>
 <tr><td>UniquePropertyNames</td><td>Every individual <a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a> within the complex property template shall have a unique <i>Name</i> attribute value.
 </td></tr>
+<tr><td>NoSelfReference</td><td></td></tr>
 </table>
 
 </details>
@@ -165,7 +165,7 @@ Reference to a set of property templates. It should only be provided, if the <i>
 &nbsp;&nbsp;TemplateType : <span class="keyword">OPTIONAL</span> <a href="../../ifckernel/lexical/ifccomplexpropertytemplatetypeenum.htm">IfcComplexPropertyTemplateTypeEnum</a>;<br/>
 &nbsp;&nbsp;HasPropertyTemplates : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;NoSelfReference : SIZEOF(QUERY(temp &lt;* HasPropertyTemplates | SELF :=: temp)) = 0;<br/>&nbsp;&nbsp;UniquePropertyNames : <a href="../../ifckernel/lexical/ifcuniquepropertytemplatenames.htm">IfcUniquePropertyTemplateNames</a>(HasPropertyTemplates);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;UniquePropertyNames : <a href="../../ifckernel/lexical/ifcuniquepropertytemplatenames.htm">IfcUniquePropertyTemplateNames</a>(HasPropertyTemplates);<br/>&nbsp;&nbsp;NoSelfReference : SIZEOF(QUERY(temp &lt;* HasPropertyTemplates | SELF :=: temp)) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

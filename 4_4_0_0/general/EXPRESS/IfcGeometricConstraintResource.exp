@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 5 July 2024
+Monday, 8 July 2024
 
 *)
 
@@ -97,22 +97,22 @@ TYPE IfcAlignmentCantSegmentTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcAlignmentHorizontalSegmentTypeEnum = ENUMERATION OF
-	(BLOSSCURVE
+	(LINE
 	,CIRCULARARC
 	,CLOTHOID
-	,COSINECURVE
 	,CUBIC
 	,HELMERTCURVE
-	,LINE
+	,BLOSSCURVE
+	,COSINECURVE
 	,SINECURVE
 	,VIENNESEBEND);
 END_TYPE;
 
 TYPE IfcAlignmentVerticalSegmentTypeEnum = ENUMERATION OF
-	(CIRCULARARC
-	,CLOTHOID
-	,CONSTANTGRADIENT
-	,PARABOLICARC);
+	(CONSTANTGRADIENT
+	,CIRCULARARC
+	,PARABOLICARC
+	,CLOTHOID);
 END_TYPE;
 
 TYPE IfcCurveOrEdgeCurve = SELECT

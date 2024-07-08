@@ -71,6 +71,7 @@ List of unique representation maps. Each representation map describes a block de
 The tag (or label) identifier at the particular type of a product, e.g. the article number (like the EAN). It is the identifier at the specific level.
 </td><td>X</td></tr>
 <tr><td></td><td><i>ReferencedBy</i></td><td><a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a><br/>@RelatingProduct</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a> relationship, by which other products, processes, controls, resources or actors (as subtypes of <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>) can be related to this product type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship.
 </blockquote>
@@ -161,6 +162,7 @@ EXAMPLE Refering to a furniture as applicable occurrence entity would be express
 </td><td>X</td></tr>
 <tr><td>6</td><td>HasPropertySets</td><td><a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a></td><td>? S[1:?]</td><td>
 Set <del>list</del> of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
+
 <blockquote>
 IFC2x3 CHANGE  The attribute aggregate type has been changed from LIST to SET.
 </blockquote>
@@ -175,6 +177,7 @@ List of unique representation maps. Each representation map describes a block de
 The tag (or label) identifier at the particular type of a product, e.g. the article number (like the EAN). It is the identifier at the specific level.
 </td><td>X</td></tr>
 <tr><td></td><td><i>ReferencedBy</i></td><td><a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a><br/>@RelatingProduct</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a> relationship, by which other products, processes, controls, resources or actors (as subtypes of <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>) can be related to this product type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship.
 </blockquote>
@@ -190,10 +193,10 @@ IFC4 CHANGE  New inverse relationship.
 <a id="product-type-shape" />
 <p class="use-head">Product Type Shape</p>
 <p>The <a href="../../templates/product-type-shape.htm">Product Type Shape</a> concept applies to this entity.</p><p>The <i>RepresentationMaps</i> define the type product shape and multiple geometric representations can be assigned. If a product occurrence is assigned to the type by using the <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> relationship, then these occurrences have to reference the representation maps. The reference is created by one or multiple <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>'s having an <a href="../../ifcgeometryresource/lexical/ifcmappeditem.htm">IfcMappedItem</a> as <i>Items</i>, that places the <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a> of the type product into the spatial contexts, i.e. by using an Cartesian transformation operator to transform the <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a> into the object coordinate system of the product occurrence.</p>
-<p>Figure 278 illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifctypeproduct_representationmap-1.png" alt="&quot;representation map&quot;" title="Figure 278 &mdash; Product type geometry with single placement"></td></tr><tr><td><p class="figure">Figure 278 &mdash; Product type geometry with single placement</p></td></tr></table></p>
-<p>Figure 279 illustrates an example of referencing a representation multiple times map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifctypeproduct_representationmap-2.png" alt="&quot;representation map&quot;" title="Figure 279 &mdash; Product type geometry with multiple placement"></td></tr><tr><td><p class="figure">Figure 279 &mdash; Product type geometry with multiple placement</p></td></tr></table></p>
+<p>Figure 281 illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifctypeproduct_representationmap-1.png" alt="&quot;representation map&quot;" title="Figure 281 &mdash; Product type geometry with single placement"></td></tr><tr><td><p class="figure">Figure 281 &mdash; Product type geometry with single placement</p></td></tr></table></p>
+<p>Figure 282 illustrates an example of referencing a representation multiple times map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifctypeproduct_representationmap-2.png" alt="&quot;representation map&quot;" title="Figure 282 &mdash; Product type geometry with multiple placement"></td></tr><tr><td><p class="figure">Figure 282 &mdash; Product type geometry with multiple placement</p></td></tr></table></p>
 
 <br/><br/>
 

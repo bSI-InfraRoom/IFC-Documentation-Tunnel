@@ -90,13 +90,13 @@ The description of the knot type.
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>CorrespondingULists</td><td>The number of <i>UMultiplicities</i> shall be the same as the number of <i>UKnots</i>.
-</td></tr>
-<tr><td>CorrespondingVLists</td><td>The number of <i>VMultiplicities</i> shall be the same as the number of <i>VKnots</i>.
-</td></tr>
 <tr><td>UDirectionConstraints</td><td>The function returns TRUE when the parameter constraints are verified for the <i>u</i> direction.
 </td></tr>
 <tr><td>VDirectionConstraints</td><td>The function returns TRUE when the parameter constraints are verified for the <i>v</i> direction.
+</td></tr>
+<tr><td>CorrespondingULists</td><td>The number of <i>UMultiplicities</i> shall be the same as the number of <i>UKnots</i>.
+</td></tr>
+<tr><td>CorrespondingVLists</td><td>The number of <i>VMultiplicities</i> shall be the same as the number of <i>VKnots</i>.
 </td></tr>
 </table>
 
@@ -118,6 +118,7 @@ The description of the knot type.
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
+
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>
@@ -133,6 +134,7 @@ IFC2x3 CHANGE  The inverse attribute <i>StyledByItem</i> has been added.
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a></i></td></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcsurface.htm">IfcSurface</a></i></td></tr>
 <tr><td></td><td>Dim<br/>:=3</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td></td><td>The space dimensionality of IfcSurface. It is always a three-dimensional geometric representation item.
+
 <blockquote>
 IFC4 CHANGE Derived attribute promoted from subtypes.
 </blockquote>
@@ -261,11 +263,11 @@ The description of the knot type.
 &nbsp;&nbsp;KnotVUpper : <a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a> := SIZEOF(VKnots);<br/>
 &nbsp;&nbsp;KnotUUpper : <a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a> := SIZEOF(UKnots);<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;CorrespondingULists : SIZEOF(UMultiplicities) = KnotUUpper;<br/>&nbsp;&nbsp;CorrespondingVLists : SIZEOF(VMultiplicities) = KnotVUpper;<br/>&nbsp;&nbsp;UDirectionConstraints : <a href="../../ifcgeometryresource/lexical/ifcconstraintsparambspline.htm">IfcConstraintsParamBSpline</a> (<br/>
+&nbsp;&nbsp;UDirectionConstraints : <a href="../../ifcgeometryresource/lexical/ifcconstraintsparambspline.htm">IfcConstraintsParamBSpline</a> (<br/>
   SELF\<a href="../../ifcgeometryresource/lexical/ifcbsplinesurface.htm">IfcBSplineSurface</a>.UDegree, KnotUUpper, <br/>
   SELF\<a href="../../ifcgeometryresource/lexical/ifcbsplinesurface.htm">IfcBSplineSurface</a>.UUpper, UMultiplicities, UKnots);<br/>&nbsp;&nbsp;VDirectionConstraints : <a href="../../ifcgeometryresource/lexical/ifcconstraintsparambspline.htm">IfcConstraintsParamBSpline</a> (<br/>
   SELF\<a href="../../ifcgeometryresource/lexical/ifcbsplinesurface.htm">IfcBSplineSurface</a>.VDegree, KnotVUpper, <br/>
-  SELF\<a href="../../ifcgeometryresource/lexical/ifcbsplinesurface.htm">IfcBSplineSurface</a>.VUpper, VMultiplicities, VKnots);<br/><span class="keyword">END_ENTITY;</span><br/>
+  SELF\<a href="../../ifcgeometryresource/lexical/ifcbsplinesurface.htm">IfcBSplineSurface</a>.VUpper, VMultiplicities, VKnots);<br/>&nbsp;&nbsp;CorrespondingULists : SIZEOF(UMultiplicities) = KnotUUpper;<br/>&nbsp;&nbsp;CorrespondingVLists : SIZEOF(VMultiplicities) = KnotVUpper;<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

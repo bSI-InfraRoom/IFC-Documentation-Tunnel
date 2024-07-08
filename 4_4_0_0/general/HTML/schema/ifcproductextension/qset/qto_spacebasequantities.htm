@@ -46,7 +46,8 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Höhe</b></td><td>Gesamte Höhe des Raums, von Rohboden zur Rohdecke, wird nur angegeben wenn der Raum eine konstante Höhe hat.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Height</b></td><td>Total height (from base slab without flooring to ceiling without suspended ceiling) for this space (measured from top of slab below to bottom of slab above). To be provided only if the space has a constant height.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Height</b></td><td>Characteristic height
+Total height (from base slab without flooring to ceiling without suspended ceiling) for this space (measured from top of slab below to bottom of slab above). To be provided only if the space has a constant height.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>高さ</b></td><td>部屋の高さ。床スラブから天井までの高さ。つりさげ天井は含まない。下の床の上面から、上の床の下面までの距離となる。部屋が一定の高さを持っているときにのみ与えられる値。
 </td></tr>
@@ -82,7 +83,8 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Umfang Brutto</b></td><td>Gesamter Umfang des Raumes, ohne Aubzug von Öffnungen (z.B. Türen).
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Perimeter</b></td><td>Gross perimeter at the floor level of this space. It all sides of the space, including those parts of the perimeter that are created by virtual boundaries and openings (like doors).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Perimeter</b></td><td>Gross perimeter at the outer contour of the object.
+Measured at floor level with all sides of the space, including those parts of the perimeter that are created by virtual boundaries and openings (like doors).
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>周辺長</b></td><td>部屋の周辺長。ドアや仮想的な境界なども含めた周辺長。
 </td></tr>
@@ -94,7 +96,7 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Umfang Netto</b></td><td>Gesamter Unfang, der normalerweise mit einem Sockel versehen wird, d.h. mit Abzug von Türen aber einschlieslich innerer Umfänge z.B. an Stützen.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Perimeter</b></td><td>Net perimeter at the floor level of this space. It excludes those parts of the perimeter that are created by by virtual boundaries and openings (like doors). It is the measurement used for skirting boards and may includes the perimeter of internal fixed objects like columns.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Perimeter</b></td><td>Net perimeter at the floor level of this space. It excludes those parts of the perimeter that are created by by virtual boundaries and openings (like doors). It is the measurement used for skirting boards and may include the perimeter of internal fixed objects like columns.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>正味周辺長</b></td><td>部屋の正味の周辺長。ドアや仮想的な境界は含めない。幅木等の計測に使用する長さ。
 </td></tr>
@@ -106,7 +108,8 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Bodenfläche Brutto</b></td><td>Gesamte Bodenfläche eines Raumes, unabhängig von der Raumhöhe. Öffnungen im Boden werden nicht abgezogen.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Floor Area</b></td><td>Sum of all floor areas covered by the space. It includes the area covered by elementsinside the space (columns, inner walls, etc.) and excludes the area covered by wall claddings.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Floor Area</b></td><td>Sum of all gross floor areas within the spatial structure element.
+Includes the area covered by elements inside the space (columns, inner walls, etc.) and excludes the area covered by wall claddings.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>床面積</b></td><td>部屋の床面積。柱や内部壁などを含んだ面積。
 </td></tr>
@@ -118,7 +121,8 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Bodenfläche Netto</b></td><td>Gesamte Bodenfläche eines Raumes, unabhängig von der Raumhöhe. Alle Öffnungen im Boden, unabhängig von Ihrer Größe, werden abgezogen.
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Floor Area</b></td><td>Sum of all usable floor areas covered by the space. It excludes the area covered  by elements inside the space (columns, inner walls, built-in's etc.), slab openings, or other protruding elements. Varying heights are not taking into account (i.e. no reduction for areas under a minimum headroom).
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Floor Area</b></td><td>Sum of all net usable floor areas.
+It excludes the area covered by elements inside the space (columns, inner walls, built-in's etc.), slab openings, or other protruding elements. Varying heights are not taking into account (i.e. no reduction for areas under a minimum headroom).
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>正味床面積</b></td><td>部屋の床面積。柱や内部壁などを含まない面積。
 </td></tr>
@@ -178,7 +182,7 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Bruttovolumen</b></td><td>Gesamtes Volumen eines Raumes ohne Abzüge von Einbauteilen (z.B. im Raum stehende Stützen, Balken, feste Einbauteile).
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Volume</b></td><td>Gross volume enclosed by the space, including the volume of construction elements inside the space.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Gross Volume</b></td><td>Total gross volume of the object. Openings, recesses, enclosed objects and projections are not taken into account.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>体積</b></td><td>部屋の体積。部屋に含む部材を含む体積。
 </td></tr>
@@ -190,7 +194,8 @@
 <table class="gridtable">
 <tr><td><img src="../../../img/locale-de.png" /></td><td><b>Nettovolumen</b></td><td>Gesamtes Volumen eines Raumes mit Abzug von Einbauteilen (z.B. im Raum stehende Stützen, Balken, feste Einbauteile)..
 </td></tr>
-<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Volume</b></td><td>Net volume enclosed by the space, excluding the volume of construction elements inside the space.
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Net Volume</b></td><td>Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses.
+Net volume enclosed by the space, excluding the volume of construction elements inside the space.
 </td></tr>
 <tr><td><img src="../../../img/locale-ja.png" /></td><td><b>正味体積</b></td><td>部屋の体積。部屋に含む部材を含まない体積。
 </td></tr>

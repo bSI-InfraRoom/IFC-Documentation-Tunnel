@@ -81,10 +81,10 @@
     </PropertyDef>
     <PropertyDef ifdguid="0c341fe4f64b4cb68507081d0db3363d">
       <Name>Resistivity</Name>
-      <Definition>Electrical resistivity of a rock or soil (Ohm-m).</Definition>
+      <Definition>Electrical resistivity (Ohm-m).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcElectricResistanceMeasure" />
+          <DataType type="IfcElectricalResistivityMeasure" />
         </TypePropertySingleValue>
       </PropertyType>
       <NameAliases />

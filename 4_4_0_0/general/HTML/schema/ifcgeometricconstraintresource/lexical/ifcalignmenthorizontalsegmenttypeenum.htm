@@ -85,7 +85,7 @@
 <p>In a later phase an increasing importance of the kinematic perspective can be observed. Here precise control of the lateral acceleration (horizontal and cant layout) and vertical acceleration (vertical layout) became prevalent. Designers started to use high performance transition bends especially in high speed scenarios. In the kinematic perspective precise curvature fitting between consecutive segments needs to be better than in the &quot;good enough&quot; approach of traditional geometric perspective. Central terms are e.g. &quot;jerks&quot;, &quot;theoretical cant&quot; or &quot;cant deficiency&quot;.</p>
 <p><strong>Generic calculation of intrinsic x, y-coordinates for a given curvature</strong></p>
 <p>For each horizontal alignment segment with a known curvature formula a generic method to calculate segment intrinsic coordinates exists.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-curvature2coord.png" alt="&quot;Double integration&quot;" title="Figure 425 &mdash; Double integration of curvature yielding intrinsic coordinates"></td></tr><tr><td><p class="figure">Figure 425 &mdash; Double integration of curvature yielding intrinsic coordinates</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-curvature2coord.png" alt="&quot;Double integration&quot;" title="Figure 428 &mdash; Double integration of curvature yielding intrinsic coordinates"></td></tr><tr><td><p class="figure">Figure 428 &mdash; Double integration of curvature yielding intrinsic coordinates</p></td></tr></table></p>
 <blockquote class="note">
 <p>NOTE: While it is possible to apply the generic calculation also for trivial cases like LINE or CIRCULARARC it is much more efficient to use available formulas.</p>
 </blockquote>
@@ -161,32 +161,26 @@
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>BLOSSCURVE</td><td><p>The Bloss transition is a more recent form of a high performance transition bend. Proposed in 1936. it is now in use in several railway networks. There is no established rough geometric approximation.</p>
-<blockquote class="note">
-<p>NOTE Further reading: Constantin Ciobanu, BLOSS TRANSITION – A SHORT DESIGN GUIDE</p>
-</blockquote>
-<p><strong>Base formula (Curvature)</strong>
-<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-blosscurve.png" alt="&quot;Bloss curve transition segment&quot;" title="Figure 426 &mdash; Curvature for horizontal Bloss curve transition segment"></td></tr><tr><td><p class="figure">Figure 426 &mdash; Curvature for horizontal Bloss curve transition segment</p></td></tr></table></p>
+<tr><td>LINE</td><td><p>In the geometry perspective it denotes a straight connection between two points. In the dynamic perspective, it denotes a segment with a curvature with a value of 0. This means that no lateral acceleration acts on the moving vehicle.</p>
+<p>**Base formula (Curvature) **
+<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-line.png" alt="&quot;Horizontal line segment&quot;" title="Figure 429 &mdash; Curvature for horizontal straight line segment"></td></tr><tr><td><p class="figure">Figure 429 &mdash; Curvature for horizontal straight line segment</p></td></tr></table></p>
 </td></tr><tr><td>CIRCULARARC</td><td><p>In the geometric perspective, it denotes a connection between two points that follows a circular path. In the dynamic perspective, it denotes a segment with constant lateral acceleration on the moving vehicle, i.e. constant curvature.</p>
 <p>**Base formula (Curvature) **
-<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-circulararc.png" alt="&quot;Circular arc segment&quot;" title="Figure 427 &mdash; Curvature for horizontal circular segment"></td></tr><tr><td><p class="figure">Figure 427 &mdash; Curvature for horizontal circular segment</p></td></tr></table></p>
+<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-circulararc.png" alt="&quot;Circular arc segment&quot;" title="Figure 430 &mdash; Curvature for horizontal circular segment"></td></tr><tr><td><p class="figure">Figure 430 &mdash; Curvature for horizontal circular segment</p></td></tr></table></p>
 </td></tr><tr><td>CLOTHOID</td><td><p>In the geometric perspective, a clothoid denotes a connection between two points where the radius of curvature changes along the segment at a constant rate. The clothoid was an early achievement of geometry, also known as Euler's spiral or Cornu's spiral. It became very popular in road and rail design even before the widespread availability of computers because of the availability of tabulations of the normalized clothoid. Proper application of the so called clothoid constant provided fast solutions for all relevant parameters necessary to integrate clothoid segments between two consecutive segments with constant curvature. In most cases the clothoid smooths the curvature between a straight line and a ciruclar arc. <br></p>
 <p>In the dynamic perspective, it denotes a segment with constant rate of lateral acceleration change induced by the curvature. The kinematic properties of the clothoid both reduce the exerted forces on the track by a train, improve the travel experience of train passengers and also reduce the stress of a car driver by avoiding sudden movements of the steering wheel.<br></p>
 <p>The kinematic advantages of the clothoid as a smoothing segment are true also for all the other transition bends currently in use.</p>
 <p><strong>Base formula (Curvature)</strong>
-<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-clothoid.png" alt="&quot;Clothoid transition segment&quot;" title="Figure 428 &mdash; Curvature for horizontal Clothoid transition segment"></td></tr><tr><td><p class="figure">Figure 428 &mdash; Curvature for horizontal Clothoid transition segment</p></td></tr></table></p>
-</td></tr><tr><td>COSINECURVE</td><td><p>Cosine transition. The cosine transition was already discussed in 1868. Width the advent of high-speed rail it was applied  in production designs. It is e.g. installed on Japanese high speed lines</p>
-<p><strong>Base formula (Curvature)</strong>
-<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-cosinecurve.png" alt="&quot;Cosine curve transition segment&quot;" title="Figure 429 &mdash; Curvature for horizontal Cosine curve transition segment"></td></tr><tr><td><p class="figure">Figure 429 &mdash; Curvature for horizontal Cosine curve transition segment</p></td></tr></table></p>
+<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-clothoid.png" alt="&quot;Clothoid transition segment&quot;" title="Figure 431 &mdash; Curvature for horizontal Clothoid transition segment"></td></tr><tr><td><p class="figure">Figure 431 &mdash; Curvature for horizontal Clothoid transition segment</p></td></tr></table></p>
 </td></tr><tr><td>CUBIC</td><td><p>In IFC CUBIC denotes a transition segment where x and y coordinates obey a cubic formula.
 <br><br>
 <strong>General formula</strong>
-<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-cubic_general.png" alt="&quot;Cubic&quot;" title="Figure 430 &mdash; General formula for cubic"></td></tr><tr><td><p class="figure">Figure 430 &mdash; General formula for cubic</p></td></tr></table>
+<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-cubic_general.png" alt="&quot;Cubic&quot;" title="Figure 432 &mdash; General formula for cubic"></td></tr><tr><td><p class="figure">Figure 432 &mdash; General formula for cubic</p></td></tr></table>
 <br></p>
 <p>It was discovered very early that setting <strong>a</strong> to &quot;1 / 6RL&quot; and <strong>b</strong>, <strong>c</strong> and <strong>d</strong> to 0 yields a good enough approximation of the clothoid in many situations.
 <br><br>
 <strong>Cubic formula for alignment</strong>
-<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-cubic.png" alt="&quot;Cubic transition&quot;" title="Figure 431 &mdash; Alignment formula for cubic"></td></tr><tr><td><p class="figure">Figure 431 &mdash; Alignment formula for cubic</p></td></tr></table>
+<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-cubic.png" alt="&quot;Cubic transition&quot;" title="Figure 433 &mdash; Alignment formula for cubic"></td></tr><tr><td><p class="figure">Figure 433 &mdash; Alignment formula for cubic</p></td></tr></table>
 <br></p>
 <p>Since the manual computation of cubics was considerable easier compared to the theoretically sound clothoid, cubic transistions became very popular as &quot;good enough&quot; replacement curves.</p>
 <p>Cubic transition bends can still be found in many legacy alignments based on earlier design regulations. There also exist regulations containing cubic transitions for new designs.</p>
@@ -198,20 +192,26 @@
 <p>NOTE  also referred to as Schramm curve.</p>
 </blockquote>
 <p><strong>Base formula (Curvature)</strong>
-<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-helmertcurve.png" alt="&quot;Helmert curve transition segment&quot;" title="Figure 432 &mdash; Curvature for horizontal Helmert transition segment"></td></tr><tr><td><p class="figure">Figure 432 &mdash; Curvature for horizontal Helmert transition segment</p></td></tr></table></p>
-</td></tr><tr><td>LINE</td><td><p>In the geometry perspective it denotes a straight connection between two points. In the dynamic perspective, it denotes a segment with a curvature with a value of 0. This means that no lateral acceleration acts on the moving vehicle.</p>
-<p>**Base formula (Curvature) **
-<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-line.png" alt="&quot;Horizontal line segment&quot;" title="Figure 433 &mdash; Curvature for horizontal straight line segment"></td></tr><tr><td><p class="figure">Figure 433 &mdash; Curvature for horizontal straight line segment</p></td></tr></table></p>
+<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-helmertcurve.png" alt="&quot;Helmert curve transition segment&quot;" title="Figure 434 &mdash; Curvature for horizontal Helmert transition segment"></td></tr><tr><td><p class="figure">Figure 434 &mdash; Curvature for horizontal Helmert transition segment</p></td></tr></table></p>
+</td></tr><tr><td>BLOSSCURVE</td><td><p>The Bloss transition is a more recent form of a high performance transition bend. Proposed in 1936. it is now in use in several railway networks. There is no established rough geometric approximation.</p>
+<blockquote class="note">
+<p>NOTE Further reading: Constantin Ciobanu, BLOSS TRANSITION – A SHORT DESIGN GUIDE</p>
+</blockquote>
+<p><strong>Base formula (Curvature)</strong>
+<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-blosscurve.png" alt="&quot;Bloss curve transition segment&quot;" title="Figure 435 &mdash; Curvature for horizontal Bloss curve transition segment"></td></tr><tr><td><p class="figure">Figure 435 &mdash; Curvature for horizontal Bloss curve transition segment</p></td></tr></table></p>
+</td></tr><tr><td>COSINECURVE</td><td><p>Cosine transition. The cosine transition was already discussed in 1868. Width the advent of high-speed rail it was applied  in production designs. It is e.g. installed on Japanese high speed lines</p>
+<p><strong>Base formula (Curvature)</strong>
+<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-cosinecurve.png" alt="&quot;Cosine curve transition segment&quot;" title="Figure 436 &mdash; Curvature for horizontal Cosine curve transition segment"></td></tr><tr><td><p class="figure">Figure 436 &mdash; Curvature for horizontal Cosine curve transition segment</p></td></tr></table></p>
 </td></tr><tr><td>SINECURVE</td><td><p>Sine transition or sinusoidal transition was suggested 1937. The curvature function is built up of one period of a sine function. The sine curve is characterised by particularly advantageous smoothing properties at the end points. Compared to the clothoid, it is twice as long.</p>
 <blockquote class="note">
 <p>NOTE  also referred to as Klein curve.</p>
 </blockquote>
 <p><strong>Base formula (Curvature)</strong>
-<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-sinecurve.png" alt="&quot;Sine curve transition segment&quot;" title="Figure 434 &mdash; Curvature for horizontal Sine curve transition segment"></td></tr><tr><td><p class="figure">Figure 434 &mdash; Curvature for horizontal Sine curve transition segment</p></td></tr></table></p>
+<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-sinecurve.png" alt="&quot;Sine curve transition segment&quot;" title="Figure 437 &mdash; Curvature for horizontal Sine curve transition segment"></td></tr><tr><td><p class="figure">Figure 437 &mdash; Curvature for horizontal Sine curve transition segment</p></td></tr></table></p>
 </td></tr><tr><td>VIENNESEBEND</td><td><p>The Viennese Bend (R) is an innovative track geometry transition element. Instead of analyzing the vehicle movement at the track plane the optimization efforts target a gravity center line at a defined height above the rails.</p>
 <p>As a consequence the path of the horizontal alignment center line is also influenced by the cant layout. The first part of the curvature formula is assembled from the basic function like the other transition bends. The additional term contains the bank angle &quot;ψ&quot; and the gravity center line height &quot;h&quot; and is unique to the Viennes Bend (R). This term causes a small movement contrary to the main direction in the x,y layout.</p>
 <p><strong>Curvature formula</strong>
-<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-viennesebend.png" alt="&quot;Viennese bend (R) transition segment&quot;" title="Figure 435 &mdash; Curvature for horizontal Viennese bend (R) transition segment"></td></tr><tr><td><p class="figure">Figure 435 &mdash; Curvature for horizontal Viennese bend (R) transition segment</p></td></tr></table></p>
+<table><tr><td style="width: 600px"><img src="../../../figures/ifcalignmenthorizontalsegmenttypeenum-viennesebend.png" alt="&quot;Viennese bend (R) transition segment&quot;" title="Figure 438 &mdash; Curvature for horizontal Viennese bend (R) transition segment"></td></tr><tr><td><p class="figure">Figure 438 &mdash; Curvature for horizontal Viennese bend (R) transition segment</p></td></tr></table></p>
 </td></tr></table>
 </details>
 </section>
@@ -219,13 +219,13 @@
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcgeometricconstraintresource/lexical/ifcalignmenthorizontalsegmenttypeenum.htm">IfcAlignmentHorizontalSegmentTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;blosscurve&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;line&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;circulararc&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;clothoid&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;cosinecurve&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;cubic&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;helmertcurve&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;line&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;blosscurve&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;cosinecurve&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;sinecurve&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;viennesebend&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -233,7 +233,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcAlignmentHorizontalSegmentTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;BLOSSCURVE, <br/>&nbsp;CIRCULARARC, <br/>&nbsp;CLOTHOID, <br/>&nbsp;COSINECURVE, <br/>&nbsp;CUBIC, <br/>&nbsp;HELMERTCURVE, <br/>&nbsp;LINE, <br/>&nbsp;SINECURVE, <br/>&nbsp;VIENNESEBEND);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;LINE, <br/>&nbsp;CIRCULARARC, <br/>&nbsp;CLOTHOID, <br/>&nbsp;CUBIC, <br/>&nbsp;HELMERTCURVE, <br/>&nbsp;BLOSSCURVE, <br/>&nbsp;COSINECURVE, <br/>&nbsp;SINECURVE, <br/>&nbsp;VIENNESEBEND);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcgeometricconstraintresource/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

@@ -1,0 +1,154 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Pset_PreSupportCommon</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 5 index3 4 index4 62 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.5.4.63");
+//-->
+</script>
+
+<h4 class="std">6.5.4.63 Pset_PreSupportCommon</h4>
+<p><span class="self-ref"></span>
+/
+<a href="../../ifcproductextension/lexical/ifcbuiltsystem.htm">IfcBuiltSystem</a>
+ / <span class="self-ref">.TUNNEL_PRESUPPORT.,IfcTunnelTypicalSection</span>
+ / <span class="self-ref">.EXCAVATIONSUPPORT.,IfcElementAssembly</span>
+ / <span class="self-ref">.PRESUPPORTVAULT.,IfcElementAssembly</span>
+ / <span class="self-ref">.PRESUPPORTFACE.</span>
+</p>Properties describing the characteristcs of excavation pre-support measures.
+
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc4x3_add2-to-ifc4x4_draft/index.htm">IFC4X3_ADD2 to IFC4X4_draft</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifcsharedinfrastructureelements/pset/pset_presupportcommon.htm">Pset_PreSupportCommon</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Properties</summary><p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/2oyf$R5hr3XO6glvM3jFoI/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/Pset_PreSupportCommon.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>PreSupportLocation</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+/
+ <a href="../../../penum/penum_presupportlocation.htm">PEnum_PreSupportLocation</a></td><td>
+Specifies whether the pre-support is in face or around circumference.
+
+</td></tr>
+<tr><td>UserDefinedPreSupportLocation</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Specifies a user defined pre-support location. Used when PreSupportLocation is set to USERDEFINED.
+
+</td></tr>
+<tr><td>PreSupportType</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+/
+ <a href="../../../penum/penum_presupporttype.htm">PEnum_PreSupportType</a></td><td>
+Specifies the type of pre-support applied.
+
+</td></tr>
+<tr><td>UserDefinedPreSupportType</td><td>
+<span class="self-ref">P_BOUNDEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Specifies a user defined type of pre-support applied. Used when PreSupporttype is set to USERDEFINED.
+
+</td></tr>
+<tr><td>Arrangement</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+/
+ <a href="../../../penum/penum_presupportarrangement.htm">PEnum_PreSupportArrangement</a></td><td>
+Specifies whether the pre-support is simple or staggered.
+
+</td></tr>
+<tr><td>BoreholeLengthPlanned</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+The planned length of a borehole e.g. in a site investigation program, in metres, as determined by the data provider.
+
+</td></tr>
+<tr><td>BoreholeOverlap</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a>
+</td><td>
+Overlap of staggered boreholes.
+
+</td></tr>
+<tr><td>UsefulLength</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a>
+</td><td>
+Length that can be used, generally length less overlap.
+
+</td></tr>
+<tr><td>DrillingDiameter</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+Property to be removed when Pset_BoreholeConstruction is merged and DrillingDiameter from there is reused.
+
+</td></tr>
+<tr><td>IsBoreholeCased</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
+</td><td>
+Specifies whether the boreholes are cased or not.
+
+</td></tr>
+<tr><td>DrillingMethod</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+Type of drilling method used.
+
+</td></tr>
+<tr><td>AreHolesGrouted</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
+</td><td>
+Specifies whether holes are grouted after insertion of pipes/bars.
+
+</td></tr>
+</table>
+</details>
+</p>
+<p><a href="../../../link/pset_presupportcommon.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

@@ -134,6 +134,39 @@
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
+    <PropertyDef ifdguid="37077fc35d514c84b10ad72b757d9cf2">
+      <Name>RechargeTime</Name>
+      <Definition>Recharge time for a rechargable battery.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDuration" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="609068718bb146cc8d4a31dfdcb29e11">
+      <Name>RuntimeAtFullLoad</Name>
+      <Definition>Runtime at full load of the battery.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDuration" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="4366d15b08dd42e38a7d40ed18352621">
+      <Name>MaximumShortCircuitCurrent</Name>
+      <Definition>Maximun short circuit current of the battery.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricCurrentMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases />
 </PropertySetDef>

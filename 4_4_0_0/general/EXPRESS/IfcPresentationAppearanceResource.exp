@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 5 July 2024
+Monday, 8 July 2024
 
 *)
 
@@ -136,9 +136,9 @@ TYPE IfcReflectanceMethodEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcSurfaceSide = ENUMERATION OF
-	(BOTH
+	(POSITIVE
 	,NEGATIVE
-	,POSITIVE);
+	,BOTH);
 END_TYPE;
 
 TYPE IfcColour = SELECT
@@ -205,8 +205,8 @@ ENTITY IfcBlobTexture
 	RasterFormat : IfcIdentifier;
 	RasterCode : IfcBinary;
  WHERE
-	RasterCodeByteStream : BLENGTH(RasterCode) MOD 8 = 0;
 	SupportedRasterFormat : SELF.RasterFormat IN ['BMP', 'JPG', 'GIF', 'PNG'];
+	RasterCodeByteStream : BLENGTH(RasterCode) MOD 8 = 0;
 END_ENTITY;
 
 ENTITY IfcColourRgb
@@ -235,11 +235,11 @@ ENTITY IfcCurveStyle
 	CurveColour : OPTIONAL IfcColour;
 	ModelOrDraughting : OPTIONAL IfcBoolean;
  WHERE
-	IdentifiableCurveStyle : EXISTS(CurveFont) OR EXISTS(CurveWidth) OR EXISTS(CurveColour);
 	MeasureOfWidth : (NOT(EXISTS(CurveWidth))) OR
 ('IFCMEASURERESOURCE.IFCPOSITIVELENGTHMEASURE' IN TYPEOF(CurveWidth)) OR 
  (('IFCMEASURERESOURCE.IFCDESCRIPTIVEMEASURE' IN TYPEOF(CurveWidth)) AND
  (CurveWidth = 'by layer'));
+	IdentifiableCurveStyle : EXISTS(CurveFont) OR EXISTS(CurveWidth) OR EXISTS(CurveColour);
 END_ENTITY;
 
 ENTITY IfcCurveStyleFont
@@ -299,7 +299,6 @@ ENTITY IfcFillAreaStyle
 	FillStyles : SET [1:?] OF IfcFillStyleSelect;
 	ModelOrDraughting : OPTIONAL IfcBoolean;
  WHERE
-	ConsistentHatchStyleDef : IfcCorrectFillAreaStyle(SELF.FillStyles);
 	MaxOneColour : SIZEOF(QUERY(Style <* SELF.FillStyles |
   'IFCPRESENTATIONAPPEARANCERESOURCE.IFCCOLOUR' IN
    TYPEOF(Style)
@@ -308,6 +307,7 @@ ENTITY IfcFillAreaStyle
   'IFCPRESENTATIONAPPEARANCERESOURCE.IFCEXTERNALLYDEFINEDHATCHSTYLE' IN
    TYPEOF(Style)
   )) <= 1;
+	ConsistentHatchStyleDef : IfcCorrectFillAreaStyle(SELF.FillStyles);
 END_ENTITY;
 
 ENTITY IfcFillAreaStyleHatching
@@ -372,11 +372,11 @@ ENTITY IfcPixelTexture
 	MinPixelInS : Width >= 1;
 	MinPixelInT : Height >= 1;
 	NumberOfColours : {1 <= ColourComponents <= 4};
+	SizeOfPixelList : SIZEOF(Pixel) = (Width * Height);
 	PixelAsByteAndSameLength : SIZEOF(QUERY(temp<* Pixel |
  (BLENGTH(temp) MOD 8 = 0) AND
  (BLENGTH(temp) = BLENGTH(Pixel[1]))
 )) = SIZEOF(Pixel);
-	SizeOfPixelList : SIZEOF(Pixel) = (Width * Height);
 END_ENTITY;
 
 ENTITY IfcPreDefinedColour
@@ -429,8 +429,8 @@ ENTITY IfcSurfaceStyle
 	Side : IfcSurfaceSide;
 	Styles : SET [1:5] OF IfcSurfaceStyleElementSelect;
  WHERE
-	MaxOneExtDefined : SIZEOF(QUERY(Style <* SELF.Styles |
-  'IFCPRESENTATIONAPPEARANCERESOURCE.IFCEXTERNALLYDEFINEDSURFACESTYLE' IN
+	MaxOneShading : SIZEOF(QUERY(Style <* SELF.Styles |
+  'IFCPRESENTATIONAPPEARANCERESOURCE.IFCSURFACESTYLESHADING' IN
    TYPEOF(Style)
   )) <= 1;
 	MaxOneLighting : SIZEOF(QUERY(Style <* SELF.Styles |
@@ -441,12 +441,12 @@ ENTITY IfcSurfaceStyle
   'IFCPRESENTATIONAPPEARANCERESOURCE.IFCSURFACESTYLEREFRACTION' IN
    TYPEOF(Style)
   )) <= 1;
-	MaxOneShading : SIZEOF(QUERY(Style <* SELF.Styles |
-  'IFCPRESENTATIONAPPEARANCERESOURCE.IFCSURFACESTYLESHADING' IN
-   TYPEOF(Style)
-  )) <= 1;
 	MaxOneTextures : SIZEOF(QUERY(Style <* SELF.Styles |
   'IFCPRESENTATIONAPPEARANCERESOURCE.IFCSURFACESTYLEWITHTEXTURES' IN
+   TYPEOF(Style)
+  )) <= 1;
+	MaxOneExtDefined : SIZEOF(QUERY(Style <* SELF.Styles |
+  'IFCPRESENTATIONAPPEARANCERESOURCE.IFCEXTERNALLYDEFINEDSURFACESTYLE' IN
    TYPEOF(Style)
   )) <= 1;
 END_ENTITY;

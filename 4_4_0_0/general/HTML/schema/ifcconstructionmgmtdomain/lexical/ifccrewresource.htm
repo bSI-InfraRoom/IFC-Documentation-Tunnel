@@ -59,6 +59,7 @@
 <th>G</th></tr>
 <tr><td>11</td><td>PredefinedType</td><td><a href="../../ifcconstructionmgmtdomain/lexical/ifccrewresourcetypeenum.htm">IfcCrewResourceTypeEnum</a></td><td>? </td><td>
 Defines types of crew resources.
+
 <blockquote>
 IFC4 New attribute.
 </blockquote>
@@ -133,21 +134,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -161,7 +166,8 @@ IFC4 CHANGE Attribute promoted from subtype <a href="../../ifcconstructionmgmtdo
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>7</td><td>LongDescription</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
-A detailed description of the resource (e.g. the skillset for a labor resource).
+A detailed description of the resource (e.g. the skillset for a labor resource).<br>
+
 <blockquote>
 IFC4 CHANGE  The attribute <i>LongDescription</i> is added replacing the <i>ResourceGroup</i> attribute at subtype <a href="../../ifcconstructionmgmtdomain/lexical/ifcconstructionresource.htm">IfcConstructionResource</a>.
 </blockquote>
@@ -193,6 +199,7 @@ IFC4 CHANGE  New attribute.
 <tr><td colspan="6"><a href="../../ifcconstructionmgmtdomain/lexical/ifccrewresource.htm">IfcCrewResource</a></td></tr>
 <tr><td>11</td><td>PredefinedType</td><td><a href="../../ifcconstructionmgmtdomain/lexical/ifccrewresourcetypeenum.htm">IfcCrewResourceTypeEnum</a></td><td>? </td><td>
 Defines types of crew resources.
+
 <blockquote>
 IFC4 New attribute.
 </blockquote>
@@ -207,14 +214,14 @@ IFC4 New attribute.
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 351.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 364.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifcconstructionmgmtdomain/lexical/ifccrewresourcetype.htm">IfcCrewResourceType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 351 &mdash; IfcCrewResource Object Typing</td></tr></table>
+<tr><td><p class="table">Table 364 &mdash; IfcCrewResource Object Typing</td></tr></table>
 
 <br/><br/>
 

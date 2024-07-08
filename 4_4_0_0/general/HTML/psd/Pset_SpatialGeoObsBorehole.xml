@@ -99,7 +99,7 @@
     </PropertyDef>
     <PropertyDef ifdguid="b7be374c4f26457c9ee6e3030fe27ed8">
       <Name>DrillingMethod</Name>
-      <Definition>Type of drilling methods used to perform the investigation.</Definition>
+      <Definition>Type of drilling method used.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel" />

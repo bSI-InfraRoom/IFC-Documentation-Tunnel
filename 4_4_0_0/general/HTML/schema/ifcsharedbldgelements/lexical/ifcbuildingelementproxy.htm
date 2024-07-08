@@ -80,11 +80,11 @@ IFC4 CHANGE  The attribute <i>CompositionType</i> has been replaced by <i>Prede
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
+<tr><td>HasObjectName</td><td>A Name attribute should be asserted for a building element proxy.
+</td></tr>
 <tr><td>CorrectPredefinedType</td><td>Either the <i>PredefinedType</i> attribute is unset (e.g. because an <a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytype.htm">IfcBuildingElementProxyType</a> is associated), or the inherited attribute <i>ObjectType</i> shall be provided, if the <i>PredefinedType</i> is set to USERDEFINED.
 </td></tr>
 <tr><td>CorrectTypeAssigned</td><td>Either there is no building element proxy type object associated, i.e. the <i>IsTypedBy</i> inverse relationship is not provided, or the associated type object has to be of type <a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytype.htm">IfcBuildingElementProxyType</a>.
-</td></tr>
-<tr><td>HasObjectName</td><td>A Name attribute should be asserted for a building element proxy.
 </td></tr>
 </table>
 
@@ -158,21 +158,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -249,14 +253,14 @@ IFC4 CHANGE  The attribute <i>CompositionType</i> has been replaced by <i>Prede
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 140.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 141.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytype.htm">IfcBuildingElementProxyType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 140 &mdash; IfcBuildingElementProxy Object Typing</td></tr></table>
+<tr><td><p class="table">Table 141 &mdash; IfcBuildingElementProxy Object Typing</td></tr></table>
 
 <blockquote class="note">
 <p>NOTE  The <a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytype.htm">IfcBuildingElementProxyType</a> can be used to share common information among many occurrences of the same proxy without establishing a particular semantic meaning of the type.</p>
@@ -267,7 +271,7 @@ IFC4 CHANGE  The attribute <i>CompositionType</i> has been replaced by <i>Prede
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 141.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 142.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -325,7 +329,7 @@ IFC4 CHANGE  The attribute <i>CompositionType</i> has been replaced by <i>Prede
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 141 &mdash; IfcBuildingElementProxy Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 142 &mdash; IfcBuildingElementProxy Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
@@ -341,7 +345,7 @@ IFC4 CHANGE  The attribute <i>CompositionType</i> has been replaced by <i>Prede
 
 <a id="spatial-containment" />
 <p class="use-head">Spatial Containment</p>
-<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 142.<table>
+<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 143.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingStructure</b></th><th><b>Description</b></th></tr>
@@ -353,7 +357,7 @@ IFC4 CHANGE  The attribute <i>CompositionType</i> has been replaced by <i>Prede
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 142 &mdash; IfcBuildingElementProxy Spatial Containment</td></tr></table>
+<tr><td><p class="table">Table 143 &mdash; IfcBuildingElementProxy Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcBuildingElementProxy</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
 <ul>
@@ -486,10 +490,10 @@ IFC4 CHANGE  The attribute <i>CompositionType</i> has been replaced by <i>Prede
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcbuiltelement.htm">IfcBuiltElement</a>)<b>;</b><br/>
 &nbsp;&nbsp;PredefinedType : <span class="keyword">OPTIONAL</span> <a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytypeenum.htm">IfcBuildingElementProxyTypeEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
+&nbsp;&nbsp;HasObjectName : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR<br/>
  (PredefinedType &lt;&gt; <a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytypeenum.htm">IfcBuildingElementProxyTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) OR<br/>
  ((PredefinedType = <a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytypeenum.htm">IfcBuildingElementProxyTypeEnum</a>.<span class="self-ref">USERDEFINED</span>) AND EXISTS (SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.ObjectType));<br/>&nbsp;&nbsp;CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR<br/>
-  (&#39;IFCSHAREDBLDGELEMENTS.<a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytype.htm">IfcBuildingElementProxyType</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));<br/>&nbsp;&nbsp;HasObjectName : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a>.Name);<br/><span class="keyword">END_ENTITY;</span><br/>
+  (&#39;IFCSHAREDBLDGELEMENTS.<a href="../../ifcsharedbldgelements/lexical/ifcbuildingelementproxytype.htm">IfcBuildingElementProxyType</a>&#39; IN TYPEOF(SELF\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedbldgelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

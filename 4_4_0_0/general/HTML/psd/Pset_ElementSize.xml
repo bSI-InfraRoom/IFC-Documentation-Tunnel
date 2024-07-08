@@ -48,6 +48,51 @@
       <NameAliases />
       <DefinitionAliases />
     </PropertyDef>
+    <PropertyDef ifdguid="9aa93573818943ee9e7ad7e898fddfae">
+      <Name>NominalThickness</Name>
+      <Definition>The nominal thickness of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNonNegativeLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Thickness</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">The nominal wall thickness of the duct at the connection point.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="8e82b300d21211e1800000215ad4efdf">
+      <Name>NominalDiameter</Name>
+      <Definition>Nominal diameter or width of the object.
+
+Nominal diameter or width of the tubes in the tube bundle.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Diameter</NameAlias>
+        <NameAlias lang="ja-JP">公称直径</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">チューブ束内のチューブ公称直径又は幅</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="57bb281fab044a17bd4e5f47b3cdd9f6">
+      <Name>NominalWeight</Name>
+      <Definition>Nominal weight of the object.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
   </PropertyDefs>
   <PsetDefinitionAliases />
 </PropertySetDef>

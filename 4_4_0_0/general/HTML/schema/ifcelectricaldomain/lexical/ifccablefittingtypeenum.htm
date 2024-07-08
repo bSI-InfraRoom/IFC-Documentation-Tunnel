@@ -53,9 +53,9 @@
 <tr><td>CONNECTOR</td><td><p>A fitting that joins two cable segments of the same connector type (though potentially different gender).</p>
 </td></tr><tr><td>ENTRY</td><td><p>A fitting that begins a cable segment at a non-electrical element such as a grounding clamp attached to a pipe.</p>
 </td></tr><tr><td>EXIT</td><td><p>A fitting that ends a cable segment at a non-electrical element such as a grounding clamp attached to a pipe or to the ground.</p>
-</td></tr><tr><td>FANOUT</td><td><p>A fan out is a special cable fitting that provides a safe transition from multi-fiber cable units to individual fibers.</p>
 </td></tr><tr><td>JUNCTION</td><td><p>A fitting that joins three or more segments of arbitrary connector types for signal splitting or multiplexing.</p>
 </td></tr><tr><td>TRANSITION</td><td><p>A fitting that joins two cable segments of different connector types.</p>
+</td></tr><tr><td>FANOUT</td><td><p>A fan out is a special cable fitting that provides a safe transition from multi-fiber cable units to individual fibers.</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined type.</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined type.</p>
 </td></tr></table>
@@ -68,9 +68,9 @@
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;connector&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;entry&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;exit&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;fanout&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;junction&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;transition&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;fanout&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -78,7 +78,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcCableFittingTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;CONNECTOR, <br/>&nbsp;ENTRY, <br/>&nbsp;EXIT, <br/>&nbsp;FANOUT, <br/>&nbsp;JUNCTION, <br/>&nbsp;TRANSITION, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;CONNECTOR, <br/>&nbsp;ENTRY, <br/>&nbsp;EXIT, <br/>&nbsp;JUNCTION, <br/>&nbsp;TRANSITION, <br/>&nbsp;FANOUT, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcelectricaldomain/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

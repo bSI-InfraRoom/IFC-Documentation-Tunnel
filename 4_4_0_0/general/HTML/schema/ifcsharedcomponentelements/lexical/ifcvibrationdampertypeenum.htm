@@ -39,12 +39,12 @@
 <details open="open"><summary>Type definition</summary></details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>AXIAL_YIELD</td><td><p>A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The axial yield type is a damper that yields energy by absorbing the steel material against deformation in the axial direction, that is, in the direction of expansion and contraction.</p>
-</td></tr><tr><td>BENDING_YIELD</td><td><p>A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The bending yield type is a damper, which yields steel material by bending.</p>
-</td></tr><tr><td>FRICTION</td><td><p>The friction type is a damper utilizing friction acting on the contact surface of a material.</p>
-</td></tr><tr><td>RUBBER</td><td><p>The rubber mold is a damper that absorbs energy by utilizing deformation of laminated rubber. The difference between the seismic isolation bearing and the rubber type damper is whether or not to support the weight of the upper structures. The rubber damper does not transmit the weight of the upper structures to the sub structure.</p>
+<tr><td>BENDING_YIELD</td><td><p>A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The bending yield type is a damper, which yields steel material by bending.</p>
 </td></tr><tr><td>SHEAR_YIELD</td><td><p>A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The shear yield type is a damper, which causes the steel material to yield for deformation in the direction perpendicular to the member.</p>
+</td></tr><tr><td>AXIAL_YIELD</td><td><p>A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The axial yield type is a damper that yields energy by absorbing the steel material against deformation in the axial direction, that is, in the direction of expansion and contraction.</p>
+</td></tr><tr><td>FRICTION</td><td><p>The friction type is a damper utilizing friction acting on the contact surface of a material.</p>
 </td></tr><tr><td>VISCOUS</td><td><p>The viscous type is a damper that absorbs energy by utilizing the resistance of a viscous body.</p>
+</td></tr><tr><td>RUBBER</td><td><p>The rubber mold is a damper that absorbs energy by utilizing deformation of laminated rubber. The difference between the seismic isolation bearing and the rubber type damper is whether or not to support the weight of the upper structures. The rubber damper does not transmit the weight of the upper structures to the sub structure.</p>
 </td></tr><tr><td>USERDEFINED</td><td><p>User-defined vibration damper type.</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>Undefined vibration damper type.</p>
 </td></tr></table>
@@ -54,12 +54,12 @@
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcsharedcomponentelements/lexical/ifcvibrationdampertypeenum.htm">IfcVibrationDamperTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;axial_yield&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;bending_yield&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;friction&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rubber&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;shear_yield&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;axial_yield&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;friction&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;viscous&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rubber&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -67,7 +67,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcVibrationDamperTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;AXIAL_YIELD, <br/>&nbsp;BENDING_YIELD, <br/>&nbsp;FRICTION, <br/>&nbsp;RUBBER, <br/>&nbsp;SHEAR_YIELD, <br/>&nbsp;VISCOUS, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;BENDING_YIELD, <br/>&nbsp;SHEAR_YIELD, <br/>&nbsp;AXIAL_YIELD, <br/>&nbsp;FRICTION, <br/>&nbsp;VISCOUS, <br/>&nbsp;RUBBER, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedcomponentelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

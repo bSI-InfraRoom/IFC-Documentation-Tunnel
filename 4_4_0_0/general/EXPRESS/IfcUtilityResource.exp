@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Friday, 5 July 2024
+Monday, 8 July 2024
 
 *)
 
@@ -59,19 +59,19 @@ TYPE IfcGloballyUniqueId = STRING(22) FIXED;
 END_TYPE;
 
 TYPE IfcChangeActionEnum = ENUMERATION OF
-	(ADDED
-	,DELETED
+	(NOCHANGE
 	,MODIFIED
-	,NOCHANGE
+	,ADDED
+	,DELETED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcStateEnum = ENUMERATION OF
-	(LOCKED
+	(READWRITE
 	,READONLY
-	,READONLYLOCKED
-	,READWRITE
-	,READWRITELOCKED);
+	,LOCKED
+	,READWRITELOCKED
+	,READONLYLOCKED);
 END_TYPE;
 
 ENTITY IfcApplication;

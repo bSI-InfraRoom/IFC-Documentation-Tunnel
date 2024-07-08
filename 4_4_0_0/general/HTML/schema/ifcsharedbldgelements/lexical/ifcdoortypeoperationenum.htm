@@ -53,7 +53,7 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the type</h5>
-<details open="open"><summary>Type definition</summary><p>This enumeration defines the basic ways to describe how an <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a> or <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a> operate, as shown in Figure 333. It combines the partitioning of the access barrier into single or multiple panels and the operation types of those panels.</p>
+<details open="open"><summary>Type definition</summary><p>This enumeration defines the basic ways to describe how an <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a> or <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a> operate, as shown in Figure 336. It combines the partitioning of the access barrier into single or multiple panels and the operation types of those panels.</p>
 <p>In the most common case of swinging doors the <span class="self-ref">IfcDoorTypeOperationEnum</span> defined the hinge side (left hung or right hung) and the opening direction (opening to the left, opening to the right). Whether the door opens inwards or outwards is determined by the local coordinate system of the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a></p>
 <blockquote class="note">
 <p>NOTE  There are different definitions in various countries on what a left opening or left hung or left swing door is (same for right). Therefore the IFC definition terms may derive from the local standard and may need to be mapped appropriately.</p>
@@ -295,7 +295,7 @@ thereby always open.</td>
 </tbody>
 </table>
 </td></tr>
-<tr><td><p class="figure">Figure 333 &mdash; Door operations</p></td></tr>
+<tr><td><p class="figure">Figure 336 &mdash; Door operations</p></td></tr>
 </table>
 <p>NOTE</p>
 <ol>
@@ -308,25 +308,25 @@ thereby always open.</td>
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>DOUBLE_DOOR_DOUBLE_SWING</td><td></td></tr><tr><td>DOUBLE_DOOR_FOLDING</td><td><p>Door with two panels, one is folding to the left the other is folding to the right.</p>
-</td></tr><tr><td>DOUBLE_DOOR_LIFTING_VERTICAL</td><td></td></tr><tr><td>DOUBLE_DOOR_SINGLE_SWING</td><td><p>Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction.</p>
+<tr><td>SINGLE_SWING_LEFT</td><td><p>Door with one panel that opens (swings) to the left. The hinges are on the left side as viewed in the direction of the positive y-axis.</p>
+</td></tr><tr><td>SINGLE_SWING_RIGHT</td><td><p>Door with one panel that opens (swings) to the right. The hinges are on the right side as viewed in the direction of the positive y-axis.</p>
+</td></tr><tr><td>DOUBLE_DOOR_SINGLE_SWING</td><td><p>Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction.</p>
 </td></tr><tr><td>DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT</td><td><p>Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction.</p>
 </td></tr><tr><td>DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT</td><td><p>Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction.</p>
-</td></tr><tr><td>DOUBLE_DOOR_SLIDING</td><td><p>Door with two panels, one is sliding to the left the other is sliding to the right.</p>
 </td></tr><tr><td>DOUBLE_SWING_LEFT</td><td><p>Door with one panel that swings in both directions and to the left in the main trafic direction. Also called double acting door.</p>
 </td></tr><tr><td>DOUBLE_SWING_RIGHT</td><td><p>Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door.</p>
+</td></tr><tr><td>DOUBLE_DOOR_DOUBLE_SWING</td><td></td></tr><tr><td>SLIDING_TO_LEFT</td><td><p>Door with one panel that is sliding to the left.</p>
+</td></tr><tr><td>SLIDING_TO_RIGHT</td><td><p>Door with one panel that is sliding to the right.</p>
+</td></tr><tr><td>DOUBLE_DOOR_SLIDING</td><td><p>Door with two panels, one is sliding to the left the other is sliding to the right.</p>
 </td></tr><tr><td>FOLDING_TO_LEFT</td><td><p>Door with one panel that is folding to the left.</p>
 </td></tr><tr><td>FOLDING_TO_RIGHT</td><td><p>Door with one panel that is folding to the right.</p>
-</td></tr><tr><td>LIFTING_HORIZONTAL</td><td></td></tr><tr><td>LIFTING_VERTICAL_LEFT</td><td></td></tr><tr><td>LIFTING_VERTICAL_RIGHT</td><td></td></tr><tr><td>REVOLVING</td><td><p>An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis (the four panels are described by a single <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a> panel property).</p>
-</td></tr><tr><td>REVOLVING_VERTICAL</td><td></td></tr><tr><td>ROLLINGUP</td><td><p>Door that opens by rolling up.</p>
-</td></tr><tr><td>SINGLE_SWING_LEFT</td><td><p>Door with one panel that opens (swings) to the left. The hinges are on the left side as viewed in the direction of the positive y-axis.</p>
-</td></tr><tr><td>SINGLE_SWING_RIGHT</td><td><p>Door with one panel that opens (swings) to the right. The hinges are on the right side as viewed in the direction of the positive y-axis.</p>
-</td></tr><tr><td>SLIDING_TO_LEFT</td><td><p>Door with one panel that is sliding to the left.</p>
-</td></tr><tr><td>SLIDING_TO_RIGHT</td><td><p>Door with one panel that is sliding to the right.</p>
+</td></tr><tr><td>DOUBLE_DOOR_FOLDING</td><td><p>Door with two panels, one is folding to the left the other is folding to the right.</p>
+</td></tr><tr><td>REVOLVING</td><td><p>An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis (the four panels are described by a single <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a> panel property).</p>
+</td></tr><tr><td>ROLLINGUP</td><td><p>Door that opens by rolling up.</p>
 </td></tr><tr><td>SWING_FIXED_LEFT</td><td><p>Door with one panel that opens (swings) to the left and one fixed panel. The hinges of the swinging panel are on the left side as viewed in the direction of the positive y-axis.</p>
 </td></tr><tr><td>SWING_FIXED_RIGHT</td><td><p>Door with one panel that opens (swings) to the right and one fixed panel. The hinges of the swinging panel are on the right side as viewed in the direction
 of the positive y-axis.</p>
-</td></tr><tr><td>USERDEFINED</td><td><p>User defined operation type.</p>
+</td></tr><tr><td>DOUBLE_DOOR_LIFTING_VERTICAL</td><td></td></tr><tr><td>LIFTING_HORIZONTAL</td><td></td></tr><tr><td>LIFTING_VERTICAL_LEFT</td><td></td></tr><tr><td>LIFTING_VERTICAL_RIGHT</td><td></td></tr><tr><td>REVOLVING_VERTICAL</td><td></td></tr><tr><td>USERDEFINED</td><td><p>User defined operation type.</p>
 </td></tr><tr><td>NOTDEFINED</td><td><p>A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open.</p>
 </td></tr></table>
 </details>
@@ -335,29 +335,29 @@ of the positive y-axis.</p>
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcsharedbldgelements/lexical/ifcdoortypeoperationenum.htm">IfcDoorTypeOperationEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_door_double_swing&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_door_folding&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_door_lifting_vertical&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;single_swing_left&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;single_swing_right&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_door_single_swing&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_door_single_swing_opposite_left&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_door_single_swing_opposite_right&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_door_sliding&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_swing_left&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_swing_right&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_door_double_swing&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;sliding_to_left&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;sliding_to_right&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_door_sliding&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;folding_to_left&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;folding_to_right&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_door_folding&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;revolving&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rollingup&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;swing_fixed_left&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;swing_fixed_right&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;double_door_lifting_vertical&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;lifting_horizontal&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;lifting_vertical_left&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;lifting_vertical_right&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;revolving&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;revolving_vertical&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;rollingup&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;single_swing_left&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;single_swing_right&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;sliding_to_left&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;sliding_to_right&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;swing_fixed_left&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;swing_fixed_right&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
@@ -365,7 +365,7 @@ of the positive y-axis.</p>
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcDoorTypeOperationEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;DOUBLE_DOOR_DOUBLE_SWING, <br/>&nbsp;DOUBLE_DOOR_FOLDING, <br/>&nbsp;DOUBLE_DOOR_LIFTING_VERTICAL, <br/>&nbsp;DOUBLE_DOOR_SINGLE_SWING, <br/>&nbsp;DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT, <br/>&nbsp;DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT, <br/>&nbsp;DOUBLE_DOOR_SLIDING, <br/>&nbsp;DOUBLE_SWING_LEFT, <br/>&nbsp;DOUBLE_SWING_RIGHT, <br/>&nbsp;FOLDING_TO_LEFT, <br/>&nbsp;FOLDING_TO_RIGHT, <br/>&nbsp;LIFTING_HORIZONTAL, <br/>&nbsp;LIFTING_VERTICAL_LEFT, <br/>&nbsp;LIFTING_VERTICAL_RIGHT, <br/>&nbsp;REVOLVING, <br/>&nbsp;REVOLVING_VERTICAL, <br/>&nbsp;ROLLINGUP, <br/>&nbsp;SINGLE_SWING_LEFT, <br/>&nbsp;SINGLE_SWING_RIGHT, <br/>&nbsp;SLIDING_TO_LEFT, <br/>&nbsp;SLIDING_TO_RIGHT, <br/>&nbsp;SWING_FIXED_LEFT, <br/>&nbsp;SWING_FIXED_RIGHT, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;SINGLE_SWING_LEFT, <br/>&nbsp;SINGLE_SWING_RIGHT, <br/>&nbsp;DOUBLE_DOOR_SINGLE_SWING, <br/>&nbsp;DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT, <br/>&nbsp;DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT, <br/>&nbsp;DOUBLE_SWING_LEFT, <br/>&nbsp;DOUBLE_SWING_RIGHT, <br/>&nbsp;DOUBLE_DOOR_DOUBLE_SWING, <br/>&nbsp;SLIDING_TO_LEFT, <br/>&nbsp;SLIDING_TO_RIGHT, <br/>&nbsp;DOUBLE_DOOR_SLIDING, <br/>&nbsp;FOLDING_TO_LEFT, <br/>&nbsp;FOLDING_TO_RIGHT, <br/>&nbsp;DOUBLE_DOOR_FOLDING, <br/>&nbsp;REVOLVING, <br/>&nbsp;ROLLINGUP, <br/>&nbsp;SWING_FIXED_LEFT, <br/>&nbsp;SWING_FIXED_RIGHT, <br/>&nbsp;DOUBLE_DOOR_LIFTING_VERTICAL, <br/>&nbsp;LIFTING_HORIZONTAL, <br/>&nbsp;LIFTING_VERTICAL_LEFT, <br/>&nbsp;LIFTING_VERTICAL_RIGHT, <br/>&nbsp;REVOLVING_VERTICAL, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcsharedbldgelements/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

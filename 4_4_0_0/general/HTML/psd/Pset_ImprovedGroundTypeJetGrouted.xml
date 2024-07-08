@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="155d5d9da1ec4082aacfc7b1dd82597c" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X4" />
+  <Name>Pset_ImprovedGroundTypeJetGrouted</Name>
+  <Definition>Properties for improved ground of type JETGROUTED. (Applicability must be amended when PR with PDT JETGROUTED has been merged.)</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcImprovedGround/JETGROUTED</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcImprovedGround/JETGROUTED</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="abafe56cb3e649868b0ce65fc572d316">
+      <Name>DistanceFromSurface</Name>
+      <Definition>Distance to start of grout body.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="c54a133a86dc4634b597eb72814f9d14">
+      <Name>GroutBodyLength</Name>
+      <Definition>Length of the grout body.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="147f5f93aa774cc395bc037a4a36b9b2">
+      <Name>LengthEmbedmentInRock</Name>
+      <Definition>Embedment in rock.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="85d28980ad464d90bb1b05adf7186361">
+      <Name>GroutBodyDiameter</Name>
+      <Definition>Grout body diameter.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7962f2f07fd24d2a9abfc0bbfe358b1d">
+      <Name>JetGroutingMethod</Name>
+      <Definition>Method of jet grouting.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_JetGroutingMethod">
+            <EnumItem>SINGLEPHASE</EnumItem>
+            <EnumItem>TWOPHASE</EnumItem>
+            <EnumItem>THREEPHASE</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>SINGLEPHASE</Name>
+              <Definition>Jet grouting using single fluid (generally cement and water).</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TWOPHASE</Name>
+              <Definition>Jet grouting using two fluids (generally grout and water).</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+            <ConstantDef>
+              <Name>THREEPHASE</Name>
+              <Definition>Jet grouting using three fluids (generally grout, water and air).</Definition>
+              <NameAliases />
+              <DefinitionAliases />
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="6d2e9d2586df4094ba6fb4b77cc5f0ad">
+      <Name>GroundPressure</Name>
+      <Definition>Pressure at the nozzle.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="639c0067eb444ed8b9d177247c1f1cc2">
+      <Name>VolumetricFlowRate</Name>
+      <Definition>The volumetric flow rate of the fluid.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcVolumetricFlowRateMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Volumetric Flow Rate</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="613eb37dfe0d46aab49a24a4aef587e1">
+      <Name>RotationalSpeed</Name>
+      <Definition>Speed of rotation of nozzle.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcRotationalFrequencyMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1e4b1c2dfab14048a4ba9f66435366fe">
+      <Name>AirPressure</Name>
+      <Definition>Air pressure of nozzle.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="ae6573b981884c63b015b91b7d261b3f">
+      <Name>WaterPressure</Name>
+      <Definition>Water pressure of nozzle.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

@@ -55,7 +55,7 @@
 </details>
 <details open="open"><summary>Enumeration definition</summary><table class="attributes">
 <tr><th>Constant</th><th>Description</th></tr>
-<tr><td>SOIL_BORING_POINT</td><td></td></tr><tr><td>TERRAIN</td><td></td></tr><tr><td>VEGETATION</td><td><p>Plant life or plant cover (as of an area). For example trees, shrubs, herbs, grasses, ferns, and mosses.</p>
+<tr><td>TERRAIN</td><td></td></tr><tr><td>SOIL_BORING_POINT</td><td></td></tr><tr><td>VEGETATION</td><td><p>Plant life or plant cover (as of an area). For example trees, shrubs, herbs, grasses, ferns, and mosses.</p>
 </td></tr><tr><td>USERDEFINED</td><td></td></tr><tr><td>NOTDEFINED</td><td></td></tr></table>
 </details>
 </section>
@@ -63,8 +63,8 @@
 <h5 class="num">Formal representations</h5>
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;<a href="../../ifcproductextension/lexical/ifcgeographicelementtypeenum.htm">IfcGeographicElementTypeEnum</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;soil_boring_point&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;terrain&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;soil_boring_point&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;vegetation&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
@@ -73,7 +73,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcGeographicElementTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
-&nbsp;SOIL_BORING_POINT, <br/>&nbsp;TERRAIN, <br/>&nbsp;VEGETATION, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;TERRAIN, <br/>&nbsp;SOIL_BORING_POINT, <br/>&nbsp;VEGETATION, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0000.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

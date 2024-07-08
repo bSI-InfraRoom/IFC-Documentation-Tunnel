@@ -161,21 +161,25 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
+
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -252,20 +256,20 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 174.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 175.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifcsharedbldgelements/lexical/ifcmembertype.htm">IfcMemberType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 174 &mdash; IfcMember Object Typing</td></tr></table>
+<tr><td><p class="table">Table 175 &mdash; IfcMember Object Typing</td></tr></table>
 
 <br/><br/>
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 175.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 176.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -326,20 +330,20 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 175 &mdash; IfcMember Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 176 &mdash; IfcMember Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="quantity-sets" />
 <p class="use-head">Quantity Sets</p>
-<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 176.<table>
+<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 177.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>QsetName</b></th><th><b>Quantities</b></th></tr>
 <tr><td><a href="../../ifcsharedbldgelements/qset/qto_memberbasequantities.htm">Qto_MemberBaseQuantities</a></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 176 &mdash; IfcMember Quantity Sets</td></tr></table>
+<tr><td><p class="table">Table 177 &mdash; IfcMember Quantity Sets</td></tr></table>
 
 <br/><br/>
 
@@ -354,7 +358,7 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 
 <a id="spatial-containment" />
 <p class="use-head">Spatial Containment</p>
-<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 177.<table>
+<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 178.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingStructure</b></th><th><b>Description</b></th></tr>
@@ -366,7 +370,7 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 177 &mdash; IfcMember Spatial Containment</td></tr></table>
+<tr><td><p class="table">Table 178 &mdash; IfcMember Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcMember</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
 <ul>
@@ -378,7 +382,7 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 
 <a id="axis-3d-geometry" />
 <p class="use-head">Axis 3D Geometry</p>
-<p>The <a href="../../templates/axis-3d-geometry.htm">Axis 3D Geometry</a> concept template applies to this entity as shown in Table 178.<table>
+<p>The <a href="../../templates/axis-3d-geometry.htm">Axis 3D Geometry</a> concept template applies to this entity as shown in Table 179.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Identifier</b></th><th><b>Type</b></th><th><b>Items</b></th><th><b>Description</b></th></tr>
@@ -386,7 +390,7 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 178 &mdash; IfcMember Axis 3D Geometry</td></tr></table>
+<tr><td><p class="table">Table 179 &mdash; IfcMember Axis 3D Geometry</td></tr></table>
 
 <p>The axis representation can be used to represent the system length of a member that may extent the body length of the member.</p>
 <blockquote class="note">
@@ -400,11 +404,11 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <p>The <a href="../../templates/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a> concept applies to this entity.</p><p>The following additional constraints apply to the 'SweptSolid' representation:</p>
 <ul>
 <li><strong>Solid</strong>: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcrevolvedareasolid.htm">IfcRevolvedAreaSolid</a> shall be supported</li>
-<li><strong>Profile</strong>: all subtypes of <a href="../../ifcprofileresource/lexical/ifcprofiledef.htm">IfcProfileDef</a> (with exception of <a href="../../ifcprofileresource/lexical/ifcarbitraryopenprofiledef.htm">IfcArbitraryOpenProfileDef</a>)</li>
+<li><strong>Profile</strong>: all subtypes of <a href="../../ifcprofileresource/lexical/ifcprofiledef.htm">IfcProfileDef</a> (with exception of <a href="../../ifcprofileresource/lexical/ifcarbitraryopenprofiledef.htm">IfcArbitraryOpenProfileDef</a>) </li>
 <li><strong>Extrusion</strong>: All extrusion directions shall be supported.</li>
 </ul>
-<p>Figure 350 illustrates a 'SweptSolid' geometric representation. There are no restrictions or conventions on how to use the local placement (black), solid of extrusion placement (red) and profile placement (green).</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcmember_sweptsolid-01.png" alt="&quot;standard member&quot;" title="Figure 350 &mdash; Member swept solid"></td></tr><tr><td><p class="figure">Figure 350 &mdash; Member swept solid</p></td></tr></table></p>
+<p>Figure 353 illustrates a 'SweptSolid' geometric representation. There are no restrictions or conventions on how to use the local placement (black), solid of extrusion placement (red) and profile placement (green).</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcmember_sweptsolid-01.png" alt="&quot;standard member&quot;" title="Figure 353 &mdash; Member swept solid"></td></tr><tr><td><p class="figure">Figure 353 &mdash; Member swept solid</p></td></tr></table></p>
 
 <br/><br/>
 
@@ -436,14 +440,14 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <li><strong>Extrusion</strong>: see 'SweptSolid' geometric representation</li>
 <li><strong>Boolean result</strong>: The <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> shall be supported, allowing for Boolean differences between the swept solid (here <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>) and one or several <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a> (or its subtypes).</li>
 </ul>
-<p>Figure 351 illustrates a 'Clipping' geometric representation with use of <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> between an <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> and an <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a> to create a clipped body.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcmember_clipping-01.png" alt="&quot;clipped member&quot;" title="Figure 351 &mdash; Member clipping"></td></tr><tr><td><p class="figure">Figure 351 &mdash; Member clipping</p></td></tr></table></p>
+<p>Figure 354 illustrates a 'Clipping' geometric representation with use of <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> between an <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> and an <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a> to create a clipped body.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcmember_clipping-01.png" alt="&quot;clipped member&quot;" title="Figure 354 &mdash; Member clipping"></td></tr><tr><td><p class="figure">Figure 354 &mdash; Member clipping</p></td></tr></table></p>
 
 <br/><br/>
 
 <a id="product-assignment" />
 <p class="use-head">Product Assignment</p>
-<p>The <a href="../../templates/product-assignment.htm">Product Assignment</a> concept template applies to this entity as shown in Table 179.<table>
+<p>The <a href="../../templates/product-assignment.htm">Product Assignment</a> concept template applies to this entity as shown in Table 180.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Type</b></th><th><b>Description</b></th></tr>
@@ -453,7 +457,7 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 179 &mdash; IfcMember Product Assignment</td></tr></table>
+<tr><td><p class="table">Table 180 &mdash; IfcMember Product Assignment</td></tr></table>
 
 <br/><br/>
 
