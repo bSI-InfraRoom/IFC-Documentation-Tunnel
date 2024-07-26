@@ -45,7 +45,8 @@
 <tr><td>18</td><td>SchemaReference</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
 An optional attribute for referencing a schema that defines the possible content and structure of the dataset (e.g. xsd).
 </td><td>X</td></tr>
-<tr><td></td><td><i>DatasetInfoForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesdataset.htm">IfcRelAssociatesDataset</a><br/>@RelatingDataset</td><td>S[0:?]</td><td></td><td>X</td></tr>
+<tr><td></td><td><i>DatasetInfoForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesdataset.htm">IfcRelAssociatesDataset</a><br/>@RelatingDataset</td><td>S[0:?]</td><td>The objects to which the dataset information applies.
+</td><td>X</td></tr>
 <tr><td></td><td><i>HasDatasetReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdatasetreference.htm">IfcDatasetReference</a><br/>@ReferencedDataset</td><td>S[0:?]</td><td>The dataset references to which the document applies.
 </td><td>X</td></tr>
 </table>
@@ -65,7 +66,6 @@ An optional attribute for referencing a schema that defines the possible content
 <tr><td colspan="6"><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentinformation.htm">IfcDocumentInformation</a></td></tr>
 <tr><td>1</td><td>Identification</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td></td><td>
 Identifier that uniquely identifies a document.
-
 <blockquote>
 IFC4 CHANGE  Attribute renamed from <i>DocumentId</i>.
 </blockquote>
@@ -78,7 +78,6 @@ Description of document and its content.
 </td><td>X</td></tr>
 <tr><td>4</td><td>Location</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
 Resource identifier or locator, provided as URI, URN or URL, of the document information for online references.
-
 <blockquote>
 IFC4 CHANGE  New attribute added at the place of the removed attribute <i>DocumentReferences</i>.
 </blockquote>
@@ -103,14 +102,12 @@ The persons and/or organizations who have created this document or contributed t
 </td><td>X</td></tr>
 <tr><td>11</td><td>CreationTime</td><td><a href="../../ifcdatetimeresource/lexical/ifcdatetime.htm">IfcDateTime</a></td><td>? </td><td>
 Date and time stamp when the document was originally created.
-
 <blockquote>
 IFC4 CHANGE The data type has been changed to <a href="../../ifcdatetimeresource/lexical/ifcdatetime.htm">IfcDateTime</a>, the date time string according to ISO8601.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>12</td><td>LastRevisionTime</td><td><a href="../../ifcdatetimeresource/lexical/ifcdatetime.htm">IfcDateTime</a></td><td>? </td><td>
 Date and time stamp when this document version was created.
-
 <blockquote>
 IFC4 CHANGE The data type has been changed to <a href="../../ifcdatetimeresource/lexical/ifcdatetime.htm">IfcDateTime</a>, the date time string according to ISO8601.
 </blockquote>
@@ -129,14 +126,12 @@ IFC4 CHANGE  The data type has been changed from entity data type to <a href=".
 </td><td>X</td></tr>
 <tr><td>14</td><td>ValidFrom</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a></td><td>? </td><td>
 Date when the document becomes valid.
-
 <blockquote>
 IFC4 CHANGE The data type has been changed to <a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>, the date string according to ISO8601.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>15</td><td>ValidUntil</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a></td><td>? </td><td>
 Date until which the document remains valid.
-
 <blockquote>
 IFC4 CHANGE The data type has been changed to <a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>, the date string according to ISO8601.
 </blockquote>
@@ -153,8 +148,7 @@ The current status of the document. Examples of status values that might be used
 <li>REVISION</li>
 </ul>
 </td><td>X</td></tr>
-<tr><td></td><td><i>DocumentInfoForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesdocument.htm">IfcRelAssociatesDocument</a><br/>@RelatingDocument</td><td>S[0:?]</td><td>The document information with which objects are associated.
-
+<tr><td></td><td><i>DocumentInfoForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesdocument.htm">IfcRelAssociatesDocument</a><br/>@RelatingDocument</td><td>S[0:?]</td><td>The objects to which the document information applies.
 <blockquote>
 IFC4 CHANGE  New inverse attribute.
 </blockquote>
@@ -169,7 +163,8 @@ IFC4 CHANGE  New inverse attribute.
 <tr><td>18</td><td>SchemaReference</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
 An optional attribute for referencing a schema that defines the possible content and structure of the dataset (e.g. xsd).
 </td><td>X</td></tr>
-<tr><td></td><td><i>DatasetInfoForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesdataset.htm">IfcRelAssociatesDataset</a><br/>@RelatingDataset</td><td>S[0:?]</td><td></td><td>X</td></tr>
+<tr><td></td><td><i>DatasetInfoForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesdataset.htm">IfcRelAssociatesDataset</a><br/>@RelatingDataset</td><td>S[0:?]</td><td>The objects to which the dataset information applies.
+</td><td>X</td></tr>
 <tr><td></td><td><i>HasDatasetReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdatasetreference.htm">IfcDatasetReference</a><br/>@ReferencedDataset</td><td>S[0:?]</td><td>The dataset references to which the document applies.
 </td><td>X</td></tr>
 </table>

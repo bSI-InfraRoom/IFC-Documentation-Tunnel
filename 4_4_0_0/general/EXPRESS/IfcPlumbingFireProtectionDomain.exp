@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 9 July 2024
+Friday, 26 July 2024
 
 *)
 
@@ -36,10 +36,10 @@ REFERENCE FROM IFCSHAREDBLDGSERVICEELEMENTS
 TYPE IfcFireSuppressionTerminalTypeEnum = ENUMERATION OF
 	(BREECHINGINLET
 	,FIREHYDRANT
+	,FIREMONITOR
 	,HOSEREEL
 	,SPRINKLER
 	,SPRINKLERDEFLECTOR
-	,FIREMONITOR
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -57,9 +57,9 @@ TYPE IfcSanitaryTerminalTypeEnum = ENUMERATION OF
 	(BATH
 	,BIDET
 	,CISTERN
+	,SANITARYFOUNTAIN
 	,SHOWER
 	,SINK
-	,SANITARYFOUNTAIN
 	,TOILETPAN
 	,URINAL
 	,WASHHANDBASIN

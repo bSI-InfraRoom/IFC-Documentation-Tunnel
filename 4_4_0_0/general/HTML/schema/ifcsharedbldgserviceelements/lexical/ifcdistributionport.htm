@@ -141,25 +141,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -177,7 +173,6 @@ Reference to the representations of the product, being either a representation (
 <tr><td></td><td><i>ReferencedInStructures</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:?]</td><td></td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifcport.htm">IfcPort</a></i></td></tr>
 <tr><td></td><td><i>ContainedIn</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectsporttoelement.htm">IfcRelConnectsPortToElement</a><br/>@RelatingPort</td><td>S[0:1]</td><td>Reference to the element to port connection relationship. The relationship then refers to the element in which this port is contained.
-
 <blockquote>
 IFC4 CHANGE  The cardinality has been changed from 1:1 to 0:1. IFC4 DEPRECATION  The inverse relationship is deprecated for fixed ports due to deprecation of <a href="../../ifcproductextension/lexical/ifcrelconnectsporttoelement.htm">IfcRelConnectsPortToElement</a> for this usage. Use inverse relationship <i>Nests</i> instead.
 </blockquote>
@@ -201,7 +196,7 @@ Enumeration that identifies the system type.  If a system type is defined, the p
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcdistributionport.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcDistributionPort</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="product-local-placement" />
 <p class="use-head">Product Local Placement</p>
@@ -218,7 +213,7 @@ Enumeration that identifies the system type.  If a system type is defined, the p
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 256.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 274.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -264,7 +259,7 @@ Enumeration that identifies the system type.  If a system type is defined, the p
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 256 &mdash; IfcDistributionPort Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 274 &mdash; IfcDistributionPort Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
@@ -282,14 +277,14 @@ Enumeration that identifies the system type.  If a system type is defined, the p
 <li><strong>IfcDistributionPort</strong> (<a href="../../ifcproductextension/lexical/ifcrelconnectsports.htm">IfcRelConnectsPorts</a>) : Indicates a connection to another port having the same type and opposite flow direction. For port connections between elements, the <i>RelatingPort</i> is set to a port having <i>FlowDirection=SOURCE</i> and the <i>RelatedPort</i> is set to a port having <i>FlowDirection=SINK</i>. For aggregation scenarios, ports on a device may be mapped to aggregated devices within, in which case ports on the outer device indicate a single <i>FlowDirection</i> but have an additional connection internally to a port on an aggregated inner device. Refer to <a href="../../ifchvacdomain/lexical/ifcunitaryequipment.htm">IfcUnitaryEquipment</a> for an example.</li>
 <li><a href="../../ifcproductextension/lexical/ifcdistributionelement.htm">IfcDistributionElement</a> (through <a href="../../ifcproductextension/lexical/ifcrelconnectsporttoelement.htm">IfcRelConnectsPortToElement</a>): For dynamic ports, indicates the containing element.</li>
 </ul>
-<p>Figure 383 illustrates distribution port connectivity.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcdistributionport-connection.png" alt="&quot;Connection Use Definition&quot;" title="Figure 383 &mdash; Distribution port connectivity"></td></tr><tr><td><p class="figure">Figure 383 &mdash; Distribution port connectivity</p></td></tr></table></p>
+<p>Figure 400 illustrates distribution port connectivity.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcdistributionport-connection.png" alt="&quot;Connection Use Definition&quot;" title="Figure 400 &mdash; Distribution port connectivity"></td></tr><tr><td><p class="figure">Figure 400 &mdash; Distribution port connectivity</p></td></tr></table></p>
 
 <br/><br/>
 
 <a id="product-assignment" />
 <p class="use-head">Product Assignment</p>
-<p>The <a href="../../templates/product-assignment.htm">Product Assignment</a> concept template applies to this entity as shown in Table 257.<table>
+<p>The <a href="../../templates/product-assignment.htm">Product Assignment</a> concept template applies to this entity as shown in Table 275.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Type</b></th><th><b>Description</b></th></tr>
@@ -299,7 +294,7 @@ Enumeration that identifies the system type.  If a system type is defined, the p
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 257 &mdash; IfcDistributionPort Product Assignment</td></tr></table>
+<tr><td><p class="table">Table 275 &mdash; IfcDistributionPort Product Assignment</td></tr></table>
 
 <p>The <strong>IfcDistributionPort</strong> may be assigned to the following entities using relationships as indicated:</p>
 <ul>

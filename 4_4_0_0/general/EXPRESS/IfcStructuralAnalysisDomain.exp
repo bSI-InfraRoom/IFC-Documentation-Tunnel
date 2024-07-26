@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 9 July 2024
+Friday, 26 July 2024
 
 *)
 
@@ -72,64 +72,64 @@ REFERENCE FROM IFCSTRUCTURALLOADRESOURCE
 );
 
 TYPE IfcActionSourceTypeEnum = ENUMERATION OF
-	(DEAD_LOAD_G
-	,COMPLETION_G1
-	,LIVE_LOAD_Q
-	,SNOW_S
-	,WIND_W
-	,PRESTRESSING_P
-	,SETTLEMENT_U
-	,TEMPERATURE_T
-	,EARTHQUAKE_E
-	,FIRE
-	,IMPULSE
-	,IMPACT
-	,TRANSPORT
-	,ERECTION
-	,PROPPING
-	,SYSTEM_IMPERFECTION
-	,SHRINKAGE
-	,CREEP
-	,LACK_OF_FIT
+	(BRAKES
 	,BUOYANCY
-	,ICE
+	,COMPLETION_G1
+	,CREEP
 	,CURRENT
-	,WAVE
+	,DEAD_LOAD_G
+	,EARTHQUAKE_E
+	,ERECTION
+	,FIRE
+	,ICE
+	,IMPACT
+	,IMPULSE
+	,LACK_OF_FIT
+	,LIVE_LOAD_Q
+	,PRESTRESSING_P
+	,PROPPING
 	,RAIN
-	,BRAKES
+	,SETTLEMENT_U
+	,SHRINKAGE
+	,SNOW_S
+	,SYSTEM_IMPERFECTION
+	,TEMPERATURE_T
+	,TRANSPORT
+	,WAVE
+	,WIND_W
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcActionTypeEnum = ENUMERATION OF
-	(PERMANENT_G
+	(EXTRAORDINARY_A
+	,PERMANENT_G
 	,VARIABLE_Q
-	,EXTRAORDINARY_A
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcAnalysisModelTypeEnum = ENUMERATION OF
 	(IN_PLANE_LOADING_2D
-	,OUT_PLANE_LOADING_2D
 	,LOADING_3D
+	,OUT_PLANE_LOADING_2D
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcAnalysisTheoryTypeEnum = ENUMERATION OF
 	(FIRST_ORDER_THEORY
+	,FULL_NONLINEAR_THEORY
 	,SECOND_ORDER_THEORY
 	,THIRD_ORDER_THEORY
-	,FULL_NONLINEAR_THEORY
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcLoadGroupTypeEnum = ENUMERATION OF
-	(LOAD_GROUP
-	,LOAD_CASE
+	(LOAD_CASE
 	,LOAD_COMBINATION
+	,LOAD_GROUP
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -141,29 +141,29 @@ END_TYPE;
 
 TYPE IfcStructuralCurveActivityTypeEnum = ENUMERATION OF
 	(CONST
-	,LINEAR
-	,POLYGONAL
-	,EQUIDISTANT
-	,SINUS
-	,PARABOLA
 	,DISCRETE
+	,EQUIDISTANT
+	,LINEAR
+	,PARABOLA
+	,POLYGONAL
+	,SINUS
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcStructuralCurveMemberTypeEnum = ENUMERATION OF
-	(RIGID_JOINED_MEMBER
-	,PIN_JOINED_MEMBER
-	,CABLE
-	,TENSION_MEMBER
+	(CABLE
 	,COMPRESSION_MEMBER
+	,PIN_JOINED_MEMBER
+	,RIGID_JOINED_MEMBER
+	,TENSION_MEMBER
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcStructuralSurfaceActivityTypeEnum = ENUMERATION OF
-	(CONST
-	,BILINEAR
+	(BILINEAR
+	,CONST
 	,DISCRETE
 	,ISOCONTOUR
 	,USERDEFINED
@@ -256,10 +256,10 @@ ENTITY IfcStructuralCurveAction
 	ProjectedOrTrue : OPTIONAL IfcProjectedOrTrueLengthEnum;
 	PredefinedType : IfcStructuralCurveActivityTypeEnum;
  WHERE
+	HasObjectType : (PredefinedType <> IfcStructuralCurveActivityTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 	ProjectedIsGlobal : (NOT EXISTS(ProjectedOrTrue)) OR
 ((ProjectedOrTrue <> PROJECTED_LENGTH) OR
  (SELF\IfcStructuralActivity.GlobalOrLocal = GLOBAL_COORDS));
-	HasObjectType : (PredefinedType <> IfcStructuralCurveActivityTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 	SuitablePredefinedType : PredefinedType <> IfcStructuralCurveActivityTypeEnum.EQUIDISTANT;
 END_ENTITY;
 
@@ -302,8 +302,8 @@ END_ENTITY;
 ENTITY IfcStructuralLinearAction
  SUBTYPE OF (IfcStructuralCurveAction);
  WHERE
-	SuitableLoadType : SIZEOF(['IFCSTRUCTURALLOADRESOURCE.IFCSTRUCTURALLOADLINEARFORCE', 'IFCSTRUCTURALLOADRESOURCE.IFCSTRUCTURALLOADTEMPERATURE'] * TYPEOF(SELF\IfcStructuralActivity.AppliedLoad)) = 1;
 	ConstPredefinedType : SELF\IfcStructuralCurveAction.PredefinedType = IfcStructuralCurveActivityTypeEnum.CONST;
+	SuitableLoadType : SIZEOF(['IFCSTRUCTURALLOADRESOURCE.IFCSTRUCTURALLOADLINEARFORCE', 'IFCSTRUCTURALLOADRESOURCE.IFCSTRUCTURALLOADTEMPERATURE'] * TYPEOF(SELF\IfcStructuralActivity.AppliedLoad)) = 1;
 END_ENTITY;
 
 ENTITY IfcStructuralLoadCase
@@ -345,8 +345,8 @@ END_ENTITY;
 ENTITY IfcStructuralPlanarAction
  SUBTYPE OF (IfcStructuralSurfaceAction);
  WHERE
-	SuitableLoadType : SIZEOF(['IFCSTRUCTURALLOADRESOURCE.IFCSTRUCTURALLOADPLANARFORCE', 'IFCSTRUCTURALLOADRESOURCE.IFCSTRUCTURALLOADTEMPERATURE'] * TYPEOF(SELF\IfcStructuralActivity.AppliedLoad)) = 1;
 	ConstPredefinedType : SELF\IfcStructuralSurfaceAction.PredefinedType = IfcStructuralSurfaceActivityTypeEnum.CONST;
+	SuitableLoadType : SIZEOF(['IFCSTRUCTURALLOADRESOURCE.IFCSTRUCTURALLOADPLANARFORCE', 'IFCSTRUCTURALLOADRESOURCE.IFCSTRUCTURALLOADTEMPERATURE'] * TYPEOF(SELF\IfcStructuralActivity.AppliedLoad)) = 1;
 END_ENTITY;
 
 ENTITY IfcStructuralPointAction
@@ -392,10 +392,10 @@ ENTITY IfcStructuralSurfaceAction
 	ProjectedOrTrue : OPTIONAL IfcProjectedOrTrueLengthEnum;
 	PredefinedType : IfcStructuralSurfaceActivityTypeEnum;
  WHERE
+	HasObjectType : (PredefinedType <> IfcStructuralSurfaceActivityTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 	ProjectedIsGlobal : (NOT EXISTS(ProjectedOrTrue)) OR
 ((ProjectedOrTrue <> PROJECTED_LENGTH) OR
  (SELF\IfcStructuralActivity.GlobalOrLocal = GLOBAL_COORDS));
-	HasObjectType : (PredefinedType <> IfcStructuralSurfaceActivityTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 END_ENTITY;
 
 ENTITY IfcStructuralSurfaceConnection

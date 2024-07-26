@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 9 July 2024
+Friday, 26 July 2024
 
 *)
 
@@ -112,18 +112,18 @@ TYPE IfcURIReference = STRING;
 END_TYPE;
 
 TYPE IfcDocumentConfidentialityEnum = ENUMERATION OF
-	(PUBLIC
-	,RESTRICTED
-	,CONFIDENTIAL
+	(CONFIDENTIAL
 	,PERSONAL
+	,PUBLIC
+	,RESTRICTED
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcDocumentStatusEnum = ENUMERATION OF
 	(DRAFT
-	,FINALDRAFT
 	,FINAL
+	,FINALDRAFT
 	,REVISION
 	,NOTDEFINED);
 END_TYPE;

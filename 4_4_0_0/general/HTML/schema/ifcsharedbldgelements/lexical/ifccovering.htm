@@ -105,7 +105,6 @@ NOTE  The <i>PredefinedType</i> shall only be used, if no <a href="../../ifcsha
 <tr><td></td><td><i>CoversSpaces</i></td><td><a href="../../ifcsharedbldgelements/lexical/ifcrelcoversspaces.htm">IfcRelCoversSpaces</a><br/>@RelatedCoverings</td><td>S[0:1]</td><td>Reference to the objectified relationship that handles the relationship of the covering to the covered space.
 </td><td>X</td></tr>
 <tr><td></td><td><i>CoversElements</i></td><td><a href="../../ifcsharedbldgelements/lexical/ifcrelcoversbldgelements.htm">IfcRelCoversBldgElements</a><br/>@RelatedCoverings</td><td>S[0:1]</td><td>Reference to the objectified relationship that handles the relationship of the covering to the covered element.
-
 <blockquote>
 IFC4 CHANGE Renamed into <i>CoversElements</i> for consistency.
 </blockquote>
@@ -190,25 +189,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -275,7 +270,6 @@ NOTE  The <i>PredefinedType</i> shall only be used, if no <a href="../../ifcsha
 <tr><td></td><td><i>CoversSpaces</i></td><td><a href="../../ifcsharedbldgelements/lexical/ifcrelcoversspaces.htm">IfcRelCoversSpaces</a><br/>@RelatedCoverings</td><td>S[0:1]</td><td>Reference to the objectified relationship that handles the relationship of the covering to the covered space.
 </td><td>X</td></tr>
 <tr><td></td><td><i>CoversElements</i></td><td><a href="../../ifcsharedbldgelements/lexical/ifcrelcoversbldgelements.htm">IfcRelCoversBldgElements</a><br/>@RelatedCoverings</td><td>S[0:1]</td><td>Reference to the objectified relationship that handles the relationship of the covering to the covered element.
-
 <blockquote>
 IFC4 CHANGE Renamed into <i>CoversElements</i> for consistency.
 </blockquote>
@@ -286,7 +280,7 @@ IFC4 CHANGE Renamed into <i>CoversElements</i> for consistency.
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifccovering.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcCovering</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
@@ -294,7 +288,7 @@ IFC4 CHANGE Renamed into <i>CoversElements</i> for consistency.
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 158.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 176.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -313,33 +307,33 @@ IFC4 CHANGE Renamed into <i>CoversElements</i> for consistency.
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 158 &mdash; IfcCovering Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 176 &mdash; IfcCovering Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="quantity-sets" />
 <p class="use-head">Quantity Sets</p>
-<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 159.<table>
+<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 177.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>QsetName</b></th><th><b>Quantities</b></th></tr>
 <tr><td><a href="../../ifcsharedbldgelements/qset/qto_coveringbasequantities.htm">Qto_CoveringBaseQuantities</a></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 159 &mdash; IfcCovering Quantity Sets</td></tr></table>
+<tr><td><p class="table">Table 177 &mdash; IfcCovering Quantity Sets</td></tr></table>
 
 <br/><br/>
 
 <a id="spatial-containment" />
 <p class="use-head">Spatial Containment</p>
-<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 160.<table>
+<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 178.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingStructure</b></th></tr>
 <tr><td><a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 160 &mdash; IfcCovering Spatial Containment</td></tr></table>
+<tr><td><p class="table">Table 178 &mdash; IfcCovering Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcCovering</span> has a containment relationship within the hierarchical spatial structure.</p>
 <ul>
@@ -350,7 +344,7 @@ IFC4 CHANGE Renamed into <i>CoversElements</i> for consistency.
 
 <a id="material-layer-set-usage" />
 <p class="use-head">Material Layer Set Usage</p>
-<p>The <a href="../../templates/material-layer-set-usage.htm">Material Layer Set Usage</a> concept template applies to this entity as shown in Table 161.<table>
+<p>The <a href="../../templates/material-layer-set-usage.htm">Material Layer Set Usage</a> concept template applies to this entity as shown in Table 179.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Name</b></th><th><b>Description</b></th></tr>
@@ -362,7 +356,7 @@ IFC4 CHANGE Renamed into <i>CoversElements</i> for consistency.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 161 &mdash; IfcCovering Material Layer Set Usage</td></tr></table>
+<tr><td><p class="table">Table 179 &mdash; IfcCovering Material Layer Set Usage</td></tr></table>
 
 <p>Coverings for surfaces (CEILING, FLOORING, CLADDING, CEILING, ROOFING) may have materials defined according to layers.</p>
 
@@ -370,7 +364,7 @@ IFC4 CHANGE Renamed into <i>CoversElements</i> for consistency.
 
 <a id="material-profile-set-usage" />
 <p class="use-head">Material Profile Set Usage</p>
-<p>The <a href="../../templates/material-profile-set-usage.htm">Material Profile Set Usage</a> concept template applies to this entity as shown in Table 162.<table>
+<p>The <a href="../../templates/material-profile-set-usage.htm">Material Profile Set Usage</a> concept template applies to this entity as shown in Table 180.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Name</b></th><th><b>Description</b></th></tr>
@@ -378,7 +372,7 @@ IFC4 CHANGE Renamed into <i>CoversElements</i> for consistency.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 162 &mdash; IfcCovering Material Profile Set Usage</td></tr></table>
+<tr><td><p class="table">Table 180 &mdash; IfcCovering Material Profile Set Usage</td></tr></table>
 
 <p>Coverings for edges (MOLDING, SKIRTINGBOARD) may have materials defined according to profiles.</p>
 
@@ -395,7 +389,7 @@ IFC4 CHANGE Renamed into <i>CoversElements</i> for consistency.
 <table>
  <tr>
   <td><img src="../../../figures/ifccovering_standard-1-layout1.gif" alt="standard planar covering" border="0" height="274" width="399"></td>
-  <td><blockquote class="example">EXAMPLE&nbsp; Figure 347 illustrates a planar surface representation where the
+  <td><blockquote class="example">EXAMPLE&nbsp; Figure 364 illustrates a planar surface representation where the
 area of <span class="self-ref">IfcCovering</span> is given by an <a href="../../ifctopologyresource/lexical/ifcpolyloop.htm">IfcPolyLoop</a> for
 planar base surfaces (here provided by the
 <a href="../../ifcproductextension/lexical/ifcrelspaceboundary.htm">IfcRelSpaceBoundary</a>). The implicit planar surface of the <a href="../../ifctopologyresource/lexical/ifcpolyloop.htm">IfcPolyLoop</a> shall be
@@ -404,14 +398,14 @@ identical with the planar surface defined by the
  </tr>
  <tr>
   <td>
-<p class="figure">Figure 347 &mdash; Covering surface planar</p>
+<p class="figure">Figure 364 &mdash; Covering surface planar</p>
 </td>
  </tr>
 </table>
 <table>
  <tr>
   <td><img src="../../../figures/ifccovering_standard-2-layout1.gif" alt="standard cylindrical covering" border="0" height="274" width="399"></td>
-  <td><blockquote class="example">EXAMPLE&nbsp; Figure 348 illustrates a cylindrical surface representation where
+  <td><blockquote class="example">EXAMPLE&nbsp; Figure 365 illustrates a cylindrical surface representation where
 the area of the <span class="self-ref">IfcCovering</span> is given by an
 <a href="../../ifcgeometryresource/lexical/ifcsurfaceoflinearextrusion.htm">IfcSurfaceOfLinearExtrusion</a> for cylindrical base surfaces
 (here given by the <a href="../../ifcproductextension/lexical/ifcrelspaceboundary.htm">IfcRelSpaceBoundary</a>, such as caused by a
@@ -432,7 +426,7 @@ the <a href="../../ifcgeometryresource/lexical/ifcsurfaceoflinearextrusion.htm">
  
 <tr>
   <td>
-<p class="figure">Figure 348 &mdash; Covering surface
+<p class="figure">Figure 365 &mdash; Covering surface
 cylindrical</p>
 </td>
   <td>&nbsp;</td>
@@ -454,7 +448,7 @@ cylindrical</p>
 <tr>
   
 <td><img src="../../../figures/ifccovering_advanced-1-layout1.gif" alt="advanded solid covering" border="0" height="274" width="399"></td>
-  <td><blockquote class="example">EXAMPLE&nbsp; Figure 349 illustrates a body representation where the volume of
+  <td><blockquote class="example">EXAMPLE&nbsp; Figure 366 illustrates a body representation where the volume of
 <span class="self-ref">IfcCovering</span> is given by an <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> for
 planar base surfaces (here given by the
 <a href="../../ifcproductextension/lexical/ifcrelspaceboundary.htm">IfcRelSpaceBoundary</a>). The extruded area (<a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a>) shall 
@@ -465,7 +459,7 @@ be coplanar to the surface defined by the
  <tr>
   
 <td>
-<p class="figure">Figure 349 &mdash; Covering body planar</p>
+<p class="figure">Figure 366 &mdash; Covering body planar</p>
 </td>
   <td>&nbsp;</td>
  </tr>
@@ -475,7 +469,7 @@ be coplanar to the surface defined by the
 <tr>
   
 <td><img src="../../../figures/ifccovering_advanced-2-layout1.gif" alt="advanced solid covering" border="0" height="274" width="399"></td>
-  <td><blockquote class="example">EXAMPLE&nbsp; Figure 350 illustrates a body representation where the volume of
+  <td><blockquote class="example">EXAMPLE&nbsp; Figure 367 illustrates a body representation where the volume of
 the <span class="self-ref">IfcCovering</span> is given by an <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>
 for cylindrical base surfaces (here given by the
 <a href="../../ifcproductextension/lexical/ifcrelspaceboundary.htm">IfcRelSpaceBoundary</a> - such as caused by a round wall).</blockquote>
@@ -495,7 +489,7 @@ parameter of the <a href="../../ifcgeometryresource/lexical/ifcsurfaceoflinearex
 <tr>
   
 <td>
-<p class="figure">Figure 350 &mdash; Covering body circular</p>
+<p class="figure">Figure 367 &mdash; Covering body circular</p>
 </td>
   <td>&nbsp;</td>
  </tr>
@@ -615,6 +609,7 @@ parameter of the <a href="../../ifcgeometryresource/lexical/ifcsurfaceoflinearex
 
 <tr><td colspan="3"><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm">IfcBuiltElement</a></td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#product-assignment">Product Assignment</a></td><td><a href="../../templates/product-assignment.htm">Product Assignment</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#surface-3d-geometry">Surface 3D Geometry</a></td><td><a href="../../templates/surface-3d-geometry.htm">Surface 3D Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#material-set">Material Set</a></td><td><a href="../../templates/material-set.htm">Material Set</a></td><td>General Usage</td></tr>
 
 <tr><td colspan="3"><a href="../../ifcsharedbldgelements/lexical/ifccovering.htm">IfcCovering</a></td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifccovering.htm#object-typing">Object Typing</a></td><td><a href="../../templates/object-typing.htm">Object Typing</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifccovering.htm#property-sets-for-objects">Property Sets for Objects</a></td><td><a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a></td><td>General Usage</td></tr>

@@ -46,12 +46,12 @@
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x2.</p>
 </blockquote>
-<p>Figure 547 illustrates parameters of the circular hollow profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of:</p>
+<p>Figure 564 illustrates parameters of the circular hollow profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of:</p>
 <ul>
 <li><i>IfcSweptAreaSolid.Position</i></li>
 </ul>
 <p>By using offsets of the position location, the parameterized profile can be positioned centric (using x,y offsets = 0.), or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points (for example, upper-left bound). The parameterized profile is defined by a set of parameter attributes.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifccirclehollowprofiledef.gif" alt="&quot;CHS-shape profile&quot;" title="Figure 547 &mdash; Circle hollow profile"></td></tr><tr><td><p class="figure">Figure 547 &mdash; Circle hollow profile</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifccirclehollowprofiledef.gif" alt="&quot;CHS-shape profile&quot;" title="Figure 564 &mdash; Circle hollow profile"></td></tr><tr><td><p class="figure">Figure 564 &mdash; Circle hollow profile</p></td></tr></table></p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -88,13 +88,11 @@ Defines the type of geometry into which this profile definition shall be resolve
 Human-readable name of the profile, for example according to a standard profile table. As noted above, machine-readable standardized profile designations should be provided in <i>IfcExternalReference.ItemReference</i>.
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasExternalReference</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.htm">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to external information, e.g. library, classification, or document information, which is associated with the profile.
-
 <blockquote>
 IFC4 CHANGE New inverse attribute
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasProperties</i></td><td><a href="../../ifcprofileresource/lexical/ifcprofileproperties.htm">IfcProfileProperties</a><br/>@ProfileDefinition</td><td>S[0:?]</td><td>Additional properties of the profile, for example mechanical properties.
-
 <blockquote>
 IFC4 CHANGE New inverse attribute
 </blockquote>

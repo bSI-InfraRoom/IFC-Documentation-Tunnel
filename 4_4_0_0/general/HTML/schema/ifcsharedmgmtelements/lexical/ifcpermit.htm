@@ -144,25 +144,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -202,7 +198,7 @@ IFC4 CHANGE The attribute has been added.
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcpermit.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcPermit</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="approval-association" />
 <p class="use-head">Approval</p>
@@ -212,7 +208,7 @@ IFC4 CHANGE The attribute has been added.
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 307.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 326.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -224,22 +220,22 @@ IFC4 CHANGE The attribute has been added.
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 307 &mdash; IfcPermit Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 326 &mdash; IfcPermit Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="aggregation" />
 <p class="use-head">Aggregation</p>
-<p>The <a href="../../templates/aggregation.htm">Aggregation</a> concept template applies to this entity as shown in Table 308.<table>
+<p>The <a href="../../templates/aggregation.htm">Aggregation</a> concept template applies to this entity as shown in Table 327.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 308 &mdash; IfcPermit Aggregation</td></tr></table>
+<tr><td><p class="table">Table 327 &mdash; IfcPermit Aggregation</td></tr></table>
 
 <br/><br/>
 
 <a id="object-nesting" />
 <p class="use-head">Nesting</p>
-<p>The <a href="../../templates/object-nesting.htm">Object Nesting</a> concept template applies to this entity as shown in Table 309.<table>
+<p>The <a href="../../templates/object-nesting.htm">Object Nesting</a> concept template applies to this entity as shown in Table 328.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Type</b></th><th><b>Description</b></th></tr>
@@ -247,13 +243,13 @@ IFC4 CHANGE The attribute has been added.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 309 &mdash; IfcPermit Object Nesting</td></tr></table>
+<tr><td><p class="table">Table 328 &mdash; IfcPermit Object Nesting</td></tr></table>
 
 <br/><br/>
 
 <a id="control-assignment" />
 <p class="use-head">Control Assignment</p>
-<p>The <a href="../../templates/control-assignment.htm">Control Assignment</a> concept applies to this entity.</p><p>Figure 393 illustrates assignment relationships as indicated:</p>
+<p>The <a href="../../templates/control-assignment.htm">Control Assignment</a> concept applies to this entity.</p><p>Figure 410 illustrates assignment relationships as indicated:</p>
 <ul>
 <li><a href="../../ifckernel/lexical/ifcactor.htm">IfcActor</a> (<a href="../../ifckernel/lexical/ifcrelassignstoactor.htm">IfcRelAssignsToActor</a>): Organization issuing the permit such as a local government agency or security organization.</li>
 </ul>
@@ -261,7 +257,7 @@ IFC4 CHANGE The attribute has been added.
 <ul>
 <li><a href="../../ifckernel/lexical/ifcactor.htm">IfcActor</a>: Organization(s) bound to the permit, typically a single contractor.</li>
 </ul>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcpermit-assignment.png" alt="&quot;Assignment Use Definition&quot;" title="Figure 393 &mdash; Permit assignment"></td></tr><tr><td><p class="figure">Figure 393 &mdash; Permit assignment</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcpermit-assignment.png" alt="&quot;Assignment Use Definition&quot;" title="Figure 410 &mdash; Permit assignment"></td></tr><tr><td><p class="figure">Figure 410 &mdash; Permit assignment</p></td></tr></table></p>
 
 <br/><br/>
 

@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 9 July 2024
+Friday, 26 July 2024
 
 *)
 
@@ -73,8 +73,8 @@ TYPE IfcConstructionMaterialResourceTypeEnum = ENUMERATION OF
 	,METAL
 	,PLASTIC
 	,WOOD
-	,NOTDEFINED
-	,USERDEFINED);
+	,USERDEFINED
+	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcConstructionProductResourceTypeEnum = ENUMERATION OF

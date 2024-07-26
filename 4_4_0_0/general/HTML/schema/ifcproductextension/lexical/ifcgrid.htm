@@ -52,7 +52,7 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcGrid</span> ia a planar design grid defined in 3D space used as an aid in locating structural and design elements. The position of the grid (<i>ObjectPlacement</i>) is defined by a 3D coordinate system (and thereby the design grid can be used in plan, section or in any position relative to the world coordinate system). The position can be relative to the object placement of other products or grids. The XY plane of the 3D coordinate system is used to place the grid axes, which are 2D curves (for example, line, circle, arc, polyline).</p>
 <p>The inherited attributes <i>Name</i> and <i>Description</i> can be used to define a descriptive name of the grid and to indicate the grid's purpose. A grid is defined by (normally) two, or (in case of a triangular grid) three lists of grid axes. The following figures shows some examples.</p>
-<p>A grid may support a rectangular layout as shown in Figure 300, a radial layout as shown in Figure 301, or a triangular layout as shown in Figure 302.</p>
+<p>A grid may support a rectangular layout as shown in Figure 317, a radial layout as shown in Figure 318, or a triangular layout as shown in Figure 319.</p>
 <blockquote class="note">
 <p>NOTE  The <i>PredefinedType</i> denotes the type of grid that is represented by <span class="self-ref">IfcGrid</span>. The instantiation of <a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a>'s has to agree to the <i>PredefinedType</i>, if provided.</p>
 </blockquote>
@@ -74,13 +74,13 @@
         </tr>
         <tr>
           <td width="320">
-            <p class="figure">Figure 300 &mdash; Grid rectangular layout</p>
+            <p class="figure">Figure 317 &mdash; Grid rectangular layout</p>
           </td>
           <td width="320">
-            <p class="figure">Figure 301 &mdash; Grid radial layout</p>
+            <p class="figure">Figure 318 &mdash; Grid radial layout</p>
           </td>
           <td width="320">
-            <p class="figure">Figure 302 &mdash; Grid triangular layout</p>
+            <p class="figure">Figure 319 &mdash; Grid triangular layout</p>
           </td>
         </tr>
       </tbody>
@@ -115,7 +115,7 @@ Informal Propositions:</p>
         </td>
         <td align="right" valign="top" width="320">
           <img src="../../../figures/ifcdesigngrid-ip2.gif" alt="IP2" border="0" height="97" width="306">
-          <p class="figure">Figure 303 &mdash; Grid intersections</p>
+          <p class="figure">Figure 320 &mdash; Grid intersections</p>
         </td>
       </tr>
     </table>
@@ -134,7 +134,6 @@ List of grid axes defining the third row of grid lines. It may be given in the c
 </td><td>X</td></tr>
 <tr><td>11</td><td>PredefinedType</td><td><a href="../../ifcproductextension/lexical/ifcgridtypeenum.htm">IfcGridTypeEnum</a></td><td>? </td><td>
 Predefined types to define the particular type of the grid.
-
 <blockquote>
 IFC4 Change  New attribute.
 </blockquote>
@@ -209,25 +208,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -245,7 +240,6 @@ Reference to the representations of the product, being either a representation (
 <tr><td></td><td><i>ReferencedInStructures</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:?]</td><td></td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifcpositioningelement.htm">IfcPositioningElement</a></i></td></tr>
 <tr><td></td><td><i>ContainedInStructure</i></td><td><a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:1]</td><td>Relationship to a spatial structure element, to which the positioning element is primarily associated.
-
 <blockquote>
 IFC2x CHANGE  The inverse relationship has been added to <a href="../../ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a> with upward compatibility
 </blockquote>
@@ -266,7 +260,6 @@ List of grid axes defining the third row of grid lines. It may be given in the c
 </td><td>X</td></tr>
 <tr><td>11</td><td>PredefinedType</td><td><a href="../../ifcproductextension/lexical/ifcgridtypeenum.htm">IfcGridTypeEnum</a></td><td>? </td><td>
 Predefined types to define the particular type of the grid.
-
 <blockquote>
 IFC4 Change  New attribute.
 </blockquote>
@@ -281,14 +274,14 @@ IFC4 Change  New attribute.
 <summary>Concept usage</summary>
 <a id="grid-attributes" />
 <p class="use-head">Grid Attributes</p>
-<p>The <a href="../../templates/grid-attributes.htm">Grid Attributes</a> concept template applies to this entity as shown in Table 99.<table>
+<p>The <a href="../../templates/grid-attributes.htm">Grid Attributes</a> concept template applies to this entity as shown in Table 117.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>UAxes</b></th><th><b>VAxes</b></th><th><b>WAxes</b></th></tr>
 <tr><td></td><td></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 99 &mdash; IfcGrid Grid Attributes</td></tr></table>
+<tr><td><p class="table">Table 117 &mdash; IfcGrid Grid Attributes</td></tr></table>
 
 <br/><br/>
 

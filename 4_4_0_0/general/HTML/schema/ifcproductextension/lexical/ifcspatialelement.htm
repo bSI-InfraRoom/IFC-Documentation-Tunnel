@@ -77,13 +77,11 @@ NOTE  The spatial containment relationship, established by <a href="../../ifcpr
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>ServicedBySystems</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatedBuildings</td><td>S[0:?]</td><td>Set of relationships to systems, that provides a certain service to the spatial element for which it is defined. The relationship is handled by the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>.
-
 <blockquote>
 IFC4 CHANGE  The inverse attribute has been promoted to the new supertype <span class="self-ref">IfcSpatialElement</span> with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>ReferencesElements</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatingStructure</td><td>S[0:?]</td><td>Set of spatial reference relationships, that holds those elements, which are referenced, but not contained, within this element of the project spatial structure.
-
 <blockquote class="note">
 NOTE  The spatial reference relationship, established by <a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a>, is not required to be an hierarchical relationship, i.e. each element can be assigned to 0, 1 or many spatial structure elements.
 </blockquote>
@@ -185,25 +183,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -232,13 +226,11 @@ NOTE  The spatial containment relationship, established by <a href="../../ifcpr
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>ServicedBySystems</i></td><td><a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a><br/>@RelatedBuildings</td><td>S[0:?]</td><td>Set of relationships to systems, that provides a certain service to the spatial element for which it is defined. The relationship is handled by the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelservicesbuildings.htm">IfcRelServicesBuildings</a>.
-
 <blockquote>
 IFC4 CHANGE  The inverse attribute has been promoted to the new supertype <span class="self-ref">IfcSpatialElement</span> with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>ReferencesElements</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatingStructure</td><td>S[0:?]</td><td>Set of spatial reference relationships, that holds those elements, which are referenced, but not contained, within this element of the project spatial structure.
-
 <blockquote class="note">
 NOTE  The spatial reference relationship, established by <a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a>, is not required to be an hierarchical relationship, i.e. each element can be assigned to 0, 1 or many spatial structure elements.
 </blockquote>
@@ -274,11 +266,11 @@ IFC4x3 CHANGE New inverse relationship.
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcspatialelement.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcSpatialElement</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 118.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 136.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -301,13 +293,13 @@ IFC4x3 CHANGE New inverse relationship.
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 118 &mdash; IfcSpatialElement Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 136 &mdash; IfcSpatialElement Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="footprint-geomset-geometry" />
 <p class="use-head">FootPrint GeomSet Geometry</p>
-<p>The <a href="../../templates/footprint-geomset-geometry.htm">FootPrint GeomSet Geometry</a> concept template applies to this entity as shown in Table 119.<table>
+<p>The <a href="../../templates/footprint-geomset-geometry.htm">FootPrint GeomSet Geometry</a> concept template applies to this entity as shown in Table 137.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Identifier</b></th><th><b>Type</b></th><th><b>Items</b></th><th><b>Description</b></th></tr>
@@ -315,46 +307,46 @@ IFC4x3 CHANGE New inverse relationship.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 119 &mdash; IfcSpatialElement FootPrint GeomSet Geometry</td></tr></table>
+<tr><td><p class="table">Table 137 &mdash; IfcSpatialElement FootPrint GeomSet Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="group-spatial-connectivity" />
 <p class="use-head">Group Spatial Connectivity</p>
-<p>The <a href="../../templates/group-spatial-connectivity.htm">Group Spatial Connectivity</a> concept template applies to this entity as shown in Table 120.<table>
+<p>The <a href="../../templates/group-spatial-connectivity.htm">Group Spatial Connectivity</a> concept template applies to this entity as shown in Table 138.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>ReferencedInStructures</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 120 &mdash; IfcSpatialElement Group Spatial Connectivity</td></tr></table>
+<tr><td><p class="table">Table 138 &mdash; IfcSpatialElement Group Spatial Connectivity</td></tr></table>
 
 <br/><br/>
 
 <a id="spatial-interference" />
 <p class="use-head">Spatial Interference</p>
-<p>The <a href="../../templates/spatial-interference.htm">Spatial Interference</a> concept template applies to this entity as shown in Table 121.<table>
+<p>The <a href="../../templates/spatial-interference.htm">Spatial Interference</a> concept template applies to this entity as shown in Table 139.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>InterferesSpatialElements</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 121 &mdash; IfcSpatialElement Spatial Interference</td></tr></table>
+<tr><td><p class="table">Table 139 &mdash; IfcSpatialElement Spatial Interference</td></tr></table>
 
 <br/><br/>
 
 <a id="spatial-interference-with-zones" />
 <p class="use-head">Spatial Interference with Zones</p>
-<p>The <a href="../../templates/spatial-interference-with-zones.htm">Spatial Interference With Zones</a> concept template applies to this entity as shown in Table 122.<table>
+<p>The <a href="../../templates/spatial-interference-with-zones.htm">Spatial Interference With Zones</a> concept template applies to this entity as shown in Table 140.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>InterferesSpatialElements</b></th><th><b>InteferenceZone</b></th></tr>
 <tr><td></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 122 &mdash; IfcSpatialElement Spatial Interference With Zones</td></tr></table>
+<tr><td><p class="table">Table 140 &mdash; IfcSpatialElement Spatial Interference With Zones</td></tr></table>
 
 <br/><br/>
 

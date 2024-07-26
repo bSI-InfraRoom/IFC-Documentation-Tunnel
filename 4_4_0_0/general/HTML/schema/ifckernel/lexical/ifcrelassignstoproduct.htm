@@ -51,7 +51,7 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The objectified relationship <span class="self-ref">IfcRelAssignsToProduct</span> handles the assignment of objects (subtypes of <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>) to a product (subtypes of <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>). The <i>Name</i> attribute should be used to classify the usage of the <span class="self-ref">IfcRelAssignsToProduct</span> objectified relationship. The following <i>Name</i> values are proposed:</p>
 <ul>
-<li>'Context' : Assignment of a context specific representation, such as of structural members to a different context representation (with potentially different decomposition breakdown) such as of building elements for a specific context specific representation. </li>
+<li>'Context' : Assignment of a context specific representation, such as of structural members to a different context representation (with potentially different decomposition breakdown) such as of building elements for a specific context specific representation.</li>
 <li>'View' : Assignment of a product (via <i>RelatingProduct</i>) that is decomposed according to a discipline view, to another product (via <i>RelatedObjects</i>) that is decomposed according to a different discipline view. An example is the assignment of the architectural slab to a different decomposition of the pre manufactured sections of a slab (under a precast concrete discipline view).</li>
 </ul>
 <blockquote class="history">
@@ -66,7 +66,6 @@
 <th>G</th></tr>
 <tr><td>7</td><td>RelatingProduct</td><td><a href="../../ifckernel/lexical/ifcproductselect.htm">IfcProductSelect</a></td><td></td><td>
 Reference to the product or product type to which the objects are assigned to.
-
 <blockquote>
 IFC4 CHANGE Datatype expanded to include <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> and <a href="../../ifckernel/lexical/ifctypeproduct.htm">IfcTypeProduct</a>.
 </blockquote>
@@ -118,7 +117,6 @@ Related objects, which are assigned to a single object. The type of the single (
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatedObjectsType</td><td><a href="../../ifckernel/lexical/ifcstrippedoptional.htm">IfcStrippedOptional</a></td><td>? </td><td>
 Particular type of the assignment relationship. It can constrain the applicable object types, used within the role of <i>RelatedObjects</i>.
-
 <blockquote>
 IFC4 CHANGE  The attribute is deprecated and shall no longer be used. A NIL value should always be assigned.
 </blockquote>
@@ -129,7 +127,6 @@ IFC4.3.0.1-CHANGE The attribute type has been changed to IfcStrippedOptional giv
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifcrelassignstoproduct.htm">IfcRelAssignsToProduct</a></td></tr>
 <tr><td>7</td><td>RelatingProduct</td><td><a href="../../ifckernel/lexical/ifcproductselect.htm">IfcProductSelect</a></td><td></td><td>
 Reference to the product or product type to which the objects are assigned to.
-
 <blockquote>
 IFC4 CHANGE Datatype expanded to include <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> and <a href="../../ifckernel/lexical/ifctypeproduct.htm">IfcTypeProduct</a>.
 </blockquote>

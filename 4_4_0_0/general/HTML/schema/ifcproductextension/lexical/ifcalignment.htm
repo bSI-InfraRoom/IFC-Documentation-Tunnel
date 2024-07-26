@@ -201,25 +201,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -237,7 +233,6 @@ Reference to the representations of the product, being either a representation (
 <tr><td></td><td><i>ReferencedInStructures</i></td><td><a href="../../ifcproductextension/lexical/ifcrelreferencedinspatialstructure.htm">IfcRelReferencedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:?]</td><td></td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifcpositioningelement.htm">IfcPositioningElement</a></i></td></tr>
 <tr><td></td><td><i>ContainedInStructure</i></td><td><a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:1]</td><td>Relationship to a spatial structure element, to which the positioning element is primarily associated.
-
 <blockquote>
 IFC2x CHANGE  The inverse relationship has been added to <a href="../../ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a> with upward compatibility
 </blockquote>
@@ -256,7 +251,7 @@ IFC4 CHANGE  The inverse relationship has been promoted from <a href="../../ifc
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcalignment.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcAlignment</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="alignment-layout" />
 <p class="use-head">Alignment Layout</p>
@@ -306,6 +301,111 @@ IFC4 CHANGE  The inverse relationship has been promoted from <a href="../../ifc
 
 <br/><br/>
 
+<a id="alignment-aggregation-to-project" />
+<p class="use-head">Alignment Aggregation To Project</p>
+<p>The <a href="../../templates/alignment-aggregation-to-project.htm">Alignment Aggregation To Project</a> concept template applies to this entity as shown in Table 34.<table>
+<tr><td>
+<table class="gridtable">
+<tr></tr>
+<tr></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 34 &mdash; IfcAlignment Alignment Aggregation To Project</td></tr></table>
+
+<br/><br/>
+
+<a id="alignment-layout---horizontal-vertical-and-cant" />
+<p class="use-head">Alignment Layout - Horizontal, Vertical and Cant </p>
+<p>The <a href="../../templates/alignment-layout---horizontal-vertical-and-cant.htm">Alignment Layout - Horizontal, Vertical and Cant</a> concept template applies to this entity as shown in Table 35.<table>
+<tr><td>
+</td></tr>
+<tr><td><p class="table">Table 35 &mdash; IfcAlignment Alignment Layout - Horizontal, Vertical and Cant</td></tr></table>
+
+<br/><br/>
+
+<a id="alignment-layout---reusing-horizontal-layout" />
+<p class="use-head">Alignment Layout - Reusing Horizontal Layout</p>
+<p>The <a href="../../templates/alignment-layout---reusing-horizontal-layout.htm">Alignment Layout - Reusing Horizontal Layout</a> concept template applies to this entity as shown in Table 36.<table>
+<tr><td>
+</td></tr>
+<tr><td><p class="table">Table 36 &mdash; IfcAlignment Alignment Layout - Reusing Horizontal Layout</td></tr></table>
+
+<br/><br/>
+
+<a id="alignment-geometry---horizontal" />
+<p class="use-head">Alignment Geometry - Horizontal</p>
+<p>The <a href="../../templates/alignment-geometry---horizontal.htm">Alignment Geometry - Horizontal</a> concept template applies to this entity as shown in Table 37.<table>
+<tr><td>
+</td></tr>
+<tr><td><p class="table">Table 37 &mdash; IfcAlignment Alignment Geometry - Horizontal</td></tr></table>
+
+<br/><br/>
+
+<a id="alignment-geometry---horizontal-and-vertical" />
+<p class="use-head">Alignment Geometry - Horizontal and Vertical</p>
+<p>The <a href="../../templates/alignment-geometry---horizontal-and-vertical.htm">Alignment Geometry - Horizontal and Vertical</a> concept template applies to this entity as shown in Table 38.<table>
+<tr><td>
+<table class="gridtable">
+<tr></tr>
+<tr></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 38 &mdash; IfcAlignment Alignment Geometry - Horizontal and Vertical</td></tr></table>
+
+<br/><br/>
+
+<a id="alignment-geometry---horizontal-vertical-and-cant" />
+<p class="use-head">Alignment Geometry - Horizontal, Vertical and Cant </p>
+<p>The <a href="../../templates/alignment-geometry---horizontal-vertical-and-cant.htm">Alignment Geometry - Horizontal, Vertical and Cant</a> concept template applies to this entity as shown in Table 39.<table>
+<tr><td>
+<table class="gridtable">
+<tr></tr>
+<tr></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 39 &mdash; IfcAlignment Alignment Geometry - Horizontal, Vertical and Cant</td></tr></table>
+
+<br/><br/>
+
+<a id="alignment-spatial-reference" />
+<p class="use-head">Alignment Spatial Reference</p>
+<p>The <a href="../../templates/alignment-spatial-reference.htm">Alignment Spatial Reference</a> concept template applies to this entity as shown in Table 40.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>RelatingStructure</b></th></tr>
+<tr><td></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 40 &mdash; IfcAlignment Alignment Spatial Reference</td></tr></table>
+
+<br/><br/>
+
+<a id="alignment-grouping" />
+<p class="use-head">Alignment Grouping</p>
+<p>The <a href="../../templates/alignment-grouping.htm">Alignment Grouping</a> concept template applies to this entity as shown in Table 41.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>IsAssigned</b></th></tr>
+<tr><td></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 41 &mdash; IfcAlignment Alignment Grouping</td></tr></table>
+
+<br/><br/>
+
+<a id="property-sets-for-objects" />
+<p class="use-head">Property Sets for Objects</p>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 42.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
+<tr><td><a href="../../ifcsharedinfrastructureelements/pset/pset_linearreferencingmethod.htm">Pset_LinearReferencingMethod</a></td><td></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 42 &mdash; IfcAlignment Property Sets for Objects</td></tr></table>
+
+<br/><br/>
+
 </details>
 <details><summary>mvdXML Specification</summary>
 <div class="xsd"><code class="xsd">
@@ -341,6 +441,60 @@ IFC4 CHANGE  The inverse relationship has been promoted from <a href="../../ifc
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;cf2ad581-5f73-4f92-ae9d-24b391e1dd31&quot; name=&quot;Alignment Aggregation To Project&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;56396e81-a5e7-5290-a13f-ed0aeaa6ec64&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;0f1d2e7a-b790-460d-917d-b39d861a9010&quot; name=&quot;Alignment Layout - Horizontal, Vertical and Cant &quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;9f2220fe-98ec-5afd-82ff-3cd0b0bbcc02&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;d8c14fa6-4395-44fe-87c3-656e230ade60&quot; name=&quot;Alignment Layout - Reusing Horizontal Layout&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;31c80d61-aa70-5fdc-a1e4-eb94e37885fa&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;868c7f90-c335-43d6-9f24-0686ad82a8f2&quot; name=&quot;Alignment Geometry - Horizontal&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;d585f293-93af-5964-b9cd-2d5c30038185&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;bbbac2ee-0e90-4d6e-9bae-2608b9b0934d&quot; name=&quot;Alignment Geometry - Horizontal and Vertical&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;550c3d22-f72d-59ef-a6cd-ff23b9c79c3f&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;6f89fa08-e83a-4d37-8897-039af4154f2c&quot; name=&quot;Alignment Geometry - Horizontal, Vertical and Cant &quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;e338408d-8ac0-5f45-8f3f-4b30e332611c&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;6a306d5f-edd8-44d7-b6c0-89f628b982ad&quot; name=&quot;Alignment Spatial Reference&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;11c6fc93-9a4f-5eb6-b012-67d1630a0547&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;dafe9e85-3900-46fc-8728-9a530cfb3450&quot; name=&quot;Alignment Grouping&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;fda7c80d-f881-5af8-b892-3a0df84511c6&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;6e3dda07-be29-4546-aa16-e498dddc0291&quot; name=&quot;Property Sets for Objects&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f74255a6-0c0e-4f31-84ad-24981db62461&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PsetName[Value]=&amp;apos;Pset_LinearReferencingMethod&amp;apos;&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&lt;/Concepts&gt;<br/>
 &lt;/ConceptRoot&gt;<br/>
 
@@ -359,7 +513,6 @@ IFC4 CHANGE  The inverse relationship has been promoted from <a href="../../ifc
 <tr><td colspan="3"><a href="../../ifckernel/lexical/ifcobject.htm"><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#object-user-identity">Object User Identity</a></td><td><a href="../../templates/object-user-identity.htm">Object User Identity</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#object-predefined-type">Object Predefined Type</a></td><td><a href="../../templates/object-predefined-type.htm">Object Predefined Type</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#object-typing">Object Typing</a></td><td><a href="../../templates/object-typing.htm">Object Typing</a></td><td>General Usage</td></tr>
-<tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#property-sets-for-objects">Property Sets for Objects</a></td><td><a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#property-sets-with-override">Property Sets with Override</a></td><td><a href="../../templates/property-sets-with-override.htm">Property Sets with Override</a></td><td>General Usage</td></tr>
 
 <tr><td colspan="3"><a href="../../ifckernel/lexical/ifcproduct.htm"><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a></a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcproduct.htm#product-placement">Product Placement</a></td><td><a href="../../templates/product-placement.htm">Product Placement</a></td><td>General Usage</td></tr>
@@ -377,6 +530,15 @@ IFC4 CHANGE  The inverse relationship has been promoted from <a href="../../ifc
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcalignment.htm#alignment-geometry-gradient">Alignment Geometry Gradient</a></td><td><a href="../../templates/alignment-geometry-gradient.htm">Alignment Geometry Gradient</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcalignment.htm#object-nesting">Referent Nesting</a></td><td><a href="../../templates/object-nesting.htm">Object Nesting</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcalignment.htm#alignment-geometry-cant">Alignment Geometry Cant</a></td><td><a href="../../templates/alignment-geometry-cant.htm">Alignment Geometry Cant</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcalignment.htm#alignment-aggregation-to-project">Alignment Aggregation To Project</a></td><td><a href="../../templates/alignment-aggregation-to-project.htm">Alignment Aggregation To Project</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcalignment.htm#alignment-layout---horizontal-vertical-and-cant">Alignment Layout - Horizontal, Vertical and Cant </a></td><td><a href="../../templates/alignment-layout---horizontal-vertical-and-cant.htm">Alignment Layout - Horizontal, Vertical and Cant</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcalignment.htm#alignment-layout---reusing-horizontal-layout">Alignment Layout - Reusing Horizontal Layout</a></td><td><a href="../../templates/alignment-layout---reusing-horizontal-layout.htm">Alignment Layout - Reusing Horizontal Layout</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcalignment.htm#alignment-geometry---horizontal">Alignment Geometry - Horizontal</a></td><td><a href="../../templates/alignment-geometry---horizontal.htm">Alignment Geometry - Horizontal</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcalignment.htm#alignment-geometry---horizontal-and-vertical">Alignment Geometry - Horizontal and Vertical</a></td><td><a href="../../templates/alignment-geometry---horizontal-and-vertical.htm">Alignment Geometry - Horizontal and Vertical</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcalignment.htm#alignment-geometry---horizontal-vertical-and-cant">Alignment Geometry - Horizontal, Vertical and Cant </a></td><td><a href="../../templates/alignment-geometry---horizontal-vertical-and-cant.htm">Alignment Geometry - Horizontal, Vertical and Cant</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcalignment.htm#alignment-spatial-reference">Alignment Spatial Reference</a></td><td><a href="../../templates/alignment-spatial-reference.htm">Alignment Spatial Reference</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcalignment.htm#alignment-grouping">Alignment Grouping</a></td><td><a href="../../templates/alignment-grouping.htm">Alignment Grouping</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcalignment.htm#property-sets-for-objects">Property Sets for Objects</a></td><td><a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a></td><td>General Usage</td></tr>
 
 </table>
 </details>

@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 9 July 2024
+Friday, 26 July 2024
 
 *)
 
@@ -239,7 +239,6 @@ ENTITY IfcSurfaceReinforcementArea
 	SurfaceReinforcement2 : OPTIONAL LIST [2:3] OF IfcLengthMeasure;
 	ShearReinforcement : OPTIONAL IfcRatioMeasure;
  WHERE
-	SurfaceAndOrShearAreaSpecified : EXISTS(SurfaceReinforcement1) OR EXISTS(SurfaceReinforcement2) OR EXISTS(ShearReinforcement);
 	NonnegativeArea1 : (NOT EXISTS(SurfaceReinforcement1)) OR (
     (SurfaceReinforcement1[1] >= 0.) AND
     (SurfaceReinforcement1[2] >= 0.) AND
@@ -251,6 +250,7 @@ ENTITY IfcSurfaceReinforcementArea
     ((SIZEOF(SurfaceReinforcement2) = 1) OR (SurfaceReinforcement2[1] >= 0.))
 );
 	NonnegativeArea3 : (NOT EXISTS(ShearReinforcement)) OR (ShearReinforcement >= 0.);
+	SurfaceAndOrShearAreaSpecified : EXISTS(SurfaceReinforcement1) OR EXISTS(SurfaceReinforcement2) OR EXISTS(ShearReinforcement);
 END_ENTITY;
 
 END_SCHEMA;

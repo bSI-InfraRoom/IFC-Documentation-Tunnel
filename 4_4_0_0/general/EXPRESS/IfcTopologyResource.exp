@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 9 July 2024
+Friday, 26 July 2024
 
 *)
 
@@ -64,6 +64,17 @@ END_TYPE;
 ENTITY IfcAdvancedFace
  SUBTYPE OF (IfcFaceSurface);
  WHERE
+	ApplicableEdgeCurves : SIZEOF(QUERY (ElpFbnds <* 
+  QUERY (Bnds <* SELF\IfcFace.Bounds |
+    'IFCTOPOLOGYRESOURCE.IFCEDGELOOP' IN TYPEOF(Bnds.Bound)) |
+     NOT (SIZEOF (QUERY (Oe <* ElpFbnds.Bound\IfcEdgeLoop.EdgeList |
+       NOT (SIZEOF (['IFCGEOMETRYRESOURCE.IFCLINE',
+                     'IFCGEOMETRYRESOURCE.IFCCONIC',
+                     'IFCGEOMETRYRESOURCE.IFCPOLYLINE',
+                     'IFCGEOMETRYRESOURCE.IFCBSPLINECURVE'] *
+         TYPEOF(Oe\IfcOrientedEdge.EdgeElement\IfcEdgeCurve.EdgeGeometry)) = 1 )
+  )) = 0
+))) = 0;
 	ApplicableSurface : SIZEOF (
 ['IFCGEOMETRYRESOURCE.IFCELEMENTARYSURFACE',
  'IFCGEOMETRYRESOURCE.IFCSWEPTSURFACE',
@@ -76,17 +87,6 @@ TYPEOF(SELF\IfcFaceSurface.FaceSurface)) = 1;
        NOT('IFCTOPOLOGYRESOURCE.IFCEDGECURVE' IN 
        TYPEOF(Oe\IfcOrientedEdge.EdgeElement)
   ))) = 0
-))) = 0;
-	ApplicableEdgeCurves : SIZEOF(QUERY (ElpFbnds <* 
-  QUERY (Bnds <* SELF\IfcFace.Bounds |
-    'IFCTOPOLOGYRESOURCE.IFCEDGELOOP' IN TYPEOF(Bnds.Bound)) |
-     NOT (SIZEOF (QUERY (Oe <* ElpFbnds.Bound\IfcEdgeLoop.EdgeList |
-       NOT (SIZEOF (['IFCGEOMETRYRESOURCE.IFCLINE',
-                     'IFCGEOMETRYRESOURCE.IFCCONIC',
-                     'IFCGEOMETRYRESOURCE.IFCPOLYLINE',
-                     'IFCGEOMETRYRESOURCE.IFCBSPLINECURVE'] *
-         TYPEOF(Oe\IfcOrientedEdge.EdgeElement\IfcEdgeCurve.EdgeGeometry)) = 1 )
-  )) = 0
 ))) = 0;
 END_ENTITY;
 

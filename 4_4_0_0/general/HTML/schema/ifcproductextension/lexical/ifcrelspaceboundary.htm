@@ -72,16 +72,16 @@
  <td><img src="../../../figures/ifcrelspaceboundary_2ndlevel.png" alt="2nd level"></td>
 </tr>
 <tr>
- <td><p class="figure">Figure 313 &mdash; Space boundary at first level</p></td>
- <td><p class="figure">Figure 314 &mdash; Space boundary at second level</p></td>
+ <td><p class="figure">Figure 330 &mdash; Space boundary at first level</p></td>
+ <td><p class="figure">Figure 331 &mdash; Space boundary at second level</p></td>
 </tr>
 <tr>
  <td><img src="../../../figures/ifcrelspaceboundary_2ndlevel_typea.png" alt="2nd level type a"></td>
  <td><img src="../../../figures/ifcrelspaceboundary_2ndlevel_typeb.png" alt="2nd level type b"></td>
 </tr>
 <tr>
- <td><p class="figure">Figure 315 &mdash; Space boundary at second level type A</p></td>
- <td><p class="figure">Figure 316 &mdash; Space boundary at second level type B</p></td>
+ <td><p class="figure">Figure 332 &mdash; Space boundary at second level type A</p></td>
+ <td><p class="figure">Figure 333 &mdash; Space boundary at second level type B</p></td>
 </tr>
 </table>
 <p>The differences between the 1^<small>st</small>^ and 2^<small>nd</small>^ level space boundaries is identified by:</p>
@@ -89,14 +89,14 @@
 <li><strong>1^<small>st</small>^ level:</strong>   SELF\IfcRoot.Name = &quot;1stLevel&quot;   SELF\IfcRootDescription = NIL</li>
 <li><strong>2^<small>nd</small>^ level:</strong>   SELF\IfcRoot.Name = &quot;2ndLevel&quot;   SELF\IfcRootDescription = &quot;2a&quot;, or &quot;2b&quot;</li>
 </ul>
-<p>Differentiation between physical and virtual space boundary is illustrated in Figure 313 and Figure 42.</p>
+<p>Differentiation between physical and virtual space boundary is illustrated in Figure 330 and Figure 42.</p>
 <p>As shown in Figure 41, if the <span class="self-ref">IfcRelSpaceBoundary</span> is used to express a virtual boundary, the attribute <i>PhysicalOrVirtualBoundary</i> has to be set to VIRTUAL. The attribute <i>RelatedBuildingElement</i> shall point to an instance of <a href="../../ifcproductextension/lexical/ifcvirtualelement.htm">IfcVirtualElement</a>. If the correct location is of interest, the attribute <i>ConnectionGeometry</i> is required.</p>
 <blockquote class="note">
 <p>NOTE  The connection geometry, either by a 2D curve or a 3D surface, is used to describe the portion of the &quot;virtual wall&quot; that separates the two spaces. All instances of <span class="self-ref">IfcRelSpaceBoundary</span> given at the adjacent spaces share the same instance of <a href="../../ifcproductextension/lexical/ifcvirtualelement.htm">IfcVirtualElement</a>. Each instance of <span class="self-ref">IfcRelSpaceBoundary</span> provides in addition the <i>ConnectionGeometry</i> given within the local placement of each space.</p>
 </blockquote>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcrelspaceboundary_virtual.png" alt="&quot;IfcRelSpaceBoundary_virtual (35K)&quot;" title="Figure 317 &mdash; Space boundary of virtual element"></td></tr><tr><td><p class="figure">Figure 317 &mdash; Space boundary of virtual element</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcrelspaceboundary_virtual.png" alt="&quot;IfcRelSpaceBoundary_virtual (35K)&quot;" title="Figure 334 &mdash; Space boundary of virtual element"></td></tr><tr><td><p class="figure">Figure 334 &mdash; Space boundary of virtual element</p></td></tr></table></p>
 <p>As shown in Figure 42, if the <span class="self-ref">IfcRelSpaceBoundary</span> is used to express a physical boundary between two spaces, the attribute <i>PhysicalOrVirtualBoundary</i> has to be set to PHYSICAL. The attribute <i>RelatedBuildingElement</i> has to be given and points to the element providing the space boundary. The attribute <i>ConnectionGeometry</i> may be inserted, in this case it describes the physical space boundary geometically, or it may be omited, in that case it describes a physical space boundary logically.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcrelspaceboundary_physical.png" alt="&quot;IfcRelSpaceBoundary_physical (35K)&quot;" title="Figure 318 &mdash; Space boundary of physical element"></td></tr><tr><td><p class="figure">Figure 318 &mdash; Space boundary of physical element</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcrelspaceboundary_physical.png" alt="&quot;IfcRelSpaceBoundary_physical (35K)&quot;" title="Figure 335 &mdash; Space boundary of physical element"></td></tr><tr><td><p class="figure">Figure 335 &mdash; Space boundary of physical element</p></td></tr></table></p>
 <p>The <span class="self-ref">IfcRelSpaceBoundary</span> may have geometry attached. If geometry is not attached, the relationship between space and building element is handled only on a logical level. If geometry is attached, it is given within the local coordinate systems of the space.</p>
 <blockquote class="note">
 <p>NOTE  The attributes <i>CurveOnRelatingElement</i> at <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectioncurvegeometry.htm">IfcConnectionCurveGeometry</a> or <i>SurfaceOnRelatingElement</i> at <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectionsurfacegeometry.htm">IfcConnectionSurfaceGeometry</a> provide the geometry within the local coordinate system of the <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a>, whereas the attributes <i>CurveOnRelatedElement</i> at <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectioncurvegeometry.htm">IfcConnectionCurveGeometry</a> or <i>SurfaceOnRelatedElement</i> at <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectionsurfacegeometry.htm">IfcConnectionSurfaceGeometry</a> provide the geometry within the local coordinate system of the subtype of <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></p>
@@ -173,7 +173,6 @@ Reference to one spaces that is delimited by this boundary.
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatedBuildingElement</td><td><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></td><td></td><td>
 Reference to <del>Building</del> Element, that defines the Space Boundaries.
-
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <i>IfcBuildingElement</i> to <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -183,7 +182,6 @@ IFC4 CHANGE  The attribute has been changed to be mandatory.
 </td><td>X</td></tr>
 <tr><td>7</td><td>ConnectionGeometry</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a></td><td>? </td><td>
 Physical representation of the space boundary. Provided as a <strong>curve or</strong> surface given within the LCS of the space.
-
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectionsurfacegeometry.htm">IfcConnectionSurfaceGeometry</a> to <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -199,7 +197,6 @@ Defines, whether the Space Boundary is internal (Internal), or external, i.e. ad
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
 <tr><td>CorrectPhysOrVirt</td><td>If the space boundary is physical, it shall be provided by an element (i.e. excluding a virtual element). If the space boundary is virtual, it shall either have a virtual element or an opening providing the space boundary. If the space boundary <i>PhysicalOrVirtualBoundary</i> attribute is not defined, no restrictions are imposed.
-
 <blockquote>
 IFC4 CHANGE Where rule corrected to accept an <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> for a virtual space boundary.
 </blockquote>
@@ -247,7 +244,6 @@ Reference to one spaces that is delimited by this boundary.
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatedBuildingElement</td><td><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></td><td></td><td>
 Reference to <del>Building</del> Element, that defines the Space Boundaries.
-
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <i>IfcBuildingElement</i> to <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -257,7 +253,6 @@ IFC4 CHANGE  The attribute has been changed to be mandatory.
 </td><td>X</td></tr>
 <tr><td>7</td><td>ConnectionGeometry</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a></td><td>? </td><td>
 Physical representation of the space boundary. Provided as a <strong>curve or</strong> surface given within the LCS of the space.
-
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectionsurfacegeometry.htm">IfcConnectionSurfaceGeometry</a> to <a href="../../ifcgeometricconstraintresource/lexical/ifcconnectiongeometry.htm">IfcConnectionGeometry</a> with upward compatibility for file based exchange.
 </blockquote>

@@ -46,6 +46,7 @@ Furthermore, the optional <i>Filter</i> attribute can be used to provide a text 
 Description of the dataset reference for informational purposes.
 </td><td>X</td></tr>
 <tr><td>5</td><td>ReferencedDataset</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdatasetinformation.htm">IfcDatasetInformation</a></td><td>? </td><td>
+Information about the referenced dataset.
 </td><td>X</td></tr>
 <tr><td>6</td><td>Filter</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 An optional text as e.g. SQL, XQuery etc to filter out data when only a subset is relevant for the dataset reference.
@@ -74,7 +75,6 @@ An optional text as e.g. SQL, XQuery etc to filter out data when only a subset i
 <tr><td colspan="6"><i><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreference.htm">IfcExternalReference</a></i></td></tr>
 <tr><td>1</td><td>Location</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
 Location, where the external source (classification, document or library) can be accessed by electronic means. The electronic location is provided as an URI, and would normally be given as an URL location string.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a> to <a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a><br>
 .
@@ -88,7 +88,6 @@ The <i>Identification</i> provides a unique identifier of the referenced item wi
 <li>a uuid or guid</li>
 </ul>
 It may be human readable (such as a key) or not (such as a handle or uuid) depending on the context of its usage (which has to be determined by local agreement).
-
 <blockquote>
 IFC4 CHANGE Attribute renamed from <i>ItemReference</i> for consistency.
 </blockquote>
@@ -106,6 +105,7 @@ IFC4 CHANGE  New inverse attribute added with upward compatibility.
 Description of the dataset reference for informational purposes.
 </td><td>X</td></tr>
 <tr><td>5</td><td>ReferencedDataset</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdatasetinformation.htm">IfcDatasetInformation</a></td><td>? </td><td>
+Information about the referenced dataset.
 </td><td>X</td></tr>
 <tr><td>6</td><td>Filter</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 An optional text as e.g. SQL, XQuery etc to filter out data when only a subset is relevant for the dataset reference.

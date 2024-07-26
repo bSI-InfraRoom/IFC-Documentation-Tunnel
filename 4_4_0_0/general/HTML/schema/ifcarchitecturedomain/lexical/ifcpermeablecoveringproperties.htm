@@ -48,8 +48,8 @@
 <p>The <span class="self-ref">IfcPermeableCoveringProperties</span> are included in the list of properties (<i>HasPropertySets</i>) of the <i>IfcWindowStyle</i> or the <i>IfcDoorStyle</i>. More information about the permeable covering can be included in the same list of the window or door style using the <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> for dynamic extensions. This particularly applies for additional properties for the various operation types</p>
 <p>The <span class="self-ref">IfcPermeableCoveringProperties</span> does not hold a geometric representation. However it defines parameters which can be used to create the shape of the <i>IfcWindowStyle</i> (which is inserted by the <a href="../../ifcsharedbldgelements/lexical/ifcwindow.htm">IfcWindow</a> into the spatial context of the project), or of the <i>IfcDoorStyle</i> (which is inserted by the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a>).</p>
 <p>The parameters at the <span class="self-ref">IfcPermeableCoveringProperties</span> define a standard permeable covering. The outer boundary of the panel is determined by the occurrence parameter assigned to the <a href="../../ifcsharedbldgelements/lexical/ifcwindow.htm">IfcWindow</a> or <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a>. It has to take the lining parameter into account as well. The position of the permeable covering within the overall window or door is determined by the <i>PanelPosition</i> attribute.</p>
-<p>Figure 404 illustrates the panel applied to the position within the lining, as defined by the panel position attribute. The following parameters apply to that panel: <i>FrameDepth</i>, <i>FrameThickness</i>.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcpermeablecoveringproperties.gif" alt="&quot;covering&quot;" title="Figure 404 &mdash; Permeable covering properties"></td></tr><tr><td><p class="figure">Figure 404 &mdash; Permeable covering properties</p></td></tr></table></p>
+<p>Figure 421 illustrates the panel applied to the position within the lining, as defined by the panel position attribute. The following parameters apply to that panel: <i>FrameDepth</i>, <i>FrameThickness</i>.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcpermeablecoveringproperties.gif" alt="&quot;covering&quot;" title="Figure 421 &mdash; Permeable covering properties"></td></tr><tr><td><p class="figure">Figure 421 &mdash; Permeable covering properties</p></td></tr></table></p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2.0, it had been renamed from <i>IfcPermeableCovering</i> in IFC2x.</p>
 </blockquote>
@@ -123,13 +123,11 @@ IFC4 CHANGE  The cardinality has been changed from 0:1 to 0:? with upward compa
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a><br/>@RelatedPropertySets</td><td>S[0:?]</td><td>Relation to the property set template, via the objectified relationship <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a>, that, if given, provides the definition template for the property set or quantity set and its properties.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>DefinesOccurrence</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatingPropertyDefinition</td><td>S[0:?]</td><td>Reference to the relation to one or many object occurrences that are characterized by the property set definition. A single property set can be assigned to multiple object occurrences using the objectified relationship <i>IfcRefDefinesByProperties</i>.
-
 <blockquote>
 IFC4 CHANGE Inverse attribute renamed from PropertyDefinitionOf with upward compatibility for file-based exchange.
 </blockquote>

@@ -122,25 +122,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -172,35 +168,37 @@ Identifies the predefined type of a geoscience observation. This type may associ
 <summary>Concept usage</summary>
 <a id="complementary-data-composition" />
 <p class="use-head">Observation Composition</p>
-<p>The <a href="../../templates/complementary-data-composition.htm">Complementary Data Composition</a> concept template applies to this entity as shown in Table 295.<table>
+<p>The <a href="../../templates/complementary-data-composition.htm">Complementary Data Composition</a> concept template applies to this entity as shown in Table 314.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Decomposes</b></th><th><b>RelatingObject</b></th></tr>
-<tr><td></td><td></td></tr>
+<tr><td></td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm">IfcGeoScienceObservation</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 295 &mdash; IfcGeoScienceObservation Complementary Data Composition</td></tr></table>
+<tr><td><p class="table">Table 314 &mdash; IfcGeoScienceObservation Complementary Data Composition</td></tr></table>
+
+<p>An <span class="self-ref">IfcGeoScienceObservation</span> may decompose another <span class="self-ref">IfcGeoScienceObservation</span>. This may be the case e.g. when several different types of tests have been performed in an <a href="../../ifcsharedinfrastructureelements/lexical/ifcborehole.htm">IfcBorehole</a> at different depths and each type of test is decomposed into sub-tests at different depth ranges.</p>
 
 <br/><br/>
 
 <a id="complementary-data-decomposition" />
 <p class="use-head">Observation Decomposition</p>
-<p>The <a href="../../templates/complementary-data-decomposition.htm">Complementary Data Decomposition</a> concept template applies to this entity as shown in Table 296.<table>
+<p>The <a href="../../templates/complementary-data-decomposition.htm">Complementary Data Decomposition</a> concept template applies to this entity as shown in Table 315.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>IsDecomposedBy</b></th><th><b>RelatedObjects</b></th></tr>
-<tr><td></td><td></td></tr>
+<tr><td></td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm">IfcGeoScienceObservation</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 296 &mdash; IfcGeoScienceObservation Complementary Data Decomposition</td></tr></table>
+<tr><td><p class="table">Table 315 &mdash; IfcGeoScienceObservation Complementary Data Decomposition</td></tr></table>
 
-<p>An <span class="self-ref">IfcGeoScienceObservation</span> can be decomposed by other <i>IFcGeoScienceObservation</i>.</p>
+<p>An <span class="self-ref">IfcGeoScienceObservation</span> may be decomposed by other <span class="self-ref">IfcGeoScienceObservation</span>. This may be the case e.g. when several different types of tests have been performed in an <a href="../../ifcsharedinfrastructureelements/lexical/ifcborehole.htm">IfcBorehole</a> at different depths and each type of test is decomposed into sub-tests at different depth ranges.</p>
 
 <br/><br/>
 
 <a id="assignment-to-product" />
 <p class="use-head">Observation Assignment</p>
-<p>The <a href="../../templates/assignment-to-product.htm">Assignment to Product</a> concept template applies to this entity as shown in Table 297.<table>
+<p>The <a href="../../templates/assignment-to-product.htm">Assignment to Product</a> concept template applies to this entity as shown in Table 316.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>IsAssigned</b></th><th><b>RelatingProduct</b></th></tr>
@@ -209,7 +207,7 @@ Identifies the predefined type of a geoscience observation. This type may associ
 <tr><td></td><td><a href="../../ifcbuildingcontrolsdomain/lexical/ifcsensor.htm">IfcSensor</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 297 &mdash; IfcGeoScienceObservation Assignment to Product</td></tr></table>
+<tr><td><p class="table">Table 316 &mdash; IfcGeoScienceObservation Assignment to Product</td></tr></table>
 
 <p>An <span class="self-ref">IfcGeoScienceObservation</span> may be assigned to <a href="../../ifcsharedinfrastructureelements/lexical/ifcborehole.htm">IfcBorehole</a>, <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> or <a href="../../ifcbuildingcontrolsdomain/lexical/ifcsensor.htm">IfcSensor</a>.</p>
 
@@ -217,14 +215,14 @@ Identifies the predefined type of a geoscience observation. This type may associ
 
 <a id="axis-3d-geometry" />
 <p class="use-head">Axis 3D Geometry</p>
-<p>The <a href="../../templates/axis-3d-geometry.htm">Axis 3D Geometry</a> concept template applies to this entity as shown in Table 298.<table>
+<p>The <a href="../../templates/axis-3d-geometry.htm">Axis 3D Geometry</a> concept template applies to this entity as shown in Table 317.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Items</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 298 &mdash; IfcGeoScienceObservation Axis 3D Geometry</td></tr></table>
+<tr><td><p class="table">Table 317 &mdash; IfcGeoScienceObservation Axis 3D Geometry</td></tr></table>
 
 <p>An <span class="self-ref">IfcGeoScienceObservation</span> may be represented by a curve in 3D space.</p>
 
@@ -232,16 +230,28 @@ Identifies the predefined type of a geoscience observation. This type may associ
 
 <a id="voxel-geometry" />
 <p class="use-head">Body Voxel Geometry</p>
-<p>The <a href="../../templates/voxel-geometry.htm">Voxel Geometry</a> concept template applies to this entity as shown in Table 299.<table>
+<p>The <a href="../../templates/voxel-geometry.htm">Voxel Geometry</a> concept template applies to this entity as shown in Table 318.<table>
 <tr><td>
 <table class="gridtable">
 <tr></tr>
 <tr></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 299 &mdash; IfcGeoScienceObservation Voxel Geometry</td></tr></table>
+<tr><td><p class="table">Table 318 &mdash; IfcGeoScienceObservation Voxel Geometry</td></tr></table>
 
 <p>An <span class="self-ref">IfcGeoScienceObservation</span> may be represented by an IfcVoxelGrid_.</p>
+
+<br/><br/>
+
+<a id="dataset-association" />
+<p class="use-head">Dataset Association</p>
+<p>The <a href="../../templates/dataset-association.htm">Dataset Association</a> concept applies to this entity.</p><p>Datasets may be associated with any type of <span class="self-ref">IfcGeoScienceObservation</span>.</p>
+
+<br/><br/>
+
+<a id="document-association" />
+<p class="use-head">Document Association</p>
+<p>The <a href="../../templates/document-association.htm">Document Association</a> concept applies to this entity.</p><p>Documents may be associated with any type of <span class="self-ref">IfcGeoScienceObservation</span>.</p>
 
 <br/><br/>
 
@@ -259,13 +269,13 @@ Identifies the predefined type of a geoscience observation. This type may associ
 &nbsp;&nbsp;&lt;Concept uuid=&quot;f9189054-b6de-41d0-8c9e-b9b65480502e&quot; name=&quot;Observation Composition&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;16689487-8082-435e-893f-c73b4caf7a22&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;RelatingObject[Type]=&amp;apos;IfcGeoScienceObservation&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;8a99a0d6-cc48-4b8c-a768-44a7571097ee&quot; name=&quot;Observation Decomposition&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;a7664693-8f92-465f-94eb-869a758ffe13&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;RelatedObjects[Type]=&amp;apos;IfcGeoScienceObservation&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;377f5505-88a9-4448-84f4-8169bf9e648e&quot; name=&quot;Observation Assignment&quot;&gt;<br/>
@@ -287,6 +297,12 @@ Identifies the predefined type of a geoscience observation. This type may associ
 &nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;4cc0090e-38cd-4d62-b277-886fc6ba0b02&quot; name=&quot;Dataset Association&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f15b4092-5744-499a-a2c0-f30b2b1ab85c&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;363249a8-23cc-482f-a0d7-7835cfdcd184&quot; name=&quot;Document Association&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;7dadae9c-0026-44d3-ade7-9a843fe2ef0b&quot; /&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&lt;/Concepts&gt;<br/>
 &lt;/ConceptRoot&gt;<br/>
@@ -321,6 +337,8 @@ Identifies the predefined type of a geoscience observation. This type may associ
 <tr><td> </td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm#assignment-to-product">Observation Assignment</a></td><td><a href="../../templates/assignment-to-product.htm">Assignment to Product</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm#axis-3d-geometry">Axis 3D Geometry</a></td><td><a href="../../templates/axis-3d-geometry.htm">Axis 3D Geometry</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm#voxel-geometry">Body Voxel Geometry</a></td><td><a href="../../templates/voxel-geometry.htm">Voxel Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm#dataset-association">Dataset Association</a></td><td><a href="../../templates/dataset-association.htm">Dataset Association</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm#document-association">Document Association</a></td><td><a href="../../templates/document-association.htm">Document Association</a></td><td>General Usage</td></tr>
 
 </table>
 </details>

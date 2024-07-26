@@ -163,25 +163,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -254,24 +250,24 @@ IFC2x CHANGE The attribute has been changed into an OPTIONAL attribute.
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcslab.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcSlab</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 209.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 227.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifcsharedbldgelements/lexical/ifcslabtype.htm">IfcSlabType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 209 &mdash; IfcSlab Object Typing</td></tr></table>
+<tr><td><p class="table">Table 227 &mdash; IfcSlab Object Typing</td></tr></table>
 
 <br/><br/>
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 210.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 228.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -360,20 +356,20 @@ IFC2x CHANGE The attribute has been changed into an OPTIONAL attribute.
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 210 &mdash; IfcSlab Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 228 &mdash; IfcSlab Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="quantity-sets" />
 <p class="use-head">Quantity Sets</p>
-<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 211.<table>
+<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 229.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>QsetName</b></th><th><b>Quantities</b></th></tr>
 <tr><td><a href="../../ifcsharedbldgelements/qset/qto_slabbasequantities.htm">Qto_SlabBaseQuantities</a></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 211 &mdash; IfcSlab Quantity Sets</td></tr></table>
+<tr><td><p class="table">Table 229 &mdash; IfcSlab Quantity Sets</td></tr></table>
 
 <br/><br/>
 
@@ -388,7 +384,7 @@ IFC2x CHANGE The attribute has been changed into an OPTIONAL attribute.
 
 <a id="spatial-containment" />
 <p class="use-head">Spatial Containment</p>
-<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 212.<table>
+<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 230.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingStructure</b></th><th><b>Description</b></th></tr>
@@ -400,7 +396,7 @@ IFC2x CHANGE The attribute has been changed into an OPTIONAL attribute.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 212 &mdash; IfcSlab Spatial Containment</td></tr></table>
+<tr><td><p class="table">Table 230 &mdash; IfcSlab Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcSlab</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
 <ul>
@@ -426,11 +422,11 @@ IFC2x CHANGE The attribute has been changed into an OPTIONAL attribute.
 <li><strong>Profile</strong>: <i>IfcArbitraryClosedProfileDef, IfcRectangleProfileDef, IfcCircleProfileDef, IfcEllipseProfileDef</i> shall be supported.</li>
 <li><strong>Extrusion</strong>: The profile can be extruded perpendicularly or non-perpendicularly to the plane of the swept profile.</li>
 </ul>
-<p>Figure 363 illustrates a 'SweptSolid' geometric representation.</p>
+<p>Figure 380 illustrates a 'SweptSolid' geometric representation.</p>
 <blockquote class="note">
 <p>NOTE  The following interpretation of dimension parameter applies for polygonal slabs (in ground floor view): &gt; * <i>IfcArbitraryClosedProfileDef.OuterCurve</i>: closed bounded curve interpreted as area (or foot print) of the slab.</p>
 </blockquote>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcslab_standard-layout1.gif" alt="&quot;standard slab&quot;" title="Figure 363 &mdash; Slab body extrusion"></td></tr><tr><td><p class="figure">Figure 363 &mdash; Slab body extrusion</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcslab_standard-layout1.gif" alt="&quot;standard slab&quot;" title="Figure 380 &mdash; Slab body extrusion"></td></tr><tr><td><p class="figure">Figure 380 &mdash; Slab body extrusion</p></td></tr></table></p>
 
 <br/><br/>
 
@@ -443,14 +439,14 @@ IFC2x CHANGE The attribute has been changed into an OPTIONAL attribute.
 <li><strong>Extrusion</strong>: see 'SweptSolid' shape representation,</li>
 <li><strong>Boolean result</strong>: The <a href="../../ifcgeometricmodelresource/lexical/ifcbooleanclippingresult.htm">IfcBooleanClippingResult</a> shall be supported, allowing for Boolean differences between the swept solid (here <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>) and one or several <a href="../../ifcgeometricmodelresource/lexical/ifchalfspacesolid.htm">IfcHalfSpaceSolid</a>.</li>
 </ul>
-<p>Figure 364 illustrates a 'Clipping' geometric representation with definition of a roof slab using advanced geometric representation. The profile is extruded non-perpendicular and the slab body is clipped at the eave.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcslab_advanced-layout1.gif" alt="&quot;advanced slab&quot;" title="Figure 364 &mdash; Slab body clipping"></td></tr><tr><td><p class="figure">Figure 364 &mdash; Slab body clipping</p></td></tr></table></p>
+<p>Figure 381 illustrates a 'Clipping' geometric representation with definition of a roof slab using advanced geometric representation. The profile is extruded non-perpendicular and the slab body is clipped at the eave.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcslab_advanced-layout1.gif" alt="&quot;advanced slab&quot;" title="Figure 381 &mdash; Slab body clipping"></td></tr><tr><td><p class="figure">Figure 381 &mdash; Slab body clipping</p></td></tr></table></p>
 
 <br/><br/>
 
 <a id="product-assignment" />
 <p class="use-head">Product Assignment</p>
-<p>The <a href="../../templates/product-assignment.htm">Product Assignment</a> concept template applies to this entity as shown in Table 213.<table>
+<p>The <a href="../../templates/product-assignment.htm">Product Assignment</a> concept template applies to this entity as shown in Table 231.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Type</b></th><th><b>Description</b></th></tr>
@@ -460,7 +456,7 @@ IFC2x CHANGE The attribute has been changed into an OPTIONAL attribute.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 213 &mdash; IfcSlab Product Assignment</td></tr></table>
+<tr><td><p class="table">Table 231 &mdash; IfcSlab Product Assignment</td></tr></table>
 
 <br/><br/>
 
@@ -584,6 +580,7 @@ IFC2x CHANGE The attribute has been changed into an OPTIONAL attribute.
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelement.htm#product-grid-placement">Product Grid Placement</a></td><td><a href="../../templates/product-grid-placement.htm">Product Grid Placement</a></td><td>General Usage</td></tr>
 
 <tr><td colspan="3"><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm">IfcBuiltElement</a></td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#surface-3d-geometry">Surface 3D Geometry</a></td><td><a href="../../templates/surface-3d-geometry.htm">Surface 3D Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#material-set">Material Set</a></td><td><a href="../../templates/material-set.htm">Material Set</a></td><td>General Usage</td></tr>
 
 <tr><td colspan="3"><a href="../../ifcsharedbldgelements/lexical/ifcslab.htm">IfcSlab</a></td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifcslab.htm#object-typing">Object Typing</a></td><td><a href="../../templates/object-typing.htm">Object Typing</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifcslab.htm#property-sets-for-objects">Property Sets for Objects</a></td><td><a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a></td><td>General Usage</td></tr>

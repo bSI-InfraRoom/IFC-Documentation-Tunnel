@@ -179,25 +179,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -260,20 +256,20 @@ IFC4 CHANGE New inverse relationship.
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcbuiltelement.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcBuiltElement</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 57.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 73.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 57 &mdash; IfcBuiltElement Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 73 &mdash; IfcBuiltElement Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="product-assignment" />
 <p class="use-head">Product Assignment</p>
-<p>The <a href="../../templates/product-assignment.htm">Product Assignment</a> concept template applies to this entity as shown in Table 58.<table>
+<p>The <a href="../../templates/product-assignment.htm">Product Assignment</a> concept template applies to this entity as shown in Table 74.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Type</b></th><th><b>Description</b></th></tr>
@@ -281,13 +277,13 @@ IFC4 CHANGE New inverse relationship.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 58 &mdash; IfcBuiltElement Product Assignment</td></tr></table>
+<tr><td><p class="table">Table 74 &mdash; IfcBuiltElement Product Assignment</td></tr></table>
 
 <br/><br/>
 
 <a id="spatial-containment" />
 <p class="use-head">Spatial Containment</p>
-<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 59.<table>
+<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 75.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingStructure</b></th></tr>
@@ -296,13 +292,26 @@ IFC4 CHANGE New inverse relationship.
 <tr><td><a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 59 &mdash; IfcBuiltElement Spatial Containment</td></tr></table>
+<tr><td><p class="table">Table 75 &mdash; IfcBuiltElement Spatial Containment</td></tr></table>
 
 <br/><br/>
 
 <a id="surface-3d-geometry" />
 <p class="use-head">Surface 3D Geometry</p>
 <p>The <a href="../../templates/surface-3d-geometry.htm">Surface 3D Geometry</a> concept applies to this entity.</p><p>Some <i>IfcBuildingElement</i> may be represented by an surface as an abstract geometric representation. See each subtype for specific guidance.</p>
+
+<br/><br/>
+
+<a id="material-set" />
+<p class="use-head">Material Set</p>
+<p>The <a href="../../templates/material-set.htm">Material Set</a> concept template applies to this entity as shown in Table 76.<table>
+<tr><td>
+<table class="gridtable">
+<tr></tr>
+<tr></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 76 &mdash; IfcBuiltElement Material Set</td></tr></table>
 
 <br/><br/>
 
@@ -336,6 +345,12 @@ IFC4 CHANGE New inverse relationship.
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;e18a7464-340a-445f-ab6c-3d1fe994c8e4&quot; name=&quot;Surface 3D Geometry&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;bd82983d-39d5-41b2-9ee8-f3bd8777d315&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;77f86863-266c-462c-a8a7-7a228fc9b0a4&quot; name=&quot;Material Set&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;26924943-4b61-59b2-a792-45ac96cfcda4&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&lt;/Concepts&gt;<br/>
 &lt;/ConceptRoot&gt;<br/>
@@ -400,6 +415,7 @@ IFC4 CHANGE New inverse relationship.
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#product-assignment">Product Assignment</a></td><td><a href="../../templates/product-assignment.htm">Product Assignment</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#spatial-containment">Spatial Containment</a></td><td><a href="../../templates/spatial-containment.htm">Spatial Containment</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#surface-3d-geometry">Surface 3D Geometry</a></td><td><a href="../../templates/surface-3d-geometry.htm">Surface 3D Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#material-set">Material Set</a></td><td><a href="../../templates/material-set.htm">Material Set</a></td><td>General Usage</td></tr>
 
 </table>
 </details>

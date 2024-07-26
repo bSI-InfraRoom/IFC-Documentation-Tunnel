@@ -43,12 +43,12 @@ Informal Propositions:</p>
 <ol>
 <li>The <i>Curve</i> has to be an open curve.</li>
 </ol>
-<p>Figure 543 illustrates the arbitrary open profile definition. The <i>Curve</i> is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface that uses the profile definition. It is the xy plane of:</p>
+<p>Figure 560 illustrates the arbitrary open profile definition. The <i>Curve</i> is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface that uses the profile definition. It is the xy plane of:</p>
 <ul>
 <li><i>IfcSweptSurface.Position</i></li>
 </ul>
 <p>The <i>Curve</i> attribute defines a two dimensional open bounded curve.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcarbitraryprofiledef-layout3.gif" alt="&quot;arbitrary profile without boundaries&quot;" title="Figure 543 &mdash; Arbitrary open profile"></td></tr><tr><td><p class="figure">Figure 543 &mdash; Arbitrary open profile</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcarbitraryprofiledef-layout3.gif" alt="&quot;arbitrary profile without boundaries&quot;" title="Figure 560 &mdash; Arbitrary open profile"></td></tr><tr><td><p class="figure">Figure 560 &mdash; Arbitrary open profile</p></td></tr></table></p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -89,13 +89,11 @@ Defines the type of geometry into which this profile definition shall be resolve
 Human-readable name of the profile, for example according to a standard profile table. As noted above, machine-readable standardized profile designations should be provided in <i>IfcExternalReference.ItemReference</i>.
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasExternalReference</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.htm">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to external information, e.g. library, classification, or document information, which is associated with the profile.
-
 <blockquote>
 IFC4 CHANGE New inverse attribute
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasProperties</i></td><td><a href="../../ifcprofileresource/lexical/ifcprofileproperties.htm">IfcProfileProperties</a><br/>@ProfileDefinition</td><td>S[0:?]</td><td>Additional properties of the profile, for example mechanical properties.
-
 <blockquote>
 IFC4 CHANGE New inverse attribute
 </blockquote>

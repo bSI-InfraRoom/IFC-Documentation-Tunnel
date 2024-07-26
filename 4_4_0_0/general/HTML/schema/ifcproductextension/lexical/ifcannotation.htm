@@ -156,25 +156,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -201,11 +197,11 @@ Reference to the representations of the product, being either a representation (
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcannotation.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcAnnotation</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 37.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 46.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PredefinedType</b></th><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -213,15 +209,19 @@ Reference to the representations of the product, being either a representation (
 <tr><td>LineOfSight</td><td><a href="../../ifcproductextension/pset/pset_annotationlineofsight.htm">Pset_AnnotationLineOfSight</a></td><td></td></tr>
 <tr><td>SurveyArea</td><td><a href="../../ifcproductextension/pset/pset_annotationsurveyarea.htm">Pset_AnnotationSurveyArea</a></td><td></td></tr>
 <tr><td>Sound</td><td><a href="../../ifcsharedbldgserviceelements/pset/pset_soundattenuation.htm">Pset_SoundAttenuation</a></td><td></td></tr>
+<tr><td>&nbsp;</td><td><a href="../../ifcproductextension/pset/pset_annotationlineofsight.htm">Pset_AnnotationLineOfSight</a></td><td></td></tr>
+<tr><td>&nbsp;</td><td><a href="../../ifcsharedbldgserviceelements/pset/pset_soundattenuation.htm">Pset_SoundAttenuation</a></td><td></td></tr>
+<tr><td>CONTOURLINE</td><td><a href="../../ifcproductextension/pset/pset_annotationcontourline.htm">Pset_AnnotationContourLine</a></td><td></td></tr>
+<tr><td>SURVEY</td><td><a href="../../ifcproductextension/pset/pset_annotationsurveyarea.htm">Pset_AnnotationSurveyArea</a></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 37 &mdash; IfcAnnotation Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 46 &mdash; IfcAnnotation Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="annotation-2d-geometry" />
 <p class="use-head">Annotation 2D Geometry</p>
-<p>The <a href="../../templates/annotation-2d-geometry.htm">Annotation 2D Geometry</a> concept template applies to this entity as shown in Table 38.<table>
+<p>The <a href="../../templates/annotation-2d-geometry.htm">Annotation 2D Geometry</a> concept template applies to this entity as shown in Table 47.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Identifier</b></th><th><b>Type</b></th><th><b>Items</b></th><th><b>Description</b></th></tr>
@@ -233,13 +233,13 @@ Reference to the representations of the product, being either a representation (
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 38 &mdash; IfcAnnotation Annotation 2D Geometry</td></tr></table>
+<tr><td><p class="table">Table 47 &mdash; IfcAnnotation Annotation 2D Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="annotation-3d-geometry" />
 <p class="use-head">Annotation 3D Geometry</p>
-<p>The <a href="../../templates/annotation-3d-geometry.htm">Annotation 3D Geometry</a> concept template applies to this entity as shown in Table 39.<table>
+<p>The <a href="../../templates/annotation-3d-geometry.htm">Annotation 3D Geometry</a> concept template applies to this entity as shown in Table 48.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Identifier</b></th><th><b>Type</b></th><th><b>Items</b></th><th><b>Description</b></th></tr>
@@ -247,7 +247,101 @@ Reference to the representations of the product, being either a representation (
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 39 &mdash; IfcAnnotation Annotation 3D Geometry</td></tr></table>
+<tr><td><p class="table">Table 48 &mdash; IfcAnnotation Annotation 3D Geometry</td></tr></table>
+
+<br/><br/>
+
+<a id="single-survey-point" />
+<p class="use-head">Single Survey Point</p>
+<p>The <a href="../../templates/single-survey-point.htm">Single Survey Point</a> concept template applies to this entity as shown in Table 49.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Items</b></th></tr>
+<tr><td></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 49 &mdash; IfcAnnotation Single Survey Point</td></tr></table>
+
+<br/><br/>
+
+<a id="single-survey-point-linearly-placed" />
+<p class="use-head">Single Survey Point Linearly Placed</p>
+<p>The <a href="../../templates/single-survey-point-linearly-placed.htm">Single Survey Point Linearly Placed</a> concept template applies to this entity as shown in Table 50.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Items</b></th></tr>
+<tr><td></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 50 &mdash; IfcAnnotation Single Survey Point Linearly Placed</td></tr></table>
+
+<br/><br/>
+
+<a id="set-of-survey-points" />
+<p class="use-head">Set Of Survey Points</p>
+<p>The <a href="../../templates/set-of-survey-points.htm">Set Of Survey Points</a> concept template applies to this entity as shown in Table 51.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Items</b></th></tr>
+<tr><td></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 51 &mdash; IfcAnnotation Set Of Survey Points</td></tr></table>
+
+<br/><br/>
+
+<a id="single-survey-line" />
+<p class="use-head">Single Survey Line</p>
+<p>The <a href="../../templates/single-survey-line.htm">Single Survey Line</a> concept template applies to this entity as shown in Table 52.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Items</b></th></tr>
+<tr><td></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 52 &mdash; IfcAnnotation Single Survey Line</td></tr></table>
+
+<br/><br/>
+
+<a id="survey-elements-grouping" />
+<p class="use-head">Survey Elements Grouping</p>
+<p>The <a href="../../templates/survey-elements-grouping.htm">Survey Elements Grouping</a> concept template applies to this entity as shown in Table 53.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>IsAssigned</b></th></tr>
+<tr><td></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 53 &mdash; IfcAnnotation Survey Elements Grouping</td></tr></table>
+
+<br/><br/>
+
+<a id="survey-elements-nesting" />
+<p class="use-head">Survey Elements Nesting</p>
+<p>The <a href="../../templates/survey-elements-nesting.htm">Survey Elements Nesting</a> concept template applies to this entity as shown in Table 54.<table>
+<tr><td>
+</td></tr>
+<tr><td><p class="table">Table 54 &mdash; IfcAnnotation Survey Elements Nesting</td></tr></table>
+
+<br/><br/>
+
+<a id="property-sets-for-objects" />
+<p class="use-head">Property Sets for Objects</p>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 55.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>PredefinedType</b></th><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
+<tr><td>ContourLine</td><td><a href="../../ifcproductextension/pset/pset_annotationcontourline.htm">Pset_AnnotationContourLine</a></td><td></td></tr>
+<tr><td>LineOfSight</td><td><a href="../../ifcproductextension/pset/pset_annotationlineofsight.htm">Pset_AnnotationLineOfSight</a></td><td></td></tr>
+<tr><td>SurveyArea</td><td><a href="../../ifcproductextension/pset/pset_annotationsurveyarea.htm">Pset_AnnotationSurveyArea</a></td><td></td></tr>
+<tr><td>Sound</td><td><a href="../../ifcsharedbldgserviceelements/pset/pset_soundattenuation.htm">Pset_SoundAttenuation</a></td><td></td></tr>
+<tr><td>&nbsp;</td><td><a href="../../ifcproductextension/pset/pset_annotationlineofsight.htm">Pset_AnnotationLineOfSight</a></td><td></td></tr>
+<tr><td>&nbsp;</td><td><a href="../../ifcsharedbldgserviceelements/pset/pset_soundattenuation.htm">Pset_SoundAttenuation</a></td><td></td></tr>
+<tr><td>CONTOURLINE</td><td><a href="../../ifcproductextension/pset/pset_annotationcontourline.htm">Pset_AnnotationContourLine</a></td><td></td></tr>
+<tr><td>SURVEY</td><td><a href="../../ifcproductextension/pset/pset_annotationsurveyarea.htm">Pset_AnnotationSurveyArea</a></td><td></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 55 &mdash; IfcAnnotation Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
@@ -285,6 +379,51 @@ Reference to the representations of the product, being either a representation (
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Any point, curve or surface representing the annotation.&quot; Parameters=&quot;Identifier[Value]=&amp;apos;Annotation&amp;apos; AND Type[Value]=&amp;apos;GeometricSet&amp;apos; AND Items[Type]=&amp;apos;IfcGeometricSet&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;147e71bc-5c28-4694-840f-6ea5be189fef&quot; name=&quot;Single Survey Point&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f93a9736-c813-58e1-b005-98de267abcee&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;4eb4812d-2a27-45ee-8d25-29f44361e09d&quot; name=&quot;Single Survey Point Linearly Placed&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;d88a62b0-af18-5b5d-933f-76edc48e8a07&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;57c2c0a3-55cd-40f5-ac00-ffcb60f0e610&quot; name=&quot;Set Of Survey Points&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;175de56c-b149-587f-a3b8-500a0bff615a&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;17f7e020-5dfe-461c-b249-c63adb23ec08&quot; name=&quot;Single Survey Line&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;e4b71e85-e5f3-53bb-bac9-65ef6c08bb6e&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;1631942b-145d-43e2-be12-49d8f971bb39&quot; name=&quot;Survey Elements Grouping&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;91dff210-fc85-5d8d-bdd8-75165c47e1fd&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;18b6f381-3800-42f2-b64f-0bba62da4617&quot; name=&quot;Survey Elements Nesting&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;d56d815c-26a9-5877-992f-be25876deb54&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;Concept uuid=&quot;096f40b4-d08a-48b5-a9de-d45575c256d6&quot; name=&quot;Property Sets for Objects&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f74255a6-0c0e-4f31-84ad-24981db62461&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PsetName[Value]=&amp;apos;Pset_AnnotationLineOfSight&amp;apos;&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PsetName[Value]=&amp;apos;Pset_SoundAttenuation&amp;apos;&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PredefinedType[Value]=&amp;apos;CONTOURLINE&amp;apos; AND PsetName[Value]=&amp;apos;Pset_AnnotationContourLine&amp;apos;&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Parameters=&quot;PredefinedType[Value]=&amp;apos;SURVEY&amp;apos; AND PsetName[Value]=&amp;apos;Pset_AnnotationSurveyArea&amp;apos;&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
+&nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&lt;/Concepts&gt;<br/>
 &lt;/ConceptRoot&gt;<br/>
 
@@ -316,6 +455,12 @@ Reference to the representations of the product, being either a representation (
 <tr><td colspan="3"><a href="../../ifcproductextension/lexical/ifcannotation.htm">IfcAnnotation</a></td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcannotation.htm#property-sets-for-objects">Property Sets for Objects</a></td><td><a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcannotation.htm#annotation-2d-geometry">Annotation 2D Geometry</a></td><td><a href="../../templates/annotation-2d-geometry.htm">Annotation 2D Geometry</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcannotation.htm#annotation-3d-geometry">Annotation 3D Geometry</a></td><td><a href="../../templates/annotation-3d-geometry.htm">Annotation 3D Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcannotation.htm#single-survey-point">Single Survey Point</a></td><td><a href="../../templates/single-survey-point.htm">Single Survey Point</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcannotation.htm#single-survey-point-linearly-placed">Single Survey Point Linearly Placed</a></td><td><a href="../../templates/single-survey-point-linearly-placed.htm">Single Survey Point Linearly Placed</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcannotation.htm#set-of-survey-points">Set Of Survey Points</a></td><td><a href="../../templates/set-of-survey-points.htm">Set Of Survey Points</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcannotation.htm#single-survey-line">Single Survey Line</a></td><td><a href="../../templates/single-survey-line.htm">Single Survey Line</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcannotation.htm#survey-elements-grouping">Survey Elements Grouping</a></td><td><a href="../../templates/survey-elements-grouping.htm">Survey Elements Grouping</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcannotation.htm#survey-elements-nesting">Survey Elements Nesting</a></td><td><a href="../../templates/survey-elements-nesting.htm">Survey Elements Nesting</a></td><td>General Usage</td></tr>
 
 </table>
 </details>

@@ -208,25 +208,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -330,62 +326,62 @@ The smallest curvature radius calculated on the whole effective length of the te
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifctendon.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcTendon</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 729.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 748.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifcstructuralelementsdomain/lexical/ifctendontype.htm">IfcTendonType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 729 &mdash; IfcTendon Object Typing</td></tr></table>
+<tr><td><p class="table">Table 748 &mdash; IfcTendon Object Typing</td></tr></table>
 
 <br/><br/>
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 730.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 749.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 730 &mdash; IfcTendon Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 749 &mdash; IfcTendon Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="quantity-sets" />
 <p class="use-head">Quantity Sets</p>
-<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 731.<table>
+<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 750.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>QsetName</b></th><th><b>Quantities</b></th></tr>
 <tr><td><a href="../../ifcstructuralelementsdomain/qset/qto_reinforcingelementbasequantities.htm">Qto_ReinforcingElementBaseQuantities</a></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 731 &mdash; IfcTendon Quantity Sets</td></tr></table>
+<tr><td><p class="table">Table 750 &mdash; IfcTendon Quantity Sets</td></tr></table>
 
 <br/><br/>
 
 <a id="product-local-placement" />
 <p class="use-head">Placement</p>
-<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 732.<table>
+<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 751.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 732 &mdash; IfcTendon Product Local Placement</td></tr></table>
+<tr><td><p class="table">Table 751 &mdash; IfcTendon Product Local Placement</td></tr></table>
 
 <br/><br/>
 
 <a id="body-geometry" />
 <p class="use-head">Body Geometry</p>
-<p>The <a href="../../templates/body-geometry.htm">Body Geometry</a> concept template applies to this entity as shown in Table 733.<table>
+<p>The <a href="../../templates/body-geometry.htm">Body Geometry</a> concept template applies to this entity as shown in Table 752.<table>
 <tr><td>
 <table class="gridtable">
 <tr></tr>
 <tr></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 733 &mdash; IfcTendon Body Geometry</td></tr></table>
+<tr><td><p class="table">Table 752 &mdash; IfcTendon Body Geometry</td></tr></table>
 
 <p>See supertype <a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a>. This method of representation allows for several tendons represented by a single instance of <span class="self-ref">IfcTendon</span>. The representation map should contain one <a href="../../ifcgeometricmodelresource/lexical/ifcsweptdisksolid.htm">IfcSweptDiskSolid</a>.</p>
 
@@ -393,10 +389,10 @@ The smallest curvature radius calculated on the whole effective length of the te
 
 <a id="tendon-attributes" />
 <p class="use-head">Tendon Attributes</p>
-<p>The <a href="../../templates/tendon-attributes.htm">Tendon Attributes</a> concept template applies to this entity as shown in Table 734.<table>
+<p>The <a href="../../templates/tendon-attributes.htm">Tendon Attributes</a> concept template applies to this entity as shown in Table 753.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 734 &mdash; IfcTendon Tendon Attributes</td></tr></table>
+<tr><td><p class="table">Table 753 &mdash; IfcTendon Tendon Attributes</td></tr></table>
 
 <br/><br/>
 

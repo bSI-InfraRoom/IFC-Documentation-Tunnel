@@ -61,10 +61,10 @@
 <tr><td>BUDGET</td></tr>
 <tr><td>COSTPLAN</td></tr>
 <tr><td>ESTIMATE</td></tr>
-<tr><td>TENDER</td></tr>
 <tr><td>PRICEDBILLOFQUANTITIES</td></tr>
-<tr><td>UNPRICEDBILLOFQUANTITIES</td></tr>
 <tr><td>SCHEDULEOFRATES</td></tr>
+<tr><td>TENDER</td></tr>
+<tr><td>UNPRICEDBILLOFQUANTITIES</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -141,8 +141,8 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedfacilitieselements/lexical/ifcinventory.htm">IfcInventory</a><ul>
 <table class="inheritanceenum">
 <tr><td>ASSETINVENTORY</td></tr>
-<tr><td>SPACEINVENTORY</td></tr>
 <tr><td>FURNITUREINVENTORY</td></tr>
+<tr><td>SPACEINVENTORY</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -150,9 +150,9 @@
 
 <li><a class="listing-link" href="../../../schema/ifcstructuralanalysisdomain/lexical/ifcstructuralloadgroup.htm">IfcStructuralLoadGroup</a><ul>
 <table class="inheritanceenum">
-<tr><td>LOAD_GROUP</td></tr>
 <tr><td>LOAD_CASE</td></tr>
 <tr><td>LOAD_COMBINATION</td></tr>
+<tr><td>LOAD_GROUP</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -180,24 +180,24 @@
 
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcbuiltsystem.htm">IfcBuiltSystem</a><ul>
 <table class="inheritanceenum">
-<tr><td>REINFORCING</td></tr>
-<tr><td>MOORING</td></tr>
-<tr><td>OUTERSHELL</td></tr>
-<tr><td>TRACKCIRCUIT</td></tr>
 <tr><td>EROSIONPREVENTION</td></tr>
+<tr><td>FENESTRATION</td></tr>
+<tr><td>FIREPROTECTION</td></tr>
 <tr><td>FOUNDATION</td></tr>
 <tr><td>LOADBEARING</td></tr>
-<tr><td>SHADING</td></tr>
-<tr><td>FENESTRATION</td></tr>
-<tr><td>TRANSPORT</td></tr>
+<tr><td>MOORING</td></tr>
+<tr><td>OUTERSHELL</td></tr>
 <tr><td>PRESTRESSING</td></tr>
 <tr><td>RAILWAYLINE</td></tr>
 <tr><td>RAILWAYTRACK</td></tr>
+<tr><td>REINFORCING</td></tr>
+<tr><td>SHADING</td></tr>
+<tr><td>TRACKCIRCUIT</td></tr>
+<tr><td>TRANSPORT</td></tr>
+<tr><td>TUNNEL_LINING</td></tr>
 <tr><td>TUNNEL_PRESUPPORT</td></tr>
 <tr><td>TUNNEL_SUPPORT</td></tr>
-<tr><td>TUNNEL_LINING</td></tr>
 <tr><td>WATERPROOFING</td></tr>
-<tr><td>FIREPROTECTION</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -207,6 +207,7 @@
 <table class="inheritanceenum">
 <tr><td>AIRCONDITIONING</td></tr>
 <tr><td>AUDIOVISUAL</td></tr>
+<tr><td>CATENARY_SYSTEM</td></tr>
 <tr><td>CHEMICAL</td></tr>
 <tr><td>CHILLEDWATER</td></tr>
 <tr><td>COMMUNICATION</td></tr>
@@ -224,18 +225,25 @@
 <tr><td>ELECTROACOUSTIC</td></tr>
 <tr><td>EXHAUST</td></tr>
 <tr><td>FIREPROTECTION</td></tr>
+<tr><td>FIXEDTRANSMISSIONNETWORK</td></tr>
 <tr><td>FUEL</td></tr>
 <tr><td>GAS</td></tr>
 <tr><td>HAZARDOUS</td></tr>
 <tr><td>HEATING</td></tr>
 <tr><td>LIGHTING</td></tr>
 <tr><td>LIGHTNINGPROTECTION</td></tr>
+<tr><td>MOBILENETWORK</td></tr>
+<tr><td>MONITORINGSYSTEM</td></tr>
 <tr><td>MUNICIPALSOLIDWASTE</td></tr>
 <tr><td>OIL</td></tr>
 <tr><td>OPERATIONAL</td></tr>
+<tr><td>OPERATIONALTELEPHONYSYSTEM</td></tr>
+<tr><td>OVERHEAD_CONTACTLINE_SYSTEM</td></tr>
 <tr><td>POWERGENERATION</td></tr>
 <tr><td>RAINWATER</td></tr>
 <tr><td>REFRIGERATION</td></tr>
+<tr><td>RETURN_CIRCUIT</td></tr>
+<tr><td>SAFETY</td></tr>
 <tr><td>SECURITY</td></tr>
 <tr><td>SEWAGE</td></tr>
 <tr><td>SIGNAL</td></tr>
@@ -247,14 +255,6 @@
 <tr><td>VENTILATION</td></tr>
 <tr><td>WASTEWATER</td></tr>
 <tr><td>WATERSUPPLY</td></tr>
-<tr><td>CATENARY_SYSTEM</td></tr>
-<tr><td>OVERHEAD_CONTACTLINE_SYSTEM</td></tr>
-<tr><td>RETURN_CIRCUIT</td></tr>
-<tr><td>FIXEDTRANSMISSIONNETWORK</td></tr>
-<tr><td>OPERATIONALTELEPHONYSYSTEM</td></tr>
-<tr><td>MOBILENETWORK</td></tr>
-<tr><td>SAFETY</td></tr>
-<tr><td>MONITORINGSYSTEM</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -266,8 +266,8 @@
 <li><a class="listing-link" href="../../../schema/ifcstructuralanalysisdomain/lexical/ifcstructuralanalysismodel.htm">IfcStructuralAnalysisModel</a><ul>
 <table class="inheritanceenum">
 <tr><td>IN_PLANE_LOADING_2D</td></tr>
-<tr><td>OUT_PLANE_LOADING_2D</td></tr>
 <tr><td>LOADING_3D</td></tr>
+<tr><td>OUT_PLANE_LOADING_2D</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -283,9 +283,9 @@
 <li><a class="listing-link" href="../../../schema/ifckernel/lexical/ifcprocess.htm">IfcProcess</a><ul>
 <li><a class="listing-link" href="../../../schema/ifcprocessextension/lexical/ifcevent.htm">IfcEvent</a> - <a class="listing-link" href="../../../schema/ifcprocessextension/lexical/ifceventtype.htm">IfcEventType</a><ul>
 <table class="inheritanceenum">
-<tr><td>STARTEVENT</td></tr>
 <tr><td>ENDEVENT</td></tr>
 <tr><td>INTERMEDIATEEVENT</td></tr>
+<tr><td>STARTEVENT</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -356,12 +356,12 @@
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcobservation.htm">IfcObservation</a><ul>
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeoscienceobservation.htm">IfcGeoScienceObservation</a><ul>
 <table class="inheritanceenum">
+<tr><td>BOREHOLELOG</td></tr>
+<tr><td>GEOPHYSICALSURVEYRESULT</td></tr>
 <tr><td>INSITUTESTRESULT</td></tr>
 <tr><td>LABTESTRESULT</td></tr>
-<tr><td>BOREHOLELOG</td></tr>
-<tr><td>MAPPEDFEATURE</td></tr>
 <tr><td>LOCALINFORMATION</td></tr>
-<tr><td>GEOPHYSICALSURVEYRESULT</td></tr>
+<tr><td>MAPPEDFEATURE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -393,8 +393,8 @@
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcbuiltelement.htm">IfcBuiltElement</a> - <a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcbuiltelementtype.htm">IfcBuiltElementType</a><ul>
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelement.htm">IfcArchElement</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcarchelementtype.htm">IfcArchElementType</a><ul>
 <table class="inheritanceenum">
-<tr><td>SEGMENT</td></tr>
 <tr><td>LINING</td></tr>
+<tr><td>SEGMENT</td></tr>
 <tr><td>STEELRIB</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -404,17 +404,17 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcbeam.htm">IfcBeam</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcbeamtype.htm">IfcBeamType</a><ul>
 <table class="inheritanceenum">
 <tr><td>BEAM</td></tr>
-<tr><td>JOIST</td></tr>
+<tr><td>CORNICE</td></tr>
+<tr><td>DIAPHRAGM</td></tr>
+<tr><td>EDGEBEAM</td></tr>
+<tr><td>GIRDER_SEGMENT</td></tr>
+<tr><td>HATSTONE</td></tr>
 <tr><td>HOLLOWCORE</td></tr>
+<tr><td>JOIST</td></tr>
 <tr><td>LINTEL</td></tr>
+<tr><td>PIERCAP</td></tr>
 <tr><td>SPANDREL</td></tr>
 <tr><td>T_BEAM</td></tr>
-<tr><td>GIRDER_SEGMENT</td></tr>
-<tr><td>DIAPHRAGM</td></tr>
-<tr><td>PIERCAP</td></tr>
-<tr><td>HATSTONE</td></tr>
-<tr><td>CORNICE</td></tr>
-<tr><td>EDGEBEAM</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -423,13 +423,13 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcbearing.htm">IfcBearing</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcbearingtype.htm">IfcBearingType</a><ul>
 <table class="inheritanceenum">
 <tr><td>CYLINDRICAL</td></tr>
-<tr><td>SPHERICAL</td></tr>
+<tr><td>DISK</td></tr>
 <tr><td>ELASTOMERIC</td></tr>
-<tr><td>POT</td></tr>
 <tr><td>GUIDE</td></tr>
+<tr><td>POT</td></tr>
 <tr><td>ROCKER</td></tr>
 <tr><td>ROLLER</td></tr>
-<tr><td>DISK</td></tr>
+<tr><td>SPHERICAL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -440,8 +440,8 @@
 <tr><td>COMPLEX</td></tr>
 <tr><td>ELEMENT</td></tr>
 <tr><td>PARTIAL</td></tr>
-<tr><td>PROVISIONFORVOID</td></tr>
 <tr><td>PROVISIONFORSPACE</td></tr>
+<tr><td>PROVISIONFORVOID</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -457,9 +457,9 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifccolumn.htm">IfcColumn</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifccolumntype.htm">IfcColumnType</a><ul>
 <table class="inheritanceenum">
 <tr><td>COLUMN</td></tr>
-<tr><td>PILASTER</td></tr>
 <tr><td>PIERSTEM</td></tr>
 <tr><td>PIERSTEM_SEGMENT</td></tr>
+<tr><td>PILASTER</td></tr>
 <tr><td>STANDCOLUMN</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -469,9 +469,9 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifccourse.htm">IfcCourse</a> - <a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifccoursetype.htm">IfcCourseType</a><ul>
 <table class="inheritanceenum">
 <tr><td>ARMOUR</td></tr>
-<tr><td>FILTER</td></tr>
 <tr><td>BALLASTBED</td></tr>
 <tr><td>CORE</td></tr>
+<tr><td>FILTER</td></tr>
 <tr><td>PAVEMENT</td></tr>
 <tr><td>PROTECTION</td></tr>
 <tr><td>USERDEFINED</td></tr>
@@ -482,17 +482,17 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifccovering.htm">IfcCovering</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifccoveringtype.htm">IfcCoveringType</a><ul>
 <table class="inheritanceenum">
 <tr><td>CEILING</td></tr>
-<tr><td>FLOORING</td></tr>
 <tr><td>CLADDING</td></tr>
-<tr><td>ROOFING</td></tr>
-<tr><td>MOLDING</td></tr>
-<tr><td>SKIRTINGBOARD</td></tr>
+<tr><td>COPING</td></tr>
+<tr><td>FLOORING</td></tr>
 <tr><td>INSULATION</td></tr>
 <tr><td>MEMBRANE</td></tr>
+<tr><td>MOLDING</td></tr>
+<tr><td>ROOFING</td></tr>
+<tr><td>SKIRTINGBOARD</td></tr>
 <tr><td>SLEEVING</td></tr>
 <tr><td>TOPPING</td></tr>
 <tr><td>WRAPPING</td></tr>
-<tr><td>COPING</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -508,8 +508,8 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcdeepfoundation.htm">IfcDeepFoundation</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcdeepfoundationtype.htm">IfcDeepFoundationType</a><ul>
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifccaissonfoundation.htm">IfcCaissonFoundation</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifccaissonfoundationtype.htm">IfcCaissonFoundationType</a><ul>
 <table class="inheritanceenum">
-<tr><td>WELL</td></tr>
 <tr><td>CAISSON</td></tr>
+<tr><td>WELL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -518,10 +518,10 @@
 <li><a class="listing-link" href="../../../schema/ifcstructuralelementsdomain/lexical/ifcpile.htm">IfcPile</a> - <a class="listing-link" href="../../../schema/ifcstructuralelementsdomain/lexical/ifcpiletype.htm">IfcPileType</a><ul>
 <table class="inheritanceenum">
 <tr><td>BORED</td></tr>
-<tr><td>DRIVEN</td></tr>
-<tr><td>JETGROUTING</td></tr>
 <tr><td>COHESION</td></tr>
+<tr><td>DRIVEN</td></tr>
 <tr><td>FRICTION</td></tr>
+<tr><td>JETGROUTING</td></tr>
 <tr><td>SUPPORT</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -532,10 +532,10 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a><ul>
 <table class="inheritanceenum">
+<tr><td>BOOM_BARRIER</td></tr>
 <tr><td>DOOR</td></tr>
 <tr><td>GATE</td></tr>
 <tr><td>TRAPDOOR</td></tr>
-<tr><td>BOOM_BARRIER</td></tr>
 <tr><td>TURNSTILE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -547,11 +547,11 @@
 <table class="inheritanceenum">
 <tr><td>BACKFILL</td></tr>
 <tr><td>COUNTERWEIGHT</td></tr>
-<tr><td>SUBGRADE</td></tr>
 <tr><td>EMBANKMENT</td></tr>
-<tr><td>TRANSITIONSECTION</td></tr>
-<tr><td>SUBGRADEBED</td></tr>
 <tr><td>SLOPEFILL</td></tr>
+<tr><td>SUBGRADE</td></tr>
+<tr><td>SUBGRADEBED</td></tr>
+<tr><td>TRANSITIONSECTION</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -559,17 +559,17 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcimprovedground.htm">IfcImprovedGround</a><ul>
 <table class="inheritanceenum">
-<tr><td>SURCHARGEPRELOADED</td></tr>
-<tr><td>VERTICALLYDRAINED</td></tr>
+<tr><td>DEEPMIXED</td></tr>
+<tr><td>DEWATERED</td></tr>
 <tr><td>DYNAMICALLYCOMPACTED</td></tr>
-<tr><td>REPLACED</td></tr>
-<tr><td>ROLLERCOMPACTED</td></tr>
+<tr><td>FROZEN</td></tr>
 <tr><td>INJECTIONGROUTED</td></tr>
 <tr><td>JETGROUTED</td></tr>
-<tr><td>DEEPMIXED</td></tr>
 <tr><td>LATERALLYDRAINED</td></tr>
-<tr><td>FROZEN</td></tr>
-<tr><td>DEWATERED</td></tr>
+<tr><td>REPLACED</td></tr>
+<tr><td>ROLLERCOMPACTED</td></tr>
+<tr><td>SURCHARGEPRELOADED</td></tr>
+<tr><td>VERTICALLYDRAINED</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -592,8 +592,8 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcfillelement.htm">IfcFillElement</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcfillelementtype.htm">IfcFillElementType</a><ul>
 <table class="inheritanceenum">
-<tr><td>INVERTFILL</td></tr>
 <tr><td>ANNULARGAPFILL</td></tr>
+<tr><td>INVERTFILL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -613,13 +613,13 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgroundreinforcementelement.htm">IfcGroundReinforcementElement</a> - <a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgroundreinforcementelementtype.htm">IfcGroundReinforcementElementType</a><ul>
 <table class="inheritanceenum">
-<tr><td>PILE</td></tr>
-<tr><td>TUBE</td></tr>
 <tr><td>BAR</td></tr>
-<tr><td>PLATE</td></tr>
 <tr><td>BOLT</td></tr>
-<tr><td>TENDON</td></tr>
 <tr><td>FABRIC</td></tr>
+<tr><td>PILE</td></tr>
+<tr><td>PLATE</td></tr>
+<tr><td>TENDON</td></tr>
+<tr><td>TUBE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -634,6 +634,7 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcmember.htm">IfcMember</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcmembertype.htm">IfcMemberType</a><ul>
 <table class="inheritanceenum">
+<tr><td>ARCH_SEGMENT</td></tr>
 <tr><td>BRACE</td></tr>
 <tr><td>CHORD</td></tr>
 <tr><td>COLLAR</td></tr>
@@ -643,15 +644,14 @@
 <tr><td>POST</td></tr>
 <tr><td>PURLIN</td></tr>
 <tr><td>RAFTER</td></tr>
+<tr><td>STAY_CABLE</td></tr>
+<tr><td>STIFFENING_RIB</td></tr>
 <tr><td>STRINGER</td></tr>
+<tr><td>STRUCTURALCABLE</td></tr>
 <tr><td>STRUT</td></tr>
 <tr><td>STUD</td></tr>
-<tr><td>STIFFENING_RIB</td></tr>
-<tr><td>ARCH_SEGMENT</td></tr>
-<tr><td>SUSPENSION_CABLE</td></tr>
 <tr><td>SUSPENDER</td></tr>
-<tr><td>STAY_CABLE</td></tr>
-<tr><td>STRUCTURALCABLE</td></tr>
+<tr><td>SUSPENSION_CABLE</td></tr>
 <tr><td>TIEBAR</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -660,11 +660,11 @@
 
 <li><a class="listing-link" href="../../../schema/ifcportsandwaterwaysdomain/lexical/ifcmooringdevice.htm">IfcMooringDevice</a> - <a class="listing-link" href="../../../schema/ifcportsandwaterwaysdomain/lexical/ifcmooringdevicetype.htm">IfcMooringDeviceType</a><ul>
 <table class="inheritanceenum">
+<tr><td>BOLLARD</td></tr>
 <tr><td>LINETENSIONER</td></tr>
 <tr><td>MAGNETICDEVICE</td></tr>
 <tr><td>MOORINGHOOKS</td></tr>
 <tr><td>VACUUMDEVICE</td></tr>
-<tr><td>BOLLARD</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -690,16 +690,16 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcplate.htm">IfcPlate</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcplatetype.htm">IfcPlateType</a><ul>
 <table class="inheritanceenum">
-<tr><td>CURTAIN_PANEL</td></tr>
-<tr><td>SHEET</td></tr>
-<tr><td>FLANGE_PLATE</td></tr>
-<tr><td>WEB_PLATE</td></tr>
-<tr><td>STIFFENER_PLATE</td></tr>
-<tr><td>GUSSET_PLATE</td></tr>
-<tr><td>COVER_PLATE</td></tr>
-<tr><td>SPLICE_PLATE</td></tr>
-<tr><td>LAGGING</td></tr>
 <tr><td>BASE_PLATE</td></tr>
+<tr><td>COVER_PLATE</td></tr>
+<tr><td>CURTAIN_PANEL</td></tr>
+<tr><td>FLANGE_PLATE</td></tr>
+<tr><td>GUSSET_PLATE</td></tr>
+<tr><td>LAGGING</td></tr>
+<tr><td>SHEET</td></tr>
+<tr><td>SPLICE_PLATE</td></tr>
+<tr><td>STIFFENER_PLATE</td></tr>
+<tr><td>WEB_PLATE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -707,12 +707,12 @@
 
 <li><a class="listing-link" href="../../../schema/ifcraildomain/lexical/ifcrail.htm">IfcRail</a> - <a class="listing-link" href="../../../schema/ifcraildomain/lexical/ifcrailtype.htm">IfcRailType</a><ul>
 <table class="inheritanceenum">
-<tr><td>RACKRAIL</td></tr>
 <tr><td>BLADE</td></tr>
-<tr><td>GUARDRAIL</td></tr>
-<tr><td>STOCKRAIL</td></tr>
 <tr><td>CHECKRAIL</td></tr>
+<tr><td>GUARDRAIL</td></tr>
+<tr><td>RACKRAIL</td></tr>
 <tr><td>RAIL</td></tr>
+<tr><td>STOCKRAIL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -720,10 +720,10 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcrailing.htm">IfcRailing</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcrailingtype.htm">IfcRailingType</a><ul>
 <table class="inheritanceenum">
-<tr><td>HANDRAIL</td></tr>
-<tr><td>GUARDRAIL</td></tr>
 <tr><td>BALUSTRADE</td></tr>
 <tr><td>FENCE</td></tr>
+<tr><td>GUARDRAIL</td></tr>
+<tr><td>HANDRAIL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -731,12 +731,12 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcramp.htm">IfcRamp</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcramptype.htm">IfcRampType</a><ul>
 <table class="inheritanceenum">
-<tr><td>STRAIGHT_RUN_RAMP</td></tr>
-<tr><td>TWO_STRAIGHT_RUN_RAMP</td></tr>
-<tr><td>QUARTER_TURN_RAMP</td></tr>
-<tr><td>TWO_QUARTER_TURN_RAMP</td></tr>
 <tr><td>HALF_TURN_RAMP</td></tr>
+<tr><td>QUARTER_TURN_RAMP</td></tr>
 <tr><td>SPIRAL_RAMP</td></tr>
+<tr><td>STRAIGHT_RUN_RAMP</td></tr>
+<tr><td>TWO_QUARTER_TURN_RAMP</td></tr>
+<tr><td>TWO_STRAIGHT_RUN_RAMP</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -744,8 +744,8 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcrampflight.htm">IfcRampFlight</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcrampflighttype.htm">IfcRampFlightType</a><ul>
 <table class="inheritanceenum">
-<tr><td>STRAIGHT</td></tr>
 <tr><td>SPIRAL</td></tr>
+<tr><td>STRAIGHT</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -753,19 +753,19 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcroof.htm">IfcRoof</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcrooftype.htm">IfcRoofType</a><ul>
 <table class="inheritanceenum">
-<tr><td>FLAT_ROOF</td></tr>
-<tr><td>SHED_ROOF</td></tr>
-<tr><td>GABLE_ROOF</td></tr>
-<tr><td>HIP_ROOF</td></tr>
-<tr><td>HIPPED_GABLE_ROOF</td></tr>
-<tr><td>GAMBREL_ROOF</td></tr>
-<tr><td>MANSARD_ROOF</td></tr>
 <tr><td>BARREL_ROOF</td></tr>
-<tr><td>RAINBOW_ROOF</td></tr>
 <tr><td>BUTTERFLY_ROOF</td></tr>
-<tr><td>PAVILION_ROOF</td></tr>
 <tr><td>DOME_ROOF</td></tr>
+<tr><td>FLAT_ROOF</td></tr>
 <tr><td>FREEFORM</td></tr>
+<tr><td>GABLE_ROOF</td></tr>
+<tr><td>GAMBREL_ROOF</td></tr>
+<tr><td>HIPPED_GABLE_ROOF</td></tr>
+<tr><td>HIP_ROOF</td></tr>
+<tr><td>MANSARD_ROOF</td></tr>
+<tr><td>PAVILION_ROOF</td></tr>
+<tr><td>RAINBOW_ROOF</td></tr>
+<tr><td>SHED_ROOF</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -773,9 +773,9 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcshadingdevice.htm">IfcShadingDevice</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcshadingdevicetype.htm">IfcShadingDeviceType</a><ul>
 <table class="inheritanceenum">
+<tr><td>AWNING</td></tr>
 <tr><td>JALOUSIE</td></tr>
 <tr><td>SHUTTER</td></tr>
-<tr><td>AWNING</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -783,15 +783,15 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcslab.htm">IfcSlab</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcslabtype.htm">IfcSlabType</a><ul>
 <table class="inheritanceenum">
-<tr><td>FLOOR</td></tr>
-<tr><td>ROOF</td></tr>
-<tr><td>LANDING</td></tr>
-<tr><td>BASESLAB</td></tr>
 <tr><td>APPROACH_SLAB</td></tr>
+<tr><td>BASESLAB</td></tr>
+<tr><td>FLOOR</td></tr>
+<tr><td>LANDING</td></tr>
 <tr><td>PAVING</td></tr>
-<tr><td>WEARING</td></tr>
+<tr><td>ROOF</td></tr>
 <tr><td>SIDEWALK</td></tr>
 <tr><td>TRACKSLAB</td></tr>
+<tr><td>WEARING</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -799,21 +799,21 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcstair.htm">IfcStair</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcstairtype.htm">IfcStairType</a><ul>
 <table class="inheritanceenum">
-<tr><td>STRAIGHT_RUN_STAIR</td></tr>
-<tr><td>TWO_STRAIGHT_RUN_STAIR</td></tr>
-<tr><td>QUARTER_WINDING_STAIR</td></tr>
-<tr><td>QUARTER_TURN_STAIR</td></tr>
-<tr><td>HALF_WINDING_STAIR</td></tr>
-<tr><td>HALF_TURN_STAIR</td></tr>
-<tr><td>TWO_QUARTER_WINDING_STAIR</td></tr>
-<tr><td>TWO_QUARTER_TURN_STAIR</td></tr>
-<tr><td>THREE_QUARTER_WINDING_STAIR</td></tr>
-<tr><td>THREE_QUARTER_TURN_STAIR</td></tr>
-<tr><td>SPIRAL_STAIR</td></tr>
-<tr><td>DOUBLE_RETURN_STAIR</td></tr>
 <tr><td>CURVED_RUN_STAIR</td></tr>
-<tr><td>TWO_CURVED_RUN_STAIR</td></tr>
+<tr><td>DOUBLE_RETURN_STAIR</td></tr>
+<tr><td>HALF_TURN_STAIR</td></tr>
+<tr><td>HALF_WINDING_STAIR</td></tr>
 <tr><td>LADDER</td></tr>
+<tr><td>QUARTER_TURN_STAIR</td></tr>
+<tr><td>QUARTER_WINDING_STAIR</td></tr>
+<tr><td>SPIRAL_STAIR</td></tr>
+<tr><td>STRAIGHT_RUN_STAIR</td></tr>
+<tr><td>THREE_QUARTER_TURN_STAIR</td></tr>
+<tr><td>THREE_QUARTER_WINDING_STAIR</td></tr>
+<tr><td>TWO_CURVED_RUN_STAIR</td></tr>
+<tr><td>TWO_QUARTER_TURN_STAIR</td></tr>
+<tr><td>TWO_QUARTER_WINDING_STAIR</td></tr>
+<tr><td>TWO_STRAIGHT_RUN_STAIR</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -821,11 +821,11 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcstairflight.htm">IfcStairFlight</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcstairflighttype.htm">IfcStairFlightType</a><ul>
 <table class="inheritanceenum">
-<tr><td>STRAIGHT</td></tr>
-<tr><td>WINDER</td></tr>
-<tr><td>SPIRAL</td></tr>
 <tr><td>CURVED</td></tr>
 <tr><td>FREEFORM</td></tr>
+<tr><td>SPIRAL</td></tr>
+<tr><td>STRAIGHT</td></tr>
+<tr><td>WINDER</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -833,14 +833,14 @@
 
 <li><a class="listing-link" href="../../../schema/ifcraildomain/lexical/ifctrackelement.htm">IfcTrackElement</a> - <a class="listing-link" href="../../../schema/ifcraildomain/lexical/ifctrackelementtype.htm">IfcTrackElementType</a><ul>
 <table class="inheritanceenum">
-<tr><td>TRACKENDOFALIGNMENT</td></tr>
 <tr><td>BLOCKINGDEVICE</td></tr>
-<tr><td>VEHICLESTOP</td></tr>
-<tr><td>SLEEPER</td></tr>
-<tr><td>HALF_SET_OF_BLADES</td></tr>
-<tr><td>SPEEDREGULATOR</td></tr>
 <tr><td>DERAILER</td></tr>
 <tr><td>FROG</td></tr>
+<tr><td>HALF_SET_OF_BLADES</td></tr>
+<tr><td>SLEEPER</td></tr>
+<tr><td>SPEEDREGULATOR</td></tr>
+<tr><td>TRACKENDOFALIGNMENT</td></tr>
+<tr><td>VEHICLESTOP</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -848,16 +848,16 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcwall.htm">IfcWall</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcwalltype.htm">IfcWallType</a><ul>
 <table class="inheritanceenum">
+<tr><td>ELEMENTEDWALL</td></tr>
 <tr><td>MOVABLE</td></tr>
 <tr><td>PARAPET</td></tr>
 <tr><td>PARTITIONING</td></tr>
 <tr><td>PLUMBINGWALL</td></tr>
+<tr><td>POLYGONAL</td></tr>
+<tr><td>RETAININGWALL</td></tr>
 <tr><td>SHEAR</td></tr>
 <tr><td>SOLIDWALL</td></tr>
 <tr><td>STANDARD</td></tr>
-<tr><td>POLYGONAL</td></tr>
-<tr><td>ELEMENTEDWALL</td></tr>
-<tr><td>RETAININGWALL</td></tr>
 <tr><td>WAVEWALL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -869,9 +869,9 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcwindow.htm">IfcWindow</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a><ul>
 <table class="inheritanceenum">
-<tr><td>WINDOW</td></tr>
-<tr><td>SKYLIGHT</td></tr>
 <tr><td>LIGHTDOME</td></tr>
+<tr><td>SKYLIGHT</td></tr>
+<tr><td>WINDOW</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -902,10 +902,10 @@
 <tr><td>BREAKGLASSBUTTON</td></tr>
 <tr><td>LIGHT</td></tr>
 <tr><td>MANUALPULLBOX</td></tr>
-<tr><td>SIREN</td></tr>
-<tr><td>WHISTLE</td></tr>
 <tr><td>RAILWAYCROCODILE</td></tr>
 <tr><td>RAILWAYDETONATOR</td></tr>
+<tr><td>SIREN</td></tr>
+<tr><td>WHISTLE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -914,9 +914,9 @@
 <li><a class="listing-link" href="../../../schema/ifcbuildingcontrolsdomain/lexical/ifccontroller.htm">IfcController</a> - <a class="listing-link" href="../../../schema/ifcbuildingcontrolsdomain/lexical/ifccontrollertype.htm">IfcControllerType</a><ul>
 <table class="inheritanceenum">
 <tr><td>FLOATING</td></tr>
+<tr><td>MULTIPOSITION</td></tr>
 <tr><td>PROGRAMMABLE</td></tr>
 <tr><td>PROPORTIONAL</td></tr>
-<tr><td>MULTIPOSITION</td></tr>
 <tr><td>TWOPOSITION</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -925,16 +925,16 @@
 
 <li><a class="listing-link" href="../../../schema/ifcbuildingcontrolsdomain/lexical/ifcflowinstrument.htm">IfcFlowInstrument</a> - <a class="listing-link" href="../../../schema/ifcbuildingcontrolsdomain/lexical/ifcflowinstrumenttype.htm">IfcFlowInstrumentType</a><ul>
 <table class="inheritanceenum">
+<tr><td>AMMETER</td></tr>
+<tr><td>COMBINED</td></tr>
+<tr><td>FREQUENCYMETER</td></tr>
+<tr><td>PHASEANGLEMETER</td></tr>
+<tr><td>POWERFACTORMETER</td></tr>
 <tr><td>PRESSUREGAUGE</td></tr>
 <tr><td>THERMOMETER</td></tr>
-<tr><td>AMMETER</td></tr>
-<tr><td>FREQUENCYMETER</td></tr>
-<tr><td>POWERFACTORMETER</td></tr>
-<tr><td>PHASEANGLEMETER</td></tr>
+<tr><td>VOLTMETER</td></tr>
 <tr><td>VOLTMETER_PEAK</td></tr>
 <tr><td>VOLTMETER_RMS</td></tr>
-<tr><td>COMBINED</td></tr>
-<tr><td>VOLTMETER</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -942,8 +942,8 @@
 
 <li><a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcprotectivedevicetrippingunit.htm">IfcProtectiveDeviceTrippingUnit</a> - <a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcprotectivedevicetrippingunittype.htm">IfcProtectiveDeviceTrippingUnitType</a><ul>
 <table class="inheritanceenum">
-<tr><td>ELECTRONIC</td></tr>
 <tr><td>ELECTROMAGNETIC</td></tr>
+<tr><td>ELECTRONIC</td></tr>
 <tr><td>RESIDUALCURRENT</td></tr>
 <tr><td>THERMAL</td></tr>
 <tr><td>USERDEFINED</td></tr>
@@ -953,12 +953,14 @@
 
 <li><a class="listing-link" href="../../../schema/ifcbuildingcontrolsdomain/lexical/ifcsensor.htm">IfcSensor</a> - <a class="listing-link" href="../../../schema/ifcbuildingcontrolsdomain/lexical/ifcsensortype.htm">IfcSensorType</a><ul>
 <table class="inheritanceenum">
-<tr><td>COSENSOR</td></tr>
 <tr><td>CO2SENSOR</td></tr>
 <tr><td>CONDUCTANCESENSOR</td></tr>
 <tr><td>CONTACTSENSOR</td></tr>
+<tr><td>COSENSOR</td></tr>
+<tr><td>EARTHQUAKESENSOR</td></tr>
 <tr><td>FIRESENSOR</td></tr>
 <tr><td>FLOWSENSOR</td></tr>
+<tr><td>FOREIGNOBJECTDETECTIONSENSOR</td></tr>
 <tr><td>FROSTSENSOR</td></tr>
 <tr><td>GASSENSOR</td></tr>
 <tr><td>HEATSENSOR</td></tr>
@@ -969,22 +971,20 @@
 <tr><td>LIGHTSENSOR</td></tr>
 <tr><td>MOISTURESENSOR</td></tr>
 <tr><td>MOVEMENTSENSOR</td></tr>
+<tr><td>OBSTACLESENSOR</td></tr>
 <tr><td>PHSENSOR</td></tr>
 <tr><td>PRESSURESENSOR</td></tr>
 <tr><td>RADIATIONSENSOR</td></tr>
 <tr><td>RADIOACTIVITYSENSOR</td></tr>
+<tr><td>RAINSENSOR</td></tr>
 <tr><td>SMOKESENSOR</td></tr>
+<tr><td>SNOWDEPTHSENSOR</td></tr>
 <tr><td>SOUNDSENSOR</td></tr>
 <tr><td>TEMPERATURESENSOR</td></tr>
-<tr><td>WINDSENSOR</td></tr>
-<tr><td>EARTHQUAKESENSOR</td></tr>
-<tr><td>FOREIGNOBJECTDETECTIONSENSOR</td></tr>
-<tr><td>OBSTACLESENSOR</td></tr>
-<tr><td>RAINSENSOR</td></tr>
-<tr><td>SNOWDEPTHSENSOR</td></tr>
 <tr><td>TRAINSENSOR</td></tr>
 <tr><td>TURNOUTCLOSURESENSOR</td></tr>
 <tr><td>WHEELSENSOR</td></tr>
+<tr><td>WINDSENSOR</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -993,15 +993,15 @@
 <li><a class="listing-link" href="../../../schema/ifcbuildingcontrolsdomain/lexical/ifcunitarycontrolelement.htm">IfcUnitaryControlElement</a> - <a class="listing-link" href="../../../schema/ifcbuildingcontrolsdomain/lexical/ifcunitarycontrolelementtype.htm">IfcUnitaryControlElementType</a><ul>
 <table class="inheritanceenum">
 <tr><td>ALARMPANEL</td></tr>
+<tr><td>BASESTATIONCONTROLLER</td></tr>
+<tr><td>COMBINED</td></tr>
 <tr><td>CONTROLPANEL</td></tr>
 <tr><td>GASDETECTIONPANEL</td></tr>
+<tr><td>HUMIDISTAT</td></tr>
 <tr><td>INDICATORPANEL</td></tr>
 <tr><td>MIMICPANEL</td></tr>
-<tr><td>HUMIDISTAT</td></tr>
 <tr><td>THERMOSTAT</td></tr>
 <tr><td>WEATHERSTATION</td></tr>
-<tr><td>COMBINED</td></tr>
-<tr><td>BASESTATIONCONTROLLER</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1031,12 +1031,12 @@
 <tr><td>FIXEDPLATECOUNTERFLOWEXCHANGER</td></tr>
 <tr><td>FIXEDPLATECROSSFLOWEXCHANGER</td></tr>
 <tr><td>FIXEDPLATEPARALLELFLOWEXCHANGER</td></tr>
+<tr><td>HEATPIPE</td></tr>
 <tr><td>ROTARYWHEEL</td></tr>
 <tr><td>RUNAROUNDCOILLOOP</td></tr>
-<tr><td>HEATPIPE</td></tr>
-<tr><td>TWINTOWERENTHALPYRECOVERYLOOPS</td></tr>
-<tr><td>THERMOSIPHONSEALEDTUBEHEATEXCHANGERS</td></tr>
 <tr><td>THERMOSIPHONCOILTYPEHEATEXCHANGERS</td></tr>
+<tr><td>THERMOSIPHONSEALEDTUBEHEATEXCHANGERS</td></tr>
+<tr><td>TWINTOWERENTHALPYRECOVERYLOOPS</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1044,8 +1044,8 @@
 
 <li><a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcboiler.htm">IfcBoiler</a> - <a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcboilertype.htm">IfcBoilerType</a><ul>
 <table class="inheritanceenum">
-<tr><td>WATER</td></tr>
 <tr><td>STEAM</td></tr>
+<tr><td>WATER</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1061,8 +1061,8 @@
 <li><a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcchiller.htm">IfcChiller</a> - <a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcchillertype.htm">IfcChillerType</a><ul>
 <table class="inheritanceenum">
 <tr><td>AIRCOOLED</td></tr>
-<tr><td>WATERCOOLED</td></tr>
 <tr><td>HEATRECOVERY</td></tr>
+<tr><td>WATERCOOLED</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1107,9 +1107,9 @@
 
 <li><a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifccoolingtower.htm">IfcCoolingTower</a> - <a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifccoolingtowertype.htm">IfcCoolingTowerType</a><ul>
 <table class="inheritanceenum">
-<tr><td>NATURALDRAFT</td></tr>
-<tr><td>MECHANICALINDUCEDDRAFT</td></tr>
 <tr><td>MECHANICALFORCEDDRAFT</td></tr>
+<tr><td>MECHANICALINDUCEDDRAFT</td></tr>
+<tr><td>NATURALDRAFT</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1148,15 +1148,15 @@
 
 <li><a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcevaporativecooler.htm">IfcEvaporativeCooler</a> - <a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcevaporativecoolertype.htm">IfcEvaporativeCoolerType</a><ul>
 <table class="inheritanceenum">
+<tr><td>DIRECTEVAPORATIVEAIRWASHER</td></tr>
+<tr><td>DIRECTEVAPORATIVEPACKAGEDROTARYAIRCOOLER</td></tr>
 <tr><td>DIRECTEVAPORATIVERANDOMMEDIAAIRCOOLER</td></tr>
 <tr><td>DIRECTEVAPORATIVERIGIDMEDIAAIRCOOLER</td></tr>
 <tr><td>DIRECTEVAPORATIVESLINGERSPACKAGEDAIRCOOLER</td></tr>
-<tr><td>DIRECTEVAPORATIVEPACKAGEDROTARYAIRCOOLER</td></tr>
-<tr><td>DIRECTEVAPORATIVEAIRWASHER</td></tr>
+<tr><td>INDIRECTDIRECTCOMBINATION</td></tr>
+<tr><td>INDIRECTEVAPORATIVECOOLINGTOWERORCOILCOOLER</td></tr>
 <tr><td>INDIRECTEVAPORATIVEPACKAGEAIRCOOLER</td></tr>
 <tr><td>INDIRECTEVAPORATIVEWETCOIL</td></tr>
-<tr><td>INDIRECTEVAPORATIVECOOLINGTOWERORCOILCOOLER</td></tr>
-<tr><td>INDIRECTDIRECTCOMBINATION</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1165,9 +1165,9 @@
 <li><a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcevaporator.htm">IfcEvaporator</a> - <a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcevaporatortype.htm">IfcEvaporatorType</a><ul>
 <table class="inheritanceenum">
 <tr><td>DIRECTEXPANSION</td></tr>
+<tr><td>DIRECTEXPANSIONBRAZEDPLATE</td></tr>
 <tr><td>DIRECTEXPANSIONSHELLANDTUBE</td></tr>
 <tr><td>DIRECTEXPANSIONTUBEINTUBE</td></tr>
-<tr><td>DIRECTEXPANSIONBRAZEDPLATE</td></tr>
 <tr><td>FLOODEDSHELLANDTUBE</td></tr>
 <tr><td>SHELLANDCOIL</td></tr>
 <tr><td>USERDEFINED</td></tr>
@@ -1187,19 +1187,19 @@
 
 <li><a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifchumidifier.htm">IfcHumidifier</a> - <a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifchumidifiertype.htm">IfcHumidifierType</a><ul>
 <table class="inheritanceenum">
-<tr><td>STEAMINJECTION</td></tr>
 <tr><td>ADIABATICAIRWASHER</td></tr>
-<tr><td>ADIABATICPAN</td></tr>
-<tr><td>ADIABATICWETTEDELEMENT</td></tr>
 <tr><td>ADIABATICATOMIZING</td></tr>
-<tr><td>ADIABATICULTRASONIC</td></tr>
-<tr><td>ADIABATICRIGIDMEDIA</td></tr>
 <tr><td>ADIABATICCOMPRESSEDAIRNOZZLE</td></tr>
+<tr><td>ADIABATICPAN</td></tr>
+<tr><td>ADIABATICRIGIDMEDIA</td></tr>
+<tr><td>ADIABATICULTRASONIC</td></tr>
+<tr><td>ADIABATICWETTEDELEMENT</td></tr>
+<tr><td>ASSISTEDBUTANE</td></tr>
 <tr><td>ASSISTEDELECTRIC</td></tr>
 <tr><td>ASSISTEDNATURALGAS</td></tr>
 <tr><td>ASSISTEDPROPANE</td></tr>
-<tr><td>ASSISTEDBUTANE</td></tr>
 <tr><td>ASSISTEDSTEAM</td></tr>
+<tr><td>STEAMINJECTION</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1226,13 +1226,13 @@
 
 <li><a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifctransformer.htm">IfcTransformer</a> - <a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifctransformertype.htm">IfcTransformerType</a><ul>
 <table class="inheritanceenum">
+<tr><td>CHOPPER</td></tr>
+<tr><td>COMBINED</td></tr>
 <tr><td>CURRENT</td></tr>
 <tr><td>FREQUENCY</td></tr>
 <tr><td>INVERTER</td></tr>
 <tr><td>RECTIFIER</td></tr>
 <tr><td>VOLTAGE</td></tr>
-<tr><td>CHOPPER</td></tr>
-<tr><td>COMBINED</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1248,11 +1248,11 @@
 
 <li><a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcunitaryequipment.htm">IfcUnitaryEquipment</a> - <a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcunitaryequipmenttype.htm">IfcUnitaryEquipmentType</a><ul>
 <table class="inheritanceenum">
-<tr><td>AIRHANDLER</td></tr>
 <tr><td>AIRCONDITIONINGUNIT</td></tr>
+<tr><td>AIRHANDLER</td></tr>
 <tr><td>DEHUMIDIFIER</td></tr>
-<tr><td>SPLITSYSTEM</td></tr>
 <tr><td>ROOFTOPUNIT</td></tr>
+<tr><td>SPLITSYSTEM</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1291,12 +1291,12 @@
 
 <li><a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcdistributionboard.htm">IfcDistributionBoard</a> - <a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcdistributionboardtype.htm">IfcDistributionBoardType</a><ul>
 <table class="inheritanceenum">
-<tr><td>SWITCHBOARD</td></tr>
 <tr><td>CONSUMERUNIT</td></tr>
-<tr><td>MOTORCONTROLCENTRE</td></tr>
-<tr><td>DISTRIBUTIONFRAME</td></tr>
-<tr><td>DISTRIBUTIONBOARD</td></tr>
 <tr><td>DISPATCHINGBOARD</td></tr>
+<tr><td>DISTRIBUTIONBOARD</td></tr>
+<tr><td>DISTRIBUTIONFRAME</td></tr>
+<tr><td>MOTORCONTROLCENTRE</td></tr>
+<tr><td>SWITCHBOARD</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1315,9 +1315,9 @@
 
 <li><a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcelectrictimecontrol.htm">IfcElectricTimeControl</a> - <a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcelectrictimecontroltype.htm">IfcElectricTimeControlType</a><ul>
 <table class="inheritanceenum">
+<tr><td>RELAY</td></tr>
 <tr><td>TIMECLOCK</td></tr>
 <tr><td>TIMEDELAY</td></tr>
-<tr><td>RELAY</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1336,15 +1336,15 @@
 
 <li><a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcprotectivedevice.htm">IfcProtectiveDevice</a> - <a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcprotectivedevicetype.htm">IfcProtectiveDeviceType</a><ul>
 <table class="inheritanceenum">
+<tr><td>ANTI_ARCING_DEVICE</td></tr>
 <tr><td>CIRCUITBREAKER</td></tr>
-<tr><td>EARTHLEAKAGECIRCUITBREAKER</td></tr>
 <tr><td>EARTHINGSWITCH</td></tr>
+<tr><td>EARTHLEAKAGECIRCUITBREAKER</td></tr>
 <tr><td>FUSEDISCONNECTOR</td></tr>
 <tr><td>RESIDUALCURRENTCIRCUITBREAKER</td></tr>
 <tr><td>RESIDUALCURRENTSWITCH</td></tr>
-<tr><td>VARISTOR</td></tr>
-<tr><td>ANTI_ARCING_DEVICE</td></tr>
 <tr><td>SPARKGAP</td></tr>
+<tr><td>VARISTOR</td></tr>
 <tr><td>VOLTAGELIMITER</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -1358,12 +1358,12 @@
 <tr><td>EMERGENCYSTOP</td></tr>
 <tr><td>KEYPAD</td></tr>
 <tr><td>MOMENTARYSWITCH</td></tr>
+<tr><td>RELAY</td></tr>
 <tr><td>SELECTORSWITCH</td></tr>
 <tr><td>STARTER</td></tr>
+<tr><td>START_AND_STOP_EQUIPMENT</td></tr>
 <tr><td>SWITCHDISCONNECTOR</td></tr>
 <tr><td>TOGGLESWITCH</td></tr>
-<tr><td>RELAY</td></tr>
-<tr><td>START_AND_STOP_EQUIPMENT</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1377,9 +1377,9 @@
 <tr><td>CHECK</td></tr>
 <tr><td>COMMISSIONING</td></tr>
 <tr><td>DIVERTING</td></tr>
-<tr><td>DRAWOFFCOCK</td></tr>
 <tr><td>DOUBLECHECK</td></tr>
 <tr><td>DOUBLEREGULATING</td></tr>
+<tr><td>DRAWOFFCOCK</td></tr>
 <tr><td>FAUCET</td></tr>
 <tr><td>FLUSHING</td></tr>
 <tr><td>GASCOCK</td></tr>
@@ -1405,8 +1405,8 @@
 <tr><td>BEND</td></tr>
 <tr><td>CONNECTOR</td></tr>
 <tr><td>CROSS</td></tr>
-<tr><td>REDUCER</td></tr>
 <tr><td>JUNCTION</td></tr>
+<tr><td>REDUCER</td></tr>
 <tr><td>TEE</td></tr>
 <tr><td>TRANSITION</td></tr>
 <tr><td>USERDEFINED</td></tr>
@@ -1419,9 +1419,9 @@
 <tr><td>CONNECTOR</td></tr>
 <tr><td>ENTRY</td></tr>
 <tr><td>EXIT</td></tr>
+<tr><td>FANOUT</td></tr>
 <tr><td>JUNCTION</td></tr>
 <tr><td>TRANSITION</td></tr>
-<tr><td>FANOUT</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1469,21 +1469,21 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgserviceelements/lexical/ifcflowmovingdevice.htm">IfcFlowMovingDevice</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgserviceelements/lexical/ifcflowmovingdevicetype.htm">IfcFlowMovingDeviceType</a><ul>
 <li><a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifccompressor.htm">IfcCompressor</a> - <a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifccompressortype.htm">IfcCompressorType</a><ul>
 <table class="inheritanceenum">
-<tr><td>DYNAMIC</td></tr>
-<tr><td>RECIPROCATING</td></tr>
-<tr><td>ROTARY</td></tr>
-<tr><td>SCROLL</td></tr>
-<tr><td>TROCHOIDAL</td></tr>
-<tr><td>SINGLESTAGE</td></tr>
 <tr><td>BOOSTER</td></tr>
-<tr><td>OPENTYPE</td></tr>
+<tr><td>DYNAMIC</td></tr>
 <tr><td>HERMETIC</td></tr>
-<tr><td>SEMIHERMETIC</td></tr>
-<tr><td>WELDEDSHELLHERMETIC</td></tr>
+<tr><td>OPENTYPE</td></tr>
+<tr><td>RECIPROCATING</td></tr>
 <tr><td>ROLLINGPISTON</td></tr>
+<tr><td>ROTARY</td></tr>
 <tr><td>ROTARYVANE</td></tr>
+<tr><td>SCROLL</td></tr>
+<tr><td>SEMIHERMETIC</td></tr>
 <tr><td>SINGLESCREW</td></tr>
+<tr><td>SINGLESTAGE</td></tr>
+<tr><td>TROCHOIDAL</td></tr>
 <tr><td>TWINSCREW</td></tr>
+<tr><td>WELDEDSHELLHERMETIC</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1491,16 +1491,16 @@
 
 <li><a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcfan.htm">IfcFan</a> - <a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcfantype.htm">IfcFanType</a><ul>
 <table class="inheritanceenum">
+<tr><td>CENTRIFUGALAIRFOIL</td></tr>
+<tr><td>CENTRIFUGALBACKWARDINCLINEDCURVED</td></tr>
 <tr><td>CENTRIFUGALFORWARDCURVED</td></tr>
 <tr><td>CENTRIFUGALRADIAL</td></tr>
-<tr><td>CENTRIFUGALBACKWARDINCLINEDCURVED</td></tr>
-<tr><td>CENTRIFUGALAIRFOIL</td></tr>
+<tr><td>JET</td></tr>
+<tr><td>PROPELLORAXIAL</td></tr>
 <tr><td>TUBEAXIAL</td></tr>
 <tr><td>VANEAXIAL</td></tr>
-<tr><td>PROPELLORAXIAL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
-<tr><td>JET</td></tr>
 </table>
 </ul></li>
 
@@ -1523,12 +1523,12 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedbldgserviceelements/lexical/ifcflowsegment.htm">IfcFlowSegment</a> - <a class="listing-link" href="../../../schema/ifcsharedbldgserviceelements/lexical/ifcflowsegmenttype.htm">IfcFlowSegmentType</a><ul>
 <li><a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifccablecarriersegment.htm">IfcCableCarrierSegment</a> - <a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifccablecarriersegmenttype.htm">IfcCableCarrierSegmentType</a><ul>
 <table class="inheritanceenum">
+<tr><td>CABLEBRACKET</td></tr>
 <tr><td>CABLELADDERSEGMENT</td></tr>
 <tr><td>CABLETRAYSEGMENT</td></tr>
 <tr><td>CABLETRUNKINGSEGMENT</td></tr>
-<tr><td>CONDUITSEGMENT</td></tr>
-<tr><td>CABLEBRACKET</td></tr>
 <tr><td>CATENARYWIRE</td></tr>
+<tr><td>CONDUITSEGMENT</td></tr>
 <tr><td>DROPPER</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -1540,8 +1540,8 @@
 <tr><td>BUSBARSEGMENT</td></tr>
 <tr><td>CABLESEGMENT</td></tr>
 <tr><td>CONDUCTORSEGMENT</td></tr>
-<tr><td>CORESEGMENT</td></tr>
 <tr><td>CONTACTWIRESEGMENT</td></tr>
+<tr><td>CORESEGMENT</td></tr>
 <tr><td>FIBERSEGMENT</td></tr>
 <tr><td>FIBERTUBE</td></tr>
 <tr><td>OPTICALCABLESEGMENT</td></tr>
@@ -1554,10 +1554,10 @@
 
 <li><a class="listing-link" href="../../../schema/ifcportsandwaterwaysdomain/lexical/ifcconveyorsegment.htm">IfcConveyorSegment</a> - <a class="listing-link" href="../../../schema/ifcportsandwaterwaysdomain/lexical/ifcconveyorsegmenttype.htm">IfcConveyorSegmentType</a><ul>
 <table class="inheritanceenum">
-<tr><td>CHUTECONVEYOR</td></tr>
 <tr><td>BELTCONVEYOR</td></tr>
-<tr><td>SCREWCONVEYOR</td></tr>
 <tr><td>BUCKETCONVEYOR</td></tr>
+<tr><td>CHUTECONVEYOR</td></tr>
+<tr><td>SCREWCONVEYOR</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1565,8 +1565,8 @@
 
 <li><a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcductsegment.htm">IfcDuctSegment</a> - <a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcductsegmenttype.htm">IfcDuctSegmentType</a><ul>
 <table class="inheritanceenum">
-<tr><td>RIGIDSEGMENT</td></tr>
 <tr><td>FLEXIBLESEGMENT</td></tr>
+<tr><td>RIGIDSEGMENT</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1576,8 +1576,8 @@
 <table class="inheritanceenum">
 <tr><td>CULVERT</td></tr>
 <tr><td>FLEXIBLESEGMENT</td></tr>
-<tr><td>RIGIDSEGMENT</td></tr>
 <tr><td>GUTTER</td></tr>
+<tr><td>RIGIDSEGMENT</td></tr>
 <tr><td>SPOOL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -1590,14 +1590,14 @@
 <li><a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcelectricflowstoragedevice.htm">IfcElectricFlowStorageDevice</a> - <a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcelectricflowstoragedevicetype.htm">IfcElectricFlowStorageDeviceType</a><ul>
 <table class="inheritanceenum">
 <tr><td>BATTERY</td></tr>
-<tr><td>CAPACITORBANK</td></tr>
-<tr><td>HARMONICFILTER</td></tr>
-<tr><td>INDUCTORBANK</td></tr>
-<tr><td>UPS</td></tr>
 <tr><td>CAPACITOR</td></tr>
+<tr><td>CAPACITORBANK</td></tr>
 <tr><td>COMPENSATOR</td></tr>
+<tr><td>HARMONICFILTER</td></tr>
 <tr><td>INDUCTOR</td></tr>
+<tr><td>INDUCTORBANK</td></tr>
 <tr><td>RECHARGER</td></tr>
+<tr><td>UPS</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1609,10 +1609,10 @@
 <tr><td>BREAKPRESSURE</td></tr>
 <tr><td>EXPANSION</td></tr>
 <tr><td>FEEDANDEXPANSION</td></tr>
+<tr><td>OILRETENTIONTRAY</td></tr>
 <tr><td>PRESSUREVESSEL</td></tr>
 <tr><td>STORAGE</td></tr>
 <tr><td>VESSEL</td></tr>
-<tr><td>OILRETENTIONTRAY</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1635,20 +1635,20 @@
 <li><a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcaudiovisualappliance.htm">IfcAudioVisualAppliance</a> - <a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcaudiovisualappliancetype.htm">IfcAudioVisualApplianceType</a><ul>
 <table class="inheritanceenum">
 <tr><td>AMPLIFIER</td></tr>
+<tr><td>BEACON</td></tr>
 <tr><td>CAMERA</td></tr>
+<tr><td>COMMUNICATIONTERMINAL</td></tr>
 <tr><td>DISPLAY</td></tr>
 <tr><td>MICROPHONE</td></tr>
 <tr><td>PLAYER</td></tr>
 <tr><td>PROJECTOR</td></tr>
 <tr><td>RECEIVER</td></tr>
+<tr><td>RECORDINGEQUIPMENT</td></tr>
+<tr><td>SIREN</td></tr>
 <tr><td>SPEAKER</td></tr>
 <tr><td>SWITCHER</td></tr>
 <tr><td>TELEPHONE</td></tr>
 <tr><td>TUNER</td></tr>
-<tr><td>COMMUNICATIONTERMINAL</td></tr>
-<tr><td>RECORDINGEQUIPMENT</td></tr>
-<tr><td>SIREN</td></tr>
-<tr><td>BEACON</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1657,29 +1657,29 @@
 <li><a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifccommunicationsappliance.htm">IfcCommunicationsAppliance</a> - <a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifccommunicationsappliancetype.htm">IfcCommunicationsApplianceType</a><ul>
 <table class="inheritanceenum">
 <tr><td>ANTENNA</td></tr>
+<tr><td>AUTOMATON</td></tr>
 <tr><td>COMPUTER</td></tr>
 <tr><td>FAX</td></tr>
 <tr><td>GATEWAY</td></tr>
+<tr><td>INTELLIGENTPERIPHERAL</td></tr>
+<tr><td>IPNETWORKEQUIPMENT</td></tr>
+<tr><td>LINESIDEELECTRONICUNIT</td></tr>
 <tr><td>MODEM</td></tr>
 <tr><td>NETWORKAPPLIANCE</td></tr>
 <tr><td>NETWORKBRIDGE</td></tr>
 <tr><td>NETWORKHUB</td></tr>
+<tr><td>OPTICALLINETERMINAL</td></tr>
+<tr><td>OPTICALNETWORKUNIT</td></tr>
 <tr><td>PRINTER</td></tr>
+<tr><td>RADIOBLOCKCENTER</td></tr>
 <tr><td>REPEATER</td></tr>
 <tr><td>ROUTER</td></tr>
 <tr><td>SCANNER</td></tr>
-<tr><td>AUTOMATON</td></tr>
-<tr><td>INTELLIGENTPERIPHERAL</td></tr>
-<tr><td>IPNETWORKEQUIPMENT</td></tr>
-<tr><td>OPTICALNETWORKUNIT</td></tr>
 <tr><td>TELECOMMAND</td></tr>
 <tr><td>TELEPHONYEXCHANGE</td></tr>
 <tr><td>TRANSITIONCOMPONENT</td></tr>
 <tr><td>TRANSPONDER</td></tr>
 <tr><td>TRANSPORTEQUIPMENT</td></tr>
-<tr><td>OPTICALLINETERMINAL</td></tr>
-<tr><td>LINESIDEELECTRONICUNIT</td></tr>
-<tr><td>RADIOBLOCKCENTER</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1688,10 +1688,10 @@
 <li><a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcearthingelement.htm">IfcEarthingElement</a> - <a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcearthingelementtype.htm">IfcEarthingElementType</a><ul>
 <table class="inheritanceenum">
 <tr><td>EARTHINGSTRIP</td></tr>
-<tr><td>GROUNDINGPLATE</td></tr>
-<tr><td>GROUNDINGROD</td></tr>
 <tr><td>FIXEDTERMINAL</td></tr>
 <tr><td>GROUNDINGMESH</td></tr>
+<tr><td>GROUNDINGPLATE</td></tr>
+<tr><td>GROUNDINGROD</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1703,8 +1703,8 @@
 <tr><td>ELECTRICCOOKER</td></tr>
 <tr><td>FREESTANDINGELECTRICHEATER</td></tr>
 <tr><td>FREESTANDINGFAN</td></tr>
-<tr><td>FREESTANDINGWATERHEATER</td></tr>
 <tr><td>FREESTANDINGWATERCOOLER</td></tr>
+<tr><td>FREESTANDINGWATERHEATER</td></tr>
 <tr><td>FREEZER</td></tr>
 <tr><td>FRIDGE_FREEZER</td></tr>
 <tr><td>HANDDRYER</td></tr>
@@ -1724,10 +1724,10 @@
 <table class="inheritanceenum">
 <tr><td>BREECHINGINLET</td></tr>
 <tr><td>FIREHYDRANT</td></tr>
+<tr><td>FIREMONITOR</td></tr>
 <tr><td>HOSEREEL</td></tr>
 <tr><td>SPRINKLER</td></tr>
 <tr><td>SPRINKLERDEFLECTOR</td></tr>
-<tr><td>FIREMONITOR</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1751,8 +1751,8 @@
 
 <li><a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifclightfixture.htm">IfcLightFixture</a> - <a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifclightfixturetype.htm">IfcLightFixtureType</a><ul>
 <table class="inheritanceenum">
-<tr><td>POINTSOURCE</td></tr>
 <tr><td>DIRECTIONSOURCE</td></tr>
+<tr><td>POINTSOURCE</td></tr>
 <tr><td>SECURITYLIGHTING</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -1761,8 +1761,8 @@
 
 <li><a class="listing-link" href="../../../schema/ifcportsandwaterwaysdomain/lexical/ifcliquidterminal.htm">IfcLiquidTerminal</a> - <a class="listing-link" href="../../../schema/ifcportsandwaterwaysdomain/lexical/ifcliquidterminaltype.htm">IfcLiquidTerminalType</a><ul>
 <table class="inheritanceenum">
-<tr><td>LOADINGARM</td></tr>
 <tr><td>HOSEREEL</td></tr>
+<tr><td>LOADINGARM</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1782,19 +1782,19 @@
 
 <li><a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcmobiletelecommunicationsappliance.htm">IfcMobileTelecommunicationsAppliance</a> - <a class="listing-link" href="../../../schema/ifcelectricaldomain/lexical/ifcmobiletelecommunicationsappliancetype.htm">IfcMobileTelecommunicationsApplianceType</a><ul>
 <table class="inheritanceenum">
-<tr><td>E_UTRAN_NODE_B</td></tr>
-<tr><td>REMOTERADIOUNIT</td></tr>
 <tr><td>ACCESSPOINT</td></tr>
-<tr><td>BASETRANSCEIVERSTATION</td></tr>
-<tr><td>REMOTEUNIT</td></tr>
 <tr><td>BASEBANDUNIT</td></tr>
-<tr><td>MASTERUNIT</td></tr>
+<tr><td>BASETRANSCEIVERSTATION</td></tr>
+<tr><td>E_UTRAN_NODE_B</td></tr>
 <tr><td>GATEWAY_GPRS_SUPPORT_NODE</td></tr>
-<tr><td>SUBSCRIBERSERVER</td></tr>
+<tr><td>MASTERUNIT</td></tr>
 <tr><td>MOBILESWITCHINGCENTER</td></tr>
 <tr><td>MSCSERVER</td></tr>
 <tr><td>PACKETCONTROLUNIT</td></tr>
+<tr><td>REMOTERADIOUNIT</td></tr>
+<tr><td>REMOTEUNIT</td></tr>
 <tr><td>SERVICE_GPRS_SUPPORT_NODE</td></tr>
+<tr><td>SUBSCRIBERSERVER</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1804,8 +1804,8 @@
 <table class="inheritanceenum">
 <tr><td>AUDIOVISUALOUTLET</td></tr>
 <tr><td>COMMUNICATIONSOUTLET</td></tr>
-<tr><td>POWEROUTLET</td></tr>
 <tr><td>DATAOUTLET</td></tr>
+<tr><td>POWEROUTLET</td></tr>
 <tr><td>TELEPHONEOUTLET</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -1817,9 +1817,9 @@
 <tr><td>BATH</td></tr>
 <tr><td>BIDET</td></tr>
 <tr><td>CISTERN</td></tr>
+<tr><td>SANITARYFOUNTAIN</td></tr>
 <tr><td>SHOWER</td></tr>
 <tr><td>SINK</td></tr>
-<tr><td>SANITARYFOUNTAIN</td></tr>
 <tr><td>TOILETPAN</td></tr>
 <tr><td>URINAL</td></tr>
 <tr><td>WASHHANDBASIN</td></tr>
@@ -1831,9 +1831,9 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcsignal.htm">IfcSignal</a> - <a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcsignaltype.htm">IfcSignalType</a><ul>
 <table class="inheritanceenum">
-<tr><td>VISUAL</td></tr>
 <tr><td>AUDIO</td></tr>
 <tr><td>MIXED</td></tr>
+<tr><td>VISUAL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1925,38 +1925,38 @@
 
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcelementassembly.htm">IfcElementAssembly</a> - <a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcelementassemblytype.htm">IfcElementAssemblyType</a><ul>
 <table class="inheritanceenum">
+<tr><td>ABUTMENT</td></tr>
 <tr><td>ACCESSORY_ASSEMBLY</td></tr>
 <tr><td>ARCH</td></tr>
 <tr><td>BEAM_GRID</td></tr>
 <tr><td>BRACED_FRAME</td></tr>
-<tr><td>GIRDER</td></tr>
-<tr><td>REINFORCEMENT_UNIT</td></tr>
-<tr><td>RIGID_FRAME</td></tr>
-<tr><td>SLAB_FIELD</td></tr>
-<tr><td>TRUSS</td></tr>
-<tr><td>ABUTMENT</td></tr>
-<tr><td>PIER</td></tr>
-<tr><td>PYLON</td></tr>
 <tr><td>CROSS_BRACING</td></tr>
 <tr><td>DECK</td></tr>
-<tr><td>MAST</td></tr>
-<tr><td>SIGNALASSEMBLY</td></tr>
+<tr><td>DILATATIONPANEL</td></tr>
+<tr><td>DUCTBANK</td></tr>
+<tr><td>ENTRANCEWORKS</td></tr>
+<tr><td>GIRDER</td></tr>
 <tr><td>GRID</td></tr>
+<tr><td>MAST</td></tr>
+<tr><td>PIER</td></tr>
+<tr><td>PRESUPPORTFACE</td></tr>
+<tr><td>PRESUPPORTVAULT</td></tr>
+<tr><td>PYLON</td></tr>
+<tr><td>RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY</td></tr>
+<tr><td>REINFORCEMENT_UNIT</td></tr>
+<tr><td>RIGID_FRAME</td></tr>
+<tr><td>RING</td></tr>
 <tr><td>SHELTER</td></tr>
+<tr><td>SIGNALASSEMBLY</td></tr>
+<tr><td>SLAB_FIELD</td></tr>
+<tr><td>SUMPBUSTER</td></tr>
 <tr><td>SUPPORTINGASSEMBLY</td></tr>
 <tr><td>SUSPENSIONASSEMBLY</td></tr>
-<tr><td>TRACTION_SWITCHING_ASSEMBLY</td></tr>
 <tr><td>TRACKPANEL</td></tr>
-<tr><td>TURNOUTPANEL</td></tr>
-<tr><td>DILATATIONPANEL</td></tr>
-<tr><td>RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY</td></tr>
-<tr><td>ENTRANCEWORKS</td></tr>
-<tr><td>SUMPBUSTER</td></tr>
+<tr><td>TRACTION_SWITCHING_ASSEMBLY</td></tr>
 <tr><td>TRAFFIC_CALMING_DEVICE</td></tr>
-<tr><td>DUCTBANK</td></tr>
-<tr><td>PRESUPPORTVAULT</td></tr>
-<tr><td>PRESUPPORTFACE</td></tr>
-<tr><td>RING</td></tr>
+<tr><td>TRUSS</td></tr>
+<tr><td>TURNOUTPANEL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -1965,10 +1965,10 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a> - <a class="listing-link" href="../../../schema/ifcsharedcomponentelements/lexical/ifcelementcomponenttype.htm">IfcElementComponentType</a><ul>
 <li><a class="listing-link" href="../../../schema/ifcsharedcomponentelements/lexical/ifcbuildingelementpart.htm">IfcBuildingElementPart</a> - <a class="listing-link" href="../../../schema/ifcsharedcomponentelements/lexical/ifcbuildingelementparttype.htm">IfcBuildingElementPartType</a><ul>
 <table class="inheritanceenum">
-<tr><td>INSULATION</td></tr>
-<tr><td>PRECASTPANEL</td></tr>
 <tr><td>APRON</td></tr>
 <tr><td>ARMOURUNIT</td></tr>
+<tr><td>INSULATION</td></tr>
+<tr><td>PRECASTPANEL</td></tr>
 <tr><td>SAFETYCAGE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -1978,28 +1978,28 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm">IfcDiscreteAccessory</a> - <a class="listing-link" href="../../../schema/ifcsharedcomponentelements/lexical/ifcdiscreteaccessorytype.htm">IfcDiscreteAccessoryType</a><ul>
 <table class="inheritanceenum">
 <tr><td>ANCHORPLATE</td></tr>
+<tr><td>BIRDPROTECTION</td></tr>
 <tr><td>BRACKET</td></tr>
-<tr><td>SHOE</td></tr>
-<tr><td>EXPANSION_JOINT_DEVICE</td></tr>
 <tr><td>CABLEARRANGER</td></tr>
+<tr><td>ELASTIC_CUSHION</td></tr>
+<tr><td>EXPANSION_JOINT_DEVICE</td></tr>
 <tr><td>FILLER</td></tr>
 <tr><td>FLASHING</td></tr>
 <tr><td>INSULATOR</td></tr>
 <tr><td>LOCK</td></tr>
-<tr><td>TENSIONINGEQUIPMENT</td></tr>
-<tr><td>RAILPAD</td></tr>
-<tr><td>SLIDINGCHAIR</td></tr>
-<tr><td>RAIL_LUBRICATION</td></tr>
 <tr><td>PANEL_STRENGTHENING</td></tr>
-<tr><td>RAILBRACE</td></tr>
-<tr><td>ELASTIC_CUSHION</td></tr>
-<tr><td>SOUNDABSORPTION</td></tr>
 <tr><td>POINTMACHINEMOUNTINGDEVICE</td></tr>
 <tr><td>POINT_MACHINE_LOCKING_DEVICE</td></tr>
+<tr><td>RAILBRACE</td></tr>
+<tr><td>RAILPAD</td></tr>
+<tr><td>RAIL_LUBRICATION</td></tr>
 <tr><td>RAIL_MECHANICAL_EQUIPMENT</td></tr>
-<tr><td>BIRDPROTECTION</td></tr>
-<tr><td>WATER_BARRIER</td></tr>
+<tr><td>SHOE</td></tr>
+<tr><td>SLIDINGCHAIR</td></tr>
+<tr><td>SOUNDABSORPTION</td></tr>
 <tr><td>STRUCTURAL_SEALING</td></tr>
+<tr><td>TENSIONINGEQUIPMENT</td></tr>
+<tr><td>WATER_BARRIER</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2017,10 +2017,10 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcimpactprotectiondevice.htm">IfcImpactProtectionDevice</a> - <a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcimpactprotectiondevicetype.htm">IfcImpactProtectionDeviceType</a><ul>
 <table class="inheritanceenum">
+<tr><td>BUMPER</td></tr>
 <tr><td>CRASHCUSHION</td></tr>
 <tr><td>DAMPINGSYSTEM</td></tr>
 <tr><td>FENDER</td></tr>
-<tr><td>BUMPER</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2030,19 +2030,19 @@
 <table class="inheritanceenum">
 <tr><td>ANCHORBOLT</td></tr>
 <tr><td>BOLT</td></tr>
+<tr><td>CHAIN</td></tr>
+<tr><td>COUPLER</td></tr>
 <tr><td>DOWEL</td></tr>
 <tr><td>NAIL</td></tr>
 <tr><td>NAILPLATE</td></tr>
+<tr><td>RAILFASTENING</td></tr>
+<tr><td>RAILJOINT</td></tr>
 <tr><td>RIVET</td></tr>
+<tr><td>ROPE</td></tr>
 <tr><td>SCREW</td></tr>
 <tr><td>SHEARCONNECTOR</td></tr>
 <tr><td>STAPLE</td></tr>
 <tr><td>STUDSHEARCONNECTOR</td></tr>
-<tr><td>COUPLER</td></tr>
-<tr><td>RAILJOINT</td></tr>
-<tr><td>RAILFASTENING</td></tr>
-<tr><td>CHAIN</td></tr>
-<tr><td>ROPE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2058,8 +2058,8 @@
 <tr><td>PUNCHING</td></tr>
 <tr><td>RING</td></tr>
 <tr><td>SHEAR</td></tr>
-<tr><td>STUD</td></tr>
 <tr><td>SPACEBAR</td></tr>
+<tr><td>STUD</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2096,11 +2096,11 @@
 
 <li><a class="listing-link" href="../../../schema/ifcstructuralelementsdomain/lexical/ifctendonconduit.htm">IfcTendonConduit</a> - <a class="listing-link" href="../../../schema/ifcstructuralelementsdomain/lexical/ifctendonconduittype.htm">IfcTendonConduitType</a><ul>
 <table class="inheritanceenum">
-<tr><td>DUCT</td></tr>
 <tr><td>COUPLER</td></tr>
+<tr><td>DIABOLO</td></tr>
+<tr><td>DUCT</td></tr>
 <tr><td>GROUTING_DUCT</td></tr>
 <tr><td>TRUMPET</td></tr>
-<tr><td>DIABOLO</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2111,8 +2111,8 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcsign.htm">IfcSign</a> - <a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcsigntype.htm">IfcSignType</a><ul>
 <table class="inheritanceenum">
 <tr><td>MARKER</td></tr>
-<tr><td>PICTORAL</td></tr>
 <tr><td>MIRROR</td></tr>
+<tr><td>PICTORAL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2120,12 +2120,12 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedcomponentelements/lexical/ifcvibrationdamper.htm">IfcVibrationDamper</a> - <a class="listing-link" href="../../../schema/ifcsharedcomponentelements/lexical/ifcvibrationdampertype.htm">IfcVibrationDamperType</a><ul>
 <table class="inheritanceenum">
-<tr><td>BENDING_YIELD</td></tr>
-<tr><td>SHEAR_YIELD</td></tr>
 <tr><td>AXIAL_YIELD</td></tr>
+<tr><td>BENDING_YIELD</td></tr>
 <tr><td>FRICTION</td></tr>
-<tr><td>VISCOUS</td></tr>
 <tr><td>RUBBER</td></tr>
+<tr><td>SHEAR_YIELD</td></tr>
+<tr><td>VISCOUS</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2133,9 +2133,9 @@
 
 <li><a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcvibrationisolator.htm">IfcVibrationIsolator</a> - <a class="listing-link" href="../../../schema/ifchvacdomain/lexical/ifcvibrationisolatortype.htm">IfcVibrationIsolatorType</a><ul>
 <table class="inheritanceenum">
+<tr><td>BASE</td></tr>
 <tr><td>COMPRESSION</td></tr>
 <tr><td>SPRING</td></tr>
-<tr><td>BASE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2160,18 +2160,18 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcexcavation.htm">IfcExcavation</a><ul>
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcearthworkscut.htm">IfcEarthworksCut</a><ul>
 <table class="inheritanceenum">
-<tr><td>TRENCH</td></tr>
+<tr><td>ANCHOREDOPENEXCAVATION</td></tr>
+<tr><td>BASE_EXCAVATION</td></tr>
+<tr><td>BRACEDOPENEXCAVATION</td></tr>
+<tr><td>CONFINEDOPENEXCAVATION</td></tr>
+<tr><td>CUT</td></tr>
 <tr><td>DREDGING</td></tr>
 <tr><td>EXCAVATION</td></tr>
 <tr><td>OVEREXCAVATION</td></tr>
-<tr><td>TOPSOILREMOVAL</td></tr>
-<tr><td>STEPEXCAVATION</td></tr>
 <tr><td>PAVEMENTMILLING</td></tr>
-<tr><td>CUT</td></tr>
-<tr><td>BASE_EXCAVATION</td></tr>
-<tr><td>CONFINEDOPENEXCAVATION</td></tr>
-<tr><td>ANCHOREDOPENEXCAVATION</td></tr>
-<tr><td>BRACEDOPENEXCAVATION</td></tr>
+<tr><td>STEPEXCAVATION</td></tr>
+<tr><td>TOPSOILREMOVAL</td></tr>
+<tr><td>TRENCH</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2180,12 +2180,12 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcundergroundexcavation.htm">IfcUndergroundExcavation</a><ul>
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcfaceexcavation.htm">IfcFaceExcavation</a><ul>
 <table class="inheritanceenum">
-<tr><td>FULLFACE</td></tr>
-<tr><td>STAGED</td></tr>
-<tr><td>PILOTBORE</td></tr>
-<tr><td>SHAFT</td></tr>
 <tr><td>CROSSCONNECTION</td></tr>
+<tr><td>FULLFACE</td></tr>
+<tr><td>PILOTBORE</td></tr>
 <tr><td>REAMING</td></tr>
+<tr><td>SHAFT</td></tr>
+<tr><td>STAGED</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2193,9 +2193,9 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcradialexcavation.htm">IfcRadialExcavation</a><ul>
 <table class="inheritanceenum">
+<tr><td>NICHE</td></tr>
 <tr><td>PROFILEENLARGEMENT</td></tr>
 <tr><td>REPROFILING</td></tr>
-<tr><td>NICHE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2216,12 +2216,12 @@
 
 <li><a class="listing-link" href="../../../schema/ifcstructuralelementsdomain/lexical/ifcvoidingfeature.htm">IfcVoidingFeature</a><ul>
 <table class="inheritanceenum">
+<tr><td>CHAMFER</td></tr>
 <tr><td>CUTOUT</td></tr>
-<tr><td>NOTCH</td></tr>
+<tr><td>EDGE</td></tr>
 <tr><td>HOLE</td></tr>
 <tr><td>MITER</td></tr>
-<tr><td>CHAMFER</td></tr>
-<tr><td>EDGE</td></tr>
+<tr><td>NOTCH</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2231,17 +2231,17 @@
 
 <li><a class="listing-link" href="../../../schema/ifcstructuralelementsdomain/lexical/ifcsurfacefeature.htm">IfcSurfaceFeature</a><ul>
 <table class="inheritanceenum">
-<tr><td>MARK</td></tr>
-<tr><td>TAG</td></tr>
-<tr><td>TREATMENT</td></tr>
 <tr><td>DEFECT</td></tr>
 <tr><td>HATCHMARKING</td></tr>
 <tr><td>LINEMARKING</td></tr>
-<tr><td>PAVEMENTSURFACEMARKING</td></tr>
-<tr><td>SYMBOLMARKING</td></tr>
+<tr><td>MARK</td></tr>
 <tr><td>NONSKIDSURFACING</td></tr>
+<tr><td>PAVEMENTSURFACEMARKING</td></tr>
 <tr><td>RUMBLESTRIP</td></tr>
+<tr><td>SYMBOLMARKING</td></tr>
+<tr><td>TAG</td></tr>
 <tr><td>TRANSVERSERUMBLESTRIP</td></tr>
+<tr><td>TREATMENT</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2252,13 +2252,13 @@
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcfurnishingelement.htm">IfcFurnishingElement</a> - <a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcfurnishingelementtype.htm">IfcFurnishingElementType</a><ul>
 <li><a class="listing-link" href="../../../schema/ifcsharedfacilitieselements/lexical/ifcfurniture.htm">IfcFurniture</a> - <a class="listing-link" href="../../../schema/ifcsharedfacilitieselements/lexical/ifcfurnituretype.htm">IfcFurnitureType</a><ul>
 <table class="inheritanceenum">
-<tr><td>CHAIR</td></tr>
-<tr><td>TABLE</td></tr>
-<tr><td>DESK</td></tr>
 <tr><td>BED</td></tr>
+<tr><td>CHAIR</td></tr>
+<tr><td>DESK</td></tr>
 <tr><td>FILECABINET</td></tr>
 <tr><td>SHELF</td></tr>
 <tr><td>SOFA</td></tr>
+<tr><td>TABLE</td></tr>
 <tr><td>TECHNICALCABINET</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -2268,8 +2268,8 @@
 <li><a class="listing-link" href="../../../schema/ifcsharedfacilitieselements/lexical/ifcsystemfurnitureelement.htm">IfcSystemFurnitureElement</a> - <a class="listing-link" href="../../../schema/ifcsharedfacilitieselements/lexical/ifcsystemfurnitureelementtype.htm">IfcSystemFurnitureElementType</a><ul>
 <table class="inheritanceenum">
 <tr><td>PANEL</td></tr>
-<tr><td>WORKSURFACE</td></tr>
 <tr><td>SUBRACK</td></tr>
+<tr><td>WORKSURFACE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2279,8 +2279,8 @@
 
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcgeographicelement.htm">IfcGeographicElement</a> - <a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcgeographicelementtype.htm">IfcGeographicElementType</a><ul>
 <table class="inheritanceenum">
-<tr><td>TERRAIN</td></tr>
 <tr><td>SOIL_BORING_POINT</td></tr>
+<tr><td>TERRAIN</td></tr>
 <tr><td>VEGETATION</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -2292,8 +2292,8 @@
 <table class="inheritanceenum">
 <tr><td>COREDRILLING</td></tr>
 <tr><td>DESTRUCTIVEDRILLING</td></tr>
-<tr><td>TRIALPIT</td></tr>
 <tr><td>DEWATERING</td></tr>
+<tr><td>TRIALPIT</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2301,18 +2301,18 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeosciencefeature.htm">IfcGeoScienceFeature</a> - <a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeosciencefeaturetype.htm">IfcGeoScienceFeatureType</a><ul>
 <table class="inheritanceenum">
+<tr><td>CONTACT</td></tr>
 <tr><td>DISCRETEDISCONTINUITY</td></tr>
-<tr><td>FOLD</td></tr>
+<tr><td>FAULT</td></tr>
 <tr><td>FLUIDBODY</td></tr>
-<tr><td>PIEZOMETRICWATERLEVEL</td></tr>
-<tr><td>VOIDBODY</td></tr>
+<tr><td>FOLD</td></tr>
 <tr><td>GEOLOGICUNIT</td></tr>
 <tr><td>GEOTECHNICALUNIT</td></tr>
 <tr><td>HAZARDAREA</td></tr>
 <tr><td>HYDROGEOUNIT</td></tr>
-<tr><td>FAULT</td></tr>
-<tr><td>CONTACT</td></tr>
 <tr><td>PHYSICALPROPERTYDISTRIBUTION</td></tr>
+<tr><td>PIEZOMETRICWATERLEVEL</td></tr>
+<tr><td>VOIDBODY</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2320,12 +2320,12 @@
 
 <li><a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeosciencemodel.htm">IfcGeoScienceModel</a> - <a class="listing-link" href="../../../schema/ifcsharedinfrastructureelements/lexical/ifcgeosciencemodeltype.htm">IfcGeoScienceModelType</a><ul>
 <table class="inheritanceenum">
-<tr><td>GEOTECHMODEL</td></tr>
-<tr><td>HYDROGEOMODEL</td></tr>
-<tr><td>GEOLOGYMODEL</td></tr>
-<tr><td>GEOTECHSYNTHESISMODEL</td></tr>
-<tr><td>PHYSICALPROPERTYDISTIBUTIONMODEL</td></tr>
 <tr><td>GEOHAZARDMODEL</td></tr>
+<tr><td>GEOLOGYMODEL</td></tr>
+<tr><td>GEOTECHMODEL</td></tr>
+<tr><td>GEOTECHSYNTHESISMODEL</td></tr>
+<tr><td>HYDROGEOMODEL</td></tr>
+<tr><td>PHYSICALPROPERTYDISTIBUTIONMODEL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2358,12 +2358,12 @@
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifctransportationdevice.htm">IfcTransportationDevice</a> - <a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifctransportationdevicetype.htm">IfcTransportationDeviceType</a><ul>
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifctransportelement.htm">IfcTransportElement</a> - <a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifctransportelementtype.htm">IfcTransportElementType</a><ul>
 <table class="inheritanceenum">
+<tr><td>CRANEWAY</td></tr>
 <tr><td>ELEVATOR</td></tr>
 <tr><td>ESCALATOR</td></tr>
-<tr><td>MOVINGWALKWAY</td></tr>
-<tr><td>CRANEWAY</td></tr>
-<tr><td>LIFTINGGEAR</td></tr>
 <tr><td>HAULINGGEAR</td></tr>
+<tr><td>LIFTINGGEAR</td></tr>
+<tr><td>MOVINGWALKWAY</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2371,13 +2371,13 @@
 
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcvehicle.htm">IfcVehicle</a> - <a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcvehicletype.htm">IfcVehicleType</a><ul>
 <table class="inheritanceenum">
-<tr><td>VEHICLE</td></tr>
-<tr><td>VEHICLETRACKED</td></tr>
-<tr><td>ROLLINGSTOCK</td></tr>
-<tr><td>VEHICLEWHEELED</td></tr>
-<tr><td>VEHICLEAIR</td></tr>
 <tr><td>CARGO</td></tr>
+<tr><td>ROLLINGSTOCK</td></tr>
+<tr><td>VEHICLE</td></tr>
+<tr><td>VEHICLEAIR</td></tr>
 <tr><td>VEHICLEMARINE</td></tr>
+<tr><td>VEHICLETRACKED</td></tr>
+<tr><td>VEHICLEWHEELED</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2413,8 +2413,8 @@
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifclinearzone.htm">IfcLinearZone</a><ul>
 <li><a class="listing-link" href="../../../schema/ifctunneldomain/lexical/ifctunneltypicalsection.htm">IfcTunnelTypicalSection</a><ul>
 <table class="inheritanceenum">
-<tr><td>GEOTECH</td></tr>
 <tr><td>EXCAVATIONSUPPORT</td></tr>
+<tr><td>GEOTECH</td></tr>
 <tr><td>RISK</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
@@ -2443,10 +2443,10 @@
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcpositioningelement.htm">IfcPositioningElement</a><ul>
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a><ul>
 <table class="inheritanceenum">
-<tr><td>RECTANGULAR</td></tr>
-<tr><td>RADIAL</td></tr>
-<tr><td>TRIANGULAR</td></tr>
 <tr><td>IRREGULAR</td></tr>
+<tr><td>RADIAL</td></tr>
+<tr><td>RECTANGULAR</td></tr>
+<tr><td>TRIANGULAR</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2487,8 +2487,8 @@
 <table class="inheritanceenum">
 <tr><td>EXTERNAL</td></tr>
 <tr><td>EXTERNAL_EARTH</td></tr>
-<tr><td>EXTERNAL_WATER</td></tr>
 <tr><td>EXTERNAL_FIRE</td></tr>
+<tr><td>EXTERNAL_WATER</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2521,25 +2521,25 @@
 
 <li><a class="listing-link" href="../../../schema/ifcportsandwaterwaysdomain/lexical/ifcmarinefacility.htm">IfcMarineFacility</a><ul>
 <table class="inheritanceenum">
+<tr><td>BARRIERBEACH</td></tr>
+<tr><td>BREAKWATER</td></tr>
 <tr><td>CANAL</td></tr>
-<tr><td>WATERWAYSHIPLIFT</td></tr>
-<tr><td>REVETMENT</td></tr>
+<tr><td>DRYDOCK</td></tr>
+<tr><td>FLOATINGDOCK</td></tr>
+<tr><td>HYDROLIFT</td></tr>
+<tr><td>JETTY</td></tr>
 <tr><td>LAUNCHRECOVERY</td></tr>
 <tr><td>MARINEDEFENCE</td></tr>
-<tr><td>HYDROLIFT</td></tr>
-<tr><td>SHIPYARD</td></tr>
-<tr><td>SHIPLIFT</td></tr>
+<tr><td>NAVIGATIONALCHANNEL</td></tr>
 <tr><td>PORT</td></tr>
 <tr><td>QUAY</td></tr>
-<tr><td>FLOATINGDOCK</td></tr>
-<tr><td>NAVIGATIONALCHANNEL</td></tr>
-<tr><td>BREAKWATER</td></tr>
-<tr><td>DRYDOCK</td></tr>
-<tr><td>JETTY</td></tr>
+<tr><td>REVETMENT</td></tr>
+<tr><td>SHIPLIFT</td></tr>
 <tr><td>SHIPLOCK</td></tr>
-<tr><td>BARRIERBEACH</td></tr>
+<tr><td>SHIPYARD</td></tr>
 <tr><td>SLIPWAY</td></tr>
 <tr><td>WATERWAY</td></tr>
+<tr><td>WATERWAYSHIPLIFT</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2562,17 +2562,17 @@
 <li><a class="listing-link" href="../../../schema/ifctunneldomain/lexical/ifctunnel.htm">IfcTunnel</a><ul>
 <table class="inheritanceenum">
 <tr><td>ACCESSTUNNEL</td></tr>
-<tr><td>SHAFT</td></tr>
-<tr><td>UTILITIES</td></tr>
-<tr><td>RAILWAY</td></tr>
-<tr><td>ROAD</td></tr>
-<tr><td>PEDESTRIAN</td></tr>
-<tr><td>METRO</td></tr>
 <tr><td>BICYCLE</td></tr>
 <tr><td>BYPASS</td></tr>
 <tr><td>MAINTENANCE</td></tr>
-<tr><td>UNDERGROUND_FACILITIES</td></tr>
+<tr><td>METRO</td></tr>
+<tr><td>PEDESTRIAN</td></tr>
+<tr><td>RAILWAY</td></tr>
 <tr><td>RAMP</td></tr>
+<tr><td>ROAD</td></tr>
+<tr><td>SHAFT</td></tr>
+<tr><td>UNDERGROUND_FACILITIES</td></tr>
+<tr><td>UTILITIES</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2600,14 +2600,14 @@
 
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcfacilitypartcommon.htm">IfcFacilityPartCommon</a><ul>
 <table class="inheritanceenum">
-<tr><td>SEGMENT</td></tr>
 <tr><td>ABOVEGROUND</td></tr>
+<tr><td>BELOWGROUND</td></tr>
 <tr><td>JUNCTION</td></tr>
 <tr><td>LEVELCROSSING</td></tr>
-<tr><td>BELOWGROUND</td></tr>
+<tr><td>SEGMENT</td></tr>
 <tr><td>SUBSTRUCTURE</td></tr>
-<tr><td>TERMINAL</td></tr>
 <tr><td>SUPERSTRUCTURE</td></tr>
+<tr><td>TERMINAL</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2615,30 +2615,30 @@
 
 <li><a class="listing-link" href="../../../schema/ifcportsandwaterwaysdomain/lexical/ifcmarinepart.htm">IfcMarinePart</a><ul>
 <table class="inheritanceenum">
-<tr><td>CREST</td></tr>
-<tr><td>MANUFACTURING</td></tr>
-<tr><td>LOWWATERLINE</td></tr>
-<tr><td>CORE</td></tr>
-<tr><td>WATERFIELD</td></tr>
-<tr><td>CILL_LEVEL</td></tr>
-<tr><td>BERTHINGSTRUCTURE</td></tr>
-<tr><td>COPELEVEL</td></tr>
-<tr><td>CHAMBER</td></tr>
-<tr><td>STORAGEAREA</td></tr>
-<tr><td>APPROACHCHANNEL</td></tr>
-<tr><td>VEHICLESERVICING</td></tr>
-<tr><td>SHIPTRANSFER</td></tr>
-<tr><td>GATEHEAD</td></tr>
-<tr><td>GUDINGSTRUCTURE</td></tr>
-<tr><td>BELOWWATERLINE</td></tr>
-<tr><td>WEATHERSIDE</td></tr>
-<tr><td>LANDFIELD</td></tr>
-<tr><td>PROTECTION</td></tr>
-<tr><td>LEEWARDSIDE</td></tr>
 <tr><td>ABOVEWATERLINE</td></tr>
 <tr><td>ANCHORAGE</td></tr>
-<tr><td>NAVIGATIONALAREA</td></tr>
+<tr><td>APPROACHCHANNEL</td></tr>
+<tr><td>BELOWWATERLINE</td></tr>
+<tr><td>BERTHINGSTRUCTURE</td></tr>
+<tr><td>CHAMBER</td></tr>
+<tr><td>CILL_LEVEL</td></tr>
+<tr><td>COPELEVEL</td></tr>
+<tr><td>CORE</td></tr>
+<tr><td>CREST</td></tr>
+<tr><td>GATEHEAD</td></tr>
+<tr><td>GUDINGSTRUCTURE</td></tr>
 <tr><td>HIGHWATERLINE</td></tr>
+<tr><td>LANDFIELD</td></tr>
+<tr><td>LEEWARDSIDE</td></tr>
+<tr><td>LOWWATERLINE</td></tr>
+<tr><td>MANUFACTURING</td></tr>
+<tr><td>NAVIGATIONALAREA</td></tr>
+<tr><td>PROTECTION</td></tr>
+<tr><td>SHIPTRANSFER</td></tr>
+<tr><td>STORAGEAREA</td></tr>
+<tr><td>VEHICLESERVICING</td></tr>
+<tr><td>WATERFIELD</td></tr>
+<tr><td>WEATHERSIDE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2662,30 +2662,30 @@
 
 <li><a class="listing-link" href="../../../schema/ifcroaddomain/lexical/ifcroadpart.htm">IfcRoadPart</a><ul>
 <table class="inheritanceenum">
-<tr><td>ROADSIDEPART</td></tr>
+<tr><td>BICYCLECROSSING</td></tr>
 <tr><td>BUS_STOP</td></tr>
+<tr><td>CARRIAGEWAY</td></tr>
+<tr><td>CENTRALISLAND</td></tr>
+<tr><td>CENTRALRESERVE</td></tr>
 <tr><td>HARDSHOULDER</td></tr>
 <tr><td>INTERSECTION</td></tr>
-<tr><td>PASSINGBAY</td></tr>
-<tr><td>ROADWAYPLATEAU</td></tr>
-<tr><td>ROADSIDE</td></tr>
-<tr><td>REFUGEISLAND</td></tr>
-<tr><td>TOLLPLAZA</td></tr>
-<tr><td>CENTRALRESERVE</td></tr>
-<tr><td>SIDEWALK</td></tr>
-<tr><td>PARKINGBAY</td></tr>
-<tr><td>RAILWAYCROSSING</td></tr>
-<tr><td>PEDESTRIAN_CROSSING</td></tr>
-<tr><td>SOFTSHOULDER</td></tr>
-<tr><td>BICYCLECROSSING</td></tr>
-<tr><td>CENTRALISLAND</td></tr>
-<tr><td>SHOULDER</td></tr>
-<tr><td>TRAFFICLANE</td></tr>
-<tr><td>ROADSEGMENT</td></tr>
-<tr><td>ROUNDABOUT</td></tr>
 <tr><td>LAYBY</td></tr>
-<tr><td>CARRIAGEWAY</td></tr>
+<tr><td>PARKINGBAY</td></tr>
+<tr><td>PASSINGBAY</td></tr>
+<tr><td>PEDESTRIAN_CROSSING</td></tr>
+<tr><td>RAILWAYCROSSING</td></tr>
+<tr><td>REFUGEISLAND</td></tr>
+<tr><td>ROADSEGMENT</td></tr>
+<tr><td>ROADSIDE</td></tr>
+<tr><td>ROADSIDEPART</td></tr>
+<tr><td>ROADWAYPLATEAU</td></tr>
+<tr><td>ROUNDABOUT</td></tr>
+<tr><td>SHOULDER</td></tr>
+<tr><td>SIDEWALK</td></tr>
+<tr><td>SOFTSHOULDER</td></tr>
+<tr><td>TOLLPLAZA</td></tr>
 <tr><td>TRAFFICISLAND</td></tr>
+<tr><td>TRAFFICLANE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2693,10 +2693,10 @@
 
 <li><a class="listing-link" href="../../../schema/ifctunneldomain/lexical/ifctunnelpart.htm">IfcTunnelPart</a><ul>
 <table class="inheritanceenum">
-<tr><td>TUNNELSECTION</td></tr>
 <tr><td>CROSSWAY</td></tr>
-<tr><td>RINGSECTION</td></tr>
 <tr><td>PORTAL</td></tr>
+<tr><td>RINGSECTION</td></tr>
+<tr><td>TUNNELSECTION</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2709,12 +2709,12 @@
 
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcspace.htm">IfcSpace</a> - <a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcspacetype.htm">IfcSpaceType</a><ul>
 <table class="inheritanceenum">
-<tr><td>SPACE</td></tr>
-<tr><td>PARKING</td></tr>
+<tr><td>BERTH</td></tr>
+<tr><td>EXTERNAL</td></tr>
 <tr><td>GFA</td></tr>
 <tr><td>INTERNAL</td></tr>
-<tr><td>EXTERNAL</td></tr>
-<tr><td>BERTH</td></tr>
+<tr><td>PARKING</td></tr>
+<tr><td>SPACE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2724,26 +2724,26 @@
 
 <li><a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> - <a class="listing-link" href="../../../schema/ifcproductextension/lexical/ifcspatialzonetype.htm">IfcSpatialZoneType</a><ul>
 <table class="inheritanceenum">
+<tr><td>ANNULARGAP</td></tr>
+<tr><td>CLEARANCE</td></tr>
+<tr><td>COMPARTMENT</td></tr>
 <tr><td>CONSTRUCTION</td></tr>
 <tr><td>FIRESAFETY</td></tr>
+<tr><td>INSTALLATION</td></tr>
+<tr><td>INTERFERENCE</td></tr>
+<tr><td>INTERIOR</td></tr>
+<tr><td>INVERT</td></tr>
 <tr><td>LIGHTING</td></tr>
+<tr><td>LINING</td></tr>
+<tr><td>MAPPEDZONE</td></tr>
 <tr><td>OCCUPANCY</td></tr>
+<tr><td>RESERVATION</td></tr>
 <tr><td>SECURITY</td></tr>
+<tr><td>SERVICE</td></tr>
+<tr><td>TESTEDZONE</td></tr>
 <tr><td>THERMAL</td></tr>
 <tr><td>TRANSPORT</td></tr>
 <tr><td>VENTILATION</td></tr>
-<tr><td>RESERVATION</td></tr>
-<tr><td>INTERFERENCE</td></tr>
-<tr><td>MAPPEDZONE</td></tr>
-<tr><td>TESTEDZONE</td></tr>
-<tr><td>COMPARTMENT</td></tr>
-<tr><td>ANNULARGAP</td></tr>
-<tr><td>CLEARANCE</td></tr>
-<tr><td>INSTALLATION</td></tr>
-<tr><td>INTERIOR</td></tr>
-<tr><td>INVERT</td></tr>
-<tr><td>LINING</td></tr>
-<tr><td>SERVICE</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2756,12 +2756,12 @@
 <li><a class="listing-link" href="../../../schema/ifcstructuralanalysisdomain/lexical/ifcstructuralcurveaction.htm">IfcStructuralCurveAction</a><ul>
 <table class="inheritanceenum">
 <tr><td>CONST</td></tr>
-<tr><td>LINEAR</td></tr>
-<tr><td>POLYGONAL</td></tr>
-<tr><td>EQUIDISTANT</td></tr>
-<tr><td>SINUS</td></tr>
-<tr><td>PARABOLA</td></tr>
 <tr><td>DISCRETE</td></tr>
+<tr><td>EQUIDISTANT</td></tr>
+<tr><td>LINEAR</td></tr>
+<tr><td>PARABOLA</td></tr>
+<tr><td>POLYGONAL</td></tr>
+<tr><td>SINUS</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2775,8 +2775,8 @@
 
 <li><a class="listing-link" href="../../../schema/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceaction.htm">IfcStructuralSurfaceAction</a><ul>
 <table class="inheritanceenum">
-<tr><td>CONST</td></tr>
 <tr><td>BILINEAR</td></tr>
+<tr><td>CONST</td></tr>
 <tr><td>DISCRETE</td></tr>
 <tr><td>ISOCONTOUR</td></tr>
 <tr><td>USERDEFINED</td></tr>
@@ -2793,12 +2793,12 @@
 <li><a class="listing-link" href="../../../schema/ifcstructuralanalysisdomain/lexical/ifcstructuralcurvereaction.htm">IfcStructuralCurveReaction</a><ul>
 <table class="inheritanceenum">
 <tr><td>CONST</td></tr>
-<tr><td>LINEAR</td></tr>
-<tr><td>POLYGONAL</td></tr>
-<tr><td>EQUIDISTANT</td></tr>
-<tr><td>SINUS</td></tr>
-<tr><td>PARABOLA</td></tr>
 <tr><td>DISCRETE</td></tr>
+<tr><td>EQUIDISTANT</td></tr>
+<tr><td>LINEAR</td></tr>
+<tr><td>PARABOLA</td></tr>
+<tr><td>POLYGONAL</td></tr>
+<tr><td>SINUS</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2809,8 +2809,8 @@
 
 <li><a class="listing-link" href="../../../schema/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfacereaction.htm">IfcStructuralSurfaceReaction</a><ul>
 <table class="inheritanceenum">
-<tr><td>CONST</td></tr>
 <tr><td>BILINEAR</td></tr>
+<tr><td>CONST</td></tr>
 <tr><td>DISCRETE</td></tr>
 <tr><td>ISOCONTOUR</td></tr>
 <tr><td>USERDEFINED</td></tr>
@@ -2838,11 +2838,11 @@
 <li><a class="listing-link" href="../../../schema/ifcstructuralanalysisdomain/lexical/ifcstructuralmember.htm">IfcStructuralMember</a><ul>
 <li><a class="listing-link" href="../../../schema/ifcstructuralanalysisdomain/lexical/ifcstructuralcurvemember.htm">IfcStructuralCurveMember</a><ul>
 <table class="inheritanceenum">
-<tr><td>RIGID_JOINED_MEMBER</td></tr>
-<tr><td>PIN_JOINED_MEMBER</td></tr>
 <tr><td>CABLE</td></tr>
-<tr><td>TENSION_MEMBER</td></tr>
 <tr><td>COMPRESSION_MEMBER</td></tr>
+<tr><td>PIN_JOINED_MEMBER</td></tr>
+<tr><td>RIGID_JOINED_MEMBER</td></tr>
+<tr><td>TENSION_MEMBER</td></tr>
 <tr><td>USERDEFINED</td></tr>
 <tr><td>NOTDEFINED</td></tr>
 </table>
@@ -2898,8 +2898,8 @@
 <tr><td>METAL</td></tr>
 <tr><td>PLASTIC</td></tr>
 <tr><td>WOOD</td></tr>
-<tr><td>NOTDEFINED</td></tr>
 <tr><td>USERDEFINED</td></tr>
+<tr><td>NOTDEFINED</td></tr>
 </table>
 </ul></li>
 

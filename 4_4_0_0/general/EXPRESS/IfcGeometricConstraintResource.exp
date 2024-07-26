@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 9 July 2024
+Friday, 26 July 2024
 
 *)
 
@@ -97,22 +97,22 @@ TYPE IfcAlignmentCantSegmentTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcAlignmentHorizontalSegmentTypeEnum = ENUMERATION OF
-	(LINE
+	(BLOSSCURVE
 	,CIRCULARARC
 	,CLOTHOID
+	,COSINECURVE
 	,CUBIC
 	,HELMERTCURVE
-	,BLOSSCURVE
-	,COSINECURVE
+	,LINE
 	,SINECURVE
 	,VIENNESEBEND);
 END_TYPE;
 
 TYPE IfcAlignmentVerticalSegmentTypeEnum = ENUMERATION OF
-	(CONSTANTGRADIENT
-	,CIRCULARARC
-	,PARABOLICARC
-	,CLOTHOID);
+	(CIRCULARARC
+	,CLOTHOID
+	,CONSTANTGRADIENT
+	,PARABOLICARC);
 END_TYPE;
 
 TYPE IfcCurveOrEdgeCurve = SELECT
@@ -281,7 +281,7 @@ FUNCTION IfcCorrectLocalPlacement
 
   IF (EXISTS(RelPlacement)) THEN
     IF ('IFCGEOMETRICCONSTRAINTRESOURCE.IFCGRIDPLACEMENT' IN TYPEOF(RelPlacement)) THEN
-      RETURN(TRUE);
+      RETURN(?);
     END_IF;
     IF ('IFCGEOMETRICCONSTRAINTRESOURCE.IFCLOCALPLACEMENT' IN TYPEOF(RelPlacement)) THEN
       IF ('IFCGEOMETRYRESOURCE.IFCAXIS2PLACEMENT2D' IN TYPEOF(AxisPlacement)) THEN

@@ -145,25 +145,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -238,24 +234,24 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcboiler.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcBoiler</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 504.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 523.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifchvacdomain/lexical/ifcboilertype.htm">IfcBoilerType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 504 &mdash; IfcBoiler Object Typing</td></tr></table>
+<tr><td><p class="table">Table 523 &mdash; IfcBoiler Object Typing</td></tr></table>
 
 <br/><br/>
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 505.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 524.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -275,26 +271,26 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 505 &mdash; IfcBoiler Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 524 &mdash; IfcBoiler Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="quantity-sets" />
 <p class="use-head">Quantity Sets</p>
-<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 506.<table>
+<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 525.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>QsetName</b></th><th><b>Quantities</b></th></tr>
 <tr><td><a href="../../ifchvacdomain/qset/qto_boilerbasequantities.htm">Qto_BoilerBaseQuantities</a></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 506 &mdash; IfcBoiler Quantity Sets</td></tr></table>
+<tr><td><p class="table">Table 525 &mdash; IfcBoiler Quantity Sets</td></tr></table>
 
 <br/><br/>
 
 <a id="material-constituent-set" />
 <p class="use-head">Material</p>
-<p>The <a href="../../templates/material-constituent-set.htm">Material Constituent Set</a> concept template applies to this entity as shown in Table 507.<table>
+<p>The <a href="../../templates/material-constituent-set.htm">Material Constituent Set</a> concept template applies to this entity as shown in Table 526.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Description</b></th></tr>
@@ -302,13 +298,13 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 507 &mdash; IfcBoiler Material Constituent Set</td></tr></table>
+<tr><td><p class="table">Table 526 &mdash; IfcBoiler Material Constituent Set</td></tr></table>
 
 <br/><br/>
 
 <a id="port-nesting" />
 <p class="use-head">Port</p>
-<p>The <a href="../../templates/port-nesting.htm">Port Nesting</a> concept template applies to this entity as shown in Table 508.<table>
+<p>The <a href="../../templates/port-nesting.htm">Port Nesting</a> concept template applies to this entity as shown in Table 527.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PredefinedType</b></th><th><b>PortName</b></th><th><b>Flow</b></th><th><b>SystemType</b></th><th><b>Description</b></th></tr>
@@ -330,7 +326,7 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 508 &mdash; IfcBoiler Port Nesting</td></tr></table>
+<tr><td><p class="table">Table 527 &mdash; IfcBoiler Port Nesting</td></tr></table>
 
 <br/><br/>
 
@@ -442,6 +438,7 @@ IFC4 CHANGE  The inverse attribute is deprecated. Relationship to ports, contai
 
 <tr><td colspan="3"><a href="../../ifcproductextension/lexical/ifcdistributionelement.htm">IfcDistributionElement</a></td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcdistributionelement.htm#spatial-containment">Spatial Containment</a></td><td><a href="../../templates/spatial-containment.htm">Spatial Containment</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcdistributionelement.htm#component-to-distribution-system">Component to Distribution System</a></td><td><a href="../../templates/component-to-distribution-system.htm">Component to Distribution System</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcdistributionelement.htm#material-set">Material Set</a></td><td><a href="../../templates/material-set.htm">Material Set</a></td><td>General Usage</td></tr>
 
 <tr><td colspan="3"><a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionflowelement.htm">IfcDistributionFlowElement</a></td></tr><tr><td> </td><td><a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionflowelement.htm#axis-geometry">Axis Geometry</a></td><td><a href="../../templates/axis-geometry.htm">Axis Geometry</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcsharedbldgserviceelements/lexical/ifcdistributionflowelement.htm#clearance-geometry">Clearance Geometry</a></td><td><a href="../../templates/clearance-geometry.htm">Clearance Geometry</a></td><td>General Usage</td></tr>

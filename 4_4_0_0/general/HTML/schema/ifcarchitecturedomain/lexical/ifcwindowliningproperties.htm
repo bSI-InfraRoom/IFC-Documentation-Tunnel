@@ -59,7 +59,7 @@
 <p>NOTE  The <span class="self-ref">IfcWindowLiningProperties</span> shall only be applied to construct the 3D shape of a window, if the attribute <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a>.ParameterTakesPrecedence is set TRUE.</p>
 </blockquote>
 <p>The <span class="self-ref">IfcWindowLiningProperties</span> are included in the set of properties of <i>IfcWindowStyle.HasPropertySets</i>. More information about the window lining can be included in the same set of the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> using another <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> for dynamic extensions.</p>
-<p>The <span class="self-ref">IfcWindowLiningProperties</span> does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type(which is inserted by the <a href="../../ifcsharedbldgelements/lexical/ifcwindow.htm">IfcWindow</a> into the spatial context of the project) as shown in Figure 405. The parameters at the <span class="self-ref">IfcWindowLiningProperties</span> define a standard window lining, including (if given) a mullion and a transom (for horizontal and vertical splits). The outer boundary of the lining is determined by the 'Profile' shape representation assigned to the <a href="../../ifcsharedbldgelements/lexical/ifcwindow.htm">IfcWindow</a>, which inserts the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a>.</p>
+<p>The <span class="self-ref">IfcWindowLiningProperties</span> does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type(which is inserted by the <a href="../../ifcsharedbldgelements/lexical/ifcwindow.htm">IfcWindow</a> into the spatial context of the project) as shown in Figure 422. The parameters at the <span class="self-ref">IfcWindowLiningProperties</span> define a standard window lining, including (if given) a mullion and a transom (for horizontal and vertical splits). The outer boundary of the lining is determined by the 'Profile' shape representation assigned to the <a href="../../ifcsharedbldgelements/lexical/ifcwindow.htm">IfcWindow</a>, which inserts the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a>.</p>
 <p> </p>
 <table>
  <tr>
@@ -144,7 +144,7 @@
   </td>
  </tr>
  <tr>
-  <td><p class="figure">Figure 405 &mdash; Window lining properties</p></td>
+  <td><p class="figure">Figure 422 &mdash; Window lining properties</p></td>
  </tr>
 </table>
 <blockquote class="history">
@@ -162,7 +162,6 @@ Depth of the window lining (dimension measured perpendicular to window elevation
 </td><td>X</td></tr>
 <tr><td>6</td><td>LiningThickness</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
 Thickness of the window lining as explained in the figure above. If <i>LiningThickness</i> value is 0. (zero) it denotes a window without a lining (all other lining parameters shall be set to NIL in this case). If the <i>LiningThickness</i> is NIL it denotes that the value is not available.
-
 <blockquote>
 IFC4 CHANGE  Data type modified to be <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>.
 </blockquote>
@@ -170,7 +169,6 @@ IFC4 CHANGE  Data type modified to be <a href="../../ifcmeasureresource/lexical
 <tr><td>7</td><td>TransomThickness</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
 Thickness of the transom (horizontal separator of window panels within a window), measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth.
 If the <i>TransomThickness</i> is set to zero (and the <i>TransomOffset</i> set to a positive length), then the window is divided vertically without a physical divider.
-
 <blockquote>
 IFC4 CHANGE  Data type changed to <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>.
 </blockquote>
@@ -178,7 +176,6 @@ IFC4 CHANGE  Data type changed to <a href="../../ifcmeasureresource/lexical/ifc
 <tr><td>8</td><td>MullionThickness</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
 Thickness of the mullion (vertical separator of window panels within a window), measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth.
 If the <i>MullionThickness</i> is set to zero (and the <i>MullionOffset</i> set to a positive length), then the window is divided horizontally without a physical divider.
-
 <blockquote>
 IFC4 CHANGE  Data type changed to <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>.
 </blockquote>
@@ -197,28 +194,24 @@ Offset of the mullion centerline for the second mullion, measured along the x-ax
 </td><td>X</td></tr>
 <tr><td>13</td><td>ShapeAspectStyle</td><td><a href="../../ifcrepresentationresource/lexical/ifcshapeaspect.htm">IfcShapeAspect</a></td><td>? </td><td>
 Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the lining.
-
 <blockquote>
 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ($).
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>14</td><td>LiningOffset</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
 Offset of the window lining. The offset is given as distance along the y axis of the local placement (perpendicular to the window plane).
-
 <blockquote>
 IFC4 CHANGE  New attribute added at the end of the entity definition.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>15</td><td>LiningToPanelOffsetX</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
 Offset between the lining and the window panel measured along the x-axis of the local placement. Should be smaller or equal to the <i>LiningThickness</i>.
-
 <blockquote>
 IFC4 CHANGE  New attribute added at the end of the entity definition.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>16</td><td>LiningToPanelOffsetY</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
 Offset between the lining and the window panel measured along the y-axis of the local placement. Should be smaller or equal to the <i>IfcWindowPanelProperties.PanelThickness</i>.
-
 <blockquote>
 IFC4 CHANGE  New attribute added at the end of the entity definition.
 </blockquote>
@@ -290,13 +283,11 @@ IFC4 CHANGE  The cardinality has been changed from 0:1 to 0:? with upward compa
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a><br/>@RelatedPropertySets</td><td>S[0:?]</td><td>Relation to the property set template, via the objectified relationship <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a>, that, if given, provides the definition template for the property set or quantity set and its properties.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>DefinesOccurrence</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatingPropertyDefinition</td><td>S[0:?]</td><td>Reference to the relation to one or many object occurrences that are characterized by the property set definition. A single property set can be assigned to multiple object occurrences using the objectified relationship <i>IfcRefDefinesByProperties</i>.
-
 <blockquote>
 IFC4 CHANGE Inverse attribute renamed from PropertyDefinitionOf with upward compatibility for file-based exchange.
 </blockquote>
@@ -308,7 +299,6 @@ Depth of the window lining (dimension measured perpendicular to window elevation
 </td><td>X</td></tr>
 <tr><td>6</td><td>LiningThickness</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
 Thickness of the window lining as explained in the figure above. If <i>LiningThickness</i> value is 0. (zero) it denotes a window without a lining (all other lining parameters shall be set to NIL in this case). If the <i>LiningThickness</i> is NIL it denotes that the value is not available.
-
 <blockquote>
 IFC4 CHANGE  Data type modified to be <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>.
 </blockquote>
@@ -316,7 +306,6 @@ IFC4 CHANGE  Data type modified to be <a href="../../ifcmeasureresource/lexical
 <tr><td>7</td><td>TransomThickness</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
 Thickness of the transom (horizontal separator of window panels within a window), measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth.
 If the <i>TransomThickness</i> is set to zero (and the <i>TransomOffset</i> set to a positive length), then the window is divided vertically without a physical divider.
-
 <blockquote>
 IFC4 CHANGE  Data type changed to <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>.
 </blockquote>
@@ -324,7 +313,6 @@ IFC4 CHANGE  Data type changed to <a href="../../ifcmeasureresource/lexical/ifc
 <tr><td>8</td><td>MullionThickness</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
 Thickness of the mullion (vertical separator of window panels within a window), measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth.
 If the <i>MullionThickness</i> is set to zero (and the <i>MullionOffset</i> set to a positive length), then the window is divided horizontally without a physical divider.
-
 <blockquote>
 IFC4 CHANGE  Data type changed to <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>.
 </blockquote>
@@ -343,28 +331,24 @@ Offset of the mullion centerline for the second mullion, measured along the x-ax
 </td><td>X</td></tr>
 <tr><td>13</td><td>ShapeAspectStyle</td><td><a href="../../ifcrepresentationresource/lexical/ifcshapeaspect.htm">IfcShapeAspect</a></td><td>? </td><td>
 Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the lining.
-
 <blockquote>
 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ($).
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>14</td><td>LiningOffset</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
 Offset of the window lining. The offset is given as distance along the y axis of the local placement (perpendicular to the window plane).
-
 <blockquote>
 IFC4 CHANGE  New attribute added at the end of the entity definition.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>15</td><td>LiningToPanelOffsetX</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
 Offset between the lining and the window panel measured along the x-axis of the local placement. Should be smaller or equal to the <i>LiningThickness</i>.
-
 <blockquote>
 IFC4 CHANGE  New attribute added at the end of the entity definition.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>16</td><td>LiningToPanelOffsetY</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
 Offset between the lining and the window panel measured along the y-axis of the local placement. Should be smaller or equal to the <i>IfcWindowPanelProperties.PanelThickness</i>.
-
 <blockquote>
 IFC4 CHANGE  New attribute added at the end of the entity definition.
 </blockquote>

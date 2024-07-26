@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 9 July 2024
+Friday, 26 July 2024
 
 *)
 
@@ -56,19 +56,19 @@ REFERENCE FROM IFCPROPERTYRESOURCE
 );
 
 TYPE IfcProfileTypeEnum = ENUMERATION OF
-	(CURVE
-	,AREA);
+	(AREA
+	,CURVE);
 END_TYPE;
 
 TYPE IfcReinforcingBarRoleEnum = ENUMERATION OF
-	(MAIN
-	,SHEAR
-	,LIGATURE
-	,STUD
-	,PUNCHING
+	(ANCHORING
 	,EDGE
+	,LIGATURE
+	,MAIN
+	,PUNCHING
 	,RING
-	,ANCHORING
+	,SHEAR
+	,STUD
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -79,8 +79,8 @@ TYPE IfcReinforcingBarSurfaceEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcSectionTypeEnum = ENUMERATION OF
-	(UNIFORM
-	,TAPERED);
+	(TAPERED
+	,UNIFORM);
 END_TYPE;
 
 ENTITY IfcArbitraryClosedProfileDef
@@ -129,12 +129,12 @@ ENTITY IfcAsymmetricIShapeProfileDef
 	TopFlangeEdgeRadius : OPTIONAL IfcNonNegativeLengthMeasure;
 	TopFlangeSlope : OPTIONAL IfcPlaneAngleMeasure;
  WHERE
-	ValidFlangeThickness : NOT(EXISTS(TopFlangeThickness)) OR ((BottomFlangeThickness + TopFlangeThickness) < OverallDepth);
-	ValidWebThickness : (WebThickness < BottomFlangeWidth) AND (WebThickness < TopFlangeWidth);
 	ValidBottomFilletRadius : (NOT(EXISTS(BottomFlangeFilletRadius))) OR 
 (BottomFlangeFilletRadius <= (BottomFlangeWidth - WebThickness)/2.);
+	ValidFlangeThickness : NOT(EXISTS(TopFlangeThickness)) OR ((BottomFlangeThickness + TopFlangeThickness) < OverallDepth);
 	ValidTopFilletRadius : (NOT(EXISTS(TopFlangeFilletRadius))) OR 
 (TopFlangeFilletRadius <= (TopFlangeWidth - WebThickness)/2.);
+	ValidWebThickness : (WebThickness < BottomFlangeWidth) AND (WebThickness < TopFlangeWidth);
 END_ENTITY;
 
 ENTITY IfcCShapeProfileDef
@@ -206,11 +206,11 @@ ENTITY IfcIShapeProfileDef
 	FlangeEdgeRadius : OPTIONAL IfcNonNegativeLengthMeasure;
 	FlangeSlope : OPTIONAL IfcPlaneAngleMeasure;
  WHERE
-	ValidFlangeThickness : (2. * FlangeThickness) < OverallDepth;
-	ValidWebThickness : WebThickness < OverallWidth;
 	ValidFilletRadius : NOT(EXISTS(FilletRadius)) OR
 ((FilletRadius <= (OverallWidth - WebThickness)/2.) AND 
  (FilletRadius <= (OverallDepth - (2. * FlangeThickness))/2.));
+	ValidFlangeThickness : (2. * FlangeThickness) < OverallDepth;
+	ValidWebThickness : WebThickness < OverallWidth;
 END_ENTITY;
 
 ENTITY IfcLShapeProfileDef
@@ -301,8 +301,6 @@ ENTITY IfcRectangleHollowProfileDef
 	InnerFilletRadius : OPTIONAL IfcNonNegativeLengthMeasure;
 	OuterFilletRadius : OPTIONAL IfcNonNegativeLengthMeasure;
  WHERE
-	ValidWallThickness : (WallThickness < (SELF\IfcRectangleProfileDef.XDim/2.)) AND 
-(WallThickness < (SELF\IfcRectangleProfileDef.YDim/2.));
 	ValidInnerRadius : NOT(EXISTS(InnerFilletRadius)) OR 
 ((InnerFilletRadius <= (SELF\IfcRectangleProfileDef.XDim/2. - WallThickness)) AND 
  (InnerFilletRadius <= (SELF\IfcRectangleProfileDef.YDim/2. - WallThickness)))
@@ -310,6 +308,8 @@ ENTITY IfcRectangleHollowProfileDef
 	ValidOuterRadius : NOT(EXISTS(OuterFilletRadius)) OR 
 ((OuterFilletRadius <= (SELF\IfcRectangleProfileDef.XDim/2.)) AND 
  (OuterFilletRadius <= (SELF\IfcRectangleProfileDef.YDim/2.)));
+	ValidWallThickness : (WallThickness < (SELF\IfcRectangleProfileDef.XDim/2.)) AND 
+(WallThickness < (SELF\IfcRectangleProfileDef.YDim/2.));
 END_ENTITY;
 
 ENTITY IfcRectangleProfileDef

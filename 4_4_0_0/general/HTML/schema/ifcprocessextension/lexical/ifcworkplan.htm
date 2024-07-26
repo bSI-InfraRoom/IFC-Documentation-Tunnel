@@ -56,9 +56,9 @@
 </blockquote>
 <p>A work plan contains a set of work schedules for different purposes (including construction and facilities management). Contained work schedules are defined through the <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship. Through inheritance from <a href="../../ifcprocessextension/lexical/ifcworkcontrol.htm">IfcWorkControl</a> it is also possible to define references to activities (for example, <a href="../../ifcprocessextension/lexical/ifctask.htm">IfcTask</a>) and resources used in the work plan.</p>
 <p>A work plan has information such as start date, finish date, total free float, and so on. <span class="self-ref">IfcWorkPlan</span> can also refer to the construction project represented by the single <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a> instance (please also check the definition of <a href="../../ifcprocessextension/lexical/ifcworkcontrol.htm">IfcWorkControl</a>).</p>
-<p>Figure 288 shows the backbone structure of a work plan that defines (1) contained work schedules through <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> and (2), if not assigned otherwise to contained work schedules, assigned tasks and resources through <a href="../../ifckernel/lexical/ifcrelassignstocontrol.htm">IfcRelAssignsToControl</a>.</p>
+<p>Figure 305 shows the backbone structure of a work plan that defines (1) contained work schedules through <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> and (2), if not assigned otherwise to contained work schedules, assigned tasks and resources through <a href="../../ifckernel/lexical/ifcrelassignstocontrol.htm">IfcRelAssignsToControl</a>.</p>
 <p>If an assigned <a href="../../ifcprocessextension/lexical/ifctask.htm">IfcTask</a> is a root-level task, such task must be declared on the <a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a> using the <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a> relationship.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcworkplan_instantiation_diagram.png" alt="&quot;work plan instantiation diagram&quot;" title="Figure 288 &mdash; Work plan relationships"></td></tr><tr><td><p class="figure">Figure 288 &mdash; Work plan relationships</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcworkplan_instantiation_diagram.png" alt="&quot;work plan instantiation diagram&quot;" title="Figure 305 &mdash; Work plan relationships"></td></tr><tr><td><p class="figure">Figure 305 &mdash; Work plan relationships</p></td></tr></table></p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -144,25 +144,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -210,7 +206,7 @@ the type required may be set.
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcworkplan.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcWorkPlan</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets</p>

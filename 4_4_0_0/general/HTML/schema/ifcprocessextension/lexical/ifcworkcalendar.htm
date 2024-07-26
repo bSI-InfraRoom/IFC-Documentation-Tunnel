@@ -47,8 +47,8 @@
 </blockquote>
 <p>A work calendar is a subtype of <a href="../../ifckernel/lexical/ifccontrol.htm">IfcControl</a> and thus inherits the feature for controlling other objects through <a href="../../ifckernel/lexical/ifcrelassignstocontrol.htm">IfcRelAssignsToControl</a>, which is used to define a work calendar for tasks (<a href="../../ifcprocessextension/lexical/ifctask.htm">IfcTask</a>) and resources (<a href="../../ifckernel/lexical/ifcresource.htm">IfcResource</a>). It also inherits a name and description attribute, whereas a name shall be given and a description may be given as an indication of its content and usage.</p>
 <p>The definition of time periods can be derived from a base calendar and/or modified/defined by a set of working times and non-working exception times. All time periods defined by <i>IfcWorkCalendar.ExceptionTimes</i> override the time periods inherited from the base calendar (base calendar is defined as the next applicable calendar for the task or resource). Thus, exception times replace the working times from the base calendar.</p>
-<p>Figure 287 shows the definition of a work calendar, which is defined by a set of work times and exception times. The work times are defined as recurring patterns with optional boundaries (applying from and/or to a specific date). The shown example defines a simple work calendar with working times Monday to Thursday 8:00 to 12:00 and 13:00 to 17:00, Friday 8:00 to 14:00 and as exception every 1st Monday in a month the work starts one hour later - i.e. the working time on every 1st Monday in a month is overriden to be 9:00 to 12:00 and 13:00 to 17:00. Both the working time and the exception time is valid for the period of 01.09.2010 till 30.08.2011.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcworkcalendar_instantiation_diagram.png" alt="&quot;task type instantiation diagram&quot;" title="Figure 287 &mdash; Work calendar instantiation"></td></tr><tr><td><p class="figure">Figure 287 &mdash; Work calendar instantiation</p></td></tr></table></p>
+<p>Figure 304 shows the definition of a work calendar, which is defined by a set of work times and exception times. The work times are defined as recurring patterns with optional boundaries (applying from and/or to a specific date). The shown example defines a simple work calendar with working times Monday to Thursday 8:00 to 12:00 and 13:00 to 17:00, Friday 8:00 to 14:00 and as exception every 1st Monday in a month the work starts one hour later - i.e. the working time on every 1st Monday in a month is overriden to be 9:00 to 12:00 and 13:00 to 17:00. Both the working time and the exception time is valid for the period of 01.09.2010 till 30.08.2011.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcworkcalendar_instantiation_diagram.png" alt="&quot;task type instantiation diagram&quot;" title="Figure 304 &mdash; Work calendar instantiation"></td></tr><tr><td><p class="figure">Figure 304 &mdash; Work calendar instantiation</p></td></tr></table></p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -146,25 +146,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -203,7 +199,7 @@ IFC4 CHANGE Attribute added
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcworkcalendar.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcWorkCalendar</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="control-assignment" />
 <p class="use-head">Control Assignment</p>

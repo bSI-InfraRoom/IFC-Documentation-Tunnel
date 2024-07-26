@@ -58,7 +58,7 @@
 Trailing attributes <i>CentreOfGravityInX</i> and <i>CentreOfGravityInY</i> deleted, use respective properties in <i>IfcExtendedProfileProperties</i> instead.<br>
 WHERE rule which required <i>Width</i> &lt;= <i>Depth</i> removed.</p>
 </blockquote>
-<p>Figure 553 illustrates parameters of equal-sided and non-equal sided L-shaped section definitions.</p>
+<p>Figure 570 illustrates parameters of equal-sided and non-equal sided L-shaped section definitions.</p>
 <table>
 <tr><td>
 <table border="1" cellpadding="2" cellspacing="2" width="100%">
@@ -111,7 +111,7 @@ RefDirection = NIL (defaults to 1.,0.)</tt></p>
   </td></tr></tbody>
 </table>
 </td></tr>
-<tr><td><p class="figure">Figure 553 &mdash; L-shape profile</p></td></tr>
+<tr><td><p class="figure">Figure 570 &mdash; L-shape profile</p></td></tr>
 </table>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
@@ -163,13 +163,11 @@ Defines the type of geometry into which this profile definition shall be resolve
 Human-readable name of the profile, for example according to a standard profile table. As noted above, machine-readable standardized profile designations should be provided in <i>IfcExternalReference.ItemReference</i>.
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasExternalReference</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.htm">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to external information, e.g. library, classification, or document information, which is associated with the profile.
-
 <blockquote>
 IFC4 CHANGE New inverse attribute
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasProperties</i></td><td><a href="../../ifcprofileresource/lexical/ifcprofileproperties.htm">IfcProfileProperties</a><br/>@ProfileDefinition</td><td>S[0:?]</td><td>Additional properties of the profile, for example mechanical properties.
-
 <blockquote>
 IFC4 CHANGE New inverse attribute
 </blockquote>

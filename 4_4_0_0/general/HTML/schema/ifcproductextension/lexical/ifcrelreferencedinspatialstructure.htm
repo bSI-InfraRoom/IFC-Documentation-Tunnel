@@ -63,8 +63,8 @@
 <li>part of facility as <i>IfcFaciltityPart</i>, or more specifically as <a href="../../ifcproductextension/lexical/ifcbuildingstorey.htm">IfcBuildingStorey</a> or <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a></li>
 </ul>
 <p>Elements can also be references in a spatial zone that is provided as <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a>.</p>
-<p>Figure 312 shows the use of <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a> and <span class="self-ref">IfcRelReferencedInSpatialStructure</span> to assign an <a href="../../ifcsharedbldgelements/lexical/ifccurtainwall.htm">IfcCurtainWall</a> to two different levels within the spatial structure. It is primarily contained within the ground floor, and additionally referenced within the first and second floor.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcrelreferencedinspatialstructure-fig1.png" alt="&quot;reference and containment&quot;" title="Figure 312 &mdash; Relationship for spatial structure referencing"></td></tr><tr><td><p class="figure">Figure 312 &mdash; Relationship for spatial structure referencing</p></td></tr></table></p>
+<p>Figure 329 shows the use of <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a> and <span class="self-ref">IfcRelReferencedInSpatialStructure</span> to assign an <a href="../../ifcsharedbldgelements/lexical/ifccurtainwall.htm">IfcCurtainWall</a> to two different levels within the spatial structure. It is primarily contained within the ground floor, and additionally referenced within the first and second floor.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcrelreferencedinspatialstructure-fig1.png" alt="&quot;reference and containment&quot;" title="Figure 329 &mdash; Relationship for spatial structure referencing"></td></tr><tr><td><p class="figure">Figure 329 &mdash; Relationship for spatial structure referencing</p></td></tr></table></p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2x3.</p>
 </blockquote>
@@ -81,7 +81,6 @@
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
 <tr><td>AllowedRelatedElements</td><td>The relationship object shall not be used to include other spatial structure elements into a spatial structure element. The hierarchy of the spatial structure is defined using <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>. Exception: an <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a> can be referenced by another spatial structure element, in particular by an <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a>.
-
 <blockquote>
 IFC4 CHANGE  The relaxation to allow <a href="../../ifcproductextension/lexical/ifcspace.htm">IfcSpace</a> has been included.
 </blockquote>

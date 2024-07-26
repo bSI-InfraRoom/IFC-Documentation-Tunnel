@@ -157,20 +157,17 @@ Current project phase, or life-cycle phase of this project. Applicable values ha
 </td><td>X</td></tr>
 <tr><td>8</td><td>RepresentationContexts</td><td><a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a></td><td>? S[1:?]</td><td>
 Context of the representations used within the context. When the context is a project and it includes shape representations for its components, one or several geometric representation contexts need to be included that define e.g. the world coordinate system, the coordinate space dimensions, and/or the precision factor.
-
 <blockquote>
 IFC4 CHANGE  The attribute has been changed to be optional. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>9</td><td>UnitsInContext</td><td><a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a></td><td>? </td><td>
 Units globally assigned to measure types used within the context.
-
 <blockquote>
 IFC4 CHANGE  The attribute has been changed to be optional. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -187,7 +184,7 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcproject.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcProject</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="project-type-definitions" />
 <p class="use-head">Project Type Definitions</p>
@@ -219,9 +216,9 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 <tr><td>
 <table class="gridtable">
 <tr><th><b>ContextIdentifier</b></th><th><b>ContextType</b></th><th><b>Description</b></th></tr>
-<tr><td>Model</td><td>3D</td><td>Context for all 3D geometry.
+<tr><td>3D</td><td>Model</td><td>Context for all 3D geometry.
 </td></tr>
-<tr><td>Plan</td><td>2D</td><td>Context for all 2D annotations.
+<tr><td>2D</td><td>Plan</td><td>Context for all 2D annotations.
 </td></tr>
 </table>
 </td></tr>
@@ -287,8 +284,8 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 <blockquote class="note">
 <p>NOTE  The products and tasks can have direct linking relationships. For example the <a href="../../ifcsharedbldgelements/lexical/ifccurtainwall.htm">IfcCurtainWall</a> can be assigned to a <a href="../../ifcprocessextension/lexical/ifctask.htm">IfcTask</a> as an input or output for a construction schedule.</p>
 </blockquote>
-<p>Figure 274 illustrates the use of <span class="self-ref">IfcProject</span> as context for work plans or work schedules.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-1.png" alt="&quot;project relationships&quot;" title="Figure 274 &mdash; Project spatial and work plan structure"></td></tr><tr><td><p class="figure">Figure 274 &mdash; Project spatial and work plan structure</p></td></tr></table></p>
+<p>Figure 291 illustrates the use of <span class="self-ref">IfcProject</span> as context for work plans or work schedules.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-1.png" alt="&quot;project relationships&quot;" title="Figure 291 &mdash; Project spatial and work plan structure"></td></tr><tr><td><p class="figure">Figure 291 &mdash; Project spatial and work plan structure</p></td></tr></table></p>
 
 <br/><br/>
 
@@ -313,8 +310,8 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 <li><span class="self-ref">IfcProject</span>.Decomposes -- it shall be NIL, i.e. the <span class="self-ref">IfcProject</span> shall be on top of the root of the spatial structure tree.</li>
 <li><span class="self-ref">IfcProject</span>.IsDecomposedBy -- referencing (<a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a> || <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a> || <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a>) by using <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.RelatedObjects. The <a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a>, <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a>, or <a href="../../ifcproductextension/lexical/ifcspatialzone.htm">IfcSpatialZone</a> being referenced shall be the root of the spatial structure.</li>
 </ul>
-<p>Figure 275 illustrates project relationships with spatial structures, elements, and element type libraries.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-2.png" alt="&quot;spatial decomposition relationships&quot;" title="Figure 275 &mdash; Project spatial structure, products and product type library"></td></tr><tr><td><p class="figure">Figure 275 &mdash; Project spatial structure, products and product type library</p></td></tr></table></p>
+<p>Figure 292 illustrates project relationships with spatial structures, elements, and element type libraries.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcproject_fig-2.png" alt="&quot;spatial decomposition relationships&quot;" title="Figure 292 &mdash; Project spatial structure, products and product type library"></td></tr><tr><td><p class="figure">Figure 292 &mdash; Project spatial structure, products and product type library</p></td></tr></table></p>
 
 <br/><br/>
 
@@ -399,8 +396,8 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 &nbsp;&nbsp;&lt;Concept uuid=&quot;06ef2070-66eb-4829-a416-b03189ae65b7&quot; name=&quot;Project Representation Context&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;38dac6f0-997c-4544-9bca-b6326b9a3e4b&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Context for all 3D geometry.&quot; Parameters=&quot;ContextIdentifier[Value]=&amp;apos;Model&amp;apos; AND ContextType[Value]=&amp;apos;3D&amp;apos;&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Context for all 2D annotations.&quot; Parameters=&quot;ContextIdentifier[Value]=&amp;apos;Plan&amp;apos; AND ContextType[Value]=&amp;apos;2D&amp;apos;&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Context for all 3D geometry.&quot; Parameters=&quot;ContextIdentifier[Value]=&amp;apos;3D&amp;apos; AND ContextType[Value]=&amp;apos;Model&amp;apos;&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule Description=&quot;Context for all 2D annotations.&quot; Parameters=&quot;ContextIdentifier[Value]=&amp;apos;2D&amp;apos; AND ContextType[Value]=&amp;apos;Plan&amp;apos;&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;85e713ac-599b-453c-bfda-29a78246924f&quot; name=&quot;Project Representation Context 3D&quot;&gt;<br/>
@@ -452,13 +449,13 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;d1c8c2c8-903f-4db1-8de9-5078995511e5&quot; name=&quot;Project Global Positioning Geographic&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;f54c3914-74bb-4107-ab87-fea51e45c624&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;2636ca46-1136-548b-998f-ff82ed0287f7&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>
 &nbsp;&nbsp;&lt;/Concept&gt;<br/>
 &nbsp;&nbsp;&lt;Concept uuid=&quot;225782d2-563c-445b-a7c5-396743a56a6b&quot; name=&quot;Project Global Positioning Mapped&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;570afce6-df2d-483e-bcb8-9241dd6c5479&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;13683820-300b-50d0-8811-507828c26ea7&quot; /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRule /&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/TemplateRules&gt;<br/>

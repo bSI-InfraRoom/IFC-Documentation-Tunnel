@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 9 July 2024
+Friday, 26 July 2024
 
 *)
 
@@ -133,31 +133,31 @@ END_TYPE;
 
 TYPE IfcPropertySetTemplateTypeEnum = ENUMERATION OF
 	(PSET_MATERIALDRIVEN
-	,PSET_TYPEDRIVENONLY
-	,PSET_TYPEDRIVENOVERRIDE
 	,PSET_OCCURRENCEDRIVEN
 	,PSET_PERFORMANCEDRIVEN
 	,PSET_PROFILEDRIVEN
+	,PSET_TYPEDRIVENONLY
+	,PSET_TYPEDRIVENOVERRIDE
+	,QTO_OCCURRENCEDRIVEN
 	,QTO_TYPEDRIVENONLY
 	,QTO_TYPEDRIVENOVERRIDE
-	,QTO_OCCURRENCEDRIVEN
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcSimplePropertyTemplateTypeEnum = ENUMERATION OF
-	(P_SINGLEVALUE
+	(P_BOUNDEDVALUE
 	,P_ENUMERATEDVALUE
-	,P_BOUNDEDVALUE
 	,P_LISTVALUE
-	,P_TABLEVALUE
 	,P_REFERENCEVALUE
-	,Q_LENGTH
+	,P_SINGLEVALUE
+	,P_TABLEVALUE
 	,Q_AREA
-	,Q_VOLUME
 	,Q_COUNT
-	,Q_WEIGHT
+	,Q_LENGTH
+	,Q_NUMBER
 	,Q_TIME
-	,Q_NUMBER);
+	,Q_VOLUME
+	,Q_WEIGHT);
 END_TYPE;
 
 TYPE IfcDefinitionSelect = SELECT
@@ -200,8 +200,8 @@ ENTITY IfcComplexPropertyTemplate
 	TemplateType : OPTIONAL IfcComplexPropertyTemplateTypeEnum;
 	HasPropertyTemplates : OPTIONAL SET [1:?] OF IfcPropertyTemplate;
  WHERE
-	UniquePropertyNames : IfcUniquePropertyTemplateNames(HasPropertyTemplates);
 	NoSelfReference : SIZEOF(QUERY(temp <* HasPropertyTemplates | SELF :=: temp)) = 0;
+	UniquePropertyNames : IfcUniquePropertyTemplateNames(HasPropertyTemplates);
 END_ENTITY;
 
 ENTITY IfcContext
@@ -336,11 +336,11 @@ END_ENTITY;
 ENTITY IfcProject
  SUBTYPE OF (IfcContext);
  WHERE
-	HasName : EXISTS(SELF\IfcRoot.Name);
 	CorrectContext : NOT(EXISTS(SELF\IfcContext.RepresentationContexts)) OR
 (SIZEOF(QUERY(Temp <* SELF\IfcContext.RepresentationContexts |
  'IFCREPRESENTATIONRESOURCE.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(Temp)
   )) = 0);
+	HasName : EXISTS(SELF\IfcRoot.Name);
 	NoDecomposition : SIZEOF(SELF\IfcObjectDefinition.Decomposes) = 0;
 END_ENTITY;
 
@@ -791,7 +791,7 @@ RETURN (SIZEOF(Names) = SIZEOF(Properties));
 END_FUNCTION;
 
 RULE IfcSingleProjectInstance FOR
-	(IfcProject);
+ (IfcProject);
 
     WHERE
       WR1 : SIZEOF(IfcProject) <= 1;

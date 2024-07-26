@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 9 July 2024
+Friday, 26 July 2024
 
 *)
 
@@ -60,13 +60,13 @@ REFERENCE FROM IFCPRODUCTEXTENSION
 );
 
 TYPE IfcFurnitureTypeEnum = ENUMERATION OF
-	(CHAIR
-	,TABLE
+	(BED
+	,CHAIR
 	,DESK
-	,BED
 	,FILECABINET
 	,SHELF
 	,SOFA
+	,TABLE
 	,TECHNICALCABINET
 	,USERDEFINED
 	,NOTDEFINED);
@@ -74,8 +74,8 @@ END_TYPE;
 
 TYPE IfcInventoryTypeEnum = ENUMERATION OF
 	(ASSETINVENTORY
-	,SPACEINVENTORY
 	,FURNITUREINVENTORY
+	,SPACEINVENTORY
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -94,8 +94,8 @@ END_TYPE;
 
 TYPE IfcSystemFurnitureElementTypeEnum = ENUMERATION OF
 	(PANEL
-	,WORKSURFACE
 	,SUBRACK
+	,WORKSURFACE
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;

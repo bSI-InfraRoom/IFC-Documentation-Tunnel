@@ -46,8 +46,8 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcRelVoidsElement</span> is an objectified relationship between a building element and one opening element that creates a void in the element. It is a one-to-one relationship. This relationship implies a Boolean operation of subtraction between the geometric bodies of the element and the opening.</p>
-<p>As shown in Figure 321, the insertion of a void into a wall is represented by the relationship <span class="self-ref">IfcRelVoidsElement</span>. The opening is created within the wall by <i>IfcWall(StandardCase) o-- IfcRelVoidsElement --o IfcOpeningElement</i>.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcrelvoidselements-fig1.png" alt="&quot;relationships for voiding&quot;" title="Figure 321 &mdash; Relationship for element voiding"></td></tr><tr><td><p class="figure">Figure 321 &mdash; Relationship for element voiding</p></td></tr></table></p>
+<p>As shown in Figure 338, the insertion of a void into a wall is represented by the relationship <span class="self-ref">IfcRelVoidsElement</span>. The opening is created within the wall by <i>IfcWall(StandardCase) o-- IfcRelVoidsElement --o IfcOpeningElement</i>.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcrelvoidselements-fig1.png" alt="&quot;relationships for voiding&quot;" title="Figure 338 &mdash; Relationship for element voiding"></td></tr><tr><td><p class="figure">Figure 338 &mdash; Relationship for element voiding</p></td></tr></table></p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC1.0</p>
 </blockquote>
@@ -57,14 +57,12 @@
 <th>G</th></tr>
 <tr><td>5</td><td>RelatingBuildingElement</td><td><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></td><td></td><td>
 Reference to element in which a void is created by associated feature subtraction element.
-
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <i>IfcBuildingElement</i> to <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatedOpeningElement</td><td><a href="../../ifcproductextension/lexical/ifcfeatureelementsubtraction.htm">IfcFeatureElementSubtraction</a></td><td></td><td>
 Reference to the feature subtraction element which defines a void in the associated element.
-
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> to <a href="../../ifcproductextension/lexical/ifcfeatureelementsubtraction.htm">IfcFeatureElementSubtraction</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -107,14 +105,12 @@ Optional description, provided for exchanging informative comments.
 <tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a></td></tr>
 <tr><td>5</td><td>RelatingBuildingElement</td><td><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></td><td></td><td>
 Reference to element in which a void is created by associated feature subtraction element.
-
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <i>IfcBuildingElement</i> to <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatedOpeningElement</td><td><a href="../../ifcproductextension/lexical/ifcfeatureelementsubtraction.htm">IfcFeatureElementSubtraction</a></td><td></td><td>
 Reference to the feature subtraction element which defines a void in the associated element.
-
 <blockquote>
 IFC2x CHANGE  The data type has been changed from <a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a> to <a href="../../ifcproductextension/lexical/ifcfeatureelementsubtraction.htm">IfcFeatureElementSubtraction</a> with upward compatibility for file based exchange.
 </blockquote>

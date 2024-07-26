@@ -59,8 +59,8 @@
 </blockquote>
 <p class="use-head">
 Attribute use definition</p>
-<p>As shown in Figure 514, each <span class="self-ref">IfcMaterialLayerSet</span> implicitly defines a material layer set base line (MlsBase), to which the start of the first <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.htm">IfcMaterialLayer</a> is aligned. The total thickness of a layer set is calculated from the individual layer thicknesses, the first layer starting from the MlsBase and following layers being placed on top of the previous (no gaps or overlaps).</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcmateriallayerset-01.png" alt="&quot;material layer set&quot;" title="Figure 514 &mdash; Material layer set"></td></tr><tr><td><p class="figure">Figure 514 &mdash; Material layer set</p></td></tr></table></p>
+<p>As shown in Figure 531, each <span class="self-ref">IfcMaterialLayerSet</span> implicitly defines a material layer set base line (MlsBase), to which the start of the first <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.htm">IfcMaterialLayer</a> is aligned. The total thickness of a layer set is calculated from the individual layer thicknesses, the first layer starting from the MlsBase and following layers being placed on top of the previous (no gaps or overlaps).</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcmateriallayerset-01.png" alt="&quot;material layer set&quot;" title="Figure 531 &mdash; Material layer set"></td></tr><tr><td><p class="figure">Figure 531 &mdash; Material layer set</p></td></tr></table></p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -73,7 +73,6 @@ The name by which the <span class="self-ref">IfcMaterialLayerSet</span> is known
 </td><td>X</td></tr>
 <tr><td>3</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 Definition of the <span class="self-ref">IfcMaterialLayerSet</span> in descriptive terms.
-
 <blockquote>
 IFC4 CHANGE  The attribute has been added at the end of attribute list.
 </blockquote>
@@ -95,19 +94,16 @@ IFC4 CHANGE  The attribute has been added at the end of attribute list.
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcmaterialresource/lexical/ifcmaterialdefinition.htm">IfcMaterialDefinition</a></i></td></tr>
 <tr><td></td><td><i>AssociatedTo</i></td><td><a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.htm">IfcRelAssociatesMaterial</a><br/>@RelatingMaterial</td><td>S[0:?]</td><td>Use of the <span class="self-ref">IfcMaterialDefinition</span> subtypes within the material association of an element occurrence or element type. The association is established by the <a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.htm">IfcRelAssociatesMaterial</a> relationship.
-
 <blockquote>
 IFC4 CHANGE  The inverse attribute has been added.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasExternalReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.htm">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to external references, e.g. library, classification, or document information, that are associated to the material.
-
 <blockquote>
 IFC4 CHANGE  The inverse attribute has been added.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>HasProperties</i></td><td><a href="../../ifcmaterialresource/lexical/ifcmaterialproperties.htm">IfcMaterialProperties</a><br/>@Material</td><td>S[0:?]</td><td>Material properties assigned to instances of subtypes of <span class="self-ref">IfcMaterialDefinition</span>.
-
 <blockquote>
 IFC4 CHANGE  The inverse attribute has been added.
 </blockquote>
@@ -121,7 +117,6 @@ The name by which the <span class="self-ref">IfcMaterialLayerSet</span> is known
 </td><td>X</td></tr>
 <tr><td>3</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 Definition of the <span class="self-ref">IfcMaterialLayerSet</span> in descriptive terms.
-
 <blockquote>
 IFC4 CHANGE  The attribute has been added at the end of attribute list.
 </blockquote>

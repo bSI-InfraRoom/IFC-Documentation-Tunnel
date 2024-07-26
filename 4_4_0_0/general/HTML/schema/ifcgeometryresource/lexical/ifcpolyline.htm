@@ -50,13 +50,12 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcPolyline</span> is a bounded curve with only linear segments defined by a list of Cartesian points. If the first and the last Cartesian point in the list are identical, then the polyline is a closed curve, otherwise it is an open curve.</p>
 <blockquote class="example">
-<p>EXAMPLE  Figure 506 illustrates a bounded <span class="self-ref">IfcPolyline</span> and shows the parametric length of each segment and of the total polyline.</p>
+<p>EXAMPLE  Figure 523 illustrates a bounded <span class="self-ref">IfcPolyline</span> and shows the parametric length of each segment and of the total polyline.</p>
 </blockquote>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcpolyline-fig1.png" alt="&quot;polyline examples&quot;" title="Figure 506 &mdash; Bounded IfcPolyline with parametric length"></td></tr><tr><td><p class="figure">Figure 506 &mdash; Bounded <span class="self-ref">IfcPolyline</span> with parametric length</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcpolyline-fig1.png" alt="&quot;polyline examples&quot;" title="Figure 523 &mdash; Bounded IfcPolyline with parametric length"></td></tr><tr><td><p class="figure">Figure 523 &mdash; Bounded <span class="self-ref">IfcPolyline</span> with parametric length</p></td></tr></table></p>
 <blockquote class="extDef">
 <p>NOTE  Definition according to ISO/CD 10303-42:1992<br>
-A polyline is a bounded curve of <i>n</i> - 1 linear segments, defined by a list of <i>n</i> points, P<sub>1</sub>, P<sub>2</sub> ... P<sub>n</sub>. The _i_th segment of the curve is parameterized as follows:
-</p>
+A polyline is a bounded curve of <i>n</i> - 1 linear segments, defined by a list of <i>n</i> points, P<sub>1</sub>, P<sub>2</sub> ... P<sub>n</sub>. The _i_th segment of the curve is parameterized as follows:</p>
 <blockquote>
 <p><img src="../../../figures/ifcpolyline-math1.gif" alt="Image">    <i>for</i> 1 ≤ <i>i</i> ≤ <i>n</i> - 1
 where <i>i</i> - 1 ≤ <i>u</i> ≤ <i>i</i> and with parametric range of 0 &lt;≤ <i>u</i> ≤ <i>n</i> - 1.</p>
@@ -99,7 +98,6 @@ The points defining the polyline.
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>G</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
 <tr><td></td><td><i>LayerAssignment</i></td><td><a href="../../ifcpresentationorganizationresource/lexical/ifcpresentationlayerassignment.htm">IfcPresentationLayerAssignment</a><br/>@AssignedItems</td><td>S[0:1]</td><td>Assignment of the representation item to a single or multiple layer(s). The <i>LayerAssignments</i> can override a <i>LayerAssignments</i> of the <a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a> it is used  within the list of <i>Items</i>.
-
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added.
 </blockquote>

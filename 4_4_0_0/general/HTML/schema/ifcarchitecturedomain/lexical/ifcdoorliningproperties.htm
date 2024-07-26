@@ -55,7 +55,7 @@
 <p>NOTE  The <span class="self-ref">IfcDoorLiningProperties</span> shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>.ParameterTakesPrecedence is set TRUE.</p>
 </blockquote>
 <p>The <span class="self-ref">IfcDoorLiningProperties</span> are included in the list of properties of <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>.HasPropertySets. More information about the door lining can be included in the same list of the <i>IfcDoorTyype</i> using another <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> for dynamic extensions.</p>
-<p>The <span class="self-ref">IfcDoorLiningProperties</span> does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type (which is inserted by the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a> into the spatial context of the project) as shown in Figure 402. The parameters of the <span class="self-ref">IfcDoorLiningProperties</span> define a standard door lining, including (if given) a threshold and a transom. The outer boundary of the lining is determined by the 'Profile' shape representation assigned to the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a>, which inserts the <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>.</p>
+<p>The <span class="self-ref">IfcDoorLiningProperties</span> does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type (which is inserted by the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a> into the spatial context of the project) as shown in Figure 419. The parameters of the <span class="self-ref">IfcDoorLiningProperties</span> define a standard door lining, including (if given) a threshold and a transom. The outer boundary of the lining is determined by the 'Profile' shape representation assigned to the <a href="../../ifcsharedbldgelements/lexical/ifcdoor.htm">IfcDoor</a>, which inserts the <a href="../../ifcsharedbldgelements/lexical/ifcdoortype.htm">IfcDoorType</a>.</p>
 <p> </p>
 <table>
  <tr>
@@ -119,7 +119,7 @@
   </td>
  </tr>
  <tr>
-  <td><p class="figure">Figure 402 &mdash; Door lining properties</p></td>
+  <td><p class="figure">Figure 419 &mdash; Door lining properties</p></td>
  </tr>
 </table>
 <blockquote class="note">
@@ -140,7 +140,6 @@ Depth of the door lining, measured perpendicular to the plane of the door lining
 </td><td>X</td></tr>
 <tr><td>6</td><td>LiningThickness</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
 Thickness of the door lining as explained in the figure above. If <i>LiningThickness</i> value is 0. (zero) it denotes a door without a lining (all other lining parameters shall be set to NIL in this case). If the <i>LiningThickness</i> is NIL it denotes that the value is not available.
-
 <blockquote>
 IFC4 CHANGE  Data type modified to be <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>.
 </blockquote>
@@ -150,7 +149,6 @@ Depth (dimension in plane perpendicular to door leaf) of the door threshold. Onl
 </td><td>X</td></tr>
 <tr><td>8</td><td>ThresholdThickness</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
 Thickness of the door threshold as explained in the figure above. If <i>ThresholdThickness</i> value is 0. (zero) it denotes a door without a threshold (<i>ThresholdDepth</i> shall be set to NIL in this case). If the <i>ThresholdThickness</i> is NIL it denotes that the information about a threshold is not available.
-
 <blockquote>
 IFC4 CHANGE  Data type modified to be <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>.
 </blockquote>
@@ -158,7 +156,6 @@ IFC4 CHANGE  Data type modified to be <a href="../../ifcmeasureresource/lexical
 <tr><td>9</td><td>TransomThickness</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
 Thickness (width in plane parallel to door leaf) of the transom (if provided - that is, if the <i>TransomOffset</i> attribute is set), which divides the door leaf from a glazing (or window) above.
 If the <i>TransomThickness</i> is set to zero (and the <i>TransomOffset</i> set to a positive length), then the door is divided vertically into a leaf and transom window area without a physical frame.
-
 <blockquote>
 IFC4 CHANGE  Data type changed to <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>.
 </blockquote>
@@ -180,21 +177,18 @@ Depth of the casing (dimension in plane perpendicular to door leaf). If given it
 </td><td>X</td></tr>
 <tr><td>15</td><td>ShapeAspectStyle</td><td><a href="../../ifcrepresentationresource/lexical/ifcshapeaspect.htm">IfcShapeAspect</a></td><td>? </td><td>
 Pointer to the shape aspect, if given. The shape aspect reflects the part of the door shape, which represents the door lining.
-
 <blockquote>
 IFC4 CHANGE  The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ($).
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>16</td><td>LiningToPanelOffsetX</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
 Offset between the lining and the window panel measured along the x-axis of the local placement.
-
 <blockquote>
 IFC4 CHANGE  New attribute added at the end of the entity definition.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>17</td><td>LiningToPanelOffsetY</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
 Offset between the lining and the door panel measured along the y-axis of the local placement.
-
 <blockquote>
 IFC4 CHANGE  New attribute added at the end of the entity definition.
 </blockquote>
@@ -274,13 +268,11 @@ IFC4 CHANGE  The cardinality has been changed from 0:1 to 0:? with upward compa
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a><br/>@RelatedPropertySets</td><td>S[0:?]</td><td>Relation to the property set template, via the objectified relationship <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a>, that, if given, provides the definition template for the property set or quantity set and its properties.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>DefinesOccurrence</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatingPropertyDefinition</td><td>S[0:?]</td><td>Reference to the relation to one or many object occurrences that are characterized by the property set definition. A single property set can be assigned to multiple object occurrences using the objectified relationship <i>IfcRefDefinesByProperties</i>.
-
 <blockquote>
 IFC4 CHANGE Inverse attribute renamed from PropertyDefinitionOf with upward compatibility for file-based exchange.
 </blockquote>
@@ -292,7 +284,6 @@ Depth of the door lining, measured perpendicular to the plane of the door lining
 </td><td>X</td></tr>
 <tr><td>6</td><td>LiningThickness</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
 Thickness of the door lining as explained in the figure above. If <i>LiningThickness</i> value is 0. (zero) it denotes a door without a lining (all other lining parameters shall be set to NIL in this case). If the <i>LiningThickness</i> is NIL it denotes that the value is not available.
-
 <blockquote>
 IFC4 CHANGE  Data type modified to be <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>.
 </blockquote>
@@ -302,7 +293,6 @@ Depth (dimension in plane perpendicular to door leaf) of the door threshold. Onl
 </td><td>X</td></tr>
 <tr><td>8</td><td>ThresholdThickness</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
 Thickness of the door threshold as explained in the figure above. If <i>ThresholdThickness</i> value is 0. (zero) it denotes a door without a threshold (<i>ThresholdDepth</i> shall be set to NIL in this case). If the <i>ThresholdThickness</i> is NIL it denotes that the information about a threshold is not available.
-
 <blockquote>
 IFC4 CHANGE  Data type modified to be <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>.
 </blockquote>
@@ -310,7 +300,6 @@ IFC4 CHANGE  Data type modified to be <a href="../../ifcmeasureresource/lexical
 <tr><td>9</td><td>TransomThickness</td><td><a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a></td><td>? </td><td>
 Thickness (width in plane parallel to door leaf) of the transom (if provided - that is, if the <i>TransomOffset</i> attribute is set), which divides the door leaf from a glazing (or window) above.
 If the <i>TransomThickness</i> is set to zero (and the <i>TransomOffset</i> set to a positive length), then the door is divided vertically into a leaf and transom window area without a physical frame.
-
 <blockquote>
 IFC4 CHANGE  Data type changed to <a href="../../ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.htm">IfcNonNegativeLengthMeasure</a>.
 </blockquote>
@@ -332,21 +321,18 @@ Depth of the casing (dimension in plane perpendicular to door leaf). If given it
 </td><td>X</td></tr>
 <tr><td>15</td><td>ShapeAspectStyle</td><td><a href="../../ifcrepresentationresource/lexical/ifcshapeaspect.htm">IfcShapeAspect</a></td><td>? </td><td>
 Pointer to the shape aspect, if given. The shape aspect reflects the part of the door shape, which represents the door lining.
-
 <blockquote>
 IFC4 CHANGE  The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ($).
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>16</td><td>LiningToPanelOffsetX</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
 Offset between the lining and the window panel measured along the x-axis of the local placement.
-
 <blockquote>
 IFC4 CHANGE  New attribute added at the end of the entity definition.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>17</td><td>LiningToPanelOffsetY</td><td><a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a></td><td>? </td><td>
 Offset between the lining and the door panel measured along the y-axis of the local placement.
-
 <blockquote>
 IFC4 CHANGE  New attribute added at the end of the entity definition.
 </blockquote>

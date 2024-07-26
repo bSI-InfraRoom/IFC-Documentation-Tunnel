@@ -52,8 +52,8 @@
 <p>The <span class="self-ref">IfcWindowPanelProperties</span> are used to parametrically describe the shape and operation of window panels. The parametric definition can be added solely or additionally to the explicit shape representation of the window.</p>
 <p>The <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> can define windows consisting of more then one panel. In this case, one instance of <span class="self-ref">IfcWindowPanelProperties</span> has to be included for each window panel. The <i>PanelPosition</i> attribute, in conjunction with the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a>.OperationType attribute, determines to which panel the _IfcWindowPanelProperties_apply. The <span class="self-ref">IfcWindowPanelProperties</span> are included in the list of properties (<i>HasPropertySets</i>) of the <i>IfcWindowStyle</i>. More information about the window panel can be included in the same list of the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> using the <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> for dynamic extensions.</p>
 <p>The <span class="self-ref">IfcWindowPanelProperties</span> does not hold an own geometric representation. However it defines parameter, which can be used to create the shape of the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a> (which is inserted by the <a href="../../ifcsharedbldgelements/lexical/ifcwindow.htm">IfcWindow</a> into the spatial context of the project). The parameters at the <span class="self-ref">IfcWindowPanelProperties</span> define a standard window panel. The outer boundary of the lining is determined by the 'Profile' shape representation assigned to the <a href="../../ifcsharedbldgelements/lexical/ifcwindow.htm">IfcWindow</a>, which inserts the <a href="../../ifcsharedbldgelements/lexical/ifcwindowtype.htm">IfcWindowType</a>. It has to take the lining parameter into account as well. The position of the window panel within the overall window is determined by the <i>PanelPosition</i> attribute.</p>
-<p>As shown in Figure 406, the panel is applied to the position within the lining as defined by the panel position attribute. The following parameter apply to that panel: <i>FrameDepth</i>, <i>FrameThickness</i>.</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcwindowpanelproperties-fig01.gif" alt="&quot;panel 1&quot;" title="Figure 406 &mdash; Window panel properties"></td></tr><tr><td><p class="figure">Figure 406 &mdash; Window panel properties</p></td></tr></table></p>
+<p>As shown in Figure 423, the panel is applied to the position within the lining as defined by the panel position attribute. The following parameter apply to that panel: <i>FrameDepth</i>, <i>FrameThickness</i>.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcwindowpanelproperties-fig01.gif" alt="&quot;panel 1&quot;" title="Figure 423 &mdash; Window panel properties"></td></tr><tr><td><p class="figure">Figure 423 &mdash; Window panel properties</p></td></tr></table></p>
 <blockquote class="history">
 <p>HISTORY  New entity in IFC2.0, it had been renamed from IfcWindowPanel in IFC2x.</p>
 </blockquote>
@@ -78,7 +78,6 @@ Width of panel frame, measured from inside of panel (at glazing) to outside of p
 </td><td>X</td></tr>
 <tr><td>9</td><td>ShapeAspectStyle</td><td><a href="../../ifcrepresentationresource/lexical/ifcshapeaspect.htm">IfcShapeAspect</a></td><td>? </td><td>
 Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the panel.
-
 <blockquote>
 DEPRECATION  The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ($).
 </blockquote>
@@ -138,13 +137,11 @@ IFC4 CHANGE  The cardinality has been changed from 0:1 to 0:? with upward compa
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a><br/>@RelatedPropertySets</td><td>S[0:?]</td><td>Relation to the property set template, via the objectified relationship <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.htm">IfcRelDefinesByTemplate</a>, that, if given, provides the definition template for the property set or quantity set and its properties.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>DefinesOccurrence</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatingPropertyDefinition</td><td>S[0:?]</td><td>Reference to the relation to one or many object occurrences that are characterized by the property set definition. A single property set can be assigned to multiple object occurrences using the objectified relationship <i>IfcRefDefinesByProperties</i>.
-
 <blockquote>
 IFC4 CHANGE Inverse attribute renamed from PropertyDefinitionOf with upward compatibility for file-based exchange.
 </blockquote>
@@ -165,7 +162,6 @@ Width of panel frame, measured from inside of panel (at glazing) to outside of p
 </td><td>X</td></tr>
 <tr><td>9</td><td>ShapeAspectStyle</td><td><a href="../../ifcrepresentationresource/lexical/ifcshapeaspect.htm">IfcShapeAspect</a></td><td>? </td><td>
 Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the panel.
-
 <blockquote>
 DEPRECATION  The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ($).
 </blockquote>

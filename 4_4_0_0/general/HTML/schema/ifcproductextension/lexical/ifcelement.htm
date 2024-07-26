@@ -173,25 +173,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -253,7 +249,7 @@ IFC4 CHANGE New inverse relationship.
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcelement.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcElement</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="element-interference" />
 <p class="use-head">Element Interference</p>
@@ -261,7 +257,7 @@ IFC4 CHANGE New inverse relationship.
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 65.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 83.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -341,13 +337,13 @@ IFC4 CHANGE New inverse relationship.
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 65 &mdash; IfcElement Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 83 &mdash; IfcElement Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="product-local-placement" />
 <p class="use-head">Product Local Placement</p>
-<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 66.<table>
+<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 84.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasPlacement</b></th><th><b>RelativeToElement</b></th><th><b>Description</b></th></tr>
@@ -355,7 +351,7 @@ IFC4 CHANGE New inverse relationship.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 66 &mdash; IfcElement Product Local Placement</td></tr></table>
+<tr><td><p class="table">Table 84 &mdash; IfcElement Product Local Placement</td></tr></table>
 
 <p>The object placement for any subtype of <span class="self-ref">IfcElement</span> is defined by the <a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a>, either <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> or <a href="../../ifcgeometricconstraintresource/lexical/ifcgridplacement.htm">IfcGridPlacement</a>, which defines the local object coordinate system that is referenced by all geometric representations of that <span class="self-ref">IfcElement</span>.</p>
 
@@ -373,11 +369,11 @@ IFC4 CHANGE New inverse relationship.
  <tr>
   <td><img src="../../../figures/ifcbuildingelement-boundingbox-layout1.gif" border="0" height="275" width="400" alt="bounding box"></td> 
   <td>
-<blockquote class="example">EXAMPLE&nbsp; Any <span class="self-ref">IfcElement</span> may be represented by a bounding box, which shows the maximum extend of the body within the object coordinate system established by the <a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a>. As shown in Figure 296, the bounding box representation is given by an <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> that includes a single item, an <a href="../../ifcgeometricmodelresource/lexical/ifcboundingbox.htm">IfcBoundingBox</a>.</blockquote>
+<blockquote class="example">EXAMPLE&nbsp; Any <span class="self-ref">IfcElement</span> may be represented by a bounding box, which shows the maximum extend of the body within the object coordinate system established by the <a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a>. As shown in Figure 313, the bounding box representation is given by an <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> that includes a single item, an <a href="../../ifcgeometricmodelresource/lexical/ifcboundingbox.htm">IfcBoundingBox</a>.</blockquote>
  </td>
  </tr>
  <tr>
-  <td><p class="figure">Figure 296 &mdash; Building element box representation</p></td>
+  <td><p class="figure">Figure 313 &mdash; Building element box representation</p></td>
   <td>&nbsp;</td>
  </tr>
 </table>
@@ -386,7 +382,7 @@ IFC4 CHANGE New inverse relationship.
 
 <a id="footprint-geometry" />
 <p class="use-head">FootPrint Geometry</p>
-<p>The <a href="../../templates/footprint-geometry.htm">FootPrint Geometry</a> concept template applies to this entity as shown in Table 67.<table>
+<p>The <a href="../../templates/footprint-geometry.htm">FootPrint Geometry</a> concept template applies to this entity as shown in Table 85.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Identifier</b></th><th><b>Type</b></th><th><b>Items</b></th><th><b>Description</b></th></tr>
@@ -396,7 +392,7 @@ IFC4 CHANGE New inverse relationship.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 67 &mdash; IfcElement FootPrint Geometry</td></tr></table>
+<tr><td><p class="table">Table 85 &mdash; IfcElement FootPrint Geometry</td></tr></table>
 
 <br/><br/>
 
@@ -414,7 +410,7 @@ IFC4 CHANGE New inverse relationship.
  <tr>
   
 <td><img src="../../../figures/ifcbuildingelement-surfacemodel-layout1.gif" alt="surface model" border="0" height="275" width="400"></td>
-  <td><blockquote class="example">EXAMPLE&nbsp; As shown in Figure 297, the surface model representation is given 
+  <td><blockquote class="example">EXAMPLE&nbsp; As shown in Figure 314, the surface model representation is given 
 by an <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>, which includes a single item which is either an <a href="../../ifcgeometricmodelresource/lexical/ifcshellbasedsurfacemodel.htm">IfcShellBasedSurfaceModel</a>, or an <a href="../../ifcgeometricmodelresource/lexical/ifcfacebasedsurfacemodel.htm">IfcFaceBasedSurfaceModel</a>. In some cases it may also be useful to expose a simple 
 representation as a bounding box representation of the same complex 
 shape.</blockquote></td>
@@ -423,7 +419,7 @@ shape.</blockquote></td>
 <tr>
   
 <td>
-<p class="figure">Figure 297 &mdash; Element surface model
+<p class="figure">Figure 314 &mdash; Element surface model
 representation</p>
 </td>
   <td>&nbsp;</td>
@@ -448,7 +444,7 @@ representation</p>
 <tr>
   
 <td><img src="../../../figures/ifcbuildingelement-brep-layout1.gif" alt="Brep representation" border="0" height="275" width="400"></td>
-  <td><blockquote class="example">EXAMPLE&nbsp; As shown in Figure 298, the Brep representation is given by an
+  <td><blockquote class="example">EXAMPLE&nbsp; As shown in Figure 315, the Brep representation is given by an
  <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>, which includes one or more 
 items, all of type <a href="../../ifcgeometricmodelresource/lexical/ifcfacetedbrep.htm">IfcFacetedBrep</a>. In some cases it may be useful to also expose a simple 
 representation as a bounding box representation of the same complex 
@@ -457,7 +453,7 @@ shape.</blockquote> </td>
  <tr>
   
 <td>
-<p class="figure">Figure 298 &mdash; Building element body boundary
+<p class="figure">Figure 315 &mdash; Building element body boundary
 representation</p>
 </td>
   <td>&nbsp;</td>
@@ -493,14 +489,14 @@ representation</p>
 
 <a id="element-openings" />
 <p class="use-head">Element Openings</p>
-<p>The <a href="../../templates/element-openings.htm">Element Openings</a> concept template applies to this entity as shown in Table 68.<table>
+<p>The <a href="../../templates/element-openings.htm">Element Openings</a> concept template applies to this entity as shown in Table 86.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasOpenings</b></th><th><b>RelatedOpeningElement</b></th><th><b>FillsVoids</b></th><th><b>RelatedBuiltElement</b></th></tr>
 <tr><td></td><td></td><td></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 68 &mdash; IfcElement Element Openings</td></tr></table>
+<tr><td><p class="table">Table 86 &mdash; IfcElement Element Openings</td></tr></table>
 
 <br/><br/>
 
@@ -510,7 +506,7 @@ representation</p>
 
 <a id="product-linear-placement" />
 <p class="use-head">Linear Placement</p>
-<p>The <a href="../../templates/product-linear-placement.htm">Product Linear Placement</a> concept template applies to this entity as shown in Table 69.<table>
+<p>The <a href="../../templates/product-linear-placement.htm">Product Linear Placement</a> concept template applies to this entity as shown in Table 87.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasPlacement</b></th><th><b>RelativePlacement</b></th><th><b>RelativeToElement</b></th><th><b>Description</b></th></tr>
@@ -518,7 +514,7 @@ representation</p>
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 69 &mdash; IfcElement Product Linear Placement</td></tr></table>
+<tr><td><p class="table">Table 87 &mdash; IfcElement Product Linear Placement</td></tr></table>
 
 <p>Product placement with a <i>Product Linear Placement</i> template. It defines the local coordinate system based on the curve which is referenced by <a href="../../ifcgeometricconstraintresource/lexical/ifclinearplacement.htm">IfcLinearPlacement</a>.<i>RelativePlacement</i> which is an <a href="../../ifcgeometryresource/lexical/ifcaxis2placementlinear.htm">IfcAxis2PlacementLinear</a>.<i>Location</i> using an <a href="../../ifcgeometryresource/lexical/ifcpointbydistanceexpression.htm">IfcPointByDistanceExpression</a>.<i>BasisCurve</i>. The local coordinate system is based on the tangent of the curve at Location, its normal in the global Z plane and the cross product of the aforementioned vectors.</p>
 
@@ -526,192 +522,192 @@ representation</p>
 
 <a id="element-voiding-features" />
 <p class="use-head">Element Voiding Features</p>
-<p>The <a href="../../templates/element-voiding-features.htm">Element Voiding Features</a> concept template applies to this entity as shown in Table 70.<table>
+<p>The <a href="../../templates/element-voiding-features.htm">Element Voiding Features</a> concept template applies to this entity as shown in Table 88.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasOpenings</b></th><th><b>RelatedVoidingFeature</b></th></tr>
 <tr><td></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 70 &mdash; IfcElement Element Voiding Features</td></tr></table>
+<tr><td><p class="table">Table 88 &mdash; IfcElement Element Voiding Features</td></tr></table>
 
 <br/><br/>
 
 <a id="surface-feature-adherence" />
 <p class="use-head">Surface Feature Adherence</p>
-<p>The <a href="../../templates/surface-feature-adherence.htm">Surface Feature Adherence</a> concept template applies to this entity as shown in Table 71.<table>
+<p>The <a href="../../templates/surface-feature-adherence.htm">Surface Feature Adherence</a> concept template applies to this entity as shown in Table 89.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasSurfaceFeatures</b></th><th><b>RelatedSurfaceFeatures</b></th></tr>
 <tr><td></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 71 &mdash; IfcElement Surface Feature Adherence</td></tr></table>
+<tr><td><p class="table">Table 89 &mdash; IfcElement Surface Feature Adherence</td></tr></table>
 
 <br/><br/>
 
 <a id="body-advancedswept-directrix-geometry" />
 <p class="use-head">Body AdvancedSwept Directrix Geometry</p>
-<p>The <a href="../../templates/body-advancedswept-directrix-geometry.htm">Body AdvancedSwept Directrix Geometry</a> concept template applies to this entity as shown in Table 72.<table>
+<p>The <a href="../../templates/body-advancedswept-directrix-geometry.htm">Body AdvancedSwept Directrix Geometry</a> concept template applies to this entity as shown in Table 90.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Items</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 72 &mdash; IfcElement Body AdvancedSwept Directrix Geometry</td></tr></table>
+<tr><td><p class="table">Table 90 &mdash; IfcElement Body AdvancedSwept Directrix Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="body-advancedswept-disksolid-polycurve-geometry" />
 <p class="use-head">Body AdvancedSwept DiskSolid PolyCurve Geometry</p>
-<p>The <a href="../../templates/body-advancedswept-disksolid-polycurve-geometry.htm">Body AdvancedSwept DiskSolid PolyCurve Geometry</a> concept template applies to this entity as shown in Table 73.<table>
+<p>The <a href="../../templates/body-advancedswept-disksolid-polycurve-geometry.htm">Body AdvancedSwept DiskSolid PolyCurve Geometry</a> concept template applies to this entity as shown in Table 91.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Items</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 73 &mdash; IfcElement Body AdvancedSwept DiskSolid PolyCurve Geometry</td></tr></table>
+<tr><td><p class="table">Table 91 &mdash; IfcElement Body AdvancedSwept DiskSolid PolyCurve Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="body-advancedswept-tapered-geometry" />
 <p class="use-head">Body AdvancedSwept Tapered Geometry</p>
-<p>The <a href="../../templates/body-advancedswept-tapered-geometry.htm">Body AdvancedSwept Tapered Geometry</a> concept template applies to this entity as shown in Table 74.<table>
+<p>The <a href="../../templates/body-advancedswept-tapered-geometry.htm">Body AdvancedSwept Tapered Geometry</a> concept template applies to this entity as shown in Table 92.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Items</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 74 &mdash; IfcElement Body AdvancedSwept Tapered Geometry</td></tr></table>
+<tr><td><p class="table">Table 92 &mdash; IfcElement Body AdvancedSwept Tapered Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="body-sectionedsolidhorizontal" />
 <p class="use-head">Body SectionedSolidHorizontal</p>
-<p>The <a href="../../templates/body-sectionedsolidhorizontal.htm">Body SectionedSolidHorizontal</a> concept template applies to this entity as shown in Table 75.<table>
+<p>The <a href="../../templates/body-sectionedsolidhorizontal.htm">Body SectionedSolidHorizontal</a> concept template applies to this entity as shown in Table 93.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Items</b></th><th><b>Directrix</b></th><th><b>CrossSections</b></th></tr>
 <tr><td></td><td></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 75 &mdash; IfcElement Body SectionedSolidHorizontal</td></tr></table>
+<tr><td><p class="table">Table 93 &mdash; IfcElement Body SectionedSolidHorizontal</td></tr></table>
 
 <br/><br/>
 
 <a id="body-sweptsolid-composite-geometry" />
 <p class="use-head">Body SweptSolid Composite Geometry</p>
-<p>The <a href="../../templates/body-sweptsolid-composite-geometry.htm">Body SweptSolid Composite Geometry</a> concept template applies to this entity as shown in Table 76.<table>
+<p>The <a href="../../templates/body-sweptsolid-composite-geometry.htm">Body SweptSolid Composite Geometry</a> concept template applies to this entity as shown in Table 94.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Geometry</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 76 &mdash; IfcElement Body SweptSolid Composite Geometry</td></tr></table>
+<tr><td><p class="table">Table 94 &mdash; IfcElement Body SweptSolid Composite Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="body-sweptsolid-parameterizedprofile-geometry" />
 <p class="use-head">Body SweptSolid ParameterizedProfile Geometry</p>
-<p>The <a href="../../templates/body-sweptsolid-parameterizedprofile-geometry.htm">Body SweptSolid ParameterizedProfile Geometry</a> concept template applies to this entity as shown in Table 77.<table>
+<p>The <a href="../../templates/body-sweptsolid-parameterizedprofile-geometry.htm">Body SweptSolid ParameterizedProfile Geometry</a> concept template applies to this entity as shown in Table 95.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Geometry</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 77 &mdash; IfcElement Body SweptSolid ParameterizedProfile Geometry</td></tr></table>
+<tr><td><p class="table">Table 95 &mdash; IfcElement Body SweptSolid ParameterizedProfile Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="body-sweptsolid-compositecurve-geometry" />
 <p class="use-head">Body SweptSolid CompositeCurve Geometry</p>
-<p>The <a href="../../templates/body-sweptsolid-compositecurve-geometry.htm">Body SweptSolid CompositeCurve Geometry</a> concept template applies to this entity as shown in Table 78.<table>
+<p>The <a href="../../templates/body-sweptsolid-compositecurve-geometry.htm">Body SweptSolid CompositeCurve Geometry</a> concept template applies to this entity as shown in Table 96.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Geometry</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 78 &mdash; IfcElement Body SweptSolid CompositeCurve Geometry</td></tr></table>
+<tr><td><p class="table">Table 96 &mdash; IfcElement Body SweptSolid CompositeCurve Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="body-sweptsolid-polycurve-geometry" />
 <p class="use-head">Body SweptSolid PolyCurve Geometry</p>
-<p>The <a href="../../templates/body-sweptsolid-polycurve-geometry.htm">Body SweptSolid PolyCurve Geometry</a> concept template applies to this entity as shown in Table 79.<table>
+<p>The <a href="../../templates/body-sweptsolid-polycurve-geometry.htm">Body SweptSolid PolyCurve Geometry</a> concept template applies to this entity as shown in Table 97.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Geometry</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 79 &mdash; IfcElement Body SweptSolid PolyCurve Geometry</td></tr></table>
+<tr><td><p class="table">Table 97 &mdash; IfcElement Body SweptSolid PolyCurve Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="footprint-annotation-geometry" />
 <p class="use-head">FootPrint Annotation Geometry</p>
-<p>The <a href="../../templates/footprint-annotation-geometry.htm">FootPrint Annotation Geometry</a> concept template applies to this entity as shown in Table 80.<table>
+<p>The <a href="../../templates/footprint-annotation-geometry.htm">FootPrint Annotation Geometry</a> concept template applies to this entity as shown in Table 98.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Items</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 80 &mdash; IfcElement FootPrint Annotation Geometry</td></tr></table>
+<tr><td><p class="table">Table 98 &mdash; IfcElement FootPrint Annotation Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="footprint-geomset-polycurve-geometry" />
 <p class="use-head">FootPrint GeomSet PolyCurve Geometry</p>
-<p>The <a href="../../templates/footprint-geomset-polycurve-geometry.htm">FootPrint GeomSet PolyCurve Geometry</a> concept template applies to this entity as shown in Table 81.<table>
+<p>The <a href="../../templates/footprint-geomset-polycurve-geometry.htm">FootPrint GeomSet PolyCurve Geometry</a> concept template applies to this entity as shown in Table 99.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Items</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 81 &mdash; IfcElement FootPrint GeomSet PolyCurve Geometry</td></tr></table>
+<tr><td><p class="table">Table 99 &mdash; IfcElement FootPrint GeomSet PolyCurve Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="surface-sectioned-geometry" />
 <p class="use-head">Surface Sectioned Geometry</p>
-<p>The <a href="../../templates/surface-sectioned-geometry.htm">Surface Sectioned Geometry</a> concept template applies to this entity as shown in Table 82.<table>
+<p>The <a href="../../templates/surface-sectioned-geometry.htm">Surface Sectioned Geometry</a> concept template applies to this entity as shown in Table 100.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Items</b></th><th><b>Directrix</b></th><th><b>CrossSections</b></th></tr>
 <tr><td></td><td></td><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 82 &mdash; IfcElement Surface Sectioned Geometry</td></tr></table>
+<tr><td><p class="table">Table 100 &mdash; IfcElement Surface Sectioned Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="surface-tessellation-geometry" />
 <p class="use-head">Surface Tessellation Geometry</p>
-<p>The <a href="../../templates/surface-tessellation-geometry.htm">Surface Tessellation Geometry</a> concept template applies to this entity as shown in Table 83.<table>
+<p>The <a href="../../templates/surface-tessellation-geometry.htm">Surface Tessellation Geometry</a> concept template applies to this entity as shown in Table 101.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Items</b></th></tr>
 <tr><td></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 83 &mdash; IfcElement Surface Tessellation Geometry</td></tr></table>
+<tr><td><p class="table">Table 101 &mdash; IfcElement Surface Tessellation Geometry</td></tr></table>
 
 <br/><br/>
 
 <a id="product-grid-placement" />
 <p class="use-head">Product Grid Placement</p>
-<p>The <a href="../../templates/product-grid-placement.htm">Product Grid Placement</a> concept template applies to this entity as shown in Table 84.<table>
+<p>The <a href="../../templates/product-grid-placement.htm">Product Grid Placement</a> concept template applies to this entity as shown in Table 102.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 84 &mdash; IfcElement Product Grid Placement</td></tr></table>
+<tr><td><p class="table">Table 102 &mdash; IfcElement Product Grid Placement</td></tr></table>
 
 <br/><br/>
 

@@ -144,25 +144,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -232,24 +228,24 @@ NOTE  The <i>PredefinedType</i> shall only be used, if no <a href="../../ifcsha
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcshadingdevice.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcShadingDevice</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 206.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 224.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifcsharedbldgelements/lexical/ifcshadingdevicetype.htm">IfcShadingDeviceType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 206 &mdash; IfcShadingDevice Object Typing</td></tr></table>
+<tr><td><p class="table">Table 224 &mdash; IfcShadingDevice Object Typing</td></tr></table>
 
 <br/><br/>
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 207.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 225.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -269,7 +265,7 @@ NOTE  The <i>PredefinedType</i> shall only be used, if no <a href="../../ifcsha
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 207 &mdash; IfcShadingDevice Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 225 &mdash; IfcShadingDevice Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
@@ -279,7 +275,7 @@ NOTE  The <i>PredefinedType</i> shall only be used, if no <a href="../../ifcsha
 
 <a id="spatial-containment" />
 <p class="use-head">Spatial Containment</p>
-<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 208.<table>
+<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept template applies to this entity as shown in Table 226.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>RelatingStructure</b></th><th><b>Description</b></th></tr>
@@ -293,7 +289,7 @@ NOTE  The <i>PredefinedType</i> shall only be used, if no <a href="../../ifcsha
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 208 &mdash; IfcShadingDevice Spatial Containment</td></tr></table>
+<tr><td><p class="table">Table 226 &mdash; IfcShadingDevice Spatial Containment</td></tr></table>
 
 <p>The <span class="self-ref">IfcShadingDevice</span>, as any subtype of <i>IfcBuildingElement</i>, may participate alternatively in one of the two different containment relationships:</p>
 <ul>
@@ -398,6 +394,7 @@ NOTE  The <i>PredefinedType</i> shall only be used, if no <a href="../../ifcsha
 
 <tr><td colspan="3"><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm">IfcBuiltElement</a></td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#product-assignment">Product Assignment</a></td><td><a href="../../templates/product-assignment.htm">Product Assignment</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#surface-3d-geometry">Surface 3D Geometry</a></td><td><a href="../../templates/surface-3d-geometry.htm">Surface 3D Geometry</a></td><td>General Usage</td></tr>
+<tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcbuiltelement.htm#material-set">Material Set</a></td><td><a href="../../templates/material-set.htm">Material Set</a></td><td>General Usage</td></tr>
 
 <tr><td colspan="3"><a href="../../ifcsharedbldgelements/lexical/ifcshadingdevice.htm">IfcShadingDevice</a></td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifcshadingdevice.htm#object-typing">Object Typing</a></td><td><a href="../../templates/object-typing.htm">Object Typing</a></td><td>General Usage</td></tr>
 <tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifcshadingdevice.htm#property-sets-for-objects">Property Sets for Objects</a></td><td><a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a></td><td>General Usage</td></tr>

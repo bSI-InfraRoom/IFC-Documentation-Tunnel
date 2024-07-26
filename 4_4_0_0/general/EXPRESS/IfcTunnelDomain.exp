@@ -19,41 +19,41 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 9 July 2024
+Friday, 26 July 2024
 
 *)
 
 SCHEMA IFCTUNNELDOMAIN;
 
 TYPE IfcTunnelPartTypeEnum = ENUMERATION OF
-	(TUNNELSECTION
-	,CROSSWAY
-	,RINGSECTION
+	(CROSSWAY
 	,PORTAL
+	,RINGSECTION
+	,TUNNELSECTION
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcTunnelTypeEnum = ENUMERATION OF
 	(ACCESSTUNNEL
-	,SHAFT
-	,UTILITIES
-	,RAILWAY
-	,ROAD
-	,PEDESTRIAN
-	,METRO
 	,BICYCLE
 	,BYPASS
 	,MAINTENANCE
-	,UNDERGROUND_FACILITIES
+	,METRO
+	,PEDESTRIAN
+	,RAILWAY
 	,RAMP
+	,ROAD
+	,SHAFT
+	,UNDERGROUND_FACILITIES
+	,UTILITIES
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
 TYPE IfcTunnelTypicalSectionTypeEnum = ENUMERATION OF
-	(GEOTECH
-	,EXCAVATIONSUPPORT
+	(EXCAVATIONSUPPORT
+	,GEOTECH
 	,RISK
 	,USERDEFINED
 	,NOTDEFINED);

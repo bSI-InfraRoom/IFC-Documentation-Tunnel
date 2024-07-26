@@ -99,7 +99,6 @@
 <th>G</th></tr>
 <tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcproductextension/lexical/ifcopeningelementtypeenum.htm">IfcOpeningElementTypeEnum</a></td><td>? </td><td>
 Predefined generic type for an opening that is specified in an enumeration. There may be a property set given specificly for the predefined types.
-
 <blockquote>
 IFC4 CHANGE The attribute has been added at the end of the entity definition.
 </blockquote>
@@ -185,25 +184,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -266,7 +261,6 @@ IFC4 CHANGE New inverse relationship.
 <tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a></td></tr>
 <tr><td>9</td><td>PredefinedType</td><td><a href="../../ifcproductextension/lexical/ifcopeningelementtypeenum.htm">IfcOpeningElementTypeEnum</a></td><td>? </td><td>
 Predefined generic type for an opening that is specified in an enumeration. There may be a property set given specificly for the predefined types.
-
 <blockquote>
 IFC4 CHANGE The attribute has been added at the end of the entity definition.
 </blockquote>
@@ -279,7 +273,7 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcopeningelement.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcOpeningElement</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="reference-tessellation-geometry" />
 <p class="use-head">Reference Tessellation Geometry</p>
@@ -295,7 +289,7 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 
 <a id="property-sets-for-objects" />
 <p class="use-head">Property Sets for Objects</p>
-<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 101.<table>
+<p>The <a href="../../templates/property-sets-for-objects.htm">Property Sets for Objects</a> concept template applies to this entity as shown in Table 119.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>PsetName</b></th><th><b>Properties</b></th></tr>
@@ -308,13 +302,13 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 101 &mdash; IfcOpeningElement Property Sets for Objects</td></tr></table>
+<tr><td><p class="table">Table 119 &mdash; IfcOpeningElement Property Sets for Objects</td></tr></table>
 
 <br/><br/>
 
 <a id="quantity-sets" />
 <p class="use-head">Quantity Sets</p>
-<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 102.<table>
+<p>The <a href="../../templates/quantity-sets.htm">Quantity Sets</a> concept template applies to this entity as shown in Table 120.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>QsetName</b></th><th><b>Quantities</b></th></tr>
@@ -327,16 +321,16 @@ IFC4 CHANGE The attribute has been added at the end of the entity definition.
 </table></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 102 &mdash; IfcOpeningElement Quantity Sets</td></tr></table>
+<tr><td><p class="table">Table 120 &mdash; IfcOpeningElement Quantity Sets</td></tr></table>
 
 <br/><br/>
 
 <a id="product-local-placement" />
 <p class="use-head">Product Local Placement</p>
-<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 103.<table>
+<p>The <a href="../../templates/product-local-placement.htm">Product Local Placement</a> concept template applies to this entity as shown in Table 121.<table>
 <tr><td>
 </td></tr>
-<tr><td><p class="table">Table 103 &mdash; IfcOpeningElement Product Local Placement</td></tr></table>
+<tr><td><p class="table">Table 121 &mdash; IfcOpeningElement Product Local Placement</td></tr></table>
 
 <p>The local placement for <span class="self-ref">IfcOpeningElement</span> is defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines the local coordinate system that is referenced by all geometric representations.</p>
 <ul>
@@ -364,12 +358,12 @@ Extrusion</i></p>
 <blockquote class="note">
 <p>NOTE  In case of non-parallel jambs, the shape representation shall be a 'SweptSolid' representation with vertical extrusion.</p>
 </blockquote>
-<p>Figure 304 illustrates an opening with horizontal extrusion.</p>
+<p>Figure 321 illustrates an opening with horizontal extrusion.</p>
 <blockquote class="note">
 <p>NOTE  The local placement directions for the <span class="self-ref">IfcOpeningElement</span> are only given as an example, other directions are valid as well.</p>
 </blockquote>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcopeningelement_horizontal-layout1.png" alt="&quot;standard opening&quot;" title="Figure 304 &mdash; Opening with full extrusion"></td></tr><tr><td><p class="figure">Figure 304 &mdash; Opening with full extrusion</p></td></tr></table></p>
-<p>Figure 305 illustrates an opening for a recess.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcopeningelement_horizontal-layout1.png" alt="&quot;standard opening&quot;" title="Figure 321 &mdash; Opening with full extrusion"></td></tr><tr><td><p class="figure">Figure 321 &mdash; Opening with full extrusion</p></td></tr></table></p>
+<p>Figure 322 illustrates an opening for a recess.</p>
 <blockquote class="note">
 <p>NOTE  The local placement directions for the <span class="self-ref">IfcOpeningElement</span> are only given as an example, other directions are valid as well.</p>
 </blockquote>
@@ -379,7 +373,7 @@ Extrusion</i></p>
 <ul>
 <li><a href="../../ifcgeometryresource/lexical/ifccartesianpoint.htm">IfcCartesianPoint</a>(XDim/2,YDim/2)</li>
 </ul>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcopeningelement_recess-layout1.png" alt="&quot;recess&quot;" title="Figure 305 &mdash; Opening with recess extrusion"></td></tr><tr><td><p class="figure">Figure 305 &mdash; Opening with recess extrusion</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcopeningelement_recess-layout1.png" alt="&quot;recess&quot;" title="Figure 322 &mdash; Opening with recess extrusion"></td></tr><tr><td><p class="figure">Figure 322 &mdash; Opening with recess extrusion</p></td></tr></table></p>
 <p><i>Swept Solid Representation with Vertical Extrusion</i></p>
 <p>The 'SweptSolid' geometric representation of <span class="self-ref">IfcOpeningElement</span>, using vertical extrusion direction (for walls), is defined using the swept area solid geometry, however the extrusion direction may be vertical, i.e. in case of a wall opening, the extrusion would be in the direction of the wall height. The following attribute values for the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> holding this geometric representation shall be used:</p>
 <ul>
@@ -393,11 +387,11 @@ Extrusion</i></p>
 <li><strong>Extrusion</strong>: The profile shall be extruded vertically, i.e. for wall openings along the extrusion direction of the voided element.  If multiple instances of <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a> are used, the extrusion direction should be equal.</li>
 </ul>
 <p>Vertical extrusions shall be used when an opening or recess has a non rectangular foot print geometry that does not change along the height of the opening or recess.</p>
-<p>Figure 306 shows a vertical extrusion with multiple extrusion bodies for the opening. Each extrusion body has a different extrusion lenght.</p>
+<p>Figure 323 shows a vertical extrusion with multiple extrusion bodies for the opening. Each extrusion body has a different extrusion lenght.</p>
 <blockquote class="note">
 <p>NOTE  The local placement directions for the <span class="self-ref">IfcOpeningElement</span> are only given as an example, other directions are valid as well.</p>
 </blockquote>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcopeningelement_vertical-layout1.png" alt="&quot;vertical extrusion&quot;" title="Figure 306 &mdash; Opening with multiple extrusions"></td></tr><tr><td><p class="figure">Figure 306 &mdash; Opening with multiple extrusions</p></td></tr></table></p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcopeningelement_vertical-layout1.png" alt="&quot;vertical extrusion&quot;" title="Figure 323 &mdash; Opening with multiple extrusions"></td></tr><tr><td><p class="figure">Figure 323 &mdash; Opening with multiple extrusions</p></td></tr></table></p>
 
 <br/><br/>
 

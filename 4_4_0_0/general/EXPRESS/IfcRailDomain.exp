@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-Tuesday, 9 July 2024
+Friday, 26 July 2024
 
 *)
 
@@ -33,12 +33,12 @@ REFERENCE FROM IFCPRODUCTEXTENSION
 );
 
 TYPE IfcRailTypeEnum = ENUMERATION OF
-	(RACKRAIL
-	,BLADE
-	,GUARDRAIL
-	,STOCKRAIL
+	(BLADE
 	,CHECKRAIL
+	,GUARDRAIL
+	,RACKRAIL
 	,RAIL
+	,STOCKRAIL
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
@@ -63,14 +63,14 @@ TYPE IfcRailwayTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcTrackElementTypeEnum = ENUMERATION OF
-	(TRACKENDOFALIGNMENT
-	,BLOCKINGDEVICE
-	,VEHICLESTOP
-	,SLEEPER
-	,HALF_SET_OF_BLADES
-	,SPEEDREGULATOR
+	(BLOCKINGDEVICE
 	,DERAILER
 	,FROG
+	,HALF_SET_OF_BLADES
+	,SLEEPER
+	,SPEEDREGULATOR
+	,TRACKENDOFALIGNMENT
+	,VEHICLESTOP
 	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;

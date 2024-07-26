@@ -36,7 +36,7 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcShapeRepresentation</span> represents the concept of a particular geometric representation of a product or a product component within a specific geometric representation context. The inherited attribute <i>RepresentationType</i> is used to define the geometric model used for the shape representation (e.g. 'SweptSolid', or 'Brep'), the inherited attribute <i>RepresentationIdentifier</i> is used to denote the kind of the representation captured by the <span class="self-ref">IfcShapeRepresentation</span> (e.g. 'Axis', 'Body', etc.).</p>
-<p>Several representation identifiers for shape representation are included as predefined values for <i>RepresentationIdentifier</i>. Table 756 indicates the defined list of values for <i>RepresentationIdentifier</i>.</p>
+<p>Several representation identifiers for shape representation are included as predefined values for <i>RepresentationIdentifier</i>. Table 775 indicates the defined list of values for <i>RepresentationIdentifier</i>.</p>
 <table>
 <tr>
 <td>
@@ -98,11 +98,11 @@
 </tr>
 <tr>
 <td>
-<p class="table">Table 756 &mdash; Representation identifiers</p>
+<p class="table">Table 775 &mdash; Representation identifiers</p>
 </td>
 </tr>
 </table>
-<p>Several representation types for shape representation are included as predefined values for <i>RepresentationType</i>. Table 757 indicates the defined list of values for <i>RepresentationType</i>.</p>
+<p>Several representation types for shape representation are included as predefined values for <i>RepresentationType</i>. Table 776 indicates the defined list of values for <i>RepresentationType</i>.</p>
 <table>
 <tr>
 <td>
@@ -263,7 +263,7 @@ some additional representation types are provided:</td>
 </tr>
 <tr>
 <td>
-<p class="table">Table 757 &mdash; Representation types</p>
+<p class="table">Table 776 &mdash; Representation types</p>
 </td>
 </tr>
 </table>
@@ -317,8 +317,7 @@ The supported values for context type are to be specified by implementers agreem
 <tr><td>4</td><td>Items</td><td><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></td><td>S[1:?]</td><td>
 Set of geometric representation items that are defined for this representation.
 </td><td>X</td></tr>
-<tr><td></td><td><i>RepresentationMap</i></td><td><a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a><br/>@MappedRepresentation</td><td>S[0:1]</td><td>Use of the representation within an <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a>. If used, this <span class="self-ref">IfcRepresentation</span> may be assigned to many representations as one of its <i>Items</i> using an <a href="../../ifcgeometryresource/lexical/ifcmappeditem.htm">IfcMappedItem</a>. Using <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a> is the way to share one representation (often of type <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>) by many products.<br>
-
+<tr><td></td><td><i>RepresentationMap</i></td><td><a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a><br/>@MappedRepresentation</td><td>S[0:1]</td><td>Use of the representation within an <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a>. If used, this <span class="self-ref">IfcRepresentation</span> may be assigned to many representations as one of its <i>Items</i> using an <a href="../../ifcgeometryresource/lexical/ifcmappeditem.htm">IfcMappedItem</a>. Using <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a> is the way to share one representation (often of type <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>) by many products.
 <blockquote>
 IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added
 </blockquote>
@@ -332,7 +331,6 @@ IFC2x3 CHANGE  The inverse attribute <i>LayerAssignments</i> has been added
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>OfProductRepresentation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a><br/>@Representations</td><td>S[0:?]</td><td>Reference to the product representations to which this individual representation applies. In most cases it is the reference to one or many product shapes, to which this shape representation is applicable.
-
 <blockquote>
 IFC4 CHANGE Inverse relationship cardinality relaxed to be 0:N.
 </blockquote>

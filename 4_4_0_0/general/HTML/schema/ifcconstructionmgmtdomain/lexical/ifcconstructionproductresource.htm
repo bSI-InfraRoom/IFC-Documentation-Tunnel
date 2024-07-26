@@ -59,7 +59,6 @@
 <th>G</th></tr>
 <tr><td>11</td><td>PredefinedType</td><td><a href="../../ifcconstructionmgmtdomain/lexical/ifcconstructionproductresourcetypeenum.htm">IfcConstructionProductResourceTypeEnum</a></td><td>? </td><td>
 Defines types of construction product resources.
-
 <blockquote>
 IFC4 New attribute.
 </blockquote>
@@ -134,25 +133,21 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED.
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDeclaredBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyobject.htm">IfcRelDefinesByObject</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated <span class="self-ref">IfcObject</span>, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring <span class="self-ref">IfcObject</span>, or its subtypes.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
-
 <blockquote>
 IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.
-
 <blockquote>
 IFC4 CHANGE  The data type has been changed from <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> with upward compatibility for file based exchange.
 </blockquote>
@@ -166,8 +161,7 @@ IFC4 CHANGE Attribute promoted from subtype <a href="../../ifcconstructionmgmtdo
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>7</td><td>LongDescription</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
-A detailed description of the resource (e.g. the skillset for a labor resource).<br>
-
+A detailed description of the resource (e.g. the skillset for a labor resource).
 <blockquote>
 IFC4 CHANGE  The attribute <i>LongDescription</i> is added replacing the <i>ResourceGroup</i> attribute at subtype <a href="../../ifcconstructionmgmtdomain/lexical/ifcconstructionresource.htm">IfcConstructionResource</a>.
 </blockquote>
@@ -199,7 +193,6 @@ IFC4 CHANGE  New attribute.
 <tr><td colspan="6"><a href="../../ifcconstructionmgmtdomain/lexical/ifcconstructionproductresource.htm">IfcConstructionProductResource</a></td></tr>
 <tr><td>11</td><td>PredefinedType</td><td><a href="../../ifcconstructionmgmtdomain/lexical/ifcconstructionproductresourcetypeenum.htm">IfcConstructionProductResourceTypeEnum</a></td><td>? </td><td>
 Defines types of construction product resources.
-
 <blockquote>
 IFC4 New attribute.
 </blockquote>
@@ -210,24 +203,24 @@ IFC4 New attribute.
 <section>
 <h5 class="num">Definitions applying to General Usage</h5>
 <p><a href="../../../annex/annex-d/general-usage/ifcconstructionproductresource.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
+<h5>IfcConstructionProductResource</h5><details open="open">
 <summary>Concept usage</summary>
 <a id="object-typing" />
 <p class="use-head">Object Typing</p>
-<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 356.<table>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept template applies to this entity as shown in Table 375.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>HasType</b></th><th><b>RelatingType</b></th></tr>
 <tr><td></td><td><a href="../../ifcconstructionmgmtdomain/lexical/ifcconstructionproductresourcetype.htm">IfcConstructionProductResourceType</a></td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 356 &mdash; IfcConstructionProductResource Object Typing</td></tr></table>
+<tr><td><p class="table">Table 375 &mdash; IfcConstructionProductResource Object Typing</td></tr></table>
 
 <br/><br/>
 
 <a id="resource-assignment" />
 <p class="use-head">Resource Assignment</p>
-<p>The <a href="../../templates/resource-assignment.htm">Resource Assignment</a> concept template applies to this entity as shown in Table 357.<table>
+<p>The <a href="../../templates/resource-assignment.htm">Resource Assignment</a> concept template applies to this entity as shown in Table 376.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>Type</b></th><th><b>Description</b></th></tr>
@@ -235,13 +228,13 @@ IFC4 New attribute.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 357 &mdash; IfcConstructionProductResource Resource Assignment</td></tr></table>
+<tr><td><p class="table">Table 376 &mdash; IfcConstructionProductResource Resource Assignment</td></tr></table>
 
 <br/><br/>
 
 <a id="resource-cost" />
 <p class="use-head">Resource Cost</p>
-<p>The <a href="../../templates/resource-cost.htm">Resource Cost</a> concept template applies to this entity as shown in Table 358.<table>
+<p>The <a href="../../templates/resource-cost.htm">Resource Cost</a> concept template applies to this entity as shown in Table 377.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>CostType</b></th><th><b>CostName</b></th><th><b>ValueType</b></th><th><b>Description</b></th></tr>
@@ -251,13 +244,13 @@ IFC4 New attribute.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 358 &mdash; IfcConstructionProductResource Resource Cost</td></tr></table>
+<tr><td><p class="table">Table 377 &mdash; IfcConstructionProductResource Resource Cost</td></tr></table>
 
 <br/><br/>
 
 <a id="resource-quantity" />
 <p class="use-head">Resource Quantity</p>
-<p>The <a href="../../templates/resource-quantity.htm">Resource Quantity</a> concept template applies to this entity as shown in Table 359.<table>
+<p>The <a href="../../templates/resource-quantity.htm">Resource Quantity</a> concept template applies to this entity as shown in Table 378.<table>
 <tr><td>
 <table class="gridtable">
 <tr><th><b>QuantityType</b></th><th><b>QuantityName</b></th><th><b>Description</b></th></tr>
@@ -265,7 +258,7 @@ IFC4 New attribute.
 </td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 359 &mdash; IfcConstructionProductResource Resource Quantity</td></tr></table>
+<tr><td><p class="table">Table 378 &mdash; IfcConstructionProductResource Resource Quantity</td></tr></table>
 
 <br/><br/>
 
