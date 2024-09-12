@@ -27,7 +27,1024 @@
 <h1 class="annex">Annex E</h1>
 <div align="center">(informative)</div>
 <h1 class="annex">Examples</h1>
-<p>This annex contains examples that implement this specification.</p>
+<p>This annex contains examples that implement this specification. Due to ongoing changes in the base IFC4.3 specification, alignment examples could contain errors. Please let us know and we will attempt to fix them.</p>
+<p><h1 id="Sprint 1.1">Sprint 1.1</h1>
+This sprint implements and tests <code>IfcProject</code> specific usages.
+<h2>Prerequisities</h2>
+This sprint assumes you completed the following sprints:
+<ul>
+<li>none.</li>
+</ul>
+<h2>Duration</h2>
+<table>
+<thead>
+<tr>
+<th>Kick-off</th>
+<th>Submission</th>
+<th>Closure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023.01.26.</td>
+<td>2023.02.06.</td>
+<td>2023.02.09.</td>
+</tr>
+</tbody>
+</table>
+<h2>Usages</h2>
+This sprint encompasses the following usages:
+<ol>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-units.htm">Project Unit Assignment</a>
+<ol>
+<li>at least two units</li>
+<li>a <code>LENGTHUNIT</code> and a <code>PLANEANGLEUNIT</code> (regardless of SI unit or conversion based)</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-representation-context.htm">Project Representation Context</a>
+<ol>
+<li>at least one of these should be defined:
+<ol>
+<li>Model in 3D</li>
+<li>Plan in 2D</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-declaration.htm">Project Declaration</a>
+<ol>
+<li>at least one of these should be declared:
+<ol>
+<li><code>IfcProjectLibrary</code></li>
+<li><code>IfcPropertySetTemplate</code></li>
+<li><code>IfcTypeObject</code></li>
+<li><code>IfcActor</code></li>
+<li><code>IfcControl</code></li>
+<li><code>IfcGroup</code></li>
+<li><code>IfcProcess</code></li>
+<li><code>IfcResource</code></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+See also <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcproject.htm">IfcProject</a> usages:
+<ul>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcproject.htm#project-units"><em>Project Units</em></a> Table 12</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcproject.htm#project-representation-context"><em>Project Representation Context</em></a> Table 13</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcproject.htm#project-declaration"><em>Project Declaration</em></a> Table 14</li>
+</ul>
+</p>
+<p>
+<h1 id="Sprint 1.2">Sprint 1.2</h1>
+This sprint implements and tests <code>IfcProject</code> specific usages.
+<h2>Prerequisities</h2>
+<ul>
+<li><a href="#Sprint 1.1">Sprint 1.1</a></li>
+</ul>
+<h2>Duration</h2>
+<table>
+<thead>
+<tr>
+<th>Kick-off</th>
+<th>Submission</th>
+<th>Closure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023.02.09.</td>
+<td>2023.02.20.</td>
+<td>2023.02.23.</td>
+</tr>
+</tbody>
+</table>
+<h2>Usages</h2>
+This sprint encompasses the following usages:
+<ol>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-classification-information.htm">Project Classification Information</a>
+<ol>
+<li>The <code>IfcProject</code> shall associate <code>IfcClassification</code> with non-empty <code>Source</code> and <code>Name</code> attributes (content of the attributes is irrelevant to the check at this stage)</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-decomposition.htm">Spatial Decomposition</a>
+<ol>
+<li>There shall be either an <code>IfcSite</code> or an <code>IfcFacility</code> (with subtypes irrelevant to the check) aggregated in the <code>IfcProject</code>. Observe the <em>NOTE</em> in the documentation.</li>
+</ol>
+</li>
+</ol>
+Georeferencing can be achieved in three different ways with three different usages as presented in the figure below.
+The participants are encouraged to submit three separate files, each with a different scenario.
+To enable easier review process, please denote the file names with <code>Georef_A</code>, <code>Georef_B</code> or <code>Georef_C</code> corresponding to the lines below.
+There shall be only one of these in the <code>ifc</code> dataset for the check to pass:
+<ol>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-global-positioning.htm">Project Global Positioning</a> - scenario <code>Georef_A</code>
+<ol>
+<li><code>IfcMapConversion</code> or <code>IfcMapConversionScaled</code> is used (attributes' values are irrelevant).</li>
+<li>one of these shall be true:
+<ol>
+<li><code>IfcProjectedCRS.Name</code> shall begin with <code>EPSG:</code> and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).</li>
+<li><code>IfcProjectedCRS.HasWellKnownTextRepresentation.WellKnownText</code> shall be non-empty.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-global-positioning-geodetic.htm">Project Global Positioning Geographic</a> - scenario <code>Georef_B</code>
+<ol>
+<li><code>IfcRigidOperation</code> is used
+<ol>
+<li>3rd and 4th attributes' type shall be <code>IfcPlaneAngleMeasure</code></li>
+</ol>
+</li>
+<li>one of these shall be true:
+<ol>
+<li><code>IfcGeographicCRS.Name</code> shall begin with <code>EPSG:</code> and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).</li>
+<li><code>IfcGeographicCRS.HasWellKnownTextRepresentation.WellKnownText</code> shall be non-empty.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-global-positioning-mapped.htm">Project Global Positioning Mapped</a> - scenario <code>Georef_C</code>
+<ol>
+<li><code>IfcRigidOperation</code> is used
+<ol>
+<li>3rd and 4th attributes' type shall be <code>IfcLengthMeasure</code></li>
+</ol>
+</li>
+<li>one of these shall be true:
+<ol>
+<li><code>IfcProjectedCRS.Name</code> shall begin with <code>EPSG:</code> and be followed by 4 or 5 digits (actual numbers are irrelevant to the checker).</li>
+<li><code>IfcProjectedCRS.HasWellKnownTextRepresentation.WellKnownText</code> shall be non-empty.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</p>
+<p>
+<h1 id="Sprint 1.3">Sprint 1.3</h1>
+This sprint implements and tests <code>IfcProject</code> specific usages.
+<h2>Prerequisities</h2>
+<ul>
+<li><a href="#Sprint 1.2">Sprint 1.1</a> and</li>
+<li><a href="#Sprint 1.2">Sprint 1.2</a>.</li>
+</ul>
+<h2>Duration</h2>
+<table>
+<thead>
+<tr>
+<th>Kick-off</th>
+<th>Submission</th>
+<th>Closure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023.02.23.</td>
+<td>2023.03.13.</td>
+<td>2023.03.16.</td>
+</tr>
+</tbody>
+</table>
+<h2>Usages</h2>
+This sprint encompasses the following usages:
+<ol>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-document-information.htm">Project Document Information</a>
+<ol>
+<li>The <code>IfcProject</code> shall associate <code>IfcDocumentInformation</code> with;
+<ol>
+<li>non-empty <code>Identification</code>, <code>Name</code> and <code>Location</code> attributes (content of the attributes is irrelevant to the check at this stage); as well as</li>
+<li><code>ElectronicFormat</code> shall be <code>application/pdf</code> to denote the format of the &quot;virtually&quot; attached file; (you are not required to attach any such file for the test) and</li>
+<li><code>Editor</code> of the file being yourself or any other actor - do not forget to declare it using <a href="./sprint1_1.md">Project Declaration usage from Sprint 1.1</a>.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-dataset-information.htm">Project Dataset Information</a>
+<ol>
+<li>The <code>IfcProject</code> shall associate <code>IfcDatasetInformation</code> with:
+<ol>
+<li>non-empty <code>Identification</code>, <code>Name</code> and <code>Location</code> attributes (content of the attributes is irrelevant to the check at this stage); as well as</li>
+<li><code>ElectronicFormat</code> shall be <code>text/xml</code> to denote the format of the &quot;virtually&quot; attached file; (You are not required to attach any such file for the test) and</li>
+<li><code>SchemaReference</code> being equal to <code>http://geosciml.org/geosciml/2.0/xsd/geosciml.xsd</code>.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-library-information.htm">Project Library Information</a>
+<ol>
+<li>The <code>IfcProject</code> shall associate <code>IfcLibraryInformation</code> with:
+<ol>
+<li>non-empty <code>Location</code>, <code>Version</code>, <code>VersionDate</code> and <code>Publisher</code> attributes (content of the attributes is irrelevant to the check at this stage).</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-type-definitions.htm">Project Type Definitions</a>
+<ol>
+<li>The <code>IfcProject</code> shall declare an <code>IfcArchElementType</code>.</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/project-template-definitions.htm">Project Template Definitions</a>
+<ol>
+<li>The <code>IfcProject</code> shall declare an <code>IfcPropertySetTemplate</code> with the following structure:
+<ul>
+<li><code>Name</code> : 'Pset_GeoObsBoreholeConstruction'</li>
+<li><code>TemplateType</code> : .PSET_TYPEDRIVENOVERRIDE.</li>
+<li><code>ApplicableEntity</code> : 'IfcBorehole'</li>
+<li><code>HasPropertyTemplates</code> :
+<ul>
+<li><code>IfcSimplePropertyTemplate</code> :
+<ul>
+<li><code>Name</code> : 'DrillingDiameter'</li>
+<li><code>TemplateType</code> : .P_SINGLEVALUE.</li>
+<li><code>PrimaryMeasureType</code> : 'IfcPositiveLengthMeasure'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</p>
+<p>
+<h1 id="Sprint 2.1">Sprint 2.1</h1>
+This sprint implements and tests project structure specific usages.
+<h2>Prerequisities</h2>
+<ul>
+<li><a href="#Sprint 1.1">Sprint 1.1</a>,</li>
+<li><a href="#Sprint 1.2">Sprint 1.2</a>, and</li>
+<li><a href="#Sprint 1.3">Sprint 1.3</a>.</li>
+</ul>
+<h2>Duration</h2>
+<table>
+<thead>
+<tr>
+<th>Kick-off</th>
+<th>Submission</th>
+<th>Closure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023.03.16.</td>
+<td>2023.04.03.</td>
+<td>2023.04.13.</td>
+</tr>
+</tbody>
+</table>
+<h2>Usages</h2>
+This sprint encompasses the following usages:
+<ol>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-composition.htm">Spatial Composition</a>
+<ol>
+<li>All <code>IfcTunnelPart</code> shall be aggregated in an <code>IfcTunnel</code> or <code>IfcTunnelPart</code>.</li>
+<li>All <code>IfcTunnel</code> shall be aggregated in either an <code>IfcTunnel</code>, <code>IfcSite</code> or <code>IfcProject</code>.</li>
+<li>All <code>IfcSite</code> shall be aggregated in <code>IfcProject</code>.</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-decomposition.htm">Spatial Decomposition</a>
+<ol>
+<li>Each <code>IfcTunnel</code> may only be decomposed by <code>IfcTunnel</code> or <code>IfcTunnelPart</code>.</li>
+<li>There shall be at least one <code>IfcTunnel</code> in the file with non-empty <code>Name</code>.</li>
+</ol>
+</li>
+<li>Linear Composition
+<ol>
+<li>There shall be one <code>IfcAlignment</code> in the file with non-empty <code>Name</code>.</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/alignment-layout.htm">Alignment Layout</a>
+<ol>
+<li>There shall be at least one <code>LINE</code>, at least one <code>CIRCULARARC</code> and at least one <code>CLOTHOID</code> segments nested in the horizontal layout (see <code>IfcAlignmentHorizontalSegment.PredefinedType</code>).</li>
+<li>There shall be at least one <code>CONSTANTGRADIENT</code> and either at least one <code>CIRCULARARC</code> or at least one <code>PARABOLICARC</code> segments nested in the vertical layout (see <code>IfcAlignmentVerticalSegment.PredefinedType</code>).</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/object-nesting.htm">Object Nesting</a>
+<ol>
+<li>There shall be at least one <code>IfcReferent</code> on <code>IfcAlignment</code> with non-empty <code>Name</code>.</li>
+<li>All <code>IfcReferent</code> shall be nested in any <code>IfcAlignment</code>. The <code>IfcRelNests</code> relationship nesting instances of <code>IfcReferent</code> shall only nest instances of <code>IfcReferent</code>.</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/group-assignment.htm">Group Assignment</a>
+<ol>
+<li>There shall be at least one <code>IfcGroup</code> (or any of the subtypes) declared in <code>IfcProject</code> with at least one element grouped.</li>
+</ol>
+</li>
+</ol>
+</p>
+<p>
+<h1 id="Sprint 2.2">Sprint 2.2</h1>
+This sprint implements and tests project structure specific usages.
+<h2>Prerequisities</h2>
+<ul>
+<li><a href="#Sprint 1.1">Sprint 1.1</a>,</li>
+<li><a href="#Sprint 1.2">Sprint 1.2</a>,</li>
+<li><a href="#Sprint 1.3">Sprint 1.3</a>, and</li>
+<li><a href="#Sprint 2_1">Sprint 2.1</a>.</li>
+</ul>
+<h2>Duration</h2>
+<table>
+<thead>
+<tr>
+<th>Kick-off</th>
+<th>Submission</th>
+<th>Closure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023.04.13.</td>
+<td>2023.05.02.</td>
+<td>2023.05.11.</td>
+</tr>
+</tbody>
+</table>
+<h2>Usages</h2>
+This sprint encompasses the following usages:
+<ol>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-local-placement.htm">Product Local Placement</a>
+<ol>
+<li>The <code>IfcTunnelPart.ObjectPlacement.PlacementRelTo</code> shall point to the <code>IfcTunnelPart.Decomposes.RelatingObject.ObjectPlacement</code> (i.e., the <code>IfcTunnel</code> or <code>IfcTunnelPart</code> it is part of).</li>
+<li>If <code>IfcTunnel</code> is aggregated in <code>IfcSite</code> or <code>IfcTunnel</code>, then the <code>IfcTunnel.ObjectPlacement.PlacementRelTo</code> shall point to the <code>IfcTunnel.Decomposes.RelatingObject.ObjectPlacement</code> (i.e., the <code>IfcSite</code> or <code>IfcTunnel</code> it is part of).</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/alignment-geometry.htm">Alignment Geometry</a>
+<ol>
+<li>Any <code>IfcAlignment</code> nested by only an <code>IfcAligmentHorizontal</code> and an <code>IfcAlignmentVertical</code> shall be represented according to concept template <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/alignment-geometry-gradient.htm">Alignment Geometry Gradient</a>:
+<ul>
+<li><code>RepresentationIdentifier = 'Axis'</code></li>
+<li><code>RepresentationType = 'Curve3D'</code></li>
+<li>representation is <code>IfcGradientCurve</code></li>
+</ul>
+</li>
+<li>Any <code>IfcAlignment</code> nested by an <code>IfcAligmentHorizontal</code> and an <code>IfcAlignmentVertical</code> and an <code>IfcAlignmentCant</code> shall be represented according to concept template <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/alignment-geometry-cant.htm">Alignment Geometry Cant</a>:
+<ul>
+<li><code>RepresentationIdentifier = 'Axis'</code></li>
+<li><code>RepresentationType = 'Curve3D'</code></li>
+<li>representation is <code>IfcSegmentedReferenceCurve</code></li>
+</ul>
+</li>
+<li>All <code>IfcAlignment</code> instances shall have an additional 2D representation (documentation):
+<ul>
+<li><code>RepresentationIdentifier = 'Axis'</code></li>
+<li><code>RepresentationType = 'Curve2D'</code></li>
+<li>representation is <code>IfcCompositeCurve</code> (the same instance used as <code>IfcGradientCurve.BaseCurve</code> or <code>IfcSegmentedReferenceCurve.BaseCurve.BaseCurve</code> above),</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/element-nesting.htm">Element Nesting</a>
+<ol>
+<li>All <code>IfcReferent</code> instances shall be linearly placed according to the <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm">Product Linear Placement</a> concept template:
+<ul>
+<li><code>IfcReferent.ObjectPlacement</code> shall be <code>IfcLinearPlacement</code>.</li>
+<li><code>IfcReferent.ObjectPlacement.PlacementRelTo</code> shall point to <code>IfcReferent.Nests.RelatingObject.ObjectPlacement</code>.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a href="https://github.com/bSI-InfraRoom/IFC-Specification/pull/557">Linear Composition</a>
+<ol>
+<li>All <code>IfcAlignment</code> instances shall be aggregated in <code>IfcProject</code>. It shall use its own <code>IfcRelAggregates</code> instance and not share it with the <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-decomposition.htm">Spatial Decomposition</a> usage from <a href="./sprint1_2.md">Sprint 1.2</a>.</li>
+</ol>
+</li>
+</ol>
+</p>
+<p>
+<h1 id="Sprint 2.3">Sprint 2.3</h1>
+This sprint implements and tests project structure specific usages.
+<h2>Prerequisities</h2>
+<ul>
+<li><a href="#Sprint 1.1">Sprint 1.1</a>,</li>
+<li><a href="#Sprint 1.2">Sprint 1.2</a>,</li>
+<li><a href="#Sprint 1.3">Sprint 1.3</a>,</li>
+<li><a href="#Sprint 2.1">Sprint 2.1</a>, and</li>
+<li><a href="#Sprint 2.2">Sprint 2.2</a>.</li>
+</ul>
+<h2>Duration</h2>
+<table>
+<thead>
+<tr>
+<th>Kick-off</th>
+<th>Submission</th>
+<th>Closure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023.05.11.</td>
+<td>2023.05.29.</td>
+<td>2023.06.08.</td>
+</tr>
+</tbody>
+</table>
+<h2>Usages</h2>
+This sprint encompasses the following usages:
+<ol>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-relative-positioning.htm">Product Relative Positioning</a> and <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-linear-placement.htm">Product Linear Placement</a>
+<ol>
+<li>The <code>IfcSite</code>  (defined in <a href="./sprint2_1.md">Sprint 2.1</a>) should be placed using the above concepts:
+<ol>
+<li>either along the <code>IfcAlignment</code> (defined in <a href="./sprint2_1.md">Sprint 2.1</a>)</li>
+<li>or relative to an <code>IfcReferent</code> (defined in <a href="./sprint2_1.md">Sprint 2.1</a>, which is nested according to <a href="./sprint2_2.md">Sprint 2.2</a>).</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>In other words: <code>IfcSite.ObjectPlacement.PlacementRelTo</code> shall point to <code>IfcSite.PositionedRelativeTo.RelatingPositioningElement.ObjectPlacement</code>. (<code>IfcSite.PositionedRelativeTo.RelatingPositioningElement</code> is the <code>IfcAlignment</code> or <code>IfcReferent</code> above.)</li>
+</ul>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-geometric-representation.htm">Product Geometric Representation</a>
+<ol>
+<li>We encourage to provide examples for <code>IfcGeoScienceModel</code> (other <code>IfcElement</code> are allowed).</li>
+<li>Provide at least one of the listed alternatives for the <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-geometry.htm">volumetric</a> or <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/surface-geometry.htm">surfaic</a> representation:
+<ol>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-tessellation-geometry.htm">Body Tesselation Geometry</a> or</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-brep-geometry.htm">Body Brep Geometry</a> or</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a> or</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-sectionedsolidhorizontal.htm">Body Sectioned Solid Horizontal</a> or</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-surfacemodel-geometry.htm">Body Surface Model Geometry</a> or</li>
+<li>Voxel Geometry - <a href="https://github.com/bSI-InfraRoom/IFC-Specification/issues/524">in progress</a> or</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/surface-tessellation-geometry.htm">Surface Tessellation Geometry</a> with <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifctriangulatedirregularnetwork.htm"><code>IfcTriangulatedIrregularNetwork</code></a>.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/property-sets-with-override.htm">Property Sets with Override</a>
+<ol>
+<li>The <code>IfcSite</code> shall have the property set <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/pset_landregistration.htm">Pset_LandRegistration</a> assigned with:
+<ol>
+<li>the property <code>LandID</code> provided with non-empty value (the exact value is arbitrary),</li>
+<li>the property <code>IsPermanentID</code> provided with value <code>.T.</code> (i.e. <code>true</code>) and</li>
+<li>the property <code>LandTitleID</code> provided with non-empty value (the exact value is arbitrary).</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/classification-association.htm">Classification Association</a>
+<ol>
+<li>At least one instance of <code>IfcProduct</code> shall be associated with an <code>IfcClassificationReference</code> where:
+<ol>
+<li><code>Identification</code> and <code>Name</code> shall exist, and</li>
+<li><code>ReferencedSource</code> shall reference the <code>IfcClassification</code> occurrence associated with the <code>IfcProject</code> in <a href="./sprint1_2.md">Sprint 1.2</a>.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+Optional usage in this sprint:
+<ol>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/library-association.htm">Library Association</a> (optional)
+<ol>
+<li>The <code>Pset_LandRegistration</code> from above shall associate an <code>IfcLibraryReference</code> where:
+<ol>
+<li><code>Location</code> shall be a URI value pointing to the computer interpretable listing for the IFC 4.4 draft specification (you need to find it yourself in the specification),</li>
+<li><code>Identification</code> being <code>&quot;#3540&quot;</code>, and</li>
+<li><code>Name</code> being <code>&quot;Pset_LandRegistration&quot;</code>.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</p>
+<p>
+<h1 id="Sprint 3.exc">Sprint 3.exc</h1>
+This sprint implements and tests specific usages for <em>excavation, lining and support</em>.
+<h2>Prerequisities</h2>
+<ul>
+<li><a href="#Sprint 1.1">Sprint 1.1</a>,</li>
+<li><a href="#Sprint 1.2">Sprint 1.2</a>,</li>
+<li><a href="#Sprint 1.3">Sprint 1.3</a>,</li>
+<li><a href="#Sprint 2.1">Sprint 2.1</a>,</li>
+<li><a href="#Sprint 2.2">Sprint 2.2</a>, and</li>
+<li><a href="#Sprint 2.3">Sprint 2.3</a>.</li>
+</ul>
+<h2>Duration</h2>
+<table>
+<thead>
+<tr>
+<th>Kick-off</th>
+<th>Submission</th>
+<th>Closure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023.06.15.</td>
+<td>2023.08.15.</td>
+<td>2023.08.31.</td>
+</tr>
+</tbody>
+</table>
+<h2>Concepts</h2>
+<h3>New concepts</h3>
+<ol>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-containment.htm">Spatial containment</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/element-decomposition.htm">Element Decomposition</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/element-composition.htm">Element Composition</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/material-single.htm">Material single</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/material-layer-set-usage.htm">Material Layer Set Usage</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/material.htm">Assigning properties to material</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/excavation-cuttings.htm">Excavation Cuttings</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-sectionedsolidhorizontal.htm">Body Sectioned SolidHorizontal</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/guide-curve-geometry.htm">Guide Curves</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-span-positioning.htm">Product Span Positioning</a></li>
+</ol>
+<h2>Usages</h2>
+This sprint encompasses the following usages:
+<h3>Excavation</h3>
+<ol>
+<li><code>IfcUndergroundExcavation</code> or <code>IfcEarthworksCut</code>
+<ol>
+<li>body geometry
+<ol>
+<li><a href="#new-concepts">Body Sectioned SolidHorizontal</a> and <a href="#new-concepts">Guide Curves</a> or</li>
+<li>any other <a href="./sprint2_3.md">body geometry</a></li>
+</ol>
+</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_ExcavationCommon</code></li>
+<li><a href="#new-concepts">excavation cuttings</a> and thus no <a href="#new-concepts">containment</a>
+<ol>
+<li>The excavation shall void (<code>IfcRelVoidsElements</code>) the <code>IfcGeoScienceModel</code> below</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><code>IfcGeoScienceModel/GEOTECHMODEL</code>
+<ol>
+<li>see <a href="./sprint3_geo.md#book-b">geotechnics, book B</a></li>
+</ol>
+</li>
+<li><code>IfcGeoSciencefeature/GEOTECHNICALUNIT</code>
+<ol>
+<li>see <a href="./sprint3_geo.md#book-b">geotechnics, book B</a></li>
+</ol>
+</li>
+</ol>
+<h3>Waterproofing</h3>
+<ol>
+<li><code>IfcCovering/MEMBRANE</code>
+<ol>
+<li><a href="#new-concepts">contained</a> in <a href="./sprint2_1.md"><code>IfcTunnel</code></a> or <a href="./sprint2_1.md"><code>IfcTunnelPart</code></a></li>
+<li><a href="./sprint2_3.md">body geometry or surface tesselation geometry</a></li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_CoveringTypeMembrane</code></li>
+<li><a href="#new-concepts">material layer set</a> (see also <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifccovering.htm">Table 157</a>) with at least 2 layers:
+<ol>
+<li>Layer
+<ol>
+<li><code>LayerThickness</code> being <code>2 mm</code></li>
+<li><code>Name</code> being <code>'Front'</code></li>
+<li><code>Material.Name</code> = <code>'Synthetic'</code></li>
+</ol>
+</li>
+<li>Layer
+<ol>
+<li><code>LayerThickness</code> being <code>0.5 mm</code></li>
+<li><code>Name</code> being <code>'Fill'</code></li>
+<li><code>Material.Name</code> = <code>'GeoTextile'</code></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><code>IfcDiscreteAccessory/WATER_BARRIER</code>
+<ol>
+<li><a href="#new-concepts">contained</a> in <a href="./sprint2_1.md"><code>IfcTunnel</code></a> or <a href="./sprint2_1.md"><code>IfcTunnelPart</code></a></li>
+<li>Geometry: WIP</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_DiscreteAccessoryTypeWaterBarrier</code></li>
+</ol>
+</li>
+<li><code>IfcSpatialZone/COMPARTMENT</code>
+<ol>
+<li><a href="./sprint2_1.md">aggregated</a> in <a href="./sprint2_1.md"><code>IfcTunnel</code></a> or <a href="./sprint2_1.md"><code>IfcTunnelPart</code></a></li>
+<li><a href="./sprint2_3.md">body geometry</a></li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_SpatialZoneTypeCompartment</code></li>
+</ol>
+</li>
+<li><code>IfcBuiltSystem/WATERPROOFING</code>
+<ol>
+<li><a href="./sprint2_1.md">declared</a> by <code>IfcProject</code></li>
+<li><a href="./sprint2_1.md">groups</a> elements <code>IfcCovering/MEMBRANE</code>, <code>IfcDiscreteAccessory/WATER_BARRIER</code> and <code>IfcSpatialZone/COMPARTMENT</code></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_BuiltSystemTypeWaterproofing</code></li>
+</ol>
+</li>
+</ol>
+<h3>Support</h3>
+<ol>
+<li><code>IfcElementAssembly/ARCH</code>
+<ol>
+<li><a href="#new-concepts">contained</a> in <a href="./sprint2_1.md"><code>IfcTunnel</code></a> or <a href="./sprint2_1.md"><code>IfcTunnelPart</code></a></li>
+<li><a href="#new-concepts">decomposed</a> by <code>IfcArchElement/SEGMENT</code> below</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>WIP</code></li>
+</ol>
+</li>
+<li><code>IfcArchElement/SEGMENT</code>
+<ol>
+<li><a href="#new-concepts">part of</a> <code>IfcElementAssembly/ARCH</code> above</li>
+<li><a href="./sprint2_3.md">body geometry</a></li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_ArchElementCommon</code></li>
+<li><a href="#new-concepts">single material</a>
+<ol>
+<li><a href="#new-concepts">properties</a> with <code>Pset_MaterialConcrete</code></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><code>IfcTunnelTypicalSection/EXCAVATIONSUPPORT</code>
+<ol>
+<li><a href="#new-concepts">contained</a> in <a href="./sprint2_1.md"><code>IfcTunnel</code></a> or <a href="./sprint2_1.md"><code>IfcTunnelPart</code></a></li>
+<li><a href="#new-concepts">positioned between two</a> <code>IfcReferent</code></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>WIP</code></li>
+</ol>
+</li>
+<li><code>IfcBuiltSystem/TUNNEL_SUPPORT</code>
+<ol>
+<li><a href="./sprint2_1.md">declared</a> by <code>IfcProject</code></li>
+<li><a href="./sprint2_1.md">groups</a> elements <code>IfcElementAssembly/ARCH</code> and <code>IfcTunnelTypicalSection/EXCAVATIONSUPPORT</code></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>WIP</code></li>
+</ol>
+</li>
+</ol>
+<h3>Lining</h3>
+<ol>
+<li><code>IfcArchElement/LINING</code>
+<ol>
+<li><a href="#new-concepts">contained</a> in <a href="./sprint2_1.md"><code>IfcTunnel</code></a> or <a href="./sprint2_1.md"><code>IfcTunnelPart</code></a></li>
+<li><a href="./sprint2_3.md">body geometry</a></li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_ArchElementCommon</code></li>
+<li><a href="#new-concepts">single material</a>
+<ol>
+<li><a href="#new-concepts">properties</a> with <code>Pset_MaterialConcrete</code></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><code>IfcBuiltSystem/TUNNEL_LINING</code>
+<ol>
+<li><a href="./sprint2_1.md">declared</a> by <code>IfcProject</code></li>
+<li><a href="./sprint2_1.md">groups</a> elements <code>IfcArchElement/LINING</code></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>WIP</code></li>
+</ol>
+</li>
+</ol>
+</p>
+<p>
+<h1 id="Sprint 3.geo">Sprint 3.geo</h1>
+This sprint implements and tests specific usages for <em>geotechnics</em>.
+<h2>Prerequisities</h2>
+<ul>
+<li><a href="#Sprint 1.1">Sprint 1.1</a>,</li>
+<li><a href="#Sprint 1.2">Sprint 1.2</a>,</li>
+<li><a href="#Sprint 1.3">Sprint 1.3</a>,</li>
+<li><a href="#Sprint 2.1">Sprint 2.1</a>,</li>
+<li><a href="#Sprint 2.2">Sprint 2.2</a>, and</li>
+<li><a href="#Sprint 2.3">Sprint 2.3</a>.</li>
+</ul>
+<h2>Duration</h2>
+<table>
+<thead>
+<tr>
+<th>Kick-off</th>
+<th>Submission</th>
+<th>Closure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023.06.15.</td>
+<td>2023.08.15.</td>
+<td>2023.08.31.</td>
+</tr>
+</tbody>
+</table>
+<h2>Concepts</h2>
+<h3>New concepts</h3>
+<ol>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-containment.htm">Spatial containment</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/element-decomposition.htm">Element Decomposition</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/element-composition.htm">Element Composition</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-assignment.htm">Product Assignment</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/dataset-association.htm">Dataset Association</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/product-span-positioning.htm">Product Span Positioning</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/assignment-to-product.htm">Assignment to Product</a></li>
+</ol>
+<h2>Usages</h2>
+This sprint encompasses the following usages.
+The participants are encouraged to submit three separate files, each with a different book included.
+To enable easier review process, please denote the file names with <code>Book_A</code>, <code>Book_B</code> or <code>Book_C</code> corresponding to the options below.
+<h3>Book A</h3>
+<ol>
+<li><code>IfcBorehole</code>
+<ol>
+<li><a href="#new-concepts">contained</a> in <code>IfcSite</code></li>
+<li>Geometry: See IfcBorehole <a href="./IFC-Tunnel-Geotechnics_Geometry.xlsx">here</a>.</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_SpatialGeoObsBorehole</code></li>
+</ol>
+</li>
+<li><code>IfcGeoScienceObservation/BOREHOLELOG</code>
+<ol>
+<li>if not as part of a <a href="#new-concepts">composition</a> - <a href="#new-concepts">assigned</a> to <code>IfcBorehole</code> above</li>
+<li>if part of a <a href="#new-concepts">composition</a> - <a href="#new-concepts">RelatingObject</a> shall be of type  <code>IfcGeoScienceObservation/BOREHOLELOG</code></li>
+<li>if not as part of a <a href="#new-concepts">composition</a> - <a href="./sprint1_1.md">declared</a> in <code>IfcProject</code></li>
+<li>if not further <a href="#new-concepts">decomposed</a> - <a href="./sprint2_3.md">properties</a> with <code>Pset_GeoObsBoreholeGeoLogInterval</code></li>
+</ol>
+</li>
+<li><code>IfcDatasetInformation</code>
+<ol>
+<li><a href="./sprint1_1.md">declared</a> in <code>IfcProject</code></li>
+<li><a href="#new-concepts">associated</a> to <code>IfcGeoScienceObservation/BOREHOLELOG</code></li>
+</ol>
+</li>
+<li><code>IfcSpatialZone/MAPPEDZONE</code>
+<ol>
+<li><a href="#new-concepts">aggregated</a> in <code>IfcSite</code></li>
+<li>Geometry: See IfcSpatialZone/MAPPEDZONE <a href="./IFC-Tunnel-Geotechnics_Geometry.xlsx">here</a>.</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_SpatialGeoObsMappedZoneCommon</code></li>
+</ol>
+</li>
+<li><code>IfcGeoScienceObservation/MAPPEDFEATURE</code>
+<ol>
+<li>if not as part of a <a href="#new-concepts">composition</a> - <a href="#new-concepts">assigned</a> to <code>IfcSpatialZone/MAPPEDZONE</code> above</li>
+<li>if part of a <a href="#new-concepts">composition</a> - <a href="#new-concepts">RelatingObject</a> shall be of type  <code>IfcGeoScienceObservation/MAPPEDFEATURE</code></li>
+<li>if not as part of a <a href="#new-concepts">composition</a> - <a href="./sprint1_1.md">declared</a> in <code>IfcProject</code></li>
+<li>Geometry: See IfcGeoScienceObservation/MAPPEDFEATURE <a href="./IFC-Tunnel-Geotechnics_Geometry.xlsx">here</a>.</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li>if not further <a href="#new-concepts">decomposed</a> - <a href="./sprint2_3.md">properties</a> with <code>Pset_GeoObsMappedUnit</code></li>
+</ol>
+</li>
+<li><code>IfcGeoScienceObservation/LOCALINFORMATION</code>
+<ol>
+<li>if not as part of a <a href="#new-concepts">composition</a> - <a href="#new-concepts">assigned</a> to <code>IfcSpatialZone/MAPPEDZONE</code> above</li>
+<li>if part of a <a href="#new-concepts">composition</a> - <a href="#new-concepts">RelatingObject</a> shall be of type  <code>IfcGeoScienceObservation/LOCALINFORMATION</code></li>
+<li>if not as part of a <a href="#new-concepts">composition</a> - <a href="./sprint1_1.md">declared</a> in <code>IfcProject</code></li>
+<li><a href="#new-concepts">assigned</a> to <code>IfcSpatialZone/MAPPEDZONE</code> above</li>
+<li><a href="./sprint1_1.md">declared</a> in <code>IfcProject</code></li>
+<li>Geometry: See IfcGeoScienceObservation/LOCALINFORMATION <a href="./IFC-Tunnel-Geotechnics_Geometry.xlsx">here</a>.</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li>if not further <a href="#new-concepts">decomposed</a> - <a href="./sprint2_3.md">properties</a> with <code>Pset_GeoObsPtObservationCommon</code></li>
+</ol>
+</li>
+<li><code>IfcGeoScienceObservation/INSITUTESTRESULT</code>
+<ol>
+<li>if not as part of a <a href="#new-concepts">composition</a> - <a href="#new-concepts">assigned</a> to <code>IfcSpatialZone/MAPPEDZONE</code> or <code>IfcBorehole</code> above</li>
+<li>if part of a <a href="#new-concepts">composition</a> - <a href="#new-concepts">RelatingObject</a> shall be of type  <code>IfcGeoScienceObservation/INSITUTESTRESULT</code></li>
+<li>if not as part of a <a href="#new-concepts">composition</a> - <a href="./sprint1_1.md">declared</a> in <code>IfcProject</code></li>
+<li><a href="#new-concepts">assigned</a> to <code>IfcSpatialZone/MAPPEDZONE</code> above</li>
+<li><a href="./sprint1_1.md">declared</a> in <code>IfcProject</code></li>
+<li>Geometry: See IfcGeoScienceObservation/INSITUTESTRESULT <a href="./IFC-Tunnel-Geotechnics_Geometry.xlsx">here</a>.</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li>if not further <a href="#new-concepts">decomposed</a> - <a href="./sprint2_3.md">properties</a> with <code>Pset_InSituTestCommon</code></li>
+</ol>
+</li>
+<li><code>IfcGeoScienceObservation/LABTESTRESULT</code>
+<ol>
+<li>if not as part of a <a href="#new-concepts">composition</a> - <a href="#new-concepts">assigned</a> to <code>IfcSpatialZone/MAPPEDZONE</code> or <code>IfcBorehole</code> above</li>
+<li>if part of a <a href="#new-concepts">composition</a> - <a href="#new-concepts">RelatingObject</a> shall be of type  <code>IfcGeoScienceObservation/LABTESTRESULT</code></li>
+<li>if not as part of a <a href="#new-concepts">composition</a> - <a href="./sprint1_1.md">declared</a> in <code>IfcProject</code></li>
+<li>Geometry: See IfcGeoScienceObservation/LABTESTRESULT <a href="./IFC-Tunnel-Geotechnics_Geometry.xlsx">here</a>.</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li>if not further <a href="#new-concepts">decomposed</a> - <a href="./sprint2_3.md">properties</a> with <code>Pset_LabTestCommon</code></li>
+</ol>
+</li>
+<li><code>IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT</code>
+<ol>
+<li>if not as part of a <a href="#new-concepts">composition</a> - <a href="#new-concepts">assigned</a> to <code>IfcSpatialZone/MAPPEDZONE</code> or <code>IfcBorehole</code> above</li>
+<li>if part of a <a href="#new-concepts">composition</a> - <a href="#new-concepts">RelatingObject</a> shall be of type  <code>IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT</code></li>
+<li>if not as part of a <a href="#new-concepts">composition</a> - <a href="./sprint1_1.md">declared</a> in <code>IfcProject</code></li>
+<li>Geometry: See IfcGeoScienceObservation/GEOPHYSICALSURVEYRESULT <a href="./IFC-Tunnel-Geotechnics_Geometry.xlsx">here</a>.</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li>if not further <a href="#new-concepts">decomposed</a> - <a href="./sprint2_3.md">properties</a> with <code>Pset_GeophysicalSurveyCommon</code></li>
+</ol>
+</li>
+</ol>
+<h3>Book B</h3>
+<ol>
+<li><code>IfcGeoScienceModel</code>
+<ol>
+<li><code>PredefinedType</code> is depending on decomposition (valid pairs: WIP)</li>
+<li><a href="#new-concepts">contained</a> in <code>IfcSite</code></li>
+<li><a href="#new-concepts">decomposed by</a> <code>IfcGeoScienceFeature/*</code> below</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_GeoScienceModelCommon</code></li>
+</ol>
+</li>
+<li><code>IfcGeoScienceFeature</code>
+<ol>
+<li><a href="#new-concepts">part of</a> <code>IfcGeoScienceModel</code> above
+</li>
+<li><code>PredefinedType</code> - at least one of:
+</li>
+<li><code>PHYSICALPROPERTYDISTRIBUTION</code>
+<ol>
+<li>body geometry
+<ol>
+<li>if geometry is <a href="./sprint2_3.md"><code>IfcVoxelGrid</code></a> an <a href="#new-concepts">associated instance of <code>IfcVoxelData</code></a> is required</li>
+<li>otherwise any other <em>body</em> geometry from <a href="./sprint2_3.md">Sprint 2.3</a> is required</li>
+</ol>
+</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_GeoScienceFeatureCommon</code></li>
+</ol>
+</li>
+<li><code>GEOLOGICALUNIT</code>
+<ol>
+<li>body geometry
+<ol>
+<li>if geometry is <a href="./sprint2_3.md"><code>IfcVoxelGrid</code></a> an <a href="#new-concepts">associated instance of <code>IfcVoxelData</code></a> is required</li>
+<li>otherwise any other <em>body</em> geometry from <a href="./sprint2_3.md">Sprint 2.3</a> is required</li>
+</ol>
+</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_GeoScienceFeatureTypeGeologicalUnit</code></li>
+</ol>
+</li>
+<li><code>FAULT</code>
+<ol>
+<li>body geometry
+<ol>
+<li>if geometry is <a href="./sprint2_3.md"><code>IfcVoxelGrid</code></a> an <a href="#new-concepts">associated instance of <code>IfcVoxelData</code></a> is required</li>
+<li>otherwise any other <em>body</em> geometry from <a href="./sprint2_3.md">Sprint 2.3</a> is required</li>
+</ol>
+</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_GeoScienceFeatureTypeFault</code></li>
+</ol>
+</li>
+<li><code>CONTACT</code>
+<ol>
+<li><a href="./sprint2_3.md">surface geometry</a></li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_GeoScienceFeatureTypeContact</code></li>
+</ol>
+</li>
+<li><code>GEOTECHNICALUNIT</code>
+<ol>
+<li>body geometry
+<ol>
+<li>if geometry is <a href="./sprint2_3.md"><code>IfcVoxelGrid</code></a> an <a href="#new-concepts">associated instance of <code>IfcVoxelData</code></a> is required</li>
+<li>otherwise any other <em>body</em> geometry from <a href="./sprint2_3.md">Sprint 2.3</a> is required</li>
+</ol>
+</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_GeoScienceFeatureCommon</code></li>
+</ol>
+</li>
+<li><code>HAZARDAREA</code>
+<ol>
+<li>body geometry
+<ol>
+<li>if geometry is <a href="./sprint2_3.md"><code>IfcVoxelGrid</code></a> an <a href="#new-concepts">associated instance of <code>IfcVoxelData</code></a> is required</li>
+<li>otherwise any other <em>body</em> geometry from <a href="./sprint2_3.md">Sprint 2.3</a> is required</li>
+</ol>
+</li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_GeoScienceFeatureTypeGeoHazard</code></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3>Book C</h3>
+<ol>
+<li><code>IfcTunnelTypicalSection/GEOTECH</code>
+<ol>
+<li><a href="#new-concepts">contained</a> in <code>IfcTunnel</code></li>
+<li><a href="#new-concepts">positioned between two</a> <code>IfcReferent</code></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_GeoAspects</code></li>
+</ol>
+</li>
+</ol>
+<h3>Other example</h3>
+You don't have some of these specific geotechnic support capabilities within your suite (regardless of Book option)?
+If you have a different idea that is more easily supported with your software suite,
+please come forward at the support meetings or contact us per email.
+We will try to come up with (tunnel specific) instructions for your example.
+<h3>Geometric representations</h3>
+The geometry representations specified above are suggestions from the IFC Tunnel technical team. For general requirements on geometric representations, please consult the <a href="annex-e/project_team/IFC-Tunnel_Geotechnics_Geometry.xlsx">geometry requirements as specified by the IFC Tunnel geoscience domain experts</a>.
+</p>
+<p>
+<h1 id="Sprint 3.sys">Sprint 3.sys</h1>
+This sprint implements and tests specific usages for <em>systems</em>.
+<h2>Prerequisities</h2>
+This sprint assumes you completed the following sprints:
+<ul>
+<li><a href="#Sprint 1.1">Sprint 1.1</a>,</li>
+<li><a href="#Sprint 1.2">Sprint 1.2</a>,</li>
+<li><a href="#Sprint 1.3">Sprint 1.3</a>,</li>
+<li><a href="#Sprint 2.1">Sprint 2.1</a>,</li>
+<li><a href="#Sprint 2.2">Sprint 2.2</a>, and</li>
+<li><a href="#Sprint 2.3">Sprint 2.3</a>.</li>
+</ul>
+<h2>Duration</h2>
+<table>
+<thead>
+<tr>
+<th>Kick-off</th>
+<th>Submission</th>
+<th>Closure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023.06.15.</td>
+<td>2023.08.15.</td>
+<td>2023.08.31.</td>
+</tr>
+</tbody>
+</table>
+<h2>Concepts</h2>
+<h3>New concepts</h3>
+<ol>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/spatial-containment.htm">Spatial containment</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/schema/templates/material-layer-set-usage.htm">Material Layer Set</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/port-connectivity.htm">Port connectivity</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/port-nesting.htm">Port nesting</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/component-to-distribution-system.htm">Component to Distribution system</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/port-to-distribution-system.htm">Port to Distribution system</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/control-flow.htm">Control flow</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a></li>
+<li><a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/body-advancedswept-disksolid-polycurve-geometry.htm">Body AdvancedSwept DiskSolid Polycurve Geometry</a></li>
+</ol>
+<h2>Usages</h2>
+This sprint encompasses the following usages:
+<h3>Example on fire protection</h3>
+<ol>
+<li><code>IfcPipeSegment</code>
+<ol>
+<li><a href="#new-concepts">contained</a> in <a href="./sprint2_1.md"><code>IfcTunnel</code></a> or <a href="./sprint2_1.md"><code>IfcTunnelPart</code></a></li>
+<li><a href="./sprint2_3.md">body geometry</a>, e.g. see geometry concepts listed <a href="#new-concepts">above</a>, or any volumetric representation from <a href="./sprint2_3.md">sprint 2.3</a></li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="#new-concepts">associates material</a>, e.g. steel</li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_PipeSegmentTypeCommon</code></li>
+<li><a href="#new-concepts">nesting ports</a>: see also <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcpipesegment.htm">Table 599</a></li>
+</ol>
+</li>
+<li><code>IfcPipeFitting</code>
+<ol>
+<li><a href="#new-concepts">contained</a> in <a href="./sprint2_1.md"><code>IfcTunnel</code></a> or <a href="./sprint2_1.md"><code>IfcTunnelPart</code></a></li>
+<li><a href="./sprint2_3.md">body geometry</a></li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="#new-concepts">associates material</a>, e.g. <code>Casing</code> is steel</li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_PipeFittingTypeCommon</code></li>
+<li><a href="#new-concepts">nesting ports</a>: see also Table 594 <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcpipefitting.htm">here</a></li>
+</ol>
+</li>
+<li><code>IfcFireSuppressionTerminal/SPRINKLER</code>
+<ol>
+<li><a href="#new-concepts">contained</a> in <a href="./sprint2_1.md"><code>IfcTunnel</code></a> or <a href="./sprint2_1.md"><code>IfcTunnelPart</code></a></li>
+<li><a href="./sprint2_3.md">body geometry</a></li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="#new-concepts">nesting ports</a>: see also Table 640 <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcfiresuppressionterminal.htm">here</a></li>
+</ol>
+</li>
+<li><code>IfcSensor</code>
+<ol>
+<li><a href="#new-concepts">contained</a> in <a href="./sprint2_1.md"><code>IfcTunnel</code></a> or <a href="./sprint2_1.md"><code>IfcTunnelPart</code></a></li>
+<li><a href="./sprint2_3.md">body geometry</a></li>
+<li><a href="./sprint2_2.md">local placement</a></li>
+<li><a href="#new-concepts">nesting ports</a>: see also Table 318 <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcsensor.htm">here</a></li>
+<li><a href="#new-concepts">flow control</a> to the <code>IfcFireSuppressionTerminal/SPRINKLER</code> above: see also Table 319 <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcsensor.htm">here</a></li>
+</ol>
+</li>
+<li><code>IfcDistributionPort</code>
+<ol>
+<li><a href="#new-concepts">connected</a> to other <code>IfcDistributionPort</code>
+<ol>
+<li>one side shall be <code>SOURCE</code> and the other a <code>SINK</code> as <a href="https://bsi-infraroom.github.io/IFC-Documentation-Tunnel/4_4_0_0/general/HTML/link/ifcdistributionport.htm">per documentation</a></li>
+</ol>
+</li>
+<li><a href="#new-concepts">nested</a> to all elements listed above</li>
+<li>no <a href="./sprint2_3.md">geometry</a></li>
+<li>no <a href="#new-concepts">containment</a></li>
+<li><a href="./sprint2_3.md">properties</a> with <code>Pset_DistributionPortTypePipe</code></li>
+</ol>
+</li>
+<li><code>IfcDistributionSystem/FIREPROTECTION</code>
+<ol>
+<li><a href="./sprint1_1.md">declared</a> in <code>IfcProject</code></li>
+<li><a href="./sprint2_1.md">groups</a> all elements listed above</li>
+</ol>
+</li>
+</ol>
+<h3>Other example</h3>
+You don't have fire protection support capabilities within your suite?
+If you have a different <code>IfcSystem</code> that is more easily supported with your software suite,
+please come forward at the support meetings or contact us per email.
+We will try to come up with (tunnel specific) instructions for your example.
+</p>
 <p><a href="../link/annex-e.htm" target="_top" ><img src="../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
   </body>
 </html>
