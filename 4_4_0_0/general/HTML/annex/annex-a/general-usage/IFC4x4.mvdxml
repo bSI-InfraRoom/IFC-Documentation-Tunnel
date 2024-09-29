@@ -17594,7 +17594,7 @@ For work-based resources such as labor and equipment, quantities are based on ti
 		</ConceptTemplate>
 	</Templates>
 	<Views>
-		<ModelView uuid="f7c8d778-350f-434b-9195-f183bed35911" name="General Usage" code="IFC4x4" version="4.4.0.0" status="draft" owner="bSI" copyright="&amp;copy; 1996-2021 buildingSMART International Ltd." applicableSchema="IFC4X4">
+		<ModelView uuid="f7c8d778-350f-434b-9195-f183bed35911" name="General Usage" code="IFC4x4" version="4.4.0.0" status="draft" owner="bSI" copyright="&amp;copy; 1996-2024 buildingSMART International Ltd." applicableSchema="IFC4X4">
 			<Definitions>
 				<Definition>
 					<Body><![CDATA[{ .std}
