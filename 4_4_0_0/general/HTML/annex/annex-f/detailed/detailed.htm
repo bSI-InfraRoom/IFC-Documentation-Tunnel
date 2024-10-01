@@ -1,0 +1,1263 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IFC2x3 to IFC4 4.0.0.0</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 0 index2 0 index3 0 index4 -1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-f.htm");
+//-->
+</script>
+
+<h4 class="std">Detailed change log Tunnel - 1.0 [Deliverables]</h4>
+<table class="gridtable">
+<thead>
+<tr>
+<th>ITEM</th>
+<th>CHANGE</th>
+<th>Reasoning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core data schemas</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> IfcKernel</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcRelAssociatesDataset</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcProductExtension</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcBuiltSystemTypeEnum</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   TUNNEL_PRESUPPORT</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   TUNNEL_SUPPORT</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   TUNNEL_LINING</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   WATERPROOFING</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   FIREPROTECTION</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcElementAssemblyTypeEnum</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   DUCTBANK</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   PRESUPPORTVAULT</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   PRESUPPORTFACE</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   RING</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcSpatialZoneTypeEnum</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   MAPPEDZONE</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   TESTEDZONE</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   COMPARTMENT</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   ANNULARGAP</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   CLEARANCE</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   INSTALLATION</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   INTERIOR</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   INVERT</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   LINING</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   SERVICE</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcAlignment</td>
+<td>MODIFIED</td>
+<td></td>
+</tr>
+<tr>
+<td>   AlignmentRepresentation</td>
+<td>ADDED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcComplementaryData</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcIntegerVoxelData</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcLabelVoxelData</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcLinearZone</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcLogicalVoxelData</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcObservation</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcRealVoxelData</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcRelAssociatesMaterial</td>
+<td>MODIFIED</td>
+<td></td>
+</tr>
+<tr>
+<td>   AllowedElements</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td>expression added: 'IFCPRODUCTEXTENSION.IFCPORT',</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td>expression added: 'IFCSHAREDINFRASTRUCTUREELEMENTS.IFCGEOSCIENCEOBSERVATION'])</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td>expression deleted: 'IFCPRODUCTEXTENSION.IFCPORT'])</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcVectorVoxelData</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcVoxelData</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcAlignmentRepresentation</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>Shared element data schemas</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> IfcSharedBldgElements</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcArchElementTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcFillElementTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcPlateTypeEnum</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   LAGGING</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcArchElement</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcArchElementType</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcFillElement</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcFillElementType</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcSharedBldgServiceElements</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcDistributionSystemEnum</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   SAFETY</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcSharedComponentElements</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcDiscreteAccessoryTypeEnum</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   WATER_BARRIER</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   STRUCTURAL_SEALING</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcSharedInfrastructureElements</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcBoreholeTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcEarthworksCutTypeEnum</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   CONFINEDOPENEXCAVATION</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   ANCHOREDOPENEXCAVATION</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   BRACEDOPENEXCAVATION</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcFaceExcavationTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeoScienceFeatureTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeoScienceModelTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeoScienceObservationTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeotechnicalStratumTypeEnum</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>   STATUS</td>
+<td>Deprecated</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGroundReinforcementElementTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcImprovedGroundTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcRadialExcavationTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcReinforcedSoilTypeEnum</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>   STATUS</td>
+<td>Deprecated</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcBorehole</td>
+<td>MODIFIED</td>
+<td></td>
+</tr>
+<tr>
+<td>   PredefinedType</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   CorrectPredefinedType</td>
+<td>ADDED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   CorrectTypeAssigned</td>
+<td>ADDED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcBoreholeType</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcExcavation</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcFaceExcavation</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeomodel</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>   STATUS</td>
+<td>Deprecated</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeoScienceElement</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeoScienceElementType</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeoScienceFeature</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeoScienceFeatureType</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeoScienceModel</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeoScienceModelType</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeoScienceObservation</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeoslice</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>   STATUS</td>
+<td>Deprecated</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeotechnicalAssembly</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>   STATUS</td>
+<td>Deprecated</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeotechnicalElement</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>   STATUS</td>
+<td>Deprecated</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeotechnicalStratum</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>   STATUS</td>
+<td>Deprecated</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGroundReinforcementElement</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGroundReinforcementElementType</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcImprovedGround</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcRadialExcavation</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcReinforcedSoil</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>   STATUS</td>
+<td>Deprecated</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcUndergroundExcavation</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>Domain specific data schemas</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> IfcElectricalDomain</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcAudioVisualApplianceTypeEnum</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   SIREN</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>   BEACON</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcEarthingElementTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcEarthingElement</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcEarthingElementType</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcHvacDomain</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcFanTypeEnum</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   JET</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcStructuralElementsDomain</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcReinforcingMeshTypeEnum</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   STEELSTRAPS</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcTunnelDomain</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcTunnelPartTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcTunnelTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcTunnelTypicalSectionTypeEnum</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcTunnel</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcTunnelPart</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcTunnelTypicalSection</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>Resource definition data schemas</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> IfcExternalReferenceResource</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcDatasetSelect</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcDatasetInformation</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcDatasetReference</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcGeometricConstraintResource</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcLinearPlacement</td>
+<td>MODIFIED</td>
+<td></td>
+</tr>
+<tr>
+<td>   CorrectLinearPlacement</td>
+<td>ADDED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcCorrectLocalPlacement</td>
+<td>MODIFIED</td>
+<td></td>
+</tr>
+<tr>
+<td>   IfcCorrectLocalPlacement</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td>expression added: ('IFCGEOMETRYRESOURCE.IFCLINEARPLACEMENT'</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcGeometricModelResource</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcBooleanClippingResult</td>
+<td>MODIFIED</td>
+<td></td>
+</tr>
+<tr>
+<td>   FirstOperandType</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td>expression added: ('IFCGEOMETRICMODELRESOURCE.IFCSWEPTDISKSOLID'</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td>expression deleted: ('IFCGEOMETRICMODELRESOURCE.IFCSWEPTDISCSOLID'</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcIndexedPolygonalFace</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   HasColours</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcIndexedPolygonalFaceWithVoids</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   HasColours</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcSectionedSurface</td>
+<td>MODIFIED</td>
+<td></td>
+</tr>
+<tr>
+<td>   AreaProfileTypes</td>
+<td>MODIFIED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcVoxelGrid</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcGeometryResource</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcCurveDim</td>
+<td>MODIFIED</td>
+<td></td>
+</tr>
+<tr>
+<td>   IfcCurveDim</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td>expression deleted: ('IFCGEOMETRYRESOURCE.IFCCURVESEGMENT2D'</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcListToExpandedArray</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcMeasureResource</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcDerivedMeasureValue</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   IfcElectricalResistivityMeasure</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcElectricalResistivityMeasure</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcPresentationAppearanceResource</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcIndexedColourMap</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   MappedTo</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    TYPE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> IfcPropertyResource</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcComplexProperty</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   PartOfMaterialOrProfileProperties</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcPropertyBoundedValue</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   PartOfMaterialOrProfileProperties</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcPropertyEnumeratedValue</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   PartOfMaterialOrProfileProperties</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcPropertyListValue</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   PartOfMaterialOrProfileProperties</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcPropertyReferenceValue</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   PartOfMaterialOrProfileProperties</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcPropertySingleValue</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   PartOfMaterialOrProfileProperties</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcPropertyTableValue</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>   PartOfMaterialOrProfileProperties</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcRepresentationResource</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcGeographicCRS</td>
+<td>MODIFIED</td>
+<td></td>
+</tr>
+<tr>
+<td>   HeightUnitIsLength</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td>expression added: NOT</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td>expression added: EXISTS(SELF.HeightUnit)</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td>expression deleted: NOT(EXISTS(SELF.HeightUnit))</td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcMapConversion</td>
+<td>MODIFIED</td>
+<td></td>
+</tr>
+<tr>
+<td>   TargetCRSProjected</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    NAME</td>
+<td>Name changed from <i>Old rule name TargetCRSOnlyProjected</i> to <i>New rule name TargetCRSProjected</i>.</td>
+<td></td>
+</tr>
+<tr>
+<td>   ValidXAxis</td>
+<td>ADDED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  IfcShapeRepresentationTypes</td>
+<td>MODIFIED</td>
+<td></td>
+</tr>
+<tr>
+<td>   IfcShapeRepresentationTypes</td>
+<td>MODIFIED:</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td>expression added: 'Voxel'</td>
+<td></td>
+</tr>
+<tr>
+<td>    SCHEMA</td>
+<td>expression added: ('IFCGEOMETRICMODELRESOURCE.IFCVOXELGRID'</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>General Usage</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> IfcBorehole</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcExcavation</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcGeoScienceElement</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcGeoScienceObservation</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcGeotechnicalElement</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  Earthworks Cuttings</td>
+<td>DELETED</td>
+<td></td>
+</tr>
+<tr>
+<td>  Excavation Cuttings</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcImprovedGround</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcLinearZone</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcObjectDefinition</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  Assignment to Product</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcProduct</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  Product Relative Placement</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcProject</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>  Project Dataset Information</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcReferent</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td> IfcVoxelData</td>
+<td>ADDED</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TEMPLATES NOT IN BSI</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Assignment to Product</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Dataset Association</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Material Layer Set</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Material Profile Set</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Alignment Attributes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Alignment Cant Attributes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Alignment Horizontal Attributes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Alignment Vertical Attributes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Complementary Data Composition</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Complementary Data Decomposition</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Linear Composition</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Linear Decomposition</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Excavation Cuttings</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Alignment Layout</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Station</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Derived Profile Definiton</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Alignment Geometry Cant</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Alignment Geometry Gradient</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Guide Curve Geometry</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Survey Points Geometry</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Topography Geometry</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Voxel Geometry</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Product Relative Placement</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Project Dataset Information</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
