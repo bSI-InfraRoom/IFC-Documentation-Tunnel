@@ -1,0 +1,14 @@
+[
+  "IfcBuildingSystem",
+  "IfcCivilElement",
+  "IfcDoorLiningProperties",
+  "IfcDoorPanelProperties",
+  "IfcElectricDistributionBoard",
+  "IfcMaterialClassificationRelationship",
+  "IfcMaterialList",
+  "IfcPostalAddress",
+  "IfcRelConnectsPortToElement",
+  "IfcRelServicesBuildings",
+  "IfcTelecomAddress",
+  "IfcWallStandardCase"
+]
