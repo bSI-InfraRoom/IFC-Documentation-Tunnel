@@ -459,6 +459,34 @@
 			var baseFetch = function (path) { return docRootPath + path; };
 
 			/**
+			 * Normalize all relative src/href in a container to document-root-relative paths.
+			 * Resolves paths against the actual document root URL, then strips the prefix.
+			 */
+			function normalizePaths(container) {
+				var docRootUrl = location.origin + docRootPath + '/';
+				var imgs = container.querySelectorAll('img[src]');
+				for (var i = 0; i < imgs.length; i++) {
+					var src = imgs[i].getAttribute('src');
+					if (/^[a-z]+:\/\//i.test(src)) continue;
+					try {
+						var p = new URL(src, docRootUrl).pathname;
+						if (docRootPath) p = p.replace(docRootPath, '');
+						imgs[i].setAttribute('src', p.replace(/^\.?\//, ''));
+					} catch(e) {}
+				}
+				var links = container.querySelectorAll('a[href]');
+				for (var i = 0; i < links.length; i++) {
+					var href = links[i].getAttribute('href');
+					if (/^[a-z]+:\/\//i.test(href)) continue;
+					try {
+						var p = new URL(href, docRootUrl).pathname;
+						if (docRootPath) p = p.replace(docRootPath, '');
+						links[i].setAttribute('href', p.replace(/^\.?\//, ''));
+					} catch(e) {}
+				}
+			}
+
+			/**
 			 * Normalize an href to a relative path from the document root.
 			 * Handles both relative hrefs and absolute URLs (from link.href).
 			 */
@@ -469,7 +497,7 @@
 					else if (linkEl.closest('.content-area')) basePath = contentBasePath;
 				}
 				// Resolve relative href against the pane's base path
-				if (!/^[a-z]+:\/\//i.test(href) && basePath) {
+				if (!/^[a-z]+:\/\//i.test(href) && !href.startsWith('/') && basePath) {
 					try {
 						var base = new URL(basePath, location.origin);
 						var resolved = new URL(href, base);
@@ -603,6 +631,7 @@
 						var menu = doc.querySelector('.menu');
 						if (menu) {
 							sidebar.innerHTML = '<div class="menu">' + menu.innerHTML + '</div>';
+							normalizePaths(sidebar.querySelector('.menu'));
 						} else {
 							sidebar.innerHTML = '<div class="credits"><p class="small"></p></div>';
 						}
@@ -745,7 +774,7 @@
 						var cls = '';
 						var isAbstract = abstractEntities && abstractEntities.indexOf(entName) !== -1;
 						if (j === 0) cls = (isAbstract ? 'abstract ' : '') + 'ancestor';
-						if (entName ===currentEntity) cls = 'ancestor current' + (isAbstract ? ' abstract' : '');
+						if (entName === currentEntity) cls = 'ancestor current' + (isAbstract ? ' abstract' : '');
 
 						var arrow = (j === 0) ? '' : '<svg class="arrow-up" viewBox="0 0 10 20" width="10" height="20"><path d="M1,10 L5,4 L9,10" fill="none" stroke="#1976d2" stroke-width="2"/><line x1="5" y1="3" x2="5" y2="19" stroke="#1976d2" stroke-width="2"/></svg>';
 
@@ -775,7 +804,7 @@
 							// Find href for sibling
 							var sibHref = '';
 							if (sib === entName) {
-								sibHref = ent.href;
+								sibHref = '/' + ent.href;
 							} else {
 								// Look up the sibling's href from the chain or index
 								// We need to find which ancestor page contains this sibling
@@ -875,7 +904,7 @@
 							contentArea.style.counterReset = 'index1 ' + counterMatch[1] + ' index2 ' + counterMatch[2] + ' index3 ' + counterMatch[3] + ' index4 ' + counterMatch[4] + ' index5 ' + counterMatch[5];
 						}
 
-						// Clone body content and strip <script> tags to prevent
+					// Clone body content and strip <script> tags to prevent
 						// embedded navigation scripts (parent.index.location.replace) from running
 						var bodyClone = doc.body ? doc.body.cloneNode(true) : null;
 						if (bodyClone) {
@@ -883,33 +912,6 @@
 							scripts.forEach(function (s) { s.parentNode.removeChild(s); });
 						}
 						contentArea.innerHTML = bodyClone ? bodyClone.innerHTML : '';
-
-						// Fix relative paths: after pushState the browser base URL changes,
-						// so relative img/video/src resolve against the wrong directory.
-						// Insert a <base> element so all relative URLs in the content resolve
-						// from the document root instead of the current pushState URL.
-						// Fix relative paths in loaded content by resolving them against the document root
-						var fixRelativePaths = function(container, basePath) {
-							var imgs = container.querySelectorAll('img[src]');
-							for (var i = 0; i < imgs.length; i++) {
-								var src = imgs[i].getAttribute('src');
-								if (/^[a-z]+:\/\//i.test(src)) continue; // absolute URL, skip
-								try {
-									var resolved = new URL(src, location.origin + docRootPath + '/');
-									imgs[i].setAttribute('src', resolved.pathname);
-								} catch(e) {}
-							}
-							var links = container.querySelectorAll('a[href]');
-							for (var i = 0; i < links.length; i++) {
-								var href = links[i].getAttribute('href');
-								if (/^[a-z]+:\/\//i.test(href)) continue;
-								try {
-									var resolved = new URL(href, location.origin + docRootPath + '/');
-									links[i].setAttribute('href', resolved.pathname);
-								} catch(e) {}
-							}
-						};
-						fixRelativePaths(contentArea, contentBasePath);
 
 						// Extract sidebar anchor before stripping scripts
 						var sidebarAnchor = extractSidebarAnchor(html);
@@ -1070,6 +1072,9 @@
 
 			// Listen for hash changes (browser back/forward)
 			window.addEventListener('hashchange', handleHashNavigation);
+
+			// Normalize all relative paths in the initial page
+			normalizePaths(document.body);
 
 			// Handle initial load
 			handleHashNavigation();
