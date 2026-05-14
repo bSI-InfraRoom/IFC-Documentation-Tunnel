@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,9 @@
 			--a-link-color: #0277bd;
 			--a-visited-color: #01579b;
 		}
-		html, body {
+
+		html,
+		body {
 			margin: 0;
 			padding: 0;
 			height: 100%;
@@ -29,15 +32,19 @@
 			color: var(--fore-color);
 			background: var(--back-color);
 		}
+
 		a:link {
 			color: var(--a-link-color);
 			text-decoration: none;
 		}
+
 		a:visited {
 			color: var(--a-visited-color);
 			text-decoration: none;
 		}
-		a:hover, a:focus {
+
+		a:hover,
+		a:focus {
 			text-decoration: underline;
 		}
 
@@ -55,23 +62,28 @@
 			padding: var(--universal-padding);
 			flex-shrink: 0;
 		}
+
 		.top-bar .title-row {
 			margin: 0 0 var(--universal-padding) 0;
 			font-size: 1.1rem;
 			font-weight: 500;
 		}
+
 		/* 5-column grid */
 		.toc-grid {
 			display: flex;
 			width: 100%;
 		}
-		.toc-grid > * {
+
+		.toc-grid>* {
 			flex: 1;
 			padding: 0 var(--universal-padding);
 		}
-		.toc-grid > *:first-child {
+
+		.toc-grid>*:first-child {
 			flex: 0.6;
 		}
+
 		.toc-grid h2 {
 			font-size: 0.85rem;
 			margin: 0 0 4px 0;
@@ -79,10 +91,13 @@
 			border-bottom: 1px solid var(--secondary-border-color);
 			padding-bottom: 2px;
 		}
-		.toc-grid ol, .toc-grid ul {
+
+		.toc-grid ol,
+		.toc-grid ul {
 			margin: 0;
 			padding-left: 1rem;
 		}
+
 		.toc-grid li {
 			margin-bottom: 1px;
 			font-size: 0.85rem;
@@ -105,16 +120,20 @@
 			overflow-y: auto;
 			overflow-x: hidden;
 		}
+
 		.sidebar .menu {
 			font-size: 0.85rem;
 		}
+
 		.sidebar .menu table {
 			width: 100%;
 			border-collapse: collapse;
 		}
+
 		.sidebar .menu tr {
 			vertical-align: top;
 		}
+
 		.sidebar .menu td {
 			padding: 2px 4px;
 			font-size: 0.85rem;
@@ -123,6 +142,7 @@
 			word-wrap: break-word;
 			overflow-wrap: break-word;
 		}
+
 		.sidebar .menu td.menu {
 			font-size: 0.85rem;
 			padding-left: 0px;
@@ -130,6 +150,7 @@
 			padding-top: 1px;
 			padding-bottom: 1px;
 		}
+
 		.sidebar .menu a {
 			font-size: inherit;
 		}
@@ -140,19 +161,23 @@
 			overflow-y: auto;
 			padding: 1rem 1.5rem;
 		}
+
 		.content-area h1 {
 			font-size: 1.5rem;
 			margin-top: 0;
 		}
+
 		.no-bullets {
 			list-style-type: none;
 			margin: 0;
 			padding: 0;
 		}
+
 		.tunnel-bg {
 			display: block;
 			width: 100%;
 		}
+
 		/* Loading / error states in content area */
 		.content-area .loading {
 			display: flex;
@@ -162,10 +187,12 @@
 			font-size: 1rem;
 			color: #666;
 		}
+
 		.content-area .error {
 			color: #d32f2f;
 			padding: 1rem;
 		}
+
 		.file-warning {
 			background: #fff3cd;
 			color: #856404;
@@ -176,19 +203,22 @@
 			font-size: 0.9rem;
 			line-height: 1.5;
 		}
+
 		.file-warning code {
 			background: #f8f8f8;
 			padding: 1px 4px;
 			border-radius: 3px;
 			font-size: 0.85em;
 		}
+
 		/* Entity inheritance tiered diagram — matches IFC official theme */
 		.content-area .tier {
 			margin: 0;
 			padding: 0;
 			list-style: none;
 		}
-		.content-area .tier > li {
+
+		.content-area .tier>li {
 			list-style: none;
 			margin: 0;
 			padding: 0;
@@ -196,10 +226,12 @@
 			border-bottom: 1px solid #ddd;
 			position: relative;
 		}
-		.content-area .tier > li:last-child {
+
+		.content-area .tier>li:last-child {
 			border-bottom: 0;
 		}
-		.content-area .tier > li > .arrow-up {
+
+		.content-area .tier>li>.arrow-up {
 			position: absolute;
 			top: -13px;
 			left: 65px;
@@ -207,29 +239,36 @@
 			display: block;
 			line-height: 0;
 		}
-		.content-area .tier > li:first-child > .arrow-up {
+
+		.content-area .tier>li:first-child>.arrow-up {
 			display: none;
 		}
-		.content-area .tier > li > ul.classes {
+
+		.content-area .tier>li>ul.classes {
 			padding-left: 1rem;
 		}
-		.content-area .tier > li > ul.classes-in-chain {
+
+		.content-area .tier>li>ul.classes-in-chain {
 			margin-left: 153px;
 			margin-top: 0;
 			padding: 0;
 			list-style: none;
 		}
-		.content-area .tier > li > ul.classes-in-chain:hover li {
+
+		.content-area .tier>li>ul.classes-in-chain:hover li {
 			opacity: 1;
 		}
-		.content-area .tier > li > ul.classes-in-chain li a:hover {
+
+		.content-area .tier>li>ul.classes-in-chain li a:hover {
 			outline: 2px solid #1976d2;
 		}
-		.content-area .tier > li > ul.classes-in-chain > li:first-child {
+
+		.content-area .tier>li>ul.classes-in-chain>li:first-child {
 			margin-left: -152px;
 			opacity: 1;
 		}
-		.content-area .tier > li > ul.classes-in-chain > li {
+
+		.content-area .tier>li>ul.classes-in-chain>li {
 			display: inline-block;
 			margin: 0.5rem;
 			margin-left: 0;
@@ -237,7 +276,8 @@
 			opacity: 0.5;
 			transition: opacity 0.5s ease-in-out;
 		}
-		.content-area .tier > li > ul.classes-in-chain > li a {
+
+		.content-area .tier>li>ul.classes-in-chain>li a {
 			font-size: 0.75em;
 			border-radius: 5px;
 			padding: 0.5rem;
@@ -250,19 +290,23 @@
 			text-overflow: ellipsis;
 			text-decoration: none;
 		}
-		.content-area .tier > li > ul.classes-in-chain > li.ancestor a {
+
+		.content-area .tier>li>ul.classes-in-chain>li.ancestor a {
 			border: 2px solid #1976d2;
 		}
-		.content-area .tier > li > ul.classes-in-chain > li.abstract a {
+
+		.content-area .tier>li>ul.classes-in-chain>li.abstract a {
 			background-color: #CCC;
 			color: #000;
 			font-style: italic;
 		}
-		.content-area .tier > li > ul.classes-in-chain > li.deprecated a {
+
+		.content-area .tier>li>ul.classes-in-chain>li.deprecated a {
 			background-color: #d32f2f;
 			color: #fff;
 		}
-		.content-area .tier > li > ul.classes-in-chain > li.current a {
+
+		.content-area .tier>li>ul.classes-in-chain>li.current a {
 			background-color: #1976d2;
 			color: #fff;
 		}
@@ -276,12 +320,14 @@
 			background: #fff;
 			border: 1px solid #e8e8e8;
 		}
+
 		.content-area table th,
 		.content-area table td {
 			padding: 0.2rem 0.4rem;
 			text-align: left;
 			vertical-align: top;
 		}
+
 		.content-area table thead th,
 		.content-area table th {
 			background: #f6f8fa;
@@ -292,15 +338,19 @@
 			color: #333;
 			border-bottom: 2px solid #d0d7de;
 		}
+
 		.content-area table tr:hover {
 			background: #f9fafb;
 		}
+
 		.content-area table.striped tbody tr:nth-of-type(2n) {
 			background: #fafbfc;
 		}
+
 		.content-area table.striped tbody tr:nth-of-type(2n):hover {
 			background: #f3f4f6;
 		}
+
 		.content-area table.group-inherited td {
 			background: #f6f8fa;
 			font-weight: 600;
@@ -309,636 +359,693 @@
 			padding: 0.2rem 0.5rem;
 			border-bottom: 1px solid #e8e8e8;
 		}
+
 		.content-area table.inherited td {
 			opacity: 0.75;
 			padding-left: 0.8rem;
 		}
 	</style>
 </head>
+
 <body>
 
-<div class="app-container">
-	<!-- Top bar: title + 5-column TOC (replaces content.htm) -->
-	<div class="top-bar">
-		<p class="title-row"><b>Tunnel - 1.0 [Deliverables]</b></p>
-		<div class="toc-grid">
-			<div>
-				<ul class="no-bullets">
-					<li><a class="listing-link" href="cover.htm">Cover</a></li>
-					<li><a class="listing-link" href="toc.htm">Contents</a></li>
-					<li><a class="listing-link" href="foreword.htm">Foreword</a></li>
-					<li><a class="listing-link" href="introduction.htm">Introduction</a></li>
-				</ul>
+	<div class="app-container">
+		<!-- Top bar: title + 5-column TOC (replaces content.htm) -->
+		<div class="top-bar">
+			<p class="title-row"><b>Tunnel - 1.0 [Deliverables]</b></p>
+			<div class="toc-grid">
+				<div>
+					<ul class="no-bullets">
+						<li><a class="listing-link" href="cover.htm">Cover</a></li>
+						<li><a class="listing-link" href="toc.htm">Contents</a></li>
+						<li><a class="listing-link" href="foreword.htm">Foreword</a></li>
+						<li><a class="listing-link" href="introduction.htm">Introduction</a></li>
+					</ul>
+				</div>
+				<div>
+					<ol>
+						<li><a class="listing-link" href="schema/chapter-1.htm">Scope</a></li>
+						<li><a class="listing-link" href="schema/chapter-2.htm">Normative references</a></li>
+						<li><a class="listing-link" href="schema/chapter-3.htm">Terms, definitions, and abbreviated
+								terms</a></li>
+						<li><a class="listing-link" href="schema/chapter-4.htm">Fundamental concepts and assumptions</a>
+						</li>
+					</ol>
+				</div>
+				<div>
+					<ol start="5">
+						<li><a class="listing-link" href="schema/chapter-5.htm">Core data schemas</a></li>
+						<li><a class="listing-link" href="schema/chapter-6.htm">Shared element data schemas</a></li>
+						<li><a class="listing-link" href="schema/chapter-7.htm">Domain specific data schemas</a></li>
+						<li><a class="listing-link" href="schema/chapter-8.htm">Resource definition data schemas</a>
+						</li>
+					</ol>
+				</div>
+				<div>
+					<ul class="no-bullets">
+						<li><a class="listing-link" href="annex/annex-a.htm">A. Computer interpretable listings</a></li>
+						<li><a class="listing-link" href="annex/annex-b.htm">B. Alphabetical listings</a></li>
+						<li><a class="listing-link" href="annex/annex-c.htm">C. Inheritance listings</a></li>
+						<li><a class="listing-link" href="annex/annex-d.htm">D. Diagrams</a></li>
+					</ul>
+				</div>
+				<div>
+					<ul class="no-bullets">
+						<li><a class="listing-link" href="annex/annex-e.htm">E. Examples</a></li>
+						<li><a class="listing-link" href="annex/annex-f.htm">F. Change logs</a></li>
+					</ul>
+					<ol class="no-bullets">
+						<li><a class="listing-link" href="bibliography.htm">Bibliography</a></li>
+						<li><a class="listing-link" href="doc_index.htm">Index</a></li>
+					</ol>
+				</div>
 			</div>
-			<div>
-				<ol>
-					<li><a class="listing-link" href="schema/chapter-1.htm">Scope</a></li>
-					<li><a class="listing-link" href="schema/chapter-2.htm">Normative references</a></li>
-					<li><a class="listing-link" href="schema/chapter-3.htm">Terms, definitions, and abbreviated terms</a></li>
-					<li><a class="listing-link" href="schema/chapter-4.htm">Fundamental concepts and assumptions</a></li>
-				</ol>
-			</div>
-			<div>
-				<ol start="5">
-					<li><a class="listing-link" href="schema/chapter-5.htm">Core data schemas</a></li>
-					<li><a class="listing-link" href="schema/chapter-6.htm">Shared element data schemas</a></li>
-					<li><a class="listing-link" href="schema/chapter-7.htm">Domain specific data schemas</a></li>
-					<li><a class="listing-link" href="schema/chapter-8.htm">Resource definition data schemas</a></li>
-				</ol>
-			</div>
-			<div>
-				<ul class="no-bullets">
-					<li><a class="listing-link" href="annex/annex-a.htm">A. Computer interpretable listings</a></li>
-					<li><a class="listing-link" href="annex/annex-b.htm">B. Alphabetical listings</a></li>
-					<li><a class="listing-link" href="annex/annex-c.htm">C. Inheritance listings</a></li>
-					<li><a class="listing-link" href="annex/annex-d.htm">D. Diagrams</a></li>
-				</ul>
-			</div>
-			<div>
-				<ul class="no-bullets">
-					<li><a class="listing-link" href="annex/annex-e.htm">E. Examples</a></li>
-					<li><a class="listing-link" href="annex/annex-f.htm">F. Change logs</a></li>
-				</ul>
-				<ol class="no-bullets">
-					<li><a class="listing-link" href="bibliography.htm">Bibliography</a></li>
-					<li><a class="listing-link" href="doc_index.htm">Index</a></li>
-				</ol>
+		</div>
+
+		<!-- Main area: left sidebar + content -->
+		<div class="main-area">
+			<!-- Left sidebar: dynamically populated -->
+			<aside class="sidebar">
+				<div class="credits">
+					<p class="small"></p>
+				</div>
+			</aside>
+
+			<!-- Content area -->
+			<div class="content-area">
+				<p>Select a section to navigate.</p>
+				<img class="tunnel-bg" src="img/tunnel-background.png">
 			</div>
 		</div>
 	</div>
 
-	<!-- Main area: left sidebar + content -->
-	<div class="main-area">
-		<!-- Left sidebar: dynamically populated -->
-		<aside class="sidebar">
-			<div class="credits">
-				<p class="small"></p>
-			</div>
-		</aside>
+	<script>
+		(function () {
+			var sidebar = document.querySelector('.sidebar');
+			var contentArea = document.querySelector('.content-area');
+			var tocGrid = document.querySelector('.toc-grid');
+			var sidebarBasePath = '';   // Base path for sidebar-loaded links
+			var contentBasePath = '';   // Base path for content-area-loaded links
 
-		<!-- Content area -->
-		<div class="content-area">
-			<p>Select a section to navigate.</p>
-			<img class="tunnel-bg" src="img/tunnel-background.png">
-		</div>
-	</div>
-</div>
+			// Navigation history for browser back/forward support
+			var navHistory = [];        // Stack of {href, tocPath} entries
+			var navIndex = -1;          // Current position in the stack
 
-<script>
-(function () {
-	var sidebar = document.querySelector('.sidebar');
-	var contentArea = document.querySelector('.content-area');
-	var tocGrid = document.querySelector('.toc-grid');
-	var sidebarBasePath = '';   // Base path for sidebar-loaded links
-	var contentBasePath = '';   // Base path for content-area-loaded links
+			// Detect if fetch works for local HTML files (file:// protocol blocks fetch)
+			var canFetchLocal = location.protocol !== 'file:';
 
-	// Detect if fetch works for local HTML files (file:// protocol blocks fetch)
-	var canFetchLocal = location.protocol !== 'file:';
-
-	/**
-	 * Normalize an href to a relative path from the document root.
-	 * Handles both relative hrefs and absolute URLs (from link.href).
-	 */
-	function normalizeHref(href, linkEl) {
-		var basePath = '';
-		if (linkEl) {
-			if (linkEl.closest('.sidebar')) basePath = sidebarBasePath;
-			else if (linkEl.closest('.content-area')) basePath = contentBasePath;
-		}
-		console.log('normalizeHref:', href, 'basePath:', basePath);
-
-		// Resolve relative href against the pane's base path
-		if (!/^[a-z]+:\/\//i.test(href) && basePath) {
-			try {
-				var base = new URL(basePath, location.origin);
-				var resolved = new URL(href, base);
-				href = resolved.pathname;
-			} catch(e) {
-				// Fallback: resolve against document root
-				var rootBase = new URL(location.href);
-				var resolved = new URL(href, rootBase);
-				href = resolved.pathname;
-			}
-		}
-
-		// If it's an absolute URL, extract the relative path from the document root
-		if (/^[a-z]+:\/\//i.test(href)) {
-			var u;
-			try { u = new URL(href); } catch(e) { return href; }
-			href = u.pathname;
-		}
-		// Remove trailing hash/fragment
-		href = href.replace(/#.*/, '');
-		// Remove leading ./ or /
-		href = href.replace(/^\.?\//, '');
-
-		// Convert bare filenames to proper paths:
-		// annex-b.htm -> annex/annex-b.htm
-		var m = href.match(/^annex-([a-f])\.htm$/i);
-		if (m) return 'annex/annex-' + m[1] + '.htm';
-
-		// annex-b/something.htm -> annex/annex-b/something.htm
-		m = href.match(/^annex-([a-f])\//i);
-		if (m) return 'annex/annex-' + m[1] + '/' + href.replace(/^annex-([a-f])\//, '');
-
-		return href;
-	}
-
-	/**
-	 * Given a content page href, determine the corresponding toc-*.htm path.
-	 */
-	function resolveTocPath(contentHref) {
-		var href = normalizeHref(contentHref);
-
-		if (/^(cover|toc|foreword|introduction|bibliography|doc_index)\.htm$/i.test(href)) {
-			return null;
-		}
-
-		// schema/ifcXXXXX/... -> map schema folder to chapter toc
-		var schemaToChapter = {
-			ifckernel: 5, ifcproductextension: 5, ifcgeometryresource: 5,
-			ifcmaterialresource: 5, ifcmeasureresource: 5, ifcdatetimeresource: 5,
-			ifcpredefinedresource: 5, ifcpresentationdefinitionresource: 5,
-			ifcpresentationappearanceresource: 5, ifccontrolresource: 5,
-			ifcsharedbldgelements: 6, ifcsharedbldgserviceelements: 6,
-			ifcsharedcomponentelements: 6, ifcsharedfacilitieselements: 6,
-			ifcsharedmgmtelements: 6, ifcsharedinfrastructureelements: 6,
-			ifcarchitecturedomain: 7, ifcbuildingcontrolsdomain: 7,
-			ifcelectricaldomain: 7, ifchvacdomain: 7,
-			ifcplumbingfireprotectiondomain: 7, ifcportsandwaterwaysdomain: 7,
-			ifctransportationdomain: 7, ifcgeotechnicaldomain: 7,
-			ifcworkconstructionresource: 7,
-			ifcactorresource: 8, ifcapplicationresource: 8,
-			ifccostresource: 8, ifcexternalreferenceresource: 8,
-			ifcgeometricconstraintresource: 8, ifcgeometryresource: 8,
-			ifcmaterialresource: 8, ifcmeasureresource: 8,
-			ifcpredefinedresource: 8, ifcprofileresource: 8,
-			ifcpropertyresource: 8, ifcquantityresource: 8,
-			ifcreferenceresource: 8, ifcroutingresource: 8,
-			ifcsurfacestylingresource: 8, ifctextualidentifierresource: 8,
-			ifctranslationresource: 8, ifcunitresource: 8,
-			ifcus3dacceptancancresource: 8, ifcutilityresource: 8
-		};
-		var m = href.match(/^schema\/([a-z]+)\//i);
-		if (m) {
-			var folder = m[1].toLowerCase();
-			if (schemaToChapter[folder]) return 'schema/toc-' + schemaToChapter[folder] + '.htm';
-		}
-
-		// schema/chapter-N.htm or schema/chapter-N (without .htm)
-		m = href.match(/^(?:schema\/)?chapter-(\d+)/i);
-		if (m) return 'schema/toc-' + m[1] + '.htm';
-
-		// annex/annex-X.htm or annex-b.htm (bare filename from sidebar toc links)
-		m = href.match(/^(?:annex\/)?annex-([a-f])\.htm$/i);
-		if (m) return 'annex/toc-' + m[1] + '.htm';
-
-		// annex-b/something.htm (from sidebar toc links like annex-b/alphabeticalorder_definedtypes.htm)
-		m = href.match(/^(?:annex\/)?annex-b\/(.*)$/i);
-		if (m) return 'annex/toc-b.htm';
-
-		// Generic: annex-X/... pattern for any annex sub-page
-		m = href.match(/^(?:annex\/)?annex-([a-f])\/(.*)$/i);
-		if (m) return 'annex/toc-' + m[1] + '.htm';
-
-		// Deeply nested: annex/annex-d/... or annex/annex-b/en/...
-		m = href.match(/^(annex)\/[^/]+\/(.*)$/i);
-		if (m) {
-			var firstSub = m[2].split('/')[0];
-			return 'annex/toc-' + firstSub.charAt(0).toLowerCase() + '.htm';
-		}
-
-		return null;
-	}
-
-   /**
-	 * Load a toc file into the sidebar via fetch.
-	 * Returns a promise that resolves when the sidebar DOM is populated.
-	 */
-	function loadSidebar(tocPath) {
-		if (!tocPath) {
-			sidebarBasePath = '';
-			sidebar.innerHTML = '<div class="credits"><p class="small"></p></div>';
-			return Promise.resolve();
-		}
-		sidebarBasePath = tocPath;
-		sidebar.innerHTML = '<div class="loading">Loading...</div>';
-		return fetch(tocPath)
-			.then(function (r) {
-				if (!r.ok) throw new Error('Not found: ' + tocPath);
-				return r.text();
-			})
-			.then(function (html) {
-				var parser = new DOMParser();
-				var doc = parser.parseFromString(html, 'text/html');
-				var menu = doc.querySelector('.menu');
-				if (menu) {
-					sidebar.innerHTML = '<div class="menu">' + menu.innerHTML + '</div>';
-				} else {
-					sidebar.innerHTML = '<div class="credits"><p class="small"></p></div>';
+			/**
+			 * Normalize an href to a relative path from the document root.
+			 * Handles both relative hrefs and absolute URLs (from link.href).
+			 */
+			function normalizeHref(href, linkEl) {
+				var basePath = '';
+				if (linkEl) {
+					if (linkEl.closest('.sidebar')) basePath = sidebarBasePath;
+					else if (linkEl.closest('.content-area')) basePath = contentBasePath;
 				}
-			})
-			.catch(function () {
-				sidebar.innerHTML = '<div class="credits"><p class="small"></p></div>';
-			});
-	}
-
-	/**
-	 * Load a toc file into the sidebar via iframe (file:// fallback).
-	 * The wrapper div handles scrolling, the iframe has no scroll.
-	 */
-	function loadSidebarIframe(tocPath) {
-		if (!tocPath) {
-			sidebar.innerHTML = '<div class="credits"><p class="small"></p></div>';
-			return;
-		}
-		// Account for the iframe's internal body default margin (8px) by sizing the iframe slightly smaller
-		sidebar.innerHTML =
-			'<iframe src="' + tocPath + '" style="width:100%;height:100%;border:none; overflow: auto;display: block;" ' +
-			'sandbox="allow-same-origin"></iframe>';
-		var iframe = sidebar.querySelector('iframe');
-		iframe.onload = function () {
-			var iframeDoc = iframe.contentDocument;
-			if (iframeDoc) {
-				var menu = iframeDoc.querySelector('.menu');
-				if (menu) {
-					// Remove default margins/padding from the iframe's body to prevent double scrollbars
-					iframeDoc.body.style.margin = '0';
-					iframeDoc.body.style.padding = '0';
-					menu.style.boxSizing = "border-box";
-					menu.style.width = "calc(100% - 3px)";
-				}
-			}
-		};
-	}
-
-	/**
-	 * Replace image map inheritance diagrams with CSS-based tiered diagrams.
-	 * Uses pre-computed inheritance-index.json (parent mapping) and
-	 * inheritance-siblings.json (sibling/child mapping).
-	 */
-	var inheritanceIndex = null;
-	var inheritanceSiblings = null;
-	var abstractEntities = null;
-	var deprecatedEntities = null;
-
-	function loadInheritanceIndex(callback) {
-		if (inheritanceIndex && inheritanceSiblings) {
-			callback();
-			return;
-		}
-		Promise.all([
-			fetch('assets/js/inheritance-index.json').then(function (r) { return r.json(); }),
-			fetch('assets/js/inheritance-siblings.json').then(function (r) { return r.json(); }),
-			fetch('assets/js/abstract-entities.json').then(function (r) { return r.json(); }).catch(function () { return []; }),
-			fetch('assets/js/deprecated-entities.json').then(function (r) { return r.json(); }).catch(function () { return []; })
-		]).then(function (data) {
-			inheritanceIndex = data[0];
-			inheritanceSiblings = data[1];
-			abstractEntities = data[2] || [];
-			deprecatedEntities = data[3] || [];
-			callback();
-		}).catch(function () {
-			// If JSON files fail to load, fall back to image map parsing
-			inheritanceIndex = null;
-			inheritanceSiblings = null;
-			abstractEntities = [];
-			deprecatedEntities = [];
-			callback();
-		});
-	}
-
-	function getEntityNameFromHref(href) {
-		// Extract entity name from href, e.g. "../../../schema/ifckernel/lexical/ifcroot.htm" -> "IfcRoot"
-		var parts = href.replace(/\.htm$/, '').split('/');
-		return parts[parts.length - 1];
-	}
-
-	function getCurrentEntityName() {
-		// Extract entity name from the page title, e.g. "6.1.3.1 IfcBeam - IFC4.3.1.0 Documentation" -> "IfcBeam"
-		var title = document.title;
-		var match = title.match(/(\d+\.\d+\.\d+\.\d+\s+)?(Ifc\w+)/);
-		return match ? match[2] : '';
-	}
-
-	function replaceInheritanceImageMaps(callback) {
-		var detailsList = contentArea.querySelectorAll('details');
-		var found = false;
-		for (var d = 0; d < detailsList.length; d++) {
-			var summary = detailsList[d].querySelector('summary');
-			if (!summary) continue;
-			if (summary.textContent.indexOf('Entity inheritance') === -1) continue;
-			var img = detailsList[d].querySelector('img[usemap]');
-			if (!img) continue;
-
-			var mapName = img.getAttribute('usemap').replace('#', '');
-			var map = contentArea.querySelector('map[name="' + mapName + '"]');
-			if (!map) continue;
-
-			// Extract area data from the map
-			var areas = map.querySelectorAll('area[href]');
-			if (areas.length === 0) continue;
-
-			// Build the inheritance chain from the areas
-			var currentEntity = getCurrentEntityName();
-			var chain = [];
-			var previousX = 0;
-			var currentEntityAdded = false;
-			for (var i = 0; i < areas.length; i++) {
-				var area = areas[i];
-				var coords = area.getAttribute('coords').split(',');
-				var y1 = parseInt(coords[1], 10);
-				var href = area.getAttribute('href');
-				var alt = area.getAttribute('alt');
-				if (previousX === 0) previousX = parseInt(coords[0]);
-				var differenceX = previousX - parseInt(coords[0]);
-				if (differenceX == 24 && alt === currentEntity) {
-					// Append the current entity as the last tier (it's not in the image map)
-					chain.push({ href: href, name: alt, y: y1 });
-					chain.push({ href: area.getAttribute('href').replace(/\.htm$/, '') + '/' + currentEntity.toLowerCase() + '.htm', name: currentEntity, y: y1 + 24 });
-					currentEntityAdded = true;
-				}
-				if (inheritanceIndex[currentEntity] === alt){
-					// If this area corresponds to the current entity's direct parent, add it to the chain
-					chain.push({ href: href, name: alt, y: y1 });
-				}
-				if (differenceX != 0) {
-					chain.push({ href: href, name: alt, y: y1 });
-				}
-				previousX = parseInt(coords[0]);
-			}
-			chain.sort(function (a, b) { return a.y - b.y; });
-			if (!currentEntityAdded) {
-				// If the current entity wasn't added from the image map, add it now
-				chain.push({ href: currentEntity.toLowerCase() + '.htm', name: currentEntity, y: chain[chain.length - 1].y + 24 });
-			}
-			
-
-			// Build the tiered diagram HTML using the sibling index
-			var tierHtml = '<ol class="tier">';
-			for (var j = 0; j < chain.length; j++) {
-				var ent = chain[j];
-				var entName = ent.name;
-					var cls = '';
-					var isAbstract = abstractEntities && abstractEntities.indexOf(entName) !== -1;
-					if (j === 0) cls = (isAbstract ? 'abstract ' : '') + 'ancestor';
-					if (j === chain.length - 1) cls = 'ancestor current' + (isAbstract ? ' abstract' : '');
-
-				var arrow = (j === 0) ? '' : '<svg class="arrow-up" viewBox="0 0 10 20" width="10" height="20"><path d="M1,10 L5,4 L9,10" fill="none" stroke="#1976d2" stroke-width="2"/><line x1="5" y1="3" x2="5" y2="19" stroke="#1976d2" stroke-width="2"/></svg>';
-
-				// Get siblings: for the last tier, use the ancestor's siblings list.
-			// For other tiers, use the current entity's siblings list.
-			var siblings = [];
-			var lookupKey = entName;
-			if (j === chain.length - 1 && inheritanceIndex && inheritanceIndex[entName]) {
-				lookupKey = inheritanceIndex[entName];
-			}
-			if (inheritanceSiblings && inheritanceSiblings[lookupKey]) {
-				siblings = inheritanceSiblings[lookupKey].slice();
-			}
-
-			// If no siblings from index, fall back to just the current entity
-			if (siblings.length === 0) {
-				siblings = [entName];
-			}
-
-				// Reorder: current entity (entName) should be leftmost
-				if (entName !== siblings[0]) {
-					var idx = siblings.indexOf(entName);
-					if (idx !== -1) {
-						siblings.splice(idx, 1);
-						siblings.unshift(entName);
-					} else {
-						siblings.unshift(entName);
+				// Resolve relative href against the pane's base path
+				if (!/^[a-z]+:\/\//i.test(href) && basePath) {
+					try {
+						var base = new URL(basePath, location.origin);
+						var resolved = new URL(href, base);
+						href = resolved.pathname;
+					} catch (e) {
+						// Fallback: resolve against document root
+						var rootBase = new URL(location.href);
+						var resolved = new URL(href, rootBase);
+						href = resolved.pathname;
 					}
 				}
 
-				tierHtml += '<li>' + arrow + '<ul class="classes classes-in-chain">';
-				for (var k = 0; k < siblings.length; k++) {
-					var sib = siblings[k];
-					var sibCls = '';
-						if (sib === entName) {
-							sibCls = cls;
-						} else if (deprecatedEntities && deprecatedEntities.indexOf(sib) !== -1) {
-							sibCls = 'deprecated';
-						} else if (abstractEntities && abstractEntities.indexOf(sib) !== -1) {
-							sibCls = 'abstract';
+				// If it's an absolute URL, extract the relative path from the document root
+				if (/^[a-z]+:\/\//i.test(href)) {
+					var u;
+					try { u = new URL(href); } catch (e) { return href; }
+					href = u.pathname;
+				}
+				// Remove trailing hash/fragment
+				href = href.replace(/#.*/, '');
+				// Remove leading ./ or /
+				href = href.replace(/^\.?\//, '');
+
+				// Convert bare filenames to proper paths:
+				// annex-b.htm -> annex/annex-b.htm
+				var m = href.match(/^annex-([a-f])\.htm$/i);
+				if (m) return 'annex/annex-' + m[1] + '.htm';
+
+				// annex-b/something.htm -> annex/annex-b/something.htm
+				m = href.match(/^annex-([a-f])\//i);
+				if (m) return 'annex/annex-' + m[1] + '/' + href.replace(/^annex-([a-f])\//, '');
+
+				return href;
+			}
+
+			/**
+			 * Given a content page href, determine the corresponding toc-*.htm path.
+			 */
+			function resolveTocPath(contentHref) {
+				var href = normalizeHref(contentHref);
+
+				if (/^(cover|toc|foreword|introduction|bibliography|doc_index)\.htm$/i.test(href)) {
+					return null;
+				}
+
+				// schema/ifcXXXXX/... -> map schema folder to chapter toc
+				var schemaToChapter = {
+					ifckernel: 5, ifcproductextension: 5, ifcgeometryresource: 5,
+					ifcmaterialresource: 5, ifcmeasureresource: 5, ifcdatetimeresource: 5,
+					ifcpredefinedresource: 5, ifcpresentationdefinitionresource: 5,
+					ifcpresentationappearanceresource: 5, ifccontrolresource: 5,
+					ifcsharedbldgelements: 6, ifcsharedbldgserviceelements: 6,
+					ifcsharedcomponentelements: 6, ifcsharedfacilitieselements: 6,
+					ifcsharedmgmtelements: 6, ifcsharedinfrastructureelements: 6,
+					ifcarchitecturedomain: 7, ifcbuildingcontrolsdomain: 7,
+					ifcelectricaldomain: 7, ifchvacdomain: 7,
+					ifcplumbingfireprotectiondomain: 7, ifcportsandwaterwaysdomain: 7,
+					ifctransportationdomain: 7, ifcgeotechnicaldomain: 7,
+					ifcworkconstructionresource: 7,
+					ifcactorresource: 8, ifcapplicationresource: 8,
+					ifccostresource: 8, ifcexternalreferenceresource: 8,
+					ifcgeometricconstraintresource: 8, ifcgeometryresource: 8,
+					ifcmaterialresource: 8, ifcmeasureresource: 8,
+					ifcpredefinedresource: 8, ifcprofileresource: 8,
+					ifcpropertyresource: 8, ifcquantityresource: 8,
+					ifcreferenceresource: 8, ifcroutingresource: 8,
+					ifcsurfacestylingresource: 8, ifctextualidentifierresource: 8,
+					ifctranslationresource: 8, ifcunitresource: 8,
+					ifcus3dacceptancancresource: 8, ifcutilityresource: 8
+				};
+				var m = href.match(/^schema\/([a-z]+)\//i);
+				if (m) {
+					var folder = m[1].toLowerCase();
+					if (schemaToChapter[folder]) return 'schema/toc-' + schemaToChapter[folder] + '.htm';
+				}
+
+				// schema/chapter-N.htm or schema/chapter-N (without .htm)
+				m = href.match(/^(?:schema\/)?chapter-(\d+)/i);
+				if (m) return 'schema/toc-' + m[1] + '.htm';
+
+				// annex/annex-X.htm or annex-b.htm (bare filename from sidebar toc links)
+				m = href.match(/^(?:annex\/)?annex-([a-f])\.htm$/i);
+				if (m) return 'annex/toc-' + m[1] + '.htm';
+
+				// annex-b/something.htm (from sidebar toc links like annex-b/alphabeticalorder_definedtypes.htm)
+				m = href.match(/^(?:annex\/)?annex-b\/(.*)$/i);
+				if (m) return 'annex/toc-b.htm';
+
+				// Generic: annex-X/... pattern for any annex sub-page
+				m = href.match(/^(?:annex\/)?annex-([a-f])\/(.*)$/i);
+				if (m) return 'annex/toc-' + m[1] + '.htm';
+
+				// Deeply nested: annex/annex-d/... or annex/annex-b/en/...
+				m = href.match(/^(annex)\/[^/]+\/(.*)$/i);
+				if (m) {
+					var firstSub = m[2].split('/')[0];
+					return 'annex/toc-' + firstSub.charAt(0).toLowerCase() + '.htm';
+				}
+
+				return null;
+			}
+
+			/**
+			  * Load a toc file into the sidebar via fetch.
+			  * Returns a promise that resolves when the sidebar DOM is populated.
+			  */
+			function loadSidebar(tocPath) {
+				if (!tocPath) {
+					sidebarBasePath = '';
+					sidebar.innerHTML = '<div class="credits"><p class="small"></p></div>';
+					return Promise.resolve();
+				}
+				sidebarBasePath = tocPath;
+				sidebar.innerHTML = '<div class="loading">Loading...</div>';
+				return fetch('/' + tocPath)
+					.then(function (r) {
+						if (!r.ok) throw new Error('Not found: ' + tocPath);
+						return r.text();
+					})
+					.then(function (html) {
+						var parser = new DOMParser();
+						var doc = parser.parseFromString(html, 'text/html');
+						var menu = doc.querySelector('.menu');
+						if (menu) {
+							sidebar.innerHTML = '<div class="menu">' + menu.innerHTML + '</div>';
+						} else {
+							sidebar.innerHTML = '<div class="credits"><p class="small"></p></div>';
+						}
+					})
+					.catch(function () {
+						sidebar.innerHTML = '<div class="credits"><p class="small"></p></div>';
+					});
+			}
+
+			/**
+			 * Load a toc file into the sidebar via iframe (file:// fallback).
+			 * The wrapper div handles scrolling, the iframe has no scroll.
+			 */
+			function loadSidebarIframe(tocPath) {
+				if (!tocPath) {
+					sidebar.innerHTML = '<div class="credits"><p class="small"></p></div>';
+					return;
+				}
+				// Account for the iframe's internal body default margin (8px) by sizing the iframe slightly smaller
+				sidebar.innerHTML =
+					'<iframe src="' + tocPath + '" style="width:100%;height:100%;border:none; overflow: auto;display: block;" ' +
+					'sandbox="allow-same-origin"></iframe>';
+				var iframe = sidebar.querySelector('iframe');
+				iframe.onload = function () {
+					var iframeDoc = iframe.contentDocument;
+					if (iframeDoc) {
+						var menu = iframeDoc.querySelector('.menu');
+						if (menu) {
+							// Remove default margins/padding from the iframe's body to prevent double scrollbars
+							iframeDoc.body.style.margin = '0';
+							iframeDoc.body.style.padding = '0';
+							menu.style.boxSizing = "border-box";
+							menu.style.width = "calc(100% - 3px)";
+						}
+					}
+				};
+			}
+
+			/**
+			 * Replace image map inheritance diagrams with CSS-based tiered diagrams.
+			 * Uses pre-computed inheritance-index.json (parent mapping) and
+			 * inheritance-siblings.json (sibling/child mapping).
+			 */
+			var inheritanceIndex = null;
+			var inheritanceSiblings = null;
+			var abstractEntities = null;
+			var deprecatedEntities = null;
+
+			function loadInheritanceIndex(callback) {
+				if (inheritanceIndex && inheritanceSiblings) {
+					callback();
+					return;
+				}
+				Promise.all([
+					fetch('/assets/js/inheritance-index.json').then(function (r) { return r.json(); }),
+					fetch('/assets/js/inheritance-siblings.json').then(function (r) { return r.json(); }),
+					fetch('/assets/js/abstract-entities.json').then(function (r) { return r.json(); }).catch(function () { return []; }),
+					fetch('/assets/js/deprecated-entities.json').then(function (r) { return r.json(); }).catch(function () { return []; })
+				]).then(function (data) {
+					inheritanceIndex = data[0];
+					inheritanceSiblings = data[1];
+					abstractEntities = data[2] || [];
+					deprecatedEntities = data[3] || [];
+					callback();
+				}).catch(function () {
+					// If JSON files fail to load, fall back to image map parsing
+					inheritanceIndex = null;
+					inheritanceSiblings = null;
+					abstractEntities = [];
+					deprecatedEntities = [];
+					callback();
+				});
+			}
+
+			function getEntityNameFromHref(href) {
+				// Extract entity name from href, e.g. "../../../schema/ifckernel/lexical/ifcroot.htm" -> "IfcRoot"
+				var parts = href.replace(/\.htm$/, '').split('/');
+				return parts[parts.length - 1];
+			}
+
+			function getCurrentEntityName() {
+				// Extract entity name from the page title, e.g. "6.1.3.1 IfcBeam - IFC4.3.1.0 Documentation" -> "IfcBeam"
+				var title = document.title;
+				var match = title.match(/(\d+\.\d+\.\d+\.\d+\s+)?(Ifc\w+)/);
+				return match ? match[2] : '';
+			}
+
+			function replaceInheritanceImageMaps(callback) {
+				var detailsList = contentArea.querySelectorAll('details');
+				var found = false;
+				for (var d = 0; d < detailsList.length; d++) {
+					var summary = detailsList[d].querySelector('summary');
+					if (!summary) continue;
+					if (summary.textContent.indexOf('Entity inheritance') === -1) continue;
+					var img = detailsList[d].querySelector('img[usemap]');
+					if (!img) continue;
+
+					var mapName = img.getAttribute('usemap').replace('#', '');
+					var map = contentArea.querySelector('map[name="' + mapName + '"]');
+					if (!map) continue;
+
+					// Extract area data from the map
+					var areas = map.querySelectorAll('area[href]');
+					if (areas.length === 0) continue;
+
+					// Build the inheritance chain from the areas
+					var currentEntity = getCurrentEntityName();
+					var chain = [];
+					var previousX = 0;
+					var currentEntityAdded = false;
+					var child = inheritanceIndex[currentEntity];
+					var i = 0;
+					while (child) {
+						var href = '';
+						for (i; i < areas.length; i++) {
+							var area = areas[i];
+							var alt = area.getAttribute('alt');
+							if (alt === child) {
+								href = area.getAttribute('href');
+								break;
+							}
+						}
+						
+						chain.unshift({ href: href, name: child });
+						child = inheritanceIndex[child];
+						i++;
+					}
+					chain.push({ href: contentBasePath, name: currentEntity });
+					if (inheritanceSiblings[currentEntity] && i === areas.length) {
+						var siblings = inheritanceSiblings[currentEntity];
+						chain.push({ href: areas[i-1].getAttribute('href'), name: siblings[0] });
+					}
+
+					// Build the tiered diagram HTML using the sibling index
+					var tierHtml = '<ol class="tier">';
+					var children = [];
+					for (var j = 0; j < chain.length; j++) {
+						var ent = chain[j];
+						var entName = ent.name;
+						var cls = '';
+						var isAbstract = abstractEntities && abstractEntities.indexOf(entName) !== -1;
+						if (j === 0) cls = (isAbstract ? 'abstract ' : '') + 'ancestor';
+						if (entName ===currentEntity) cls = 'ancestor current' + (isAbstract ? ' abstract' : '');
+
+						var arrow = (j === 0) ? '' : '<svg class="arrow-up" viewBox="0 0 10 20" width="10" height="20"><path d="M1,10 L5,4 L9,10" fill="none" stroke="#1976d2" stroke-width="2"/><line x1="5" y1="3" x2="5" y2="19" stroke="#1976d2" stroke-width="2"/></svg>';
+
+						// Reorder: current entity (entName) should be leftmost
+						if (entName !== children[0]) {
+							var idx = children.indexOf(entName);
+							if (idx !== -1) {
+								children.splice(idx, 1);
+								children.unshift(entName);
+							} else {
+								children.unshift(entName);
+							}
 						}
 
-					// Find href for sibling
-					var sibHref = '';
-					if (sib === entName) {
-						sibHref = ent.href;
-					} else {
-						// Look up the sibling's href from the chain or index
-						// We need to find which ancestor page contains this sibling
-						// For now, construct a reasonable path
-						sibHref = findEntityHref(sib, chain, j);
-					}
+						tierHtml += '<li>' + arrow + '<ul class="classes classes-in-chain">';
+						for (var k = 0; k < children.length; k++) {
+							var sib = children[k];
+							var sibCls = '';
+							if (sib === entName) {
+								sibCls = cls;
+							} else if (deprecatedEntities && deprecatedEntities.indexOf(sib) !== -1) {
+								sibCls = 'deprecated';
+							} else if (abstractEntities && abstractEntities.indexOf(sib) !== -1) {
+								sibCls = 'abstract';
+							}
 
-					tierHtml += '<li class="' + sibCls + '"><a href="' + sibHref + '">' + sib + '</a></li>';
+							// Find href for sibling
+							var sibHref = '';
+							if (sib === entName) {
+								sibHref = ent.href;
+							} else {
+								// Look up the sibling's href from the chain or index
+								// We need to find which ancestor page contains this sibling
+								// For now, construct a reasonable path
+								sibHref = findEntityHref(sib, chain, j);
+							}
+
+							tierHtml += '<li class="' + sibCls + '"><a href="' + sibHref + '">' + sib + '</a></li>';
+						}
+						tierHtml += '</ul></li>';
+						// Get children: for the last tier (current entity), look up its parent's children.
+						// For ancestor tiers, look up that ancestor's children (what would be shown on that ancestor's page).
+						var lookupKey = entName;
+						/* if (j === chain.length - 1 && inheritanceIndex && inheritanceIndex[entName]) {
+							lookupKey = inheritanceIndex[entName];
+						} */
+						if (inheritanceSiblings && inheritanceSiblings[lookupKey]) {
+							children = inheritanceSiblings[lookupKey].slice();
+						}
+						// If lookupKey is an ancestor in the chain, its siblings (peers) are empty.
+						// Instead, show its children from the siblings index.
+						if (children.length === 0 && j < chain.length - 1 && inheritanceSiblings && inheritanceSiblings[entName]) {
+							children = inheritanceSiblings[entName].slice();
+						}
+
+						// If no siblings from index, fall back to just the current entity
+						if (children.length === 0) {
+							children = [entName];
+						}
+					}
+					tierHtml += '</ol>';
+
+					// Replace the image map with the tiered diagram
+					var wrapper = img.parentNode;
+					var newDiv = document.createElement('div');
+					newDiv.innerHTML = tierHtml;
+					var tierEl = newDiv.firstChild;
+
+					wrapper.parentNode.insertBefore(tierEl, wrapper);
+					wrapper.parentNode.removeChild(wrapper);
+
+					// Also remove the map element
+					map.parentNode.removeChild(map);
+
+					found = true;
+					break;
 				}
-				tierHtml += '</ul></li>';
+
+				if (found && callback) callback();
 			}
-			tierHtml += '</ol>';
 
-			// Replace the image map with the tiered diagram
-			var wrapper = img.parentNode;
-			var newDiv = document.createElement('div');
-			newDiv.innerHTML = tierHtml;
-			var tierEl = newDiv.firstChild;
+			function findEntityHref(entityName, chain, currentLevel) {
+				// Try to find the entity in the chain first
+				for (var i = 0; i < chain.length; i++) {
+					if (chain[i].name === entityName) return chain[i].href;
+				}
+				// Try to construct a path based on the ancestor chain
+				// If the entity is at the same level as currentLevel, it's a sibling
+				// Use the parent's href as a base
+				if (currentLevel > 0 && chain[currentLevel]) {
+					var parentHref = chain[currentLevel].href;
+					// Go up one more level to find the parent's parent directory
+					var parentDir = parentHref.replace(/\/[^/]+\.htm$/, '');
+					return '/' + parentDir.replace(/^\//, '') + '/' + entityName.toLowerCase() + '.htm';
+				}
+				return '/' + entityName.toLowerCase() + '.htm';
+			}
 
-			wrapper.parentNode.insertBefore(tierEl, wrapper);
-			wrapper.parentNode.removeChild(wrapper);
+			/**
+			 * Load a content page into the main area via fetch.
+			 */
+			function loadContent(href) {
+				contentBasePath = href;
+				contentArea.innerHTML = '<div class="loading">Loading...</div>';
+				fetch('/' + href)
+					.then(function (r) {
+						if (!r.ok) throw new Error('Failed to load: ' + href);
+						return r.text();
+					})
+					.then(function (html) {
+						var parser = new DOMParser();
+						var doc = parser.parseFromString(html, 'text/html');
+						if (doc.title) {
+							var entityTitle = doc.title;
+							// Extract section number from redirect script: parent.index.location.replace("toc-6.htm#6.1.3.1")
+							var sectionMatch = html.match(/parent\.index\.location\.replace\([^)]*#(\d+\.\d+\.\d+\.\d+)/i);
+							if (sectionMatch) {
+								document.title = sectionMatch[1] + ' ' + entityTitle;
+							} else {
+								document.title = entityTitle;
+							}
+						}
 
-			// Also remove the map element
-			map.parentNode.removeChild(map);
+						// Apply counter-reset from the loaded page's body style so h4.num::before shows correct section numbers
+						var counterMatch = html.match(/counter-reset:\s*index1\s+(\d+)\s+index2\s+(\d+)\s+index3\s+(\d+)\s+index4\s+(\d+)\s+index5\s+(\d+)/i);
+						if (counterMatch) {
+							contentArea.style.counterReset = 'index1 ' + counterMatch[1] + ' index2 ' + counterMatch[2] + ' index3 ' + counterMatch[3] + ' index4 ' + counterMatch[4] + ' index5 ' + counterMatch[5];
+						}
 
-			found = true;
-			break;
-		}
+						// Clone body content and strip <script> tags to prevent
+						// embedded navigation scripts (parent.index.location.replace) from running
+						var bodyClone = doc.body ? doc.body.cloneNode(true) : null;
+						if (bodyClone) {
+							var scripts = bodyClone.querySelectorAll('script');
+							scripts.forEach(function (s) { s.parentNode.removeChild(s); });
+						}
+						contentArea.innerHTML = bodyClone ? bodyClone.innerHTML : '';
 
-		if (found && callback) callback();
-	}
+						// Fix relative paths: after pushState the browser base URL changes,
+						// so relative img/video/src resolve against the wrong directory.
+						// Insert a <base> element so all relative URLs in the content resolve
+						// from the document root instead of the current pushState URL.
+						var baseEl = document.createElement('base');
+						baseEl.href = location.origin + '/';
+						baseEl.setAttribute('data-nav-base', 'true');
+						contentArea.insertBefore(baseEl, contentArea.firstChild);
 
-	function findEntityHref(entityName, chain, currentLevel) {
-		// Try to find the entity in the chain first
-		for (var i = 0; i < chain.length; i++) {
-			if (chain[i].name === entityName) return chain[i].href;
-		}
-		// Try to construct a path based on the ancestor chain
-		// If the entity is at the same level as currentLevel, it's a sibling
-		// Use the parent's href as a base
-		if (currentLevel > 0 && chain[currentLevel]) {
-			var parentHref = chain[currentLevel].href;
-			// Go up one more level to find the parent's parent directory
-			var parentDir = parentHref.replace(/\/[^/]+\.htm$/, '');
-			return parentDir + '/' + entityName.toLowerCase() + '.htm';
-		}
-		return entityName + '.htm';
-	}
+						// Extract sidebar anchor before stripping scripts
+						var sidebarAnchor = extractSidebarAnchor(html);
 
-	/**
-	 * Load a content page into the main area via fetch.
-	 */
-	function loadContent(href) {
-		contentBasePath = href;
-		contentArea.innerHTML = '<div class="loading">Loading...</div>';
-		fetch(href)
-			.then(function (r) {
-				if (!r.ok) throw new Error('Failed to load: ' + href);
-				return r.text();
-			})
-			.then(function (html) {
-				var parser = new DOMParser();
-				var doc = parser.parseFromString(html, 'text/html');
-				if (doc.title) {
-					var entityTitle = doc.title;
-					// Extract section number from redirect script: parent.index.location.replace("toc-6.htm#6.1.3.1")
-					var sectionMatch = html.match(/parent\.index\.location\.replace\([^)]*#(\d+\.\d+\.\d+\.\d+)/i);
-					if (sectionMatch) {
-						document.title = sectionMatch[1] + ' ' + entityTitle;
-					} else {
-						document.title = entityTitle;
+						// Replace image map inheritance diagrams with CSS tiered diagrams
+						loadInheritanceIndex(function () {
+							replaceInheritanceImageMaps();
+							attachContentLinkListeners();
+							// Scroll sidebar to the current section after everything is rendered
+							scrollToSidebarAnchor(sidebarAnchor);
+						});
+					})
+					.catch(function (err) {
+						contentArea.innerHTML = '<div class="error">Error: ' + err.message + '</div>';
+					});
+			}
+
+
+			/**
+			 * Extract the sidebar anchor ID from a loaded content page.
+			 * The original pages contain: parent.index.location.replace("toc-6.htm#6.1.3.1")
+			 * We extract the "6.1.3.1" part.
+			 */
+			function extractSidebarAnchor(html) {
+				var m = html.match(/parent\.index\.location\.replace\([^)]*#(\d+\.\d+\.\d+\.\d+)/i);
+				if (m) return m[1].trim();
+				return null;
+			}
+
+			/**
+			 * Scroll the sidebar so the element with the given id is visible.
+			 * Escapes dots in the ID for valid CSS selector syntax.
+			 * Retries until the element appears (sidebar may still be loading).
+			 */
+			function scrollToSidebarAnchor(anchorId) {
+				if (!anchorId) return;
+				var attempts = 0;
+				var maxAttempts = 30; // 3 seconds max
+				function tryScroll() {
+					var target = document.getElementById(anchorId);
+					if (target) {
+						target.scrollIntoView({ block: 'center', behavior: 'smooth' });
+						return;
+					}
+					attempts++;
+					if (attempts < maxAttempts) {
+						setTimeout(tryScroll, 100);
 					}
 				}
+				tryScroll();
+			}
 
-				// Apply counter-reset from the loaded page's body style so h4.num::before shows correct section numbers
-				var counterMatch = html.match(/counter-reset:\s*index1\s+(\d+)\s+index2\s+(\d+)\s+index3\s+(\d+)\s+index4\s+(\d+)\s+index5\s+(\d+)/i);
-				if (counterMatch) {
-					contentArea.style.counterReset = 'index1 ' + counterMatch[1] + ' index2 ' + counterMatch[2] + ' index3 ' + counterMatch[3] + ' index4 ' + counterMatch[4] + ' index5 ' + counterMatch[5];
+			/**
+			 * Navigate to a page using hash-based routing.
+			 * The URL format is: index-new.htm#/schema/chapter-1.htm
+			 * This works with any server (no rewrite config needed) and
+			 * supports browser back/forward natively.
+			 */
+			function navigateTo(href, tocPath) {
+				var resolvedHref = normalizeHref(href, null);
+				var resolvedToc = tocPath || resolveTocPath(resolvedHref);
+
+				// If we're not at the end of the stack, truncate forward entries
+				if (navIndex < navHistory.length - 1) {
+					navHistory = navHistory.slice(0, navIndex + 1);
+				}
+				navHistory.push({ href: resolvedHref, tocPath: resolvedToc });
+				navIndex = navHistory.length - 1;
+
+				// Update browser URL with hash fragment
+				var newHash = '#' + encodeURIComponent(resolvedHref);
+				if (window.location.hash !== newHash) {
+					window.location.hash = newHash;
 				}
 
-				// Clone body content and strip <script> tags to prevent
-				// embedded navigation scripts (parent.index.location.replace) from running
-				var bodyClone = doc.body ? doc.body.cloneNode(true) : null;
-				if (bodyClone) {
-					var scripts = bodyClone.querySelectorAll('script');
-					scripts.forEach(function (s) { s.parentNode.removeChild(s); });
+				// Load content and sidebar
+				if (canFetchLocal) {
+					loadContent(resolvedHref);
+					loadSidebar(resolvedToc);
+				} else {
+					// file:// fallback: iframe approach
+					contentArea.innerHTML =
+						'<iframe src="/' + resolvedHref + '" style="width:100%;height:100%;border:none;" ' +
+						'sandbox="allow-same-origin"></iframe>';
+					loadSidebarIframe(resolvedToc);
 				}
-				contentArea.innerHTML = bodyClone ? bodyClone.innerHTML : '';
+			}
 
-				// Extract sidebar anchor before stripping scripts
-				var sidebarAnchor = extractSidebarAnchor(html);
-
-				// Replace image map inheritance diagrams with CSS tiered diagrams
-				loadInheritanceIndex(function () {
-					replaceInheritanceImageMaps();
-					attachContentLinkListeners();
-					// Scroll sidebar to the current section after everything is rendered
-					scrollToSidebarAnchor(sidebarAnchor);
+			/**
+			 * Attach click listeners to .listing-link elements inside loaded content.
+			 */
+			function attachContentLinkListeners() {
+				contentArea.addEventListener('click', function (event) {
+					var link = event.target.closest('.content-area a[href]');
+					if (!link) return;
+					event.preventDefault();
+					var href = normalizeHref(link.getAttribute('href'), link);
+					navigateTo(href);
 				});
-			})
-			.catch(function (err) {
-				contentArea.innerHTML = '<div class="error">Error: ' + err.message + '</div>';
+			}
+
+			/**
+			 * Main click handler: intercepts clicks on top-bar links.
+			 */
+			tocGrid.addEventListener('click', function (event) {
+				var link = event.target.closest('.listing-link');
+				if (!link) return;
+				if (link.closest('.sidebar') || link.closest('.content-area')) {
+					event.preventDefault();
+					return;
+				}
+				event.preventDefault();
+				var href = normalizeHref(link.getAttribute('href'), link);
+				navigateTo(href);
 			});
-	}
 
+			/**
+			 * Sidebar click handler: handles navigation from toc links in the sidebar.
+			 */
+			sidebar.addEventListener('click', function (event) {
+				var link = event.target.closest('.sidebar a[href]');
+				if (!link) return;
+				event.preventDefault();
+				var href = normalizeHref(link.getAttribute('href'), link);
+				navigateTo(href);
+			});
 
-	/**
-	 * Extract the sidebar anchor ID from a loaded content page.
-	 * The original pages contain: parent.index.location.replace("toc-6.htm#6.1.3.1")
-	 * We extract the "6.1.3.1" part.
-	 */
-	function extractSidebarAnchor(html) {
-		var m = html.match(/parent\.index\.location\.replace\([^)]*#(\d+\.\d+\.\d+\.\d+)/i);
-		if (m) return m[1].trim();
-		return null;
-	}
+			/**
+			 * Handle initial page load and hash changes (back/forward).
+			 * Hash-based routing uses the hashchange event for navigation
+			 * and checks the initial hash on page load.
+			 */
+			function handleHashNavigation() {
+				var hash = window.location.hash.replace(/^#/, '');
+				if (!hash) return;
 
-	/**
-	 * Scroll the sidebar so the element with the given id is visible.
-	 * Escapes dots in the ID for valid CSS selector syntax.
-	 * Retries until the element appears (sidebar may still be loading).
-	 */
-	function scrollToSidebarAnchor(anchorId) {
-		if (!anchorId) return;
-		var attempts = 0;
-		var maxAttempts = 30; // 3 seconds max
-		function tryScroll() {
-			var target = document.getElementById(anchorId);
-			if (target) {
-				target.scrollIntoView({ block: 'center', behavior: 'smooth' });
-				return;
+				var path = decodeURIComponent(hash);
+				if (path === 'index-new.htm') return;
+
+				var tocPath = resolveTocPath(path);
+				if (tocPath !== null) {
+					// Update nav history - avoid duplicates
+					if (navIndex < 0 || navHistory[navIndex].href !== path) {
+						navHistory.push({ href: path, tocPath: tocPath });
+						navIndex = navHistory.length - 1;
+					}
+					if (canFetchLocal) {
+						loadContent(path);
+						loadSidebar(tocPath);
+					} else {
+						contentArea.innerHTML =
+							'<iframe src="/' + path + '" style="width:100%;height:100%;border:none;" ' +
+							'sandbox="allow-same-origin"></iframe>';
+						loadSidebarIframe(tocPath);
+					}
+				}
 			}
-			attempts++;
-			if (attempts < maxAttempts) {
-				setTimeout(tryScroll, 100);
-			}
-		}
-		tryScroll();
-	}
 
-	/**
-	 * Attach click listeners to .listing-link elements inside loaded content.
-	 */
-	function attachContentLinkListeners() {
-		contentArea.addEventListener('click', function (event) {
-			var link = event.target.closest('.content-area a[href]');
-			if (!link) return;
-			event.preventDefault();
-			var href = normalizeHref(link.getAttribute('href'), link);
-			var tocPath = resolveTocPath(href);
-			if (canFetchLocal) {
-				loadContent(href);
-				loadSidebar(tocPath);
-			} else {
-				contentArea.innerHTML =
-					'<iframe src="' + href + '" style="width:100%;height:100%;border:none;" ' +
-					'sandbox="allow-same-origin"></iframe>';
-				loadSidebarIframe(tocPath);
-			}
-		});
-	}
+			// Listen for hash changes (browser back/forward)
+			window.addEventListener('hashchange', handleHashNavigation);
 
-	/**
-	 * Main click handler: intercepts clicks on top-bar links.
-	 */
-	tocGrid.addEventListener('click', function (event) {
-		var link = event.target.closest('.listing-link');
-		if (!link) return;
-		console.log('doc handler: link.href=' + link.getAttribute('href'), 'inSidebar=' + !!link.closest('.sidebar'), 'inContent=' + !!link.closest('.content-area'));
-		if (link.closest('.sidebar') || link.closest('.content-area')) {
-			event.preventDefault();
-			return;
-		}
-		event.preventDefault();
-		var href = normalizeHref(link.getAttribute('href'), link);
-		var tocPath = resolveTocPath(href);
-
-		if (canFetchLocal) {
-			loadContent(href);
-			loadSidebar(tocPath);
-		} else {
-			contentArea.innerHTML =
-				'<iframe src="' + href + '" style="width:100%;height:100%;border:none;" ' +
-				'sandbox="allow-same-origin"></iframe>';
-			loadSidebarIframe(tocPath);
-		}
-	});
-
-	/**
-	 * Sidebar click handler: handles navigation from toc links in the sidebar.
-	 */
-	sidebar.addEventListener('click', function (event) {
-		var link = event.target.closest('.sidebar a[href]');
-		if (!link) return;
-		event.preventDefault();
-		var href = normalizeHref(link.getAttribute('href'), link);
-		var tocPath = resolveTocPath(href);
-
-		if (canFetchLocal) {
-			loadContent(href);
-			loadSidebar(tocPath);
-		} else {
-			contentArea.innerHTML =
-				'<iframe src="' + href + '" style="width:100%;height:100%;border:none;" ' +
-				'sandbox="allow-same-origin"></iframe>';
-			loadSidebarIframe(tocPath);
-		}
-	});
-})();
-</script>
+			// Handle initial load
+			handleHashNavigation();
+		})();
+	</script>
 
 </body>
+
 </html>

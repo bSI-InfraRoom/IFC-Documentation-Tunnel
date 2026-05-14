@@ -1,30 +1,62 @@
 {
+  "IfcAbsorbedDoseMeasure": [],
   "IfcAccelerationMeasure": [],
+  "IfcActionRequest": [],
+  "IfcActionRequestTypeEnum": [],
+  "IfcActionSourceTypeEnum": [],
+  "IfcActionTypeEnum": [],
+  "IfcActor": [
+    "IfcOccupant"
+  ],
   "IfcActorResource": [],
   "IfcActorRole": [],
   "IfcActorSelect": [],
   "IfcActuator": [],
+  "IfcActuatorType": [],
   "IfcActuatorTypeEnum": [],
   "IfcAddress": [
     "IfcPostalAddress",
     "IfcTelecomAddress"
   ],
   "IfcAddressTypeEnum": [],
+  "IfcAdvancedBrep": [
+    "IfcAdvancedBrepWithVoids"
+  ],
+  "IfcAdvancedBrepWithVoids": [],
+  "IfcAdvancedFace": [],
   "IfcAirTerminal": [],
   "IfcAirTerminalBox": [],
+  "IfcAirTerminalBoxType": [],
   "IfcAirTerminalBoxTypeEnum": [],
+  "IfcAirTerminalType": [],
   "IfcAirTerminalTypeEnum": [],
   "IfcAirToAirHeatRecovery": [],
+  "IfcAirToAirHeatRecoveryType": [],
   "IfcAirToAirHeatRecoveryTypeEnum": [],
   "IfcAlarm": [],
+  "IfcAlarmType": [],
   "IfcAlarmTypeEnum": [],
   "IfcAlignment": [],
   "IfcAlignmentCant": [],
+  "IfcAlignmentCantSegment": [],
+  "IfcAlignmentCantSegmentTypeEnum": [],
   "IfcAlignmentHorizontal": [],
-  "IfcAlignmentParameterSegment": [],
+  "IfcAlignmentHorizontalSegment": [],
+  "IfcAlignmentHorizontalSegmentTypeEnum": [],
+  "IfcAlignmentParameterSegment": [
+    "IfcAlignmentCantSegment",
+    "IfcAlignmentHorizontalSegment",
+    "IfcAlignmentVerticalSegment"
+  ],
+  "IfcAlignmentRepresentation": [],
   "IfcAlignmentSegment": [],
   "IfcAlignmentTypeEnum": [],
   "IfcAlignmentVertical": [],
+  "IfcAlignmentVerticalSegment": [],
+  "IfcAlignmentVerticalSegmentTypeEnum": [],
+  "IfcAmountOfSubstanceMeasure": [],
+  "IfcAnalysisModelTypeEnum": [],
+  "IfcAnalysisTheoryTypeEnum": [],
   "IfcAngularVelocityMeasure": [],
   "IfcAnnotation": [],
   "IfcAnnotationFillArea": [],
@@ -33,47 +65,129 @@
   "IfcAppliedValue": [
     "IfcCostValue"
   ],
+  "IfcAppliedValueSelect": [],
+  "IfcApproval": [],
+  "IfcApprovalRelationship": [],
+  "IfcApprovalResource": [],
   "IfcArbitraryClosedProfileDef": [
     "IfcArbitraryProfileDefWithVoids"
   ],
+  "IfcArbitraryOpenProfileDef": [
+    "IfcCenterLineProfileDef"
+  ],
   "IfcArbitraryProfileDefWithVoids": [],
   "IfcArcIndex": [],
+  "IfcArchElement": [],
+  "IfcArchElementType": [],
+  "IfcArchElementTypeEnum": [],
   "IfcArchitectureDomain": [],
   "IfcAreaDensityMeasure": [],
   "IfcAreaMeasure": [],
+  "IfcArithmeticOperatorEnum": [],
+  "IfcAssemblyPlaceEnum": [],
   "IfcAsset": [],
+  "IfcAssociatedSurface": [],
+  "IfcAsymmetricIShapeProfileDef": [],
   "IfcAudioVisualAppliance": [],
+  "IfcAudioVisualApplianceType": [],
   "IfcAudioVisualApplianceTypeEnum": [],
   "IfcAxis1Placement": [],
   "IfcAxis2Placement": [],
   "IfcAxis2Placement2D": [],
   "IfcAxis2Placement3D": [],
   "IfcAxis2PlacementLinear": [],
+  "IfcBSplineCurve": [
+    "IfcBSplineCurveWithKnots"
+  ],
+  "IfcBSplineCurveForm": [],
+  "IfcBSplineCurveWithKnots": [
+    "IfcRationalBSplineCurveWithKnots"
+  ],
+  "IfcBSplineSurface": [
+    "IfcBSplineSurfaceWithKnots"
+  ],
+  "IfcBSplineSurfaceForm": [],
+  "IfcBSplineSurfaceWithKnots": [
+    "IfcRationalBSplineSurfaceWithKnots"
+  ],
+  "IfcBaseAxis": [],
   "IfcBeam": [],
+  "IfcBeamType": [],
   "IfcBeamTypeEnum": [],
   "IfcBearing": [],
+  "IfcBearingType": [],
   "IfcBearingTypeEnum": [],
+  "IfcBenchmarkEnum": [],
   "IfcBendingParameterSelect": [],
+  "IfcBinary": [],
+  "IfcBlobTexture": [],
+  "IfcBlock": [],
   "IfcBoiler": [],
+  "IfcBoilerType": [],
   "IfcBoilerTypeEnum": [],
   "IfcBoolean": [],
+  "IfcBooleanChoose": [],
+  "IfcBooleanClippingResult": [],
+  "IfcBooleanOperand": [],
+  "IfcBooleanOperator": [],
+  "IfcBooleanResult": [
+    "IfcBooleanClippingResult"
+  ],
   "IfcBorehole": [],
+  "IfcBoreholeType": [],
+  "IfcBoreholeTypeEnum": [],
+  "IfcBoundaryCondition": [
+    "IfcBoundaryEdgeCondition",
+    "IfcBoundaryFaceCondition",
+    "IfcBoundaryNodeCondition"
+  ],
+  "IfcBoundaryCurve": [
+    "IfcOuterBoundaryCurve"
+  ],
+  "IfcBoundaryEdgeCondition": [],
+  "IfcBoundaryFaceCondition": [],
+  "IfcBoundaryNodeCondition": [
+    "IfcBoundaryNodeConditionWarping"
+  ],
+  "IfcBoundaryNodeConditionWarping": [],
   "IfcBoundedCurve": [
+    "IfcBSplineCurve",
     "IfcCompositeCurve",
     "IfcIndexedPolyCurve",
-    "IfcPolyline"
+    "IfcPolyline",
+    "IfcTrimmedCurve"
+  ],
+  "IfcBoundedSurface": [
+    "IfcBSplineSurface",
+    "IfcCurveBoundedPlane",
+    "IfcCurveBoundedSurface",
+    "IfcRectangularTrimmedSurface"
   ],
   "IfcBoundingBox": [],
+  "IfcBoxAlignment": [],
+  "IfcBoxedHalfSpace": [],
   "IfcBridge": [],
+  "IfcBridgePart": [],
+  "IfcBridgePartTypeEnum": [],
   "IfcBridgeTypeEnum": [],
+  "IfcBuild2Axes": [],
+  "IfcBuildAxes": [],
   "IfcBuilding": [],
   "IfcBuildingControlsDomain": [],
   "IfcBuildingElementPart": [],
+  "IfcBuildingElementPartType": [],
   "IfcBuildingElementPartTypeEnum": [],
+  "IfcBuildingElementProxy": [],
+  "IfcBuildingElementProxyType": [],
+  "IfcBuildingElementProxyTypeEnum": [],
   "IfcBuildingStorey": [],
+  "IfcBuildingSystem": [],
+  "IfcBuildingSystemTypeEnum": [],
   "IfcBuiltElement": [
+    "IfcArchElement",
     "IfcBeam",
     "IfcBearing",
+    "IfcBuildingElementProxy",
     "IfcChimney",
     "IfcColumn",
     "IfcCourse",
@@ -82,7 +196,9 @@
     "IfcDeepFoundation",
     "IfcDoor",
     "IfcEarthworksElement",
+    "IfcFillElement",
     "IfcFooting",
+    "IfcGroundReinforcementElement",
     "IfcKerb",
     "IfcMember",
     "IfcMooringDevice",
@@ -103,23 +219,61 @@
     "IfcWindow"
   ],
   "IfcBuiltElementType": [
+    "IfcArchElementType",
+    "IfcBeamType",
+    "IfcBearingType",
+    "IfcBuildingElementProxyType",
+    "IfcChimneyType",
+    "IfcColumnType",
+    "IfcCourseType",
+    "IfcCoveringType",
+    "IfcCurtainWallType",
+    "IfcDeepFoundationType",
     "IfcDoorType",
+    "IfcFillElementType",
+    "IfcFootingType",
+    "IfcGroundReinforcementElementType",
+    "IfcKerbType",
+    "IfcMemberType",
+    "IfcMooringDeviceType",
+    "IfcNavigationElementType",
+    "IfcPavementType",
+    "IfcPlateType",
+    "IfcRailType",
+    "IfcRailingType",
+    "IfcRampFlightType",
+    "IfcRampType",
+    "IfcRoofType",
+    "IfcShadingDeviceType",
+    "IfcSlabType",
+    "IfcStairFlightType",
+    "IfcStairType",
+    "IfcTrackElementType",
+    "IfcWallType",
     "IfcWindowType"
   ],
   "IfcBuiltSystem": [],
   "IfcBuiltSystemTypeEnum": [],
   "IfcBurner": [],
+  "IfcBurnerType": [],
   "IfcBurnerTypeEnum": [],
+  "IfcCShapeProfileDef": [],
   "IfcCableCarrierFitting": [],
+  "IfcCableCarrierFittingType": [],
   "IfcCableCarrierFittingTypeEnum": [],
   "IfcCableCarrierSegment": [],
+  "IfcCableCarrierSegmentType": [],
   "IfcCableCarrierSegmentTypeEnum": [],
   "IfcCableFitting": [],
+  "IfcCableFittingType": [],
   "IfcCableFittingTypeEnum": [],
   "IfcCableSegment": [],
+  "IfcCableSegmentType": [],
   "IfcCableSegmentTypeEnum": [],
   "IfcCaissonFoundation": [],
+  "IfcCaissonFoundationType": [],
   "IfcCaissonFoundationTypeEnum": [],
+  "IfcCardinalPointReference": [],
   "IfcCartesianPoint": [],
   "IfcCartesianPointList": [
     "IfcCartesianPointList2D",
@@ -139,18 +293,29 @@
     "IfcCartesianTransformationOperator3DnonUniform"
   ],
   "IfcCartesianTransformationOperator3DnonUniform": [],
+  "IfcCenterLineProfileDef": [],
   "IfcChangeActionEnum": [],
   "IfcChiller": [],
+  "IfcChillerType": [],
   "IfcChillerTypeEnum": [],
   "IfcChimney": [],
+  "IfcChimneyType": [],
   "IfcChimneyTypeEnum": [],
   "IfcCircle": [],
+  "IfcCircleHollowProfileDef": [],
+  "IfcCircleProfileDef": [
+    "IfcCircleHollowProfileDef"
+  ],
+  "IfcCivilElement": [],
+  "IfcCivilElementType": [],
   "IfcClassification": [],
   "IfcClassificationReference": [],
   "IfcClassificationReferenceSelect": [],
   "IfcClassificationSelect": [],
+  "IfcClosedShell": [],
   "IfcClothoid": [],
   "IfcCoil": [],
+  "IfcCoilType": [],
   "IfcCoilTypeEnum": [],
   "IfcColour": [],
   "IfcColourOrFactor": [],
@@ -160,101 +325,247 @@
     "IfcColourRgb"
   ],
   "IfcColumn": [],
+  "IfcColumnType": [],
   "IfcColumnTypeEnum": [],
   "IfcCommunicationsAppliance": [],
+  "IfcCommunicationsApplianceType": [],
   "IfcCommunicationsApplianceTypeEnum": [],
+  "IfcComplementaryData": [
+    "IfcObservation",
+    "IfcVoxelData"
+  ],
   "IfcComplexNumber": [],
+  "IfcComplexProperty": [],
+  "IfcComplexPropertyTemplate": [],
+  "IfcComplexPropertyTemplateTypeEnum": [],
   "IfcCompositeCurve": [
+    "IfcCompositeCurveOnSurface",
     "IfcGradientCurve",
     "IfcSegmentedReferenceCurve"
   ],
+  "IfcCompositeCurveOnSurface": [
+    "IfcBoundaryCurve"
+  ],
+  "IfcCompositeCurveSegment": [
+    "IfcReparametrisedCompositeCurveSegment"
+  ],
+  "IfcCompositeProfileDef": [],
   "IfcCompoundPlaneAngleMeasure": [],
   "IfcCompressor": [],
+  "IfcCompressorType": [],
   "IfcCompressorTypeEnum": [],
   "IfcCondenser": [],
+  "IfcCondenserType": [],
   "IfcCondenserTypeEnum": [],
   "IfcConic": [
-    "IfcCircle"
+    "IfcCircle",
+    "IfcEllipse"
   ],
+  "IfcConnectedFaceSet": [
+    "IfcClosedShell",
+    "IfcOpenShell"
+  ],
+  "IfcConnectionCurveGeometry": [],
+  "IfcConnectionGeometry": [
+    "IfcConnectionCurveGeometry",
+    "IfcConnectionPointGeometry",
+    "IfcConnectionSurfaceGeometry",
+    "IfcConnectionVolumeGeometry"
+  ],
+  "IfcConnectionPointEccentricity": [],
+  "IfcConnectionPointGeometry": [
+    "IfcConnectionPointEccentricity"
+  ],
+  "IfcConnectionSurfaceGeometry": [],
+  "IfcConnectionTypeEnum": [],
+  "IfcConnectionVolumeGeometry": [],
   "IfcConsecutiveSegments": [],
+  "IfcConstraint": [
+    "IfcMetric",
+    "IfcObjective"
+  ],
+  "IfcConstraintEnum": [],
+  "IfcConstraintResource": [],
+  "IfcConstraintsParamBSpline": [],
+  "IfcConstructionEquipmentResource": [],
+  "IfcConstructionEquipmentResourceType": [],
+  "IfcConstructionEquipmentResourceTypeEnum": [],
+  "IfcConstructionMaterialResource": [],
+  "IfcConstructionMaterialResourceType": [],
+  "IfcConstructionMaterialResourceTypeEnum": [],
+  "IfcConstructionMgmtDomain": [],
+  "IfcConstructionProductResource": [],
+  "IfcConstructionProductResourceType": [],
+  "IfcConstructionProductResourceTypeEnum": [],
+  "IfcConstructionResource": [
+    "IfcConstructionEquipmentResource",
+    "IfcConstructionMaterialResource",
+    "IfcConstructionProductResource",
+    "IfcCrewResource",
+    "IfcLaborResource",
+    "IfcSubContractResource"
+  ],
+  "IfcConstructionResourceType": [
+    "IfcConstructionEquipmentResourceType",
+    "IfcConstructionMaterialResourceType",
+    "IfcConstructionProductResourceType",
+    "IfcCrewResourceType",
+    "IfcLaborResourceType",
+    "IfcSubContractResourceType"
+  ],
   "IfcContext": [
     "IfcProject",
     "IfcProjectLibrary"
   ],
+  "IfcContextDependentMeasure": [],
+  "IfcContextDependentUnit": [],
+  "IfcControl": [
+    "IfcActionRequest",
+    "IfcCostItem",
+    "IfcCostSchedule",
+    "IfcPerformanceHistory",
+    "IfcPermit",
+    "IfcProjectOrder",
+    "IfcWorkCalendar",
+    "IfcWorkControl"
+  ],
+  "IfcControlExtension": [],
   "IfcController": [],
+  "IfcControllerType": [],
   "IfcControllerTypeEnum": [],
   "IfcConversionBasedUnit": [
     "IfcConversionBasedUnitWithOffset"
   ],
   "IfcConversionBasedUnitWithOffset": [],
+  "IfcConvertDirectionInto2D": [],
   "IfcConveyorSegment": [],
+  "IfcConveyorSegmentType": [],
   "IfcConveyorSegmentTypeEnum": [],
   "IfcCooledBeam": [],
+  "IfcCooledBeamType": [],
   "IfcCooledBeamTypeEnum": [],
   "IfcCoolingTower": [],
+  "IfcCoolingTowerType": [],
   "IfcCoolingTowerTypeEnum": [],
   "IfcCoordinateOperation": [
-    "IfcMapConversion"
+    "IfcMapConversion",
+    "IfcRigidOperation"
   ],
   "IfcCoordinateReferenceSystem": [
+    "IfcGeographicCRS",
     "IfcProjectedCRS"
   ],
   "IfcCoordinateReferenceSystemSelect": [],
   "IfcCorrectDimensions": [],
   "IfcCorrectFillAreaStyle": [],
   "IfcCorrectLocalPlacement": [],
-  "IfcCorrectObjectAssignment": [],
   "IfcCorrectUnitAssignment": [],
-  "IfcCosine": [],
   "IfcCosineSpiral": [],
+  "IfcCostItem": [],
+  "IfcCostItemTypeEnum": [],
   "IfcCostResource": [],
+  "IfcCostSchedule": [],
+  "IfcCostScheduleTypeEnum": [],
   "IfcCostValue": [],
   "IfcCountMeasure": [],
   "IfcCourse": [],
+  "IfcCourseType": [],
   "IfcCourseTypeEnum": [],
   "IfcCovering": [],
+  "IfcCoveringType": [],
   "IfcCoveringTypeEnum": [],
+  "IfcCrewResource": [],
+  "IfcCrewResourceType": [],
+  "IfcCrewResourceTypeEnum": [],
   "IfcCrossProduct": [],
+  "IfcCsgPrimitive3D": [
+    "IfcBlock",
+    "IfcRectangularPyramid",
+    "IfcRightCircularCone",
+    "IfcRightCircularCylinder",
+    "IfcSphere"
+  ],
+  "IfcCsgSelect": [],
+  "IfcCsgSolid": [],
+  "IfcCurrencyRelationship": [],
   "IfcCurtainWall": [],
+  "IfcCurtainWallType": [],
   "IfcCurtainWallTypeEnum": [],
+  "IfcCurvatureMeasure": [],
   "IfcCurve": [
     "IfcBoundedCurve",
     "IfcConic",
     "IfcLine",
+    "IfcOffsetCurve",
+    "IfcPcurve",
     "IfcPolynomialCurve",
-    "IfcSpiral"
+    "IfcSpiral",
+    "IfcSurfaceCurve"
   ],
+  "IfcCurveBoundedPlane": [],
+  "IfcCurveBoundedSurface": [],
+  "IfcCurveDim": [],
   "IfcCurveFontOrScaledCurveFontSelect": [],
   "IfcCurveInterpolationEnum": [],
   "IfcCurveMeasureSelect": [],
+  "IfcCurveOnSurface": [],
+  "IfcCurveOrEdgeCurve": [],
   "IfcCurveSegment": [],
   "IfcCurveStyle": [],
   "IfcCurveStyleFont": [],
+  "IfcCurveStyleFontAndScaling": [],
   "IfcCurveStyleFontPattern": [],
   "IfcCurveStyleFontSelect": [],
+  "IfcCurveWeightsPositive": [],
+  "IfcCylindricalSurface": [],
   "IfcDamper": [],
+  "IfcDamperType": [],
   "IfcDamperTypeEnum": [],
   "IfcDataOriginEnum": [],
+  "IfcDatasetInformation": [],
+  "IfcDatasetReference": [],
+  "IfcDatasetSelect": [],
   "IfcDate": [],
   "IfcDateTime": [],
   "IfcDateTimeResource": [],
+  "IfcDayInMonthNumber": [],
+  "IfcDayInWeekNumber": [],
   "IfcDeepFoundation": [
     "IfcCaissonFoundation",
     "IfcPile"
   ],
+  "IfcDeepFoundationType": [
+    "IfcCaissonFoundationType",
+    "IfcPileType"
+  ],
   "IfcDefinitionSelect": [],
+  "IfcDeriveDimensionalExponents": [],
   "IfcDerivedMeasureValue": [],
+  "IfcDerivedProfileDef": [
+    "IfcMirroredProfileDef"
+  ],
   "IfcDerivedUnit": [],
   "IfcDerivedUnitElement": [],
   "IfcDerivedUnitEnum": [],
+  "IfcDescriptiveMeasure": [],
   "IfcDimensionCount": [],
   "IfcDimensionalExponents": [],
+  "IfcDimensionsForSIUnit": [],
   "IfcDirection": [],
+  "IfcDirectionSenseEnum": [],
+  "IfcDirectrixCurveSweptAreaSolid": [
+    "IfcFixedReferenceSweptAreaSolid",
+    "IfcSurfaceCurveSweptAreaSolid"
+  ],
+  "IfcDirectrixDerivedReferenceSweptAreaSolid": [],
   "IfcDiscreteAccessory": [],
+  "IfcDiscreteAccessoryType": [],
   "IfcDiscreteAccessoryTypeEnum": [],
   "IfcDistributionBoard": [],
+  "IfcDistributionBoardType": [],
   "IfcDistributionBoardTypeEnum": [],
   "IfcDistributionChamberElement": [],
+  "IfcDistributionChamberElementType": [],
   "IfcDistributionChamberElementTypeEnum": [],
   "IfcDistributionCircuit": [],
   "IfcDistributionControlElement": [
@@ -266,9 +577,22 @@
     "IfcSensor",
     "IfcUnitaryControlElement"
   ],
+  "IfcDistributionControlElementType": [
+    "IfcActuatorType",
+    "IfcAlarmType",
+    "IfcControllerType",
+    "IfcFlowInstrumentType",
+    "IfcProtectiveDeviceTrippingUnitType",
+    "IfcSensorType",
+    "IfcUnitaryControlElementType"
+  ],
   "IfcDistributionElement": [
     "IfcDistributionControlElement",
     "IfcDistributionFlowElement"
+  ],
+  "IfcDistributionElementType": [
+    "IfcDistributionControlElementType",
+    "IfcDistributionFlowElementType"
   ],
   "IfcDistributionFlowElement": [
     "IfcDistributionChamberElement",
@@ -281,15 +605,31 @@
     "IfcFlowTerminal",
     "IfcFlowTreatmentDevice"
   ],
+  "IfcDistributionFlowElementType": [
+    "IfcDistributionChamberElementType",
+    "IfcEnergyConversionDeviceType",
+    "IfcFlowControllerType",
+    "IfcFlowFittingType",
+    "IfcFlowMovingDeviceType",
+    "IfcFlowSegmentType",
+    "IfcFlowStorageDeviceType",
+    "IfcFlowTerminalType",
+    "IfcFlowTreatmentDeviceType"
+  ],
   "IfcDistributionPort": [],
   "IfcDistributionPortTypeEnum": [],
   "IfcDistributionSystem": [
     "IfcDistributionCircuit"
   ],
   "IfcDistributionSystemEnum": [],
-  "IfcDocumentInformation": [],
+  "IfcDocumentConfidentialityEnum": [],
+  "IfcDocumentInformation": [
+    "IfcDatasetInformation"
+  ],
+  "IfcDocumentInformationRelationship": [],
   "IfcDocumentReference": [],
   "IfcDocumentSelect": [],
+  "IfcDocumentStatusEnum": [],
   "IfcDoor": [],
   "IfcDoorLiningProperties": [],
   "IfcDoorPanelOperationEnum": [],
@@ -298,55 +638,85 @@
   "IfcDoorType": [],
   "IfcDoorTypeEnum": [],
   "IfcDoorTypeOperationEnum": [],
+  "IfcDoseEquivalentMeasure": [],
   "IfcDotProduct": [],
+  "IfcDraughtingPreDefinedColour": [],
+  "IfcDraughtingPreDefinedCurveFont": [],
   "IfcDuctFitting": [],
+  "IfcDuctFittingType": [],
   "IfcDuctFittingTypeEnum": [],
   "IfcDuctSegment": [],
+  "IfcDuctSegmentType": [],
   "IfcDuctSegmentTypeEnum": [],
   "IfcDuctSilencer": [],
+  "IfcDuctSilencerType": [],
   "IfcDuctSilencerTypeEnum": [],
   "IfcDuration": [],
+  "IfcDynamicViscosityMeasure": [],
+  "IfcEarthingElement": [],
+  "IfcEarthingElementType": [],
+  "IfcEarthingElementTypeEnum": [],
   "IfcEarthworksCut": [],
   "IfcEarthworksCutTypeEnum": [],
   "IfcEarthworksElement": [
     "IfcEarthworksFill",
+    "IfcImprovedGround",
     "IfcReinforcedSoil"
   ],
   "IfcEarthworksFill": [],
   "IfcEarthworksFillTypeEnum": [],
+  "IfcEdge": [
+    "IfcEdgeCurve",
+    "IfcOrientedEdge",
+    "IfcSubedge"
+  ],
+  "IfcEdgeCurve": [],
+  "IfcEdgeLoop": [],
   "IfcElectricAppliance": [],
+  "IfcElectricApplianceType": [],
   "IfcElectricApplianceTypeEnum": [],
   "IfcElectricCapacitanceMeasure": [],
   "IfcElectricChargeMeasure": [],
+  "IfcElectricConductanceMeasure": [],
   "IfcElectricCurrentMeasure": [],
   "IfcElectricDistributionBoard": [],
+  "IfcElectricDistributionBoardType": [],
   "IfcElectricDistributionBoardTypeEnum": [],
   "IfcElectricFlowStorageDevice": [],
+  "IfcElectricFlowStorageDeviceType": [],
   "IfcElectricFlowStorageDeviceTypeEnum": [],
   "IfcElectricFlowTreatmentDevice": [],
+  "IfcElectricFlowTreatmentDeviceType": [],
   "IfcElectricFlowTreatmentDeviceTypeEnum": [],
   "IfcElectricGenerator": [],
+  "IfcElectricGeneratorType": [],
   "IfcElectricGeneratorTypeEnum": [],
   "IfcElectricMotor": [],
+  "IfcElectricMotorType": [],
   "IfcElectricMotorTypeEnum": [],
   "IfcElectricResistanceMeasure": [],
   "IfcElectricTimeControl": [],
+  "IfcElectricTimeControlType": [],
   "IfcElectricTimeControlTypeEnum": [],
   "IfcElectricVoltageMeasure": [],
   "IfcElectricalDomain": [],
+  "IfcElectricalResistivityMeasure": [],
   "IfcElement": [
     "IfcBuiltElement",
+    "IfcCivilElement",
     "IfcDistributionElement",
     "IfcElementAssembly",
     "IfcElementComponent",
     "IfcFeatureElement",
     "IfcFurnishingElement",
+    "IfcGeoScienceElement",
     "IfcGeographicElement",
     "IfcGeotechnicalElement",
-    "IfcTransportElement",
+    "IfcTransportationDevice",
     "IfcVirtualElement"
   ],
   "IfcElementAssembly": [],
+  "IfcElementAssemblyType": [],
   "IfcElementAssemblyTypeEnum": [],
   "IfcElementComponent": [
     "IfcBuildingElementPart",
@@ -355,18 +725,42 @@
     "IfcImpactProtectionDevice",
     "IfcMechanicalFastener",
     "IfcReinforcingElement",
-    "IfcSign"
+    "IfcSign",
+    "IfcVibrationDamper",
+    "IfcVibrationIsolator"
   ],
   "IfcElementComponentType": [
+    "IfcBuildingElementPartType",
+    "IfcDiscreteAccessoryType",
+    "IfcFastenerType",
+    "IfcImpactProtectionDeviceType",
     "IfcMechanicalFastenerType",
-    "IfcReinforcingElementType"
+    "IfcReinforcingElementType",
+    "IfcSignType",
+    "IfcVibrationDamperType",
+    "IfcVibrationIsolatorType"
   ],
   "IfcElementCompositionEnum": [],
   "IfcElementQuantity": [],
   "IfcElementType": [
     "IfcBuiltElementType",
-    "IfcElementComponentType"
+    "IfcCivilElementType",
+    "IfcDistributionElementType",
+    "IfcElementAssemblyType",
+    "IfcElementComponentType",
+    "IfcFurnishingElementType",
+    "IfcGeoScienceElementType",
+    "IfcGeographicElementType",
+    "IfcTransportationDeviceType"
   ],
+  "IfcElementarySurface": [
+    "IfcCylindricalSurface",
+    "IfcPlane",
+    "IfcSphericalSurface",
+    "IfcToroidalSurface"
+  ],
+  "IfcEllipse": [],
+  "IfcEllipseProfileDef": [],
   "IfcEnergyConversionDevice": [
     "IfcAirToAirHeatRecovery",
     "IfcBoiler",
@@ -389,13 +783,51 @@
     "IfcTubeBundle",
     "IfcUnitaryEquipment"
   ],
+  "IfcEnergyConversionDeviceType": [
+    "IfcAirToAirHeatRecoveryType",
+    "IfcBoilerType",
+    "IfcBurnerType",
+    "IfcChillerType",
+    "IfcCoilType",
+    "IfcCondenserType",
+    "IfcCooledBeamType",
+    "IfcCoolingTowerType",
+    "IfcElectricGeneratorType",
+    "IfcElectricMotorType",
+    "IfcEngineType",
+    "IfcEvaporativeCoolerType",
+    "IfcEvaporatorType",
+    "IfcHeatExchangerType",
+    "IfcHumidifierType",
+    "IfcMotorConnectionType",
+    "IfcSolarDeviceType",
+    "IfcTransformerType",
+    "IfcTubeBundleType",
+    "IfcUnitaryEquipmentType"
+  ],
   "IfcEnergyMeasure": [],
   "IfcEngine": [],
+  "IfcEngineType": [],
   "IfcEngineTypeEnum": [],
   "IfcEvaporativeCooler": [],
+  "IfcEvaporativeCoolerType": [],
   "IfcEvaporativeCoolerTypeEnum": [],
   "IfcEvaporator": [],
+  "IfcEvaporatorType": [],
   "IfcEvaporatorTypeEnum": [],
+  "IfcEvent": [],
+  "IfcEventTime": [],
+  "IfcEventTriggerTypeEnum": [],
+  "IfcEventType": [],
+  "IfcEventTypeEnum": [],
+  "IfcExcavation": [
+    "IfcEarthworksCut",
+    "IfcUndergroundExcavation"
+  ],
+  "IfcExtendedProperties": [
+    "IfcMaterialProperties",
+    "IfcProfileProperties"
+  ],
   "IfcExternalInformation": [
     "IfcClassification",
     "IfcDocumentInformation",
@@ -403,30 +835,69 @@
   ],
   "IfcExternalReference": [
     "IfcClassificationReference",
+    "IfcDatasetReference",
     "IfcDocumentReference",
     "IfcExternallyDefinedHatchStyle",
     "IfcExternallyDefinedSurfaceStyle",
     "IfcExternallyDefinedTextFont",
     "IfcLibraryReference"
   ],
+  "IfcExternalReferenceRelationship": [],
   "IfcExternalReferenceResource": [],
+  "IfcExternalSpatialElement": [],
+  "IfcExternalSpatialElementTypeEnum": [],
+  "IfcExternalSpatialStructureElement": [
+    "IfcExternalSpatialElement"
+  ],
   "IfcExternallyDefinedHatchStyle": [],
   "IfcExternallyDefinedSurfaceStyle": [],
   "IfcExternallyDefinedTextFont": [],
-  "IfcExtrudedAreaSolid": [],
+  "IfcExtrudedAreaSolid": [
+    "IfcExtrudedAreaSolidTapered"
+  ],
+  "IfcExtrudedAreaSolidTapered": [],
+  "IfcFace": [
+    "IfcFaceSurface"
+  ],
+  "IfcFaceBasedSurfaceModel": [],
+  "IfcFaceBound": [
+    "IfcFaceOuterBound"
+  ],
+  "IfcFaceExcavation": [],
+  "IfcFaceExcavationTypeEnum": [],
+  "IfcFaceOuterBound": [],
+  "IfcFaceSurface": [
+    "IfcAdvancedFace"
+  ],
+  "IfcFacetedBrep": [
+    "IfcFacetedBrepWithVoids"
+  ],
+  "IfcFacetedBrepWithVoids": [],
   "IfcFacility": [
     "IfcBridge",
     "IfcBuilding",
     "IfcMarineFacility",
     "IfcRailway",
-    "IfcRoad"
+    "IfcRoad",
+    "IfcTunnel"
   ],
-  "IfcFacilityPart": [],
-  "IfcFacilityPartTypeSelect": [],
+  "IfcFacilityPart": [
+    "IfcBridgePart",
+    "IfcFacilityPartCommon",
+    "IfcMarinePart",
+    "IfcRailwayPart",
+    "IfcRoadPart",
+    "IfcTunnelPart"
+  ],
+  "IfcFacilityPartCommon": [],
+  "IfcFacilityPartCommonTypeEnum": [],
   "IfcFacilityUsageEnum": [],
+  "IfcFailureConnectionCondition": [],
   "IfcFan": [],
+  "IfcFanType": [],
   "IfcFanTypeEnum": [],
   "IfcFastener": [],
+  "IfcFastenerType": [],
   "IfcFastenerTypeEnum": [],
   "IfcFeatureElement": [
     "IfcFeatureElementAddition",
@@ -437,18 +908,27 @@
     "IfcProjectionElement"
   ],
   "IfcFeatureElementSubtraction": [
-    "IfcEarthworksCut",
+    "IfcExcavation",
     "IfcOpeningElement",
     "IfcVoidingFeature"
   ],
   "IfcFillAreaStyle": [],
   "IfcFillAreaStyleHatching": [],
   "IfcFillAreaStyleTiles": [],
+  "IfcFillElement": [],
+  "IfcFillElementType": [],
+  "IfcFillElementTypeEnum": [],
   "IfcFillStyleSelect": [],
   "IfcFilter": [],
+  "IfcFilterType": [],
   "IfcFilterTypeEnum": [],
   "IfcFireSuppressionTerminal": [],
+  "IfcFireSuppressionTerminalType": [],
   "IfcFireSuppressionTerminalTypeEnum": [],
+  "IfcFirstProjAxis": [],
+  "IfcFixedReferenceSweptAreaSolid": [
+    "IfcDirectrixDerivedReferenceSweptAreaSolid"
+  ],
   "IfcFlowController": [
     "IfcAirTerminalBox",
     "IfcDamper",
@@ -460,6 +940,17 @@
     "IfcSwitchingDevice",
     "IfcValve"
   ],
+  "IfcFlowControllerType": [
+    "IfcAirTerminalBoxType",
+    "IfcDamperType",
+    "IfcDistributionBoardType",
+    "IfcElectricDistributionBoardType",
+    "IfcElectricTimeControlType",
+    "IfcFlowMeterType",
+    "IfcProtectiveDeviceType",
+    "IfcSwitchingDeviceType",
+    "IfcValveType"
+  ],
   "IfcFlowDirectionEnum": [],
   "IfcFlowFitting": [
     "IfcCableCarrierFitting",
@@ -468,14 +959,28 @@
     "IfcJunctionBox",
     "IfcPipeFitting"
   ],
+  "IfcFlowFittingType": [
+    "IfcCableCarrierFittingType",
+    "IfcCableFittingType",
+    "IfcDuctFittingType",
+    "IfcJunctionBoxType",
+    "IfcPipeFittingType"
+  ],
   "IfcFlowInstrument": [],
+  "IfcFlowInstrumentType": [],
   "IfcFlowInstrumentTypeEnum": [],
   "IfcFlowMeter": [],
+  "IfcFlowMeterType": [],
   "IfcFlowMeterTypeEnum": [],
   "IfcFlowMovingDevice": [
     "IfcCompressor",
     "IfcFan",
     "IfcPump"
+  ],
+  "IfcFlowMovingDeviceType": [
+    "IfcCompressorType",
+    "IfcFanType",
+    "IfcPumpType"
   ],
   "IfcFlowSegment": [
     "IfcCableCarrierSegment",
@@ -484,14 +989,26 @@
     "IfcDuctSegment",
     "IfcPipeSegment"
   ],
+  "IfcFlowSegmentType": [
+    "IfcCableCarrierSegmentType",
+    "IfcCableSegmentType",
+    "IfcConveyorSegmentType",
+    "IfcDuctSegmentType",
+    "IfcPipeSegmentType"
+  ],
   "IfcFlowStorageDevice": [
     "IfcElectricFlowStorageDevice",
     "IfcTank"
+  ],
+  "IfcFlowStorageDeviceType": [
+    "IfcElectricFlowStorageDeviceType",
+    "IfcTankType"
   ],
   "IfcFlowTerminal": [
     "IfcAirTerminal",
     "IfcAudioVisualAppliance",
     "IfcCommunicationsAppliance",
+    "IfcEarthingElement",
     "IfcElectricAppliance",
     "IfcFireSuppressionTerminal",
     "IfcLamp",
@@ -506,16 +1023,42 @@
     "IfcStackTerminal",
     "IfcWasteTerminal"
   ],
+  "IfcFlowTerminalType": [
+    "IfcAirTerminalType",
+    "IfcAudioVisualApplianceType",
+    "IfcCommunicationsApplianceType",
+    "IfcEarthingElementType",
+    "IfcElectricApplianceType",
+    "IfcFireSuppressionTerminalType",
+    "IfcLampType",
+    "IfcLightFixtureType",
+    "IfcLiquidTerminalType",
+    "IfcMedicalDeviceType",
+    "IfcMobileTelecommunicationsApplianceType",
+    "IfcOutletType",
+    "IfcSanitaryTerminalType",
+    "IfcSignalType",
+    "IfcSpaceHeaterType",
+    "IfcStackTerminalType",
+    "IfcWasteTerminalType"
+  ],
   "IfcFlowTreatmentDevice": [
     "IfcDuctSilencer",
     "IfcElectricFlowTreatmentDevice",
     "IfcFilter",
     "IfcInterceptor"
   ],
+  "IfcFlowTreatmentDeviceType": [
+    "IfcDuctSilencerType",
+    "IfcElectricFlowTreatmentDeviceType",
+    "IfcFilterType",
+    "IfcInterceptorType"
+  ],
   "IfcFontStyle": [],
   "IfcFontVariant": [],
   "IfcFontWeight": [],
   "IfcFooting": [],
+  "IfcFootingType": [],
   "IfcFootingTypeEnum": [],
   "IfcForceMeasure": [],
   "IfcFrequencyMeasure": [],
@@ -523,11 +1066,34 @@
     "IfcFurniture",
     "IfcSystemFurnitureElement"
   ],
-  "IfcFurniture": [],
-  "IfcFurnitureTypeEnum": [],
-  "IfcGeographicElement": [
-    "IfcPlant"
+  "IfcFurnishingElementType": [
+    "IfcFurnitureType",
+    "IfcSystemFurnitureElementType"
   ],
+  "IfcFurniture": [],
+  "IfcFurnitureType": [],
+  "IfcFurnitureTypeEnum": [],
+  "IfcGeoScienceElement": [
+    "IfcBorehole",
+    "IfcGeoScienceFeature",
+    "IfcGeoScienceModel"
+  ],
+  "IfcGeoScienceElementType": [
+    "IfcBoreholeType",
+    "IfcGeoScienceFeatureType",
+    "IfcGeoScienceModelType"
+  ],
+  "IfcGeoScienceFeature": [],
+  "IfcGeoScienceFeatureType": [],
+  "IfcGeoScienceFeatureTypeEnum": [],
+  "IfcGeoScienceModel": [],
+  "IfcGeoScienceModelType": [],
+  "IfcGeoScienceModelTypeEnum": [],
+  "IfcGeoScienceObservation": [],
+  "IfcGeoScienceObservationTypeEnum": [],
+  "IfcGeographicCRS": [],
+  "IfcGeographicElement": [],
+  "IfcGeographicElementType": [],
   "IfcGeographicElementTypeEnum": [],
   "IfcGeometricConstraintResource": [],
   "IfcGeometricCurveSet": [],
@@ -538,17 +1104,25 @@
   ],
   "IfcGeometricRepresentationItem": [
     "IfcAnnotationFillArea",
+    "IfcBooleanResult",
     "IfcBoundingBox",
     "IfcCartesianPointList",
     "IfcCartesianTransformationOperator",
+    "IfcCsgPrimitive3D",
     "IfcCurve",
     "IfcDirection",
+    "IfcFaceBasedSurfaceModel",
     "IfcFillAreaStyleHatching",
     "IfcFillAreaStyleTiles",
     "IfcGeometricSet",
+    "IfcHalfSpaceSolid",
+    "IfcLightSource",
     "IfcPlacement",
+    "IfcPlanarExtent",
     "IfcPoint",
+    "IfcSectionedSpine",
     "IfcSegment",
+    "IfcShellBasedSurfaceModel",
     "IfcSolidModel",
     "IfcSurface",
     "IfcTessellatedItem",
@@ -564,7 +1138,6 @@
   "IfcGeomodel": [],
   "IfcGeoslice": [],
   "IfcGeotechnicalAssembly": [
-    "IfcBorehole",
     "IfcGeomodel",
     "IfcGeoslice"
   ],
@@ -572,89 +1145,186 @@
     "IfcGeotechnicalAssembly",
     "IfcGeotechnicalStratum"
   ],
-  "IfcGeotechnicalStratum": [
-    "IfcSolidStratum",
-    "IfcVoidStratum",
-    "IfcWaterStratum"
-  ],
+  "IfcGeotechnicalStratum": [],
+  "IfcGeotechnicalStratumTypeEnum": [],
+  "IfcGetBasisSurface": [],
+  "IfcGlobalOrLocalEnum": [],
   "IfcGloballyUniqueId": [],
   "IfcGradientCurve": [],
   "IfcGrid": [],
   "IfcGridAxis": [],
+  "IfcGridPlacement": [],
+  "IfcGridPlacementDirectionSelect": [],
   "IfcGridTypeEnum": [],
+  "IfcGroundReinforcementElement": [],
+  "IfcGroundReinforcementElementType": [],
+  "IfcGroundReinforcementElementTypeEnum": [],
   "IfcGroup": [
     "IfcAsset",
+    "IfcInventory",
+    "IfcStructuralLoadGroup",
+    "IfcStructuralResultGroup",
     "IfcSystem"
+  ],
+  "IfcHalfSpaceSolid": [
+    "IfcBoxedHalfSpace",
+    "IfcPolygonalBoundedHalfSpace"
   ],
   "IfcHatchLineDistanceSelect": [],
   "IfcHeatExchanger": [],
+  "IfcHeatExchangerType": [],
   "IfcHeatExchangerTypeEnum": [],
   "IfcHeatFluxDensityMeasure": [],
+  "IfcHeatingValueMeasure": [],
   "IfcHumidifier": [],
+  "IfcHumidifierType": [],
   "IfcHumidifierTypeEnum": [],
   "IfcHvacDomain": [],
+  "IfcIShapeProfileDef": [],
   "IfcIdentifier": [],
   "IfcIlluminanceMeasure": [],
   "IfcImageTexture": [],
   "IfcImpactProtectionDevice": [],
-  "IfcImpactProtectionDeviceTypeSelect": [],
+  "IfcImpactProtectionDeviceType": [],
+  "IfcImpactProtectionDeviceTypeEnum": [],
+  "IfcImprovedGround": [],
+  "IfcImprovedGroundTypeEnum": [],
   "IfcIndexedColourMap": [],
   "IfcIndexedPolyCurve": [],
   "IfcIndexedPolygonalFace": [
     "IfcIndexedPolygonalFaceWithVoids"
   ],
   "IfcIndexedPolygonalFaceWithVoids": [],
+  "IfcIndexedPolygonalTextureMap": [],
   "IfcIndexedTextureMap": [
+    "IfcIndexedPolygonalTextureMap",
     "IfcIndexedTriangleTextureMap"
   ],
   "IfcIndexedTriangleTextureMap": [],
   "IfcInductanceMeasure": [],
   "IfcInteger": [],
   "IfcIntegerCountRateMeasure": [],
+  "IfcIntegerVoxelData": [],
   "IfcInterceptor": [],
+  "IfcInterceptorType": [],
   "IfcInterceptorTypeEnum": [],
+  "IfcInterferenceSelect": [],
+  "IfcInternalOrExternalEnum": [],
+  "IfcIntersectionCurve": [],
+  "IfcInventory": [],
+  "IfcInventoryTypeEnum": [],
+  "IfcIonConcentrationMeasure": [],
+  "IfcIrregularTimeSeries": [],
+  "IfcIrregularTimeSeriesValue": [],
+  "IfcIsothermalMoistureCapacityMeasure": [],
   "IfcJunctionBox": [],
+  "IfcJunctionBoxType": [],
   "IfcJunctionBoxTypeEnum": [],
   "IfcKerb": [],
+  "IfcKerbType": [],
   "IfcKerbTypeEnum": [],
   "IfcKernel": [],
+  "IfcKinematicViscosityMeasure": [],
+  "IfcKnotType": [],
+  "IfcLShapeProfileDef": [],
   "IfcLabel": [],
+  "IfcLabelVoxelData": [],
+  "IfcLaborResource": [],
+  "IfcLaborResourceType": [],
+  "IfcLaborResourceTypeEnum": [],
+  "IfcLagTime": [],
   "IfcLamp": [],
+  "IfcLampType": [],
   "IfcLampTypeEnum": [],
   "IfcLanguageId": [],
+  "IfcLayerSetDirectionEnum": [],
+  "IfcLayeredItem": [],
   "IfcLengthMeasure": [],
   "IfcLibraryInformation": [],
   "IfcLibraryReference": [],
   "IfcLibrarySelect": [],
+  "IfcLightDistributionCurveEnum": [],
+  "IfcLightDistributionData": [],
+  "IfcLightDistributionDataSourceSelect": [],
+  "IfcLightEmissionSourceEnum": [],
   "IfcLightFixture": [],
+  "IfcLightFixtureType": [],
   "IfcLightFixtureTypeEnum": [],
+  "IfcLightIntensityDistribution": [],
+  "IfcLightSource": [
+    "IfcLightSourceAmbient",
+    "IfcLightSourceDirectional",
+    "IfcLightSourceGoniometric",
+    "IfcLightSourcePositional"
+  ],
+  "IfcLightSourceAmbient": [],
+  "IfcLightSourceDirectional": [],
+  "IfcLightSourceGoniometric": [],
+  "IfcLightSourcePositional": [
+    "IfcLightSourceSpot"
+  ],
+  "IfcLightSourceSpot": [],
   "IfcLine": [],
   "IfcLineIndex": [],
   "IfcLinearElement": [
     "IfcAlignmentCant",
     "IfcAlignmentHorizontal",
     "IfcAlignmentSegment",
-    "IfcAlignmentVertical"
+    "IfcAlignmentVertical",
+    "IfcLinearZone"
   ],
+  "IfcLinearForceMeasure": [],
+  "IfcLinearMomentMeasure": [],
   "IfcLinearPlacement": [],
   "IfcLinearPositioningElement": [
     "IfcAlignment"
   ],
+  "IfcLinearStiffnessMeasure": [],
   "IfcLinearVelocityMeasure": [],
+  "IfcLinearZone": [
+    "IfcTunnelTypicalSection"
+  ],
   "IfcLiquidTerminal": [],
+  "IfcLiquidTerminalType": [],
   "IfcLiquidTerminalTypeEnum": [],
+  "IfcListToArray": [],
+  "IfcListToExpandedArray": [],
+  "IfcLoadGroupTypeEnum": [],
   "IfcLocalPlacement": [],
   "IfcLogical": [],
+  "IfcLogicalOperatorEnum": [],
+  "IfcLogicalVoxelData": [],
+  "IfcLoop": [
+    "IfcEdgeLoop",
+    "IfcPolyLoop",
+    "IfcVertexLoop"
+  ],
+  "IfcLoopHeadToTail": [],
   "IfcLuminousFluxMeasure": [],
-  "IfcMapConversion": [],
+  "IfcLuminousIntensityDistributionMeasure": [],
+  "IfcLuminousIntensityMeasure": [],
+  "IfcMagneticFluxDensityMeasure": [],
+  "IfcMagneticFluxMeasure": [],
+  "IfcMakeArrayOfArray": [],
+  "IfcManifoldSolidBrep": [
+    "IfcAdvancedBrep",
+    "IfcFacetedBrep"
+  ],
+  "IfcMapConversion": [
+    "IfcMapConversionScaled"
+  ],
+  "IfcMapConversionScaled": [],
   "IfcMappedItem": [],
   "IfcMarineFacility": [],
   "IfcMarineFacilityTypeEnum": [],
+  "IfcMarinePart": [],
+  "IfcMarinePartTypeEnum": [],
   "IfcMassDensityMeasure": [],
   "IfcMassFlowRateMeasure": [],
   "IfcMassMeasure": [],
   "IfcMassPerLengthMeasure": [],
   "IfcMaterial": [],
+  "IfcMaterialClassificationRelationship": [],
   "IfcMaterialConstituent": [],
   "IfcMaterialConstituentSet": [],
   "IfcMaterialDefinition": [
@@ -666,14 +1336,31 @@
     "IfcMaterialProfile",
     "IfcMaterialProfileSet"
   ],
-  "IfcMaterialLayer": [],
+  "IfcMaterialDefinitionRepresentation": [],
+  "IfcMaterialLayer": [
+    "IfcMaterialLayerWithOffsets"
+  ],
   "IfcMaterialLayerSet": [],
+  "IfcMaterialLayerSetUsage": [],
+  "IfcMaterialLayerWithOffsets": [],
   "IfcMaterialList": [],
-  "IfcMaterialProfile": [],
+  "IfcMaterialProfile": [
+    "IfcMaterialProfileWithOffsets"
+  ],
   "IfcMaterialProfileSet": [],
+  "IfcMaterialProfileSetUsage": [
+    "IfcMaterialProfileSetUsageTapering"
+  ],
+  "IfcMaterialProfileSetUsageTapering": [],
+  "IfcMaterialProfileWithOffsets": [],
+  "IfcMaterialProperties": [],
+  "IfcMaterialRelationship": [],
   "IfcMaterialResource": [],
   "IfcMaterialSelect": [],
-  "IfcMaterialUsageDefinition": [],
+  "IfcMaterialUsageDefinition": [
+    "IfcMaterialLayerSetUsage",
+    "IfcMaterialProfileSetUsage"
+  ],
   "IfcMeasureResource": [],
   "IfcMeasureValue": [],
   "IfcMeasureWithUnit": [],
@@ -681,31 +1368,56 @@
   "IfcMechanicalFastenerType": [],
   "IfcMechanicalFastenerTypeEnum": [],
   "IfcMedicalDevice": [],
+  "IfcMedicalDeviceType": [],
   "IfcMedicalDeviceTypeEnum": [],
   "IfcMember": [],
+  "IfcMemberType": [],
   "IfcMemberTypeEnum": [],
+  "IfcMetric": [],
+  "IfcMetricValueSelect": [],
+  "IfcMirroredProfileDef": [],
+  "IfcMlsTotalThickness": [],
   "IfcMobileTelecommunicationsAppliance": [],
+  "IfcMobileTelecommunicationsApplianceType": [],
   "IfcMobileTelecommunicationsApplianceTypeEnum": [],
   "IfcModulusOfElasticityMeasure": [],
+  "IfcModulusOfLinearSubgradeReactionMeasure": [],
+  "IfcModulusOfRotationalSubgradeReactionMeasure": [],
+  "IfcModulusOfRotationalSubgradeReactionSelect": [],
+  "IfcModulusOfSubgradeReactionMeasure": [],
+  "IfcModulusOfSubgradeReactionSelect": [],
+  "IfcModulusOfTranslationalSubgradeReactionSelect": [],
+  "IfcMoistureDiffusivityMeasure": [],
+  "IfcMolecularWeightMeasure": [],
+  "IfcMomentOfInertiaMeasure": [],
   "IfcMonetaryMeasure": [],
   "IfcMonetaryUnit": [],
+  "IfcMonthInYearNumber": [],
   "IfcMooringDevice": [],
+  "IfcMooringDeviceType": [],
   "IfcMooringDeviceTypeEnum": [],
   "IfcMotorConnection": [],
+  "IfcMotorConnectionType": [],
   "IfcMotorConnectionTypeEnum": [],
   "IfcNamedUnit": [
+    "IfcContextDependentUnit",
     "IfcConversionBasedUnit",
     "IfcSIUnit"
   ],
   "IfcNavigationElement": [],
+  "IfcNavigationElementType": [],
   "IfcNavigationElementTypeEnum": [],
   "IfcNonNegativeLengthMeasure": [],
   "IfcNormalise": [],
   "IfcNormalisedRatioMeasure": [],
   "IfcNumericMeasure": [],
   "IfcObject": [
+    "IfcActor",
+    "IfcControl",
     "IfcGroup",
-    "IfcProduct"
+    "IfcProcess",
+    "IfcProduct",
+    "IfcResource"
   ],
   "IfcObjectDefinition": [
     "IfcContext",
@@ -713,52 +1425,125 @@
     "IfcTypeObject"
   ],
   "IfcObjectPlacement": [
+    "IfcGridPlacement",
     "IfcLinearPlacement",
     "IfcLocalPlacement"
   ],
+  "IfcObjectReferenceSelect": [],
+  "IfcObjective": [],
+  "IfcObjectiveEnum": [],
+  "IfcObservation": [
+    "IfcGeoScienceObservation"
+  ],
+  "IfcOccupant": [],
+  "IfcOccupantTypeEnum": [],
+  "IfcOffsetCurve": [
+    "IfcOffsetCurve2D",
+    "IfcOffsetCurve3D",
+    "IfcOffsetCurveByDistances"
+  ],
+  "IfcOffsetCurve2D": [],
+  "IfcOffsetCurve3D": [],
+  "IfcOffsetCurveByDistances": [],
+  "IfcOpenCrossProfileDef": [],
+  "IfcOpenShell": [],
   "IfcOpeningElement": [],
   "IfcOpeningElementTypeEnum": [],
   "IfcOrganization": [],
+  "IfcOrganizationRelationship": [],
+  "IfcOrientedEdge": [],
+  "IfcOrthogonalComplement": [],
+  "IfcOuterBoundaryCurve": [],
   "IfcOutlet": [],
+  "IfcOutletType": [],
   "IfcOutletTypeEnum": [],
   "IfcOwnerHistory": [],
+  "IfcPHMeasure": [],
   "IfcParameterValue": [],
+  "IfcParameterizedProfileDef": [
+    "IfcAsymmetricIShapeProfileDef",
+    "IfcCShapeProfileDef",
+    "IfcCircleProfileDef",
+    "IfcEllipseProfileDef",
+    "IfcIShapeProfileDef",
+    "IfcLShapeProfileDef",
+    "IfcRectangleProfileDef",
+    "IfcTShapeProfileDef",
+    "IfcTrapeziumProfileDef",
+    "IfcUShapeProfileDef",
+    "IfcZShapeProfileDef"
+  ],
+  "IfcPath": [],
+  "IfcPathHeadToTail": [],
   "IfcPavement": [],
+  "IfcPavementType": [],
   "IfcPavementTypeEnum": [],
+  "IfcPcurve": [],
+  "IfcPerformanceHistory": [],
+  "IfcPerformanceHistoryTypeEnum": [],
+  "IfcPermeableCoveringOperationEnum": [],
+  "IfcPermeableCoveringProperties": [],
+  "IfcPermit": [],
+  "IfcPermitTypeEnum": [],
   "IfcPerson": [],
   "IfcPersonAndOrganization": [],
+  "IfcPhysicalComplexQuantity": [],
+  "IfcPhysicalOrVirtualEnum": [],
   "IfcPhysicalQuantity": [
+    "IfcPhysicalComplexQuantity",
     "IfcPhysicalSimpleQuantity"
   ],
   "IfcPhysicalSimpleQuantity": [
     "IfcQuantityArea",
     "IfcQuantityCount",
     "IfcQuantityLength",
+    "IfcQuantityNumber",
     "IfcQuantityTime",
     "IfcQuantityVolume",
     "IfcQuantityWeight"
   ],
   "IfcPile": [],
+  "IfcPileConstructionEnum": [],
+  "IfcPileType": [],
   "IfcPileTypeEnum": [],
   "IfcPipeFitting": [],
+  "IfcPipeFittingType": [],
   "IfcPipeFittingTypeEnum": [],
   "IfcPipeSegment": [],
+  "IfcPipeSegmentType": [],
   "IfcPipeSegmentTypeEnum": [],
+  "IfcPixelTexture": [],
   "IfcPlacement": [
     "IfcAxis1Placement",
     "IfcAxis2Placement2D",
     "IfcAxis2Placement3D",
     "IfcAxis2PlacementLinear"
   ],
+  "IfcPlanarBox": [],
+  "IfcPlanarExtent": [
+    "IfcPlanarBox"
+  ],
   "IfcPlanarForceMeasure": [],
+  "IfcPlane": [],
   "IfcPlaneAngleMeasure": [],
-  "IfcPlant": [],
   "IfcPlate": [],
+  "IfcPlateType": [],
   "IfcPlateTypeEnum": [],
   "IfcPlumbingFireProtectionDomain": [],
   "IfcPoint": [
-    "IfcCartesianPoint"
+    "IfcCartesianPoint",
+    "IfcPointByDistanceExpression",
+    "IfcPointOnCurve",
+    "IfcPointOnSurface"
   ],
+  "IfcPointByDistanceExpression": [],
+  "IfcPointDim": [],
+  "IfcPointListDim": [],
+  "IfcPointOnCurve": [],
+  "IfcPointOnSurface": [],
+  "IfcPointOrVertexPoint": [],
+  "IfcPolyLoop": [],
+  "IfcPolygonalBoundedHalfSpace": [],
   "IfcPolygonalFaceSet": [],
   "IfcPolyline": [],
   "IfcPolynomialCurve": [],
@@ -777,20 +1562,34 @@
   "IfcPositiveRatioMeasure": [],
   "IfcPostalAddress": [],
   "IfcPowerMeasure": [],
-  "IfcPreDefinedColour": [],
+  "IfcPreDefinedColour": [
+    "IfcDraughtingPreDefinedColour"
+  ],
+  "IfcPreDefinedCurveFont": [
+    "IfcDraughtingPreDefinedCurveFont"
+  ],
   "IfcPreDefinedItem": [
     "IfcPreDefinedColour",
+    "IfcPreDefinedCurveFont",
     "IfcPreDefinedTextFont"
+  ],
+  "IfcPreDefinedProperties": [
+    "IfcReinforcementBarProperties",
+    "IfcSectionProperties",
+    "IfcSectionReinforcementProperties"
   ],
   "IfcPreDefinedPropertySet": [
     "IfcDoorLiningProperties",
     "IfcDoorPanelProperties",
+    "IfcPermeableCoveringProperties",
+    "IfcReinforcementDefinitionProperties",
     "IfcWindowLiningProperties",
     "IfcWindowPanelProperties"
   ],
   "IfcPreDefinedTextFont": [
     "IfcTextStyleFontModel"
   ],
+  "IfcPreferredSurfaceCurveRepresentation": [],
   "IfcPresentableText": [],
   "IfcPresentationAppearanceResource": [],
   "IfcPresentationDefinitionResource": [],
@@ -798,6 +1597,7 @@
     "IfcColourRgbList",
     "IfcColourSpecification",
     "IfcCurveStyleFont",
+    "IfcCurveStyleFontAndScaling",
     "IfcCurveStyleFontPattern",
     "IfcIndexedColourMap",
     "IfcPreDefinedItem",
@@ -809,8 +1609,14 @@
     "IfcTextStyleForDefinedFont",
     "IfcTextStyleTextModel",
     "IfcTextureCoordinate",
+    "IfcTextureVertex",
     "IfcTextureVertexList"
   ],
+  "IfcPresentationLayerAssignment": [
+    "IfcPresentationLayerWithStyle"
+  ],
+  "IfcPresentationLayerWithStyle": [],
+  "IfcPresentationOrganizationResource": [],
   "IfcPresentationStyle": [
     "IfcCurveStyle",
     "IfcFillAreaStyle",
@@ -818,33 +1624,61 @@
     "IfcTextStyle"
   ],
   "IfcPressureMeasure": [],
+  "IfcProcedure": [],
+  "IfcProcedureType": [],
+  "IfcProcedureTypeEnum": [],
+  "IfcProcess": [
+    "IfcEvent",
+    "IfcProcedure",
+    "IfcTask"
+  ],
+  "IfcProcessExtension": [],
+  "IfcProcessSelect": [],
   "IfcProduct": [
     "IfcAnnotation",
+    "IfcComplementaryData",
     "IfcElement",
     "IfcLinearElement",
     "IfcPort",
     "IfcPositioningElement",
-    "IfcSpatialElement"
+    "IfcSpatialElement",
+    "IfcStructuralActivity",
+    "IfcStructuralItem"
   ],
   "IfcProductDefinitionShape": [],
   "IfcProductExtension": [],
   "IfcProductRepresentation": [
+    "IfcMaterialDefinitionRepresentation",
     "IfcProductDefinitionShape"
   ],
+  "IfcProductRepresentationSelect": [],
+  "IfcProductSelect": [],
   "IfcProfileDef": [
-    "IfcArbitraryClosedProfileDef"
+    "IfcArbitraryClosedProfileDef",
+    "IfcArbitraryOpenProfileDef",
+    "IfcCompositeProfileDef",
+    "IfcDerivedProfileDef",
+    "IfcOpenCrossProfileDef",
+    "IfcParameterizedProfileDef"
   ],
+  "IfcProfileProperties": [],
   "IfcProfileResource": [],
   "IfcProfileTypeEnum": [],
   "IfcProject": [],
   "IfcProjectLibrary": [],
+  "IfcProjectOrder": [],
+  "IfcProjectOrderTypeEnum": [],
   "IfcProjectedCRS": [],
+  "IfcProjectedOrTrueLengthEnum": [],
   "IfcProjectionElement": [],
   "IfcProjectionElementTypeEnum": [],
   "IfcProperty": [
+    "IfcComplexProperty",
     "IfcSimpleProperty"
   ],
   "IfcPropertyAbstraction": [
+    "IfcExtendedProperties",
+    "IfcPreDefinedProperties",
     "IfcProperty",
     "IfcPropertyEnumeration"
   ],
@@ -853,6 +1687,7 @@
     "IfcPropertySetDefinition",
     "IfcPropertyTemplateDefinition"
   ],
+  "IfcPropertyDependencyRelationship": [],
   "IfcPropertyEnumeratedValue": [],
   "IfcPropertyEnumeration": [],
   "IfcPropertyListValue": [],
@@ -865,11 +1700,13 @@
     "IfcQuantitySet"
   ],
   "IfcPropertySetDefinitionSelect": [],
+  "IfcPropertySetDefinitionSet": [],
   "IfcPropertySetTemplate": [],
   "IfcPropertySetTemplateTypeEnum": [],
   "IfcPropertySingleValue": [],
   "IfcPropertyTableValue": [],
   "IfcPropertyTemplate": [
+    "IfcComplexPropertyTemplate",
     "IfcSimplePropertyTemplate"
   ],
   "IfcPropertyTemplateDefinition": [
@@ -878,13 +1715,17 @@
   ],
   "IfcProtectiveDevice": [],
   "IfcProtectiveDeviceTrippingUnit": [],
+  "IfcProtectiveDeviceTrippingUnitType": [],
   "IfcProtectiveDeviceTrippingUnitTypeEnum": [],
+  "IfcProtectiveDeviceType": [],
   "IfcProtectiveDeviceTypeEnum": [],
   "IfcPump": [],
+  "IfcPumpType": [],
   "IfcPumpTypeEnum": [],
   "IfcQuantityArea": [],
   "IfcQuantityCount": [],
   "IfcQuantityLength": [],
+  "IfcQuantityNumber": [],
   "IfcQuantityResource": [],
   "IfcQuantitySet": [
     "IfcElementQuantity"
@@ -892,25 +1733,51 @@
   "IfcQuantityTime": [],
   "IfcQuantityVolume": [],
   "IfcQuantityWeight": [],
+  "IfcRadialExcavation": [],
+  "IfcRadialExcavationTypeEnum": [],
+  "IfcRadioActivityMeasure": [],
   "IfcRail": [],
   "IfcRailDomain": [],
+  "IfcRailType": [],
   "IfcRailTypeEnum": [],
   "IfcRailing": [],
+  "IfcRailingType": [],
   "IfcRailingTypeEnum": [],
   "IfcRailway": [],
+  "IfcRailwayPart": [],
+  "IfcRailwayPartTypeEnum": [],
   "IfcRailwayTypeEnum": [],
   "IfcRamp": [],
   "IfcRampFlight": [],
+  "IfcRampFlightType": [],
   "IfcRampFlightTypeEnum": [],
+  "IfcRampType": [],
   "IfcRampTypeEnum": [],
   "IfcRatioMeasure": [],
+  "IfcRationalBSplineCurveWithKnots": [],
+  "IfcRationalBSplineSurfaceWithKnots": [],
   "IfcReal": [],
+  "IfcRealVoxelData": [],
+  "IfcRectangleHollowProfileDef": [],
+  "IfcRectangleProfileDef": [
+    "IfcRectangleHollowProfileDef",
+    "IfcRoundedRectangleProfileDef"
+  ],
+  "IfcRectangularPyramid": [],
+  "IfcRectangularTrimmedSurface": [],
+  "IfcRecurrencePattern": [],
+  "IfcRecurrenceTypeEnum": [],
+  "IfcReference": [],
   "IfcReferent": [],
   "IfcReferentTypeEnum": [],
   "IfcReflectanceMethodEnum": [],
+  "IfcRegularTimeSeries": [],
   "IfcReinforcedSoil": [],
   "IfcReinforcedSoilTypeEnum": [],
+  "IfcReinforcementBarProperties": [],
+  "IfcReinforcementDefinitionProperties": [],
   "IfcReinforcingBar": [],
+  "IfcReinforcingBarRoleEnum": [],
   "IfcReinforcingBarSurfaceEnum": [],
   "IfcReinforcingBarType": [],
   "IfcReinforcingBarTypeEnum": [],
@@ -924,53 +1791,118 @@
   "IfcReinforcingElementType": [
     "IfcReinforcingBarType",
     "IfcReinforcingMeshType",
+    "IfcTendonAnchorType",
+    "IfcTendonConduitType",
     "IfcTendonType"
   ],
   "IfcReinforcingMesh": [],
   "IfcReinforcingMeshType": [],
   "IfcReinforcingMeshTypeEnum": [],
+  "IfcRelAdheresToElement": [],
   "IfcRelAggregates": [],
   "IfcRelAssigns": [
-    "IfcRelAssignsToGroup"
+    "IfcRelAssignsToActor",
+    "IfcRelAssignsToControl",
+    "IfcRelAssignsToGroup",
+    "IfcRelAssignsToProcess",
+    "IfcRelAssignsToProduct",
+    "IfcRelAssignsToResource"
   ],
-  "IfcRelAssignsToGroup": [],
+  "IfcRelAssignsToActor": [],
+  "IfcRelAssignsToControl": [],
+  "IfcRelAssignsToGroup": [
+    "IfcRelAssignsToGroupByFactor"
+  ],
+  "IfcRelAssignsToGroupByFactor": [],
+  "IfcRelAssignsToProcess": [],
+  "IfcRelAssignsToProduct": [],
+  "IfcRelAssignsToResource": [],
   "IfcRelAssociates": [
+    "IfcRelAssociatesApproval",
     "IfcRelAssociatesClassification",
+    "IfcRelAssociatesConstraint",
+    "IfcRelAssociatesDataset",
     "IfcRelAssociatesDocument",
     "IfcRelAssociatesLibrary",
-    "IfcRelAssociatesMaterial"
+    "IfcRelAssociatesMaterial",
+    "IfcRelAssociatesProfileDef"
   ],
+  "IfcRelAssociatesApproval": [],
   "IfcRelAssociatesClassification": [],
+  "IfcRelAssociatesConstraint": [],
+  "IfcRelAssociatesDataset": [],
   "IfcRelAssociatesDocument": [],
   "IfcRelAssociatesLibrary": [],
   "IfcRelAssociatesMaterial": [],
+  "IfcRelAssociatesProfileDef": [],
   "IfcRelConnects": [
     "IfcRelConnectsElements",
+    "IfcRelConnectsPortToElement",
     "IfcRelConnectsPorts",
+    "IfcRelConnectsStructuralActivity",
+    "IfcRelConnectsStructuralMember",
     "IfcRelContainedInSpatialStructure",
+    "IfcRelCoversBldgElements",
+    "IfcRelCoversSpaces",
+    "IfcRelFillsElement",
+    "IfcRelFlowControlElements",
+    "IfcRelInterferesElements",
     "IfcRelPositions",
-    "IfcRelReferencedInSpatialStructure"
+    "IfcRelReferencedInSpatialStructure",
+    "IfcRelSequence",
+    "IfcRelServicesBuildings",
+    "IfcRelSpaceBoundary"
   ],
-  "IfcRelConnectsElements": [],
+  "IfcRelConnectsElements": [
+    "IfcRelConnectsPathElements",
+    "IfcRelConnectsWithRealizingElements"
+  ],
+  "IfcRelConnectsPathElements": [],
+  "IfcRelConnectsPortToElement": [],
   "IfcRelConnectsPorts": [],
+  "IfcRelConnectsStructuralActivity": [],
+  "IfcRelConnectsStructuralMember": [
+    "IfcRelConnectsWithEccentricity"
+  ],
+  "IfcRelConnectsWithEccentricity": [],
+  "IfcRelConnectsWithRealizingElements": [],
   "IfcRelContainedInSpatialStructure": [],
+  "IfcRelCoversBldgElements": [],
+  "IfcRelCoversSpaces": [],
   "IfcRelDeclares": [],
   "IfcRelDecomposes": [
+    "IfcRelAdheresToElement",
     "IfcRelAggregates",
     "IfcRelNests",
+    "IfcRelProjectsElement",
     "IfcRelVoidsElement"
   ],
   "IfcRelDefines": [
     "IfcRelDefinesByObject",
     "IfcRelDefinesByProperties",
+    "IfcRelDefinesByTemplate",
     "IfcRelDefinesByType"
   ],
   "IfcRelDefinesByObject": [],
   "IfcRelDefinesByProperties": [],
+  "IfcRelDefinesByTemplate": [],
   "IfcRelDefinesByType": [],
+  "IfcRelFillsElement": [],
+  "IfcRelFlowControlElements": [],
+  "IfcRelInterferesElements": [],
   "IfcRelNests": [],
   "IfcRelPositions": [],
+  "IfcRelProjectsElement": [],
   "IfcRelReferencedInSpatialStructure": [],
+  "IfcRelSequence": [],
+  "IfcRelServicesBuildings": [],
+  "IfcRelSpaceBoundary": [
+    "IfcRelSpaceBoundary1stLevel"
+  ],
+  "IfcRelSpaceBoundary1stLevel": [
+    "IfcRelSpaceBoundary2ndLevel"
+  ],
+  "IfcRelSpaceBoundary2ndLevel": [],
   "IfcRelVoidsElement": [],
   "IfcRelationship": [
     "IfcRelAssigns",
@@ -980,8 +1912,10 @@
     "IfcRelDecomposes",
     "IfcRelDefines"
   ],
+  "IfcReparametrisedCompositeCurveSegment": [],
   "IfcRepresentation": [
-    "IfcShapeModel"
+    "IfcShapeModel",
+    "IfcStyleModel"
   ],
   "IfcRepresentationContext": [
     "IfcGeometricRepresentationContext"
@@ -990,16 +1924,45 @@
   "IfcRepresentationItem": [
     "IfcGeometricRepresentationItem",
     "IfcMappedItem",
-    "IfcStyledItem"
+    "IfcStyledItem",
+    "IfcTopologicalRepresentationItem"
   ],
   "IfcRepresentationMap": [],
   "IfcRepresentationResource": [],
-  "IfcRevolvedAreaSolid": [],
+  "IfcResource": [
+    "IfcConstructionResource"
+  ],
+  "IfcResourceApprovalRelationship": [],
+  "IfcResourceConstraintRelationship": [],
+  "IfcResourceLevelRelationship": [
+    "IfcApprovalRelationship",
+    "IfcCurrencyRelationship",
+    "IfcDocumentInformationRelationship",
+    "IfcExternalReferenceRelationship",
+    "IfcMaterialRelationship",
+    "IfcOrganizationRelationship",
+    "IfcPropertyDependencyRelationship",
+    "IfcResourceApprovalRelationship",
+    "IfcResourceConstraintRelationship"
+  ],
+  "IfcResourceObjectSelect": [],
+  "IfcResourceSelect": [],
+  "IfcResourceTime": [],
+  "IfcRevolvedAreaSolid": [
+    "IfcRevolvedAreaSolidTapered"
+  ],
+  "IfcRevolvedAreaSolidTapered": [],
+  "IfcRightCircularCone": [],
+  "IfcRightCircularCylinder": [],
+  "IfcRigidOperation": [],
   "IfcRoad": [],
   "IfcRoadDomain": [],
+  "IfcRoadPart": [],
+  "IfcRoadPartTypeEnum": [],
   "IfcRoadTypeEnum": [],
   "IfcRoleEnum": [],
   "IfcRoof": [],
+  "IfcRoofType": [],
   "IfcRoofTypeEnum": [],
   "IfcRoot": [
     "IfcObjectDefinition",
@@ -1007,24 +1970,62 @@
     "IfcRelationship"
   ],
   "IfcRotationalFrequencyMeasure": [],
+  "IfcRotationalMassMeasure": [],
+  "IfcRotationalStiffnessMeasure": [],
+  "IfcRotationalStiffnessSelect": [],
+  "IfcRoundedRectangleProfileDef": [],
   "IfcSIPrefix": [],
   "IfcSIUnit": [],
   "IfcSIUnitName": [],
+  "IfcSameAxis2Placement": [],
+  "IfcSameCartesianPoint": [],
+  "IfcSameDirection": [],
+  "IfcSameValidPrecision": [],
+  "IfcSameValue": [],
   "IfcSanitaryTerminal": [],
+  "IfcSanitaryTerminalType": [],
   "IfcSanitaryTerminalTypeEnum": [],
+  "IfcScalarTimesVector": [],
+  "IfcSchedulingTime": [
+    "IfcEventTime",
+    "IfcLagTime",
+    "IfcResourceTime",
+    "IfcTaskTime",
+    "IfcWorkTime"
+  ],
+  "IfcSeamCurve": [],
   "IfcSecondOrderPolynomialSpiral": [],
+  "IfcSecondProjAxis": [],
+  "IfcSectionModulusMeasure": [],
+  "IfcSectionProperties": [],
+  "IfcSectionReinforcementProperties": [],
+  "IfcSectionTypeEnum": [],
+  "IfcSectionalAreaIntegralMeasure": [],
+  "IfcSectionedSolid": [
+    "IfcSectionedSolidHorizontal"
+  ],
+  "IfcSectionedSolidHorizontal": [],
+  "IfcSectionedSpine": [],
+  "IfcSectionedSurface": [],
   "IfcSegment": [
+    "IfcCompositeCurveSegment",
     "IfcCurveSegment"
   ],
+  "IfcSegmentDim": [],
   "IfcSegmentIndexSelect": [],
   "IfcSegmentedReferenceCurve": [],
   "IfcSensor": [],
+  "IfcSensorType": [],
   "IfcSensorTypeEnum": [],
+  "IfcSequenceEnum": [],
   "IfcSeventhOrderPolynomialSpiral": [],
   "IfcShadingDevice": [],
+  "IfcShadingDeviceType": [],
   "IfcShadingDeviceTypeEnum": [],
+  "IfcShapeAspect": [],
   "IfcShapeModel": [
-    "IfcShapeRepresentation"
+    "IfcShapeRepresentation",
+    "IfcTopologyRepresentation"
   ],
   "IfcShapeRepresentation": [],
   "IfcShapeRepresentationTypes": [],
@@ -1033,9 +2034,15 @@
   "IfcSharedComponentElements": [],
   "IfcSharedFacilitiesElements": [],
   "IfcSharedInfrastructureElements": [],
+  "IfcSharedMgmtElements": [],
+  "IfcShearModulusMeasure": [],
+  "IfcShell": [],
+  "IfcShellBasedSurfaceModel": [],
   "IfcSign": [],
+  "IfcSignType": [],
   "IfcSignTypeEnum": [],
   "IfcSignal": [],
+  "IfcSignalType": [],
   "IfcSignalTypeEnum": [],
   "IfcSimpleProperty": [
     "IfcPropertyBoundedValue",
@@ -1048,28 +2055,39 @@
   "IfcSimplePropertyTemplate": [],
   "IfcSimplePropertyTemplateTypeEnum": [],
   "IfcSimpleValue": [],
-  "IfcSine": [],
   "IfcSineSpiral": [],
   "IfcSingleProjectInstance": [],
   "IfcSite": [],
   "IfcSizeSelect": [],
   "IfcSlab": [],
+  "IfcSlabType": [],
   "IfcSlabTypeEnum": [],
+  "IfcSlippageConnectionCondition": [],
   "IfcSolarDevice": [],
+  "IfcSolarDeviceType": [],
   "IfcSolarDeviceTypeEnum": [],
+  "IfcSolidAngleMeasure": [],
   "IfcSolidModel": [
-    "IfcSweptAreaSolid"
+    "IfcCsgSolid",
+    "IfcManifoldSolidBrep",
+    "IfcSectionedSolid",
+    "IfcSweptAreaSolid",
+    "IfcSweptDiskSolid"
   ],
-  "IfcSolidStratum": [],
+  "IfcSolidOrShell": [],
   "IfcSoundPowerLevelMeasure": [],
   "IfcSoundPowerMeasure": [],
+  "IfcSoundPressureLevelMeasure": [],
   "IfcSoundPressureMeasure": [],
   "IfcSpace": [],
+  "IfcSpaceBoundarySelect": [],
   "IfcSpaceHeater": [],
+  "IfcSpaceHeaterType": [],
   "IfcSpaceHeaterTypeEnum": [],
   "IfcSpaceType": [],
   "IfcSpaceTypeEnum": [],
   "IfcSpatialElement": [
+    "IfcExternalSpatialStructureElement",
     "IfcSpatialStructureElement",
     "IfcSpatialZone"
   ],
@@ -1091,30 +2109,152 @@
   "IfcSpatialZone": [],
   "IfcSpatialZoneType": [],
   "IfcSpatialZoneTypeEnum": [],
+  "IfcSpecificHeatCapacityMeasure": [],
   "IfcSpecularExponent": [],
   "IfcSpecularHighlightSelect": [],
+  "IfcSpecularRoughness": [],
+  "IfcSphere": [],
+  "IfcSphericalSurface": [],
   "IfcSpiral": [
     "IfcClothoid",
-    "IfcCosine",
     "IfcCosineSpiral",
     "IfcSecondOrderPolynomialSpiral",
     "IfcSeventhOrderPolynomialSpiral",
-    "IfcSine",
     "IfcSineSpiral",
     "IfcThirdOrderPolynomialSpiral"
   ],
   "IfcStackTerminal": [],
+  "IfcStackTerminalType": [],
   "IfcStackTerminalTypeEnum": [],
   "IfcStair": [],
   "IfcStairFlight": [],
+  "IfcStairFlightType": [],
   "IfcStairFlightTypeEnum": [],
+  "IfcStairType": [],
   "IfcStairTypeEnum": [],
   "IfcStateEnum": [],
+  "IfcStrippedOptional": [],
+  "IfcStructuralAction": [
+    "IfcStructuralCurveAction",
+    "IfcStructuralPointAction",
+    "IfcStructuralSurfaceAction"
+  ],
+  "IfcStructuralActivity": [
+    "IfcStructuralAction",
+    "IfcStructuralReaction"
+  ],
+  "IfcStructuralActivityAssignmentSelect": [],
+  "IfcStructuralAnalysisDomain": [],
+  "IfcStructuralAnalysisModel": [],
+  "IfcStructuralConnection": [
+    "IfcStructuralCurveConnection",
+    "IfcStructuralPointConnection",
+    "IfcStructuralSurfaceConnection"
+  ],
+  "IfcStructuralConnectionCondition": [
+    "IfcFailureConnectionCondition",
+    "IfcSlippageConnectionCondition"
+  ],
+  "IfcStructuralCurveAction": [
+    "IfcStructuralLinearAction"
+  ],
+  "IfcStructuralCurveActivityTypeEnum": [],
+  "IfcStructuralCurveConnection": [],
+  "IfcStructuralCurveMember": [
+    "IfcStructuralCurveMemberVarying"
+  ],
+  "IfcStructuralCurveMemberTypeEnum": [],
+  "IfcStructuralCurveMemberVarying": [],
+  "IfcStructuralCurveReaction": [],
   "IfcStructuralElementsDomain": [],
+  "IfcStructuralItem": [
+    "IfcStructuralConnection",
+    "IfcStructuralMember"
+  ],
+  "IfcStructuralLinearAction": [],
+  "IfcStructuralLoad": [
+    "IfcStructuralLoadConfiguration",
+    "IfcStructuralLoadOrResult"
+  ],
+  "IfcStructuralLoadCase": [],
+  "IfcStructuralLoadConfiguration": [],
+  "IfcStructuralLoadGroup": [
+    "IfcStructuralLoadCase"
+  ],
+  "IfcStructuralLoadLinearForce": [],
+  "IfcStructuralLoadOrResult": [
+    "IfcStructuralLoadStatic",
+    "IfcSurfaceReinforcementArea"
+  ],
+  "IfcStructuralLoadPlanarForce": [],
+  "IfcStructuralLoadResource": [],
+  "IfcStructuralLoadSingleDisplacement": [
+    "IfcStructuralLoadSingleDisplacementDistortion"
+  ],
+  "IfcStructuralLoadSingleDisplacementDistortion": [],
+  "IfcStructuralLoadSingleForce": [
+    "IfcStructuralLoadSingleForceWarping"
+  ],
+  "IfcStructuralLoadSingleForceWarping": [],
+  "IfcStructuralLoadStatic": [
+    "IfcStructuralLoadLinearForce",
+    "IfcStructuralLoadPlanarForce",
+    "IfcStructuralLoadSingleDisplacement",
+    "IfcStructuralLoadSingleForce",
+    "IfcStructuralLoadTemperature"
+  ],
+  "IfcStructuralLoadTemperature": [],
+  "IfcStructuralMember": [
+    "IfcStructuralCurveMember",
+    "IfcStructuralSurfaceMember"
+  ],
+  "IfcStructuralPlanarAction": [],
+  "IfcStructuralPointAction": [],
+  "IfcStructuralPointConnection": [],
+  "IfcStructuralPointReaction": [],
+  "IfcStructuralReaction": [
+    "IfcStructuralCurveReaction",
+    "IfcStructuralPointReaction",
+    "IfcStructuralSurfaceReaction"
+  ],
+  "IfcStructuralResultGroup": [],
+  "IfcStructuralSurfaceAction": [
+    "IfcStructuralPlanarAction"
+  ],
+  "IfcStructuralSurfaceActivityTypeEnum": [],
+  "IfcStructuralSurfaceConnection": [],
+  "IfcStructuralSurfaceMember": [
+    "IfcStructuralSurfaceMemberVarying"
+  ],
+  "IfcStructuralSurfaceMemberTypeEnum": [],
+  "IfcStructuralSurfaceMemberVarying": [],
+  "IfcStructuralSurfaceReaction": [],
+  "IfcStyleModel": [
+    "IfcStyledRepresentation"
+  ],
   "IfcStyledItem": [],
-  "IfcSurface": [],
+  "IfcStyledRepresentation": [],
+  "IfcSubContractResource": [],
+  "IfcSubContractResourceType": [],
+  "IfcSubContractResourceTypeEnum": [],
+  "IfcSubedge": [],
+  "IfcSurface": [
+    "IfcBoundedSurface",
+    "IfcElementarySurface",
+    "IfcSectionedSurface",
+    "IfcSweptSurface"
+  ],
+  "IfcSurfaceCurve": [
+    "IfcIntersectionCurve",
+    "IfcSeamCurve"
+  ],
+  "IfcSurfaceCurveSweptAreaSolid": [],
   "IfcSurfaceFeature": [],
   "IfcSurfaceFeatureTypeEnum": [],
+  "IfcSurfaceOfLinearExtrusion": [],
+  "IfcSurfaceOfRevolution": [],
+  "IfcSurfaceOrFaceSurface": [],
+  "IfcSurfaceReinforcementArea": [],
   "IfcSurfaceSide": [],
   "IfcSurfaceStyle": [],
   "IfcSurfaceStyleElementSelect": [],
@@ -1126,29 +2266,62 @@
   ],
   "IfcSurfaceStyleWithTextures": [],
   "IfcSurfaceTexture": [
-    "IfcImageTexture"
+    "IfcBlobTexture",
+    "IfcImageTexture",
+    "IfcPixelTexture"
   ],
+  "IfcSurfaceWeightsPositive": [],
   "IfcSweptAreaSolid": [
+    "IfcDirectrixCurveSweptAreaSolid",
     "IfcExtrudedAreaSolid",
     "IfcRevolvedAreaSolid"
   ],
+  "IfcSweptDiskSolid": [
+    "IfcSweptDiskSolidPolygonal"
+  ],
+  "IfcSweptDiskSolidPolygonal": [],
+  "IfcSweptSurface": [
+    "IfcSurfaceOfLinearExtrusion",
+    "IfcSurfaceOfRevolution"
+  ],
   "IfcSwitchingDevice": [],
+  "IfcSwitchingDeviceType": [],
   "IfcSwitchingDeviceTypeEnum": [],
   "IfcSystem": [
+    "IfcBuildingSystem",
     "IfcBuiltSystem",
     "IfcDistributionSystem",
+    "IfcStructuralAnalysisModel",
     "IfcZone"
   ],
   "IfcSystemFurnitureElement": [],
+  "IfcSystemFurnitureElementType": [],
   "IfcSystemFurnitureElementTypeEnum": [],
+  "IfcTShapeProfileDef": [],
+  "IfcTable": [],
+  "IfcTableColumn": [],
+  "IfcTableRow": [],
   "IfcTank": [],
+  "IfcTankType": [],
   "IfcTankTypeEnum": [],
+  "IfcTaperedSweptAreaProfiles": [],
+  "IfcTask": [],
+  "IfcTaskDurationEnum": [],
+  "IfcTaskTime": [
+    "IfcTaskTimeRecurring"
+  ],
+  "IfcTaskTimeRecurring": [],
+  "IfcTaskType": [],
+  "IfcTaskTypeEnum": [],
   "IfcTelecomAddress": [],
+  "IfcTemperatureGradientMeasure": [],
   "IfcTemperatureRateOfChangeMeasure": [],
   "IfcTendon": [],
   "IfcTendonAnchor": [],
+  "IfcTendonAnchorType": [],
   "IfcTendonAnchorTypeEnum": [],
   "IfcTendonConduit": [],
+  "IfcTendonConduitType": [],
   "IfcTendonConduitTypeEnum": [],
   "IfcTendonType": [],
   "IfcTendonTypeEnum": [],
@@ -1158,50 +2331,129 @@
   ],
   "IfcTessellatedItem": [
     "IfcIndexedPolygonalFace",
-    "IfcTessellatedFaceSet"
+    "IfcTessellatedFaceSet",
+    "IfcVoxelGrid"
   ],
   "IfcText": [],
+  "IfcTextAlignment": [],
+  "IfcTextDecoration": [],
   "IfcTextFontName": [],
   "IfcTextFontSelect": [],
-  "IfcTextLiteral": [],
+  "IfcTextLiteral": [
+    "IfcTextLiteralWithExtent"
+  ],
+  "IfcTextLiteralWithExtent": [],
   "IfcTextPath": [],
   "IfcTextStyle": [],
   "IfcTextStyleFontModel": [],
   "IfcTextStyleForDefinedFont": [],
   "IfcTextStyleTextModel": [],
+  "IfcTextTransformation": [],
   "IfcTextureCoordinate": [
-    "IfcIndexedTextureMap"
+    "IfcIndexedTextureMap",
+    "IfcTextureCoordinateGenerator",
+    "IfcTextureMap"
   ],
+  "IfcTextureCoordinateGenerator": [],
+  "IfcTextureCoordinateIndices": [
+    "IfcTextureCoordinateIndicesWithVoids"
+  ],
+  "IfcTextureCoordinateIndicesWithVoids": [],
+  "IfcTextureMap": [],
+  "IfcTextureVertex": [],
   "IfcTextureVertexList": [],
+  "IfcThermalAdmittanceMeasure": [],
   "IfcThermalConductivityMeasure": [],
   "IfcThermalExpansionCoefficientMeasure": [],
   "IfcThermalResistanceMeasure": [],
   "IfcThermalTransmittanceMeasure": [],
   "IfcThermodynamicTemperatureMeasure": [],
   "IfcThirdOrderPolynomialSpiral": [],
+  "IfcTime": [],
   "IfcTimeMeasure": [],
-  "IfcTimeSeries": [],
+  "IfcTimeOrRatioSelect": [],
+  "IfcTimePeriod": [],
+  "IfcTimeSeries": [
+    "IfcIrregularTimeSeries",
+    "IfcRegularTimeSeries"
+  ],
   "IfcTimeSeriesDataTypeEnum": [],
+  "IfcTimeSeriesValue": [],
   "IfcTimeStamp": [],
+  "IfcTopologicalRepresentationItem": [
+    "IfcConnectedFaceSet",
+    "IfcEdge",
+    "IfcFace",
+    "IfcFaceBound",
+    "IfcLoop",
+    "IfcPath",
+    "IfcVertex"
+  ],
+  "IfcTopologyRepresentation": [],
+  "IfcTopologyRepresentationTypes": [],
+  "IfcTopologyResource": [],
+  "IfcToroidalSurface": [],
   "IfcTorqueMeasure": [],
   "IfcTrackElement": [],
+  "IfcTrackElementType": [],
   "IfcTrackElementTypeEnum": [],
   "IfcTransformer": [],
+  "IfcTransformerType": [],
   "IfcTransformerTypeEnum": [],
   "IfcTransitionCode": [],
+  "IfcTranslationalStiffnessSelect": [],
   "IfcTransportElement": [],
-  "IfcTransportElementTypeSelect": [],
-  "IfcTriangulatedFaceSet": [],
+  "IfcTransportElementType": [],
+  "IfcTransportElementTypeEnum": [],
+  "IfcTransportationDevice": [
+    "IfcTransportElement",
+    "IfcVehicle"
+  ],
+  "IfcTransportationDeviceType": [
+    "IfcTransportElementType",
+    "IfcVehicleType"
+  ],
+  "IfcTrapeziumProfileDef": [],
+  "IfcTriangulatedFaceSet": [
+    "IfcTriangulatedIrregularNetwork"
+  ],
+  "IfcTriangulatedIrregularNetwork": [],
+  "IfcTrimmedCurve": [],
+  "IfcTrimmingPreference": [],
+  "IfcTrimmingSelect": [],
   "IfcTubeBundle": [],
+  "IfcTubeBundleType": [],
   "IfcTubeBundleTypeEnum": [],
+  "IfcTunnel": [],
+  "IfcTunnelDomain": [],
+  "IfcTunnelPart": [],
+  "IfcTunnelPartTypeEnum": [],
+  "IfcTunnelTypeEnum": [],
+  "IfcTunnelTypicalSection": [],
+  "IfcTunnelTypicalSectionTypeEnum": [],
   "IfcTypeObject": [
-    "IfcTypeProduct"
+    "IfcTypeProcess",
+    "IfcTypeProduct",
+    "IfcTypeResource"
+  ],
+  "IfcTypeProcess": [
+    "IfcEventType",
+    "IfcProcedureType",
+    "IfcTaskType"
   ],
   "IfcTypeProduct": [
     "IfcElementType",
     "IfcSpatialElementType"
   ],
+  "IfcTypeResource": [
+    "IfcConstructionResourceType"
+  ],
   "IfcURIReference": [],
+  "IfcUShapeProfileDef": [],
+  "IfcUndergroundExcavation": [
+    "IfcFaceExcavation",
+    "IfcRadialExcavation"
+  ],
   "IfcUniqueDefinitionNames": [],
   "IfcUniquePropertyName": [],
   "IfcUniquePropertySetNames": [],
@@ -1211,25 +2463,65 @@
   "IfcUnitAssignment": [],
   "IfcUnitEnum": [],
   "IfcUnitaryControlElement": [],
+  "IfcUnitaryControlElementType": [],
   "IfcUnitaryControlElementTypeEnum": [],
   "IfcUnitaryEquipment": [],
+  "IfcUnitaryEquipmentType": [],
   "IfcUnitaryEquipmentTypeEnum": [],
   "IfcUtilityResource": [],
   "IfcValue": [],
   "IfcValve": [],
+  "IfcValveType": [],
   "IfcValveTypeEnum": [],
+  "IfcVaporPermeabilityMeasure": [],
   "IfcVector": [],
+  "IfcVectorDifference": [],
+  "IfcVectorOrDirection": [],
+  "IfcVectorSum": [],
+  "IfcVectorVoxelData": [],
+  "IfcVehicle": [],
+  "IfcVehicleType": [],
+  "IfcVehicleTypeEnum": [],
+  "IfcVertex": [
+    "IfcVertexPoint"
+  ],
+  "IfcVertexLoop": [],
+  "IfcVertexPoint": [],
+  "IfcVibrationDamper": [],
+  "IfcVibrationDamperType": [],
+  "IfcVibrationDamperTypeEnum": [],
+  "IfcVibrationIsolator": [],
+  "IfcVibrationIsolatorType": [],
+  "IfcVibrationIsolatorTypeEnum": [],
   "IfcVirtualElement": [],
-  "IfcVoidStratum": [],
+  "IfcVirtualElementTypeEnum": [],
+  "IfcVirtualGridIntersection": [],
   "IfcVoidingFeature": [],
   "IfcVoidingFeatureTypeEnum": [],
   "IfcVolumeMeasure": [],
   "IfcVolumetricFlowRateMeasure": [],
-  "IfcWall": [],
+  "IfcVoxelData": [
+    "IfcIntegerVoxelData",
+    "IfcLabelVoxelData",
+    "IfcLogicalVoxelData",
+    "IfcRealVoxelData",
+    "IfcVectorVoxelData"
+  ],
+  "IfcVoxelGrid": [],
+  "IfcWall": [
+    "IfcWallStandardCase"
+  ],
+  "IfcWallStandardCase": [],
+  "IfcWallType": [],
   "IfcWallTypeEnum": [],
+  "IfcWarpingConstantMeasure": [],
+  "IfcWarpingMomentMeasure": [],
+  "IfcWarpingStiffnessSelect": [],
   "IfcWasteTerminal": [],
+  "IfcWasteTerminalType": [],
   "IfcWasteTerminalTypeEnum": [],
-  "IfcWaterStratum": [],
+  "IfcWellKnownText": [],
+  "IfcWellKnownTextLiteral": [],
   "IfcWindow": [],
   "IfcWindowLiningProperties": [],
   "IfcWindowPanelOperationEnum": [],
@@ -1238,5 +2530,17 @@
   "IfcWindowType": [],
   "IfcWindowTypeEnum": [],
   "IfcWindowTypePartitioningEnum": [],
+  "IfcWorkCalendar": [],
+  "IfcWorkCalendarTypeEnum": [],
+  "IfcWorkControl": [
+    "IfcWorkPlan",
+    "IfcWorkSchedule"
+  ],
+  "IfcWorkPlan": [],
+  "IfcWorkPlanTypeEnum": [],
+  "IfcWorkSchedule": [],
+  "IfcWorkScheduleTypeEnum": [],
+  "IfcWorkTime": [],
+  "IfcZShapeProfileDef": [],
   "IfcZone": []
 }
