@@ -891,7 +891,7 @@
 						var baseEl = document.createElement('base');
 						baseEl.href = location.origin + docRootPath + '/';
 						baseEl.setAttribute('data-nav-base', 'true');
-						contentArea.insertBefore(baseEl, contentArea.firstChild);
+						document.head.appendChild(baseEl);
 
 						// Extract sidebar anchor before stripping scripts
 						var sidebarAnchor = extractSidebarAnchor(html);
