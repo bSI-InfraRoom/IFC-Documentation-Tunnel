@@ -454,6 +454,10 @@
 			// Detect if fetch works for local HTML files (file:// protocol blocks fetch)
 			var canFetchLocal = location.protocol !== 'file:';
 
+			// Compute the base path relative to the document root (handles sub-path deployments)
+			var docRootPath = location.pathname.replace(/\/[^/]*$/, '');
+			var baseFetch = function (path) { return docRootPath + path; };
+
 			/**
 			 * Normalize an href to a relative path from the document root.
 			 * Handles both relative hrefs and absolute URLs (from link.href).
@@ -525,6 +529,14 @@
 					ifcplumbingfireprotectiondomain: 7, ifcportsandwaterwaysdomain: 7,
 					ifctransportationdomain: 7, ifcgeotechnicaldomain: 7,
 					ifcworkconstructionresource: 7,
+					ifcapprovalresource: 8, ifcconstraintresource: 8,
+					ifcconstructionmgmtdomain: 7, ifccontrolextension: 5,
+					ifcpresentationorganizationresource: 8, ifcprocessextension: 5,
+					ifcraildomain: 7, ifcrepresentationresource: 8,
+					ifcroaddomain: 7, ifcstructuralanalysisdomain: 7,
+					ifcstructuralelementsdomain: 7, ifcstructuralloadresource: 8,
+					ifctopologyresource: 8, ifctunneldomain: 7,
+					ifcgeometricmodelresource: 8,
 					ifcactorresource: 8, ifcapplicationresource: 8,
 					ifccostresource: 8, ifcexternalreferenceresource: 8,
 					ifcgeometricconstraintresource: 8, ifcgeometryresource: 8,
@@ -580,7 +592,7 @@
 				}
 				sidebarBasePath = tocPath;
 				sidebar.innerHTML = '<div class="loading">Loading...</div>';
-				return fetch('/' + tocPath)
+				return fetch(baseFetch('/' + tocPath))
 					.then(function (r) {
 						if (!r.ok) throw new Error('Not found: ' + tocPath);
 						return r.text();
@@ -645,10 +657,10 @@
 					return;
 				}
 				Promise.all([
-					fetch('/assets/js/inheritance-index.json').then(function (r) { return r.json(); }),
-					fetch('/assets/js/inheritance-siblings.json').then(function (r) { return r.json(); }),
-					fetch('/assets/js/abstract-entities.json').then(function (r) { return r.json(); }).catch(function () { return []; }),
-					fetch('/assets/js/deprecated-entities.json').then(function (r) { return r.json(); }).catch(function () { return []; })
+					fetch(baseFetch('/assets/js/inheritance-index.json')).then(function (r) { return r.json(); }),
+					fetch(baseFetch('/assets/js/inheritance-siblings.json')).then(function (r) { return r.json(); }),
+					fetch(baseFetch('/assets/js/abstract-entities.json')).then(function (r) { return r.json(); }).catch(function () { return []; }),
+					fetch(baseFetch('/assets/js/deprecated-entities.json')).then(function (r) { return r.json(); }).catch(function () { return []; })
 				]).then(function (data) {
 					inheritanceIndex = data[0];
 					inheritanceSiblings = data[1];
@@ -719,9 +731,9 @@
 						i++;
 					}
 					chain.push({ href: contentBasePath, name: currentEntity });
-					if (inheritanceSiblings[currentEntity] && i === areas.length) {
+					if (inheritanceSiblings[currentEntity] !== '' && i === areas.length) {
 						var siblings = inheritanceSiblings[currentEntity];
-						chain.push({ href: areas[i-1].getAttribute('href'), name: siblings[0] });
+						chain.push({ href: areas[0].getAttribute('href'), name: siblings[0] });
 					}
 
 					// Build the tiered diagram HTML using the sibling index
@@ -838,7 +850,7 @@
 			function loadContent(href) {
 				contentBasePath = href;
 				contentArea.innerHTML = '<div class="loading">Loading...</div>';
-				fetch('/' + href)
+				fetch(baseFetch('/' + href))
 					.then(function (r) {
 						if (!r.ok) throw new Error('Failed to load: ' + href);
 						return r.text();
