@@ -731,7 +731,7 @@
 						i++;
 					}
 					chain.push({ href: contentBasePath, name: currentEntity });
-					if (inheritanceSiblings[currentEntity] !== '' && i === areas.length) {
+					if (inheritanceSiblings[currentEntity].length !== 0 && i === areas.length) {
 						var siblings = inheritanceSiblings[currentEntity];
 						chain.push({ href: areas[0].getAttribute('href'), name: siblings[0] });
 					}
