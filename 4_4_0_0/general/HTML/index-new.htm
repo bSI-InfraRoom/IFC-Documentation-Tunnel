@@ -487,6 +487,23 @@
 			}
 
 			/**
+			 * Normalize a relative href to a document-root-relative path.
+			 * Resolves against the document root URL, strips the docRootPath prefix
+			 * and leading ./ or /.
+			 */
+			function normalizeAreaHref(href) {
+				if (/^[a-z]+:\/\//i.test(href)) return href;
+				try {
+					var docRootUrl = location.origin + docRootPath + '/';
+					var p = new URL(href, docRootUrl).pathname;
+					if (docRootPath) p = p.replace(docRootPath, '');
+					return p.replace(/^\.?\//, '');
+				} catch(e) {
+					return href;
+				}
+			}
+
+			/**
 			 * Normalize an href to a relative path from the document root.
 			 * Handles both relative hrefs and absolute URLs (from link.href).
 			 */
@@ -755,14 +772,14 @@
 							}
 						}
 						
-						chain.unshift({ href: href, name: child });
+						chain.unshift({ href: '/' + normalizeAreaHref(href), name: child });
 						child = inheritanceIndex[child];
 						i++;
 					}
-					chain.push({ href: contentBasePath, name: currentEntity });
+					chain.push({ href: '/' + normalizeAreaHref(contentBasePath), name: currentEntity });
 					if (inheritanceSiblings[currentEntity].length !== 0 && i === areas.length) {
 						var siblings = inheritanceSiblings[currentEntity];
-						chain.push({ href: areas[0].getAttribute('href'), name: siblings[0] });
+						chain.push({ href: '/' + normalizeAreaHref(areas[0].getAttribute('href')), name: siblings[0] });
 					}
 
 					// Build the tiered diagram HTML using the sibling index
@@ -804,7 +821,7 @@
 							// Find href for sibling
 							var sibHref = '';
 							if (sib === entName) {
-								sibHref = '/' + ent.href;
+								sibHref = ent.href;
 							} else {
 								// Look up the sibling's href from the chain or index
 								// We need to find which ancestor page contains this sibling
@@ -862,13 +879,15 @@
 					if (chain[i].name === entityName) return chain[i].href;
 				}
 				// Try to construct a path based on the ancestor chain
-				// If the entity is at the same level as currentLevel, it's a sibling
-				// Use the parent's href as a base
 				if (currentLevel > 0 && chain[currentLevel]) {
 					var parentHref = chain[currentLevel].href;
-					// Go up one more level to find the parent's parent directory
 					var parentDir = parentHref.replace(/\/[^/]+\.htm$/, '');
-					return '/' + parentDir.replace(/^\//, '') + '/' + entityName.toLowerCase() + '.htm';
+					return parentDir + '/' + entityName.toLowerCase() + '.htm';
+				}
+				// Fall back: use the current page's directory
+				if (contentBasePath) {
+					var currentDir = contentBasePath.replace(/\/[^/]+\.htm$/, '');
+					return currentDir + '/' + entityName.toLowerCase() + '.htm';
 				}
 				return '/' + entityName.toLowerCase() + '.htm';
 			}
