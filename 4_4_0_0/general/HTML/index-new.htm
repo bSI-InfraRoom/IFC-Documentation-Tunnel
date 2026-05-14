@@ -444,8 +444,8 @@
 			var sidebar = document.querySelector('.sidebar');
 			var contentArea = document.querySelector('.content-area');
 			var tocGrid = document.querySelector('.toc-grid');
-			var sidebarBasePath = '';   // Base path for sidebar-loaded links
-			var contentBasePath = '';   // Base path for content-area-loaded links
+			var sidebarBaseUrl = '';    // Full URL of the document loaded into sidebar
+			var contentBaseUrl = '';    // Full URL of the document loaded into content-area
 
 			// Navigation history for browser back/forward support
 			var navHistory = [];        // Stack of {href, tocPath} entries
@@ -457,34 +457,6 @@
 			// Compute the base path relative to the document root (handles sub-path deployments)
 			var docRootPath = location.pathname.replace(/\/[^/]*$/, '');
 			var baseFetch = function (path) { return docRootPath + path; };
-
-			/**
-			 * Normalize all relative src/href in a container to document-root-relative paths.
-			 * Resolves paths against the actual document root URL, then strips the prefix.
-			 */
-			function normalizePaths(container) {
-				var docRootUrl = location.origin + docRootPath + '/';
-				var imgs = container.querySelectorAll('img[src]');
-				for (var i = 0; i < imgs.length; i++) {
-					var src = imgs[i].getAttribute('src');
-					if (/^[a-z]+:\/\//i.test(src)) continue;
-					try {
-						var p = new URL(src, docRootUrl).pathname;
-						if (docRootPath) p = p.replace(docRootPath, '');
-						imgs[i].setAttribute('src', p.replace(/^\.?\//, ''));
-					} catch(e) {}
-				}
-				var links = container.querySelectorAll('a[href]');
-				for (var i = 0; i < links.length; i++) {
-					var href = links[i].getAttribute('href');
-					if (/^[a-z]+:\/\//i.test(href)) continue;
-					try {
-						var p = new URL(href, docRootUrl).pathname;
-						if (docRootPath) p = p.replace(docRootPath, '');
-						links[i].setAttribute('href', p.replace(/^\.?\//, ''));
-					} catch(e) {}
-				}
-			}
 
 			/**
 			 * Normalize a relative href to a document-root-relative path.
@@ -504,50 +476,46 @@
 			}
 
 			/**
-			 * Normalize an href to a relative path from the document root.
-			 * Handles both relative hrefs and absolute URLs (from link.href).
+			 * Resolve an href to a document-root-relative path.
+			 * Uses the pane's loaded document URL for resolution — no string manipulation.
 			 */
 			function normalizeHref(href, linkEl) {
-				var basePath = '';
-				if (linkEl) {
-					if (linkEl.closest('.sidebar')) basePath = sidebarBasePath;
-					else if (linkEl.closest('.content-area')) basePath = contentBasePath;
-				}
-				// Resolve relative href against the pane's base path
-				if (!/^[a-z]+:\/\//i.test(href) && !href.startsWith('/') && basePath) {
-					try {
-						var base = new URL(basePath, location.origin);
-						var resolved = new URL(href, base);
-						href = resolved.pathname;
-					} catch (e) {
-						// Fallback: resolve against document root
-						var rootBase = new URL(location.href);
-						var resolved = new URL(href, rootBase);
-						href = resolved.pathname;
-					}
-				}
-
-				// If it's an absolute URL, extract the relative path from the document root
+				// If href is an absolute URL, extract the relative pathname
 				if (/^[a-z]+:\/\//i.test(href)) {
-					var u;
-					try { u = new URL(href); } catch (e) { return href; }
-					href = u.pathname;
+					try {
+						var u = new URL(href);
+						var p = u.pathname;
+						if (docRootPath) p = p.replace(docRootPath, '');
+						return p.replace(/^\.?\//, '').replace(/#.*/, '');
+					} catch (e) { return href; }
 				}
-				// Remove trailing hash/fragment
-				href = href.replace(/#.*/, '');
-				// Remove leading ./ or /
-				href = href.replace(/^\.?\//, '');
-
-				// Convert bare filenames to proper paths:
-				// annex-b.htm -> annex/annex-b.htm
-				var m = href.match(/^annex-([a-f])\.htm$/i);
-				if (m) return 'annex/annex-' + m[1] + '.htm';
-
-				// annex-b/something.htm -> annex/annex-b/something.htm
-				m = href.match(/^annex-([a-f])\//i);
-				if (m) return 'annex/annex-' + m[1] + '/' + href.replace(/^annex-([a-f])\//, '');
-
-				return href;
+				// If href starts with /, it's document-root-relative — strip leading /
+				if (href.startsWith('/')) {
+					return href.replace(/^\/|#.*/, '');
+				}
+				// Resolve relative href against the pane's loaded document URL
+				var paneBase = '';
+				if (linkEl) {
+					if (linkEl.closest('.sidebar')) paneBase = sidebarBaseUrl;
+					else if (linkEl.closest('.content-area')) paneBase = contentBaseUrl;
+				}
+				if (paneBase) {
+					try {
+						var resolved = new URL(href, paneBase);
+						var p = resolved.pathname;
+						if (docRootPath) p = p.replace(docRootPath, '');
+						return p.replace(/^\.?\//, '').replace(/#.*/, '');
+					} catch (e) {}
+				}
+				// No pane base — resolve against document root
+				try {
+					var resolved = new URL(href, location.href);
+					var p = resolved.pathname;
+					if (docRootPath) p = p.replace(docRootPath, '');
+					return p.replace(/^\.?\//, '').replace(/#.*/, '');
+				} catch (e) {
+					return href.replace(/#.*/, '');
+				}
 			}
 
 			/**
@@ -631,11 +599,11 @@
 			  */
 			function loadSidebar(tocPath) {
 				if (!tocPath) {
-					sidebarBasePath = '';
+					sidebarBaseUrl = '';
 					sidebar.innerHTML = '<div class="credits"><p class="small"></p></div>';
 					return Promise.resolve();
 				}
-				sidebarBasePath = tocPath;
+				sidebarBaseUrl = location.origin + docRootPath + '/' + tocPath;
 				sidebar.innerHTML = '<div class="loading">Loading...</div>';
 				return fetch(baseFetch('/' + tocPath))
 					.then(function (r) {
@@ -648,7 +616,6 @@
 						var menu = doc.querySelector('.menu');
 						if (menu) {
 							sidebar.innerHTML = '<div class="menu">' + menu.innerHTML + '</div>';
-							normalizePaths(sidebar.querySelector('.menu'));
 						} else {
 							sidebar.innerHTML = '<div class="credits"><p class="small"></p></div>';
 						}
@@ -776,7 +743,7 @@
 						child = inheritanceIndex[child];
 						i++;
 					}
-					chain.push({ href: '/' + normalizeAreaHref(contentBasePath), name: currentEntity });
+					chain.push({ href: '/' + normalizeAreaHref(contentBaseUrl.replace(location.origin + docRootPath, '')), name: currentEntity });
 					if (inheritanceSiblings[currentEntity].length !== 0 && i === areas.length) {
 						var siblings = inheritanceSiblings[currentEntity];
 						chain.push({ href: '/' + normalizeAreaHref(areas[0].getAttribute('href')), name: siblings[0] });
@@ -885,8 +852,9 @@
 					return parentDir + '/' + entityName.toLowerCase() + '.htm';
 				}
 				// Fall back: use the current page's directory
-				if (contentBasePath) {
-					var currentDir = contentBasePath.replace(/\/[^/]+\.htm$/, '');
+				if (contentBaseUrl) {
+					var currentPath = contentBaseUrl.replace(location.origin + docRootPath, '');
+					var currentDir = currentPath.replace(/\/[^/]+\.htm$/, '');
 					return currentDir + '/' + entityName.toLowerCase() + '.htm';
 				}
 				return '/' + entityName.toLowerCase() + '.htm';
@@ -896,7 +864,7 @@
 			 * Load a content page into the main area via fetch.
 			 */
 			function loadContent(href) {
-				contentBasePath = href;
+				contentBaseUrl = location.origin + docRootPath + '/' + href;
 				contentArea.innerHTML = '<div class="loading">Loading...</div>';
 				fetch(baseFetch('/' + href))
 					.then(function (r) {
@@ -931,6 +899,15 @@
 							scripts.forEach(function (s) { s.parentNode.removeChild(s); });
 						}
 						contentArea.innerHTML = bodyClone ? bodyClone.innerHTML : '';
+
+						// Resolve image src to absolute URLs so the browser doesn't need to resolve them
+						var docRootUrl = location.origin + docRootPath + '/';
+						var imgs = contentArea.querySelectorAll('img[src]');
+						for (var i = 0; i < imgs.length; i++) {
+							var src = imgs[i].getAttribute('src');
+							if (/^[a-z]+:\/\//i.test(src)) continue;
+							try { imgs[i].setAttribute('src', new URL(src, docRootUrl).href); } catch(e) {}
+						}
 
 						// Extract sidebar anchor before stripping scripts
 						var sidebarAnchor = extractSidebarAnchor(html);
@@ -1068,6 +1045,11 @@
 				if (!hash) return;
 
 				var path = decodeURIComponent(hash);
+				// Strip docRootPath prefix (e.g., repo name on GitHub Pages)
+				if (docRootPath && path.indexOf(docRootPath) === 0) {
+					path = path.substring(docRootPath.length);
+				}
+				path = path.replace(/^\//, '');
 				if (path === 'index-new.htm') return;
 
 				var tocPath = resolveTocPath(path);
@@ -1091,9 +1073,6 @@
 
 			// Listen for hash changes (browser back/forward)
 			window.addEventListener('hashchange', handleHashNavigation);
-
-			// Normalize all relative paths in the initial page
-			normalizePaths(document.body);
 
 			// Handle initial load
 			handleHashNavigation();
