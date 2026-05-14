@@ -901,12 +901,11 @@
 						contentArea.innerHTML = bodyClone ? bodyClone.innerHTML : '';
 
 						// Resolve image src to absolute URLs so the browser doesn't need to resolve them
-						var docRootUrl = location.origin + docRootPath + '/';
 						var imgs = contentArea.querySelectorAll('img[src]');
 						for (var i = 0; i < imgs.length; i++) {
 							var src = imgs[i].getAttribute('src');
 							if (/^[a-z]+:\/\//i.test(src)) continue;
-							try { imgs[i].setAttribute('src', new URL(src, docRootUrl).href); } catch(e) {}
+							try { imgs[i].setAttribute('src', new URL(src, contentBaseUrl).href); } catch(e) {}
 						}
 
 						// Extract sidebar anchor before stripping scripts
