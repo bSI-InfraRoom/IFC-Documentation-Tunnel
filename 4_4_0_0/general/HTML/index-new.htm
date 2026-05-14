@@ -888,10 +888,28 @@
 						// so relative img/video/src resolve against the wrong directory.
 						// Insert a <base> element so all relative URLs in the content resolve
 						// from the document root instead of the current pushState URL.
-						var baseEl = document.createElement('base');
-						baseEl.href = location.origin + docRootPath + '/';
-						baseEl.setAttribute('data-nav-base', 'true');
-						document.head.appendChild(baseEl);
+						// Fix relative paths in loaded content by resolving them against the document root
+						var fixRelativePaths = function(container, basePath) {
+							var imgs = container.querySelectorAll('img[src]');
+							for (var i = 0; i < imgs.length; i++) {
+								var src = imgs[i].getAttribute('src');
+								if (/^[a-z]+:\/\//i.test(src)) continue; // absolute URL, skip
+								try {
+									var resolved = new URL(src, location.origin + docRootPath + '/');
+									imgs[i].setAttribute('src', resolved.pathname);
+								} catch(e) {}
+							}
+							var links = container.querySelectorAll('a[href]');
+							for (var i = 0; i < links.length; i++) {
+								var href = links[i].getAttribute('href');
+								if (/^[a-z]+:\/\//i.test(href)) continue;
+								try {
+									var resolved = new URL(href, location.origin + docRootPath + '/');
+									links[i].setAttribute('href', resolved.pathname);
+								} catch(e) {}
+							}
+						};
+						fixRelativePaths(contentArea, contentBasePath);
 
 						// Extract sidebar anchor before stripping scripts
 						var sidebarAnchor = extractSidebarAnchor(html);
