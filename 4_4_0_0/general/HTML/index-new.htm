@@ -317,7 +317,7 @@
 			width: auto;
 			margin: 0.2rem 0;
 			font-size: 0.85rem;
-			background: #fff;
+			background: var(--back-color);
 			border: 1px solid #e8e8e8;
 		}
 
@@ -1041,7 +1041,10 @@
 			 */
 			function handleHashNavigation() {
 				var hash = window.location.hash.replace(/^#/, '');
-				if (!hash) return;
+				if (!hash) {
+					navigateTo('cover.htm');
+					return;
+				}
 
 				var path = decodeURIComponent(hash);
 				// Strip docRootPath prefix (e.g., repo name on GitHub Pages)
