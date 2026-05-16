@@ -108,6 +108,7 @@
 			flex: 1;
 			display: flex;
 			overflow: hidden;
+			flex-direction: row-reverse;
 		}
 
 		/* Left sidebar — dynamically populated with toc-*.htm content */
@@ -364,8 +365,137 @@
 			opacity: 0.75;
 			padding-left: 0.8rem;
 		}
+		/* Search */
+		.search-container {
+			position: relative;
+			display: inline-block;
+			margin-left: 1rem;
+			vertical-align: top;
+			padding-top: 2px;
+		}
+
+		.search-input {
+			padding: 4px 10px;
+			border: 1px solid var(--secondary-border-color);
+			border-radius: 4px;
+			font-size: 0.85rem;
+			width: 180px;
+			outline: none;
+			transition: border-color 0.2s;
+		}
+
+		.search-input:focus {
+			border-color: var(--a-link-color);
+		}
+
+		.search-results {
+			padding: 0;
+		}
+
+		.search-results-panel {
+			padding: 0;
+			border-top: 1px solid var(--header-border-color);
+			background: #f8f9fa;
+			max-height: 100%;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			resize: horizontal;
+			min-width: 200px;
+			max-width: 60%;
+			width: 30%;
+			flex-shrink: 0;
+			overflow-y: auto;
+		}
+
+		.search-results-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0.5rem var(--universal-padding);
+			border-bottom: 1px solid var(--header-border-color);
+			background: #f8f9fa;
+			flex-shrink: 0;
+		}
+
+		.search-results-header h3 {
+			font-size: 1.1rem;
+			font-weight: 600;
+			border: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.search-close-btn {
+			background: none;
+			border: none;
+			cursor: pointer;
+			font-size: 1.1rem;
+			color: #888;
+			padding: 0 4px;
+			line-height: 1;
+		}
+
+		.search-close-btn:hover {
+			color: #333;
+		}
+
+		.search-results-body {
+			overflow-y: auto;
+			flex: 1;
+		}
+
+		.search-result-item {
+			padding: 8px 12px;
+			cursor: pointer;
+			border-bottom: 1px solid #eee;
+			font-size: 0.85rem;
+		}
+
+		.search-result-item:last-child {
+			border-bottom: none;
+		}
+
+		.search-result-item:hover {
+			background: #e8f0fe;
+		}
+
+		.search-result-title {
+			font-weight: 600;
+			color: var(--a-link-color);
+			margin-bottom: 2px;
+		}
+
+		.search-result-type {
+			font-size: 0.7rem;
+			color: #888;
+			text-transform: uppercase;
+			margin-right: 6px;
+		}
+
+		.search-result-path {
+			font-size: 0.75rem;
+			color: #666;
+			margin-top: 1px;
+		}
+
+		.search-result-snippet {
+			color: #555;
+			font-size: 0.8rem;
+			line-height: 1.4;
+		}
+
+		.search-no-results {
+			padding: 12px;
+			color: #888;
+			font-size: 0.85rem;
+			text-align: center;
+		}
 	</style>
 </head>
+
+	<!-- Search index for client-side full-text search -->
+	<script src="assets/js/search-index-inline.js"></script>
 
 <body>
 
@@ -373,6 +503,9 @@
 		<!-- Top bar: title + 5-column TOC (replaces content.htm) -->
 		<div class="top-bar">
 			<p class="title-row"><b>Tunnel - 1.0 [Deliverables]</b></p>
+			<div class="search-container">
+				<input type="text" id="search-input" class="search-input" placeholder="Search..." autocomplete="off">
+			</div>
 			<div class="toc-grid">
 				<div>
 					<ul class="no-bullets">
@@ -436,6 +569,15 @@
 				<p>Select a section to navigate.</p>
 				<img class="tunnel-bg" src="img/tunnel-background.png">
 			</div>
+
+			<!-- Search results (outside content-area so navigation doesn't destroy it) -->
+			<div id="search-results-panel" class="search-results-panel" style="display:none;">
+				<div class="search-results-header">
+					<h3>Search Results</h3>
+					<button class="search-close-btn" id="search-close-btn" title="Close search">&times;</button>
+				</div>
+				<div id="search-results" class="search-results-body"></div>
+			</div>
 		</div>
 	</div>
 
@@ -464,6 +606,8 @@
 			 * and leading ./ or /.
 			 */
 			function normalizeAreaHref(href) {
+				// Normalize backslashes to forward slashes
+				href = href.replace(/\\/g, '/');
 				if (/^[a-z]+:\/\//i.test(href)) return href;
 				try {
 					var docRootUrl = location.origin + docRootPath + '/';
@@ -480,6 +624,8 @@
 			 * Uses the pane's loaded document URL for resolution — no string manipulation.
 			 */
 			function normalizeHref(href, linkEl) {
+				// Normalize backslashes to forward slashes (from Windows-generated search index)
+				href = href.replace(/\\/g, '/');
 				// If href is an absolute URL, extract the relative pathname
 				if (/^[a-z]+:\/\//i.test(href)) {
 					try {
@@ -965,7 +1111,7 @@
 			 * This works with any server (no rewrite config needed) and
 			 * supports browser back/forward natively.
 			 */
-			function navigateTo(href, tocPath) {
+			function navigateTo(href, tocPath, searchState) {
 				var resolvedHref = normalizeHref(href, null);
 				var resolvedToc = tocPath || resolveTocPath(resolvedHref);
 
@@ -977,7 +1123,8 @@
 				navIndex = navHistory.length - 1;
 
 				// Update browser URL with hash fragment
-				var newHash = '#' + encodeURIComponent(resolvedHref);
+				var hashPart = encodeURIComponent(resolvedHref);
+				var newHash = '#' + hashPart;
 				if (window.location.hash !== newHash) {
 					window.location.hash = newHash;
 				}
@@ -1042,11 +1189,33 @@
 			function handleHashNavigation() {
 				var hash = window.location.hash.replace(/^#/, '');
 				if (!hash) {
-					navigateTo('cover.htm');
+					// No hash — set default without changing URL
+					var coverHref = 'cover.htm';
+					var coverToc = resolveTocPath(coverHref);
+					if (navIndex < 0) {
+						navHistory.push({ href: coverHref, tocPath: coverToc });
+						navIndex = 0;
+					}
+					if (canFetchLocal) {
+						loadContent(coverHref);
+						loadSidebar(coverToc);
+					} else {
+						contentArea.innerHTML =
+							'<iframe src="/' + coverHref + '" style="width:100%;height:100%;border:none;" ' +
+							'sandbox="allow-same-origin"></iframe>';
+						loadSidebarIframe(coverToc);
+					}
 					return;
 				}
 
-				var path = decodeURIComponent(hash);
+				// Parse path from hash (ignore any ?q= param — search is not tracked in history)
+				var path = hash;
+				var qIdx = path.indexOf('?q=');
+				if (qIdx >= 0) {
+					path = path.substring(0, qIdx);
+				}
+
+				path = decodeURIComponent(path);
 				// Strip docRootPath prefix (e.g., repo name on GitHub Pages)
 				if (docRootPath && path.indexOf(docRootPath) === 0) {
 					path = path.substring(docRootPath.length);
@@ -1056,11 +1225,26 @@
 
 				var tocPath = resolveTocPath(path);
 				if (tocPath !== null) {
-					// Update nav history - avoid duplicates
-					if (navIndex < 0 || navHistory[navIndex].href !== path) {
+					// Find matching entry in nav history (for back/forward)
+					var foundIndex = -1;
+					for (var h = navHistory.length - 1; h >= 0; h--) {
+						if (navHistory[h].href === path) {
+							foundIndex = h;
+							break;
+						}
+					}
+					if (foundIndex >= 0) {
+						// Found existing entry — move to it (back or forward)
+						navIndex = foundIndex;
+					} else {
+						// New page — push and advance
+						if (navIndex < navHistory.length - 1) {
+							navHistory = navHistory.slice(0, navIndex + 1);
+						}
 						navHistory.push({ href: path, tocPath: tocPath });
 						navIndex = navHistory.length - 1;
 					}
+
 					if (canFetchLocal) {
 						loadContent(path);
 						loadSidebar(tocPath);
@@ -1071,6 +1255,13 @@
 						loadSidebarIframe(tocPath);
 					}
 				}
+
+				// Search is not tracked in history — always hide search results on nav
+				if (searchResultsPanel) searchResultsPanel.style.display = 'none';
+				searchActive = false;
+				var dc = getDefaultContent();
+				if (dc && dc.p) dc.p.style.display = '';
+				if (dc && dc.img) dc.img.style.display = '';
 			}
 
 			// Listen for hash changes (browser back/forward)
@@ -1078,6 +1269,233 @@
 
 			// Handle initial load
 			handleHashNavigation();
+
+			// --- Search ---
+			var searchInput = document.getElementById('search-input');
+			var searchResultsPanel = document.getElementById('search-results-panel');
+			var searchResults = document.getElementById('search-results');
+			var contentArea = document.querySelector('.content-area');
+			var searchActive = false;
+			// Track default content references (may be recreated by navigation)
+			function getDefaultContent() {
+				var p = contentArea ? contentArea.querySelector('p') : null;
+				var img = contentArea ? contentArea.querySelector('.tunnel-bg') : null;
+				return { p: p, img: img };
+			}
+
+			function escapeHtml(str) {
+				return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+			}
+
+			function searchIndex(query) {
+				var idx = window.__SEARCH_INDEX__;
+				if (!idx || !query || query.length < 2) return [];
+				var terms = query.toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(/\s+/).filter(Boolean);
+				var tokenMap = idx.tokens;
+				var pages = idx.pages;
+
+				var candidates = null;
+				for (var t = 0; t < terms.length; t++) {
+					var postings = tokenMap[terms[t]];
+					if (!postings) return [];
+					if (candidates === null) {
+						candidates = Object.create(null);
+						for (var i = 0; i < postings.length; i++) candidates[postings[i]] = 0;
+					} else {
+						var next = Object.create(null);
+						for (var j = 0; j < postings.length; j++) {
+							if (candidates[postings[j]] !== undefined) next[postings[j]] = 0;
+						}
+						candidates = next;
+					}
+					for (var k = 0; k < postings.length; k++) {
+						if (candidates[postings[k]] !== undefined) candidates[postings[k]]++;
+					}
+				}
+
+				var results = [];
+				for (var id in candidates) {
+					var idx2 = pages.idToIndex[id];
+					if (idx2 === undefined) continue;
+					var title = pages.titles[idx2];
+					var type = pages.types[idx2];
+					var text = pages.texts[idx2];
+					var fullText = pages.fullTexts ? pages.fullTexts[idx2] : text;
+					if (!title) continue;
+					var snippet = '';
+					for (var s = 0; s < terms.length; s++) {
+						var ti = fullText.toLowerCase().indexOf(terms[s]);
+						if (ti >= 0) {
+							var start = Math.max(0, ti - 50);
+							var end = Math.min(fullText.length, ti + terms[s].length + 50);
+							if (start > 0) snippet += '...';
+							snippet += fullText.substring(start, end);
+							if (end < fullText.length) snippet += '...';
+							break;
+						}
+					}
+					results.push({ id: id, title: title, type: type, snippet: snippet, score: candidates[id], displayPath: formatPath(id) });
+				}
+
+				results.sort(function(a, b) { return b.score - a.score || a.id.localeCompare(b.id); });
+				return results.slice(0, 20);
+			}
+
+			function debounce(fn, delay) {
+				var timer;
+				return function() {
+					clearTimeout(timer);
+					timer = setTimeout(fn, delay);
+				};
+			}
+
+			function formatPath(path) {
+				// Convert path to a readable breadcrumb for search results
+				var parts = path.replace(/\\/g, '/').split('/');
+				if (parts.length <= 1) return '';
+				// Remove the filename (last part) — show the parent directory context
+				var dirParts = parts.slice(0, -1);
+				var label = '';
+				for (var i = 0; i < dirParts.length; i++) {
+					var p = dirParts[i];
+					if (p === 'annex' && i + 1 < dirParts.length) {
+						label += dirParts[i + 1] + ' ';
+						i++;
+					} else if (p.startsWith('chapter-')) {
+						label += p.replace('chapter-', 'Chapter ') + ' ';
+					} else if (p.startsWith('ifc') && !p.startsWith('ifcshared')) {
+						label += p.replace(/-/g, ' ') + ' ';
+					}
+				}
+				return label.trim();
+			}
+
+			function highlightTerms(text, query) {
+				var terms = query.toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(/\s+/).filter(Boolean);
+				var escaped = escapeHtml(text);
+				for (var t = 0; t < terms.length; t++) {
+					var regex = new RegExp('(' + terms[t] + ')', 'gi');
+					escaped = escaped.replace(regex, '<mark>$1</mark>');
+				}
+				return escaped;
+			}
+
+			function renderResults(results, query) {
+				if (!results.length) {
+					searchResults.innerHTML = '<div class="search-no-results">No results found</div>';
+				} else {
+					var html = '';
+					for (var i = 0; i < results.length; i++) {
+						var r = results[i];
+						html += '<div class="search-result-item" data-href="' + r.id + '" data-query="' + escapeHtml(query) + '" data-type="' + r.type + '">';
+						html += '<div class="search-result-title">';
+						html += '<span class="search-result-type">' + r.type + '</span>';
+						html += escapeHtml(r.title);
+						html += '</div>';
+						if (r.displayPath) {
+							html += '<div class="search-result-path">' + escapeHtml(r.displayPath) + '</div>';
+						}
+						if (r.snippet) {
+							html += '<div class="search-result-snippet">' + highlightTerms(r.snippet, query) + '</div>';
+						}
+						html += '</div>';
+					}
+					searchResults.innerHTML = html;
+
+					var items = searchResults.querySelectorAll('.search-result-item');
+					for (var j = 0; j < items.length; j++) {
+						items[j].addEventListener('click', function() {
+							var href = this.getAttribute('data-href');
+							var query = this.getAttribute('data-query');
+							var type = this.getAttribute('data-type');
+							searchInput.value = '';
+							searchResultsPanel.style.display = 'none';
+							searchActive = false;
+							var dc = getDefaultContent();
+							if (dc.p) dc.p.style.display = '';
+							if (dc.img) dc.img.style.display = '';
+							navigateTo(href, null);
+							// For ANNEX results, scroll to the matching entity link after page loads
+							if (type === 'annex' && query) {
+								var attempts = 0;
+								function tryScroll() {
+									if (contentArea.querySelector('a[href]')) {
+										scrollAnnexToEntity(query);
+									} else if (attempts < 10) {
+										attempts++;
+										setTimeout(tryScroll, 300);
+									}
+								}
+								tryScroll();
+							}
+						});
+					}
+				}
+				searchResultsPanel.style.display = 'block';
+				var dc = getDefaultContent();
+				if (dc.p) dc.p.style.display = 'none';
+				if (dc.img) dc.img.style.display = 'none';
+			}
+
+			/**
+			 * For ANNEX listing pages, scroll to the <a> whose text matches a search term.
+			 * Annex listing pages (annex-b) contain <li><a href="...">Entity Name</a></li>.
+			 */
+			function scrollAnnexToEntity(query) {
+				var terms = query.toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(/\s+/).filter(Boolean);
+				var links = contentArea.querySelectorAll('a[href]');
+				var bestMatch = null;
+				var bestScore = 0;
+				for (var k = 0; k < links.length; k++) {
+					var text = (links[k].textContent || '').trim();
+					var textLower = text.toLowerCase();
+					var score = 0;
+					for (var t = 0; t < terms.length; t++) {
+						if (textLower === terms[t]) { score += 10; }
+						else if (textLower.indexOf(terms[t]) === 0) { score += 5; }
+						else if (textLower.indexOf(terms[t]) !== -1) { score += 1; }
+					}
+					if (score > bestScore) { bestScore = score; bestMatch = links[k]; }
+				}
+				if (bestMatch) {
+					bestMatch.scrollIntoView({ block: 'center', behavior: 'smooth' });
+				}
+			}
+
+			function closeSearch() {
+				searchInput.value = '';
+				searchResultsPanel.style.display = 'none';
+				searchActive = false;
+				var dc = getDefaultContent();
+				if (dc.p) dc.p.style.display = '';
+				if (dc.img) dc.img.style.display = '';
+			}
+
+			document.getElementById('search-close-btn').addEventListener('click', closeSearch);
+
+			var doSearch = debounce(function() {
+				var query = searchInput.value.trim();
+				if (query.length < 2) {
+					closeSearch();
+					return;
+				}
+				if (!searchActive) {
+					searchActive = true;
+					var dc = getDefaultContent();
+					if (dc.p) dc.p.style.display = 'none';
+					if (dc.img) dc.img.style.display = 'none';
+				}
+				var results = searchIndex(query);
+				renderResults(results, query);
+			}, 200);
+
+			searchInput.addEventListener('input', doSearch);
+			searchInput.addEventListener('keydown', function(e) {
+				if (e.key === 'Escape') {
+					closeSearch();
+					searchInput.blur();
+				}
+			});
 		})();
 	</script>
 
