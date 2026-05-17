@@ -108,7 +108,7 @@
 			flex: 1;
 			display: flex;
 			overflow: hidden;
-			flex-direction: row-reverse;
+			position: relative;
 		}
 
 		/* Left sidebar — dynamically populated with toc-*.htm content */
@@ -395,6 +395,7 @@
 		.search-results-panel {
 			padding: 0;
 			border-top: 1px solid var(--header-border-color);
+			border-left: 1px solid var(--header-border-color);
 			background: #f8f9fa;
 			max-height: 100%;
 			overflow: hidden;
@@ -405,6 +406,11 @@
 			max-width: 60%;
 			width: 30%;
 			flex-shrink: 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 10;
 			overflow-y: auto;
 		}
 
@@ -570,7 +576,7 @@
 				<img class="tunnel-bg" src="img/tunnel-background.png">
 			</div>
 
-			<!-- Search results (outside content-area so navigation doesn't destroy it) -->
+			<!-- Search results (overlays sidebar when visible) -->
 			<div id="search-results-panel" class="search-results-panel" style="display:none;">
 				<div class="search-results-header">
 					<h3>Search Results</h3>
