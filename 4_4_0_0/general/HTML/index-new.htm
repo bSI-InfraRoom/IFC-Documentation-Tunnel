@@ -1016,7 +1016,13 @@
 			function findEntityHref(entityName, chain, currentLevel, currentRawHref, areaHrefMap) {
 				// Use the entity-path-index for the definitive path
 				if (entityPathIndex && entityPathIndex[entityName]) {
-					return '/' + entityPathIndex[entityName];
+					var entityPath = entityPathIndex[entityName];
+					// Resolve relative to doc root URL to get correct path
+					if (docRootUrl) {
+						var fullUrl = new URL(entityPath, docRootUrl).href;
+						return fullUrl;
+					}
+					return entityPath;
 				}
 				// Try the area href map — uses the original relative href
 				if (areaHrefMap && areaHrefMap[entityName]) {
