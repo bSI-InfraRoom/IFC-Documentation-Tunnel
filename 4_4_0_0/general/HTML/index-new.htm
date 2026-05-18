@@ -618,9 +618,9 @@
 				href = href.replace(/\\/g, '/');
 				if (/^[a-z]+:\/\//i.test(href)) return href;
 				try {
+					// Resolve relative href against doc root URL — pathname is already absolute
 					var p = new URL(href, docRootUrl).pathname;
-					if (docRootUrl) p = p.replace(docRootUrl, '');
-					return p.replace(/^\.?\//, '');
+					return p.replace(/^\//, '');
 				} catch(e) {
 					return href;
 				}
@@ -638,8 +638,12 @@
 					try {
 						var u = new URL(href);
 						var p = u.pathname;
-						if (docRootUrl) p = p.replace(docRootUrl, '');
-						return p.replace(/^\.?\//, '').replace(/#.*/, '');
+						// Convert absolute pathname to relative by resolving against doc root
+						if (docRootUrl) {
+							var rel = new URL(p, docRootUrl).pathname;
+							p = rel.replace(/^\//, '');
+						}
+						return p.replace(/#.*/, '');
 					} catch (e) { return href; }
 				}
 				// If href starts with /, it's document-root-relative — strip leading /
@@ -656,16 +660,22 @@
 					try {
 						var resolved = new URL(href, paneBase);
 						var p = resolved.pathname;
-						if (docRootUrl) p = p.replace(docRootUrl, '');
-						return p.replace(/^\.?\//, '').replace(/#.*/, '');
+						if (docRootUrl) {
+							var rel = new URL(p, docRootUrl).pathname;
+							p = rel.replace(/^\//, '');
+						}
+						return p.replace(/#.*/, '');
 					} catch (e) {}
 				}
 				// No pane base — resolve against document root
 				try {
 					var resolved = new URL(href, location.href);
 					var p = resolved.pathname;
-					if (docRootUrl) p = p.replace(docRootUrl, '');
-					return p.replace(/^\.?\//, '').replace(/#.*/, '');
+					if (docRootUrl) {
+						var rel = new URL(p, docRootUrl).pathname;
+						p = rel.replace(/^\//, '');
+					}
+					return p.replace(/#.*/, '');
 				} catch (e) {
 					return href.replace(/#.*/, '');
 				}
@@ -1246,9 +1256,10 @@
 				}
 
 				path = decodeURIComponent(path);
-				// Strip docRootUrl prefix (e.g., repo name on GitHub Pages)
-				if (docRootUrl && path.indexOf(docRootUrl) === 0) {
-					path = path.substring(docRootUrl.length);
+				// Strip docRootPath prefix (e.g., repo name on GitHub Pages)
+				// Use docRootPath here (pathname-only) since path is already a relative pathname
+				if (docRootPath && path.indexOf(docRootPath) === 0) {
+					path = path.substring(docRootPath.length);
 				}
 				path = path.replace(/^\//, '');
 				if (path === 'index-new.htm') return;
