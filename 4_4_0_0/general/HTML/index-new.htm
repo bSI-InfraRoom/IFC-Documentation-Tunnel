@@ -604,6 +604,8 @@
 
 			// Compute the base path relative to the document root (handles sub-path deployments)
 			var docRootPath = location.pathname.replace(/\/[^/]*$/, '');
+				// Document root URL for resolving absolute paths to relative ones
+				var docRootUrl = location.origin + docRootPath + '/';
 			var baseFetch = function (path) { return docRootPath + path; };
 
 			/**
@@ -616,9 +618,8 @@
 				href = href.replace(/\\/g, '/');
 				if (/^[a-z]+:\/\//i.test(href)) return href;
 				try {
-					var docRootUrl = location.origin + docRootPath + '/';
 					var p = new URL(href, docRootUrl).pathname;
-					if (docRootPath) p = p.replace(docRootPath, '');
+					if (docRootUrl) p = p.replace(docRootUrl, '');
 					return p.replace(/^\.?\//, '');
 				} catch(e) {
 					return href;
@@ -637,7 +638,7 @@
 					try {
 						var u = new URL(href);
 						var p = u.pathname;
-						if (docRootPath) p = p.replace(docRootPath, '');
+						if (docRootUrl) p = p.replace(docRootUrl, '');
 						return p.replace(/^\.?\//, '').replace(/#.*/, '');
 					} catch (e) { return href; }
 				}
@@ -655,7 +656,7 @@
 					try {
 						var resolved = new URL(href, paneBase);
 						var p = resolved.pathname;
-						if (docRootPath) p = p.replace(docRootPath, '');
+						if (docRootUrl) p = p.replace(docRootUrl, '');
 						return p.replace(/^\.?\//, '').replace(/#.*/, '');
 					} catch (e) {}
 				}
@@ -663,7 +664,7 @@
 				try {
 					var resolved = new URL(href, location.href);
 					var p = resolved.pathname;
-					if (docRootPath) p = p.replace(docRootPath, '');
+					if (docRootUrl) p = p.replace(docRootUrl, '');
 					return p.replace(/^\.?\//, '').replace(/#.*/, '');
 				} catch (e) {
 					return href.replace(/#.*/, '');
@@ -1245,9 +1246,9 @@
 				}
 
 				path = decodeURIComponent(path);
-				// Strip docRootPath prefix (e.g., repo name on GitHub Pages)
-				if (docRootPath && path.indexOf(docRootPath) === 0) {
-					path = path.substring(docRootPath.length);
+				// Strip docRootUrl prefix (e.g., repo name on GitHub Pages)
+				if (docRootUrl && path.indexOf(docRootUrl) === 0) {
+					path = path.substring(docRootUrl.length);
 				}
 				path = path.replace(/^\//, '');
 				if (path === 'index-new.htm') return;
