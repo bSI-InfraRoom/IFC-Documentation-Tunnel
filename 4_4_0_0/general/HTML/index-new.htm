@@ -1060,6 +1060,9 @@
 							try { imgs[i].setAttribute('src', new URL(src, contentBaseUrl).href); } catch(e) {}
 						}
 
+						// Cache extracted body text for search snippet generation
+						textCache.set(href, stripHtml(html));
+
 						// Extract sidebar anchor before stripping scripts
 						var sidebarAnchor = extractSidebarAnchor(html);
 
@@ -1282,6 +1285,22 @@
 			var searchResults = document.getElementById('search-results');
 			var contentArea = document.querySelector('.content-area');
 			var searchActive = false;
+			// Cache for full page text extracted from loaded HTML (lazy snippet source)
+			var textCache = new Map();
+
+			function stripHtml(html) {
+				var text = html.replace(/<script[\s\S]*?<\/script>/gi, '')
+					.replace(/<style[\s\S]*?<\/style>/gi, '')
+					.replace(/<!--[\s\S]*?-->/g, '');
+				text = text.replace(/<\/?(?:p|div|tr|li|h[1-6]|br|section|details|summary|blockquote|ul|ol)[^>]*>/gi, '\n')
+					.replace(/<[^>]+>/g, ' ');
+				text = text.replace(/&nbsp;/g, ' ')
+					.replace(/&lt;/g, '<')
+					.replace(/&gt;/g, '>')
+					.replace(/&amp;/g, '&')
+					.replace(/&quot;/g, '"');
+				return text.replace(/\s+/g, ' ').trim();
+			}
 			// Track default content references (may be recreated by navigation)
 			function getDefaultContent() {
 				var p = contentArea ? contentArea.querySelector('p') : null;
@@ -1299,34 +1318,53 @@
 				var terms = query.toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(/\s+/).filter(Boolean);
 				var tokenMap = idx.tokens;
 				var pages = idx.pages;
+				var pageIds = pages.ids;
+
+				// Find all tokens containing this term (containment matching)
+				function findMatchingTokens(term) {
+					var matched = [];
+					for (var tok in tokenMap) {
+						if (tok.indexOf(term) !== -1) matched.push(tok);
+					}
+					return matched;
+				}
 
 				var candidates = null;
 				for (var t = 0; t < terms.length; t++) {
-					var postings = tokenMap[terms[t]];
-					if (!postings) return [];
+					var matchedTokens = findMatchingTokens(terms[t]);
+					if (!matchedTokens.length) return [];
+
+					// Collect all postings from matching tokens (numeric IDs)
+					var allIds = [];
+					for (var mt = 0; mt < matchedTokens.length; mt++) {
+						var p = tokenMap[matchedTokens[mt]];
+						if (p) {
+							for (var pi = 0; pi < p.length; pi++) allIds.push(p[pi]);
+						}
+					}
+
 					if (candidates === null) {
 						candidates = Object.create(null);
-						for (var i = 0; i < postings.length; i++) candidates[postings[i]] = 0;
+						for (var i = 0; i < allIds.length; i++) candidates[allIds[i]] = 0;
 					} else {
 						var next = Object.create(null);
-						for (var j = 0; j < postings.length; j++) {
-							if (candidates[postings[j]] !== undefined) next[postings[j]] = 0;
+						for (var j = 0; j < allIds.length; j++) {
+							if (candidates[allIds[j]] !== undefined) next[allIds[j]] = 0;
 						}
 						candidates = next;
 					}
-					for (var k = 0; k < postings.length; k++) {
-						if (candidates[postings[k]] !== undefined) candidates[postings[k]]++;
+					for (var k = 0; k < allIds.length; k++) {
+						if (candidates[allIds[k]] !== undefined) candidates[allIds[k]]++;
 					}
 				}
 
 				var results = [];
-				for (var id in candidates) {
-					var idx2 = pages.idToIndex[id];
-					if (idx2 === undefined) continue;
+				for (var idx2 in candidates) {
+					var pagePath = pageIds[idx2];
 					var title = pages.titles[idx2];
 					var type = pages.types[idx2];
 					var text = pages.texts[idx2];
-					var fullText = pages.fullTexts ? pages.fullTexts[idx2] : text;
+					var fullText = textCache.get(pagePath) || text;
 					if (!title) continue;
 					var snippet = '';
 					for (var s = 0; s < terms.length; s++) {
@@ -1340,7 +1378,7 @@
 							break;
 						}
 					}
-					results.push({ id: id, title: title, type: type, snippet: snippet, score: candidates[id], displayPath: formatPath(id) });
+					results.push({ id: pagePath, title: title, type: type, snippet: snippet, score: candidates[idx2], displayPath: formatPath(pagePath) });
 				}
 
 				results.sort(function(a, b) { return b.score - a.score || a.id.localeCompare(b.id); });
@@ -1482,7 +1520,15 @@
 			var doSearch = debounce(function() {
 				var query = searchInput.value.trim();
 				if (query.length < 2) {
-					closeSearch();
+					setTimeout(function() {
+						if (searchInput.value.trim().length < 2) {
+							if (searchResultsPanel) searchResultsPanel.style.display = 'none';
+							searchActive = false;
+							var dc = getDefaultContent();
+							if (dc.p) dc.p.style.display = '';
+							if (dc.img) dc.img.style.display = '';
+						}
+					}, 500);
 					return;
 				}
 				if (!searchActive) {
