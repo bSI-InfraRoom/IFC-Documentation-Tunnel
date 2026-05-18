@@ -827,7 +827,7 @@
 				Promise.all([
 					fetch(baseFetch('/assets/js/inheritance-index.json')).then(function (r) { return r.json(); }),
 					fetch(baseFetch('/assets/js/inheritance-siblings.json')).then(function (r) { return r.json(); }),
-					fetch(baseFetch('/assets/js/entity-path-index.json')).then(function (r) { return r.json(); }).catch(function () { return {}; }),
+					fetch(baseFetch('/assets/js/entity-path-index.json?v=' + Date.now())).then(function (r) { return r.json(); }).catch(function () { return {}; }),
 						fetch(baseFetch('/assets/js/abstract-entities.json')).then(function (r) { return r.json(); }).catch(function () { return []; }),
 					fetch(baseFetch('/assets/js/deprecated-entities.json')).then(function (r) { return r.json(); }).catch(function () { return []; })
 				]).then(function (data) {
@@ -958,16 +958,8 @@
 								sibCls = 'abstract';
 							}
 
-							// Find href for sibling
-							var sibHref = '';
-							if (sib === entName) {
-								sibHref = ent.href;
-							} else {
-								// Look up the sibling's href from the chain or index
-								// We need to find which ancestor page contains this sibling
-								// For now, construct a reasonable path
-								sibHref = findEntityHref(sib, chain, j, currentRawHref, areaHrefMap);
-							}
+							// Find href for sibling — all siblings use the same resolution
+							var sibHref = findEntityHref(sib, chain, j, currentRawHref, areaHrefMap);
 
 							tierHtml += '<li class="' + sibCls + '"><a href="' + sibHref + '">' + sib + '</a></li>';
 						}
