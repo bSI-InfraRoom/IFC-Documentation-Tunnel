@@ -638,12 +638,9 @@
 					try {
 						var u = new URL(href);
 						var p = u.pathname;
-						// Convert absolute pathname to relative by resolving against doc root
-						if (docRootUrl) {
-							var rel = new URL(p, docRootUrl).pathname;
-							p = rel.replace(/^\//, '');
-						}
-						return p.replace(/#.*/, '');
+						// Strip document root prefix to get relative path
+						if (docRootPath) p = p.replace(docRootPath, '');
+						return p.replace(/^\.?\//, '').replace(/#.*/, '');
 					} catch (e) { return href; }
 				}
 				// If href starts with /, it's document-root-relative — strip leading /
@@ -660,22 +657,16 @@
 					try {
 						var resolved = new URL(href, paneBase);
 						var p = resolved.pathname;
-						if (docRootUrl) {
-							var rel = new URL(p, docRootUrl).pathname;
-							p = rel.replace(/^\//, '');
-						}
-						return p.replace(/#.*/, '');
+						if (docRootPath) p = p.replace(docRootPath, '');
+						return p.replace(/^\.?\//, '').replace(/#.*/, '');
 					} catch (e) {}
 				}
 				// No pane base — resolve against document root
 				try {
 					var resolved = new URL(href, location.href);
 					var p = resolved.pathname;
-					if (docRootUrl) {
-						var rel = new URL(p, docRootUrl).pathname;
-						p = rel.replace(/^\//, '');
-					}
-					return p.replace(/#.*/, '');
+					if (docRootPath) p = p.replace(docRootPath, '');
+					return p.replace(/^\.?\//, '').replace(/#.*/, '');
 				} catch (e) {
 					return href.replace(/#.*/, '');
 				}
