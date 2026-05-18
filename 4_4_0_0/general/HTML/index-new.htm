@@ -813,7 +813,8 @@
 			 */
 			var inheritanceIndex = null;
 			var inheritanceSiblings = null;
-			var abstractEntities = null;
+			var entityPathIndex = null;
+				var abstractEntities = null;
 			var deprecatedEntities = null;
 
 			function loadInheritanceIndex(callback) {
@@ -824,18 +825,21 @@
 				Promise.all([
 					fetch(baseFetch('/assets/js/inheritance-index.json')).then(function (r) { return r.json(); }),
 					fetch(baseFetch('/assets/js/inheritance-siblings.json')).then(function (r) { return r.json(); }),
-					fetch(baseFetch('/assets/js/abstract-entities.json')).then(function (r) { return r.json(); }).catch(function () { return []; }),
+					fetch(baseFetch('/assets/js/entity-path-index.json')).then(function (r) { return r.json(); }).catch(function () { return {}; }),
+						fetch(baseFetch('/assets/js/abstract-entities.json')).then(function (r) { return r.json(); }).catch(function () { return []; }),
 					fetch(baseFetch('/assets/js/deprecated-entities.json')).then(function (r) { return r.json(); }).catch(function () { return []; })
 				]).then(function (data) {
 					inheritanceIndex = data[0];
 					inheritanceSiblings = data[1];
-					abstractEntities = data[2] || [];
-					deprecatedEntities = data[3] || [];
+					entityPathIndex = data[2] || {};
+					abstractEntities = data[3] || [];
+					deprecatedEntities = data[4] || [];
 					callback();
 				}).catch(function () {
 					// If JSON files fail to load, fall back to image map parsing
 					inheritanceIndex = null;
 					inheritanceSiblings = null;
+					entityPathIndex = {};
 					abstractEntities = [];
 					deprecatedEntities = [];
 					callback();
@@ -873,6 +877,18 @@
 					var areas = map.querySelectorAll('area[href]');
 					if (areas.length === 0) continue;
 
+					// Build a name-to-raw-href map from the image map areas.
+					// These are the original relative hrefs that resolve correctly
+					// against the current page URL (contentBaseUrl).
+					var areaHrefMap = Object.create(null);
+					for (var a = 0; a < areas.length; a++) {
+						var altName = areas[a].getAttribute('alt');
+						var areaHref = areas[a].getAttribute('href');
+						if (altName && areaHref) {
+							areaHrefMap[altName] = areaHref;
+						}
+					}
+
 					// Build the inheritance chain from the areas
 					var currentEntity = getCurrentEntityName();
 					var chain = [];
@@ -880,6 +896,7 @@
 					var currentEntityAdded = false;
 					var child = inheritanceIndex[currentEntity];
 					var i = 0;
+					var currentRawHref = '';
 					while (child) {
 						var href = '';
 						for (i; i < areas.length; i++) {
@@ -890,15 +907,17 @@
 								break;
 							}
 						}
-						
-						chain.unshift({ href: '/' + normalizeAreaHref(href), name: child });
+
+						chain.unshift({ href: '/' + normalizeAreaHref(href), rawHref: href, name: child });
 						child = inheritanceIndex[child];
 						i++;
 					}
-					chain.push({ href: '/' + normalizeAreaHref(contentBaseUrl.replace(location.origin + docRootPath, '')), name: currentEntity });
+					// Use the first area's href as the current entity's relative path
+					currentRawHref = areas[0].getAttribute('href');
+					chain.push({ href: '/' + normalizeAreaHref(currentRawHref), rawHref: currentRawHref, name: currentEntity });
 					if (inheritanceSiblings[currentEntity].length !== 0 && i === areas.length) {
 						var siblings = inheritanceSiblings[currentEntity];
-						chain.push({ href: '/' + normalizeAreaHref(areas[0].getAttribute('href')), name: siblings[0] });
+						chain.push({ href: '/' + normalizeAreaHref(currentRawHref), rawHref: currentRawHref, name: siblings[0] });
 					}
 
 					// Build the tiered diagram HTML using the sibling index
@@ -945,7 +964,7 @@
 								// Look up the sibling's href from the chain or index
 								// We need to find which ancestor page contains this sibling
 								// For now, construct a reasonable path
-								sibHref = findEntityHref(sib, chain, j);
+								sibHref = findEntityHref(sib, chain, j, currentRawHref, areaHrefMap);
 							}
 
 							tierHtml += '<li class="' + sibCls + '"><a href="' + sibHref + '">' + sib + '</a></li>';
@@ -992,24 +1011,25 @@
 				if (found && callback) callback();
 			}
 
-			function findEntityHref(entityName, chain, currentLevel) {
-				// Try to find the entity in the chain first
+			function findEntityHref(entityName, chain, currentLevel, currentRawHref, areaHrefMap) {
+				// Use the entity-path-index for the definitive path
+				if (entityPathIndex && entityPathIndex[entityName]) {
+					return '/' + entityPathIndex[entityName];
+				}
+				// Try the area href map — uses the original relative href
+				if (areaHrefMap && areaHrefMap[entityName]) {
+					return areaHrefMap[entityName];
+				}
+				// Try to find the entity in the chain (use rawHref for correct relative path)
 				for (var i = 0; i < chain.length; i++) {
-					if (chain[i].name === entityName) return chain[i].href;
+					if (chain[i].name === entityName) return chain[i].rawHref;
 				}
-				// Try to construct a path based on the ancestor chain
-				if (currentLevel > 0 && chain[currentLevel]) {
-					var parentHref = chain[currentLevel].href;
-					var parentDir = parentHref.replace(/\/[^/]+\.htm$/, '');
-					return parentDir + '/' + entityName.toLowerCase() + '.htm';
+				// Fall back: use the current entity's raw href directory
+				if (currentRawHref) {
+					var curDir = currentRawHref.replace(/\/[^/]+\.htm$/, '');
+					return curDir + '/' + entityName.toLowerCase() + '.htm';
 				}
-				// Fall back: use the current page's directory
-				if (contentBaseUrl) {
-					var currentPath = contentBaseUrl.replace(location.origin + docRootPath, '');
-					var currentDir = currentPath.replace(/\/[^/]+\.htm$/, '');
-					return currentDir + '/' + entityName.toLowerCase() + '.htm';
-				}
-				return '/' + entityName.toLowerCase() + '.htm';
+				return '';
 			}
 
 			/**
