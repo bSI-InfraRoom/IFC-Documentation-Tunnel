@@ -1176,10 +1176,14 @@
 			 */
 			function attachContentLinkListeners() {
 				contentArea.addEventListener('click', function (event) {
-					var link = event.target.closest('.content-area a[href]');
-					if (!link) return;
+					// Match both <a> links and <area> elements in image maps.
+					// <area> elements resolve their relative hrefs against the wrong
+					// base URL if not intercepted (the browser uses index-new.htm as
+					// base instead of the loaded content page URL).
+					var target = event.target.closest('.content-area a[href], .content-area area[href]');
+					if (!target) return;
 					event.preventDefault();
-					var href = normalizeHref(link.getAttribute('href'), link);
+					var href = normalizeHref(target.getAttribute('href'), target);
 					navigateTo(href);
 				});
 			}
