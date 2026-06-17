@@ -640,6 +640,14 @@
 						var p = u.pathname;
 						// Strip document root prefix to get relative path
 						if (docRootPath) p = p.replace(docRootPath, '');
+						// If docRootPath is empty (e.g. localhost root deploy),
+						// extract the path after /HTML/ from the absolute URL
+						if (!docRootPath) {
+							var htmlIdx = p.indexOf('/HTML');
+							if (htmlIdx !== -1) {
+								p = p.substring(htmlIdx + 5);
+							}
+						}
 						return p.replace(/^\.?\//, '').replace(/#.*/, '');
 					} catch (e) { return href; }
 				}
@@ -1046,6 +1054,29 @@
 					.then(function (html) {
 						var parser = new DOMParser();
 						var doc = parser.parseFromString(html, 'text/html');
+
+						// Detect frameset redirect pages (e.g. link/*.htm) and follow to actual content
+						var frameset = doc.querySelector('frameset');
+						if (frameset) {
+							var infoFrame = doc.querySelector('frame[name="info"]');
+							if (infoFrame) {
+								var redirectSrc = infoFrame.getAttribute('src');
+								if (redirectSrc) {
+									var resolvedRedirect = normalizeHref(redirectSrc, null);
+									return loadContent(resolvedRedirect);
+								}
+							}
+							// Fallback: use first frame src
+							var firstFrame = doc.querySelector('frame[src]');
+							if (firstFrame) {
+								var redirectSrc = firstFrame.getAttribute('src');
+								if (redirectSrc) {
+									var resolvedRedirect = normalizeHref(redirectSrc, null);
+									return loadContent(resolvedRedirect);
+								}
+							}
+						}
+
 						if (doc.title) {
 							var entityTitle = doc.title;
 							// Extract section number from redirect script: parent.index.location.replace("toc-6.htm#6.1.3.1")
@@ -1142,6 +1173,41 @@
 			 */
 			function navigateTo(href, tocPath, searchState) {
 				var resolvedHref = normalizeHref(href, null);
+
+				// link/xxx.htm pages are frameset redirect pages — resolve the actual target first
+				var isLinkRedirect = /^link\/.*\.htm$/i.test(resolvedHref);
+				if (isLinkRedirect) {
+					fetch(baseFetch('/' + resolvedHref))
+						.then(function (r) { return r.text(); })
+						.then(function (html) {
+							var parser = new DOMParser();
+							var doc = parser.parseFromString(html, 'text/html');
+							var infoFrame = doc.querySelector('frame[name="info"]');
+							var redirectSrc = '';
+							if (infoFrame) {
+								redirectSrc = infoFrame.getAttribute('src');
+							} else {
+								var firstFrame = doc.querySelector('frame[src]');
+								if (firstFrame) redirectSrc = firstFrame.getAttribute('src');
+							}
+							if (redirectSrc) {
+								navigateTo(redirectSrc, tocPath, searchState);
+							} else {
+								// No redirect found — fall through with original href
+								continueNavigate(resolvedHref, tocPath, searchState);
+							}
+						})
+						.catch(function () {
+							// Fetch failed — fall through with original href
+							continueNavigate(resolvedHref, tocPath, searchState);
+						});
+					return;
+				}
+
+				continueNavigate(resolvedHref, tocPath, searchState);
+			}
+
+			function continueNavigate(resolvedHref, tocPath, searchState) {
 				var resolvedToc = tocPath || resolveTocPath(resolvedHref);
 
 				// If we're not at the end of the stack, truncate forward entries
