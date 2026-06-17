@@ -1191,7 +1191,12 @@
 								if (firstFrame) redirectSrc = firstFrame.getAttribute('src');
 							}
 							if (redirectSrc) {
-								navigateTo(redirectSrc, tocPath, searchState);
+								// Resolve relative redirect src against the link page URL
+								var redirectUrl = new URL(redirectSrc, location.href);
+								var redirectPath = redirectUrl.pathname;
+								if (docRootPath) redirectPath = redirectPath.replace(docRootPath, '');
+								redirectPath = redirectPath.replace(/^\.?\//, '').replace(/#.*/, '');
+								navigateTo(redirectPath, tocPath, searchState);
 							} else {
 								// No redirect found — fall through with original href
 								continueNavigate(resolvedHref, tocPath, searchState);
