@@ -628,22 +628,17 @@
 
 			/**
 			 * Resolve an href to a document-root-relative path.
-			 * Uses the pane's loaded document URL for resolution — no string manipulation.
+			 * Resolves against docRootUrl — same pattern as normalizeAreaHref.
 			 */
 			function normalizeHref(href, linkEl) {
 				// Normalize backslashes to forward slashes (from Windows-generated search index)
 				href = href.replace(/\\/g, '/');
-				// If href is an absolute URL, extract the relative pathname
+				// If href is an absolute URL, resolve pathname against docRootUrl
 				if (/^[a-z]+:\/\//i.test(href)) {
 					try {
-						var u = new URL(href);
-						var p = u.pathname;
-						// Strip document root prefix to get relative path
-						if (docRootPath) {
-							var i = p.indexOf(docRootPath);
-							p = i !== -1 ? p.substring(i + docRootPath.length) : p;
-						}
-						return p.replace(/^\.?\//, '').replace(/#.*/, '');
+						var p = new URL(new URL(href).pathname, docRootUrl).pathname;
+						if (docRootPath) p = p.substring(p.indexOf(docRootPath) + docRootPath.length);
+						return p.replace(/^\//, '').replace(/#.*/, '');
 					} catch (e) { return href; }
 				}
 				// If href starts with /, it's document-root-relative — strip leading /
@@ -658,23 +653,15 @@
 				}
 				if (paneBase) {
 					try {
-						var resolved = new URL(href, paneBase);
-						var p = resolved.pathname;
-						if (docRootPath) {
-							var i = p.indexOf(docRootPath);
-							p = i !== -1 ? p.substring(i + docRootPath.length) : p;
-						}
+						var p = new URL(new URL(href, paneBase).pathname, docRootUrl).pathname;
+						if (docRootPath) p = p.substring(p.indexOf(docRootPath) + docRootPath.length);
 						return p.replace(/^\//, '').replace(/#.*/, '');
 					} catch (e) {}
 				}
-				// No pane base — resolve against document root
+				// No pane base — resolve against document root URL
 				try {
-					var resolved = new URL(href, location.href);
-					var p = resolved.pathname;
-					if (docRootPath) {
-						var i = p.indexOf(docRootPath);
-						p = i !== -1 ? p.substring(i + docRootPath.length) : p;
-					}
+					var p = new URL(href, docRootUrl).pathname;
+					if (docRootPath) p = p.substring(p.indexOf(docRootPath) + docRootPath.length);
 					return p.replace(/^\//, '').replace(/#.*/, '');
 				} catch (e) {
 					return href.replace(/#.*/, '');
