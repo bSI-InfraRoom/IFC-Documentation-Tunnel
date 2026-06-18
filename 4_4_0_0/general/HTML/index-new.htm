@@ -628,25 +628,20 @@
 
 			/**
 			 * Resolve an href to a document-root-relative path.
-			 * Uses the pane's loaded document URL for resolution — no string manipulation.
+			 * Strips docRootPath prefix from resolved absolute paths.
 			 */
 			function normalizeHref(href, linkEl) {
 				// Normalize backslashes to forward slashes (from Windows-generated search index)
 				href = href.replace(/\\/g, '/');
-				// If href is an absolute URL, extract the relative pathname
+				// If href is an absolute URL, extract relative path by stripping prefix
 				if (/^[a-z]+:\/\//i.test(href)) {
 					try {
 						var u = new URL(href);
 						var p = u.pathname;
-						// Strip document root prefix to get relative path
-						if (docRootPath) p = p.replace(docRootPath, '');
-						// If docRootPath is empty (e.g. localhost root deploy),
-						// extract the path after /HTML/ from the absolute URL
-						if (!docRootPath) {
+						if (docRootPath && docRootPath !== '/') p = p.replace(docRootPath, '');
+						else {
 							var htmlIdx = p.indexOf('/HTML');
-							if (htmlIdx !== -1) {
-								p = p.substring(htmlIdx + 5);
-							}
+							if (htmlIdx !== -1) p = p.substring(htmlIdx + 5);
 						}
 						return p.replace(/^\.?\//, '').replace(/#.*/, '');
 					} catch (e) { return href; }
@@ -665,7 +660,7 @@
 					try {
 						var resolved = new URL(href, paneBase);
 						var p = resolved.pathname;
-						if (docRootPath) p = p.replace(docRootPath, '');
+						if (docRootPath && docRootPath !== '/') p = p.replace(docRootPath, '');
 						return p.replace(/^\.?\//, '').replace(/#.*/, '');
 					} catch (e) {}
 				}
@@ -673,7 +668,7 @@
 				try {
 					var resolved = new URL(href, location.href);
 					var p = resolved.pathname;
-					if (docRootPath) p = p.replace(docRootPath, '');
+					if (docRootPath && docRootPath !== '/') p = p.replace(docRootPath, '');
 					return p.replace(/^\.?\//, '').replace(/#.*/, '');
 				} catch (e) {
 					return href.replace(/#.*/, '');
@@ -1191,12 +1186,7 @@
 								if (firstFrame) redirectSrc = firstFrame.getAttribute('src');
 							}
 							if (redirectSrc) {
-								// Resolve relative redirect src against the link page URL
-								var redirectUrl = new URL(redirectSrc, location.href);
-								var redirectPath = redirectUrl.pathname;
-								if (docRootPath) redirectPath = redirectPath.replace(docRootPath, '');
-								redirectPath = redirectPath.replace(/^\.?\//, '').replace(/#.*/, '');
-								navigateTo(redirectPath, tocPath, searchState);
+								navigateTo(normalizeHref(redirectSrc, null), tocPath, searchState);
 							} else {
 								// No redirect found — fall through with original href
 								continueNavigate(resolvedHref, tocPath, searchState);
