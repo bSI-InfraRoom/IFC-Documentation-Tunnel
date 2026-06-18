@@ -628,29 +628,25 @@
 
 			/**
 			 * Resolve an href to a document-root-relative path.
-			 * Strips docRootPath prefix from resolved absolute paths.
+			 * Uses normalizeAreaHref pattern — resolve against docRootUrl, take pathname.
 			 */
 			function normalizeHref(href, linkEl) {
-				// Normalize backslashes to forward slashes (from Windows-generated search index)
 				href = href.replace(/\\/g, '/');
-				// If href is an absolute URL, extract relative path by stripping prefix
 				if (/^[a-z]+:\/\//i.test(href)) {
+					// For absolute URLs, resolve pathname against docRootUrl to get relative path
 					try {
 						var u = new URL(href);
-						var p = u.pathname;
-						if (docRootPath && docRootPath !== '/') p = p.replace(docRootPath, '');
-						else {
-							var htmlIdx = p.indexOf('/HTML');
-							if (htmlIdx !== -1) p = p.substring(htmlIdx + 5);
+						// Use docRootPath to strip prefix — resolve pathname against docRootUrl first
+						// to normalize, then use indexOf/substring to strip reliably
+						var p = new URL(u.pathname, docRootUrl).pathname;
+						if (docRootPath && docRootPath !== '/') {
+							var i = p.indexOf(docRootPath);
+							p = i !== -1 ? p.substring(i + docRootPath.length) : p;
 						}
-						return p.replace(/^\.?\//, '').replace(/#.*/, '');
+						return p.replace(/^\//, '').replace(/#.*/, '');
 					} catch (e) { return href; }
 				}
-				// If href starts with /, it's document-root-relative — strip leading /
-				if (href.startsWith('/')) {
-					return href.replace(/^\/|#.*/, '');
-				}
-				// Resolve relative href against the pane's loaded document URL
+				if (href.startsWith('/')) return href.replace(/^\/|#.*/, '');
 				var paneBase = '';
 				if (linkEl) {
 					if (linkEl.closest('.sidebar')) paneBase = sidebarBaseUrl;
@@ -658,21 +654,22 @@
 				}
 				if (paneBase) {
 					try {
-						var resolved = new URL(href, paneBase);
-						var p = resolved.pathname;
-						if (docRootPath && docRootPath !== '/') p = p.replace(docRootPath, '');
-						return p.replace(/^\.?\//, '').replace(/#.*/, '');
+						var p = new URL(new URL(href, paneBase).pathname, docRootUrl).pathname;
+						if (docRootPath && docRootPath !== '/') {
+							var i = p.indexOf(docRootPath);
+							p = i !== -1 ? p.substring(i + docRootPath.length) : p;
+						}
+						return p.replace(/^\//, '').replace(/#.*/, '');
 					} catch (e) {}
 				}
-				// No pane base — resolve against document root
 				try {
-					var resolved = new URL(href, location.href);
-					var p = resolved.pathname;
-					if (docRootPath && docRootPath !== '/') p = p.replace(docRootPath, '');
-					return p.replace(/^\.?\//, '').replace(/#.*/, '');
-				} catch (e) {
-					return href.replace(/#.*/, '');
-				}
+					var p = new URL(new URL(href, location.href).pathname, docRootUrl).pathname;
+					if (docRootPath && docRootPath !== '/') {
+						var i = p.indexOf(docRootPath);
+						p = i !== -1 ? p.substring(i + docRootPath.length) : p;
+					}
+					return p.replace(/^\//, '').replace(/#.*/, '');
+				} catch (e) { return href.replace(/#.*/, ''); }
 			}
 
 			/**
