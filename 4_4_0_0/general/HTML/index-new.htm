@@ -628,25 +628,29 @@
 
 			/**
 			 * Resolve an href to a document-root-relative path.
-			 * Uses normalizeAreaHref pattern — resolve against docRootUrl, take pathname.
+			 * Uses the pane's loaded document URL for resolution — no string manipulation.
 			 */
 			function normalizeHref(href, linkEl) {
+				// Normalize backslashes to forward slashes (from Windows-generated search index)
 				href = href.replace(/\\/g, '/');
+				// If href is an absolute URL, extract the relative pathname
 				if (/^[a-z]+:\/\//i.test(href)) {
-					// For absolute URLs, resolve pathname against docRootUrl to get relative path
 					try {
 						var u = new URL(href);
-						// Use docRootPath to strip prefix — resolve pathname against docRootUrl first
-						// to normalize, then use indexOf/substring to strip reliably
-						var p = new URL(u.pathname, docRootUrl).pathname;
-						if (docRootPath && docRootPath !== '/') {
+						var p = u.pathname;
+						// Strip document root prefix to get relative path
+						if (docRootPath) {
 							var i = p.indexOf(docRootPath);
 							p = i !== -1 ? p.substring(i + docRootPath.length) : p;
 						}
-						return p.replace(/^\//, '').replace(/#.*/, '');
+						return p.replace(/^\.?\//, '').replace(/#.*/, '');
 					} catch (e) { return href; }
 				}
-				if (href.startsWith('/')) return href.replace(/^\/|#.*/, '');
+				// If href starts with /, it's document-root-relative — strip leading /
+				if (href.startsWith('/')) {
+					return href.replace(/^\/|#.*/, '');
+				}
+				// Resolve relative href against the pane's loaded document URL
 				var paneBase = '';
 				if (linkEl) {
 					if (linkEl.closest('.sidebar')) paneBase = sidebarBaseUrl;
@@ -654,22 +658,27 @@
 				}
 				if (paneBase) {
 					try {
-						var p = new URL(new URL(href, paneBase).pathname, docRootUrl).pathname;
-						if (docRootPath && docRootPath !== '/') {
+						var resolved = new URL(href, paneBase);
+						var p = resolved.pathname;
+						if (docRootPath) {
 							var i = p.indexOf(docRootPath);
 							p = i !== -1 ? p.substring(i + docRootPath.length) : p;
 						}
 						return p.replace(/^\//, '').replace(/#.*/, '');
 					} catch (e) {}
 				}
+				// No pane base — resolve against document root
 				try {
-					var p = new URL(new URL(href, location.href).pathname, docRootUrl).pathname;
-					if (docRootPath && docRootPath !== '/') {
+					var resolved = new URL(href, location.href);
+					var p = resolved.pathname;
+					if (docRootPath) {
 						var i = p.indexOf(docRootPath);
 						p = i !== -1 ? p.substring(i + docRootPath.length) : p;
 					}
 					return p.replace(/^\//, '').replace(/#.*/, '');
-				} catch (e) { return href.replace(/#.*/, ''); }
+				} catch (e) {
+					return href.replace(/#.*/, '');
+				}
 			}
 
 			/**
@@ -1165,41 +1174,6 @@
 			 */
 			function navigateTo(href, tocPath, searchState) {
 				var resolvedHref = normalizeHref(href, null);
-
-				// link/xxx.htm pages are frameset redirect pages — resolve the actual target first
-				var isLinkRedirect = /^link\/.*\.htm$/i.test(resolvedHref);
-				if (isLinkRedirect) {
-					fetch(baseFetch('/' + resolvedHref))
-						.then(function (r) { return r.text(); })
-						.then(function (html) {
-							var parser = new DOMParser();
-							var doc = parser.parseFromString(html, 'text/html');
-							var infoFrame = doc.querySelector('frame[name="info"]');
-							var redirectSrc = '';
-							if (infoFrame) {
-								redirectSrc = infoFrame.getAttribute('src');
-							} else {
-								var firstFrame = doc.querySelector('frame[src]');
-								if (firstFrame) redirectSrc = firstFrame.getAttribute('src');
-							}
-							if (redirectSrc) {
-								navigateTo(normalizeHref(redirectSrc, null), tocPath, searchState);
-							} else {
-								// No redirect found — fall through with original href
-								continueNavigate(resolvedHref, tocPath, searchState);
-							}
-						})
-						.catch(function () {
-							// Fetch failed — fall through with original href
-							continueNavigate(resolvedHref, tocPath, searchState);
-						});
-					return;
-				}
-
-				continueNavigate(resolvedHref, tocPath, searchState);
-			}
-
-			function continueNavigate(resolvedHref, tocPath, searchState) {
 				var resolvedToc = tocPath || resolveTocPath(resolvedHref);
 
 				// If we're not at the end of the stack, truncate forward entries
