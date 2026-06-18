@@ -1043,28 +1043,6 @@
 						var parser = new DOMParser();
 						var doc = parser.parseFromString(html, 'text/html');
 
-						// Detect frameset redirect pages (e.g. link/*.htm) and follow to actual content
-						var frameset = doc.querySelector('frameset');
-						if (frameset) {
-							var infoFrame = doc.querySelector('frame[name="info"]');
-							if (infoFrame) {
-								var redirectSrc = infoFrame.getAttribute('src');
-								if (redirectSrc) {
-									var resolvedRedirect = normalizeHref(redirectSrc, null);
-									return loadContent(resolvedRedirect);
-								}
-							}
-							// Fallback: use first frame src
-							var firstFrame = doc.querySelector('frame[src]');
-							if (firstFrame) {
-								var redirectSrc = firstFrame.getAttribute('src');
-								if (redirectSrc) {
-									var resolvedRedirect = normalizeHref(redirectSrc, null);
-									return loadContent(resolvedRedirect);
-								}
-							}
-						}
-
 						if (doc.title) {
 							var entityTitle = doc.title;
 							// Extract section number from redirect script: parent.index.location.replace("toc-6.htm#6.1.3.1")
@@ -1203,6 +1181,28 @@
 					if (!target) return;
 					event.preventDefault();
 					var href = normalizeHref(target.getAttribute('href'), target);
+					// Resolve link/ redirect pages to actual content paths
+					if (/^link\/.*\.htm$/i.test(href)) {
+						fetch(baseFetch('/' + href))
+							.then(function (r) { return r.text(); })
+							.then(function (html) {
+								var parser = new DOMParser();
+								var doc = parser.parseFromString(html, 'text/html');
+								var infoFrame = doc.querySelector('frame[name="info"]');
+								var redirectSrc = '';
+								if (infoFrame) redirectSrc = infoFrame.getAttribute('src');
+								else {
+									var firstFrame = doc.querySelector('frame[src]');
+									if (firstFrame) redirectSrc = firstFrame.getAttribute('src');
+								}
+								if (redirectSrc) navigateTo(new URL(redirectSrc, docRootUrl + href).href);
+								else navigateTo(href);
+							})
+							.catch(function () {
+								navigateTo(href);
+							});
+						return;
+					}
 					navigateTo(href);
 				});
 			}
@@ -1276,6 +1276,41 @@
 				path = path.replace(/^\//, '');
 				if (path === 'index-new.htm') return;
 
+				// Resolve link/ redirect pages to actual content paths
+				if (/^link\/.*\.htm$/i.test(path)) {
+					fetch(baseFetch('/' + path))
+						.then(function (r) { return r.text(); })
+						.then(function (html) {
+							var parser = new DOMParser();
+							var doc = parser.parseFromString(html, 'text/html');
+							var infoFrame = doc.querySelector('frame[name="info"]');
+							var redirectSrc = '';
+							if (infoFrame) redirectSrc = infoFrame.getAttribute('src');
+							else {
+								var firstFrame = doc.querySelector('frame[src]');
+								if (firstFrame) redirectSrc = firstFrame.getAttribute('src');
+							}
+							if (redirectSrc) {
+								var resolved = new URL(redirectSrc, path).pathname;
+								if (docRootPath) resolved = resolved.substring(resolved.indexOf(docRootPath) + docRootPath.length);
+								resolved = resolved.replace(/^\//, '');
+								var t = resolveTocPath(resolved);
+								navHistory.push({ href: resolved, tocPath: t });
+								navIndex = navHistory.length - 1;
+								loadContent(resolved);
+								loadSidebar(t);
+							} else {
+								loadContent(path);
+								loadSidebar(resolveTocPath(path));
+							}
+						})
+						.catch(function () {
+							loadContent(path);
+							loadSidebar(resolveTocPath(path));
+						});
+					return;
+				}
+
 				var tocPath = resolveTocPath(path);
 				if (tocPath !== null) {
 					// Find matching entry in nav history (for back/forward)
@@ -1335,7 +1370,7 @@
 			function stripHtml(html) {
 				var text = html.replace(/<script[\s\S]*?<\/script>/gi, '')
 					.replace(/<style[\s\S]*?<\/style>/gi, '')
-					.replace(/<!--[\s\S]*?-->/g, '');
+					.replace(/<!\-\-[\s\S]*?\-\->/g, '');
 				text = text.replace(/<\/?(?:p|div|tr|li|h[1-6]|br|section|details|summary|blockquote|ul|ol)[^>]*>/gi, '\n')
 					.replace(/<[^>]+>/g, ' ');
 				text = text.replace(/&nbsp;/g, ' ')
